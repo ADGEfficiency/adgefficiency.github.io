@@ -7,13 +7,13 @@ permalink: /four-inconvenient-truths-clean-energy-transition/
 categories:
   - Energy
 ---
-**All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, and CO<sub>2</sub> concentrations passing 400 ppm for the first time in several million years.
+**All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.
 
-The motivation for the clean energy transition cannot be stronger - preventing dangerous climate change. Yet even the violence of climate change doesn't counteract historical realities.
+The motivation for the clean energy transition is to reduce the damage of climate change.  But the threat of violent climate change doesn't allow us to ignore historical truths.
 
 **This post highlights four reasons why progress of the clean energy transition is slow**. All four reflect the experience of previous transitions. All four are unwelcome.
 
-I’m not arguing against the need for the clean energy transition. I’m trying to show  why this transition will continue to be slow and difficult. Understanding history can help us overcome these challenges.
+I’m not arguing against the need for the clean energy transition. I’m trying to show  that history suggests this transition will continue to be slow and difficult.
 
 The primary source for these ideas is Vaclav Smil's excellent work on energy transitions ([book](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), [lecture](https://www.youtube.com/watch?v=5guXaWwQpe4) and [another lecture](https://www.youtube.com/watch?v=NxO3s0U5WdY)).  Smil is my favorite energy writer; prolific, confidentially numeric and intelligently contrarian. Smil’s work is for me the best on energy ever written.  I've also previously written about [Smil's work on carbon capture and storage](http://adgefficiency.com/energy-insights-vaclav-smil-on-carbon-capture-storage/).
 
@@ -25,19 +25,19 @@ This transition is simultaneously similar and different to past transitions.  Th
 
 Three ways in which this transition is similar to the past:
 
-#### *one* energy transitions are **slow**
+#### energy transitions are **slow**
 
-#### *two* energy transitions are **additive**
+#### energy transitions are **additive**
 
-#### *three* energy transitions are **sequential**
+#### energy transitions are **sequential**
 
 And one in which the clean energy transition is departing from previous transitions:
 
-#### *four* energy transitions enable **new utility**
+#### energy transitions enable **new utility**
 
 ### The First Inconvenient Truth - Energy transitions are slow
 
-In [Energy Transitions: History, Requirements, Prospects](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771) Smil notes each subsequent transition takes longer than the last. Coal took 35 years, oil 40 years and natural gas 55 years to move from 5% to 25% of global primary energy consumption.
+In [Energy Transitions: History, Requirements, Prospects](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), Vaclav Smil notes each subsequent transition takes longer than the last.  To move from 5% to 25% of global primary energy consumption, coal took 35 years, oil 40 years and finally natural gas took 55 years.
 
 There are **two reasons** for the slowing down. As the absolute size of our energy consumption increases, the relative effect of adding more is smaller. The massive growth in global energy consumption means that **effort today has a smaller relative effect** than in the past.
 
@@ -49,16 +49,16 @@ The clean energy transition is full of technical challenges. Clean energy genera
 
 ### The Second Inconvenient Truth - Energy transitions are additive
 
-**Of the Four Truths, this is the most inconvenient**. Each transition increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. **Older technologies take a long time to go away**. We are still building coal-fired generation today and are recklessly likely to for a long time.
+**Of the Four Truths, this is the most inconvenient**. Each transition increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. **Older fuels take a long time to go away**. We are still building coal-fired generation today and are recklessly likely to for a long time.
 
 Figure 1 shows the history of US primary fuel consumption. US coal consumption has risen all the way through to the start of the 21st century. Each new fuel has not displaced coal, instead they add to an existing and increasing coal consumption.
 
 ![Figure 1]({{ "/assets/four_truths_transitions/fig1.png"}})
 **Figure 1 - U.S. Primary Energy Use over time in Quads from 1800 to the present by source - [US Department of Energy Quadrennial Technology Review 2015](https://energy.gov/sites/prod/files/2015/09/f26/Quadrennial-Technology-Review-2015_0.pdf)**
 
-As global energy demand increases, renewables are already a significant part of the marginal increase. But it’s the older fossil fuel generation that needs to go - history shows us that this doesn’t happen quickly.
+Renewables already make up a significant part of generation we are building to supply our increased energy demand.  But it’s the older fossil fuel generation that also need to be cleaned up - history shows us this doesn’t happen quickly.
 
-Improvements in technology, building of supply chains and know-how mean that mature technologies are often efficient, cheap to build and cheap to maintain.  Having a track record of performance and low variance lifecycle costs also makes older technologies more attractive to investors.
+Improvements in technology, building of supply chains and know-how mean that mature technologies are often efficient, cheap to build and cheap to maintain.  Having a track record of economic performance also makes older technologies more attractive to investors.
 
 Diesel generators (an 1890’s technology) are a great example of this. Diesel generators are reasonably efficient, quick and cheap to build with a well-understood maintenance schedule.  They continue to be built on the kW to multi MW scales.
 
@@ -68,9 +68,9 @@ Diesel generators (an 1890’s technology) are a great example of this. Diesel g
 
 Smil notes that energy transitions require a "specific sequence of scientific advances, technical innovations and organizational actions" combined with "economic, political and strategic circumstances”.
 
-When we have specific requirements about where our energy system needs to go, getting what we want requires getting things right all across the board.  **The dependence on doing the right things in the right order means progress is not guaranteed**. Coal dominated China, nuclear powered France and hydro blessed New Zealand show that energy systems are not homogeneous.
+**The dependence on doing the right things in the right order means progress is not guaranteed**.  Variance in causes in conditions combined with path dependency creates different energy systems all around the world. Coal dominated China, nuclear powered France and hydro blessed New Zealand show that energy systems are not homogeneous.
 
-The inevitability of technological progress in the economics of wind & solar is sometimes confused with the inevitability deploying wind & solar. The reality is that even as clean technology improves, there is no guarantee that our energy system will move the way our planet needs it too.
+Don't confuse the inevitability of technological progress in the economics of wind & solar with the inevitability of high wind & solar penetrations.  
 
 For example, without the correct alignment of incentives through rate structures even cheap batteries won’t have an impact. We cannot only rely on the cost of technology reducing.  The path this energy transition takes depends on more than cheap solar panels and wind turbines.
 
@@ -80,7 +80,7 @@ For example, without the correct alignment of incentives through rate structures
 
 The first three truths are ways in which this clean transition will be like the past. This final truth is a reality of the clean energy transition that moves against the past.
 
-Why do we spend the time and money to transition to new energy sources? **New sources of energy allow us to do things we couldn’t do before**.  Coal enabled a revolution in manufacturing. Oil & gas enabled revolutions in transportation.
+Why do we transition to new energy sources? **New sources of energy allow us to do things we couldn’t do before**.  Coal enabled a revolution in manufacturing. Oil & gas enabled revolutions in transportation.
 
 Historical energy transitions have enabled new utility by using higher quality fuels. One measurement of energy quality is energy density - how much energy we can squeeze into a given mass or volume.
 
