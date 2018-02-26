@@ -1,18 +1,5 @@
----
-layout: page
-title: About
-permalink: /about/
----
+An energy engineer who loves building things.  I most enjoy building technical models to optimally dispatch energy systems.
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+My professional mission is to positively contribute to decarbonization.  I’m excited about using machine learning to decarbonize the supply of heat and electricity.   I’m especially excited about reinforcement learning.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I’m happily employed at Tempus Energy, where we are supporting decarbonization by making electricity systems more flexible.

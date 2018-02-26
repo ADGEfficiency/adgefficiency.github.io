@@ -1,0 +1,55 @@
+This Energy Insights posts covers the presentation *** and the report ** by Jesse Jenkins, a PhD candidate at MIT.  
+
+Different stages of decarbonization means different optimal strageties
+Jenkin’s highlights a few non-linear relationships that exist when making progress with decarbonization:
+1 - the challenge of decarbonization is non-linear (wrt decarbonization progress) (decarbonization gets more difficult the cleaner we get)
+2 - the curtailment of renewables is non-linear (wrt renewables penetration) (more renewables means more curtailment)
+3 - the change in the optimal mixture of resources (wrt decarbonization progress)
+
+The final point is a very intelligent observation by Jenkins.  Different levels of decarbonization require different next steps.  Early on we need to build variable renewables - at later stages low carbon dispatchable resources become more important.  
+
+It’s not just a case of doing the same thing over our whole decarbonization journey.  The strategies, tools and resources change as we progress to cleaner and cleaner electricity.  This can be seen most clearly by the ‘renewables peak’ in Figure ***.  After 60-80% emissions saving we actually need to reduce the (relative or absolute ***) amount of variable renewables on the grid.  
+
+In the initial stages of our deacrbonization journey we are building a lot of wind and solar.  In later stages we require relying on the entire family of low carbon resources.  
+
+Substitution with electricity versus substitution within electricity
+Jenkin’s groups low carbon resources into three classes:
+1 - fuel saving variable - wind & solar
+2 - fast burst - energy storage & demand response
+3 - flexible base resources - nuclear, carbon capture & storage, electricity to gas & seasonal storage
+
+The current consensus is that decarbonising electricity is priority number one.  Electricity can be substituted for fossil fuels in transportation and heating. Electricity is a high quality form of energy, able to carry vast amounts of energy through transmission lines or to control the flow of information in a very fine grained way.  This makes electricity high substitutable.
+
+The same is not for low carbon resources.   Jenkin’s three groups of low carbon resources offer different value to the grid.  Wind and solar displace burning fossil fuels.  Fast burst resources like storage avoid the need to build, operate and maintain standby capacity.  Flexible base resources can offer both the ability to offset fossil fuels and to reduce capacity required in other categories.
+
+Because all three classes of low carbon generation offer different value to the grid, it is difficult (but not impossible) to substitute between them.  Substituting variable resources for dispatchable resources is possible, but ends up being very expensive the more substitution you do.  
+
+Jenkins reports that progress in variable renewables is roughly on track, but progress in flexible base resources is behind.  Technologies such as underground storage or electricity to gas are unproven on the scales required to make a real difference.  
+
+The troubles of nuclear in the West are well documented - today large scale nuclear plants are only being built in planned economies (China & the Middle East).  Jenkins notes that the GW scale is too big in market based economies - on a $/GW the plants are economic but the absolute value (i.e. $) of financing is too big.  This is also in a very low interest rate environment.  Low interest rates should enable more investment - yet nuclear in the West is reducing in capacity.  The West has also forgotten how to build nuclear, with South Korea becoming the world leader in nuclear builds. 
+
+Smaller nuclear plants can help made the investment easier to swallow.  Smaller plants also reduce construction and financing risks, and allow manufacturing to be done in factories (rather than on be assembled on site).
+
+Value versus cost
+Jenkin’s explains the historical mental model for supporting clean technology.  Subsidies support technologies as they travel up the experience curve - improving the fundamental technology, developing economies of scale and learning by doing.  Once the cost of the technology is low enough then the technology can stand on it’s own two feet.  
+
+The new mental model is that as renewable penetrations increase we are seeing decreases in cost - but we also see a concurrent decrease in value.  Because renewables generate at the same time, the oversupply during these times drives down electricity prices.  This driving down of prices is a signal that the grid isn’t valuing generation during these time periods.  If the value of electricity generated is very low then even very cheap plants won’t get built.  
+
+There are four reasons why the value of wind & solar decline as penetration increases:
+1 - offsetting less fossil fuels 
+2 - offsetting less capacity requirements (i.e. avoided costs of building dispatchable generation)
+3 - increased curtailment due to oversupply
+4 - increased grid integration costs - reserve requirements & network costs
+
+Diversifying offers a better chance and lower cost decarbonisation
+In the context of the type of optimization models Jenkins develops this makes complete sense.  Introducing additional constraints onto a linear program will only ever end up with the same or a worse result.  It’s a simple result but not immediately obvious in the context of decarbonization.
+
+By removing the potential to use technologies like nuclear we can at best end up where we would be with nuclear.   If a nuclear free pathway was optimal then both models will find the same solution. The fact is however that they don’t.  Jenkins reports a strong consensus in literature that a diversified mix of low carbon resources offers the best chance of affordable deep decarbonization.
+
+It’s possible to rely on variable renewables & fast burst resources only but it will be more challenging and more expensive.  Dispatchable low carbon resources significantly reduce the cost and technical resources of deep decarbonization.  
+
+Not using nuclear means a massive build out of variable renewables capacity (roughly double).  Not only do we need more capacity but the global capacity factor will be low (MWh / MWh maximum).  The capacity will also have a very high cost per utilised output ($/MWh). The low energy density nature of variable renewables also means much greater land use impact for a variable renewables scenario only solution.
+
+A variable renewables only solution also requires long duration energy storage.  In a review of literature, Jenkins finds a seasonal storage requirement for 8-16 weeks worth of US electricity consumption.  To put this in context - the ten largest pumped hydro plants in the US currently have around 43 minutes of storage.  
+
+Thanks for reading!
