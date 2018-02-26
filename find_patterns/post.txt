@@ -1,55 +1,115 @@
-This Energy Insights posts covers the presentation *** and the report ** by Jesse Jenkins, a PhD candidate at MIT.  
+---
+title: The Four Inconvenient Truths of the Clean Energy Transition
+date: 2018-01-11T14:33:59+00:00
+author: Adam Green
+layout: post
+permalink: /four-inconvenient-truths-clean-energy-transition/
+categories:
+  - Energy
+---
+**All is not well with the clean energy transition**. At this stage positive commentary on the progress of the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, and CO<sub>2</sub> concentrations passing 400 ppm for the first time in several million years.
 
-Different stages of decarbonization means different optimal strageties
-Jenkin’s highlights a few non-linear relationships that exist when making progress with decarbonization:
-1 - the challenge of decarbonization is non-linear (wrt decarbonization progress) (decarbonization gets more difficult the cleaner we get)
-2 - the curtailment of renewables is non-linear (wrt renewables penetration) (more renewables means more curtailment)
-3 - the change in the optimal mixture of resources (wrt decarbonization progress)
+The motivation for the clean energy transition cannot be stronger - preventing dangerous climate change. Yet even the potential violence of climate change doesn't counteract historical realities.
 
-The final point is a very intelligent observation by Jenkins.  Different levels of decarbonization require different next steps.  Early on we need to build variable renewables - at later stages low carbon dispatchable resources become more important.  
+**This post highlights four reasons why progress of the clean energy transition is slow**. All four reflect the experience of previous transitions. All four are unwelcome.
 
-It’s not just a case of doing the same thing over our whole decarbonization journey.  The strategies, tools and resources change as we progress to cleaner and cleaner electricity.  This can be seen most clearly by the ‘renewables peak’ in Figure ***.  After 60-80% emissions saving we actually need to reduce the (relative or absolute ***) amount of variable renewables on the grid.  
+I’m not arguing against the need for the clean energy transition. I’m trying to show some of the reasons why this transition will continue to be slow and difficult. **Understanding history can help us overcome these challenges**.
 
-In the initial stages of our deacrbonization journey we are building a lot of wind and solar.  In later stages we require relying on the entire family of low carbon resources.  
+The primary source for these ideas is Vaclav Smil's excellent work on energy transitions ([book](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), [lecture](https://www.youtube.com/watch?v=5guXaWwQpe4) and [another lecture](https://www.youtube.com/watch?v=NxO3s0U5WdY)).
 
-Substitution with electricity versus substitution within electricity
-Jenkin’s groups low carbon resources into three classes:
-1 - fuel saving variable - wind & solar
-2 - fast burst - energy storage & demand response
-3 - flexible base resources - nuclear, carbon capture & storage, electricity to gas & seasonal storage
+Smil is my favorite energy writer; prolific, confidentially numeric and intelligently contrarian. Smil’s work is for me the best on energy ever written.  I've also previously written about [Smil's work on carbon capture and storage](http://adgefficiency.com/energy-insights-vaclav-smil-on-carbon-capture-storage/).
 
-The current consensus is that decarbonising electricity is priority number one.  Electricity can be substituted for fossil fuels in transportation and heating. Electricity is a high quality form of energy, able to carry vast amounts of energy through transmission lines or to control the flow of information in a very fine grained way.  This makes electricity high substitutable.
+### The Four Inconvenient Truths of Energy Transitions
 
-The same is not for low carbon resources.   Jenkin’s three groups of low carbon resources offer different value to the grid.  Wind and solar displace burning fossil fuels.  Fast burst resources like storage avoid the need to build, operate and maintain standby capacity.  Flexible base resources can offer both the ability to offset fossil fuels and to reduce capacity required in other categories.
+Energy transitions  the development of civilization. Muscle and wood powered our early days; today we use coal and gas to drive turbines, oil to enable global transportation and can harness the nuclear energy of celestial bodies.  Now we are moving toward clean and smart technologies; wind turbines, solar panels, energy storage and data driven optimization.
 
-Because all three classes of low carbon generation offer different value to the grid, it is difficult (but not impossible) to substitute between them.  Substituting variable resources for dispatchable resources is possible, but ends up being very expensive the more substitution you do.  
+This transition is simultaneously similar and different to past transitions.  Three ways this transition is similar to the past
 
-Jenkins reports that progress in variable renewables is roughly on track, but progress in flexible base resources is behind.  Technologies such as underground storage or electricity to gas are unproven on the scales required to make a real difference.  
+*one* energy transitions are **slow** - and getting slower
 
-The troubles of nuclear in the West are well documented - today large scale nuclear plants are only being built in planned economies (China & the Middle East).  Jenkins notes that the GW scale is too big in market based economies - on a $/GW the plants are economic but the absolute value (i.e. $) of financing is too big.  This is also in a very low interest rate environment.  Low interest rates should enable more investment - yet nuclear in the West is reducing in capacity.  The West has also forgotten how to build nuclear, with South Korea becoming the world leader in nuclear builds. 
+*two* energy transitions are **additive** - old fuels don’t go away
 
-Smaller nuclear plants can help made the investment easier to swallow.  Smaller plants also reduce construction and financing risks, and allow manufacturing to be done in factories (rather than on be assembled on site).
+*three* energy transitions are **sequential** and high variance
 
-Value versus cost
-Jenkin’s explains the historical mental model for supporting clean technology.  Subsidies support technologies as they travel up the experience curve - improving the fundamental technology, developing economies of scale and learning by doing.  Once the cost of the technology is low enough then the technology can stand on it’s own two feet.  
+And one in which the clean energy transition is departing from previous transitions
 
-The new mental model is that as renewable penetrations increase we are seeing decreases in cost - but we also see a concurrent decrease in value.  Because renewables generate at the same time, the oversupply during these times drives down electricity prices.  This driving down of prices is a signal that the grid isn’t valuing generation during these time periods.  If the value of electricity generated is very low then even very cheap plants won’t get built.  
+*four* energy transitions enable **new utility**
 
-There are four reasons why the value of wind & solar decline as penetration increases:
-1 - offsetting less fossil fuels 
-2 - offsetting less capacity requirements (i.e. avoided costs of building dispatchable generation)
-3 - increased curtailment due to oversupply
-4 - increased grid integration costs - reserve requirements & network costs
+### The First Inconvenient Truth - Energy transitions are slow (and getting slower)
 
-Diversifying offers a better chance and lower cost decarbonisation
-In the context of the type of optimization models Jenkins develops this makes complete sense.  Introducing additional constraints onto a linear program will only ever end up with the same or a worse result.  It’s a simple result but not immediately obvious in the context of decarbonization.
+In [Energy Transitions: History, Requirements, Prospects](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771) Smil each subsequent transition takes longer than the last. Coal took 35 years, oil 40 years and natural gas 55 years to move from 5% to 25% of global primary energy consumption.
 
-By removing the potential to use technologies like nuclear we can at best end up where we would be with nuclear.   If a nuclear free pathway was optimal then both models will find the same solution. The fact is however that they don’t.  Jenkins reports a strong consensus in literature that a diversified mix of low carbon resources offers the best chance of affordable deep decarbonization.
+**There are two reasons for the slowing down.** As the absolute size of our energy consumption increases, the relative effect of adding more is smaller. The massive growth in global energy consumption means that effort today has a smaller relative effect than it would have in the past.
 
-It’s possible to rely on variable renewables & fast burst resources only but it will be more challenging and more expensive.  Dispatchable low carbon resources significantly reduce the cost and technical resources of deep decarbonization.  
+Second, the technical challenges of using the new energy source are increasing. Moving from wood to coal was an easy transition - both are solid fuels that can be transported, handled and burnt using similar techniques. Using oil required building a massive global upstream and downstream infrastructure, cars and roads to drive on. Using gas required the development of gas turbines, one of the most complex machines humanity has ever built.
 
-Not using nuclear means a massive build out of variable renewables capacity (roughly double).  Not only do we need more capacity but the global capacity factor will be low (MWh / MWh maximum).  The capacity will also have a very high cost per utilised output ($/MWh). The low energy density nature of variable renewables also means much greater land use impact for a variable renewables scenario only solution.
+The clean energy transition is full of technical challenges. Clean energy generation is low power density (W/m<sup>2</sup>), meaning we need to build wind & solar across vast areas of land. It also requires transmission lines, energy storage and intelligent operation, to counteract the disadvantages of geographically dispersed, low capacity factor and intermittent renewables.
 
-A variable renewables only solution also requires long duration energy storage.  In a review of literature, Jenkins finds a seasonal storage requirement for 8-16 weeks worth of US electricity consumption.  To put this in context - the ten largest pumped hydro plants in the US currently have around 43 minutes of storage.  
+*What this means for the clean energy transition - it’s going to take a long time.*
 
-Thanks for reading!
+### The Second Inconvenient Truth - Energy transitions are additive
+
+**Of the four truths, this is the most inconvenient**. Each transitions increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. Older technologies take a long time to go away. We are still building coal-fired generators today and are recklessly likely to for a long time.
+
+Figure 1 shows the history of US primary fuel consumption. US coal consumption has risen all the way through to the start of the 21st century. Each new fuel has not displaced coal. Instead they add to an existing and increasing coal consumption.
+
+![Figure 1]({{ "/assets/four_truths_transitions/fig1.png"}})
+**Figure 1 - U.S. Primary Energy Use over time in Quads from 1800 to the present by source - [US Department of Energy Quadrennial Technology Review 2015](https://energy.gov/sites/prod/files/2015/09/f26/Quadrennial-Technology-Review-2015_0.pdf)**
+
+As global energy demand increases, renewables are already a significant part of the marginal increase. **But it’s the older fossil fuel generation that needs to go - history shows us that this doesn’t happen quickly**.
+
+Improvements in technology, building of supply chains and know-how mean that mature technologies are often efficient, cheap to build and cheap to maintain.  Having a track record of performance and low variance lifecycle costs also makes older technologies more attractive to investors.
+
+Diesel generators (an 1890’s technology) are a great example of this. Diesel generators are reasonably efficient, quick and cheap to build with a well-understood maintenance schedule.  They continue to be built on the kW to multi MW scales.
+
+*What this means for the clean energy transition -fossil fuels aren’t going away.*
+
+### The Third Inconvenient Truth - Energy transitions are sequential and high variance
+
+Smil notes that energy transitions require a "specific sequence of scientific advances, technical innovations and organizational actions" combined with "economic, political and strategic circumstances”.
+
+**The dependence on doing the right things in the right order means progress is not guaranteed**. Coal dominated China, nuclear powered France and hydro blessed New Zealand show that energy systems are not homogeneous.
+
+When we have specific requirements about where our energy system needs to go, getting what we want requires getting things right all across the board.
+
+The inevitability of technological progress in the economics of wind & solar is sometimes confused with the inevitability deploying wind & solar. The reality is that even as clean technology improves, there is no guarantee that our energy system will move the way our planet needs it too.
+
+For example, without the correct alignment of incentives through rate structures even cheap batteries won’t have an impact. We cannot only rely on technology improving. The path this energy transition takes depends on much more than cheap solar panels and wind turbines.
+
+*What this means for the clean energy transition - there is no guarantee things will move in the correct way.*
+
+### The Fourth Inconvenient Truth - Energy transitions enable new utility
+
+The first three truths are ways in which this clean transition will be like the past. This final truth is a reality of the clean energy transition that moves against past trends.
+
+Why do we spend the time and money to transition to new energy sources? **New sources of energy allow us to do things we couldn’t do before**.  Coal enabled a revolution in manufacturing. Oil & gas enabled revolutions in transportation.
+
+One way historical energy transitions have enabled new utility is by using higher quality fuels. One measurement of energy quality is energy density - how much energy we can squeeze into a given mass or volume.
+
+Past transitions have been movements towards more energy dense fuels. Dry wood contains around 18 MJ/kg, anthracite coal 8-30 MJ/kg, oil 41-42 MJ/kg and methane (the primary component of natural gas) has 55 MJ/kg.
+
+It’s difficult to compare renewables with fossil fuels on an energy density basis as renewables don’t consume fuel. Yet it is evident that water, sunlight and wind are powered by less dense forms of energy than burning oil or gas.
+
+Even if we ignore that clean technologies reverse the energy density trend, the electricity generated by clean technologies is no different from what is supplied on the grid today. **The clean energy transition lacks a killer app**.
+
+We are getting cleaner electricity but no major new form of utility. We are without a key driving force that helped to power previous transitions - the driving force of people wanting to heat their homes, power factories and fly around the globe.
+
+One hope is the role that inverter based renewables & storage can play supporting the grid in services such as fast frequency response.  Projects like Tesla's South Australian battery are outperforming synchronous generators in providing these services.  However this is a minor advantage compared to the coal fired revolution of manufacturing and the oil fired revolution in mobility.
+
+*What this means for the clean energy transition - a key driving force that powered previous transitions won't be helping this time.*
+
+Thanks for reading.
+
+### References and further reading
+
+[Energy Transitions: History, Requirements, Prospects (Smil 2010)](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771)
+
+[Energy Transitions – Vaclav Smil (Youtube)](https://www.youtube.com/watch?v=NxO3s0U5WdY)
+
+[Energy Revolution? More like a Crawl &#8211; Vaclav Smil (Youtube)](https://www.youtube.com/watch?v=5guXaWwQpe4)
+
+[Fourth National Climate Assesment (2017)](https://science2017.globalchange.gov/downloads/CSSR2017_FullReport.pdf)
+
+[DoE Quadrennial Technology Review (2015)](https://energy.gov/sites/prod/files/2015/09/f26/Quadrennial-Technology-Review-2015_0.pdf)
+
+[Global CO2 emissions set to rise 2% in 2017 after three-year ‘plateau’](https://www.carbonbrief.org/analysis-global-co2-emissions-set-to-rise-2-percent-in-2017-following-three-year-plateau)

@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-grep -nf patterns.txt post.txt
+grep -onf patterns.txt post.txt
