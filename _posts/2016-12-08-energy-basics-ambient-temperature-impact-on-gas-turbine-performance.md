@@ -1,6 +1,6 @@
 ---
 id: 231
-title: 'Gas turbines and ambient temperature'
+title: 'Gas Turbines and Ambient Temperature'
 date: 2016-12-08T19:31:40+00:00
 author: Adam Green
 layout: post
@@ -28,7 +28,7 @@ Ambient temperature also has an affect on the compressor.  Colder air improves 
 **Figure 1 - Effect of ambient temperature on gas turbine performance**
 *Rahman et. al (2011) - Thermodynamic performance analysis of gas-turbine power-plant*
 
-De Sa & Zubaidy (2011) proposed an empirical relationship for a 265 MW gas turbine.  This gives us a rough rule of thumbof a 1% efficiency reduction and 5% reduction in output for every 10 °C change.
+De Sa & Zubaidy (2011) proposed an empirical relationship for a 265 MW gas turbine.  This gives us a rough rule of thumb of a 1% efficiency reduction and 5% reduction in output for every 10 °C change.
 
 > For every K rise in ambient temperature above ISO conditions the Gas Turbine loses 0.1% in terms of thermal efficiency and 1.47 MW of its Gross (useful) Power Output.
 

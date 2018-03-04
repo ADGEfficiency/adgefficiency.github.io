@@ -1,6 +1,6 @@
 ---
 id: 285
-title: 'Negative effects of high return temperature'
+title: 'Negative Effects of High Return Temperatures'
 date: 2016-12-16T11:12:55+00:00
 author: Adam Green
 layout: post
