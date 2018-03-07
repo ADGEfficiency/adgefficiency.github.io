@@ -1,6 +1,6 @@
 ---
 id: 455
-title: 'Are wind and solar renewable and clean?'
+title: 'How clean and renewable are wind and solar?'
 date: 2017-01-26T21:16:55+00:00
 author: Adam Green
 layout: post
