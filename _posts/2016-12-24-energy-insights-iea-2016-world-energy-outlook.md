@@ -10,9 +10,9 @@ categories:
   - Energy Insights
 ---
 
-This Energy Insights post highlights some of the key points from the [2016 IEA World Energy Outlook presentation](https://www.youtube.com/watch?v=DXXEX8INQao). The presentation hosted by the Center for Strategic & International Studies is well worth a watch - I recommend subscribing to the [CSIS channel on YouTube](https://www.google.co.nz/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjRnZnXl4rRAhVEWLwKHWFuCmoQFggcMAA&url=https%3A%2F%2Fwww.youtube.com%2Fuser%2Fcsisdc&usg=AFQjCNG_ao_oXAznnPs14zyOxdABmHTVLQ).
+This Energy Insights post highlights some of the key points from the [2016 IEA World Energy Outlook presentation](https://www.youtube.com/watch?v=DXXEX8INQao). The presentation hosted by the Center for Strategic & International is worth a watch - I recommend subscribing to the [CSIS channel on YouTube](https://www.google.co.nz/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjRnZnXl4rRAhVEWLwKHWFuCmoQFggcMAA&url=https%3A%2F%2Fwww.youtube.com%2Fuser%2Fcsisdc&usg=AFQjCNG_ao_oXAznnPs14zyOxdABmHTVLQ).
 
-> Middle East oil production at a maximum of last 40 years (35% of global production).
+> Middle East oil production at a maximum of last 40 years (35% of global production)
 
 Middle East output is at a historical high due to:
 

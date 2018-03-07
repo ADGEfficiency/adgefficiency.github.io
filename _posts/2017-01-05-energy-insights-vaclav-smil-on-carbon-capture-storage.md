@@ -15,11 +15,9 @@ In the chapter *Technical Fixes*, Smil discusses Carbon Capture & Storage (CCS).
 
 **The size of infrastructure required to handle CO<sub>2</sub>**
 
-Smil calculates that to sequester 15% of 2008 emissions would require handling around 6 billion m<sup>3</sup> of CO<sub>2</sub>.  In the same year total global crude oil extraction was around 4.6 million m<sup>3</sup>.
+Smil calculates that to sequester 15% of 2008 emissions would require handling around 6 billion m<sup>3</sup> of CO<sub>2</sub>.  In the same year total global crude oil extraction was around 4.6 million m<sup>3</sup>.  **This puts into perspective how unrealistic large scale CCS is**.
 
-For me this puts into perspective how unrealistic large scale CCS is.
-
-The amount of time and capital it would take to develop a system on the same scale as todays crude oil extraction is immense.  To think that building such a massive system would still leave over 80% of our emissions untouched is a killing blow to CCS as anything more than a small part of the decarbonisation solution.
+The amount of time and capital it would take to develop a system on the same scale as todays crude oil extraction is immense.  To think that building such a massive system would still leave over 80% of our emissions untouched is incredible.
 
 **Projections for future price declines**
 
