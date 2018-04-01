@@ -1,6 +1,6 @@
 ---
 id: 562
-title: 'Average vs Marginal Carbon Emissions'
+title: 'Average vs. Marginal Carbon Emissions'
 date: 2017-02-02T01:27:04+00:00
 author: Adam Green
 layout: post
@@ -10,7 +10,7 @@ categories:
   - Energy Basics
 ---
 
-Carbon savings might seem like a simple calculation – yet many professionals are getting it wrong. I know because I was making this mistake in my previous job!
+Calculating carbon savings seems like a simple calculation - **yet many professionals are getting it wrong**. I know because I was made this mistake in my previous job.
 
 Accurate calculation of carbon savings is crucial in the fight against climate change.  Knowing how much we save from a project can be compared to other projects such as renewable generation.
 
@@ -31,7 +31,7 @@ Suppose we have a grid where electricity is supplied by either wind or coal (the
 
 The wholesale mechanism operating in most electricity markets will reduce output on the most expensive plant, not reduce the output of all plants equally.
 
-![Figure 1]({{ "/assets/avg_marginal/fig1_2.png"}})
+![Figure 1 & 2]({{ "/assets/avg_marginal/fig1_2.png"}})
 **Figure 1 & 2 – The effect of saving 1 GW of electricity.  Note that the generation from wind is unchanged.**
 
 |Table 2 – Results for the Base Case & Case 1|
@@ -43,11 +43,12 @@ The wholesale mechanism operating in most electricity markets will reduce output
 |Carbon emissions|	tC|	83,329|	61,489|	21,840|
 |Carbon intensity|	tC/MWh|	0.456|	0.387|	0.910|
 
-Our carbon saving is equal to 1 GW multiplied by the carbon intensity of the marginal plant.
-If we were to use the average grid carbon intensity (0.456 tC/MWh) we calculate a daily carbon saving of only 21,480 tC.
+Our carbon saving is equal to 1 GW multiplied by the carbon intensity of the marginal plant.  If we were to use the average grid carbon intensity (0.456 tC/MWh) we calculate a daily carbon saving of only 21,480 tC.
 
 You might be asking – how do we know what the marginal generator will be?  It’s likely to be the most expensive generator at that time (it may not be if the plant needs to be kept on for technical reasons).   As renewables are characterized by low marginal costs they are the unlikely to be pushed off the grid.
 
 Luckily high marginal cost generators like open cycle gas turbines are usually also carbon intense – so your saved electricity is likely doing valuable work – and potentially more than you previously thought!
 
-You can download a copy of the model here.
+[You can download a copy of the model here](https://github.com/ADGEfficiency/adgefficiency.github.io/blob/master/assets/avg_marginal/average-vs-marginal-emissions-2017-02-02-1.xlsx).
+
+Thanks for reading!
