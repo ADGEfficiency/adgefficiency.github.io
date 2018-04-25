@@ -3,6 +3,7 @@ title: 'Getting to Zero: Pathways to Zero Carbon Electricity Systems - Jesse Jen
 date: 2018-02-25
 author: Adam Green
 layout: post
+permalink: /getting-zero-pathways-zero-carbon-electricity-systems-jesse-jenkins/
 categories:
   - Energy Insights
 ---
@@ -11,7 +12,7 @@ This Energy Insights posts looks *Getting to Zero: Pathways to Zero Carbon Elect
 
 ### Substitution with electricity versus substitution within low carbon resources
 
-Electricity is a high quality form of energy.  It can carry vast amounts of energy across continents or for the fine grained control of information.  The high quality nature of electricity makes it highly substitutable. Decarbonization of electricity allows decarbonization of transport and heating, because we can use low carbon electricity to power cars or to heat our homes.
+Electricity is a high quality form of energy.  It can carry vast amounts of energy across continents or allow the fine grained control of information.  The high quality nature of electricity makes it highly substitutable. Electricity allows decarbonization of transport and heating.  Low carbon electricity can power cars or to heat our homes.
 
 Unfortunately, low carbon electricity resources are themselves not easily substitutable.  Different low carbon resources offer fundamentally different value to the grid.  **To use one resource in place of another is possible, but ends up being more expensive the more substitution you do**.  
 
@@ -20,7 +21,7 @@ Jenkins groups low carbon resources into three classes
 - fast-burst - energy storage & demand response
 - flexible base - nuclear, carbon capture & storage, electricity to gas & seasonal storage
 
-Wind and solar displace burning fossil fuels.  Fast-burst resources displace capacity, and avoid the need to build, operate and maintain standby capacity.  Flexible base resources offer both the ability to offset fossil fuels and to reduce capacity.
+Wind and solar displace burning fossil fuels.  Fast-burst resources displace capacity, avoiding the need to build, operate and maintain standby capacity.  Flexible base resources offer both the ability to offset fossil fuels and to reduce capacity.
 
 Jenkins reports that progress in variable renewables is roughly on track, but progress in flexible base resources is behind.  Mature technologies such as nuclear or CCS are largely stagnant.  Newer technologies such as underground storage or electricity to gas are unproven on the scales required to make a real difference.  
 
@@ -28,12 +29,12 @@ The troubles of nuclear in the West are well documented.  Today large scale nucl
 
 Today's low interest rates should make investing in nuclear more attractive, yet nuclear in the West is reducing in capacity.  The West has largely forgotten how to build nuclear on time and on budget, with South Korea becoming the world leader in nuclear builds.
 
-Smaller nuclear plants can help made the investment easier to swallow.  Smaller plants also reduce construction and financing risks, and allow manufacturing to be done in factories (rather than on be assembled on site).
+Smaller nuclear plants can help make the investment easier to swallow.  Smaller plants also reduce construction and financing risks, and allow manufacturing to be done in factories (rather than be assembled on site).
 
 ###  Variable renewables peak
 Jenkins shows the optimal relative mixture of low carbon resources as a function of carbon limits.  Figure 1 below shows that initially it is optimal to focus on increasing the relative share of variable renewables on the grid.  
 
-It also shows that later on the grid requires other types of resources to deliver the lowest cost electrictiy supply.  Eventually the costs of operating a variable renewable grid become so large that more expensive but dispatchable low carbon generation (i.e. nuclear) becomes the optimal economic decision.
+It also shows that later on the grid requires other types of resources to deliver the lowest cost electricity supply.  Eventually the costs of operating a variable renewable grid become so large that more expensive but dispatchable low carbon generation (i.e. nuclear) becomes the optimal economic decision.
 
 ![Figure 1]({{ "/assets/getting_zero/fig1.png"}})
 **[Figure 1 – It's not a straight line to zero (Getting to Zero: Pathways to Zero Carbon Electricity Systems) ](https://kleinmanenergy.upenn.edu/sites/default/files/Getting_to_Zero.pdf)**
@@ -41,9 +42,9 @@ It also shows that later on the grid requires other types of resources to delive
 This means that we must continue to develop, support and improve fast-burst and flexible low carbon resources alongside variable renewables.  Not because we need them today but because we need them tomorrow.
 
 ### Value versus cost
-Jenkins explains the historical mental model for supporting clean technology - that subsidies allow a technology to reduce its costs and move up it's experience curve.  The path taken depends on the technology, and often includes developing economies of scale (i.e. in manufacturing or supply chains) and accumulation of iterative 'learning by doing' improvements.  Once the cost of the technology is low enough then the technology can stand on it’s own two feet without subsidy.  
+Jenkins explains the historical mental model for supporting clean technology.  Subsidies allow a technology to reduce its costs and move up it's experience curve. The path often includes developing economies of scale (i.e. in manufacturing or supply chains) and accumulation of iterative 'learning by doing' improvements. Once the cost of the technology is low enough then the technology can stand on it’s own two feet without subsidy.
 
-The new mental model is that as renewable penetrations increase we are see both decreases in cost and a concurrent decrease in value.  Because renewables generate at the same time, the oversupply during these times drives down electricity prices.  This driving down of prices is a signal that the grid isn’t valuing generation during these time periods.  **If the value of electricity generated by renewables is very low then even very cheap plants won’t get built**.  
+The new mental model is that as renewable penetrations increase we see both decreases in cost and a concurrent decrease in value.  Because renewables generate at the same time, the oversupply during these times drives down electricity prices.  This driving down of prices is a signal that the grid isn’t valuing generation during these time periods.  **If the value of electricity generated by renewables is very low then even very cheap plants won’t get built**.  
 
 ![Figure 2]({{ "/assets/getting_zero/fig2.png"}})
 **[Figure 2 – A race between declining cost and value (Getting to Zero: Pathways to Zero Carbon Electricity Systems) ](https://kleinmanenergy.upenn.edu/sites/default/files/Getting_to_Zero.pdf)**

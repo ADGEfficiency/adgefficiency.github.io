@@ -16,7 +16,7 @@ These Energy Insights come from a TED talk titled [‘How to save the energy sys
 It's logical to think that as humanity burns more oil the amount of oil left to recover should decrease.  Figure 1 below shows the opposite is true. Estimated global oil reserves have actually increased over time.
 
 ![Figure 1]({{"/assets/andre_bardow_save/fig1.jpg"}})
-Figure 1 – [Estimated global oil reserves (1980 – 2014)](https://www.forbes.com/sites/rrapier/2016/05/23/the-explosive-growth-of-u-s-oil-reserves/2/#53cbc60772c6)
+**Figure 1 – [Estimated global oil reserves (1980 – 2014)](https://www.forbes.com/sites/rrapier/2016/05/23/the-explosive-growth-of-u-s-oil-reserves/2/#53cbc60772c6)**
 
 Oil reserves are defined as the amount of oil that can be technically recovered at a cost that is financially feasible at the present price of oil. Reserves are a function of a number of variables that change over time:
 - Total physical oil in place – physical production of oil reduces the physical amount of oil in the ground.
