@@ -14,7 +14,7 @@ I’m excited to present this Energy Insights post. I’m highlighting a few int
 
 The show considers what may be necessary to get to levels of 80-100% renewables. Stephen Lacey and Shayle Kann host the show with Jesse Jenkins as the guest.
 
-### The concept of flexibility
+### The concept of flexibility
 
 Jenkins observes that the concept of flexibility of electrical capacity appearing in literature. Flexibility means how quickly an asset is able to respond to change.
 
@@ -34,7 +34,7 @@ Jenkins observes that the investment decisions we make today will affect how we 
 
 Most deep decarbonisation roadmaps include essentially zero carbon electricity by 2050. We need to ensure that when the next investment cycle begins we are not installing carbon intense generation as it would still be operating in 2050.
 
-**Table 1 - typical lifetimes of electricity generation plants (years) given by Jenkins**
+|**Table 1 - typical lifetimes of electricity generation plants (years) given by Jenkins**|
 |---|---|
 |Nuclear   | 40-60 |
 |Wind & solar   | 30 - longer |
