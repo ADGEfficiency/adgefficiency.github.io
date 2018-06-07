@@ -4,7 +4,7 @@ date: 2017-04-30T03:08:25+00:00
 categories:
   - Energy
   - Machine Learning
-redirect_from: "/machine-learning-in-energy-part-one/"
+permalink: /machine-learning-in-energy-part-one/
 
 ---
 
