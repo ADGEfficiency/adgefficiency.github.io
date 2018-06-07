@@ -8,7 +8,7 @@ categories:
 
 This post details the debugging process I went through for the new implementation of DQN in energy_py.  This work was performed on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).
 
-The work was done using the energy_py wrapper around the Open AI gym CartPole-v0 environment.
+The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
 The ideas behind documenting this debug process come from the blog post [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl).  The post reccomends keeping a detailled log of the debugging process.  
 
@@ -91,7 +91,7 @@ while step < total_steps:
 
 ## problem - reward collapsing after exploration 
 
-![fig1]({{ "./assets/debug_dqn/fig1.png"}}) 
+![fig1]({{ "/assets/debug_dqn/fig1.png"}}) 
 **Figure 1 - Collapsing reward after exploration is over**
 
 When using an epsilon greedy exploration policy, early stages of the experiment are mostly randomly selected actions.  For CartPole this ends up being an average reward per episode of between 20 - 30.  For a working implementation the episode returns will stay in this range and start to increase as the agent learns.
@@ -114,12 +114,12 @@ self.act_summaries.extend([
 
 This allows visibility of the weights at each step - and we can see that both the weights and biases are being changed at each step.
 
-![fig2]({{ "./assets/debug_dqn/fig2.png"}}) 
+![fig2]({{ "/assets/debug_dqn/fig2.png"}}) 
 **Figure 2 - Online network weights changing**
 
 ##  hypothesis - how am I changing the weights - aka what is the target
 
-In DQN learning is done by minimizing the difference between predictied Q values and Bellman targets.  Creation of the Bellman target is core to the algorithm and a common place for errors.
+In DQN learning is done by minimizing the difference between predicted Q values and Bellman targets.  Creation of the Bellman target is core to the algorithm and a common place for errors.
 
 Reinfocement learning can be though of as a data generation process - interacting with the environment generates sequences of experience tuples of `(s, a, r, s')`.  In order to learn from this data we need to label it - in DQN this labelling process is doing by creating a Bellman target for each sample in a batch.  This then allows supervised learning to be used to fit our predicted `Q(s,a)` to the target. 
 
