@@ -25,10 +25,16 @@ While I think obsession over what tools (i.e. which editor to use) is unhelpful,
 I used two tmux windows, one that kept track of the experiment and another with the `energy_py/agents/dqn.py` script open for editing in vim.  The experiment window shows both the `info.log` and `debug.log`.
 
 ![]({{ "/assets/debug_dqn/tmux_setup.png"}}) 
-**tmux setup with the left pane running the script and showing the info log, the top right pane showing the debug log using `tail -f debug.log` and a Tensorboard server running in the bottom right pane**
+tmux window one setup
+- left pane running the script and showing the info log
+- the top right pane showing the debug log using `tail -f debug.log` 
+- a Tensorboard server running in the bottom right pane
 
 ![]({{ "/assets/debug_dqn/vim_setup.png"}}) 
-**tmux setup with the left pane running the script and showing the info log, the top right pane showing the debug log using `tail -f debug.log` and a Tensorboard server running in the bottom right pane**
+tmux window two setup
+- vim with `agent/dqn.py` open
+
+Switching between tmux windows is as easy at `Ctrl b p'`.
 
 ## debugging code
 
