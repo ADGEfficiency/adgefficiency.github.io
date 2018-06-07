@@ -135,14 +135,14 @@ Reinfocement learning can be though of as a data generation process - interactin
 
 From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the argmax operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a very small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the argmax across `Q(s',a)` was approximately 1.0 as well.
 
-![fig3]({{ "./assets/debug_dqn/fig3.png"}}) 
+![fig3]({{ "/assets/debug_dqn/fig3.png"}}) 
 **Figure 3 - The Bellman target showing a plateau at around 2**
 
 We know can see that the target doesn't seem right - we can check the loss to see if this improperly formed target is being learnt.  Even though DQN uses a target network for the approximation of `max Q(s',a)`, this approximation is still infulenced by the online network via the target net copy operations.
 
 Taking a look at the loss function we can see that the agent is learning to fit this improperly formed Bellman target
 
-![fig4]({{ "./assets/debug_dqn/fig4.png"}}) 
+![fig4]({{ "/assets/debug_dqn/fig4.png"}}) 
 **Figure 4 - A nice looking loss function**
 
 ##  hypothesis - the target isn't being created correctly
@@ -153,7 +153,7 @@ One key part of Q-Learning is seting this value to zero for terminal states.  In
 
 I added this part of the Bellman equation to Tensorboard - both the unmasked and masked `Q(s',a)` values.
 
-![fig5]({{ "./assets/debug_dqn/fig5.png"}}) 
+![fig5]({{ "/assets/debug_dqn/fig5.png"}}) 
 **Figure 5 - The unmasked and masked approximations of `max Q(s',a))`**
 
 As exepected none of the unmased values are zero, because they are maximums across all possible actions. But looking at the masked values, it seemed that far too many were zero!  If our batch is sampled well from memory, we would expect the distribution of terminals (and associted zero `Q(s',a)` values) to match the distribution we see in training.  For CartPole with an episode length of around 20, we would expect to see 20 times as many non-zero values as zeros.  From Figure 5 we see the opposite.
@@ -173,12 +173,12 @@ next_state_max_q = tf.where(
 
 After making this change, the distribution of masked `Q(s',a)` values looks a lot better
 
-![fig6]({{ "./assets/debug_dqn/fig6.png"}}) 
+![fig6]({{ "/assets/debug_dqn/fig6.png"}}) 
 **Figure 6 - Proper masking out of `Q(s',a)`**
 
 Now after running the experiment we see the increase in Q values that I saw with previous implementations of DQN.  This optimism is a function of the agressive and positively biased maximum value done in creating the Bellman target.  We know this because a pessimistic target (which we had previously with our incorrect `tf.where`) doesn't see this optimism.
 
-![fig7]({{ "./assets/debug_dqn/fig7.png"}}) 
+![fig7]({{ "/assets/debug_dqn/fig7.png"}}) 
 **Figure 7 - Increasingly optimistic Bellman targets and a loss function that now reflects the non-staionary target creation** 
 
 The loss function in Figure 7 is maybe scary for supervised learners - a increasing loss function means that your errors in predicting the target are getting worse.  In the context of reinforcement learning this loss function is a commentary on the non-stationary target being used to train.  Increases in loss function can actually be seen as a good thing, as this means the agent is suprised about how much return it should expect for a particular sample of experience.
@@ -217,7 +217,7 @@ TODO PICTURE OF THE BATCH NORMED TARGETS !!!
 
 After making all of these changes the first signs of life appeared
 
-![fig8]({{ "./assets/debug_dqn/fig8.png"}}) 
+![fig8]({{ "/assets/debug_dqn/fig8.png"}}) 
 **Figure 8 - It's alive!** 
 
 ## tuning
