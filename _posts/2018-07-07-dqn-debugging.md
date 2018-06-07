@@ -24,10 +24,10 @@ While I think obsession over what tools (i.e. which editor to use) is unhelpful,
 
 I used two tmux windows, one that kept track of the experiment and another with the `energy_py/agents/dqn.py` script open for editing in vim.  The experiment window shows both the `info.log` and `debug.log`.
 
-![]({{ "./assets/debug_dqn/tmux_setup.png"}}) 
+![]({{ "/assets/debug_dqn/tmux_setup.png"}}) 
 **tmux setup with the left pane running the script and showing the info log, the top right pane showing the debug log using `tail -f debug.log` and a Tensorboard server running in the bottom right pane**
 
-![]({{ "./assets/debug_dqn/vim_setup.png"}}) 
+![]({{ "/assets/debug_dqn/vim_setup.png"}}) 
 **tmux setup with the left pane running the script and showing the info log, the top right pane showing the debug log using `tail -f debug.log` and a Tensorboard server running in the bottom right pane**
 
 ## debugging code
@@ -109,7 +109,7 @@ $ tensorboard --logdir='.'
 
 When using an epsilon greedy exploration policy, early stages of the experiment are mostly randomly selected actions.  For CartPole this ends up being an average reward per episode of between 20 - 30.  For a working implementation the episode returns will stay in this range and start to increase as the agent learns.
 
-What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over Q(s,a) was selecting the same action each time, resulting in a poor policy that quickly failed the CartPole task.
+What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over `Q(s,a)` was selecting the same action each time, resulting in a poor policy that quickly failed the CartPole task.
 
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behvaiour we saw.
@@ -122,6 +122,7 @@ self.act_summaries.extend([
     		         self.online_params[-1]),
     tf.summary.histogram(self.online_params[-2].name, 
     			 self.online_params[-2]),
+
     tf.summary.histogram(self.target_params[-1].name, 
     		 	 self.target_params[-1]),
     tf.summary.histogram(self.target_params[-2].name, 
@@ -129,7 +130,7 @@ self.act_summaries.extend([
 		       ])
 ```
 
-This allows visibility of the weights at each step - and we can see that both the weights and biases are being changed at each step.
+This allows visibility of the weights at each step. Figure 2 below shows that both the weights and biases are being changed.
 
 ![fig2]({{ "/assets/debug_dqn/fig2.png"}}) 
 
@@ -141,7 +142,7 @@ In DQN learning is done by minimizing the difference between predicted Q values 
 
 Reinfocement learning can be though of as a data generation process - interacting with the environment generates sequences of experience tuples of `(s, a, r, s')`.  In order to learn from this data we need to label it - in DQN this labelling process is doing by creating a Bellman target for each sample in a batch.  This then allows supervised learning to be used to fit our predicted `Q(s,a)` to the target. 
 
-From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the argmax operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a very small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the argmax across `Q(s',a)` was approximately 1.0 as well.
+From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the max operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a very small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the max across `Q(s',a)` was approximately 1.0 as well.
 
 ![fig3]({{ "/assets/debug_dqn/fig3.png"}}) 
 
@@ -172,7 +173,6 @@ As exepected none of the unmased values are zero, because they are maximums acro
 Looking at how I was doing the masking the error became clear - I had the masking around the wrong way!  Terminal is a boolean that is `True` when the episode is over, and `False` otherwise.
 
 ```python
-
 #  the corrected masking of terminal states Q(s',a) values
 next_state_max_q = tf.where(
 	self.terminal,
