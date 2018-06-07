@@ -32,14 +32,16 @@ I used two tmux windows, one that kept track of the experiment and another with 
 
 For the debug process I wrote a barebones implementation of an experiment under the `if __name__ == '__main__':` block in `energy_py/agents.dqn.py`.  It exposes a lot of the functionality that is all taken care of automatically when using the `experiment()` function in energy_py (`from energy_py import experiment`).
 
-As per common advice 
-
 ```python
 import random
 from energy_py.scripts.experiment import Runner
 from energy_py.scripts.utils import make_logger
 
-make_logger({'info_log': 'info.log', 'debug_log': 'debug.log'})
+make_logger(
+	{'info_log': 'info.log', 
+	'debug_log': 'debug.log'}
+	)
+
 discount = 0.99
 total_steps = 400000
 
@@ -63,11 +65,12 @@ agent = DQN(
     decay_learning_rate=1.0,
 )
 
-runner = Runner(sess,
-		{'tb_rl': './tb_rl',
-		 'ep_rewards': './rewards.csv'},
-		total_steps=total_steps
-		)
+runner = Runner(
+	sess,
+	{'tb_rl': './tb_rl',
+	 'ep_rewards': './rewards.csv'},
+	total_steps=total_steps
+	)
 
 step = 0
 while step < total_steps:
@@ -87,6 +90,13 @@ while step < total_steps:
 	step += 1
 
     runner.record_episode()
+```
+This setup is enough to get logging setup with two log files and Tensorboard running.  The Tensorboard server can be started by
+
+```bash
+$ cd energy_py/energy_py/agents
+
+$ tensorboard --logdir='.'
 ```
 
 ## problem - reward collapsing after exploration 
