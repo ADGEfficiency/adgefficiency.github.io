@@ -16,7 +16,7 @@
 title: ADG Efficiency
 author: Adam Green
 description: Minimal, responsive Jekyll theme for hackers.
-# baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://adgefficiency.com" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
 timezone: UTC
@@ -51,7 +51,7 @@ markdown: kramdown
 excerpt_separator: "<!-- more -->"
 
 # Outputting
-permalink: /:year/:month/:day/:title/
+permalink: /:title/
 paginate_path: /posts/:num/
 paginate: 5
 
