@@ -15,7 +15,6 @@
 # in the templates via {{ site.myvariable }}.
 title: ADG Efficiency
 author: Adam Green
-description: Minimal, responsive Jekyll theme for hackers.
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://adgefficiency.com" # the base hostname & protocol for your site, e.g. http://example.com
 lang: en
@@ -31,6 +30,8 @@ exclude:
   - screenshot.png
   - vendor
 
+remote_theme: "mmistakes/minimal-mistakes"
+#
 # Social media
 linkedin_username: adgefficiency
 twitter_image:
