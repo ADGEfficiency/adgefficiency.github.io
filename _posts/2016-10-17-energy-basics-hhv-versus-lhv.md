@@ -1,11 +1,6 @@
 ---
-id: 67
 title: 'HHV vs LHV - GCV vs NCV'
 date: 2016-10-17T15:27:05+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=67
-permalink: /energy-basics-hhv-versus-lhv/
 categories:
   - Energy Basics
 ---

@@ -7,7 +7,7 @@ categories:
 
 ---
 
-[This is a two part series - read the second part on specific applications in energy here.](http://adgefficiency.com/machine-learning-in-energy-part-two/)
+This is a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy here.
 
 --- 
 
