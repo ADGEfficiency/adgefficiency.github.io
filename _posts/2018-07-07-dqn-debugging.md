@@ -1,5 +1,5 @@
 ---
-title: 'DQN debugging'
+title: 'DQN debugging using Open AI gym CartPole'
 date: '2018-07-07'
 categories:
   - Machine Learning
@@ -196,13 +196,17 @@ Now after running the experiment we see the increase in Q values that I saw with
 
 The loss function in Figure 7 is maybe scary for supervised learners - a increasing loss function means that your errors in predicting the target are getting worse.  In the context of reinforcement learning this loss function is a commentary on the non-stationary target being used to train.  Increases in loss function can actually be seen as a good thing, as this means the agent is suprised about how much return it should expect for a particular sample of experience.
 
+This suprise can be used to improve the agents understanding of actions that are good or bad.
+
 ## hypothesis - improperly scaled Bellman target
 
 Figure 7 shows that the Bellman target is rather large.  For gradient based methods the optimizer usually expects to see inputs and outputs in the range of -1 to 1 - hence the use of standardization and normalization using training set statistics in supervised learning.
 
 In reinforcment learning we have the problem of not know what are good approximations for the statistics of `Q(s,a)`.  To combat this I used a Tensorflow batch normalization layer to process the Bellman target before it is used in the loss function.
 
-There are three different implementations of batch norm in Tensorflow - tf.nn.batch_normalization, tf.layers.batch_normalization or tf.contrib.layers.batch_norm.
+I manually wrote Processor objects to do normalization and standardization in energy_py previously.  
+
+There are three different implementations of batch norm in Tensorflow - tf.nn.batch_normalization, tf.layers.batch_normalization or tf.contrib.layers.batch_norm.  I chose the implementation from the layers module.
 
 ```python
 bellman = self.reward + self.discount * next_state_max_q
