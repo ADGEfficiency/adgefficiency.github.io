@@ -4,6 +4,8 @@ date: '2018-07-07'
 categories:
   - Machine Learning
   - Reinforcement Learning
+classes: wide
+
 ---
 
 This post details the debugging process I went through for the new implementation of DQN in energy_py.  This work was performed on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).
