@@ -18,6 +18,27 @@ Another purpose of this post is to show the logic behind a successful debugging,
 
 This is the third iteration of DQN that I've built - this one was significantly infulenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
+## the dqn rebuild
+
+This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  
+
+[version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
+- built in Keras
+- no target network
+- structuring the neural network with a single output.  this means n passes are required to predict Q(s,a) for n actions, rather than a single pass in a network with n output nodes (one per action)
+
+[version 2](https://github.com/ADGEfficiency/energy_py/commit/774ff3c9cd63b1b1e50359ab606edc7737121c86)
+- built in Tensorflow
+- target network implemented
+- running act or learn requires running multiple session calls, because the algorithm switches between numpy and tensorflow for operations
+- e-greedy policy only
+
+[version 3]
+- built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
+- gradient clipping, learning rate decay
+- policy is split out to allow either epsilon greedy or a softmax policy to be used
+-
+
 ## the setup
 
 While I think obsession over what tools (i.e. which editor to use) is unhelpful, I do think that anyone who takes their work seriously should take pride in the toolset they use.  For this experiment I used a combination of tmux, vim, an info & debug log and Tensorboard to try get an understanding of whats going on.
@@ -34,7 +55,7 @@ tmux window one setup
 tmux window two setup
 - vim with `agent/dqn.py` open
 
-Switching between tmux windows is as easy at `Ctrl b p'`.
+Switching between tmux windows is as easy at `Ctrl b p`.
 
 ## debugging code
 
@@ -42,6 +63,7 @@ For the debug process I wrote a barebones implementation of an experiment under 
 
 ```python
 import random
+
 from energy_py.scripts.experiment import Runner
 from energy_py.scripts.utils import make_logger
 
@@ -86,6 +108,7 @@ while step < total_steps:
     done = False
     obs = env.reset()
     while not done:
+
 	act = agent.act(obs)
 	next_obs, reward, done, info = env.step(act)
 
@@ -210,7 +233,7 @@ Figure 7 shows that the Bellman target is rather large.  For gradient based meth
 
 In reinforcment learning we have the problem of not know what are good approximations for the statistics of `Q(s,a)`.  To combat this I used a Tensorflow batch normalization layer to process the Bellman target before it is used in the loss function.
 
-I manually wrote Processor objects to do normalization and standardization in energy_py previously.  
+I manually wrote Processor objects to do normalization and standardization in energy_py previously.  Using Tensorflow to to the processing will allow me to keep the procesing within the Tensorflow graph, and mean less code for me to maintain.
 
 There are three different implementations of batch norm in Tensorflow - tf.nn.batch_normalization, tf.layers.batch_normalization or tf.contrib.layers.batch_norm.  I chose the implementation from the layers module.
 
