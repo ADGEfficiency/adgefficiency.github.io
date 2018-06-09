@@ -1,11 +1,7 @@
 ---
-id: 136
 title: 'Q = m Cp dT'
-date: 2016-10-31T10:33:24+00:00
+date: 2016-10-31
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=136
-permalink: /energy-basics-q-m-cp-dt/
 categories:
   - Energy Basics
 ---

@@ -1,10 +1,10 @@
 ---
 title: 'Jevon's paradox' 
-date: 2017-10-30T08:27:10+00:00
+date: 2017-10-30
 author: Adam Green
-layout: post
 categories:
   - Energy Basics
+classes: wide
 
 ---
 

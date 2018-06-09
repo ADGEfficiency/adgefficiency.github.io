@@ -1,11 +1,10 @@
 ---
 title: 'Getting to Zero: Pathways to Zero Carbon Electricity Systems - Jesse Jenkins'
 date: 2018-02-25
-author: Adam Green
-layout: post
-permalink: /getting-zero-pathways-zero-carbon-electricity-systems-jesse-jenkins/
 categories:
   - Energy Insights
+classes: wide
+
 ---
 
 This Energy Insights posts looks *Getting to Zero: Pathways to Zero Carbon Electricity Systems* from Jesse Jenkins, a PhD candidate at MIT - references are these  [slides](https://kleinmanenergy.upenn.edu/sites/default/files/Getting_to_Zero.pdf) and this [presentation](https://kleinmanenergy.upenn.edu/events/getting-zero-pathways-zero-carbon-electricity-systems).

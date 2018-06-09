@@ -1,9 +1,10 @@
 ---
 title: 'Demonetizing Everything: A Post Capitalism World - Peter Diamandis'
-date: 2017-11-18T23:44:37+00:00
-author: Adam Green
+date: 2017-11-18
 categories:
   - Energy Insights
+classes: wide
+
 ---
 
 This post looks at Peter Diamandis' talk Demonetizing Everything: A Post Capitalism World. The central premise of the talk is **demonitization** - technology making utility cheaper.

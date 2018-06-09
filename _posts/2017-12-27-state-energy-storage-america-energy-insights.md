@@ -1,13 +1,10 @@
 ---
-id: 1514
 title: 'The State of Energy Storage in America'
-date: 2017-12-27T08:25:59+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=1514
-permalink: /state-energy-storage-america-energy-insights/
+date: 2017-12-27
 categories:
   - Energy Insights
+classes: wide
+
 ---
 
 This Energy Insights posts summarizes a recent episode of the [Greentech Media Interchange podcast](https://www.greentechmedia.com/podcast/the-interchange).  The show discusses the [State of Energy Storage in America](https://www.greentechmedia.com/articles/read/the-state-of-americas-energy-storage-market#gs.I72jnh4).  It’s full of interesting insights into what’s going on right now with energy storage.  Below are my notes from the show.

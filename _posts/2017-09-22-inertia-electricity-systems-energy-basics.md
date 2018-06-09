@@ -1,13 +1,11 @@
 ---
-id: 1380
 title: 'Inertia in electricity systems'
-date: 2017-09-22T08:03:57+00:00
+date: 2017-09-22
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=1380
-permalink: /inertia-electricity-systems-energy-basics/
 categories:
   - Energy Basics
+classes: wide
+
 ---
 
 Inertia is a common criticism of the energy transition.  This post explains what role intertia plays in an electricity grid, and why we have clean solutions to the inertia problem.

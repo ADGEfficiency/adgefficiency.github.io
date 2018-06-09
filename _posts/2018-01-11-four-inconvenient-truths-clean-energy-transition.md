@@ -1,11 +1,10 @@
 ---
 title: The Four Inconvenient Truths of the Clean Energy Transition
-date: 2018-01-11T14:33:59+00:00
-author: Adam Green
-layout: post
-permalink: /four-inconvenient-truths-clean-energy-transition/
+date: 2018-01-11
 categories:
   - Energy
+classes: wide
+
 ---
 **All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.
 

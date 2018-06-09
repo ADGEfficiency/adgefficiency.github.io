@@ -1,11 +1,7 @@
 ---
-id: 172
 title: 'A chemical engineers 22 most used Excel shortcuts'
-date: 2016-11-04T08:16:56+00:00
+date: 2016-11-04
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=172
-permalink: /a-chemical-engineers-22-most-used-excel-shortcuts/
 categories:
   - Productivity
 ---
