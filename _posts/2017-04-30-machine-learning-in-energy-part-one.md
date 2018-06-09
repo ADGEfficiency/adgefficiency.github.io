@@ -21,7 +21,7 @@ Modern artifical intelligence is powered by **deep learning** - multiple layer a
 
 Neural networks are exciting because they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
-### artifical intelligence > machine learning > deep learning 
+### *artifical intelligence > machine learning > deep learning*
 
 This heirarchy is important.  Artificial intelligence encompasses more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
 
