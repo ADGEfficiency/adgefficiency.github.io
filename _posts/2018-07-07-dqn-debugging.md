@@ -30,7 +30,7 @@ This is the third major iteration of DQN I've built in energy_py.  Each iteratio
 
 > If you are not embarrassed by the first version of your product, you've launched too late - Reid Hoffman
 
-I'm quite proud of how far I've come, and proud of how poor the first implementation looks to me now.
+I'm quite proud of how far I've come, and of how poor my first implementation was.
 
 [version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
 - built in Keras
