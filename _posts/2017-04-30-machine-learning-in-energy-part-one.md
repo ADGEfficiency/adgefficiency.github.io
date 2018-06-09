@@ -7,7 +7,7 @@ categories:
 
 ---
 
-This is the first of a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy.
+This is the first of a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on energy machine learning applications.
 
 ## what is machine learning 
 
@@ -19,9 +19,9 @@ Modern artifical intelligence is powered by **deep learning** - multiple layer a
 
 **[The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
 
-What's exciting about neural networks is that they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
+Neural networks are exciting because they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
-**AI -> ML -> DL**
+### AI -> ML -> DL
 
 This heirarchy is important.  Artificial intelligence encompasses more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
 
