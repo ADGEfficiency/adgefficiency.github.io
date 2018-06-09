@@ -67,13 +67,13 @@ Deep learning refers to neural networks with multiple layers.  How many are need
 
 The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
 
-![]({{ '/assets/ml_energy/conv.jpg' }})
+![]({{ '/assets/ml_energy/conv.png' }})
 
 **deep convolutional neural network used in the 2015 DeepMind Atari work**
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
-![]({{ '/assets/ml_energy/recurr.jpg' }})
+![]({{ '/assets/ml_energy/recurr.png' }})
 
 Recurrent neural networks process sequences.  For each part of the sequence the network chooses whether to remember or forget.  As the sequence is processed the network can remember what is important to improve the prediction.
 
