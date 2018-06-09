@@ -10,6 +10,8 @@ classes: wide
 
 This post details the debugging process I went through for the new implementation of DQN in energy_py.  This work was performed on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).
 
+![]({{ "/assets/debug_dqn/graph.png"}}) 
+
 The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
 The ideas behind documenting this debug process come from the blog post [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl).  The post reccomends keeping a detailled log of the debugging process.  
@@ -33,7 +35,8 @@ This is the third major iteration of DQN I've built in energy_py.  Each iteratio
 - running act or learn requires running multiple session calls, because the algorithm switches between numpy and tensorflow for operations
 - e-greedy policy only
 
-[version 3]
+[version 3](https://github.com/ADGEfficiency/energy_py)
+- the current master branch (synced over from dev at [this commit](https://github.com/ADGEfficiency/energy_py/tree/f747f0e10741c33cfa81ac7c8b52ebfc4bdca7e4)
 - built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
@@ -259,21 +262,60 @@ error = tf.losses.huber_loss(
 
 One of the hyperparameters in using batch norm is whether to use accumulated statistics across multiple batches (`training=False`) or to process based on statistics from only the current batch (`training=True`).  My intuition is that processing only across the batch removes the difficulty of figuring out how best to remeber and forget statistics, and just focus on favouring some actions within the batch more than others.
 
-TODO PICTURE OF THE BATCH NORMED TARGETS !!!
+![fig8]({{ "/assets/debug_dqn/fig8.png"}}) 
+
+**Figure 8 - The Bellman target before and after batch normalization**
 
 After making all of these changes the first signs of life appeared
 
-![fig8]({{ "/assets/debug_dqn/fig8.png"}}) 
+![fig9]({{ "/assets/debug_dqn/fig9.png"}}) 
 
-**Figure 8 - It's alive!** 
+**Figure 9 - It's alive!** 
 
 ## tuning
 
-After seeing some initial signs of life, I went back over some key hyperparameters and manually tuned them.  One of the new features of this energy_py DQN implementation is the ability to decay learning rate.  Historically I used a fixed learning rate between `0.001 - 0.0001`. 
+After seeing some initial signs of life, I am pretty happy that there are no errors in the algorithm.  I know from experience that a random agent (i.e. `epsilon=1.0` achieves a mean episode return of 20 - 30.  Seeing these jumps is evidence that learning is possible - but it is not stable.  Learning stability is a key challenge - the early DeepMind work on DQN was focused on learning stability and generalization, not absolute performance.
 
-RUN NEW EXPT
+Getting good performance from a reinforcment learning requires a good set of hyperparameters and comparisons of **runs over multiple different random seeds**.
+
+The hyperparameter tuning process followed a similar hypothesis - problem structure.
+
+## problem - unstable learning
+
+![fig10]({{ "/assets/debug_dqn/fig10.png"}}) 
+
+**Figure 10 - Examples of learning and forgetting.**
+- note the different y-axis on the second plot.  the second plot shows the collapse to a policy that is worse than random 
+- the third agent actually solves the environment (Open AI consider the env solved for an average reward of 195 over 100 consecutive trails) but then forgets
+
+## hypothesis - learning rate is too high OR state space not being explored well
+
+At this point I had two main thoughts about what might cause an unstable policy
+- a large learning rate means that the optimizer is forced to change policy weights a lot, even when the policy is performing well 
+- the exploration period being too short means that only late in life does the agent see certain parts of the state space, making the policy unstable in these regions of the state space
+
+I previous had the `epsilon_decay_fraction` hyperparameter set to `0.3` - this meant that the entire epsilon decay is done in the first 30% of the total steps for this experiment.  I changed this to `0.5` - giving the agent more of a chance to see the state space early in life.  This could be investigated further by looking at how the distribution of the observations (either during acting or training) were changing. I decided not to do this. 
+
+The second set of changes were with the learning rate.  Historically with DQN I had used a fixed learning rate of `0.0001`.  This was a chance to play with the decay. 
+
+When I saw Vlad Mnih speak at the 2017 Deep RL bootcamp, he mentioned that larger neural networks can be more stable because they alias less.  By alias I mean less weights are shared.  One option here would be to introduce a larger neural network, but this comes with the risk of overfitting.
+
+Another change I made at this point was to set `centre=False` to the target batch normalization.  John Schulman notes in the talk **The Nuts and Bolts of Deep RL Research** ([video](https://www.youtube.com/watch?v=8EcdaCk9KaQ) and [slides](https://github.com/ADGEfficiency/dsr_rl/blob/master/literature/reinforcement_learning/2016_schulman_nuts-and-bolts.pdf) that removing the mean from the target might affect the agent's will to live.
+
+```python
+#  the batch normalization
+bellman_norm = tf.layers.batch_normalization(
+	tf.reshape(self.bellman, (-1, 1)),
+	center=False,
+	training=True,
+	trainable=False,
+)
+```
 
 
-## a few learning curves
 
-The point of including these are to show how stochastic the learing is - only difference is the random seed!!
+
+
+
+
+

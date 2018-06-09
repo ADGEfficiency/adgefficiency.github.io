@@ -14,7 +14,7 @@ The promise and potential of artificial intelligence is not new.  Early pioneers
 
 This is the first of a two part series.  This first post introduces what modern machine learning is, whats driving recent performance and highlights challenges facing the field today.  [The second post covers specific applications of machine learning in energy](http://adgefficiency.com/machine-learning-in-energy-part-two/).
 
-## what is machine learning 
+## what is deep learning, machine learning and artificial intelligence?
 
 The progress in modern artifical intelligence comes from **deep learning** - multiple layer artifical neural networks, whose structure is inspired by the biological neural networks in our own brain.   
 
