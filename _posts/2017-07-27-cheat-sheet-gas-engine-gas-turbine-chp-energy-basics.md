@@ -1,12 +1,11 @@
 ---
-id: 1240
 title: 'CHP Cheat Sheet - Gas engines & gas turbines'
-date: 2017-07-27T01:27:21+00:00
+date: 2017-07-27
 author: Adam Green
-layout: post
-permalink: /cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/
 categories:
   - Energy Basics
+classes: wide
+
 ---
 
 Technical modeling of combined heat & power (CHP) plants was my first area of professional specalization.

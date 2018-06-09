@@ -1,11 +1,10 @@
 ---
 title: 11 tips from 11 months of learning Python
-date: 2017-09-04T05:11:49+00:00
-author: Adam Green
-layout: post
-permalink: /11-tips-11-months-learning-python/
+date: 2017-09-04
 categories:
   - Productivity
+classes: wide
+
 ---
 I've been learning Python for around 11 months - it's been a wonderful journey! This post is a list of 11 things that I've learned along the way.
 

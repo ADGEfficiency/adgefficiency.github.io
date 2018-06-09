@@ -1,11 +1,11 @@
 ---
 title: 'Getting Wind and Sun onto the Grid' 
-date: 2017-08-07T05:35:37+00:00
+date: 2017-08-07
 author: Adam Green
-layout: post
-permalink: /getting-wind-sun-onto-grid-energy-insights/
 categories:
   - Energy Insights
+classes: wide
+
 ---
 
 This post covers three interesting insights from the 2017 IEA report [Getting Wind and Sun onto the Grid](https://www.iea.org/publications/insights/insightpublications/Getting_Wind_and_Sun.pdf).
