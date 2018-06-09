@@ -1,26 +1,19 @@
 ---
 title: 'machine learning in energy - part one'
-date: '2017-04-30'
+date: 2017-04-30T03:08:25+00:00
 categories:
   - Energy
   - Machine Learning
-classes: wide
 
 ---
 
-Artifical intelligence is finding it's way into everything.  Notice how good your autocorrect is lately?  The impact of artificial intelligence is felt almost daily by anyone with a cell phone.  Every vertical industry will be impacted by artifical intelligence as these industries digitize.  So what's been going on in the last few years that is causing all the hype?
+This is a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy here.
 
-The promise and potential of artificial intelligence is not new.  Early pioneers of computer science laid the foundations for modern computing as well the foundations of artifical intelligence. 
-
-This is the first of a two part series.  This first post introduces what modern machine learning is, whats driving recent performance and highlights challenges facing the field today.  [The second post covers specific applications of machine learning in energy](http://adgefficiency.com/machine-learning-in-energy-part-two/).
-
-## what is deep learning, machine learning and artificial intelligence?
+## what is machine learning 
 
 The progress in modern artifical intelligence comes from **deep learning** - multiple layer artifical neural networks, whose structure is inspired by the biological neural networks in our own brain.   
 
-What's exciting about neural networks is that they **learn**.  Being able to learn allows a machine to learn what we can't.  The ability to learn fundamental tasks means that almost every vertical industry (healthcare, education, energy etc) will be affected. 
-
-Neural networks aren't the only algorithms that can learn - together with logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
+What's exciting about neural networks is that they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
 **picture showing AI -> ML -> DL**
 
@@ -46,7 +39,7 @@ In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep B
 In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. AlphaGo was not given any information about Go stragety from its programmers. Alpha Go used reinforcement learning to learn from its own actions and experience. **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.
 
 One of the features of AlphaGo is how the game of Go was presented to AlphaGo.  The model was fed the positions of the stones on the board in it's raw form. This ability to learn from the raw structure of the world is fundamental to modern machine learning.
-
+--- 
 
 ### seeing the structure of our world
 
@@ -121,7 +114,9 @@ While these technology companies share their tools, they don't share their data.
 
 ### data
 
-The reliance on a large amount of labelled training data is a neural network's achilles heel.  You can't train large neural networks with small amounts of data.
+Being able to utilize massive amounts of data is the reason neural networks can learn so well.  Alternative algorithms such as random forests or support vector machines are limited by the amount of data they can learn from.  Neural networks are able to learn from massive amounts of data.
+
+But this reliance on data is neural network's achilles heel.  You can't train large neural networks with small amounts of data.
 
 Human beings are able to learn from small amounts of training data - burning yourself once on the oven is enough to learn not to touch it again. Many machine learning algorithms are not able to learn in this way.  This is known as **sample inefficiency** - the requirement for large amounts of data to get superhuman performance.
 
