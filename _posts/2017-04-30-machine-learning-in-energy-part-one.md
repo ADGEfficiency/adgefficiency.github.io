@@ -69,11 +69,13 @@ The artifical neural network is inspired by the biological neural networks in ou
 
 ![]({{ '/assets/ml_energy/conv.png' }})
 
-**deep convolutional neural network used in the 2015 DeepMind Atari work**
+**[deep convolutional neural network used in the 2015 DeepMind Atari work](https://github.com/ADGEfficiency/dsr_rl/blob/master/literature/reinforcement_learning/2015_Minh_Atari_Nature.pdf)**
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
 ![]({{ '/assets/ml_energy/recurr.png' }})
+
+**[an unrolled recurrent neural network](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)**
 
 Recurrent neural networks process sequences.  For each part of the sequence the network chooses whether to remember or forget.  As the sequence is processed the network can remember what is important to improve the prediction.
 
