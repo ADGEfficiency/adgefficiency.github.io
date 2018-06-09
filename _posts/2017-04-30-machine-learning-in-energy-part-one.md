@@ -83,9 +83,7 @@ In both convolution and recurrent neural networks the structure of the network h
 
 Letting machines experience the structure of the world is fundamental to the promise of modern machine learning.  We see the raw structure of the world through sight - convolution allows machines to do the same.  We know that the world has a temporal structure - recurrent neural networks allow machines to understand this too.  **Seeing the world as it is allows machines to understand it**.
 
-## Why now
-
-Three major trends are driving modern machine learning. 
+## why now - three major trends
 
 ### one - data
 
