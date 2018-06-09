@@ -157,7 +157,7 @@ It's not about having a local site plant control system and historian setup. The
 
 Data is one of the most strategic assets a company can own. It's valuable not only because of the insights it can generate today, but also the value that will be created in the future. **Data is an investment that will pay off.**
 
-[Part Two goes into detail on specific applications of machine learning in the energy industry] - forecasting, energy disaggregation and reinforcement learning.  We also take a look at one of the most famous applications of machine learning in an energy system - Google’s work in their own data centers.(http://adgefficiency.com/machine-learning-in-energy-part-two/)
+[Read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy.
 
 Thanks for reading!
 
