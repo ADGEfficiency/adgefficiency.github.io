@@ -31,7 +31,7 @@ Machine learning doesn't always mean deep learning.  Deep learning excels on ima
 
 Machine learning is a family of algorithms that **learn patterns in data**.  In contrast to traditional computer science where a human would write code to tell a machine what to do, machine learning models figure out solutions for themselves.  Data is the teacher.
 
-> ...machine learning is the biggest advance in how we can do engineering since the scientific method... - Steve Juvertson
+> Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
 This is a paradigm shift.  The ability to learn allows machines to **exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
 
