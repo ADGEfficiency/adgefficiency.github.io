@@ -1,7 +1,6 @@
 ---
 title: 'Inertia in electricity systems'
 date: 2017-09-22
-author: Adam Green
 categories:
   - Energy Basics
 classes: wide

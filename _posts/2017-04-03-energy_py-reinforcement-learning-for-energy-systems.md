@@ -1,11 +1,6 @@
 ---
-id: 884
-title: 'energy_py &#8211; reinforcement learning for energy systems'
-date: 2017-04-03T18:16:19+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=884
-permalink: /energy_py-reinforcement-learning-for-energy-systems/
+title: 'energy_py - reinforcement learning for energy systems'
+date: 2017-04-03
 categories:
   - Energy
   - Reinforcement Learning

@@ -1,9 +1,7 @@
 ---
 title: 'CAISO Stage 1 Grid Emergency'
-date: 2017-05-11T23:25:29+00:00
+date: 2017-05-11
 author: Adam Green
-layout: post
-permalink: /caiso-stage-1-grid-emergency-energy-insights/
 categories:
   - Energy Insights
 ---

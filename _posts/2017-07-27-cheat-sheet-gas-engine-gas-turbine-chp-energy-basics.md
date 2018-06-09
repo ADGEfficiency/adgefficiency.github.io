@@ -1,7 +1,6 @@
 ---
 title: 'CHP Cheat Sheet - Gas engines & gas turbines'
 date: 2017-07-27
-author: Adam Green
 categories:
   - Energy Basics
 classes: wide

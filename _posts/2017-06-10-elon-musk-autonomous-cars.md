@@ -1,9 +1,6 @@
 ---
 title: 'Elon Musk on autonomous cars'
-date: 2017-06-10T08:46:53+00:00
-author: Adam Green
-layout: post
-permalink: /elon-musk-autonomous-cars-energy-insights/
+date: 2017-06-10
 categories:
   - Energy Insights
 ---

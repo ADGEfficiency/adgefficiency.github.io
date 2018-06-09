@@ -1,7 +1,6 @@
 ---
 title: 'Jevon's paradox' 
 date: 2017-10-30
-author: Adam Green
 categories:
   - Energy Basics
 classes: wide

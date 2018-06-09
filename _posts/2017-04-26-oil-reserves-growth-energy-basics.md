@@ -1,10 +1,6 @@
 ---
-id: 1049
 title: 'Oil Reserves Growth'
-date: 2017-04-26T19:08:33+00:00
-author: Adam Green
-layout: post
-permalink: /oil-reserves-growth-energy-basics/
+date: 2017-04-26
 categories:
   - Energy Basics
 ---

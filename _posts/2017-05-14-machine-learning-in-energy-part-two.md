@@ -1,9 +1,6 @@
 ---
 title: 'machine learning in energy - part two'
-date: 2017-05-14T02:03:26+00:00
-author: Adam Green
-layout: post
-permalink: /machine-learning-in-energy-part-two/
+date: 2017-05-14
 categories:
   - Energy
   - Machine Learning

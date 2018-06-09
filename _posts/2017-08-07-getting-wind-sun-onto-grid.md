@@ -1,7 +1,6 @@
 ---
 title: 'Getting Wind and Sun onto the Grid' 
 date: 2017-08-07
-author: Adam Green
 categories:
   - Energy Insights
 classes: wide

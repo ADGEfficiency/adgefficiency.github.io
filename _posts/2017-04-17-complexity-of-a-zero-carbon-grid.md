@@ -1,11 +1,6 @@
 ---
-id: 1023
 title: 'The Complexity of a Zero Carbon Grid'
-date: 2017-04-17T17:26:36+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=1023
-permalink: /complexity-of-a-zero-carbon-grid/
+date: 2017-04-17
 categories:
   - Energy Insights
 ---
