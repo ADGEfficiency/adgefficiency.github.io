@@ -8,10 +8,13 @@ classes: wide
 
 ---
 
-This post details the debugging process I went through for the new implementation of DQN in energy_py.  This work was performed on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).
+This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post were on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
 **the agent graph shown in Tensorboard**
+
+By the end of this work the repo reached over 500 commits!
+![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
