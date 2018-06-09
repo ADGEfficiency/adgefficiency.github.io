@@ -96,7 +96,7 @@ Two hardware trends are driving modern machine learning.  The first is the use o
 
 In the early 2000's computer scientists innovated the use of graphics cards designed for gamers for machine learning. GPUs gave massive descreases in training times - reducing them from months to days. Rendering graphics involves matrix multiplication, which GPUs are optimized for. Matrix multiplication is also the operation that is used in training neural networks.
 
-This speed up is important. **Most of our understanding of machine learning is empirical** . This knowledge is built up faster by reducing the training time of machine learning models.
+This speed up is important. **Most of our understanding of machine learning is empirical**. This knowledge is built up faster by reducing the training time of machine learning models.
 
 The second trend is the availability of computing power - also known as cloud computing.  The cloud gives access to computation and data storage at scale on a variable cost basis.  Platforms such as Amazon Web Services or Google Cloud allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.
 
@@ -106,19 +106,15 @@ This access to computing power works both vertically within large technology com
 
 ### three - algorithms & tools
 
-Neural networks form the basis of many state of the art machine learning applications. Neural networks with multiple layers of non-linear processing units (known as deep learning) form the backbone of the most impressive applications of machine learning today. These artificial neural networks are inspired by the biological neural networks inside our brains.
-
-Key components such as backpropagation have been around since the 1980's.  Backpropagation is the technique of assigning error to neural network weights.  The true potential of the theory needed data and computation to be unleashed.
-
-Convolutional neural networks have revolutionised computer vision through a design based on the structure of our own visual cortex. Recurrent neural networks (specifically the LSTM implementation) have transformed sequence & natural language processing by allowing the network to hold state and remember.  
+Key components of neural networks such as backpropagation have been around since the 1980's.  Backpropagation is the technique of assigning error to neural network weights.  The true potential of the theory needed data and computation to be unleashed.
 
 Underpinning many of the advances are simpler techniques such as using rectified linear units, dropout, batch normalization and residual networks.
 
 In unsupervised learning generative adverserial networks (GANs) can be used to generate realistic pictures.  The adverserial theme is also powering AlphaGo AlphaZero, reinforcement learning agents that use self-play to blow past human performance.
 
-Another key trend in machine learning algorithms is the availability of open source tools. Companies such as Alphabet or Facebook make many of their machine learning tools all open source and available.
+Another key trend in machine learning algorithms is the availability of open source tools and literature. Companies such as Alphabet or Facebook make many of their machine learning tools all open source and available.  Almost all of the machine learning literature is published on open platforms such as arXiv.
 
-While these technology companies share their tools, they don't share their data. This is because data is the crucial element in producing value from machine learning. World-class tools and computing power are not enough to deliver value from machine learning - you need data to make the magic happen.
+While these technology companies share their tools and knowledge, they don't share their data. This is because data is the crucial element in producing value from machine learning. World-class tools and computing power are not enough to deliver value from machine learning - you need data to make the magic happen.
 
 ## challenges
 
@@ -132,7 +128,7 @@ Human beings are able to learn from small amounts of training data - burning you
 
 ### interpretability
 
-Another problem is **interpretability**. Neural networks don't lend themselves to explanation. The high dimensionality of the input and parameter space means that it's hard to pin down cause to effect. Industries such as finance are legally prevented from using uninterpretable models.  
+Neural networks don't lend themselves to explanation. The high dimensionality of the input and parameter space means that it's hard to pin down cause to effect. Industries such as finance are legally prevented from using uninterpretable models.  
 
 Related to this is our current lack of a theoretical understanding. Many academics are uncomfortable with machine learning. We can empirically test if machine learning is working, but we don't really know why it is working.  Modern machine learning is an empirical science - we don't really know why one algorithm works and another doesn't, we can only run experiments and test one versus the other. 
 
@@ -142,7 +138,7 @@ We can learn about the process of training neural networks, in the same way that
 
 ### misuse of narrow AI by humans 
 
-The major risk and challenge in artificial intelligence is not from a superhuman AI that turns the world into paperclips.  It's from groups of humans using the superhuman ability of machine learning in specific, narrow areas in immoral ways.  Generative adverserial networks (GANs) can now be used to generate fake video - the final destination of 'fake news'.  Advanced computer vision techniques can be used to improve the tracking citizens throughout cities.
+The major risk and challenge in artificial intelligence is not from a superhuman AI that turns the world into paperclips.  It's from groups of humans using the superhuman ability of machine learning in specific, narrow areas in immoral ways.  GANs can now be used to generate fake video - the final destination of 'fake news'.  Advanced computer vision techniques can be used to improve the tracking citizens throughout cities by their governments.
 
 The reason these risks are higher than a superhuman AI is that narrow AI progress will always be ahead of more general AI.  We already have the ability to generate fake video using GANs.  I can reccomend the blog post [What Worries Me About AI by François Chollet](https://medium.com/@francois.chollet/what-worries-me-about-ai-ed9df072b704) that expands upon this misue of narrow AI concept in the context of social media.
 
