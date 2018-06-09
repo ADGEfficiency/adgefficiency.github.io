@@ -21,7 +21,7 @@ What's exciting about neural networks is that they **learn**.  They aren't the o
 
 **picture showing AI -> ML -> DL**
 
-This heirarchy is important.  Artificial intelligence encompasses a lot more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
+This heirarchy is important.  Artificial intelligence encompasses more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
 
 Machine learning doesn't always mean deep learning.  Deep learning excels on image and text problems - more classical models such as random forests perform better on other kinds of datasets.  
 
@@ -49,11 +49,11 @@ The success of modern machine learning in solving fundamental computer science p
 
 We take for granted being able to experience the structure of the world.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure in a raw form.
 
-Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires a lot of work for us to engineer this view of the world.
+Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires us to engineer this view of the world.
 
 Modern machine learning is able to feed data in a raw form into models, so they can see these patterns for themselves.  Often they can see high dimensional patterns we would never be able to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.
 
-The major advances in machine learning stem from **neural networks**.  The neural network is inspired by the biological neural networks in our brain.  Weights are used to connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
+The major advances in machine learning stem from **neural networks**.  The neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
@@ -71,13 +71,13 @@ Three major trends are driving modern machine learning.
 
 The internet and smartphone cameras means we are generating more data than ever.  This volume of data is fundamental to driving modern machine learning.  
 
-Training neural networks requires lots of examples.  If you are trying to classify images, a convolutional neural network requires a large number of example images in order to understand what different classes look like.
+Training neural networks requires lots of examples.  If you are trying to classify images, a convolutional neural network requires a large number of example images to understand what different classes look like.
 
-Data is most useful if it is labelled.  For example, an image of a dog outside a house that is labelled with `dog` and `house` is more valuable than the same photo with no label.  This is because the labels allow us to penalize the algorithm for labelling it with `cat`.  This kind of training is known as *supervised learning*.
+Data is most useful if it is labelled.  For example, an image of a dog outside a house that is labelled with `dog` and `house` is more valuable than the same photo with no label.  This is because the labels allow us to penalize the algorithm for labelling it with `cat`.  This is *supervised learning*.
 
 For many large technology companies such as Alphabet or Facebook their labelled data has become a major source of the value of their businesses. A lot of this value comes from the insights that machines can learn (or will learn in the future) from such large data sets.
 
-Sitting alongside supervised learning are *unsupervised learning* and *reinforcement learning*.  These three areas of machine learning differ in the kind of feedback that is available to the learner
+Sitting alongside supervised learning are *unsupervised learning* and *reinforcement learning*.  These three areas of machine learning differ in the feedback that is available to the learner
 - supervised learning = learns from a label for every sample of data
 - unsupervised learning = learns from 'hidden' patterns in the data
 - reinforcement learning = learns to maximize a scalar reward signal
@@ -88,9 +88,9 @@ Currently most of the business value of machine learning is driven by supervised
 
 Two hardware trends are driving modern machine learning.  The first is the use of **graphics processing units (GPUs)** and the second is the increased **availability** of computing power.
 
-In the early 2000's computer scientists innovated the use of graphics cards designed for gamers for machine learning. GPUs gave massive descreases in training times - reducing them from months to days. Rendering graphics involves a lot of matrix multiplication, which GPUs are optimized for. Matrix multiplication is also the operation that is used in training neural networks.
+In the early 2000's computer scientists innovated the use of graphics cards designed for gamers for machine learning. GPUs gave massive descreases in training times - reducing them from months to days. Rendering graphics involves matrix multiplication, which GPUs are optimized for. Matrix multiplication is also the operation that is used in training neural networks.
 
-This speed up is important. **Most of our understanding of machine learning is empirical** . This knowledge is built up a lot faster by reducing the training time of machine learning models.
+This speed up is important. **Most of our understanding of machine learning is empirical** . This knowledge is built up faster by reducing the training time of machine learning models.
 
 The second trend is the availability of computing power - also known as cloud computing.  The cloud gives access to computation and data storage at scale on a variable cost basis.  Platforms such as Amazon Web Services or Google Cloud allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.
 
@@ -144,7 +144,7 @@ The reason these risks are higher than a superhuman AI is that narrow AI progres
 
 Worker displacement is a challenge as old as the Industrial revolution.  Political innovation (such as the universal basic income) are needed to fight the inequality that already exists at a ridiculous and immoral level.
 
-**It is possible for us to deploy automation and machine learning while increasing the quality of life for all of society.** The move towards a machine intelligent world will be a positive one if we **share the value created**.
+**It is possible to deploy automation and machine learning while increasing the quality of life for all of society.** The move towards a machine intelligent world will be a positive one if we **share the value created**.
 
 The issue with machine driven value is that it supercharges the already broken self fufilling capitalist prophecy - the rich getting richer.  
 
@@ -152,7 +152,7 @@ The issue with machine driven value is that it supercharges the already broken s
 
 The progress of machine learning differs across industries, roughly proportional to how digitized the industry is.  The rate at which modern machine learning can be utilized to extract business value depends on how data is collected, the quality of data and if it's available.  So far the technology industries are far ahead of healthcare, education and energy. 
 
-Digtization is the necessary first step before any sort of machine learning can be done.  It requires both equipment to measure temperatures, flow rates and pressures and equipment to store that data.  
+Digtization is the necessary first step before any machine learning can be done.  It requires both equipment to measure temperatures, flow rates and pressures and equipment to store that data.  
 
 The energy system is poor at managing data.  Often data is not captured, meters are left uncalibrated or data is only stored on site for a fixed length of time.  Throughout my career I've spent significant effort getting systems in place so that data can be collected. 
 
