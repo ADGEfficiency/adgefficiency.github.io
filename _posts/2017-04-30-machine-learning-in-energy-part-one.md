@@ -7,7 +7,7 @@ categories:
 
 ---
 
-This is a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy here.
+This is the first of a two part series - [read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy.
 
 ## what is machine learning 
 
