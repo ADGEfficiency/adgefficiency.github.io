@@ -47,15 +47,19 @@ One of the features of AlphaGo is how the game of Go was presented to AlphaGo.  
 
 ### seeing the structure of our world
 
-The success of modern machine learning in solving fundamental computer science problems such as computer vision and natural language understanding comes from giving machines the ability to experience the structure of the world as we do.
+The success of modern machine learning in solving fundamental computer science problems such as computer vision and natural language understanding comes from giving machines the ability to **experience the structure of the world** .
 
-We take for granted being able to experience the structure of the world.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure in a raw form.
+We take this for granted.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  
+
+Modern machine learning allows machines to understand to this structure in a raw form.
 
 Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires us to engineer this view of the world.
 
 Modern machine learning is able to feed data in a raw form into models, so they can see these patterns for themselves.  Often they can see high dimensional patterns we would never be able to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.
 
-The major advances in machine learning stem from **neural networks**.  The neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
+## modern deep learning
+
+The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
