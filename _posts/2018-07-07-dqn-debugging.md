@@ -49,6 +49,10 @@ I'm quite proud of how far I've come, and of how poor my first implementation wa
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
 
+> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, thats when we start talking -  Linux Torvalds
+
+Two more rebuilds to go...
+
 ## the setup
 
 While I think obsession over what tools (i.e. which editor to use) is unhelpful, I do think that anyone who takes their work seriously should take pride in the toolset they use.  For this experiment I used a combination of tmux, vim, an info & debug log and Tensorboard to try get an understanding of whats going on.
