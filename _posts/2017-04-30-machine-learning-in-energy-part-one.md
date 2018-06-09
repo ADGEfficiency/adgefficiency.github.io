@@ -1,6 +1,6 @@
 ---
 title: 'machine learning in energy - part one'
-date: 2017-04-30T03:08:25+00:00
+date: 2017-04-30
 categories:
   - Energy
   - Machine Learning
@@ -39,7 +39,6 @@ In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep B
 In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. AlphaGo was not given any information about Go stragety from its programmers. Alpha Go used reinforcement learning to learn from its own actions and experience. **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.
 
 One of the features of AlphaGo is how the game of Go was presented to AlphaGo.  The model was fed the positions of the stones on the board in it's raw form. This ability to learn from the raw structure of the world is fundamental to modern machine learning.
---- 
 
 ### seeing the structure of our world
 
