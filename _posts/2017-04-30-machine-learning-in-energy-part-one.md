@@ -11,13 +11,19 @@ This is a two part series - [read the second part](http://adgefficiency.com/mach
 
 ## what is machine learning 
 
-The progress in modern artifical intelligence comes from **deep learning** - multiple layer artifical neural networks, whose structure is inspired by the biological neural networks in our own brain.   
+Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks, whose structure is inspired by the biological neural networks in our own brain.  These networks form the basis of the state of the art across a range of problems.
+
+![fig1]({{ '/assets/ml_energy/fig1.png' }})
+
+**Figure 1 – Recent progress in compuer vision on the ImageNet benchmark [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
 
 What's exciting about neural networks is that they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
 **picture showing AI -> ML -> DL**
 
-This heirarchy is important.  Artificial intelligence encompasses a lot more than just deep learning.  It's possible to be a machine learning practioner and not know much about other artifical intelligence techniques.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
+This heirarchy is important.  Artificial intelligence encompasses a lot more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
+
+Machine learning doesn't always mean deep learning.  Deep learning excels on image and text problems - more classical models such as random forests perform better on other kinds of datasets.  
 
 ## learning what we can't 
 
@@ -26,9 +32,6 @@ Machine learning is a family of algorithms that **learn patterns in data**.  In 
 This is a major paradigm shift.  Steve Juvertson (a venture capitalist who finished an eelectrical engineering degree at Stanford in 2 years!) thinks that "... machine learning is the biggest advance in how we can do engineering since the scientific method...".  
 
 The ability to learn allows machine learning models to **exceed human performance in a variety of domains**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
-
-![fig1]({{ '/assets/ml_energy/fig1.png' }})
-Figure 1 – Recent progress in compuer vision on the ImageNet benchmark [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)
 
 This ability of machine learning to generalize across different fundamental problems also allows machine learning models to **generalize across different industries**.  It's hard to think of a vertical industry that machine learning won't transform.
 
@@ -79,7 +82,7 @@ Sitting alongside supervised learning are *unsupervised learning* and *reinforce
 - unsupervised learning = learns from 'hidden' patterns in the data
 - reinforcement learning = learns to maximize a scalar reward signal
 
-Currently most of the business value of machine learning is driven by supervised learning.  Unsupervised and reinforcement learning are more challenging due to a lower quality learning signal - but also hold great promise precisely because of the potential to learn without supervision.
+Currently most of the business value of machine learning is driven by supervised learning.  Unsupervised and reinforcement learning are more challenging due to a lower quality learning signal - but also hold great promise precisely because of the potential to learn with less supervision.
 
 ### two - hardware
 
@@ -101,9 +104,11 @@ Neural networks form the basis of many state of the art machine learning applica
 
 Key components such as backpropagation have been around since the 1980's.  Backpropagation is the technique of assigning error to neural network weights.  The true potential of the theory needed data and computation to be unleashed.
 
-GANS, dropout, batch norm????
-
 Convolutional neural networks have revolutionised computer vision through a design based on the structure of our own visual cortex. Recurrent neural networks (specifically the LSTM implementation) have transformed sequence & natural language processing by allowing the network to hold state and remember.  
+
+Underpinning many of the advances are simpler techniques such as using rectified linear units, dropout, batch normalization and residual networks.
+
+In unsupervised learning generative adverserial networks (GANs) can be used to generate realistic pictures.  The adverserial theme is also powering AlphaGo AlphaZero, reinforcement learning agents that use self-play to blow past human performance.
 
 Another key trend in machine learning algorithms is the availability of open source tools. Companies such as Alphabet or Facebook make many of their machine learning tools all open source and available.
 
