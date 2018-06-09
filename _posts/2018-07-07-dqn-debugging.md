@@ -40,7 +40,6 @@ This is the third major iteration of DQN I've built in energy_py.  Each iteratio
 - built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
--
 
 ## the setup
 
@@ -311,11 +310,41 @@ bellman_norm = tf.layers.batch_normalization(
 	trainable=False,
 )
 ```
+![fig11]({{ "/assets/debug_dqn/fig11.png"}}) 
 
+**Figure 11 - Learning rate decay**
 
+![fig12]({{ "/assets/debug_dqn/fig12.png"}}) 
 
+**Figure 12 - Learning curves across three random seeds**
 
+And here is how we setup these final three agents
 
+```python
+#  the final agent setup
+agent = DQN(
+    sess=sess,
+    env=energy_py.make_env('CartPole'),
+    total_steps=400000,
+    discount=0.9,
+    memory_type='deque',
+    act_path='./act_tb',
+    learn_path='./learn_tb',
+    learning_rate=0.0001,  
+    decay_learning_rate=0.05,
+    epsilon_decay_fraction=0.5,
+)
+```
 
+## concluding thoughts
+
+best practices
+- using simple env that I'm familiar
+- running comparisons across multiple random seeds
+- keeping a detailled log of your thoughts
+
+error fixes
+
+hyperparameters
 
 
