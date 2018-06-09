@@ -49,9 +49,7 @@ One of the features of AlphaGo is how the game of Go was presented to AlphaGo.  
 
 The success of modern machine learning in solving fundamental computer science problems such as computer vision and natural language understanding comes from giving machines the ability to **experience the structure of the world** .
 
-We take this for granted.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  
-
-Modern machine learning allows machines to understand to this structure in a raw form.
+We take this for granted.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure using the same inputs that we do.
 
 Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires us to engineer this view of the world.
 
@@ -59,11 +57,15 @@ Modern machine learning is able to feed data in a raw form into models, so they 
 
 ## modern deep learning
 
+Deep learning refers to neural networks with multiple layers.  How many are needed before a network is deep depends on who you talk too.  Simple networks such as a three layer fully connected network can be used to solve a variety of problems.  This is in contrast to massive convolutional or recurrent networks that can have 20 or more layers.
+
 The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
 Recurrent neural networks are the foundation of natural language processing and understanding. By processing the input sequentially and being able to remember (or forget) previous parts of the sequence, machines can learn the context of a word in a sentence.  The sequential nature of recurrent neural networks means they can experience the temporal dimension of time series problems.
+
+In both convolution and recurrent neural networks the structure of the network helps to understand the data.  Convolution mimics what we do in our own visual cortex.  Recurrent networks implicitly model the temporal structure in data .
 
 Letting machines experience the structure of the world is fundamental to the promise of modern machine learning.  We see the raw structure of the world through sight - convolution allows machines to do the same.  We know that the world has a temporal structure - recurrent neural networks allow machines to understand this too.  **Seeing the world as it is allows machines to understand it**.
 
