@@ -29,15 +29,17 @@ Machine learning doesn't always mean deep learning.  Deep learning excels on ima
 
 ## learning what humans can't 
 
-Machine learning is a family of algorithms that **learn patterns in data**.  In contrast to traditional computer science where a human would write code to tell a machine what to do, machine learning models figure out solutions for themselves.  Data is the teacher.
+Machine learning is a family of algorithms that **learn patterns in data**.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.  Data is the teacher.
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
-This is a paradigm shift.  The ability to learn allows machines to **exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
+**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
 
-This ability of machine learning to generalize across different fundamental problems also allows machine learning models to **generalize across different industries**.  It's hard to think of a vertical industry that machine learning won't transform.
+Giving machines the ability to see and understand language allows machine learning to generalize into different domains.  The same vision models can be used for collision detection in autonomous driving or for spotting cancer in x-rays.  The same language models can be used to both listen to and respond in conversations on any topic.
 
-The paradigm shift of machine learning can be demonstrated by comparing two landmark achievements in artifical intelligence - IBM's Deep Blue and Alphabet/Google/DeepMind's AlphaGo.
+This ability to see and learn can be used in almost any industry.  It's hard to think of a vertical industry that machine learning won't transform.  The limiting factor is usually digitization.  Internet technology is already digitized, whereas many medical records or energy systems are not.
+
+This paradigm shift can be demonstrated by comparing two landmark achievements in artifical intelligence - IBM's Deep Blue and Alphabet/Google/DeepMind's AlphaGo.
 
 In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep Blue derived it's playing strength from brute force computing power. All of Deep Blue's intelligence originated from a team of programmers and chess Grandmasters, who handcrafted moves into the machine.  
 
@@ -65,11 +67,19 @@ Deep learning refers to neural networks with multiple layers.  How many are need
 
 The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
 
+![]({{ '/assets/ml_energy/conv.jpg' }})
+
+**deep convolutional neural network used in the 2015 DeepMind Atari work**
+
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
-Recurrent neural networks are the foundation of natural language processing and understanding. By processing the input sequentially and being able to remember (or forget) previous parts of the sequence, machines can learn the context of a word in a sentence.  The sequential nature of recurrent neural networks means they can experience the temporal dimension of time series problems.
+![]({{ '/assets/ml_energy/recurr.jpg' }})
 
-In both convolution and recurrent neural networks the structure of the network helps to understand the data.  Convolution mimics what we do in our own visual cortex.  Recurrent networks implicitly model the temporal structure in data .
+Recurrent neural networks process sequences.  For each part of the sequence the network chooses whether to remember or forget.  As the sequence is processed the network can remember what is important to improve the prediction.
+
+Recurrent neural networks model the temporal structure of data.  Language has this structure (it matters what order words are in).  This makes recurrent neural networks foundational in natural language processing and understanding. 
+
+In both convolution and recurrent neural networks the structure of the network helps to understand the data.  Convolution mimics what we do in our own visual cortex.  Recurrent networks implicitly model the temporal structure in data.
 
 Letting machines experience the structure of the world is fundamental to the promise of modern machine learning.  We see the raw structure of the world through sight - convolution allows machines to do the same.  We know that the world has a temporal structure - recurrent neural networks allow machines to understand this too.  **Seeing the world as it is allows machines to understand it**.
 
