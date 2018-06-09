@@ -1,11 +1,7 @@
 ---
-id: 94
 title: 'Kilowatts kW vs Kilowatt Hours kWh'
-date: 2016-10-21T11:37:55+00:00
+date: 2016-10-21
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=94
-permalink: /energy-basics-kw-vs-kwh/
 categories:
   - Energy Basics
 ---

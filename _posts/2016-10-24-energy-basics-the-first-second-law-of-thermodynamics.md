@@ -1,11 +1,7 @@
 ---
-id: 121
 title: 'The First & Second Law of Thermodynamics'
-date: 2016-10-24T06:57:25+00:00
+date: 2016-10-24
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=121
-permalink: /energy-basics-the-first-second-law-of-thermodynamics/
 categories:
   - Energy Basics
 ---

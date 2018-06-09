@@ -13,7 +13,7 @@ This post details the debugging process I went through for the new implementatio
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
 **the agent graph shown in Tensorboard**
 
-By the end of this work the repo reached over 500 commits!
+By the end of this work the energy_py repo has reached over 500 commits!
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
@@ -28,10 +28,14 @@ This is the third iteration of DQN that I've built - this one was significantly 
 
 This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  
 
+> If you are not embarrassed by the first version of your product, you've launched too late - Reid Hoffman
+
+I'm quite proud of how far I've come, and proud of how poor the first implementation looks to me now.
+
 [version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
 - built in Keras
 - no target network
-- structuring the neural network with a single output.  this means n passes are required to predict Q(s,a) for n actions, rather than a single pass in a network with n output nodes (one per action)
+- structuring the neural network with a single output.  this means n passes are required to predict Q(s,a) for n actions, rather than a single pass in a network with n output nodes (one per action).  it does allow the network to connect to the action as an array, so the network can sense the shape of the action 
 
 [version 2](https://github.com/ADGEfficiency/energy_py/commit/774ff3c9cd63b1b1e50359ab606edc7737121c86)
 - built in Tensorflow
@@ -58,8 +62,7 @@ tmux window one setup
 - a Tensorboard server running in the bottom right pane
 
 ![]({{ "/assets/debug_dqn/vim_setup.png"}}) 
-tmux window two setup
-- vim with `agent/dqn.py` open
+tmux window two setup - vim with `agent/dqn.py` open
 
 Switching between tmux windows is as easy at `Ctrl b p`.
 
@@ -128,7 +131,8 @@ while step < total_steps:
 
     runner.record_episode()
 ```
-This setup is enough to get logging setup with two log files and Tensorboard running.  The Tensorboard server can be started by
+
+This setup is enough to get logging setup with two log files and Tensorboard running.  Three Tensorboard writers are used - one for `agent.act()`, one for `agent.learn()` and one for `runner.record_episode()`.  I setup these log files in the local directory.  To view the Tensorboard log files I start a server in the same directory `dqn.py` is in
 
 ```bash
 $ cd energy_py/energy_py/agents
@@ -310,7 +314,6 @@ When I saw Vlad Mnih speak at the 2017 Deep RL bootcamp, he mentioned that large
 Another change I made at this point was to set `centre=False` to the target batch normalization.  John Schulman notes in the talk **The Nuts and Bolts of Deep RL Research** ([video](https://www.youtube.com/watch?v=8EcdaCk9KaQ) and [slides](https://github.com/ADGEfficiency/dsr_rl/blob/master/literature/reinforcement_learning/2016_schulman_nuts-and-bolts.pdf) that removing the mean from the target might affect the agent's will to live.
 
 ```python
-#  the batch normalization
 bellman_norm = tf.layers.batch_normalization(
 	tf.reshape(self.bellman, (-1, 1)),
 	center=False,
@@ -326,10 +329,9 @@ bellman_norm = tf.layers.batch_normalization(
 
 **Figure 12 - Learning curves across three random seeds**
 
-And here is how we setup these final three agents
+And here is the setup these final three agents
 
 ```python
-#  the final agent setup
 agent = DQN(
     sess=sess,
     env=energy_py.make_env('CartPole'),
@@ -346,8 +348,8 @@ agent = DQN(
 
 ## concluding thoughts
 
-best practices
-- using simple env that I'm familiar
+best practices followed
+- using simple env that I'm familiar with
 - running comparisons across multiple random seeds
 - keeping a detailled log of your thoughts
 
@@ -360,3 +362,4 @@ hyperparameters
 - exploration changed from `0.3` to `0.5`
 - learning rate reduced and decayed
 
+Thanks for reading!
