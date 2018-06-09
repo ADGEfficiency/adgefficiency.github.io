@@ -11,6 +11,7 @@ classes: wide
 This post details the debugging process I went through for the new implementation of DQN in energy_py.  This work was performed on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
+**the agent graph shown in Tensorboard**
 
 The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
@@ -213,11 +214,15 @@ next_state_max_q = tf.where(
 	)
 ```
 
-After making this change, the distribution of masked `Q(s',a)` values looks a lot better
+After making this change, the distribution of masked `Q(s',a)` values looks a lot better.  
 
 ![fig6]({{ "/assets/debug_dqn/fig6.png"}}) 
 
 **Figure 6 - Proper masking out of `Q(s',a)`**
+
+As part of the DQN rebuild I added a [suite of tests](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/tests/test_dqn.py) to test the new agent.  Tests include the variable sharing and copy operations, along with checking the Bellman target creation for both DQN and DDQN.
+
+Unfortunately I had repeated the same error with `tf.where` in my test for the Bellman target creation!  I actually wrote a note pointing out the test mirroed the tensorflow code exactly... maybe my subconcious saw something I didn't.
 
 Now after running the experiment we see the increase in Q values that I saw with previous implementations of DQN.  This optimism is a function of the agressive and positively biased maximum value done in creating the Bellman target.  We know this because a pessimistic target (which we had previously with our incorrect `tf.where`) doesn't see this optimism.
 
@@ -344,7 +349,11 @@ best practices
 - keeping a detailled log of your thoughts
 
 error fixes
+- incorrect masking of `Q(s',a)`
+- test code repeating error of incorrect masking
 
 hyperparameters
-
+- batch normalization setup to only scale and not remove the mean
+- exploration changed from `0.3` to `0.5`
+- learning rate reduced and decayed
 
