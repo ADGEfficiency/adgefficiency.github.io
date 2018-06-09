@@ -11,7 +11,7 @@ This is the first of a two part series - [read the second part](http://adgeffici
 
 ## what is machine learning 
 
-Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks, whose structure is inspired by the biological neural networks in our own brain.  These networks form the basis of the state of the art across a range of problems.
+Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  Artificial neural networks are inspired by the biological neural networks in our own brain.  They power the state of the art across a range of problems.
 
 ![fig1]({{ '/assets/ml_energy/fig1.png' }})
 
@@ -27,11 +27,11 @@ Machine learning doesn't always mean deep learning.  Deep learning excels on ima
 
 ## learning what we can't 
 
-Machine learning is a family of algorithms that **learn patterns in data**.  In contrast to traditional computer science where a human would tell a machine what to do, machine learning models figure out solutions for themselves.
+Machine learning is a family of algorithms that **learn patterns in data**.  In contrast to traditional computer science where a human would write code to tell a machine what to do, machine learning models figure out solutions for themselves.  Data is the teacher.
 
-This is a major paradigm shift.  Steve Juvertson (a venture capitalist who finished an eelectrical engineering degree at Stanford in 2 years!) thinks that "... machine learning is the biggest advance in how we can do engineering since the scientific method...".  
+This is a paradigm shift.  Steve Juvertson (a venture capitalist who finished an electrical engineering degree at Stanford in 2 years!) thinks that **"...machine learning is the biggest advance in how we can do engineering since the scientific method..."**.  
 
-The ability to learn allows machine learning models to **exceed human performance in a variety of domains**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
+The ability to learn allows machines to **exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
 
 This ability of machine learning to generalize across different fundamental problems also allows machine learning models to **generalize across different industries**.  It's hard to think of a vertical industry that machine learning won't transform.
 
