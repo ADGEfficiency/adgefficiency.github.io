@@ -69,11 +69,9 @@ Three major trends are driving modern machine learning.
 
 ### one - data
 
-**It's hard to overestimate the importance of data to modern machine learning.** 
+It's hard to overestimate the importance of data to modern machine learning.  The internet and smartphone cameras means we are generating more data than ever.  This volume of data is fundamental to driving modern machine learning.  
 
-The internet and smartphone cameras means we are generating more data than ever.  This volume of data is fundamental to driving modern machine learning.  
-
-Training neural networks requires lots of examples.  If you are trying to classify images, a convolutional neural network requires a large number of example images to understand what different classes look like.
+**Training powerful neural networks requires lots of data**.  If you are trying to classify images, a convolutional neural network requires a large number of example images to understand what different classes look like.
 
 Data is most useful if it is labelled.  For example, an image of a dog outside a house that is labelled with `dog` and `house` is more valuable than the same photo with no label.  This is because the labels allow us to penalize the algorithm for labelling it with `cat`.  This is *supervised learning*.
 
