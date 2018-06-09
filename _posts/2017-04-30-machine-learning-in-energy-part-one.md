@@ -15,11 +15,13 @@ Modern artifical intelligence is powered by **deep learning** - multiple layer a
 
 ![fig1]({{ '/assets/ml_energy/fig1.png' }})
 
-**Figure 1 – Recent progress in compuer vision on the ImageNet benchmark [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
+**Figure 1 – Recent progress in compuer vision on the ImageNet benchmark**
+
+**[The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
 
 What's exciting about neural networks is that they **learn**.  They aren't the only algorithms that can learn - together with algorithms such as logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
-**picture showing AI -> ML -> DL**
+**AI -> ML -> DL**
 
 This heirarchy is important.  Artificial intelligence encompasses more than just deep learning.  It's possible to be a machine learning practioner and not know much about other areas of artifical intelligence.  Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.
 
