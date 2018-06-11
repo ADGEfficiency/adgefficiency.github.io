@@ -18,9 +18,9 @@ By the end of this work the energy_py repo has reached over 500 commits!
 
 The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
-The ideas behind documenting this debug process come from the blog post [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl).  The post reccomends keeping a detailled log of the debugging process.  
+The ideas behind documenting this debug process come from the blog post [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This excellent post reccomends keeping a detailled log of your debugging and also taking the time to form hypotheses about what might be wrong. 
 
-Another purpose of this post is to show the logic behind a successful debugging, the kinds of silly errors that can eaisly be made and to show how CartPole often performs using DQN. 
+This post shows the logic behind a successful debugging, the kinds of silly errors that can eaisly be made and to show how CartPole often performs using DQN. 
 
 This is the third iteration of DQN that I've built - this one was significantly infulenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
@@ -44,7 +44,7 @@ I'm quite proud of how far I've come, and of how poor my first implementation wa
 - e-greedy policy only
 
 [version 3](https://github.com/ADGEfficiency/energy_py)
-- the current master branch (synced over from dev at [this commit](https://github.com/ADGEfficiency/energy_py/tree/f747f0e10741c33cfa81ac7c8b52ebfc4bdca7e4)
+- the current master branch (synced over from dev at [this commit](https://github.com/ADGEfficiency/energy_py/tree/f747f0e10741c33cfa81ac7c8b52ebfc4bdca7e4))
 - built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
@@ -57,7 +57,7 @@ Two more rebuilds to go...
 
 While I think obsession over what tools (i.e. which editor to use) is unhelpful, I do think that anyone who takes their work seriously should take pride in the toolset they use.  For this experiment I used a combination of tmux, vim, an info & debug log and Tensorboard to try get an understanding of whats going on.
 
-I used two tmux windows, one that kept track of the experiment and another with the `energy_py/agents/dqn.py` script open for editing in vim.  The experiment window shows both the `info.log` and `debug.log`.
+I used two tmux windows, one that kept track of the experiment and another with the `energy_py/agents/dqn.py` script open for editing in vim.  The experiment window shows both the `info.log` and `debug.log`.  The debug log moves too fast to be viewed but is useful for seeing if the agent is working.
 
 ![]({{ "/assets/debug_dqn/tmux_setup.png"}}) 
 tmux window one setup
@@ -73,6 +73,8 @@ Switching between tmux windows is as easy at `Ctrl b p`.
 ## debugging code
 
 For the debug process I wrote a barebones implementation of an experiment under the `if __name__ == '__main__':` block in `energy_py/agents.dqn.py`.  It exposes a lot of the functionality that is all taken care of automatically when using the `experiment()` function in energy_py (`from energy_py import experiment`).
+
+Doing this in the same script as the DQN agent means I can eaisly make changes, and removes dependencies on the rest of the project.
 
 ```python
 import random
@@ -136,7 +138,7 @@ while step < total_steps:
     runner.record_episode()
 ```
 
-This setup is enough to get logging setup with two log files and Tensorboard running.  Three Tensorboard writers are used - one for `agent.act()`, one for `agent.learn()` and one for `runner.record_episode()`.  I setup these log files in the local directory.  To view the Tensorboard log files I start a server in the same directory `dqn.py` is in
+This setup is enough to get logging setup with two log files and Tensorboard running.  Three Tensorboard writers are used - one for `agent.act()`, one for `agent.learn()` and one for `runner.record_episode()`.  I setup these log files in the local directory.  To view the Tensorboard log files I start a server in the same directory that the `dqn.py` script lives in.
 
 ```bash
 $ cd energy_py/energy_py/agents
@@ -152,7 +154,7 @@ $ tensorboard --logdir='.'
 
 When using an epsilon greedy exploration policy, early stages of the experiment are mostly randomly selected actions.  For CartPole this ends up being an average reward per episode of between 20 - 30.  For a working implementation the episode returns will stay in this range and start to increase as the agent learns.
 
-What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over `Q(s,a)` was selecting the same action each time, resulting in a poor policy that quickly failed the CartPole task.
+What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over `Q(s,a)` was selecting the same action each time, resulting in a poor policy that quickly failed the CartPole task.  This policy is worse than a random policy!
 
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behvaiour we saw.
@@ -191,9 +193,9 @@ From experience with DQN and CartPole I expected to see a inflation in the Q val
 
 **Figure 3 - The Bellman target showing a plateau at around 2**
 
-We know can see that the target doesn't seem right - we can check the loss to see if this improperly formed target is being learnt.  Even though DQN uses a target network for the approximation of `max Q(s',a)`, this approximation is still infulenced by the online network via the target net copy operations.
+We now can see that the target doesn't seem right - we can check the loss to see if this improperly formed target is being learnt.  Even though DQN uses a target network for the approximation of `max Q(s',a)`, this approximation is still infulenced by the online network via the target net copy operations.
 
-Taking a look at the loss function we can see that the agent is learning to fit this improperly formed Bellman target
+Taking a look at the loss function (Figure 4) we can see that the agent is learning to fit this improperly formed Bellman target.
 
 ![fig4]({{ "/assets/debug_dqn/fig4.png"}}) 
 
