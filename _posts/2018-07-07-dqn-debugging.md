@@ -72,7 +72,7 @@ Switching between tmux windows is as easy at `Ctrl b p`.
 
 ## debugging code
 
-For the debug process I wrote a barebones implementation of an experiment under the `if __name__ == '__main__':` block in `energy_py/agents.dqn.py`.  It exposes a lot of the functionality that is all taken care of automatically when using the `experiment()` function in energy_py (`from energy_py import experiment`).
+For the debug process I wrote a barebones implementation of an experiment under the `if __name__ == '__main__':` block in `energy_py/agents.dqn.py`.  It exposes the functionality that is all taken care of automatically when using the `experiment()` function in energy_py (`from energy_py import experiment`).
 
 Doing this in the same script as the DQN agent means I can eaisly make changes, and removes dependencies on the rest of the project.
 
@@ -159,7 +159,7 @@ What I was seeing was a drop in average reward to around 10 per episode after ex
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behvaiour we saw.
 
-To do this I added the weights as histograms in TensorBoard by indexing a list of parameters for the online and target networks.  This is a bit hacky - Tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
+To do this I added the weights as histograms in TensorBoard by indexing a list of parameters for the online and target networks.  This is hacky - Tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
 
 ```python
 self.act_summaries.extend([
@@ -187,7 +187,7 @@ In DQN learning is done by minimizing the difference between predicted Q values 
 
 Reinfocement learning can be though of as a data generation process - interacting with the environment generates sequences of experience tuples of `(s, a, r, s')`.  In order to learn from this data we need to label it - in DQN this labelling process is doing by creating a Bellman target for each sample in a batch.  This then allows supervised learning to be used to fit our predicted `Q(s,a)` to the target. 
 
-From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the max operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a very small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the max across `Q(s',a)` was approximately 1.0 as well.
+From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the max operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the max across `Q(s',a)` was approximately 1.0 as well.
 
 ![fig3]({{ "/assets/debug_dqn/fig3.png"}}) 
 
@@ -227,7 +227,7 @@ next_state_max_q = tf.where(
 	)
 ```
 
-After making this change, the distribution of masked `Q(s',a)` values looks a lot better.  
+After making this change, the distribution of masked `Q(s',a)` values looks better.  
 
 ![fig6]({{ "/assets/debug_dqn/fig6.png"}}) 
 
@@ -283,7 +283,7 @@ One of the hyperparameters in using batch norm is whether to use accumulated sta
 
 **Figure 8 - The Bellman target before and after batch normalization**
 
-After making all of these changes the first signs of life appeared
+After making these changes the first signs of life appeared
 
 ![fig9]({{ "/assets/debug_dqn/fig9.png"}}) 
 
@@ -308,7 +308,7 @@ The hyperparameter tuning process followed a similar hypothesis - problem struct
 ## hypothesis - learning rate is too high OR state space not being explored well
 
 At this point I had two main thoughts about what might cause an unstable policy
-- a large learning rate means that the optimizer is forced to change policy weights a lot, even when the policy is performing well 
+- a large learning rate means that the optimizer is forced to change policy weights, even when the policy is performing well 
 - the exploration period being too short means that only late in life does the agent see certain parts of the state space, making the policy unstable in these regions of the state space
 
 I previous had the `epsilon_decay_fraction` hyperparameter set to `0.3` - this meant that the entire epsilon decay is done in the first 30% of the total steps for this experiment.  I changed this to `0.5` - giving the agent more of a chance to see the state space early in life.  This could be investigated further by looking at how the distribution of the observations (either during acting or training) were changing. I decided not to do this. 
