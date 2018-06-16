@@ -1,11 +1,7 @@
 ---
-id: 734
 title: 'How to save the energy system - André Bardow'
-date: 2017-03-06T09:03:51+00:00
+date: 2017-03-06
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=734
-permalink: /energy-insights-how-to-save-the-energy-system-andre-bardow/
 categories:
   - Energy Insights
 ---
