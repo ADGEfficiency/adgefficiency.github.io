@@ -1,11 +1,7 @@
 ---
-id: 845
 title: 'Capacity Factor'
-date: 2017-03-14T20:20:53+00:00
+date: 2017-03-14
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=845
-permalink: /energy-basics-capacity-factor/
 categories:
   - Energy Basics
 ---
