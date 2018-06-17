@@ -1,11 +1,6 @@
 ---
-id: 562
 title: 'Average vs. Marginal Carbon Emissions'
-date: 2017-02-02T01:27:04+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=562
-permalink: /energy-basics-average-vs-marginal-carbon-emissions/
+date: 2017-02-02
 categories:
   - Energy Basics
 ---
