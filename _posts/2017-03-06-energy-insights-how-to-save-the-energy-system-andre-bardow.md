@@ -5,20 +5,22 @@ author: Adam Green
 categories:
   - Energy Insights
 ---
-These Energy Insights come from a TED talk titled [‘How to save the energy system’](https://www.youtube.com/watch?v=3_N-DooApEE) given by André Bardow.  André is a fantastic speaker and his talk is well worth a watch.  Below are summarized three of the insights André raises.
+These Energy Insights come from the TED talk [‘How to save the energy system’](https://www.youtube.com/watch?v=3_N-DooApEE) by André Bardow.  André is a fantastic speaker and his talk is well worth a watch.  Below are three insights from the talk.
 
 ## Why peak oil won’t save the planet
 
-It's logical to think that as humanity burns more oil the amount of oil left to recover should decrease.  Figure 1 below shows the opposite is true. Estimated global oil reserves have actually increased over time.
+The more oil we burn, the less oil we have, right?  Figure 1 below shows the opposite is true. Estimated global oil reserves have increased over time.  To understand why we need to understand what an oil reserve is defined to be.
 
 ![Figure 1]({{"/assets/andre_bardow_save/fig1.jpg"}})
 **Figure 1 – [Estimated global oil reserves (1980 – 2014)](https://www.forbes.com/sites/rrapier/2016/05/23/the-explosive-growth-of-u-s-oil-reserves/2/#53cbc60772c6)**
 
-Oil reserves are defined as the amount of oil that can be technically recovered at a cost that is financially feasible at the present price of oil. Reserves are a function of a number of variables that change over time:
-- Total physical oil in place – physical production of oil reduces the physical amount of oil in the ground.
-- Total estimated oil in place – the initial estimates are low and increased over time.
-- Oil prices – historically oil prices have trended upwards (Figure 2). Oil reserves defined as a direct function of the present oil price.
-- Technology – the oil & gas industry has benefited more than any other energy sector from improved technology.  Improved technology reduces the cost of producing oil.  This makes more oil production viable at a given price.
+Oil reserves are defined as the amount of oil that can be technically recovered at a cost that is financially feasible at the present price of oil. 
+
+Oil reserves are a function of
+- total physical oil in place – physical production of oil reduces the physical amount of oil in the ground
+- total estimated oil in place – the initial estimates are low and increased over time
+- oil prices – historically oil prices have trended upwards (Figure 2). Oil reserves defined as a direct function of the present oil price
+- technology – the oil & gas industry has benefited more than any other energy sector from improved technology.  Improved technology reduces the cost of producing oil.  This makes more oil production viable at a given price
 
 ![Figure 2]({{"/assets/andre_bardow_save/fig2.png"}})
 **Figure 2 –  [Crude oil price](https://commons.wikimedia.org/wiki/File:Oil_price_1950-2010_(real,_nominal).png)**
@@ -31,12 +33,11 @@ We are not going to run out of oil any time soon. The limit on oil production is
 
 ## Wind & solar lack an inherent economy of scale
 
-Economy of scale is a key advantage in many systems and business models – energy systems are no different.  Larger plants are more energy efficient and have lower specific capital & maintenance costs.
+Economy of scale is a key advantage in many systems – energy systems are no different.  Larger plants are more energy efficient and have lower specific capital & maintenance costs.
 
 Energy efficiency improves with size because the ratio of fixed energy losses to energy produced improves.   Figure 3 shows an example of this for spark ignition gas engines.
 
 This is also why part load efficiency is worse than full load efficiency.  Energy production reduces but fixed energy losses remain constant.
-
 
 ![Figure 3]({{"/assets/andre_bardow_save/fig3.png"}})
 **Figure 3 – Effect of gas engine size [kWe] on gross electric efficiency [% HHV]**
@@ -63,6 +64,7 @@ But to offer a similar economy of scale as fossil fuels is difficult due to low 
 Wind and solar can gain an economy of scale advantage through production.  The mass production of wind and solar can give an economy of scale advantage that individual panels and turbines lack.
 
 ## Average German capacity factors
+
 Andre gives reference capacity factors for the German grid of
 - Solar = 10%
 - Wind = 20%
