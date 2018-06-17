@@ -7,7 +7,7 @@ categories:
 ---
 These Energy Insights come from the TED talk [‘How to save the energy system’](https://www.youtube.com/watch?v=3_N-DooApEE) by André Bardow.  André is a fantastic speaker and his talk is well worth a watch.  Below are three insights from the talk.
 
-## Why peak oil won’t save the planet
+##  Why peak oil won’t save the planet
 
 The more oil we burn, the less oil we have, right?  Figure 1 below shows the opposite is true. Estimated global oil reserves have increased over time.  To understand why we need to understand what an oil reserve is defined to be.
 
@@ -31,7 +31,7 @@ The other three (total oil estimate, technology & oil price) have all caused oil
 
 We are not going to run out of oil any time soon. The limit on oil production is not set by physical reserves.  The limit will ultimately be set either by the oil being too expensive to recover or climate related limits on oil extraction.
 
-## Wind & solar lack an inherent economy of scale
+##  Wind & solar lack an inherent economy of scale
 
 Economy of scale is a key advantage in many systems – energy systems are no different.  Larger plants are more energy efficient and have lower specific capital & maintenance costs.
 
@@ -63,7 +63,7 @@ But to offer a similar economy of scale as fossil fuels is difficult due to low 
 
 Wind and solar can gain an economy of scale advantage through production.  The mass production of wind and solar can give an economy of scale advantage that individual panels and turbines lack.
 
-## Average German capacity factors
+##  German capacity factors
 
 Andre gives reference capacity factors for the German grid of
 - Solar = 10%
