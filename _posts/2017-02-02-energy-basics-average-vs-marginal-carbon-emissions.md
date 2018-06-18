@@ -51,6 +51,6 @@ Luckily high marginal cost generators like open cycle gas turbines are usually a
 
 The excellent [Electricity Map](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.  If you are accounting for the carbon that is emitted from your personal choices, the *location* or *market* based methods are relevant.
 
-![Figure 3]({{ "/assets/avg_marginal/fig3.png"}})
+![Figure 3]({{ "/assets/avg_marginal/fig3.jpg"}})
 
 Thanks for reading!
