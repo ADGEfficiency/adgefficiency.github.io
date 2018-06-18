@@ -5,21 +5,19 @@ categories:
   - Energy Basics
 ---
 
-Calculating carbon savings seems like a simple calculation - **yet many professionals are get it wrong**. I know because I made this mistake in my previous job.
+Calculating carbon savings seems simple - **yet many professionals get it wrong**.  I know because I used to make this mistake.
 
-Accurate calculation of carbon savings is crucial in the fight against climate change. Knowing how much carbon a project saves allows us to understand how effective (meausred in `$/tC`) a project is at saving carbon.
+Understanding how much carbon a project saved is fundamental to fighting climate change.  Knowing how much carbon a project saves allows us to understand how effective (meausured in `$/tC`) a project is at saving carbon.  This allows different technologies to be compared.
 
-So where are people going wrong?  The key is to understand the difference between average and marginal carbon emissions.
+So where are people going wrong?  The key is the difference between average and marginal carbon emissions.
 
-Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.
+Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.  This average intensity can be used to calculate carbon savings.  For example if we had a project that saved 2 MWh we would calculate 2 * 0.456 = 0.912 tC as the saving.  This is wrong!
 
 |Table 1 – Calculation of average carbon intensity for Base Case|
 |---|
 |Carbon emissions|	tC|	83,330|
 |Electricity generated|	MWh|	182,827|
 |Carbon intensity|	tC/MWh|	0.456|
-
-This average intensity can be used to calculate carbon savings.  For example if we had a project that saved 2 MWh we would calculate 2 * 0.456 = 0.912 tC as the saving.  This is wrong!
 
 To understand why we need to the concept of the marginal generator.  In reality as electricity is saved the reduction in generation is not spread across each generator.  The reduction occurs in one plant – the marginal generator.  Let’s run through an example.
 
@@ -49,8 +47,11 @@ Luckily high marginal cost generators like open cycle gas turbines are usually a
 
 ## other methods for accounting for carbon 
 
-The excellent [Electricity Map](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.  If you are accounting for the carbon that is emitted from your personal choices, the *location* or *market* based methods are relevant.
+The excellent [Electricity Map](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.
 
 ![Figure 3]({{ "/assets/avg_marginal/fig3.jpg"}})
+**Figure 3 - Comparison of carbon accounting methods [Tomorrow.com](http://www.tmrow.com/)**
+
+  If you are accounting for the carbon that is emitted from your personal choices, the *location* or *market* based methods are relevant.
 
 Thanks for reading!
