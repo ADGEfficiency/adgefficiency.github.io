@@ -1,13 +1,11 @@
 ---
-id: 468
 title: A Simple Look at the Efficiency Penalty Cost of Renewables
-date: 2017-01-30T22:53:00+00:00
+date: 2017-01-30
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=468
-permalink: /a-simple-look-at-the-efficiency-penalty-cost-of-renewables/
 categories:
   - Energy
+excerpt: Can a fossil fuel efficiency penalty offset the benefits of renewables?
+
 ---
 
 This article is a response to [Wind Integration vs. Air Emission Reductions: A Primer for Policymakers](https://www.masterresource.org/integrationfirming/wind-integration-and-emissions/).  This article claims the efficiency penalty of turning down fossil fuel power stations offsets the benefit of renewable power generation.
