@@ -1,7 +1,7 @@
 ---
-title: 'archive
+title: 'archive'
 layout: posts
-permalink: /year_archive/
+permalink: /archive/
 author_profile: true
 
 ---
