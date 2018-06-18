@@ -1,8 +1,6 @@
 # main links
 main:
-  - title: "GitHub"
-    url: https://github.com/ADGEfficiency
-  # - title: "Sample Collections"
-  #   url: /collection-archive/
+  - title: "archive"
+    url: /collection-archive/
   # - title: "Sitemap"
   #   url: /sitemap/

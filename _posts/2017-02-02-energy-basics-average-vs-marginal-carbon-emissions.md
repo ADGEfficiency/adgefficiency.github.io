@@ -5,11 +5,12 @@ categories:
   - Energy Basics
 ---
 
-Calculating carbon savings seems like a simple calculation - **yet many professionals are getting it wrong**. I know because I was made this mistake in my previous job.
+Calculating carbon savings seems like a simple calculation - **yet many professionals are get it wrong**. I know because I made this mistake in my previous job.
 
-Accurate calculation of carbon savings is crucial in the fight against climate change.  Knowing how much we save from a project can be compared to other projects such as renewable generation.
+Accurate calculation of carbon savings is crucial in the fight against climate change. Knowing how much carbon a project saves allows us to understand how effective (meausred in `$/tC`) a project is at saving carbon.
 
 So where are people going wrong?  The key is to understand the difference between average and marginal carbon emissions.
+
 Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.
 
 |Table 1 – Calculation of average carbon intensity for Base Case|
@@ -45,5 +46,11 @@ You might be asking – how do we know what the marginal generator will be?  It�
 Luckily high marginal cost generators like open cycle gas turbines are usually also carbon intense – so your saved electricity is likely doing valuable work – and potentially more than you previously thought!
 
 [You can download a copy of the model here](https://github.com/ADGEfficiency/adgefficiency.github.io/blob/master/assets/avg_marginal/average-vs-marginal-emissions-2017-02-02-1.xlsx).
+
+## other methods for accounting for carbon 
+
+The excellent [Electricity Map](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.  If you are accounting for the carbon that is emitted from your personal choices, the *location* or *market* based methods are relevant.
+
+![Figure 3]({{ "/assets/avg_marginal/fig3.png"}})
 
 Thanks for reading!
