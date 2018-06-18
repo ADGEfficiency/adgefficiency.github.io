@@ -3,15 +3,19 @@ title: 'Average vs. Marginal Carbon Emissions'
 date: 2017-02-02
 categories:
   - Energy Basics
+excerpt: Calculating carbon savings should be easy - many professionals get it wrong
+
 ---
 
 Calculating carbon savings seems simple - **yet many professionals get it wrong**.  I know because I used to make this mistake.
 
-Understanding how much carbon a project saved is fundamental to fighting climate change.  Knowing how much carbon a project saves allows us to understand how effective (meausured in `$/tC`) a project is at saving carbon.  This allows different technologies to be compared.
+Calculating carbon savings is fundamental to the climate change problem.  Knowing how much carbon a project saves allows us to understand how effective (meausured in `$/tC`) a project is at saving carbon.  
 
-So where are people going wrong?  The key is the difference between average and marginal carbon emissions.
+This allows different technologies to be compared at how 'efficient' they are at saving carbon.  This value can also be compared with a carbon price (also measured in `$/tC`) to determine if a project is worth doing (relative to what society thinks the cost of carbon in `$/tC` is).
 
-Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.  This average intensity can be used to calculate carbon savings.  For example if we had a project that saved 2 MWh we would calculate 2 * 0.456 = 0.912 tC as the saving.  This is wrong!
+So where are people going wrong?  They don't appreciate **the difference between average and marginal carbon emissions**.
+
+Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.  This average is taken across all generators.
 
 |Table 1 – Calculation of average carbon intensity for Base Case|
 |---|
@@ -19,7 +23,17 @@ Average carbon emissions are calculated using the total carbon emissions and tot
 |Electricity generated|	MWh|	182,827|
 |Carbon intensity|	tC/MWh|	0.456|
 
-To understand why we need to the concept of the marginal generator.  In reality as electricity is saved the reduction in generation is not spread across each generator.  The reduction occurs in one plant – the marginal generator.  Let’s run through an example.
+This average carbon intensity can be used to calculate carbon savings.  If a project saved 2 MWh, we would calculate 2 * 0.456 = 0.912 tC as the saving.  This is wrong!
+
+```
+electricity_saved = 2 MWh
+
+carbon_intensity = 0.456 tC/MWh
+
+carbon_saving = 0.912 tC
+```
+
+In a market based elecricity system, the reduction in generation is not averaged across each generator.  The reduction occurs in one plant – the marginal generator.  Let’s run through an example.
 
 Suppose we have a grid where electricity is supplied by either wind or coal (the Base Case).  If we save 1 GW of electricity, the generation of the coal plant will reduce by 1 GW (Case 1).
 
@@ -37,11 +51,15 @@ The wholesale mechanism operating in most electricity markets will reduce output
 |Carbon emissions|	tC|	83,329|	61,489|	21,840|
 |Carbon intensity|	tC/MWh|	0.456|	0.387|	0.910|
 
-Our carbon saving is equal to 1 GW multiplied by the carbon intensity of the marginal plant.  If we were to use the average grid carbon intensity (0.456 tC/MWh) we calculate a daily carbon saving of only 21,480 tC.
+Our carbon saving is equal to `1 GW` multiplied by the carbon intensity of the marginal plant.  If we were to use the average grid carbon intensity (`0.456 tC/MWh`) we calculate a daily carbon saving of only `21,480 tC`.
 
-You might be asking – how do we know what the marginal generator will be?  It’s likely to be the most expensive generator at that time (it may not be if the plant needs to be kept on for technical reasons).   As renewables are characterized by low marginal costs they are the unlikely to be pushed off the grid.
+How do we know what the marginal generator is?  It’s likely to be the most expensive generator at that time.  It may not be if the plant needs to be kept on for technical reasons.  
 
-Luckily high marginal cost generators like open cycle gas turbines are usually also carbon intense – so your saved electricity is likely doing valuable work – and potentially more than you previously thought!
+Taking the most expensive generator is a good approximation of the marginal grid carbon intensity.  Only if your project saved more than the output of this generator would you need average across multiple marginal generators.
+
+As renewables are characterized by low marginal costs they are the unlikely to be pushed off the grid.  
+
+High marginal cost generators like open cycle gas turbines are usually also dirty – so your saved electricity is likely doing valuable work – and potentially more than you previously thought.  This is one case where the common mistake is actually an underestimate.
 
 [You can download a copy of the model here](https://github.com/ADGEfficiency/adgefficiency.github.io/blob/master/assets/avg_marginal/average-vs-marginal-emissions-2017-02-02-1.xlsx).
 
