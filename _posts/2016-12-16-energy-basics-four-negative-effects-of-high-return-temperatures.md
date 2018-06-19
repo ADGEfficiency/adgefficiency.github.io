@@ -1,5 +1,5 @@
 ---
-title: 'Negative Effects of High Return Temperatures'
+title: 'Four Negative Effects of High Return Temperatures'
 date: 2016-12-16
 categories:
   - Energy Basics
