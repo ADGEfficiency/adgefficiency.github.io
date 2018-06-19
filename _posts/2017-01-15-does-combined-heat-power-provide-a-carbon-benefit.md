@@ -6,19 +6,19 @@ categories:
 excerpt: CHP is efficient, but does it help save the planet?
 
 ---
-If you care about efficiency, then Combined Heat and Power (CHP) is for you.  If you care about saving carbon, CHP may or may not be for you.  This post is about finding out if CHP is right for you.
+This post is about finding out if CHP is right for you. If you care about efficiency, then Combined Heat and Power (CHP) is for you.  If you care about saving carbon, CHP may or may not be for you.
 
 ---
 
 One of the [implications of the Second Law of Thermodynamics](http://adgefficiency.com/energy-basics-the-first-second-law-of-thermodynamics/) is that heat is a necessary byproduct of converting fuel to electricity.  
 
-CHP is a range of technologies that maximize efficiency by recovering this heat.  CHP can achieve total plant efficiencies of 80 % HHV.  When generating electricity alone efficiency is typically 40-60 % HHV.
+CHP maximizes efficiency by recovering this heat.  CHP can achieve total plant efficiencies of 80 % HHV.  When generating electricity alone efficiency is typically 40-60 % HHV.
 
 High efficiency is great, but high efficiency does not guarantee a positive carbon impact.  The carbon benefit of CHP is dependent on the carbon cost of CHP versus its alternative.
 
 ---
 
-This post is a simple analysis of what carbon benefit a generic CHP plant can bring.  We make the following assumptions:
+Below is a simple analysis of what carbon benefit a generic CHP plant can bring.  The following assumptions are made
 - 1 MWe of electricity demand
 - 1 MW of heat demand
 - our plant always generates the required 1 MWe of electricity
@@ -83,3 +83,5 @@ Like all modelling this analysis is a simplification.  Commentary on some of the
 If you would like a copy of the model you can download it using the link below.
 
 [Does CHP bring a carbon benefit 2017-01-14.xlsx](https://github.com/ADGEfficiency/adgefficiency.github.io/blob/master/assets/chp_carbon_benefit/Does-CHP-bring-a-carbon-benefit-2017-01-14.xlsx)
+
+Thanks for reading!
