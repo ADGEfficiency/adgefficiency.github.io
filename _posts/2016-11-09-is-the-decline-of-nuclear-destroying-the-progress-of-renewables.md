@@ -1,13 +1,10 @@
 ---
-id: 175
 title: Is the decline of nuclear destroying the progress of renewables?
-date: 2016-11-09T20:58:46+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=175
-permalink: /is-the-decline-of-nuclear-destroying-the-progress-of-renewables/
+date: 2016-11-09
 categories:
   - Energy Insights
+excerpt: Insights from the IEA World Energy Investment 2016 report.
+
 ---
 
 I recently watched the IEA Chief Economist Laszlo Varro discussing the IEA World Energy Investment 2016 report.  The presentation is excellent and well worth watching.  
