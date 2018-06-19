@@ -1,19 +1,12 @@
 ---
-id: 404
 title: 'Does Combined Heat & Power Provide a Carbon Benefit?'
-date: 2017-01-15T19:50:27+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=404
-permalink: /does-combined-heat-power-provide-a-carbon-benefit/
+date: 2017-01-15
 categories:
   - Energy
+excerpt: CHP is efficient, but does it help save the planet?
+
 ---
-If you care about efficiency, then Combined Heat and Power (CHP) is for you!  
-
-But if you care about saving carbon, CHP may or may not be for you.  
-
-This post is about finding out if CHP is right for you.
+If you care about efficiency, then Combined Heat and Power (CHP) is for you.  If you care about saving carbon, CHP may or may not be for you.  This post is about finding out if CHP is right for you.
 
 ---
 
