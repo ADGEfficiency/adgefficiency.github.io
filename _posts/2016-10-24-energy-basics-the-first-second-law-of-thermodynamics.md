@@ -4,12 +4,14 @@ date: 2016-10-24
 author: Adam Green
 categories:
   - Energy Basics
+excerpt: The First and Second Law are foundational in energy engineering.  They are also simple enough to be summarized in only two sentences.
+
 ---
 The First and Second Law are foundational in energy engineering.  They are also simple enough to be summarized in only two sentences.
 
 The **First Law** means we can only ever break even.  The **Second Law** means we can never break even, and will always lose.
 
-## The First Law of Thermodynamics
+## the first law of thermodynamics
 
 The First Law is the law of conservation.  Energy cannot be created or destroyed.  We can only convert energy from one form to another.  
 
@@ -19,7 +21,7 @@ A common energy transformation is converting fuel into power and heat.  For exam
 
 The First Law limits the amount of power generation at 10.  The Second Law further limits the fraction of fuel we can convert to power.s
 
-## The Second Law of Thermodynamics
+## the second law of thermodynamics
 
 The Second Law limits the amount of useful work we can do.  It restricts us even more than conservation - we always end up losing exergy and generating entropy.
 
@@ -27,13 +29,13 @@ Conversion of energy results in a loss of energy quality.  We can never convert 
 
 The Second Law means that heat is a necessary by-product of electricity generation. To maximize the value we get from our fuel requires finding a place for this heat. Combined Heat and Power attempts to make use of this heat in industry or for heating.
 
-## Summary & further reading
+## summary & further reading
 
 The First Law tells us we can only ever break even when converting energy.  The Second Law then tells us we will always lose.
 
 Both of these Laws have alternative definitions and interpretations.  The insights I have chosen to highlight are how they relate to practical energy engineering.
 
-[Carnot's theorem](https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics) limits the maximum efficiency of heat engines using the ratio of the heat supply and rejection temperatures.
+[Carnot's theorem](https://en.wikipedia.org/wiki/Carnot%27s_theorem_(thermodynamics)) limits the maximum efficiency of heat engines using the ratio of the heat supply and rejection temperatures.
 
 [Exergy](https://en.wikipedia.org/wiki/Exergy) is a measurement of maximum useful work.
 
