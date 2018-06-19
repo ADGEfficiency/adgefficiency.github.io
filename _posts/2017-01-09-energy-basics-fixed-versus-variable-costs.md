@@ -1,13 +1,10 @@
 ---
-id: 390
 title: 'Fixed versus Variable Costs'
-date: 2017-01-09T07:32:06+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=390
-permalink: /energy-basics-fixed-versus-variable-costs/
+date: 2017-01-09
 categories:
   - Energy Basics
+excerpt: A fundamental concept in business and energy.
+
 ---
 This is a basic concept in both business and energy engineering. Unfortunately this doesn't stop experienced energy professionals from misunderstanding it.
 
