@@ -1,13 +1,9 @@
 ---
-id: 208
 title: Composition, not consumption - why we can't learn from Costa Rica
-date: 2016-12-02T18:36:49+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=208
-permalink: /composition-not-consumption/
+date: 2016-12-02
 categories:
   - Energy
+excerpt: Costa Rica is often wrongly held up as an example of how to go renewable.
 
 ---
 In 2016 Costa Rica ran on 100% renewables for 76 straight days.  [Science Alert claims this is possible due to the small size of Costa Rica's electricity demand](http://www.sciencealert.com/costa-rica-has-been-running-on-100-renewable-energy-for-2-months-straight).  This is only partly true.
