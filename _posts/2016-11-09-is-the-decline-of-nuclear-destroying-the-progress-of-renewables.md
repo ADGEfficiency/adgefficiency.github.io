@@ -10,11 +10,11 @@ excerpt: Insights from the IEA World Energy Investment 2016 report.
 I recently watched the IEA Chief Economist Laszlo Varro discussing the IEA World Energy Investment 2016 report.  The presentation is excellent and well worth watching.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/jcIcQvmQ1jw" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-One section of the presentation worried me:
+One section of the presentation worried me
 
 > We are still in an age where renewables are already growing but the European and American nuclear fleet is still more or less in tact.  That matters because nuclear both in Europe and the United States is still significantly bigger than wind and solar combined.
 
-> Already this decade, if you compare the wind and solar investments and the decommissioning of nuclear power plants this decade  Europe and the United States have spent an average of $23 billion a year in **building wind mills and solar panels that do not contribute to decarbonisation at all but simply compensate for decommissioned nuclear power plants**, replacing one type of low carbon production with another type of low carbon production.
+> Already this decade, if you compare the wind and solar investments and the decommissioning of nuclear power plants this decade  Europe and the United States have spent an average of 23 USD billion a year in **building wind mills and solar panels that do not contribute to decarbonisation at all but simply compensate for decommissioned nuclear power plants**, replacing one type of low carbon production with another type of low carbon production.
 
 > This is just a taste of things to come – the real crunch time for the existing nuclear fleet will come only ten years from now.
 
@@ -22,7 +22,7 @@ How does the decline of nuclear compare to the rise of renewables? Are we comple
 
 This analysis looks at changes in both capacity [GW] and annual generated electricity [TWh/yr].  If the distinction between capacity and generation is not clear you might find this [earlier post helpful](http://adgefficiency.com/energy-basics-kw-vs-kwh/).
 
-#### Capacity [GW]
+## capacity [GW]
 
 |United States|	2000|	2014|	Delta|	% change|
 |---|
@@ -49,7 +49,7 @@ Nuclear plants operate as baseload plants for almost the entire year.  Renewable
 
 To improve our understanding we now take a look at data for annual electricity generation [TWh/yr].
 
-#### Generation [TWh/yr]
+## generation [TWh/yr]
 
 |United States|	2000|	2014|	Delta|	% change|
 |---|
@@ -77,7 +77,7 @@ The good news is that on balance we are making progress.  The decline of nuclear
 
 Thanks for reading!
 
-## References
+## references
 
 [US capacity data from the EIA](https://www.eia.gov/electricity/data.php#gencapacity). Renewables are ‘Wind’ and ‘Solar Thermal and Photovoltaic’.
 
