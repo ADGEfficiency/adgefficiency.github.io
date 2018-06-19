@@ -1,19 +1,16 @@
 ---
-id: 455
 title: 'How clean and renewable are wind and solar?'
-date: 2017-01-26T21:16:55+00:00
+date: 2017-01-26
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=455
-permalink: /renewables-confusion-renewable-versus-clean/
 categories:
   - Energy
+excerpt: How clean are wind and solar really?
+
 ---
 
 This post takes a look at how wind and solar perform in two important environmental dimensions - renewable and clean.
 
-
-### Renewable versus clean
+## Renewable versus clean
 
 Renewable and clean can have different meanings - here I define:
 - renewable = not depleting a natural resource
