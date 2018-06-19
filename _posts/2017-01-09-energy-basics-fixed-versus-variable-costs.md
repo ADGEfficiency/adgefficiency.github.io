@@ -6,7 +6,7 @@ categories:
 excerpt: A fundamental concept in business and energy.
 
 ---
-This is a basic concept in both business and energy engineering. Unfortunately this doesn't stop experienced energy professionals from misunderstanding it.
+Fixed and variable costs are basic concepts in business and energy engineering. Unfortunately this doesn't stop experienced energy professionals from misuing them.
 
 I once worked on a project looking at the feasibility of a Combined Heat & Power (CHP) plant at a pharmaceuticals site. Previously two consultants had looked at the site and concluded that a 2 MWe gas engine would be an economic project. We expected that good CHP projects would have payback periods of five to six years. These two consultants had modelled a payback below two years!
 
