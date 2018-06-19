@@ -9,10 +9,10 @@ excerpt: Return temperatures are a major problem in district heating - do you kn
 
 High return temperatures are a major problem in district heating (DH) networks.  High return temperatures mean
 
-1. Increased flow rate of water pumped around the network.
-2. Lowered capacity of the network to deliver heat.
-3. Increased heat losses.
-4. Decreased heat recovery from gas engines and biomass boilers.
+1. Increased flow rate of water pumped around the network
+2. Lowered capacity of the network to deliver heat
+3. Increased heat losses
+4. Decreased heat recovery from gas engines and biomass boilers
 
 Figure 1 shows a simple flow diagram for a district heating network.  The system delivers heat to the building heating system via a heat exchanger.  Hot water is pumped around the district heating network and then returned to the energy centre for heating.
 
