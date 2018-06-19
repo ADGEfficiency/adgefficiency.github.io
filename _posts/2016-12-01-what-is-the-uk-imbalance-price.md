@@ -12,7 +12,7 @@ This post is the start of a series applying machine learning to solving an energ
 - Introduction - [What is the Imbalance Price](http://adgefficiency.com/what-is-the-uk-imbalance-price/)
 - Getting Data - [Scraping the ELEXON API](http://adgefficiency.com/elexon-api-web-scraping-using-python/)
 
-## what is the Imbalance Price?
+## what is the imbalance price?
 
 The Imbalance Price is the price of electricity that generators or suppliers pay for imbalance on the UK electricity grid.
 
