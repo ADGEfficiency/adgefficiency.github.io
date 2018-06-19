@@ -1,9 +1,10 @@
 ---
 title: 'Q = m Cp dT'
 date: 2016-10-31
-author: Adam Green
 categories:
   - Energy Basics
+excerpt: A fundamental equation in energy engineering.
+
 ---
 Heat transfer is a fundamental energy engineering operation.  Hot water loops are commonly used to transfer heat in district heating networks and on industrial sites.  
 
