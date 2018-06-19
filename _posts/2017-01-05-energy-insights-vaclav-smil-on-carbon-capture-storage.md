@@ -1,13 +1,10 @@
 ---
-id: 370
 title: 'Vaclav Smil on Carbon Capture & Storage'
-date: 2017-01-05T19:43:52+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=370
-permalink: /energy-insights-vaclav-smil-on-carbon-capture-storage/
+date: 2017-01-05
 categories:
   - Energy Insights
+excerpt: Two insights from the excellent Vaclav Smil.
+
 ---
 This post is from the excellent book <a href="https://www.amazon.com/Energy-Myths-Realities-Bringing-Science/dp/0844743283" data-cke-saved-href="https://www.amazon.com/Energy-Myths-Realities-Bringing-Science/dp/0844743283">Energy Myths and Realities: Bringing Science to the Energy Policy Debate</a> by Vaclav Smil.
 
