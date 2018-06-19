@@ -4,6 +4,7 @@ date: 2017-12-27
 categories:
   - Energy Insights
 classes: wide
+excerpt: Whats going on with energy storage?
 
 ---
 
