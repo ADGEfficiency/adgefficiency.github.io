@@ -4,6 +4,8 @@ date: 2016-11-04
 author: Adam Green
 categories:
   - Productivity
+excerpts: Confessions of a former spreadsheet monkey.
+
 ---
 
 **Navigation**
