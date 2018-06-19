@@ -11,7 +11,7 @@ This Energy Insights post highlights some of the key points from the [2016 IEA W
 
 > Middle East oil production at a maximum of last 40 years (35% of global production)
 
-Middle East output is at a historical high due to:
+Middle East output is at a historical high due to
 
   * A period of relative calm with countries like Iraq producing oil.
   * A low price of oil incentivising oil producers to maximize output to maintain cash flow.
