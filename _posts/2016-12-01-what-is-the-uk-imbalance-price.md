@@ -1,13 +1,9 @@
 ---
-id: 204
 title: What is the UK Imbalance Price?
-date: 2016-12-01T12:56:08+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=204
-permalink: /what-is-the-uk-imbalance-price/
+date: 2016-12-01
 categories:
   - Electricity Price Forecasting
+excerpt: Introducing the UK imbalance price.
 
 ---
 
@@ -16,7 +12,7 @@ This post is the start of a series applying machine learning to solving an energ
 - Introduction - [What is the Imbalance Price](http://adgefficiency.com/what-is-the-uk-imbalance-price/)
 - Getting Data - [Scraping the ELEXON API](http://adgefficiency.com/elexon-api-web-scraping-using-python/)
 
-### What is the Imbalance Price?
+## what is the Imbalance Price?
 
 The Imbalance Price is the price of electricity that generators or suppliers pay for imbalance on the UK electricity grid.
 
@@ -38,12 +34,12 @@ A supplier may underestimate their customers demand.  A power plant might face a
 
 ELEXON uses the costs that National Grid incurs in correcting imbalance to calculate the Imbalance Price.  This is then used to charge Parties for being out of balance with their contracts. ELEXON details the process for the [calculation of the Imbalance Price here](https://www.elexon.co.uk/reference/credit-pricing/imbalance-pricing/).
 
-### What data is available?
+## what data is available?
 
 A key reason behind the stunning success of modern supervised machine learning is the [availability of training data](http://adgefficiency.com/machine-learning-in-energy-part-one/).  Understanding how to apply supervised machine learning depends on what data is available.  
 
 Data for the UK grid is available through the [ELEXON API](https://www.elexon.co.uk/change/new-balancing-mechanism-reporting-service-bmrs/).  
 
-### Next steps
+## next steps
 
 [The next post in this series develops the Python code to scrape data from the ELEXON API](http://adgefficiency.com/elexon-api-web-scraping-using-python/).
