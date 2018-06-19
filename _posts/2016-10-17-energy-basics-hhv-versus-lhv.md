@@ -3,6 +3,8 @@ title: 'HHV vs LHV - GCV vs NCV'
 date: 2016-10-17
 categories:
   - Energy Basics
+excerpt: Explaining the conventions for quantifying the heat of combustion. 
+
 ---
 
 A British engineer argues with a European engineer about what to assume for a gas boiler efficiency.
