@@ -4,6 +4,7 @@ date: 2017-11-18
 categories:
   - Energy Insights
 classes: wide
+excerpt: Not all technology trends apply to energy 
 
 ---
 
