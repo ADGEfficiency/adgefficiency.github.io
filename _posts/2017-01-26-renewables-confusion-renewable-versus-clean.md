@@ -1,5 +1,5 @@
 ---
-title: 'How clean and renewable are wind and solar?'
+title: 'How Clean and Renewable are Wind and Solar?'
 date: 2017-01-26
 author: Adam Green
 categories:
@@ -8,13 +8,13 @@ excerpt: How clean are wind and solar really?
 
 ---
 
-This post takes a look at how wind and solar perform in two important environmental dimensions - renewable and clean.
+This post looks at how wind and solar perform in two important environmental dimensions - renewable and clean.
 
-## Renewable versus clean
+## renewable versus clean
 
-Renewable and clean can have different meanings - here I define:
+Lets start with some definitions
 - renewable = not depleting a natural resource
-- clean = not contributing to negative environmental effects such as climate change, poisoning of rivers or loss of biodiversity.
+- clean = not contributing to negative environmental effects such as climate change, poisoning of rivers or loss of biodiversity
 
 There’s a third dimension we could look at here – sustainability. Sustainability is meeting the needs of the today without compromising the ability of future generations to meet their own needs.
 
@@ -22,9 +22,9 @@ While I like the idea of sustainability actually understanding it is difficult. 
 
 Now let’s look solar and wind in the context of the definitions above. We will take a look at both the operation and manufacture of wind and solar.
 
-### Solar
+## solar
 
-Operating solar plants uses the sun for fuel and water to wash panels. Both are renewable and the use of the sun as a fuel is clean.
+Operating solar plants uses the sun for fuel and water to wash panels. Both are renewable (water might not be in some areas!) and the use of the sun as a fuel is clean.
 
 The negative environmental effects of generating water for panel cleaning are site specific. Best practice for generating this water will most likely have minimal environmental impact. The operation of solar panels is therefore renewable and clean.
 
@@ -36,7 +36,7 @@ Solar panel manufacture uses rare earth elements such as silver, tellurium or in
 
 The use of carbon-intense electricity will solar panel manufacture unclean. While this may change in the future with high levels of renewables penetration it’s not the case today – and probably won’t be for a long time.
 
-###  Wind
+## wind
 
 Operation of wind plants appears renewable. Yet Vaclav Smil notes in his excellent book Energy Myths and Realities: Bringing Science to the Energy Policy Debate:
 
@@ -59,7 +59,7 @@ CaCO<sub>3</sub> → CaO + CO<sub>2</sub>
 
 In both reactions above carbon dioxide is produced. Not only is wind turbine manufacture non-renewable it is also inherently unclean.
 
-## What does this actually mean?
+## what does this actually mean?
 
 All energy generation technologies have their problems.
 
