@@ -3,7 +3,7 @@ title: 'Inertia in electricity systems'
 date: 2017-09-22
 categories:
   - Energy Basics
-classes: wide
+excerpt: Inertia is a common criticism of the energy transition - is it valid?
 
 ---
 

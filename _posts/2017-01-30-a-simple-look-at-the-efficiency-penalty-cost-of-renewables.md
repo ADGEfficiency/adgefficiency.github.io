@@ -8,9 +8,9 @@ excerpt: Can a fossil fuel efficiency penalty offset the benefits of renewables?
 
 ---
 
-This article is a response to [Wind Integration vs. Air Emission Reductions: A Primer for Policymakers](https://www.masterresource.org/integrationfirming/wind-integration-and-emissions/), which claims the efficiency penalty of turning down fossil fuel power stations offsets the benefit of renewable power generation.  This post details some simple modelling to determine if this is true.
+This post is a response to [Wind Integration vs. Air Emission Reductions: A Primer for Policymakers](https://www.masterresource.org/integrationfirming/wind-integration-and-emissions/), which claims the efficiency penalty of turning down fossil fuel power stations offsets the benefit of renewable power generation.  I did some simple modelling to see if this is true.
 
-Renewable power generation brings a carbon benefit by avoiding fossil fuel generation.  Most generation (machines in general) is designed for optimum efficiency at maximum (or near maximum) load.  Operation of the machine above or below the optimum load will incurr an efficiency penatly.
+The carbon benefit of renewables arises from avoiding burning fossil fuels.  Most generation (machines in general) is designed for optimum efficiency at maximum (or near maximum) load.  Operation of the machine above or below the optimum load will incurr an efficiency penatly.  This applies to fossil fuel generation such as coal boilers and gas turbines. 
 
 Below I look at what the breakeven efficiency penalty would be to offset the benefit of renewable generation  
 - total electricity demand of 1 GW
@@ -29,8 +29,6 @@ The real question is what is the actual relationship between fossil fuel power s
 
 Is it is useful to know that this is a carbon penalty we could be paying somewhere on the system as renewables penetration increases.  This penalty will net off some of the maximum benefit that renewable generation could supply.
 
-This comparision is between renewables and coal.  Because natural gas is cleaner than coal, a comparison with gas would be more in favour of renewables.  This is because a reduction in efficiency doesn't hurt as much.
-
-Permanently shutting down fossil fuel power stations means this effect doesn’t occur - so lets turn them off completely.
+This comparision is between renewables and coal.  Because natural gas is cleaner than coal, a comparison with gas would be more in favour of renewables - i.e. the negative effects of any efficiency penalty will be less.  Permanently shutting down fossil fuel power stations means this effect doesn’t occur - so lets turn them off completely.
 
 Thanks for reading!

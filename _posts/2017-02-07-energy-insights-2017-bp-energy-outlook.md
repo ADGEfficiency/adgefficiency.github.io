@@ -1,11 +1,7 @@
 ---
-id: 600
 title: '2017 BP Energy Outlook'
-date: 2017-02-07T17:59:22+00:00
+date: 2017-02-07
 author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=600
-permalink: /energy-insights-2017-bp-energy-outlook/
 categories:
   - Energy Insights
 ---

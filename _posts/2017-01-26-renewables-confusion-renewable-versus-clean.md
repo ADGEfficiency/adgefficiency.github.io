@@ -8,7 +8,7 @@ excerpt: How clean are wind and solar really?
 
 ---
 
-This post looks at how wind and solar perform in two important environmental dimensions - renewable and clean.
+This post looks at how wind and solar perform in two important environmental dimensions. 
 
 ## renewable versus clean
 
@@ -18,7 +18,7 @@ Lets start with some definitions
 
 There’s a third dimension we could look at here – sustainability. Sustainability is meeting the needs of the today without compromising the ability of future generations to meet their own needs.
 
-While I like the idea of sustainability actually understanding it is difficult. What are the needs of today? Are our needs different from the needs of future generations?
+While I like the idea of sustainability applying it is difficult. What are the needs of today? Are our needs different from the needs of future generations?
 
 Now let’s look solar and wind in the context of the definitions above. We will take a look at both the operation and manufacture of wind and solar.
 

@@ -4,7 +4,7 @@ date: 2018-01-11
 categories:
   - Energy
 classes: wide
-excerpt: All is not well with the clean energy transition
+excerpt: All is not well with the energy transition
 
 ---
 **All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.

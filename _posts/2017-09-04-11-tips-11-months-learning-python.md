@@ -4,6 +4,7 @@ date: 2017-09-04
 categories:
   - Productivity
 classes: wide
+excerpt: I've been learning Python for around 11 months - it's been a wonderful journey! 
 
 ---
 I've been learning Python for around 11 months - it's been a wonderful journey! This post is a list of 11 things that I've learned along the way.

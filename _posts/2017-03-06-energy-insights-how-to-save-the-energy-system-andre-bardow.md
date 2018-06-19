@@ -1,7 +1,6 @@
 ---
 title: 'How to save the energy system - André Bardow'
 date: 2017-03-06
-author: Adam Green
 categories:
   - Energy Insights
 ---
