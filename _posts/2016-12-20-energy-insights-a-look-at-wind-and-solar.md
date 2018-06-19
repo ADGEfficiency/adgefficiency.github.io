@@ -1,13 +1,9 @@
 ---
-id: 314
 title: 'A Look at Wind and Solar'
-date: 2016-12-20T14:51:52+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=314
-permalink: /energy-insights-a-look-at-wind-and-solar/
+date: 2016-12-20
 categories:
   - Energy Insights
+excerpt: How far we've come and is there an upper limit?
 
 ---
 
