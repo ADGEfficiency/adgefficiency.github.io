@@ -4,7 +4,7 @@ date: 2018-02-25
 categories:
   - Energy Insights
 classes: wide
-excerpt: Jesse Jenkins highlights how to get to a zero carbon world
+excerpt: How do we get to a zero carbon world? 
 
 ---
 
