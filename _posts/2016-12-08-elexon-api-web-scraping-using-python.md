@@ -1,17 +1,11 @@
 ---
-id: 219
 title: Elexon API Web Scraping using Python
-date: 2016-12-08T12:33:33+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=219
-permalink: /elexon-api-web-scraping-using-python/
+date: 2016-12-08
 categories:
   - Electricity Price Forecasting
+excerpt: Code to scrape UK grid data using Python
 
 ---
-
-
 
 This post will show how to scrape UK Grid data from ELEXON using their API.  [If you just want to skip to the code - the script is here.](https://github.com/ADGEfficiency/electricity_price_forecasting/blob/master/elexon_data_scraping.py)  This worked is inspired by work from the [excellent Patrick Avis of the Energy Analyst](http://energyanalyst.co.uk/).  
 
