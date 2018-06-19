@@ -8,7 +8,7 @@ excerpt: Explaining the relationship between gas turbines and ambient temperatur
 ---
 Gas turbine power output increases when it is cold, and decreases when it is hot.  Being able to explain why is a great conversation starter at parties.  It's also something the energy engineer must account for when modelling gas turbines.
 
-To explain the relationship we need to link together a few insights:
+To explain the relationship we need to link together a few insights
 
 - A gas turbine is a fixed volume machine.  You can only squeeze a fixed volume of air through the compressor and turbine.
 - The density of air increases when it is cold.  Colder air means more mass of air in the same amount of volume.
@@ -21,6 +21,7 @@ When it gets hot the opposite effect occurs.  Power output decreases due to les
 Ambient temperature also has an affect on the compressor.  Colder air improves compressor efficiency.  This means the compressor consumes less power, leading to more power supplied to the generator.
 
 ![Figure 1]({{"/assets/gt_amb_temp/gt_amb_temp.png"}})
+
 **Figure 1 - Effect of ambient temperature on gas turbine performance**
 *Rahman et. al (2011) - Thermodynamic performance analysis of gas-turbine power-plant*
 
