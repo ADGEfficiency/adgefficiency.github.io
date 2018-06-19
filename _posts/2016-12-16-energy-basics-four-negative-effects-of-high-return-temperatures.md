@@ -9,14 +9,15 @@ excerpt: Return temperatures are a major problem in district heating - do you kn
 
 High return temperatures are a major problem in district heating (DH) networks.  High return temperatures mean
 
-- Increased flow rate of water pumped around the network.
-- Lowered capacity of the network to deliver heat.
-- Increased heat losses.
-- Decreased heat recovery from gas engines and biomass boilers.
+1. Increased flow rate of water pumped around the network.
+2. Lowered capacity of the network to deliver heat.
+3. Increased heat losses.
+4. Decreased heat recovery from gas engines and biomass boilers.
 
 Figure 1 shows a simple flow diagram for a district heating network.  The system delivers heat to the building heating system via a heat exchanger.  Hot water is pumped around the district heating network and then returned to the energy centre for heating.
 
 ![Figure 1]({{"/assets/return_temps/fig1.png"}})
+
 **Figure 1 – District heating system operating with a return temperature of 50 °C**
 
 ## increased flow rate of water pumped around the network
@@ -60,6 +61,7 @@ Gas engines operate with a low temperature hot water circuit.  This water circui
 Figure 2 shows that a network return temperature (85 °C) leads to us only being able to cool the engine circuit to 85 °C.  This limits heat recovery in the heat exchanger.
 
 ![Figure 2]({{"/assets/return_temps/fig2.png"}})
+
 **Figure 2 – Gas engine low temperature waste heat recovery with a high return temperature**
 
 It also forces us to use a dump radiator to cool the engine circuit to the 70 °C required by the engine.  If the scheme was not fitted with a dump radiator then the engine would be forced to reduce generation or shut down.
@@ -67,11 +69,13 @@ It also forces us to use a dump radiator to cool the engine circuit to the 70 °
 Figure 3 shows the temperature versus heat (T-Q) diagram for the heat exchanger when return temperature is low (50 °C).  Operating with a low return temperature means we recover a full 1 MW from the engine water circut.
 
 ![Figure 3]({{"/assets/return_temps/fig3.png"}})
+
 **Figure 3 – Heat recovery from engine with a low network return temperature (50 °C)**
 
 Now look what happens when return temperature is high (80 °C).  Figure 4 shows that we now only recover 400 kW of heat.
 
 ![Figure 4]({{"/assets/return_temps/fig4.png"}})
+
 **Figure 4 – Heat recovery from engine with a high network return temperature (80 °C)**
 
 Gas boilers will need to generate the additional 600 kW of heat required by the network.  This means increased gas consumption and carbon emissions.
@@ -85,6 +89,7 @@ High network return temperatures can occur for variety of reasons.  Most commonl
 A major issue is the use of bypasses.  Bypasses divert a small amount of the hot DH water being fed to a heat exchanger directly from the flow into the return.  Figure 5 shows a bypass increasing network return temperature from 80 to 95 °C.
 
 ![Figure 5]({{"/assets/return_temps/fig5.png"}})
+
 **Figure 5 – Bypass causing high return temperature**
 
 Bypasses are installed to maintain a minimum amount of flow across the network when demand for heat is low.  This prevents starving pumps at low heat demands.
