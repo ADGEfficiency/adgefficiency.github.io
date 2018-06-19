@@ -1,16 +1,13 @@
 ---
-id: 285
 title: 'Negative Effects of High Return Temperatures'
-date: 2016-12-16T11:12:55+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=285
-permalink: /energy-basics-four-negative-effects-of-high-return-temperatures/
+date: 2016-12-16
 categories:
   - Energy Basics
+excerpt: Return temperatures are a major problem in district heating - do you know why?
+
 ---
 
-High return temperatures are a major problem in district heating (DH) networks.  High return temperatures mean:
+High return temperatures are a major problem in district heating (DH) networks.  High return temperatures mean
 
 - Increased flow rate of water pumped around the network.
 - Lowered capacity of the network to deliver heat.
