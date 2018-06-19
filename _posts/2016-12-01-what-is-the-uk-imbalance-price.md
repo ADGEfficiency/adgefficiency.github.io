@@ -3,7 +3,7 @@ title: What is the UK Imbalance Price?
 date: 2016-12-01
 categories:
   - Electricity Price Forecasting
-excerpt: Introducing the UK imbalance price.
+excerpt: 
 
 ---
 
