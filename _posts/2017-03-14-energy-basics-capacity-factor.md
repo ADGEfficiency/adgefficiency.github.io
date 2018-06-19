@@ -4,6 +4,8 @@ date: 2017-03-14
 author: Adam Green
 categories:
   - Energy Basics
+
+except: It's not about how much capacity you have - it's how you use it.
 ---
 
 It's not how much capacity (MW) you have - it's how you use it (MWh).
@@ -20,7 +22,7 @@ Annual capacity factor = 10,000 kWh / 2 kW * 8760 hrs = 57 %
 
 Three reasons why capacity will not generate at full output are maintenance, unavailability of fuel and economics.
 
-## Maintenance
+## maintenance
 
 Burning fossil fuels creates a challenging engineering environment. The core of a gas turbine is high pressure & temperature gases rapidly rotating blazing hot metal. Coal power stations generate electricity by high pressure steam forcing a steam turbine to spin incredibly fast.
 
@@ -28,7 +30,7 @@ These challenges lead to fossil fuel plants needing a lot of maintenance. The ti
 
 Renewables plants require less maintenance than a fossil fuel generator. No combustion means there is less thermal and mechanical stress on equipment.
 
-## Availability of fuel
+## availability of fuel
 
 Renewables come ahead in terms of maintenance, but they fall behind due to a constraint that fossil fuel generation doesn’t suffer from – availability of fuel.
 
@@ -36,7 +38,7 @@ Wind & solar are intermittent generators. Solar panels can’t generate at night
 
 Wind & solar are often not generating at full capacity – or even to generate at all. This problem isn’t common for fossil fuel generation. Fossil fuels are almost always available through natural gas grids or on site coal storage. Nuclear also rarely suffers from unavailable fuel.
 
-## Economics
+## economics
 
 The final reason for capacity to not generate is economics.
 
@@ -44,7 +46,7 @@ The relative price of fuel and electricity change how fossil fuel capacity is di
 
 Here renewables come out way ahead of fossil fuels. As renewable fuel is free renewables can generate electricity at a lower marginal cost than fossil fuels. Wind & solar almost always take priority over fossil fuel generation.
 
-## Typical capacity factors
+## typical capacity factors
 
 The capacity factor wraps up and quantifies all of the factors discussed above.  Table 1 gives us quite a bit of insight into the relative value of different electricity generating technologies. The capacity factor for natural gas is roughly twice as high as solar PV.
 
@@ -56,7 +58,7 @@ We could conclude that 1 MW of natural gas capacity is worth around twice as muc
 |---|
 |Annual Capacity Factor|	56%|	53%|	33%|	26%|	92%|
 
-## How useful is the capacity factor?
+## how useful is the capacity factor?
 
 The capacity factor is not a perfect measurement. Taking the average of anything loses information – capacity factor is no different.
 

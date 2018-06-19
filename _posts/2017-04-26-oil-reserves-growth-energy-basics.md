@@ -3,6 +3,8 @@ title: 'Oil Reserves Growth'
 date: 2017-04-26
 categories:
   - Energy Basics
+excerpt: The more oil we burn, the more oil reserves we have.
+
 ---
 
 The more oil we burn the more that oil reserves grow.  This unituitive phenomenon occurs for three reasons - geology,
