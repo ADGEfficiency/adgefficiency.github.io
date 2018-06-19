@@ -19,7 +19,7 @@ ELEXON provides technical data such as generation, along with market volumes and
 
 Accessing data requires an API key, [available by setting up a free Elexon account](https://www.elexonportal.co.uk/registration/newuser).  The API is accessed by passing a URL with the API key and report parameters.  The API will return either an XML or a CSV document.
 
-## Scraping the ELEXON API
+## scraping the ELEXON API
 
 The functionality to scrape ELEXON data is held within a Python script `elexon_data_scraping.py`.  This script is located in the [GitHub repo for the electricity price forecasting project](https://github.com/ADGEfficiency/electricity_price_forecasting/blob/master/elexon_data_scraping.py).
 
@@ -43,7 +43,7 @@ all_reports = pd.concat(dataframes, axis=1)
 
 A simple example of using the ReportGrabber class:
 
-{% highlight python %}
+```python
 #  start python in interactive mode
 $ python -i elexon_data_scraping.py --key 'YOUR_API_KEY'
 
@@ -64,8 +64,6 @@ scraping B1770 2017-01-01
 2017-01-01 01:30:00                 40.24737
 2017-01-01 02:00:00                 40.05000
 2017-01-01 02:30:00                 40.01602
-{% endhighlight %}
-
-
+```
 
 Thanks for reading!
