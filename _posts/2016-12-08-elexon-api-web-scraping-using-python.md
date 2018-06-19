@@ -6,13 +6,14 @@ categories:
 excerpt: Code to scrape UK grid data using Python
 
 ---
-
-This post will show how to scrape UK Grid data from ELEXON using their API.  [If you just want to skip to the code - the script is here.](https://github.com/ADGEfficiency/electricity_price_forecasting/blob/master/elexon_data_scraping.py)  This worked is inspired by work from the [excellent Patrick Avis of the Energy Analyst](http://energyanalyst.co.uk/).  
-
 This post is the second in a series applying machine learning techniques to an energy problem.  The goal of this series is to develop models to forecast the UK Imbalance Price.  
 
 - Introduction - [What is the Imbalance Price](http://adgefficiency.com/what-is-the-uk-imbalance-price/)
 - Getting Data - [Scraping the ELEXON API](http://adgefficiency.com/elexon-api-web-scraping-using-python/)
+
+---
+
+This post shows how to scrape UK Grid data using the ELEXON API.  [If you just want to skip to the code - the script is here.](https://github.com/ADGEfficiency/electricity_price_forecasting/blob/master/elexon_data_scraping.py)  This worked is inspired by work from the [excellent Patrick Avis of the Energy Analyst](http://energyanalyst.co.uk/).  
 
 ELEXON provides technical data such as generation, along with market volumes and prices. A full detail of available data is given in the [Elexon API guide](https://www.elexon.co.uk/guidance-note/bmrs-api-data-push-user-guide/).
 
