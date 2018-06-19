@@ -7,7 +7,7 @@ excerpt: How far we've come and is there an upper limit?
 
 ---
 
-This Energy Insights post covers a series of two articles from the Breakthrough Institute.  [Part One – How Far We’ve Come](https://thebreakthrough.org/index.php/voices/energetics/wind-and-solar-how-far-weve-come) looks at the history of renewables.  [Part Two – Is There An Upper Limit To Intermittent Renewables?](https://thebreakthrough.org/index.php/voices/energetics/a-look-at-wind-and-solar-part-2) looks at what the future might hold for renewables.
+This Energy Insights covers two articles from the Breakthrough Institute.  [Part One – How Far We’ve Come](https://thebreakthrough.org/index.php/voices/energetics/wind-and-solar-how-far-weve-come) looks at the history of renewables.  [Part Two – Is There An Upper Limit To Intermittent Renewables?](https://thebreakthrough.org/index.php/voices/energetics/a-look-at-wind-and-solar-part-2) looks at what the future might hold for renewables.
 
 ### Part One – How Far We’ve Come
 
