@@ -1,13 +1,9 @@
 ---
-id: 231
 title: 'Gas Turbines and Ambient Temperature'
-date: 2016-12-08T19:31:40+00:00
-author: Adam Green
-layout: post
-guid: http://adgefficiency.com/?p=231
-permalink: /energy-basics-ambient-temperature-impact-on-gas-turbine-performance/
+date: 2016-12-08
 categories:
   - Energy Basics
+excerpt: Explaining the relationship between gas turbines and ambient temperature.
 
 ---
 Gas turbine power output increases when it is cold, and decreases when it is hot.  Being able to explain why is a great conversation starter at parties.  It's also something the energy engineer must account for when modelling gas turbines.
