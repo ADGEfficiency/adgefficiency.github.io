@@ -4,7 +4,7 @@ date: 2018-01-11
 categories:
   - Energy
 classes: wide
-excerpt: All is not well with the energy transition
+excerpt: All is not well with the energy transition...
 
 ---
 **All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.
@@ -17,7 +17,7 @@ I’m not arguing against the need for the clean energy transition. I’m trying
 
 The primary source for these ideas is Vaclav Smil's excellent work on energy transitions ([book](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), [lecture](https://www.youtube.com/watch?v=5guXaWwQpe4) and [another lecture](https://www.youtube.com/watch?v=NxO3s0U5WdY)).  Smil is my favorite energy writer; prolific, confidentially numeric and intelligently contrarian. Smil’s work is for me the best on energy ever written.  I've also previously written about [Smil's work on carbon capture and storage](http://adgefficiency.com/energy-insights-vaclav-smil-on-carbon-capture-storage/).
 
-### The Four Inconvenient Truths of Energy Transitions
+## The Four Inconvenient Truths of Energy Transitions
 
 Energy transitions drive the development of civilization. Muscle and wood powered our early days; today we use coal and gas to drive turbines, oil to enable global transportation and can harness the nuclear energy of celestial bodies.  Now we are moving toward clean and smart technologies; wind turbines, solar panels, energy storage and data driven optimization.
 
@@ -35,7 +35,7 @@ And one in which the clean energy transition is departing from previous transiti
 
 #### energy transitions enable **new utility**
 
-### The First Inconvenient Truth - Energy transitions are slow
+## The First Inconvenient Truth - Energy transitions are slow
 
 In [Energy Transitions: History, Requirements, Prospects](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), Vaclav Smil notes each subsequent transition takes longer than the last.  To move from 5% to 25% of global primary energy consumption, coal took 35 years, oil 40 years and finally natural gas took 55 years.
 
@@ -47,7 +47,7 @@ The clean energy transition is full of technical challenges. Clean energy genera
 
 *What this means for the clean energy transition - it’s going to take a long time.*
 
-### The Second Inconvenient Truth - Energy transitions are additive
+## The Second Inconvenient Truth - Energy transitions are additive
 
 **Of the Four Truths, this is the most inconvenient**. Each transition increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. **Older fuels take a long time to go away**. We are still building coal-fired generation today and are recklessly likely to for a long time.
 
@@ -64,7 +64,7 @@ Diesel generators (an 1890’s technology) are a great example of this. Diesel g
 
 *What this means for the clean energy transition -fossil fuels aren’t going away.*
 
-### The Third Inconvenient Truth - Energy transitions are sequential and high variance
+## The Third Inconvenient Truth - Energy transitions are sequential and high variance
 
 Smil notes that energy transitions require a "specific sequence of scientific advances, technical innovations and organizational actions" combined with "economic, political and strategic circumstances”.
 
@@ -76,7 +76,7 @@ For example, without the correct alignment of incentives through rate structures
 
 *What this means for the clean energy transition - there is no guarantee things will move in the correct way.*
 
-### The Fourth Inconvenient Truth - Energy transitions enable new utility
+## The Fourth Inconvenient Truth - Energy transitions enable new utility
 
 The first three truths are ways in which this clean transition will be like the past. This final truth is a reality of the clean energy transition that moves against the past.
 
@@ -98,7 +98,7 @@ One hope is the role that inverter based renewables & storage can play supportin
 
 Thanks for reading.
 
-### References and further reading
+## References and further reading
 
 [Energy Transitions: History, Requirements, Prospects (Smil 2010)](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771)
 
