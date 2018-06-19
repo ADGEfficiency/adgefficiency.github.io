@@ -4,7 +4,7 @@ date: 2018-02-25
 categories:
   - Energy Insights
 classes: wide
-excerpt: Four insights of the energy transition from Jesse Jenkins
+excerpt: Jesse Jenkins highlights how to get to a zero carbon world
 
 ---
 
