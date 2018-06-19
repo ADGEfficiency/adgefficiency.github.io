@@ -23,25 +23,26 @@ Accessing data requires an API key, [available by setting up a free Elexon accou
 
 The functionality to scrape ELEXON data is held within a Python script `elexon_data_scraping.py`.  This script is located in the [GitHub repo for the electricity price forecasting project](https://github.com/ADGEfficiency/electricity_price_forecasting/blob/master/elexon_data_scraping.py).
 
-I make use of the argparse library to send the API key into the script:
-{% highlight bash %}
+I make use of the argparse library to send the API key into the script
+
+```bash
 $ cd electricity_price_forecasting
 $ python elexon_data_scraping.py --key 'YOUR_API_KEY'
-{% endhighlight %}
+```
 
 A class ReportGrabber uses the `requests` library to get the XML response from the ELEXON API.  The `xml` library is used to process and parse the XML object for the data we want into a dictionary.  
 
-We then make use of `pandas` to create dataframes:
-{% highlight python %}
+We then make use of `pandas` to create dataframes
+
+```python
 #  to join data across multiple days (single report)
 all_dates = pd.concat(dataframes, axis=0)
 
 #  to join data across multiple reports
 all_reports = pd.concat(dataframes, axis=1)
+```
 
-{% endhighlight %}
-
-A simple example of using the ReportGrabber class:
+A simple example of using the ReportGrabber class
 
 ```python
 #  start python in interactive mode
