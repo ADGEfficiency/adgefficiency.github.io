@@ -19,9 +19,7 @@ Figure 1 shows a simple flow diagram for a district heating network.  The system
 ![Figure 1]({{"/assets/return_temps/fig1.png"}})
 **Figure 1 – District heating system operating with a return temperature of 50 °C**
 
-What then are the four negative impacts of a high return temperature?
-
-### Increased flow rate of water pumped around the network
+## increased flow rate of water pumped around the network
 
 Most district heating networks operate with a fixed flow temperature. This is set by the temperature of the water generated in boilers or CHP plants.
 
@@ -29,7 +27,7 @@ A high return temperature means that the temperature difference across the netwo
 
 Pumping more water means more electricity consumed by the pumps. This means increased electricity cost and carbon emissions from the scheme.
 
-### Lowered capacity of the network to deliver heat
+## lowered capacity of the network to deliver heat
 
 Pipe sizes limit the capacity of a district heating network to deliver water.
 
@@ -37,7 +35,7 @@ At peak flow rate a small temperature difference means we can deliver much less 
 
 A larger temperature difference means we may be able to avoid installing new pipework (and the associated capital cost!) as our network expands.  Design of new networks with large temperature differences would mean smaller pipes. Smaller pipes means less capital cost and lower heat losses.
 
-### Increased heat losses
+## increased heat losses
 
 Heat losses are a function of the pipe surface area and the difference in temperature between the pipe and ambient. A higher return temperature means more heat losses in the return pipes.
 
@@ -45,7 +43,7 @@ Heat losses are a drawback of DH schemes versus local gas boilers. DH schemes lo
 
 Increased heat losses means more heat generation required in the energy centre. This means higher gas consumption and carbon emissions.
 
-### Decreased heat recovery from gas engines and biomass boilers
+## decreased heat recovery from gas engines and biomass boilers
 
 District heating schemes bring a net benefit to customers and the environment by the use of low carbon generation in the energy centre.
 
@@ -80,7 +78,7 @@ Gas boilers will need to generate the additional 600 kW of heat required by the 
 
 The same principle applies to the recovery of heat from higher temperature sources such as gas engine exhaust or biomass boiler combustion products.  A high DH return temperature will limit heat recovery.
 
-### Why do high return temperatures occur?
+## why do high return temperatures occur?
 
 High network return temperatures can occur for variety of reasons.  Most commonly it is due to heating systems designed for local gas boilers connected to DH networks.
 
