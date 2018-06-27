@@ -27,7 +27,6 @@ Two massive contributions to the world - the Linux kernel and Git.
 **importance of specalization** 
 
 **the value of iteration**
-> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking       
 
 **an anti-visionary**
 
