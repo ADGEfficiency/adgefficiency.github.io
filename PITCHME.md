@@ -2,10 +2,6 @@
 
 ---
 
-### common to all mentors
-
----
-
 ### a few great ideas 
 
 ---
@@ -20,7 +16,7 @@
 
 ### Linus Torvalds
 
-![fig]({{ "/assets/mentors/linus.jpg"}}) 
+![fig]({{ "/assets/mentors/linus.jpg" }}) 
 
 Two massive contributions to the world - the Linux kernel and Git. 
 
