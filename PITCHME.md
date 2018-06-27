@@ -14,9 +14,11 @@
 
 ---
 
-### Linus Torvalds
-
 ![fig](/assets/mentors/linus.jpg) 
+
+---
+
+### Linus Torvalds
 
 The Linux kernel and Git. 
 
@@ -28,9 +30,11 @@ The Linux kernel and Git.
 
 ---
 
-### Jeff Bezos
-
 ![](/assets/mentors/bezos.jpeg) 
+
+---
+
+### Jeff Bezos
 
 The founder and CEO of Amazon.
 
@@ -44,9 +48,11 @@ The founder and CEO of Amazon.
 
 ---
 
-### Ray Dalio
+![](/assets/mentors/dalio.jpeg) 
 
-![]({{ "/assets/mentors/dalio.jpeg"}}) 
+---
+
+### Ray Dalio
 
 The founder Bridgewater Associates, one of the world's largest hedge funds.
 
@@ -66,9 +72,11 @@ The founder Bridgewater Associates, one of the world's largest hedge funds.
 
 ---
 
+![](/assets/mentors/musk.jpeg) 
+
+---
 ### Elon Musk
 
-![]({{ "/assets/mentors/musk.jpeg"}}) 
 
 Founder and CEO of SpaceX and Tesla.
 
@@ -86,11 +94,13 @@ Founder and CEO of SpaceX and Tesla.
 
 ---
 
+![](/assets/mentors/jobs.jpeg) 
+
+---
+
 ### Steve Jobs
 
 Founder and CEO of Apple.
-
-![]({{ "/assets/mentors/jobs.jpeg"}}) 
 
 **admit mistakes and adjust**
 
@@ -102,20 +112,26 @@ Founder and CEO of Apple.
 
 ---
 
+![](/assets/mentors/jackd.jpeg) 
+
+---
+
 ### Jack Diederich
 
 A Python core developer.
-
-![]({{ "/assets/mentors/jackd.jpeg"}}) 
 
 **job is hard enough without trying to clever up the place**
 
 **don't give advice with always and nevers**
 
+---
+
+![](/assets/mentors/raymond.jpeg) 
+
+---
+
 ### Raymond Hettinger
 A Python core developer.
-
-![]({{ "/assets/mentors/raymond.jpeg"}}) 
 
 **there must be a better way**
 
