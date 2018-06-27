@@ -101,7 +101,7 @@
 
 ---
 
-![](/assets/mentors/jackd.jpeg) 
+![](/assets/mentors/jackd.jpg) 
 
 ---
 
@@ -113,7 +113,7 @@
 
 ---
 
-![](/assets/mentors/raymond.jpeg) 
+![](/assets/mentors/raymond.jpg) 
 
 ---
 
