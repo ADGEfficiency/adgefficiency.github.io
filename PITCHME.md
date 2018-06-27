@@ -16,7 +16,7 @@
 
 ### Linus Torvalds
 
-![fig]({{ "/assets/mentors/linus.jpg" }}) 
+![fig]({{ './assets/mentors/linus.jpg' }}) 
 
 Two massive contributions to the world - the Linux kernel and Git. 
 
@@ -75,7 +75,6 @@ Founder and CEO of SpaceX and Tesla.
 **cost optimization occurs in two ways**
 
 **probabilistic thinking**
-> ...things will most likely be ok for a long time on earth... not for sure but most likely
 
 **first principles thinking**
 
