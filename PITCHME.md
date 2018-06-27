@@ -10,6 +10,10 @@
 
 ---
 
+### take risk when there is less risk 
+
+---
+
 ### the power of repetition, iteration and experimentation
 
 ---
@@ -56,11 +60,13 @@
 
 **universal laws are the best way to understand systems**
 
+---
+
+### Ray Dalio
+
 **evolution, growth and learning**
 
 **transparency and open mindedness enhances the learning feedback loop**
-
-**evolution is the most powerful force in the universe**
 
 **when you disagree with someone, say their opinion back to them and see if they agree**
 
@@ -76,8 +82,6 @@
 **probabilistic thinking**
 
 **first principles thinking**
-
-**be less risk averse when there is less risk**
 
 **the goal of SpaceX is the preservation of conciousness**
 
