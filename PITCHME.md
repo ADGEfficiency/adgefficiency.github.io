@@ -66,7 +66,7 @@
 
 **evolution, growth and learning**
 
-**transparency and open mindedness enhances the learning feedback loop**
+**transparency and open mindedness**
 
 **when you disagree with someone, say their opinion back to them and see if they agree**
 
