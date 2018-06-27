@@ -20,8 +20,6 @@
 
 ### Linus Torvalds
 
-The Linux kernel and Git. 
-
 **importance of specalization** 
 
 **the value of iteration**
@@ -35,8 +33,6 @@ The Linux kernel and Git.
 ---
 
 ### Jeff Bezos
-
-The founder and CEO of Amazon.
 
 **innovation requires experimentation**
 
@@ -53,8 +49,6 @@ The founder and CEO of Amazon.
 ---
 
 ### Ray Dalio
-
-The founder Bridgewater Associates, one of the world's largest hedge funds.
 
 **meaningful work & meaningful relationships**
 
@@ -77,9 +71,6 @@ The founder Bridgewater Associates, one of the world's largest hedge funds.
 ---
 ### Elon Musk
 
-
-Founder and CEO of SpaceX and Tesla.
-
 **cost optimization occurs in two ways**
 
 **probabilistic thinking**
@@ -100,8 +91,6 @@ Founder and CEO of SpaceX and Tesla.
 
 ### Steve Jobs
 
-Founder and CEO of Apple.
-
 **admit mistakes and adjust**
 
 **simplicity**
@@ -118,8 +107,6 @@ Founder and CEO of Apple.
 
 ### Jack Diederich
 
-A Python core developer.
-
 **job is hard enough without trying to clever up the place**
 
 **don't give advice with always and nevers**
@@ -131,7 +118,6 @@ A Python core developer.
 ---
 
 ### Raymond Hettinger
-A Python core developer.
 
 **there must be a better way**
 
