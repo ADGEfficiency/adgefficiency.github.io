@@ -18,7 +18,7 @@
 
 ---
 
-![](/assets/mentors/bezos.png) 
+![](/assets/mentors/bezos.jpg) 
 
 ---
 
