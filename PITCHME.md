@@ -66,7 +66,7 @@
 
 ---
 
-![](/assets/mentors/musk.jpeg) 
+![](/assets/mentors/musk.jpg) 
 
 ---
 ### Elon Musk
