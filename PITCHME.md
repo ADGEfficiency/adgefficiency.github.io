@@ -24,13 +24,13 @@
 
 ### Jeff Bezos
 
-**innovation requires experimentation**
+innovation requires experimentation
 
-**focus on what won't change**
+focus on what won't change
 
-**customer focus**
+customer focus
 
-**long term focus**
+long term focus
 
 ---
 
@@ -40,11 +40,11 @@
 
 ### Linus Torvalds
 
-**importance of specalization** 
+importance of specalization
 
-**the value of iteration**
+the value of iteration
 
-**an anti-visionary**
+an anti-visionary
 
 ---
 
@@ -54,21 +54,21 @@
 
 ### Ray Dalio
 
-**meaningful work & meaningful relationships**
+meaningful work & meaningful relationships
 
-**first, second and third order consequences**
+first, second and third order consequences
 
-**universal laws are the best way to understand systems**
+universal laws are the best way to understand systems
 
 ---
 
 ### Ray Dalio
 
-**evolution, growth and learning**
+evolution, growth and learning
 
-**transparency and open mindedness**
+transparency and open mindedness
 
-**when you disagree with someone, say their opinion back to them and see if they agree**
+when you disagree with someone, say their opinion back to them and see if they agree
 
 ---
 
@@ -77,13 +77,13 @@
 ---
 ### Elon Musk
 
-**cost optimization occurs in two ways**
+cost optimization occurs in two ways
 
-**probabilistic thinking**
+probabilistic thinking
 
-**first principles thinking**
+first principles thinking
 
-**the goal of SpaceX is the preservation of conciousness**
+the goal of SpaceX is the preservation of conciousness
 
 ---
 
@@ -93,13 +93,13 @@
 
 ### Steve Jobs
 
-**admit mistakes and adjust**
+admit mistakes and adjust
 
-**simplicity**
+simplicity
 
-**focusing is about saying no**
+focusing is about saying no
 
-**everything was made by people no smarter than you are**
+everything was made by people no smarter than you are
 
 ---
 
@@ -109,9 +109,9 @@
 
 ### Jack Diederich
 
-**job is hard enough without trying to clever up the place**
+job is hard enough without trying to clever up the place
 
-**don't give advice with always and nevers**
+don't give advice with always and nevers
 
 ---
 
@@ -121,7 +121,7 @@
 
 ### Raymond Hettinger
 
-**there must be a better way**
+there must be a better way
 
 ---
 
