@@ -16,7 +16,7 @@
 
 ### Linus Torvalds
 
-![fig]({{ './assets/mentors/linus.jpg' }}) 
+![fig](/assets/mentors/linus.jpg) 
 
 The Linux kernel and Git. 
 
@@ -30,7 +30,7 @@ The Linux kernel and Git.
 
 ### Jeff Bezos
 
-![]({{ "/assets/mentors/bezos.jpeg"}}) 
+![](/assets/mentors/bezos.jpeg) 
 
 The founder and CEO of Amazon.
 
