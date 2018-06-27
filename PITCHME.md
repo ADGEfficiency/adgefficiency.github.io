@@ -81,8 +81,6 @@
 
 **the goal of SpaceX is the preservation of conciousness**
 
-**admitting mistakes**
-
 ---
 
 ![](/assets/mentors/jobs.jpeg) 
@@ -98,6 +96,8 @@
 **focusing is about saying no**
 
 **everything was made by people no smarter than you are**
+
+**be less risk averse when there is less risk**
 
 ---
 
@@ -123,4 +123,4 @@
 
 ---
 
-# Thank you
+thank you
