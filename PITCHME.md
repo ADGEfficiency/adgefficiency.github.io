@@ -30,7 +30,7 @@ The Linux kernel and Git.
 
 ---
 
-![](/assets/mentors/bezos.jpeg) 
+![](/assets/mentors/bezos.png) 
 
 ---
 
