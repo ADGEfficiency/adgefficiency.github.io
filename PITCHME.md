@@ -14,7 +14,7 @@
 
 ---
 
-### the power of repetition, iteration and experimentation
+### repetition, iteration and experimentation
 
 ---
 
@@ -87,7 +87,7 @@
 
 ---
 
-![](/assets/mentors/jobs.jpeg) 
+![](/assets/mentors/jobs.jpg) 
 
 ---
 
