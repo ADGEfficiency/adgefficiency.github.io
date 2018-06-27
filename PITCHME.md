@@ -18,7 +18,7 @@
 
 ![fig]({{ './assets/mentors/linus.jpg' }}) 
 
-Two massive contributions to the world - the Linux kernel and Git. 
+The Linux kernel and Git. 
 
 **importance of specalization** 
 
@@ -111,8 +111,6 @@ A Python core developer.
 **job is hard enough without trying to clever up the place**
 
 **don't give advice with always and nevers**
-- 'maybe you should try this' or 'what about this'
-- 'what would it look like' or 'have you thought of this?'
 
 ### Raymond Hettinger
 A Python core developer.
