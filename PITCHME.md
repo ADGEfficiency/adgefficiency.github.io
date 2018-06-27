@@ -44,7 +44,7 @@
 
 ---
 
-![](/assets/mentors/dalio.jpeg) 
+![](/assets/mentors/dalio.jpg) 
 
 ---
 
