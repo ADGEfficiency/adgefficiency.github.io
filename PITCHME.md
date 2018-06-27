@@ -18,20 +18,6 @@
 
 ---
 
-![fig](/assets/mentors/linus.jpg) 
-
----
-
-### Linus Torvalds
-
-**importance of specalization** 
-
-**the value of iteration**
-
-**an anti-visionary**
-
----
-
 ![](/assets/mentors/bezos.png) 
 
 ---
@@ -45,6 +31,20 @@
 **customer focus**
 
 **long term focus**
+
+---
+
+![fig](/assets/mentors/linus.jpg) 
+
+---
+
+### Linus Torvalds
+
+**importance of specalization** 
+
+**the value of iteration**
+
+**an anti-visionary**
 
 ---
 
@@ -100,8 +100,6 @@
 **focusing is about saying no**
 
 **everything was made by people no smarter than you are**
-
-**be less risk averse when there is less risk**
 
 ---
 
