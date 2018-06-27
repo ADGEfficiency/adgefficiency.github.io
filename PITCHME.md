@@ -2,9 +2,17 @@
 
 ---
 
+### common to all mentors
+
+---
+
 ### a few great ideas 
 
+---
+
 ### admit their mistakes
+
+---
 
 ### the power of repetition, iteration and experimentation
 
@@ -12,9 +20,9 @@
 
 ### Linus Torvalds
 
-![]({{ "/assets/mentors/linus.jpeg"}}) 
+![fig]({{ "/assets/mentors/linus.jpeg"}}) 
 
-Linux Torvals has made two massive contributions to the world - the Linux kernel and Git. 
+Two massive contributions to the world - the Linux kernel and Git. 
 
 **importance of specalization** 
 
