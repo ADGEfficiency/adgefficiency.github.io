@@ -5,7 +5,7 @@ categories:
   - Machine Learning
   - Reinforcement Learning
 classes: wide
-excerpt: debugging the new energy_py DQN implementation
+excerpt: Debugging the new energy_py DQN implementation.
 
 ---
 
@@ -50,7 +50,7 @@ I'm quite proud of how far I've come, and of how poor my first implementation wa
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
 
-> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linux Torvalds
+> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linus Torvalds
 
 Two more rebuilds to go...
 

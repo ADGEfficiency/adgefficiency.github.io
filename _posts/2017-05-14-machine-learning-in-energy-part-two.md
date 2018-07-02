@@ -4,9 +4,22 @@ date: 2017-05-14
 categories:
   - Energy
   - Machine Learning
+excerpt: Applications of machine learning in energy
 
 ---
-_This is the second of a two part series on the intersection of machine learning and the energy industry.  Read the [first part here](http://adgefficiency.com/machine-learning-in-energy-part-two/)
+
+This is the second of a two part series on the intersection of machine learning and the energy industry.  Read the [first part here](http://adgefficiency.com/machine-learning-in-energy-part-two/)
+
+---
+Data sceptic ai in industry
+
+Key is to figure out where to focus / spend energy
+
+"..too early to do everything with AI... but it's too late to do nothing"
+Steve Guggenheimer, Microsoft’s corporate vice president of AI Business
+
+Data is still a mess in most places (maybe put this in part one - but rehash the challenges here in context of the applications)
+Included tomorrow and the Swedish company in the energy in ml post, also include the UK demand side company, also include Tempus, Siemens ???
 
 ---
 

@@ -2,8 +2,8 @@
 title: Elexon API Web Scraping using Python
 date: 2016-12-08
 categories:
-  - Electricity Price Forecasting
-excerpt: Code to scrape UK grid data using Python
+  - Machine Learning 
+excerpt: Scraping UK grid data using Python
 
 ---
 This post is the second in a series applying machine learning techniques to an energy problem.  The goal of this series is to develop models to forecast the UK Imbalance Price.  

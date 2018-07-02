@@ -1,17 +1,14 @@
+We would all love to have a hotline to Jeff Bezos or Elon Musk, who could give us personalized advice about how to move forward.  If you have the oppourtunity to develop a mentor relationship with someone you admire, 100% it is worth it.
 
-We would all love to have a hotline to Jeff Bezos or Elon Musk, who could give us personalized advice about how to move forward.  But think about 200 years - wouldn't the ability to have access, on demand, to the talks, lectures and books of the most successful and thoughtful people on the planet be equally as exciting?
+There is another oppourtunity for mentorship available today.  The wealth of 
 
-One of those you are unlikely to get - the second you have now.
 
-I recently read the book *Reinvent Yourself* which talks about the concept of **virtual mentors**. 
 
 I have been taking notes from the presentations of people I admire for a long time (well before I read Reinvent Yourself).  I usually find older talks are more useful.  Older talks also allow you to single out the key principles that don't change over a persons lifetime.  
 
 Although the advice of a virtual mentor will never be personal, often the great ideas are general enough that they can be applied across industries and across time.
 
-## general observations
-
-There are a few things that are common to all of my virtual mentors.
+## common threads
 
 ### a few great ideas 
 
@@ -100,9 +97,6 @@ The founder Bridgewater Associates, one of the world's largest hedge funds.
 
 **when you disagree with someone, say their opinion back to them and see if they agree**
 
-## Why Buddhism is True
-
-
 ### Elon Musk
 
 Founder and CEO of SpaceX and Tesla.
@@ -145,9 +139,28 @@ Founder and CEO of Apple.
 - don't invent everything yourself, know the 10-30% you need to invent and use other stuff for the rest
 - the eaisest code to write is code you don't write
 
+**start with the customer experience and work back to the technology**
+- what can you give the customer
+- don't just think about what cool techn you can build
+
 **everything was made by people no smarter than you are**
 - you can change things, build things, improve life
 - you need to be willing to fail - the experience is worth the cost of failure
+
+### Peter Thiel
+
+Co-founder of PayPal, early investor in Facebook.
+
+**first principles thinking**
+> Indeed, the single most powerful pattern I have noticed is that successful people find value in unexpected places, and they do this by thinking about business from first principles instead of formulas.
+
+**what important truth do every few people agree with you on?**
+
+**importance of relationships at work**
+
+**agression of Amazon**
+Apple/Microsoft - quite high margin -> not that aggressive in terms of expansion
+Amazons core business is low margin - everything else looks high margin -> ferocious expansionary
 
 ### Jack Diederich
 A Python core developer.

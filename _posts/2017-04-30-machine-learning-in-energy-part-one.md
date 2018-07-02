@@ -4,14 +4,19 @@ date: 2017-04-30
 categories:
   - Energy
   - Machine Learning
+excerpt:  What is machine learning anyway? 
 
 ---
 
-This is the first of a two part series - [read the second part on energy machine learning applications](http://adgefficiency.com/machine-learning-in-energy-part-two/).
+This is the first of a two part series - [read the second part on applications of machine learning in energy here](http://adgefficiency.com/machine-learning-in-energy-part-two/).
 
 ## what is machine learning 
 
-Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  These artifical networks are inspired by the biological neural networks in our own brain.  Deep neural networks are why everyone is so excited about the near future in artificial intelligence. 
+Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  These artifical networks are inspired by the biological neural networks in our own brain.  Deep neural networks are why everyone is currently excited about artificial intelligence. 
+
+> ... the business plans of the next 10,000 startups are easy to forecast: *Take X and add AI* - Kevin Kelly
+
+There is reason for the hype - deep learning is now state of the art in fundamental problems such as computer vision and natural language understanding.  But deep learning is part of a larger group of algorithms known as **machine learning**, which is contributing more than just deep neural networks.  This post looks at what machine learning is, why it's a fundamental paradigm shift, what's driving performance and what some of the challenges are.
 
 ![fig1]({{ '/assets/ml_energy/fig1.png' }})
 
@@ -19,15 +24,19 @@ Modern artifical intelligence is powered by **deep learning** - multiple layer a
 
 **[The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
 
+## artifical intelligence vs machine learning vs deep learning
+
+You might have heard the terms artificial intelligence, machine learning and deep learning used interchangebly.  While all related there are important distinctions between the three. 
+
+Artificial intelligence encompasses more than just deep learning.  It's possible to be a successful machine learning practioner and not know much about other areas of artifical intelligence. Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.  Both are correct, but machine learning is more correct.
+
 Neural networks are exciting because they **learn**.  They aren't the only algorithms that can learn - along with logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
 
-### *artifical intelligence > machine learning > deep learning*
+Machine learning doesn't always mean deep learning.  Deep learning excels on image and text problems - more classical models such as random forests perform better on other problems.  The problem with classicial machine learning is that performance is limited, even with lots of data.  Deep learning can continue to learn from large datasets where older models can't.
 
-Artificial intelligence encompasses more than just deep learning.  It's possible to be a successful machine learning practioner and not know much about other areas of artifical intelligence.  
+![fig2]({{ '/assets/ml_energy/fig2.png' }})
 
-Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.  Both are correct, but machine learning is more correct.
-
-Machine learning doesn't always mean deep learning.  Deep learning excels on image and text problems - more classical models such as random forests perform better on other kinds of datasets.  
+**Figure 2 – amount of data versus machine learning algorithm performance.  Adapted from the talk [AI is the new electricity - Andrew Ng](https://www.youtube.com/watch?v=21EiKfQYZXc)**
 
 ## learning what humans can't 
 
@@ -47,23 +56,25 @@ This paradigm shift can be demonstrated by comparing two landmark achievements i
 
 In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep Blue derived it's playing strength from brute force computing power. All of Deep Blue's intelligence originated from a team of programmers and chess Grandmasters, who handcrafted moves into the machine.  
 
-In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. AlphaGo was not given any information about Go stragety from its programmers. Alpha Go used reinforcement learning to learn from its own actions and experience. **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.
-
 ![]({{ '/assets/ml_energy/alphago.jpg' }})
 
 **Lee Sedol playing against AlphaGo in an eventual 4-1 loss**
 
-AlphaGo learnt to play go by being fed the board positions in their raw form.  This ability to learn from the raw structure of the world is fundamental to modern machine learning.
+In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. AlphaGo was not given any information about Go stragety from its programmers. Alpha Go used reinforcement learning to learn from its own actions and experience. 
+
+**Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.  AlphaGo learnt to play go by being fed the board positions in their raw form.  This ability to learn from the raw structure of the world is fundamental to modern machine learning.
+
+In the case of both chess and Go, the rise of the machines has lead to an increase in our own ability to play these games.  
 
 ## seeing the structure of our world
 
-The success of modern machine learning in solving computer vision and natural language understanding comes from giving machines the ability to experience the structure of the world.
-
-We take this for granted.  We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure using the same inputs that we do.
+The success of modern machine learning in solving computer vision and natural language understanding comes from giving machines the ability to experience the structure of the world in its raw form.
 
 Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires us to engineer this view of the world.
 
-Modern machine learning is able to feed data in a raw form into models, so they can see these patterns for themselves.  Often they can see high dimensional patterns we would never be able to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.
+We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure using the same raw input as we do.
+
+Modern machine learning is able to see patterns for themselves.  Machines are able to understand the patterns we see and to see patterns in high dimensional space that we are not built to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.  It's most prevelant in computer vision and language problems because modern neural networks can take advantage of the structure in images and text.
 
 ## modern deep learning
 
@@ -118,13 +129,11 @@ Currently most of the business value of machine learning is driven by supervised
 
 Two hardware trends are driving modern machine learning.  The first is the use of **graphics processing units (GPUs)** and the second is the increased **availability** of computing power.
 
-In the early 2000's computer scientists innovated the use of graphics cards designed for gamers for machine learning. GPUs gave massive descreases in training times - reducing them from months to days. Rendering graphics involves matrix multiplication, which GPUs are optimized for. Matrix multiplication is also the operation that is used in training neural networks.
+In the early 2000's computer scientists innovated the use of graphics cards designed for gamers for machine learning.  GPUs were optimized to perform matrix multiplication - exactly the operation used in neural networks.  A GPU allows a massive speedup in machine learning training time by allowing vectorized and parallel mathematics.
 
 This speed up is important. **Most of our understanding of machine learning is empirical**. This knowledge is built up faster by reducing the training time of machine learning models.
 
-The second trend is the availability of computing power - also known as cloud computing.  The cloud gives access to computation and data storage at scale on a variable cost basis.  Platforms such as Amazon Web Services or Google Cloud allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.
-
-Researchers can eaisly run multiple experiments for a number of different hyperparameters, or train models distributed over multiple machines.
+The second trend is the availability of computing power on the cloud.  The cloud gives access to computation and data storage at scale on a variable cost basis.  Platforms such as Amazon Web Services or Google Cloud allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.  Researchers can eaisly run multiple experiments for a number of different hyperparameters, or train models distributed over multiple machines.
 
 This access to computing power works both vertically within large technology companies and for smaller companies.  Access allows more companies to build machine learning products. It enables the balance sheet benefit of shifting a capital expense (building data centres) into an operating expense.
 
@@ -150,6 +159,8 @@ But this reliance on data is neural network's achilles heel.  You can't train la
 
 Human beings are able to learn from small amounts of training data - burning yourself once on the oven is enough to learn not to touch it again. Many machine learning algorithms are not able to learn in this way.  This is known as **sample inefficiency** - the requirement for large amounts of data to get superhuman performance.
 
+The dependence on data also creates a defensible moat for large technology companies.  The unique and massive datasets owned by Google and Facebook allow unique and powerful machine learning driven businesses.  This combined with the 'virtuous cycle of AI' (AI drives better products -> more data -> better products) means that machine learning will likely continue the dominance of a few large players.
+
 ## interpretability
 
 Neural networks don't lend themselves to explanation. The high dimensionality of the input and parameter space means that it's hard to pin down cause to effect. Industries such as finance are legally prevented from using uninterpretable models.  
@@ -164,7 +175,7 @@ We can learn about the process of training neural networks, in the same way that
 
 The major risk and challenge in artificial intelligence is not from a superhuman AI that turns the world into paperclips.  It's from groups of humans using the superhuman ability of machine learning in specific, narrow areas in immoral ways.  GANs can now be used to generate fake video - the final destination of 'fake news'.  Advanced computer vision techniques can be used to improve the tracking citizens throughout cities by their governments.
 
-The reason these risks are higher than a superhuman AI is that narrow AI progress will always be ahead of more general AI.  We already have the ability to generate fake video using GANs.  I can reccomend the blog post [What Worries Me About AI by François Chollet](https://medium.com/@francois.chollet/what-worries-me-about-ai-ed9df072b704) that expands upon this misue of narrow AI concept in the context of social media.
+The reason these risks are higher than a superhuman AI is that narrow AI progress will always be ahead of more general AI.  We already have the ability to generate fake video using GANs.  François Chollet (lead developer of Keras) goes into this in detail - see [What Worries Me About AI](https://medium.com/@francois.chollet/what-worries-me-about-ai-ed9df072b704), which expands upon this misue of narrow AI concept in the context of social media.
 
 ## worker displacement
 
@@ -188,7 +199,7 @@ It's not about having a local site plant control system and historian setup. The
 
 Data is one of the most strategic assets a company can own. It's valuable not only because of the insights it can generate today, but also the value that will be created in the future. **Data is an investment that will pay off.**
 
-[Read the second part](http://adgefficiency.com/machine-learning-in-energy-part-two/) on machine learning applications in energy.
+[Read the second part on machine learning applications in energy](http://adgefficiency.com/machine-learning-in-energy-part-two/).
 
 Thanks for reading!
 
