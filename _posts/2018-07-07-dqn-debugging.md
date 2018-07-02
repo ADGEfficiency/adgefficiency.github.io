@@ -9,18 +9,17 @@ excerpt: Debugging the new energy_py DQN implementation.
 
 ---
 
-This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post were on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
+This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post were on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
+
+![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
-
-By the end of this work the energy_py repo has reached over 500 commits!
-![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
 The idea of documenting this debug process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
-This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, (DDQN tuning using Open AI gym CartPole)[
+This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN tuning using Open AI gym CartPole](https://adgefficiency.com/dqn-tuning/).
 
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
@@ -30,7 +29,9 @@ This is the third major iteration of DQN I've built in energy_py.  Each iteratio
 
 > If you are not embarrassed by the first version of your product, you've launched too late - Reid Hoffman
 
-I'm quite proud of how far I've come, and of how poor my first implementation was.
+> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linus Torvalds
+
+I'm quite proud of how far I've come, and of how poor my first implementation looks to me today.
 
 [version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
 - built in Keras
@@ -38,18 +39,16 @@ I'm quite proud of how far I've come, and of how poor my first implementation wa
 - structuring the neural network with a single output.  this means n passes are required to predict Q(s,a) for n actions, rather than a single pass in a network with n output nodes (one per action).  it does allow the network to connect to the action as an array, so the network can sense the shape of the action 
 
 [version 2](https://github.com/ADGEfficiency/energy_py/commit/774ff3c9cd63b1b1e50359ab606edc7737121c86)
-- built in tensorflow
+- built in Tensorflow
 - target network implemented
-- running act or learn requires running multiple session calls, because the algorithm switches between numpy and tensorflow for operations
+- running act or learn requires running multiple session calls, because the algorithm switches between numpy and Tensorflow for operations
 - e-greedy policy only
 
 [version 3](https://github.com/ADGEfficiency/energy_py)
 - the current master branch (synced over from dev at [this commit](https://github.com/ADGEfficiency/energy_py/tree/f747f0e10741c33cfa81ac7c8b52ebfc4bdca7e4))
-- built in tensorflow, with a single session call per `agent.action()` and `agent.learn()`
+- built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
-
-> I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linus Torvalds
 
 Two more rebuilds to go...
 
