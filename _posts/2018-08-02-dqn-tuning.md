@@ -1,18 +1,28 @@
-This article is the second in a series on the new energy_py implementation of DQN.  The first post documents the debugging process and also a bit of hyperparameter tuning.  This post continues the hyperparameter tuning.
+---
+title: 'DQN debugging using Open AI gym CartPole'
+date: '2018-08-02'
+categories:
+  - Machine Learning
+  - Reinforcement Learning
 
-Both of these posts aim to document the process of debugging and tuning in the style of first forming hypotheses about what might be wrong and what the effect of changing hyperparameters will be.  This process is inspired by the blog post TODO. 
+---
+This article is the second in a series on the new energy_py implementation of DQN.  (The first post documents the debugging process and also a bit of hyperparameter tuning)[https://adgefficiency.com/dqn-debugging/].  This post continues the emotional hyperparameter tuning journey where the first post left off.
+
+These posts follow a problem-hypothesis struture.  Often the speed between seeing cause and effect is quick in computer programming.  In reinforcement learning, the long training time means that it makes more sense to think about the problem before starting another iteration of experiments.
 
 ## problem - stability
 
-The major problem that at this point in the tuning process was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).
+The major problem at this point was was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).
 
-The issue is with the stability of the policy - the agent often quickly learns to forget it's good work and collapses to a poor policy (often selecting the same action for every observation. 
+The issue is with the stability of the policy - the agent often quickly learns to forget and collapses to a poor policy. 
 
 I had a number of hypotheses at this stage about what might be causing the instability
 - overestimation bias
 - batch size 
 - neural network size
 - target network update 
+
+I choose to investigate the effects in a somewhat scientific process.  This kind of interactive tuning can be faster than grid searching if the debugger is skilled.  Another benefit is on the tuner - they gain inuition and understanding of how the algorithm is working.
 
 ## hypothesis - overestimation bias 
 

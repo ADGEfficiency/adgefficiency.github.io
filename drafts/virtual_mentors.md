@@ -2,11 +2,11 @@ We would all love to have a hotline to Jeff Bezos or Elon Musk, who could give u
 
 There is another oppourtunity for mentorship available today.  The wealth of 
 
-
-
 I have been taking notes from the presentations of people I admire for a long time (well before I read Reinvent Yourself).  I usually find older talks are more useful.  Older talks also allow you to single out the key principles that don't change over a persons lifetime.  
 
 Although the advice of a virtual mentor will never be personal, often the great ideas are general enough that they can be applied across industries and across time.
+
+Not that these peopel are perfect - that they haev stumbled across a true ideas.
 
 ## common threads
 

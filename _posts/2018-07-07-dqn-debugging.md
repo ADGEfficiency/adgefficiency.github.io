@@ -12,16 +12,15 @@ excerpt: Debugging the new energy_py DQN implementation.
 This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post were on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
-**the agent graph shown in Tensorboard**
 
 By the end of this work the energy_py repo has reached over 500 commits!
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
-The work was done using the energy_py wrapper around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
+The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
 
-The ideas behind documenting this debug process come from the blog post [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This excellent post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. 
+The idea of documenting this debug process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
-This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. 
+This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, (DDQN tuning using Open AI gym CartPole)[
 
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 

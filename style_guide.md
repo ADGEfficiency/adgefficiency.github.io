@@ -1,11 +1,9 @@
-
 ---
 title: 'DQN debugging'
 date: '2018-07-07'
 categories:
   - Machine Learning
   - Reinforcement Learning
-classes: wide
 
 ---
 ## first heading
