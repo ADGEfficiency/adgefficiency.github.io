@@ -19,7 +19,7 @@ The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency
 
 The idea of documenting this debug process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
-This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN tuning using Open AI gym CartPole](https://adgefficiency.com/dqn-tuning/).
+This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN hyperparameter tuning using Open AI gym CartPole](https://adgefficiency.com/dqn-tuning/).
 
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
