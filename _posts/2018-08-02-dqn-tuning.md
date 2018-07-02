@@ -6,7 +6,7 @@ categories:
   - Reinforcement Learning
 
 ---
-This article is the second in a series on the new energy_py implementation of DQN.  (The first post documents the debugging process and also a bit of hyperparameter tuning)[https://adgefficiency.com/dqn-debugging/].  This post continues the emotional hyperparameter tuning journey where the first post left off.
+This article is the second in a series on the new energy_py implementation of DQN.  [The first post documents the debugging process and also a bit of hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.
 
 These posts follow a problem-hypothesis struture.  Often the speed between seeing cause and effect is quick in computer programming.  In reinforcement learning, the long training time means that it makes more sense to think about the problem before starting another iteration of experiments.
 
