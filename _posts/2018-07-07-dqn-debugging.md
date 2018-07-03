@@ -13,11 +13,11 @@ This post is the first detailing the debuging and hyperparameter tuning of the n
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
-The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
+[The experiments ran on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
 
-The work was done using [the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).  Cartpole is a good environment to debug for two reasons.
+[The environment is the the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).  
 
-Cartpole is a classic reinforcement learning problem and is also reasonably simple.  Debugging an agent on a complex environment means long run times and a low rate of hyperparameter iterations.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
+Cartpole is a good environment to debug for two reasons.  Cartpole is a classic reinforcement learning problem and is also reasonably simple.  Debugging an agent on a complex environment means long run times and a low rate of hyperparameter iterations.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
 
 The second reason Cartpole is good for debugging is that I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
 
