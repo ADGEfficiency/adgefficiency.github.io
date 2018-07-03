@@ -13,8 +13,6 @@ This post is the first detailing the debuging and hyperparameter tuning of the n
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
-![]({{ "/assets/debug_dqn/graph.png"}}) 
-
 The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
 
 The work was done using [the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).  Cartpole is a good environment to debug for two reasons.
@@ -30,6 +28,8 @@ This post shows the logic behind a successful debugging, the kinds of silly erro
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
 ## the dqn rebuild
+
+![]({{ "/assets/debug_dqn/graph.png"}}) 
 
 This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  I find it a luxury to write something from scratch, and believe that iteration is the only way progress .  I'm proud of how far I've come, and of how poor my first implementation looks to me today!
 
