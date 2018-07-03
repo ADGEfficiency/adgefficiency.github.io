@@ -9,7 +9,7 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post were on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
+This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
