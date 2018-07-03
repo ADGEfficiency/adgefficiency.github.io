@@ -9,17 +9,21 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).
-
-The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
+This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).  By the end of this work the energy_py repo has reached over 500 commits!
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
 
-The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) around the Open AI gym **cartpole-v0** environment.  Cartpole is a good environment to debug an algorithm because it is simple (making learning easy) and I am familiar with the performance of the environment.  
+The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
 
-The idea of documenting this debug process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
+The work was done using [the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).  Cartpole is a good environment to debug for two reasons.
+
+Cartpole is a classic reinforcement learning problem and is also reasonably simple.  Debugging an agent on a complex environment means long run times and a low rate of hyperparameter iterations.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
+
+The second reason Cartpole is good for debugging is that I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
+
+The idea of documenting the debug and tuning process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
 This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how cartpole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN hyperparameter tuning using Open AI gym cartpole](https://adgefficiency.com/dqn-tuning/).
 
@@ -27,13 +31,11 @@ This is the third iteration of DQN that I've built - this one was significantly 
 
 ## the dqn rebuild
 
-This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  
+This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  I find it a luxury to write something from scratch, and believe that iteration is the only way progress .  I'm proud of how far I've come, and of how poor my first implementation looks to me today!
 
 > If you are not embarrassed by the first version of your product, you've launched too late - Reid Hoffman
 
 > I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linus Torvalds
-
-I'm quite proud of how far I've come, and of how poor my first implementation looks to me today.
 
 [version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
 - built in Keras

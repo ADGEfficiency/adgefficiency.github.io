@@ -7,7 +7,7 @@ categories:
 excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning agent.
 
 ---
-This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and starts the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [was at this commit on energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
+This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [is at this commit on the master branch of energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
 **These posts follow a problem-hypothesis structure**.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypotheses.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the value of taking the time to think about the problem relative to the cost of testing a hypothesis.
 
@@ -17,7 +17,7 @@ This kind of interactive tuning has two benefits.  First it can be faster than g
 
 Picking up where we left off in the first post - the major problem was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).  But after solving the environment the agents often completely forgot what they had learnt and collapsed to poor policies.
 
-My hypotheses for the cause of the policy quality collapse were
+sy hypotheses for the cause of the policy quality collapse were
 - overestimation bias
 - batch size 
 - neural network size
