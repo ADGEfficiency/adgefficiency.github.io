@@ -1,5 +1,5 @@
 ---
-title: 'DQN debugging using Open AI gym CartPole'
+title: 'DQN debugging using Open AI gym cartpole'
 date: '2018-07-07'
 categories:
   - Machine Learning
@@ -9,17 +9,19 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This post details the debugging process I went through for the new implementation of DQN in energy_py.  The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
+This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).
+
+The experiments ran in this post [were on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  By the end of this work the energy_py repo has reached over 500 commits!
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
 
-The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) around the Open AI gym **CartPole-v0** environment.  CartPole is an environment I am familiar with and use to prove that an agent can learn a well formed reinforcement learning problem.
+The work was done using [the energy_py wrapper](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) around the Open AI gym **cartpole-v0** environment.  Cartpole is a good environment to debug an algorithm because it is simple (making learning easy) and I am familiar with the performance of the environment.  
 
 The idea of documenting this debug process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
-This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how CartPole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN hyperparameter tuning using Open AI gym CartPole](https://adgefficiency.com/dqn-tuning/).
+This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how cartpole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN hyperparameter tuning using Open AI gym cartpole](https://adgefficiency.com/dqn-tuning/).
 
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
@@ -151,9 +153,9 @@ $ tensorboard --logdir='.'
 
 **Figure 1 - Collapsing reward after exploration is over**
 
-When using an epsilon greedy exploration policy, early stages of the experiment are mostly randomly selected actions.  For CartPole this ends up being an average reward per episode of between 20 - 30.  For a working implementation the episode returns will stay in this range and start to increase as the agent learns.
+When using an epsilon greedy exploration policy, early stages of the experiment are mostly randomly selected actions.  For cartpole this ends up being an average reward per episode of between 20 - 30.  For a working implementation the episode returns will stay in this range and start to increase as the agent learns.
 
-What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over `Q(s,a)` was selecting the same action each time, resulting in a poor policy that quickly failed the CartPole task.  This policy is worse than a random policy!
+What I was seeing was a drop in average reward to around 10 per episode after exploration was over.  This suggests that the argmax over `Q(s,a)` was selecting the same action each time, resulting in a poor policy that quickly failed the cartpole task.  This policy is worse than a random policy!
 
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behavior we saw.
@@ -186,7 +188,7 @@ In DQN learning is done by minimizing the difference between predicted Q values 
 
 Reinforcement learning can be though of as a data generation process - interacting with the environment generates sequences of experience tuples of `(s, a, r, s')`.  In order to learn from this data we need to label it - in DQN this labelling process is doing by creating a Bellman target for each sample in a batch.  This then allows supervised learning to be used to fit our predicted `Q(s,a)` to the target. 
 
-From experience with DQN and CartPole I expected to see a inflation in the Q values.  This optimism comes from the max operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a small value of around 2.0.  Since rewards for CartPole are +1 for each step, this meant that the max across `Q(s',a)` was approximately 1.0 as well.
+From experience with DQN and cartpole I expected to see a inflation in the Q values.  This optimism comes from the max operation over `Q(s',a)` in the Bellman target.  When I took a look at the Bellman target I saw something quite different - an increase until a small value of around 2.0.  Since rewards for cartpole are +1 for each step, this meant that the max across `Q(s',a)` was approximately 1.0 as well.
 
 ![fig3]({{ "/assets/debug_dqn/fig3.png"}}) 
 
@@ -212,7 +214,7 @@ I added this part of the Bellman equation to tensorboard - both the unmasked and
 
 **Figure 5 - The unmasked and masked approximations of `max Q(s',a))`**
 
-As expected none of the unmasked values are zero, because they are maximums across all possible actions. But looking at the masked values, it seemed that far too many were zero!  If our batch is sampled well from memory, we would expect the distribution of terminals (and associated zero `Q(s',a)` values) to match the distribution we see in training.  For CartPole with an episode length of around 20, we would expect to see 20 times as many non-zero values as zeros.  From Figure 5 we see the opposite.
+As expected none of the unmasked values are zero, because they are maximums across all possible actions. But looking at the masked values, it seemed that far too many were zero!  If our batch is sampled well from memory, we would expect the distribution of terminals (and associated zero `Q(s',a)` values) to match the distribution we see in training.  For cartpole with an episode length of around 20, we would expect to see 20 times as many non-zero values as zeros.  From Figure 5 we see the opposite.
 
 Looking at how I was doing the masking the error became clear - I had the masking around the wrong way!  Terminal is a boolean that is `True` when the episode is over, and `False` otherwise.
 
@@ -339,7 +341,7 @@ And here is the setup these final three agents
 ```python
 agent = DQN(
     sess=sess,
-    env=energy_py.make_env('CartPole'),
+    env=energy_py.make_env('cartpole-v0'),
     total_steps=400000,
     discount=0.9,
     memory_type='deque',
