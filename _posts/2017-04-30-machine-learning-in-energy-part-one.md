@@ -60,7 +60,7 @@ In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep B
 
 In contrast, most of AlphaGo's intelligence originated from self play.  In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. 
 
-The original AlphaGo first learnt from human expert moves before learning from self play.  A later iteration of the algorithm known as AlphaGo Zero learnt *tabula rasa* - with no human input.
+The original AlphaGo first learnt from human expert moves before learning from self play.  A later iteration of the algorithm known as AlphaGo Zero learnt *tabula rasa* (I had to look it up too).  AlphaGo Zero learnt only from the experience of playing the game versus earlier versions of itself.
 
 **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.  AlphaGo learnt to play go by being fed the board positions in their raw form.  This ability to learn from the raw structure of the world is fundamental to modern machine learning.
 
