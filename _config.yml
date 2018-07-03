@@ -16,9 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ADGEfficiency"
+title                    : "the intersection of energy and machine learning"
 title_separator          : "-"
-name                     : "the intersection of energy and machine learnin"
+name                     : 
 url                      : "https://adgefficiency.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ADGEfficiency/adgefficiency.github.io"

@@ -8,31 +8,33 @@ excerpt:  What is machine learning anyway?
 
 ---
 
-This is the first of a two part series - [read the second part on applications of machine learning in energy here](http://adgefficiency.com/machine-learning-in-energy-part-two/).
+This is a two part series.  This first post introduces what machine learning is, why it's a fundamental paradigm shift, what's driving performance and what some of the challenges are. [The second part covers energy applications of machine learning](http://adgefficiency.com/machine-learning-in-energy-part-two/).
 
 ## what is machine learning 
 
-Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  These artifical networks are inspired by the biological neural networks in our own brain.  Deep neural networks are why everyone is currently excited about artificial intelligence. 
+Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  These artifical networks are inspired by the biological neural networks in our own brain.  Deep neural networks are why everyone is so excited about artificial intelligence. 
 
 > ... the business plans of the next 10,000 startups are easy to forecast: *Take X and add AI* - Kevin Kelly
 
-There is reason for the hype - deep learning is now state of the art in fundamental problems such as computer vision and natural language understanding.  But deep learning is part of a larger group of algorithms known as **machine learning**, which is contributing more than just deep neural networks.  This post looks at what machine learning is, why it's a fundamental paradigm shift, what's driving performance and what some of the challenges are.
+There is reason for the hype - deep learning is now state of the art in fundamental problems such as computer vision and natural language understanding.  But deep learning is part of a larger group of algorithms known as **machine learning**, which is contributing more than just deep neural networks.
 
 ![fig1]({{ '/assets/ml_energy/fig1.png' }})
 
-**Figure 1 – Recent progress in compuer vision on the ImageNet benchmark**
-
-**[The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
+**Figure 1 – Recent progress in compuer vision on the ImageNet benchmark [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)**
 
 ## artifical intelligence vs machine learning vs deep learning
 
-You might have heard the terms artificial intelligence, machine learning and deep learning used interchangebly.  While all related there are important distinctions between the three. 
+Artificial intelligence, machine learning and deep learning are used interchangebly.  While all related there are important distinctions between them. 
 
-Artificial intelligence encompasses more than just deep learning.  It's possible to be a successful machine learning practioner and not know much about other areas of artifical intelligence. Most of the time when companies advertize they are using artifical intelligence, they really mean machine learning.  Both are correct, but machine learning is more correct.
+Machine learning is a branch within artificial intelligence.  There are other approaches such as symbolic AI.  Machine learning is currently the part of artificial intelligence that is working the best.
 
-Neural networks are exciting because they **learn**.  They aren't the only algorithms that can learn - along with logistic regression, random forests and support vector machines they form a family of techniques known as **machine learning**.
+The expressive mathematical power of machine learning algorithms - in particular deep learning - means that they generalize across multiple problems, such as computer vision or decision making.
 
-Machine learning doesn't always mean deep learning.  Deep learning excels on image and text problems - more classical models such as random forests perform better on other problems.  The problem with classicial machine learning is that performance is limited, even with lots of data.  Deep learning can continue to learn from large datasets where older models can't.
+There are approaches other than deep learning within machine learning - logistic regression, random forests and support vector machines are other machine learning algorithms that deliver business value today.
+
+Deep learning excels on problems where the structure of the network (i.e. convolution or recurrent) will take advantage of structure within data (i.e. images or text).  They are also able to make use (in fact require) massive amounts of data.
+
+The problem with classicial machine learning is that it doesn't benefit much from massive amounts of data - see Figure 2 below.
 
 ![fig2]({{ '/assets/ml_energy/fig2.png' }})
 

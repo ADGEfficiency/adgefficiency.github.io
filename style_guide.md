@@ -19,7 +19,8 @@ excerpt:
 
 numbers should be like 10, not like `10`
 
-%s/&#8211;/-/g
+Keep bolds far aparrt (def not in the same paragraph)
 
+%s/&#8211;/-/g
 
 %s/&#8217;/'/g
