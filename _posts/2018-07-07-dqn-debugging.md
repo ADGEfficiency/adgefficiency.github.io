@@ -5,7 +5,7 @@ categories:
   - Machine Learning
   - Reinforcement Learning
 classes: wide
-excerpt: Debugging the new energy_py DQN implementation.
+excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 

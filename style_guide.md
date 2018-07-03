@@ -4,6 +4,7 @@ date: '2018-07-07'
 categories:
   - Machine Learning
   - Reinforcement Learning
+excerpt:
 
 ---
 ## first heading

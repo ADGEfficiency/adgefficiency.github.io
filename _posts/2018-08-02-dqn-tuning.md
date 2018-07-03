@@ -1,34 +1,41 @@
 ---
-title: 'DQN hyperparameter tuning using Open AI gym CartPole'
+title: 'DDQN hyperparameter tuning using Open AI gym CartPole'
 date: '2018-08-02'
 categories:
   - Machine Learning
   - Reinforcement Learning
+excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning agent.
 
 ---
-This article is the second in a series on the new energy_py implementation of DQN.  [The first post documents the debugging process and also a bit of hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.
+This article is the second in a series on the new energy_py implementation of DQN.  [The first post documents the debugging process and also a bit of hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [is available at this commit on energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
-These posts follow a problem-hypothesis struture.  Often the speed between seeing cause and effect is quick in computer programming.  In reinforcement learning, the long training time means that it makes more sense to think about the problem before starting another iteration of experiments.
+These posts follow a problem-hypothesis struture.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypothesis.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the relative value of taking the time to think about the problem.
+
+This kind of interactive tuning has two benefits.  First it can be faster than grid searching (if the debugger is skilled).  The tuner also gains inuition and understanding of how the algorithm is working.  For all experiments I perform three runs over three different random seeds.  These random seeds are kept constant for each experiment.
 
 ## problem - stability
 
-The major problem at this point was was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).
+Picking up where we left off in the first post - the major problem was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).  But after solving the environment the agents often completely forgot what they had learnt and collapsed to poor policies.
 
-The issue is with the stability of the policy - the agent often quickly learns to forget and collapses to a poor policy. 
-
-I had a number of hypotheses at this stage about what might be causing the instability
+My hypotheses for the cause of the policy quality collapse were
 - overestimation bias
 - batch size 
 - neural network size
 - target network update 
 
-I choose to investigate the effects in a somewhat scientific process.  This kind of interactive tuning can be faster than grid searching if the debugger is skilled.  Another benefit is on the tuner - they gain inuition and understanding of how the algorithm is working.
+I then progressed to semi-scientifically investigate these hypotheses.
 
 ## hypothesis - overestimation bias 
 
-DQN is an agressive algorithm - both in terms of acting (where the argmax will always select the 'best' action, even if the Q value is only slightly higher than another action) and in terms of learning (where the target is formed using a maximum over all possible next actions).
+The hypothesis at this stage was that overestimation bias was causing instability (plus I wanted to try out the DDQN code!).  
 
-Double Q-Learning (and it's [deep learning variant DDQN](https://arxiv.org/pdf/1509.06461.pdf)) aims to overcome this overestimation bias by selecting actions according to the online network, but quantifying the return for this action using the target network.  In terms of code DDQN only requires a few small changes from DQN.  
+Overestimation bias is the tendency of Q-Learning algorithms to overestimate the value of states.  This overestimation is a result of the agressive acting and learning of Q-Learning
+- in acting - where the argmax will always select the 'best' action, even if the Q value is only slightly higher than another action
+- in learning - where the target is formed using a maximum over all possible next actions
+
+Double Q-Learning (and it's [deep learning variant DDQN](https://arxiv.org/pdf/1509.06461.pdf)) aims to overcomes this overestimation bias by selecting actions according to the online network, but quantifying the return for this action using the target network.
+
+Because DQN already has the target network, modfiying it to DDQN requires only a few changes - one of which is below.  An `argmax` is performed over the online network evaluation of the value of the next state.  The index of this argmax is then used with the target network values of the next state.
 
 ```python
 if self.double_q:
@@ -42,7 +49,7 @@ if self.double_q:
 )
 ```
 
-The hypothesis at this stage was that overestimation bias was causing instability (plus I wanted to try out the DDQN code!).  The main hyperparameters for this experiment were
+The main hyperparameters for the first experiment looking at the effect of DDQN were
 
 ```python
 total_steps=400000
@@ -58,31 +65,31 @@ batch_size=32
 layers=5,5,5
 ```
 
-The results across three random seeds are shown below in Figure 1.
+The results across three random seeds are shown in Figure 1.
 
 ![fig1]({{ "/assets/dqn_debug_2/fig1.png"}}) 
 **Figure 1 - DDQN experiments**
 
-Figure 1 shows that the instability problem still exists.  
+Figure 1 shows that the instability problem still exists!  On to the next hypothesis.
 
-## hypothesis - neural network size
+## hypothesis - batch size and neural network structure 
 
-In DQN the online network is changed at each step by minimizing the difference between the Bellman target and the current network approximation of `Q(s,a)`.  The hypothesis was that if the batch is too small (previously I was using `batch_size=32`) then the distribution of the data per batch won't be smooth.
+In DQN the online network is changed at each step by minimizing the difference between the Bellman target and the current network approximation of `Q(s,a)`.  The hypothesis was that if the batch is too small (previously I was using `batch_size=32`) then the distribution of the data per batch won't be smooth.  These unsmooth updates hurt the polict stability.
 
-Because of the nature of the CartPole environment, this becomes more of an issue as the agent learns, because the episode length increases.  As the episode length increases the relative amount of terminal states will decrease.  I increased the batch size to `256` to see what effect this would have concurrent with the DDQN change.
+In the CartPole environment, as the agent learns the episode length increases.  As the episode length increases, the relative amount of terminal states in each batch will decrease.  Knowing that the maximum episode length is 200 I increased the batch size to 256.  Larger batch sizes [allow higher learning rates](https://miguel-data-sc.github.io/2017-11-05-first/), because the smoother distribution allows a higher quality gradient update.
 
-The original DeepMind paper used a batch size of TODO, but as they were working with images, they are restricted to smaller batches in order to fit the batch on a GPU.  We are using state-actions that are small numpy arrays (and not training on GPU).
+Batch size is second only to learning rate in importance.  Neural networks are trained using batches for multiple reasons.  One is that using batches allows more gradient updates per epoch.  In reinforcement learning we only train for a single epoch over a single batch at each step.  
 
-There is a relationship between batch size and learning rate - larger batch sizes should allow higher learning rates (because the gradient update is higher quality).
+Another reason batches are used is to avoid GPU constraints.  If you are using images then your batch size will be constrained by needing to fit the entire batch in the GPU memory.  In the 2015 DeepMind work, they used `batch_size=32`.  Each state and next state was four images, so a single batch had 128 images.  CartPole uses a small numpy array (and we train on CPU).  So this potential constraint on batch size doesn't apply.
 
 For these simple reinforcement learning problems the idea is that smaller neural networks should be preferred, as they have less change to overfit.
 
-One reason why a small neural network could cause instability is a lot of aliasing i.e. sharing of weights.  This sharing of weights means that changes to one part of the network end up disrupting the understanding encoded in another part of the network.
+One reason why a small neural network could cause instability is a lot of aliasing (sharing of weights).  Aliasing could mean that changes to one part of the network disrupt the understanding encoded in another part of the network.
 
-Up until now I have been using a neural network with three layers, 5 nodes per layer.  My hypothesis was that even though this is not a lot of nodes, because the network has three layers there will be a lot of aliasing (i.e. changes in the input layer affect all the layers below it).  
+Up until now I have been using a neural network structure of `5, 5, 5` (i.e. 3 layers with 5 nodes per layer).  My hypothesis was that even though this is not a lot of nodes, because the network has three layers there will be a lot of aliasing (i.e. changes in the input layer affect all the layers below it).  
 
+Updated hyperparameters were
 
-Updated hyperparameters
 ```
 layers=256,256
 batch_size=256
@@ -91,33 +98,44 @@ batch_size=256
 ![fig2]({{ "/assets/dqn_debug_2/fig2.png"}}) 
 **Figure 2 - Larger batch size and neural network**
 
-The batch size and neural network size changes do seem to have improved stability - the agents are able to stay at the maximum reward of 200 for a lot longer.  
-
-The issue is that later in the experiment, the agents forget everything they have learnt and collapse to poor quality policies.  Run 1 is especially disappointing! 
+The batch size and neural network size changes do seem to have improved stability - the agents are able to stay at the maximum reward of 200 for a longer.  The issue is that later in the experiment, the agents forget everything they have learnt and collapse to poor quality policies.  Run 1 is especially disappointing! 
 
 ## hypothesis - the target network update
 
 The target network update is an obvious place where instability could arise. There are two common strageties for updating the target network
+- doing a full copy of the weights from online to target every `C` steps (`C` = 10k-100k steps in the 2015 DeepMind DQN work) 
+- smoothly copy the online network weights to the target network at each step using a parameter tau.
 
-In the 2013 and 2015 DeepMind Atari work they periodically update the target network weights every `C` steps - in the 2015 paper `C=TODO`. 
+I've been using the second stragety so far, with `tau=0.001`.
 
-Another stragety is to smoothly copy the online network weights to the target network at each step using a parameter `tau=0.001`.  This is the stragety that I've been using so far.
+```python
+copy_ops = []
+for p, c in zip(parent, child):
+    assert p.name.split('/')[1:] == c.name.split('/')[1:]
 
-One issue with the `tau=0.001` stragety is that perhaps a neural network has to be taken as a whole.  Because of the massive connectivetivity, change the value of just one weight might lead to drastic changes in other parts of the network.  While the `tau=0.001` stragety seems on it's face to be a smoother and more gradual update, in fact it might cause instability.
+    copy_ops.append(
+        c.assign(tf.add(tf.multiply(p, tau),
+		        tf.multiply(c, 1 - tau))
+	         )
+    )
+```
 
-Luckily the new energy_py implementation of DQN can eaisly handle both, by setting two parameters
+One issue with the `tau=0.001` stragety is that perhaps a neural network has to be taken as a whole.  Because of the massive connectivity, changing the value of one weight might lead to drastic changes in other parts of the network (a machine learning version of the butterfly effect).  While the `tau=0.001` stragety should allow a smoother and more gradual update, in fact it might cause instability.
+
+Luckily the new energy_py implementation of DQN can eaisly handle both, by setting two parameters in the DQN agent `__init__`
 
 ```
-#  parameters to update a little bit each step
-tau=0.001
-update_target_net=1
-
 #  parameters to fully copy weights every 5000 steps 
 tau=1.0
 update_target_net=5000
+
+#  parameters to update a little bit each step
+#  this is the stragety I had been using so far
+tau=0.001
+update_target_net=1
 ```
 
-I setup the same three experiments using the following hyperparameters.  I reduced the size of the neural network as well.
+The hyperparameters for the different target net update experiment are below.  I reduced the size of the neural network - the previous structure of `256, 256` seemed a bit overkill for a network with an input shape of `(4,)` and output shape of `(2,)`!
 
 ```
 batch_size=256
@@ -132,7 +150,7 @@ update_target_net=5000
 ![fig35]({{ "/assets/dqn_debug_2/fig3.5.png"}}) 
 **Figure 3.1 - The target network weights during training.  Note how the weights stay fixed for a number of steps** 
 
-Figure 3 shows that this target net update stragety slows learning.  This is expected - rather than taking advantage of online network weight updates as they happen, the agent must wait until the target network reflects the agent's new understanding of the world.  Run 2 is especially promising, with the agent able to perform well for around 100k steps.
+Figure 3 shows the target net update stragety slows learning.  This is expected - rather than taking advantage of online network weight updates as they happen, the agent must wait until the target network reflects the agent's new understanding of the world.  Run 2 is especially promising, with the agent able to perform well for around 100k steps.
 
 The main hyperparameter with this style of target network updating is the number of steps between updates.  I ran a set of experiments with a quicker update (`update_target_net=2500`) to see if I could get learning to happen a bit quicker and maintain a bit of stability.  The results for these runs are shown in Figure 4.
 
@@ -150,11 +168,11 @@ I increased the learning rate to `0.001` to take advantage of the large batch si
 ![fig5]({{ "/assets/dqn_debug_2/fig5.png"}}) 
 **Figure 5 - Results of the less frequent target net update, larger learning rate, smaller neural network**
 
-## the final run (finally!)
+## finally, the final run (finally)
 
 While preprocessing Bellman targets is often given as advice for reinforcement learning, many DQN implementations (including the DeepMind 2015 implementation) don't do any processing of the Bellman target.  For this reason I decided to play around with the batch norm layer a bit.
 
-A reminder of how batch norm is used with the Bellman target in the energy_py implementation of DQN
+A reminder of how I use [`tf.layers.batch_normalization`](https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization) with the Bellman target
 
 ```
 self.bellman = self.reward + self.discount * self.next_state_max_q
@@ -176,13 +194,11 @@ error = tf.losses.huber_loss(
 I changed the batch norm arguments to default (i.e. `training=False`).  In the `tf.layers` implementation of batch norm this means that the layer will use historical statistics to normalize the batch.  The effect of this on the Bellman target is quite dramatic.
 
 ```
-self.bellman = self.reward + self.discount * self.next_state_max_q
-
 bellman_norm = tf.layers.batch_normalization(
     tf.reshape(self.bellman, (-1, 1)),
-    center=False,
-    training=True,
-    trainable=False,
+    center=True,
+    training=False,
+    trainable=True,
 )
 ```
 
