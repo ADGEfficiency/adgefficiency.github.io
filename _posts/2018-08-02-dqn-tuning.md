@@ -7,11 +7,11 @@ categories:
 excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning agent.
 
 ---
-This article is the second in a series on the new energy_py implementation of DQN.  [The first post documents the debugging process and also a bit of hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [is available at this commit on energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
+This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and starts the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [was at this commit on energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
-These posts follow a problem-hypothesis structure.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypothesis.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the relative value of taking the time to think about the problem.
+**These posts follow a problem-hypothesis structure**.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypotheses.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the value of taking the time to think about the problem relative to the cost of testing a hypothesis.
 
-This kind of interactive tuning has two benefits.  First it can be faster than grid searching (if the debugger is skilled).  The tuner also gains intuition and understanding of how the algorithm is working.  For all experiments I perform three runs over three different random seeds.  These random seeds are kept constant for each experiment.
+This kind of interactive tuning has two benefits.  First it can be faster than grid searching (if the debugger is skilled).  **The second is that the engineer can gain intuition and understanding of how the algorithm is working**.  For all experiments I perform three runs over three different random seeds.  These random seeds are kept constant for each experiment.  The random seed for the environment action sampling is not kept constant - it is intentionally kept separate.  A good discussion on [why the Open AI library does this is here](https://github.com/openai/gym/commit/58e6aa95e5af2c738557431f812abb81c505a7cf#commitcomment-17669277).  This means that some randomness will be kept the same (i.e. neural network weight initialization), other sources of randomness won't be.
 
 ## problem - stability
 
