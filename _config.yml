@@ -16,10 +16,9 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "ADGEfficiency - the intersection of energy and machine learning"
+title                    : "ADGEfficiency"
 title_separator          : "-"
-name                     : "Adam Green"
-description              : "the intersection of energy and machine learning"
+name                     : "the intersection of energy and machine learnin"
 url                      : "https://adgefficiency.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ADGEfficiency/adgefficiency.github.io"
@@ -100,7 +99,7 @@ analytics:
 # Site Author
 author:
   name             : "Adam Green"
-  avatar           : "/assets/adg.png"
+  avatar           : # "/assets/adg.png"
   bio              : 
   location         :
   email            : "adam.green@adgefficiency.com"
@@ -109,7 +108,7 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  flickr           :
+  flickr           : "https://www.flickr.com/photos/37628582@N00/"
   facebook         :
   foursquare       :
   github           : "/ADGEfficiency/"
