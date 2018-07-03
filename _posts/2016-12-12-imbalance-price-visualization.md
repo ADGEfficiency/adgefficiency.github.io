@@ -10,7 +10,7 @@ excerpt: Visualizing the UK Imbalance Price
 This post is part of a series applying machine learning techniques to an energy problem.  The goal of this series is to develop models to forecast the UK Imbalance Price.  
 - Introduction - [What is the Imbalance Price](http://adgefficiency.com/what-is-the-uk-imbalance-price/)
 - Getting Data - [Scraping the ELEXON API](http://adgefficiency.com/elexon-api-web-scraping-using-python/)
-- Visualization - [Imbalance Price Visualization]
+- Visualization - [Imbalance Price Visualization](https://adgefficiency.com/imbalance-price-visualization/)
 
 ---
 
@@ -29,11 +29,13 @@ plot_time_series(elexon, 'Imbalance_price [£/MWh]', fig_name='fig1.png')
 ```
 
 ![fig1]({{ "/assets/imba_vis/fig1.png"}}) 
+
 **Figure 1 - A plot of the imbalance price from 2015 to 2017**
 
 Next we look at how statistics such as mean, median and standard deviation have changed ver time.  We use the `plot_grouped` function to show how these statistics change month by month.
 
 ![fig2]({{ "/assets/imba_vis/fig2.png"}}) 
+
 **Figure 2 - Monthly statistics of the imbalance price across 2015-2017**
 
 ```python 
@@ -47,6 +49,7 @@ plot_grouped(elexon, 'Imbalance_price [£/MWh]', group_type='month', fig_name='f
 ```
 
 ![fig3]({{ "/assets/imba_vis/fig3.png"}}) 
+
 **Figure 3 - Monthly statistics of the imbalance price across 2015-2017** 
 
 Figure 3 shows some seasonality - the price tends to be higher and more volatile in the winter and lower in the summer.  The higher level of the price is expected - in the UK demand peaks in the winter.
@@ -58,6 +61,7 @@ plot_grouped(elexon, 'Imbalance_price [£/MWh]', group_type='hour', fig_name='fi
 ```
 
 ![fig4]({{ "/assets/imba_vis/fig4.png"}}) 
+
 **Figure 4 - Daily statistics of the imbalance price across 2015-2017** 
 
 Figure 4 also shows seasonality - this time on a daily basis.  Interestingly the price is most volatile in the afternoon - although it is likely that an outlier is distoriting this (seen by the maximum price also occurs in this time period).
@@ -69,6 +73,7 @@ plot_distribution(elexon, 'Imbalance_price [£/MWh]', fig_name='fig5.png')
 ```
 
 ![fig5]({{ "/assets/imba_vis/fig5.png"}}) 
+
 **Figure 5 - Histogram and kernel density plot of the imbalance price** 
 
 ## correaltions to other varaibles

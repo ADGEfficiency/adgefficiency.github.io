@@ -9,7 +9,7 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).  By the end of this work the energy_py repo has reached over 500 commits!
+This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).  energy_py has now reached over 500 commits!
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 

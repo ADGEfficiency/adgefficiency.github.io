@@ -14,8 +14,10 @@ excerpt:
 [link text](link)
 
 ![fig1]({{ "/assets//fig1.png"}}) 
-**Figure 1 - **
 
+**Figure 1 -**
+
+numbers should be like 10, not like `10`
 
 %s/&#8211;/-/g
 
