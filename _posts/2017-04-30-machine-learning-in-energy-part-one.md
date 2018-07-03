@@ -8,15 +8,13 @@ excerpt:  What is machine learning anyway?
 
 ---
 
-This is a two part series.  This first post introduces what machine learning is, why it's a fundamental paradigm shift, what's driving performance and what some of the challenges are. [The second part covers energy applications of machine learning](http://adgefficiency.com/machine-learning-in-energy-part-two/).
+This is a two part series.  This first post introduces what machine learning is, why it's a fundamental paradigm shift, what's driving performance and what some of the challenges are. [The second post covers energy applications of machine learning](http://adgefficiency.com/machine-learning-in-energy-part-two/).
 
 ## what is machine learning 
 
-Modern artifical intelligence is powered by **deep learning** - multiple layer artifical neural networks.  These artifical networks are inspired by the biological neural networks in our own brain.  Deep neural networks are why everyone is so excited about artificial intelligence. 
+Modern artifical intelligence is powered by **deep learning**.  Deep learning is why everyone is so excited about artificial intelligence.   There is reason for the hype - deep learning is now state of the art in fundamental problems such as computer vision and natural language understanding.  Deep learning is part of a larger group of algorithms known as **machine learning**.
 
 > ... the business plans of the next 10,000 startups are easy to forecast: *Take X and add AI* - Kevin Kelly
-
-There is reason for the hype - deep learning is now state of the art in fundamental problems such as computer vision and natural language understanding.  But deep learning is part of a larger group of algorithms known as **machine learning**, which is contributing more than just deep neural networks.
 
 ![fig1]({{ '/assets/ml_energy/fig1.png' }})
 
@@ -32,9 +30,9 @@ Machine learning is a branch of artificial intelligence there are other approach
 
 The expressive mathematical power of machine learning algorithms - in particular deep learning - means that they generalize across multiple problems, such as computer vision or decision making.
 
-There are approaches other than deep learning within machine learning - logistic regression, random forests and support vector machines are other machine learning algorithms that deliver business value today.  Deep learning excels on problems where the structure of the network (i.e. convolution or recurrent) will take advantage of structure within data (i.e. images or text).  They are also able to make use (in fact require) massive amounts of data.
+There are approaches other than deep learning within machine learning - logistic regression, random forests and support vector machines are other machine learning algorithms that deliver business value today.  
 
-The problem with classicial machine learning is that it doesn't benefit much from massive amounts of data - see Figure 2.
+Deep learning excels on problems where the structure of the network (i.e. convolution or recurrent) can take advantage of structure in data (i.e. images or text).  They are also able to make use (in fact require) massive amounts of data.  The problem with classicial machine learning is that it doesn't benefit much from massive amounts of data - see Figure 2.
 
 ![fig2]({{ '/assets/ml_energy/fig2.png' }})
 
@@ -42,49 +40,44 @@ The problem with classicial machine learning is that it doesn't benefit much fro
 
 ## learning what humans can't 
 
-Machine learning is a family of algorithms that learn patterns in data.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.
+Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves by learning patterns in data.  **Learning allows machines to exceed human performance**.  
 
-**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.  It's also already better than any human at complex decision making problems such as Go. 
-
-Previously computers were limited by the intelligence of the programmer - now they are limited by the infomation available in data.
+Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.  It's also already better than any human at complex decision making problems such as Go.   Previously computers were limited by the intelligence of the programmer - now they are limited by the infomation available in data.
 
 ## Deep Blue vs. AlphaGo
 
-This paradigm shift can be demonstrated by comparing two landmark achievements in artifical intelligence - IBM's Deep Blue and Alphabet/Google/DeepMind's AlphaGo.
+The learning paradigm shift can be illuminated by comparing two landmark achievements in artifical intelligence - IBM's Deep Blue and Alphabet/Google/DeepMind's AlphaGo.
 
-In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep Blue derived it's playing strength from brute force computing power. All of Deep Blue's intelligence originated from a team of programmers and chess Grandmasters, who handcrafted moves into the machine.  
+In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep Blue derived it's playing strength from brute force computing power and deterministic rules. All of Deep Blue's intelligence originated from a team of programmers and chess Grandmasters, who handcrafted moves into the machine.  This system without learning was able to beat Garay Kasparov.
+
+Go however presents a more difficult decision making problem than chess.  The dimesionality of the state and action space make brute force approaches impossible and position evaulation challenging.  Go was the last great challenge in the classic games for artificial intelligence.  Consensus was that we were at least 10 years away from solving Go.  Then came AlphaGo.
 
 ![]({{ '/assets/ml_energy/alphago.jpg' }})
 
 **Lee Sedol playing against AlphaGo in an eventual 4-1 loss**
+In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1.  In contrast to Deep Blue, most of AlphaGo's intelligence originated from self play.  The original AlphaGo first learnt from human expert moves before learning from self play.  
 
-In contrast, most of AlphaGo's intelligence originated from self play.  In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1.   The original AlphaGo first learnt from human expert moves before learning from self play.  
-
-A later iteration of the algorithm known as AlphaGo Zero learnt *tabula rasa* (I had to look it up too).  AlphaGo Zero learnt only from the experience of playing the game versus earlier versions of itself.
+A later iteration of the algorithm known as AlphaGo Zero learnt *tabula rasa* (I had to look it up too).  AlphaGo Zero learnt only from the experience of playing the game versus earlier versions of itself.  AlphaGo Zero is vastly superior to the previous verion - leaving human performance in the dust.
 
 **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.  AlphaGo learnt to play go by being fed the board positions in their raw form.  This ability to learn from the raw structure of the world is fundamental to modern machine learning.
 
 ## seeing the structure of our world
 
-The success of modern machine learning in solving computer vision and natural language understanding comes from giving machines the ability to experience the structure of the world in its raw form.
+Deep learning excels when it can take advantage of structure in the raw, senory level data.  This is important.  Using the same raw input as our eyes get, machines can see patterns in high dimensional space that we can't see.  Recurrent neural networks take advantage of the temporal structure in data - meaning machines can experience time.  This allows machines to break barriers in natural language.  They can understand the temporal strucutre in language.
 
-Previously computers were given abstract visions of the world.  Performance required programmers to create these abstractions (also known as feature engineering) to reduce dimensionality and help the machine understand what parts of the data were important.  This dimensionality reduction is not ideal for two reasons - it both removes infomation and requires us to engineer this view of the world.
+Previously computers were given abstract visions of the world.  Features were hand engineerd by us to make problems eaiser for algorithms. Now deep learning generates it's own features.  This ability comes from the structure of the neural networks.  It also means humans don't have to do this job.
 
-We can see the physical strucutre of the world through sight.  We experience time - understanding the relationship between the past, present and future.  Modern machine learning allows machines to understand to this structure using the same raw input as we do.
+**This 'getting out of the way of the machine' is a major paradigm shift**.  Images and text have structure that can be used by neural networks of the correct structure (convolution for vision, recurrent for temporal problems).  Another key trend in deep learning is adverserial learning.  Both reinforcement learning and unsupervised learning (specifically GANS) use adverserial self play to drive learning.
 
-Modern machine learning is able to see patterns for themselves.  Machines are able to understand the patterns we see and to see patterns in high dimensional space that we are not built to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.  It's most prevelant in computer vision and language problems because modern neural networks can take advantage of the structure in images and text.
+The ability to see and understand language not only drives performance, it also allows machine learning to generalize.  Vision and language understanding are low level skills used in essentially every domain of human life.  Mastering these low level skills means that machines can be useful in a whole bunch of different contexts.
 
-Giving machines the ability to see and understand language allows machine learning to generalize into different domains.  The same vision models can be used for collision detection in autonomous driving or for spotting cancer in x-rays.  The same language models can be used to both listen to and respond in conversations on any topic.
-
-This ability to see and learn can be used in almost any industry.  It's hard to think of a vertical industry that machine learning won't transform.  The limiting factor is usually digitization.  Internet technology is already digitized, whereas many medical records or energy systems are not.
+It's hard to think of a vertical industry that machine learning won't transform.  The limiting factor is digitization.  Internet technology is already digitized, whereas many medical records or energy systems are not.
 
 ## modern deep learning
 
-Since deep learning is what everyone is excited about, lets dig into it a bit deeper (ha).
+Since deep learning is what everyone is excited about, lets dig into it deeper (ha).  Deep learning uses artifical neural networks with multiple layers.  How many are needed before a network is deep depends on who you talk too.  Simple networks such as a three layer fully connected network can be used to solve a variety of problems.  This is in contrast to massive convolutional or recurrent networks that can eaisly have 20 or more layers.
 
-Deep learning refers to neural networks with multiple layers.  How many are needed before a network is deep depends on who you talk too.  Simple networks such as a three layer fully connected network can be used to solve a variety of problems.  This is in contrast to massive convolutional or recurrent networks that can have 20 or more layers.
-
-The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.
+The artifical neural network is inspired by the biological neural networks in our brain.  Weights connect multiple layers of artificial neurons together, and gradient descent slowly changes these weights so that the output of the network matches patterns that we want to learn.  The network learns patterns in the data, the pattern of processing a high dimensional input into a more useful low dimensional input (such as pixels into a caption).
 
 Convolutional neural networks are inspired by our own visual cortex.  They allow machines to 'see' - taking the image as a raw input and being able to see what's in the image.  They can be used to classify the contents of the image, recongize faces or even to create captions for images.
 
@@ -92,9 +85,7 @@ Convolutional neural networks are inspired by our own visual cortex.  They allow
 
 **[deep convolutional neural network used in the 2015 DeepMind Atari work](https://github.com/ADGEfficiency/dsr_rl/blob/master/literature/reinforcement_learning/2015_Minh_Atari_Nature.pdf)**
 
-Recurrent neural networks process sequences.  For each part of the sequence the network chooses whether to remember or forget.  As the sequence is processed the network can remember what is important to improve the prediction.
-
-Recurrent neural networks model the temporal structure of data.  Language has this structure (it matters what order words are in).  This makes recurrent neural networks foundational in natural language processing and understanding. 
+Recurrent neural networks get access to the temporal structure of data.  The inputs and outputs of the network are sent in sequences.  The network can learn whether to remember or forget earlier parts of the sequence.  Language has this structure (it matters what order words are in).  This makes recurrent neural networks a revolution in natural language processing and understanding. 
 
 ![]({{ '/assets/ml_energy/recurr.png' }})
 
@@ -106,28 +97,23 @@ Convolutional and recurrent networks have the following similar features
 - state of the art 
 - use raw sensory level data as input
 
-This last point is crucial.  
-
-Letting machines experience the structure of the world is fundamental to the promise of modern machine learning.  We see the raw structure of the world through sight - convolution allows machines to do the same.  We know that the world has a temporal structure - recurrent neural networks allow machines to understand this too.  **Seeing the world as it is allows machines to understand it**.
+This last point is crucial.  Letting machines experience the structure of the world is fundamental to the promise of modern machine learning.  We see the raw structure of the world through sight - convolution allows machines to do the same.  We know that the world has a temporal structure - recurrent neural networks allow machines to understand this too.
 
 ## why now - three major trends
 
 ## one - data
 
-It's hard to overestimate the importance of data to modern machine learning.  The internet and smartphone cameras means we are generating more data than ever.  This volume of data is fundamental to driving modern machine learning.  
+It's hard to overestimate the importance of data to modern machine learning.  Today we produce more data than ever before.  The world is full of devices that generate data through sensing, communication and computation.  This titanic volume of data is fundamental to driving modern machine learning.  
 
-**Training powerful neural networks requires lots of data**.  If you are trying to classify images, a convolutional neural network requires a large number of example images to understand what different classes look like.
+**Training powerful neural networks requires a lot of data**.  Data is most useful if it is labelled.  For example, an image of a dog outside a house that is labelled with `dog` and `house` is more valuable than the same photo with no label.  This is because the labels allow us to penalize the algorithm for labelling it with `cat`.  This is *supervised learning*.
 
-Data is most useful if it is labelled.  For example, an image of a dog outside a house that is labelled with `dog` and `house` is more valuable than the same photo with no label.  This is because the labels allow us to penalize the algorithm for labelling it with `cat`.  This is *supervised learning*.
+For many large technology companies such as Alphabet or Facebook their labelled data has become a major source of the value of their businesses. A lot of this value comes from the insights that machines can learn (or will learn in the future) from such large data sets.  Data has become one of the most valuable commodities - and it also provides a defensible position.  It's unlikely any company can match the big tech companies data quantity or quantity.
 
-For many large technology companies such as Alphabet or Facebook their labelled data has become a major source of the value of their businesses. A lot of this value comes from the insights that machines can learn (or will learn in the future) from such large data sets.
+Sitting alongside supervised learning are *unsupervised learning* and *reinforcement learning*.  These three areas of machine learning differ in the feedback that is available to the learner.  Currently most of the business value of machine learning is driven by supervised learning.  Unsupervised and reinforcement learning are more challenging due to a lower quality learning signal - but also hold great promise precisely because of the potential to learn with less supervision.
 
-Sitting alongside supervised learning are *unsupervised learning* and *reinforcement learning*.  These three areas of machine learning differ in the feedback that is available to the learner
 - supervised learning = learns from a label for every sample of data
 - unsupervised learning = learns from 'hidden' patterns in the data
 - reinforcement learning = learns to maximize a scalar reward signal
-
-Currently most of the business value of machine learning is driven by supervised learning.  Unsupervised and reinforcement learning are more challenging due to a lower quality learning signal - but also hold great promise precisely because of the potential to learn with less supervision.
 
 ## two - hardware
 
@@ -149,7 +135,7 @@ Underpinning many of the advances are combinations of simpler techniques such as
 
 In unsupervised learning generative adverserial networks (GANs) can be used to generate realistic pictures.  The adverserial theme is also powering AlphaGo AlphaZero, reinforcement learning agents that use self-play to blow past human performance.
 
-Another key trend in machine learning algorithms is the availability of open source tools and literature. Companies such as Alphabet or Facebook make many of their machine learning tools all open source and available.  Almost all of the machine learning literature is published on open platforms such as arXiv.
+Another key trend in machine learning algorithms is the availability of open source tools and literature. Companies such as Alphabet or Facebook make many of their machine learning tools all open source and available.  Essentially all machine learning literature is published on open platforms such as arXiv.
 
 While these technology companies share their tools and knowledge, they don't share their data. This is because data is the crucial element in producing value from machine learning. World-class tools and computing power are not enough to deliver value from machine learning - you need data to make the magic happen.
 
@@ -161,13 +147,13 @@ Being able to utilize massive amounts of data is the reason neural networks can 
 
 But this reliance on data is neural network's achilles heel.  You can't train large neural networks with small amounts of data.
 
-Human beings are able to learn from small amounts of training data - burning yourself once on the oven is enough to learn not to touch it again. Many machine learning algorithms are not able to learn in this way.  This is known as **sample inefficiency** - the requirement for large amounts of data to get superhuman performance.
+Human beings are able to learn from small amounts of training data - burning yourself once on the oven is enough to learn not to touch it again. Many machine learning algorithms are not able to learn in this way.  This is known as **sample inefficiency** - the requirement for large amounts of data to get superhuman performance.  It's especially a problem in reinforcement learning, where the learning signal is weak. 
 
 The dependence on data also creates a defensible moat for large technology companies.  The unique and massive datasets owned by Google and Facebook allow unique and powerful machine learning driven businesses.  This combined with the 'virtuous cycle of AI' (AI drives better products -> more data -> better products) means that machine learning will likely continue the dominance of a few large players.
 
 ## interpretability
 
-Neural networks don't lend themselves to explanation. The high dimensionality of the input and parameter space means that it's hard to pin down cause to effect. Industries such as finance are legally prevented from using uninterpretable models.  
+Neural networks don't lend themselves to explanation. The high dimensionality of the input and parameter space means that it's hard to pin down cause to effect. Industries such as finance are legally prevented from using uninterpretable models - a lot of work is occuring in the financial sspace to make machine learning interpretable.  This is a key advantage of random forests - you can estimate feature importance in an interpretable way.
 
 Related to this is our current lack of a theoretical understanding. Many academics are uncomfortable with machine learning. We can empirically test if machine learning is working, but we don't really know why it is working.  Modern machine learning is an empirical science - we don't really know why one algorithm works and another doesn't, we can only run experiments and test one versus the other. 
 

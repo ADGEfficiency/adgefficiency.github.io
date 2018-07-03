@@ -2,6 +2,8 @@
 
 Clap before each speaker to welcome onto stage
 
+Take notes on questions as we go
+
 - Introducing the speaker, ideally by creating a connection between person and topic so that the audience sits up :)
 - Handling questions
 - Timekeeping for the 10+5 format. 
@@ -14,8 +16,12 @@ Clap before each speaker to welcome onto stage
 
 ---
 
-## Philip Wengerd (Geneva/Berlin)
-### Requirements and challenges of financial machine learning
+## Dr Christian Lübbe (Oxford/Berlin)
+### Predicting petrol prices in Germany
+
+Motivation: curiosity and on the technical side looking for a project that gives a chance to work with time series (new topic for me) and machine learning.
+
+Personal learning: Time series, machine learning, working with large data sets. 
 
 ## Teresita Guerrero (Guadalajara/Berlin)
 ### Email summarizer. Using NLP to summarize email threads
@@ -25,12 +31,8 @@ She is a data lover, software engineer and Co-Director of Datalab Community Mexi
 
 Her project, The Email Summarizer, combines the power of machine learning with the software engineering to present an application that challenges the human writting to present a shorter version of a text.
 
-## Dr Christian Lübbe (Oxford/Berlin)
-### Predicting petrol prices in Germany
-
-Motivation: curiosity and on the technical side looking for a project that gives a chance to work with time series (new topic for me) and machine learning.
-
-Personal learning: Time series, machine learning, working with large data sets, front to end project work.
+## Philip Wengerd (Geneva/Berlin)
+### Requirements and challenges of financial machine learning
 
 ---
 
