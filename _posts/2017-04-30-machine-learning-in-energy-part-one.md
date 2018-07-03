@@ -24,9 +24,11 @@ There is reason for the hype - deep learning is now state of the art in fundamen
 
 ## artifical intelligence vs machine learning vs deep learning
 
-Artificial intelligence, machine learning and deep learning are used interchangebly.  While all related there are important distinctions between them. 
+it's important to appreciate the difference between artificial intelligence, machine learning and deep learning. 
 
-Machine learning is a branch within artificial intelligence.  There are other approaches such as symbolic AI.  Machine learning is currently the part of artificial intelligence that is working the best.
+> Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
+
+Machine learning is a branch of artificial intelligence there are other approaches.  Machine learning is currently the part of artificial intelligence that is working the best.
 
 The expressive mathematical power of machine learning algorithms - in particular deep learning - means that they generalize across multiple problems, such as computer vision or decision making.
 
@@ -43,8 +45,6 @@ The problem with classicial machine learning is that it doesn't benefit much fro
 ## learning what humans can't 
 
 Machine learning is a family of algorithms that **learn patterns in data**.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.  Data is the teacher.
-
-> Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
 **Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
 
