@@ -32,25 +32,21 @@ Machine learning is a branch of artificial intelligence there are other approach
 
 The expressive mathematical power of machine learning algorithms - in particular deep learning - means that they generalize across multiple problems, such as computer vision or decision making.
 
-There are approaches other than deep learning within machine learning - logistic regression, random forests and support vector machines are other machine learning algorithms that deliver business value today.
+There are approaches other than deep learning within machine learning - logistic regression, random forests and support vector machines are other machine learning algorithms that deliver business value today.  Deep learning excels on problems where the structure of the network (i.e. convolution or recurrent) will take advantage of structure within data (i.e. images or text).  They are also able to make use (in fact require) massive amounts of data.
 
-Deep learning excels on problems where the structure of the network (i.e. convolution or recurrent) will take advantage of structure within data (i.e. images or text).  They are also able to make use (in fact require) massive amounts of data.
-
-The problem with classicial machine learning is that it doesn't benefit much from massive amounts of data - see Figure 2 below.
+The problem with classicial machine learning is that it doesn't benefit much from massive amounts of data - see Figure 2.
 
 ![fig2]({{ '/assets/ml_energy/fig2.png' }})
 
-**Figure 2 – amount of data versus machine learning algorithm performance.  Adapted from the talk [AI is the new electricity - Andrew Ng](https://www.youtube.com/watch?v=21EiKfQYZXc)**
+**Figure 2 – amount of data versus machine learning algorithm performance.  [Adapted from AI is the new electricity - Andrew Ng](https://www.youtube.com/watch?v=21EiKfQYZXc)**
 
 ## learning what humans can't 
 
-Machine learning is a family of algorithms that **learn patterns in data**.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.  Data is the teacher.
+Machine learning is a family of algorithms that learn patterns in data.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.  Data is the source of knowledge - the teacher.
 
-**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.
+**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.  It's also already better than any human at complex games such as Go.
 
-Giving machines the ability to see and understand language allows machine learning to generalize into different domains.  The same vision models can be used for collision detection in autonomous driving or for spotting cancer in x-rays.  The same language models can be used to both listen to and respond in conversations on any topic.
-
-This ability to see and learn can be used in almost any industry.  It's hard to think of a vertical industry that machine learning won't transform.  The limiting factor is usually digitization.  Internet technology is already digitized, whereas many medical records or energy systems are not.
+Previously computers were limited by the intelligence of the programmer - now they are limited by the infomation available in data.
 
 ## Deep Blue vs. AlphaGo
 
@@ -78,7 +74,13 @@ We can see the physical strucutre of the world through sight.  We experience tim
 
 Modern machine learning is able to see patterns for themselves.  Machines are able to understand the patterns we see and to see patterns in high dimensional space that we are not built to comprehend.  This 'getting out of the way of the machine' is a major paradigm shift in computer and data science.  It's most prevelant in computer vision and language problems because modern neural networks can take advantage of the structure in images and text.
 
+Giving machines the ability to see and understand language allows machine learning to generalize into different domains.  The same vision models can be used for collision detection in autonomous driving or for spotting cancer in x-rays.  The same language models can be used to both listen to and respond in conversations on any topic.
+
+This ability to see and learn can be used in almost any industry.  It's hard to think of a vertical industry that machine learning won't transform.  The limiting factor is usually digitization.  Internet technology is already digitized, whereas many medical records or energy systems are not.
+
 ## modern deep learning
+
+Since deep learning is what everyone is excited about, lets dig into it a bit deeper (ha).
 
 Deep learning refers to neural networks with multiple layers.  How many are needed before a network is deep depends on who you talk too.  Simple networks such as a three layer fully connected network can be used to solve a variety of problems.  This is in contrast to massive convolutional or recurrent networks that can have 20 or more layers.
 
