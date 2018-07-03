@@ -42,9 +42,9 @@ The problem with classicial machine learning is that it doesn't benefit much fro
 
 ## learning what humans can't 
 
-Machine learning is a family of algorithms that learn patterns in data.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.  Data is the source of knowledge - the teacher.
+Machine learning is a family of algorithms that learn patterns in data.  Traditionally humans would write code to tell a machine what to do.  Machine learning models figure out solutions for themselves.
 
-**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.  It's also already better than any human at complex games such as Go.
+**Learning allows machines to exceed human performance**.  Deep learning has blown past the previous state of the art in fundamental computer science problems such as computer vision and natural language understanding.  It's also already better than any human at complex decision making problems such as Go. 
 
 Previously computers were limited by the intelligence of the programmer - now they are limited by the infomation available in data.
 
@@ -58,11 +58,11 @@ In 1996 IBM's Deep Blue defeated World Chess Champion Gary Kasparov. IBMs Deep B
 
 **Lee Sedol playing against AlphaGo in an eventual 4-1 loss**
 
-In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. AlphaGo was not given any information about Go stragety from its programmers. Alpha Go used reinforcement learning to learn from its own actions and experience. 
+In contrast, most of AlphaGo's intelligence originated from self play.  In 2016 Alphabet's AlphaGo defeated Go legend Lee Sedol 4-1. 
+
+The original AlphaGo first learnt from human expert moves before learning from self play.  A later iteration of the algorithm known as AlphaGo Zero learnt *tabula rasa* - with no human input.
 
 **Machine learning allowed AlphaGo to learn on it's own, and become better than any human will ever be at the game of Go**.  AlphaGo learnt to play go by being fed the board positions in their raw form.  This ability to learn from the raw structure of the world is fundamental to modern machine learning.
-
-In the case of both chess and Go, the rise of the machines has lead to an increase in our own ability to play these games.  
 
 ## seeing the structure of our world
 
