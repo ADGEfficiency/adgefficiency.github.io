@@ -9,21 +9,21 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This post is the first detailing the debuging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).  energy_py has now reached over 500 commits!
+This is the story of debugging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).
 
 ![]({{ "/assets/debug_dqn/commits.png"}}) 
 
-[The experiments ran on the dev branch at this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  
+The experiments ran on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  The [environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) is the the energy_py wrapper around the Open AI gym CartPole-v0 environment]
 
-[The environment is the the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).  
+Cartpole is a good environment to use for debugging for two reasons.  Cartpole is a simple, classic reinforcement learning problem.  Using a simple environment means experiment run times can be reduced, increasing the rate of hyperparameter iteration.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
 
-Cartpole is a good environment to debug for two reasons.  Cartpole is a classic reinforcement learning problem and is also reasonably simple.  Debugging an agent on a complex environment means long run times and a low rate of hyperparameter iterations.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
-
-The second reason Cartpole is good for debugging is that I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
+The second reason is that I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
 
 The idea of documenting the debug and tuning process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
-This post shows the logic behind a successful debugging, the kinds of silly errors that can easily be made and to show how cartpole often performs using DQN. It then starts the hyperparameter tuning process, which is continued in the second post, [DDQN hyperparameter tuning using Open AI gym cartpole](https://adgefficiency.com/dqn-tuning/).
+This is a contrast to the ability to quickly see cause and effect when debugging software.  If experiments are cheap it makes more sense to not waste time thinking about the problem, and to just get on and solve it.
+
+This post shows the thought process I used when debugging, the kinds of silly errors that can easily be made and to show how cartpole often performs using DQN. It then starts the hyperparameter tuning process, [which is finished in the second post](https://adgefficiency.com/dqn-tuning/).
 
 This is the third iteration of DQN that I've built - this one was significantly influenced by the [Open AI baselines implementation of DQN](https://github.com/openai/baselines/tree/master/baselines/deepq).
 
@@ -31,11 +31,15 @@ This is the third iteration of DQN that I've built - this one was significantly 
 
 ![]({{ "/assets/debug_dqn/graph.png"}}) 
 
-This is the third major iteration of DQN I've built in energy_py.  Each iteration is a complete rewrite.  I find it a luxury to write something from scratch, and believe that iteration is the only way progress .  I'm proud of how far I've come, and of how poor my first implementation looks to me today!
+This is energy_py's third DQN agent.  Each iteration is a complete rewrite.  I find it a luxury to write something from scratch, and believe that iteration is the only way progress .  I'm proud of how far I've come, and of how poor my first implementation looks to me today!
 
 > If you are not embarrassed by the first version of your product, you've launched too late - Reid Hoffman
 
 > I know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, that is when we start talking -  Linus Torvalds
+
+Two more rebuilds to go...
+
+## a brief history
 
 [version 1](https://github.com/ADGEfficiency/energy_py/tree/d21c3832e9116cba00891361e6777b8b896f9b78)
 - built in Keras
@@ -53,8 +57,6 @@ This is the third major iteration of DQN I've built in energy_py.  Each iteratio
 - built in Tensorflow, with a single session call per `agent.action()` and `agent.learn()`
 - gradient clipping, learning rate decay
 - policy is split out to allow either epsilon greedy or a softmax policy to be used
-
-Two more rebuilds to go...
 
 ## the setup
 
@@ -162,7 +164,7 @@ What I was seeing was a drop in average reward to around 10 per episode after ex
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behavior we saw.
 
-To do this I added the weights as histograms in tensorBoard by indexing a list of parameters for the online and target networks.  This is hacky - tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
+To do this I added the weights as histograms in tensorboard by indexing a list of parameters for the online and target networks.  This is hacky - tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
 
 ```python
 self.act_summaries.extend([
@@ -363,12 +365,12 @@ best practices followed
 - keeping a detailed log of your thoughts
 
 error fixes
-- incorrect masking of `Q(s',a)`
+- incorrect masking of Q(s',a)
 - test code repeating error of incorrect masking
 
 hyperparameters
 - batch normalization setup to only scale and not remove the mean
-- exploration changed from `0.3` to `0.5`
+- exploration decay fraction from `0.3` to `0.5`
 - learning rate reduced and decayed
 
 Thanks for reading!

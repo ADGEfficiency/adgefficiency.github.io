@@ -7,7 +7,7 @@ categories:
 excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning agent.
 
 ---
-This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment [is at this commit on the master branch of energy_py](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
+This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment is at [this commit](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
 **These posts follow a problem-hypothesis structure**.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypotheses.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the value of taking the time to think about the problem relative to the cost of testing a hypothesis.
 
@@ -17,7 +17,7 @@ This kind of interactive tuning has two benefits.  First it can be faster than g
 
 Picking up where we left off in the first post - the major problem was instability.  The agent was often able to solve the CartPole-v0 environment (Open AI consider this environment solved when an average over the last 100 episodes of 195 is reached).  But after solving the environment the agents often completely forgot what they had learnt and collapsed to poor policies.
 
-sy hypotheses for the cause of the policy quality collapse were
+My hypotheses for the cause of the policy quality collapse were
 - overestimation bias
 - batch size 
 - neural network size
@@ -27,7 +27,7 @@ I then progressed to semi-scientifically investigate these hypotheses.
 
 ## hypothesis - overestimation bias 
 
-The hypothesis at this stage was that overestimation bias was causing instability (plus I wanted to try out the DDQN code!).  
+The hypothesis at this stage was that overestimation bias was causing instability - I also wanted to try out the DDQN code.
 
 Overestimation bias is the tendency of Q-Learning algorithms to overestimate the value of states.  This overestimation is a result of the aggressive acting and learning in the Q-Learning algorithm
 - in acting - where the argmax will always select the 'best' action, even if the Q value is only slightly higher than another action
@@ -229,11 +229,6 @@ This is a potential solution to the stability problem.  Rather than training for
 If you think about how we learn skills in the real world, we do often use early stopping.  Once we learn handwriting write to a decent level we commonly don't continue to train the skill.  Instead we fall into a repeated pattern of writing in the same way for the rest of our lives.
 
 It's perhaps a bit cruel to continue to force gradient updates on an agent when it has solved an environment.  A small enough learning rate should solve this problem but it's likely that the learning rate would be so small that there is no point doing the update in the first place.
-
-I found one mention of early stopping in the reinforcement learning literature - I show the paragraph in full below
-
-![fig9]({{ "/assets/dqn_debug_2/fig9.png"}}) 
-**Figure 9 - https://nihit.github.io/resources/spaceinvaders.pdf**
 
 ## takeaways
 
