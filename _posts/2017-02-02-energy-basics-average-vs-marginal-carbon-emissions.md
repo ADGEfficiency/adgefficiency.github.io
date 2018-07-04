@@ -65,7 +65,7 @@ High marginal cost generators like open cycle gas turbines are usually also dirt
 
 ## other methods for accounting for carbon 
 
-The excellent [electricityMap](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.
+The excellent [electricityMap](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers consequential accounting.
 
 ![Figure 3]({{ "/assets/avg_marginal/fig3.jpg"}})
 **Figure 3 - Comparison of carbon accounting methods [Tomorrow.com](http://www.tmrow.com/)**
