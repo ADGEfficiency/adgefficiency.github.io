@@ -7,13 +7,13 @@ excerpt: Many professionals are getting this wrong.
 
 ---
 
-Calculating carbon savings seems simple - **yet many professionals get it wrong**.  I know because I used to make this mistake.
+**Many professionals are getting the estimation of carbon savings wrong.  I know because I used to make this mistake.**
 
-Calculating carbon savings is fundamental to the climate change problem.  Knowing how much carbon a project saves allows us to understand how effective (meausured in `$/tC`) a project is at saving carbon.  
+Calculating carbon savings is fundamental to fighting climate change.  Knowing a project's carbon saving allows us estimtate how effective (meausured in `$/tC`) a project is at saving carbon.  
 
-This allows different technologies to be compared at how 'efficient' they are at saving carbon.  This value can also be compared with a carbon price (also measured in `$/tC`) to determine if a project is worth doing (relative to what society thinks the cost of carbon in `$/tC` is).
+This allows different technologies to be compared on the same basis.  This value can also be compared with a carbon price (also measured in `$/tC`) to determine if a project is worth doing (relative to what society thinks the cost of carbon in `$/tC` is).
 
-So where are people going wrong?  They don't appreciate **the difference between average and marginal carbon emissions**.
+So where are people going wrong?  **The mistakes is in misunderstanding the difference between average and marginal carbon emissions**.
 
 Average carbon emissions are calculated using the total carbon emissions and total amount of electricity generated.  This average is taken across all generators.
 
@@ -23,7 +23,7 @@ Average carbon emissions are calculated using the total carbon emissions and tot
 |Electricity generated|	MWh|	182,827|
 |Carbon intensity|	tC/MWh|	0.456|
 
-This average carbon intensity can be used to calculate carbon savings.  If a project saved 2 MWh, we would calculate 2 * 0.456 = 0.912 tC as the saving.  This is wrong!
+This average carbon intensity can be used to calculate carbon savings.  If a project saved `2 MWh`, we would calculate a saving of`2 * 0.456 = 0.912 tC`.  This is wrong!
 
 ```
 electricity_saved = 2 MWh
@@ -37,7 +37,7 @@ In a market based elecricity system, the reduction in generation is not averaged
 
 Suppose we have a grid where electricity is supplied by either wind or coal (the Base Case).  If we save 1 GW of electricity, the generation of the coal plant will reduce by 1 GW (Case 1).
 
-The wholesale mechanism operating in most electricity markets will reduce output on the most expensive plant, not reduce the output of all plants equally.
+An ideal electricity market will reduce output on the most expensive plant, and keep cheaper plants running at full load.  
 
 ![Figure 1 & 2]({{ "/assets/avg_marginal/fig1_2.png"}})
 **Figure 1 & 2 – The effect of saving 1 GW of electricity.  Note that the generation from wind is unchanged.**
@@ -73,6 +73,5 @@ The excellent [electricityMap](https://www.electricitymap.org/?page=map&solar=fa
 [Brander et. al (2018)](https://reader.elsevier.com/reader/sd/634A47597DBEB61B680ED8B586A6B0AE714ED96505E7FC543D288089468636BB698D3B3135D52D434C9E97F52B2691A1) note that  the locational grid average should be the only method used to calculate average carbon intensities, except in the cases where actions result in additional renewable generation. 
 
 electricityMap also have a tecnical blog post on calculating marginal carbon intensities.
-
 
 Thanks for reading!
