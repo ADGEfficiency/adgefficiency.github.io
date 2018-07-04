@@ -23,23 +23,18 @@ Energy transitions drive the development of civilization. Muscle and wood powere
 
 This transition is simultaneously similar and different to past transitions.  This post will highlight four truths about energy transitions.  
 
-Three ways in which this transition is similar to the past:
+Three ways in which this transition is similar to the past
+- **slow**
+- **additive**
+- **sequential**
 
-#### energy transitions are **slow**
-
-#### energy transitions are **additive**
-
-#### energy transitions are **sequential**
-
-And one in which the clean energy transition is departing from previous transitions:
-
-#### energy transitions enable **new utility**
+And one in which the clean energy transition is departing from previous transitions - **enabling new utility**
 
 ## The First Inconvenient Truth - Energy transitions are slow
 
 In [Energy Transitions: History, Requirements, Prospects](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), Vaclav Smil notes each subsequent transition takes longer than the last.  To move from 5% to 25% of global primary energy consumption, coal took 35 years, oil 40 years and finally natural gas took 55 years.
 
-There are **two reasons** for the slowing down. As the absolute size of our energy consumption increases, the relative effect of adding more is smaller. The massive growth in global energy consumption means that **effort today has a smaller relative effect** than in the past.
+There are two reasons for the slowing down. As the absolute size of our energy consumption increases, the relative effect of adding more is smaller. **The massive growth in global energy consumption means that effort today has a smaller relative effect than in the past**.
 
 Second, **technical challenges increase**. Moving from wood to coal was an easy transition - both are solid fuels that can be transported, handled and burnt using similar techniques. Using oil required building a massive global upstream and downstream infrastructure, cars and roads to drive on. Gas turbines and nuclear power are some of the most complex machines ever built.
 
@@ -49,7 +44,7 @@ The clean energy transition is full of technical challenges. Clean energy genera
 
 ## The Second Inconvenient Truth - Energy transitions are additive
 
-**Of the Four Truths, this is the most inconvenient**. Each transition increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. **Older fuels take a long time to go away**. We are still building coal-fired generation today and are recklessly likely to for a long time.
+This is the most inconvenient of the four truths. Each transition increases the amount and quality of energy we use. But each time we transition we don’t replace old energy sources - we add new energy sources on top. **Older fuels take a long time to go away**. We are still building coal-fired generation today and are recklessly likely to for a long time.
 
 Figure 1 shows the history of US primary fuel consumption. US coal consumption has risen all the way through to the start of the 21st century. Each new fuel has not displaced coal, instead they add to an existing and increasing coal consumption.
 
@@ -62,7 +57,7 @@ Improvements in technology, building of supply chains and know-how mean that mat
 
 Diesel generators (an 1890’s technology) are a great example of this. Diesel generators are reasonably efficient, quick and cheap to build with a well-understood maintenance schedule.  They continue to be built on the kW to multi MW scales.
 
-*What this means for the clean energy transition -fossil fuels aren’t going away.*
+*What this means for the clean energy transition - fossil fuels aren’t going away.*
 
 ## The Third Inconvenient Truth - Energy transitions are sequential and high variance
 

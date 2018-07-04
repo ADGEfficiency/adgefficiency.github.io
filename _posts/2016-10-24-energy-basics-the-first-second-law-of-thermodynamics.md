@@ -4,7 +4,7 @@ date: 2016-10-24
 author: Adam Green
 categories:
   - Energy Basics
-excerpt: The First and Second Law are foundational in energy engineering.  They are also simple enough to be summarized in only two sentences.
+excerpt: Simple enough to be summarized in two sentences.
 
 ---
 The First and Second Law are foundational in energy engineering.  They are also simple enough to be summarized in only two sentences.

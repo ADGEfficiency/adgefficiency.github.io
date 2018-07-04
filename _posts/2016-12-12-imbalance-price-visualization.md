@@ -3,7 +3,7 @@ title: Imbalance Price Visualization
 date: 2016-12-12
 categories:
   - Imbalance Price Forecasting
-excerpt: Visualizing the UK Imbalance Price
+excerpt: Plotting using matplotlib.
 
 ---
 

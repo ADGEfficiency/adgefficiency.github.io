@@ -3,7 +3,7 @@ title: 'Q = m Cp dT'
 date: 2016-10-31
 categories:
   - Energy Basics
-excerpt: The equation I used the most in energy engineering. 
+excerpt: The equation I used the most as an energy engineer.
 
 ---
 Heat transfer is a fundamental energy engineering operation.  Hot water loops are commonly used to transfer heat in district heating networks and on industrial sites.  

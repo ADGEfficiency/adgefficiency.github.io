@@ -4,6 +4,7 @@ date: 2016-12-01
 categories:
   - Electricity Price Forecasting
 excerpt: 
+An introduction to the economics of imbalance in electricity systems.
 
 ---
 
