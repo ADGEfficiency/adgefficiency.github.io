@@ -4,6 +4,8 @@ date: 2017-02-07
 author: Adam Green
 categories:
   - Energy Insights
+excerpt: BP's view on the next 40 years.
+
 ---
 I look forward to the Annual BP Energy Outlook.  Two of the principles of the Outlook are:
 1. avoiding groupthink by exposing ideas to the public
