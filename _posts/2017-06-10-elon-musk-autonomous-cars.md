@@ -3,9 +3,10 @@ title: 'Elon Musk on autonomous cars'
 date: 2017-06-10
 categories:
   - Energy Insights
+excerpt: Musk thinks autonomous vehicles will be cheaper and driven for longer.
 ---
 
-In this Energy Insights post I highlight an interesting insight from a TED talk with Elon Musk. The talk is as wide ranging as Musk's talents - well worth a watch.
+The content for this Energy Insights posts comes from an Elon Musk TED talk.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/zIwLWfaAg-8?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
