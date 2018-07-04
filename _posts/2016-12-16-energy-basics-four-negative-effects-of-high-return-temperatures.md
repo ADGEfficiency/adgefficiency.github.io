@@ -3,7 +3,7 @@ title: 'Four Negative Effects of High Return Temperatures'
 date: 2016-12-16
 categories:
   - Energy Basics
-excerpt: Return temperatures are a major problem in district heating - do you know why?
+excerpt: Why are return temperatures are a major problem in district heating?
 
 ---
 
