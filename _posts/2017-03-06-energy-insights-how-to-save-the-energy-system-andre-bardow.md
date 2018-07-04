@@ -3,8 +3,10 @@ title: 'How to save the energy system - André Bardow'
 date: 2017-03-06
 categories:
   - Energy Insights
+excerpt:  Peak oil won't save the planet, wind and solar lack an inherent economy of scale and German capacity factors.
+
 ---
-These Energy Insights come from the TED talk [‘How to save the energy system’](https://www.youtube.com/watch?v=3_N-DooApEE) by André Bardow.  André is a fantastic speaker and his talk is well worth a watch.  Below are three insights from the talk.
+These Energy Insights come from the TED talk [‘How to save the energy system’](https://www.youtube.com/watch?v=3_N-DooApEE) by André Bardow. Below are three insights from the talk.
 
 ##  Why peak oil won’t save the planet
 

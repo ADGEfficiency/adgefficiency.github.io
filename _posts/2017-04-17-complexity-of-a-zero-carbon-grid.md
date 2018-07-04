@@ -3,6 +3,7 @@ title: 'The Complexity of a Zero Carbon Grid'
 date: 2017-04-17
 categories:
   - Energy Insights
+excerpt: Jesse Jenkin's insights on decarbonizing electricity systems.
 ---
 
 I’m excited to present this Energy Insights post. I’m highlighting a few interesting insights from the [The Complexity of a Zero Carbon Grid](https://www.greentechmedia.com/squared/read/the-complexity-of-a-zero-carbon-grid) show.  This is very special as [The Interchange podcast](https://soundcloud.com/theinterchangepodcast) has only been publicly relaunched recently.
