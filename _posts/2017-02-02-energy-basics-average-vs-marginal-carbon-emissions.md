@@ -65,11 +65,14 @@ High marginal cost generators like open cycle gas turbines are usually also dirt
 
 ## other methods for accounting for carbon 
 
-The excellent [Electricity Map](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.
+The excellent [electricityMap](https://www.electricitymap.org/?page=map&solar=false&remote=true&wind=false) has a great figure showing different methods for accounting for carbon.  This post focused on the carbon value of projects, so covers *consequential accounting*.
 
 ![Figure 3]({{ "/assets/avg_marginal/fig3.jpg"}})
 **Figure 3 - Comparison of carbon accounting methods [Tomorrow.com](http://www.tmrow.com/)**
 
-  If you are accounting for the carbon that is emitted from your personal choices, the *location* or *market* based methods are relevant.
+[Brander et. al (2018)](https://reader.elsevier.com/reader/sd/634A47597DBEB61B680ED8B586A6B0AE714ED96505E7FC543D288089468636BB698D3B3135D52D434C9E97F52B2691A1) note that  the locational grid average should be the only method used to calculate average carbon intensities, except in the cases where actions result in additional renewable generation. 
+
+electricityMap also have a tecnical blog post on calculating marginal carbon intensities.
+
 
 Thanks for reading!
