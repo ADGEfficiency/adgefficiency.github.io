@@ -3,7 +3,7 @@ title: 'Average vs. Marginal Carbon Emissions'
 date: 2017-02-02
 categories:
   - Energy Basics
-excerpt: Calculating carbon savings should be easy - many professionals get it wrong
+excerpt: Many professionals are getting this wrong. 
 
 ---
 
