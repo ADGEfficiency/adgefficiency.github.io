@@ -11,10 +11,7 @@ link to this talk in the readme
 
 ## energy_py - lesson learnt building a reinforcement learning library
 
----
-![humber]("/assets/energy_py_talk/humber.jpg")
-
----?image=/assets/energy_py_talk/humber.jpg&size=auto 90%
+---?image=/assets/energy_py_talk/humber.jpg&size=auto 100%
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
