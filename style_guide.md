@@ -15,6 +15,8 @@ excerpt:
 
 ![fig1]({{ "/assets//fig1.png"}}) 
 
+---?image=path/to/image.file&size=auto 90%
+
 **Figure 1 -**
 
 numbers should be like 10, not like `10`
