@@ -14,9 +14,9 @@ link to this talk in the readme
 ---
 ![humber]("/assets/energy_py_talk/humber.jpg")
 
----
----?image=/assets/energy_py_talk/humber_excel.png&size=auto 90%
----
+---?image=/assets/energy_py_talk/humber.jpg&size=auto 100%
+
+---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
 ## focus on one agent
 - two bad implementations don't equal one good one
