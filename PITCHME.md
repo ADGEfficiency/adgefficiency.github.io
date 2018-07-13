@@ -12,10 +12,10 @@ link to this talk in the readme
 ## energy_py - lesson learnt building a reinforcement learning library
 
 ---
-![]({{ "/assets/energy_py_talk/humber.png"}}) 
+![humber]({{ "/assets/energy_py_talk/humber.jpg"}}) 
 
 ---
-![]({{ "/assets/energy_py_talk/humber_excel.png"}}) 
+![excel]({{ "/assets/energy_py_talk/humber_excel.png"}}) 
 
 ---
 
