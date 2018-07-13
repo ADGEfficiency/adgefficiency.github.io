@@ -18,6 +18,8 @@ link to this talk in the readme
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
+---
+
 ## focus on one agent
 - two bad implementations don't equal one good one
 - low dimensional action spaces (either discrete or managabely discretizable)
