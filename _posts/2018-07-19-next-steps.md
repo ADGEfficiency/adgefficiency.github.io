@@ -1,4 +1,5 @@
-title: 'next steps in the clean energy transiton'
+---
+title: 'next steps in the clean energy transition'
 date: 2018-07-19
 categories:
 - Energy
@@ -6,7 +7,7 @@ excerpt: What we need to do next.
 
 ---
 
-## next steps in the clean energy transiton
+## next steps in the clean energy transition
 
 **cleaning up electricity** - high quality renewable energy can be substituted into transport and heating 
 
@@ -14,7 +15,7 @@ excerpt: What we need to do next.
 
 **pray for China** - the world leader in renewable capacity growth
 
-**deploy storage** - batteries and demand flexibility to smooth intermittent renewables
+**deploy storage** - batteries and demand flexibility to smooth intermittent renewable
 
 **digitize** - the energy industry is behind on installing sensors and collecting data
 
