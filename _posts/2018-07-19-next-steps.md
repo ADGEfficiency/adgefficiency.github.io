@@ -7,7 +7,7 @@ excerpt: What we need to do next.
 
 ---
 
-**cleaning up electricity** - high quality renewable energy can be substituted into transport and heating 
+**clean up electricity** - high quality renewable energy can be substituted into transport and heating 
 
 **stop building coal generation or mines** - we don't need either of them
 
