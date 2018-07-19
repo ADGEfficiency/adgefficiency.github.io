@@ -13,7 +13,7 @@ Open AI previously created a world class 1v1 bot with significant gameplay restr
 
 A common comment among Dota 2 fans is that the restrictions on the gameplay devalue the performance of the Open AI agent.  **This is incorrect**.
 
-A more complex game would allow **more dimensions in which a machine could outperform a human**.  Allowing the use of core mechanics such as wards will give machines additional ways to outperform humans.  
+A more complex game would allow **more dimensions in which a machine could outperform a human**.  Being able to see patterns in high dimensional spaces is what modern machine learning is all about.  Allowing the use of core mechanics such as wards will give machines additional ways to outperform humans.  
 
 The more complex the game, the higher the skill cap.  Because the Open AI agent can learn from so much experience (well beyond what any human being could achieve), the sample inefficiency of modern reinforcement learning can be ignored.  This is the key challenge in modern RL, which Open AI are overcoming through super villain levels of CPU and GPU.
 
@@ -38,3 +38,5 @@ Thanks for reading!!!
 [AlphaGo, in context](https://medium.com/@karpathy/alphago-in-context-c47718cb95a5)
 
 [Zyori Podcast #130 w/ @trentPax](https://www.youtube.com/watch?v=5qcA15ZmxJQ)
+
+machine learning in energy - [part one](https://adgefficiency.com/machine-learning-in-energy-part-one/) - [part two](https://adgefficiency.com/machine-learning-in-energy-part-two/)
