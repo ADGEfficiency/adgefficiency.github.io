@@ -1,3 +1,4 @@
+---
 title: 'All hail the Open AI DOTA 2 agent'
 date: 20/07/2018
 categories: 
@@ -22,7 +23,7 @@ It is likely that this version of the Open AI agent will beat every human it fac
 
 Open AI will be able to quantify the relative and absolute performance changes as the agent learns.  This quantification is a key part of the learning process - if it is learning then the metrics exist, and gradients can point towards them.
 
-It is unlikely that Open AI would let their agent play against humans if it didn't believe the agents had a good chance. 
+It is unlikely that Open AI would let their agent play against humans if it didn't believe the agents had a good chance.  This **infomational asymmetery** is massivly in favour of Open AI.  
 
 Machine learners and DOTA fans should all enjoy the series of matches to come - with the Open AI agent beating every single one.  Enjoy the journey, even if you know the destination.
 
