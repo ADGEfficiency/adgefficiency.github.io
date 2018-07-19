@@ -36,4 +36,4 @@ Thanks for reading!!!
 
 [AlphaGo, in context](https://medium.com/@karpathy/alphago-in-context-c47718cb95a5)
 
-
+[Zyori Podcast #130 w/ @trentPax](https://www.youtube.com/watch?v=5qcA15ZmxJQ)
