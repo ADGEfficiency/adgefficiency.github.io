@@ -7,8 +7,6 @@ excerpt: What we need to do next.
 
 ---
 
-## next steps in the clean energy transition
-
 **cleaning up electricity** - high quality renewable energy can be substituted into transport and heating 
 
 **stop building coal generation or mines** - we don't need either of them
