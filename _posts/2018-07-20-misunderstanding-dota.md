@@ -11,7 +11,7 @@ The Open AI Dota 2 agent is currently facing a sequence of more difficult human 
 
 Open AI previously created a world class 1v1 bot with significant gameplay restrictions - the most important being a restriction to a 1v1 game.  Dota 2 is a 5v5 game.  This current Open AI agent (based on PPO and powered with gigantic samples of experience) plays the 5v5 game with some limits on gameplay.
 
-A common comment among Dota 2 fans is that the **restrictions on the gameplay devalue the performance of the Open AI agent**.  This is incorrect.
+A common comment among Dota 2 fans is that the restrictions on the gameplay devalue the performance of the Open AI agent.  **This is incorrect**.
 
 A more complex game would allow **more dimensions in which a machine could outperform a human**.  Allowing the use of core mechanics such as wards will give machines additional ways to outperform humans.  
 
