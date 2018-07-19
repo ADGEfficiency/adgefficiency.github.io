@@ -1,6 +1,6 @@
 ---
 title: 'DDQN hyperparameter tuning using Open AI gym CartPole'
-date: '2018-08-02'
+date: '2018-07-08'
 categories:
   - Machine Learning
   - Reinforcement Learning
