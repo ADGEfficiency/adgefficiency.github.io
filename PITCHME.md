@@ -1,3 +1,8 @@
+
+## goals
+
+only pictures, code and phrases
+
 ## abstract
 This talk reviews two years of work on energy_py - [a reinforcement learning for energy systems(https://github.com/ADGEfficiency/energy_py)].  We will look at lessons learned designing the library, experience using the library with Open AI gym and energy_py environments.  Also covered is the use of synthetic data generation in energy_py environments. 
 
@@ -16,11 +21,21 @@ link to this talk in the readme
 
 ```
 
+## agenda
+
+1 - lessons
+
+2 - functionality
+
+3 - next
+
 ## energy_py - lesson learnt building a reinforcement learning library
 
 ---?image=/assets/energy_py_talk/humber.jpg&size=auto 100%
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
+
+---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
 ---
 ```python
@@ -44,6 +59,8 @@ while not done:
 ```
 ---
 
+## simplicity
+- API (like gym)
 
 ## focus on one agent
 - two bad implementations don't equal one good one
@@ -52,6 +69,8 @@ while not done:
 discrete representations of env should be ok in energy
 dont have combinations of actions (which is what causes the exponential blowup in discrete actions)
 
+## one version of envs
+
 ---
 
 ## focus on one deep learning library
@@ -59,11 +78,43 @@ dont have combinations of actions (which is what causes the exponential blowup i
 - better to use one library fully than half of two
 
 ---
+## iteration over design
+
+allows scaling (v traditional economy of scale)
+
+---
+## basic functionality
+
+- logging
+- saving of agent & env setup
+- tensorboard
+- saving and analyzing environment historiees
+- test suite
+- training and testing experiments
+- spaces
+
+Global space from spaces (I think go into detail on spaces)
+Space design is fundamental to the library - because it is code that interacts both with agents and environments
+
+Show simple changes like
+
+space.observation_space_shape -> space.observation_space.shape
+
+
+---
 ## minor optimizations
 
 memory strucutre (deques versus arrays)
 
 use of shape dict, use of named tuple
+
+---
+
+## removing functionality
+
+previously supported processors and schedulers
+
+now using tensorflow for this (batch norm layer for Bellman target processing)
 
 ---
 
@@ -127,6 +178,14 @@ this limits the data you can train an rl agent with
 if having different distributions is valuable (ie makes generalisation better) - this is a great thing! the anti iid
 
 ---
+
+## preseeding with experience of high quality policies
+
+DQN has drawbacks and advantages - try to take advantage of all the advantages
+
+One of these is being off-policy - the ability of DQN to learn from the experience of other policies
+
+---
 ## combining with supervised learning
 ie use time series forecasting to reduce dimensionality of the observation
 because rl tuning process is longer + runs over mutltiple random seeds -> want to keep the supervised separate
@@ -149,6 +208,14 @@ This slows down learning, limits datasets, makes datasets heavily non-iid
 
 ## backwards induction
 
+goal with backwards induction is to allow an energy_py env to be instantly solvable using BI
+
+BI = model based
+
+Allows measuring the quality of forecasts (i.e. - when the model is wrong)
+
 ## next 
 
 wrapping other environments - has to be the most efficient use of resources (not repeating work)
+
+
