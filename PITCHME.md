@@ -35,7 +35,7 @@ link to this talk in the readme
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
----?image=/assets/energy_py_talk/repo.png&size=auto 100%
+---?image=/assets/energy_py_talk/repo.png&size=auto 80%
 
 ---
 ```python
