@@ -17,12 +17,12 @@ excerpt: What we need to do next.
 
 **digitize** - the energy industry is behind on installing sensors and collecting data
 
-**tax carbon** - this is an externality that can be neutrally priced into marginal energy costs
+**tax carbon** - an externality that can be neutrally priced into marginal energy costs
 
 **subsidize** - renewables can't ride of on low interest rates forever
 
 **lifestyle choices** - diet and flying have major carbon impacts
 
-*The most important are your lifestyle choices.*
+The most important will be your lifestyle choices.
 
 Thanks for reading!
