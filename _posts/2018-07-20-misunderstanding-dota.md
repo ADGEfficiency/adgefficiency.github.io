@@ -25,7 +25,7 @@ It is unlikely that Open AI would let their agent play against humans if it didn
 
 Machine learners and Dota fans should all enjoy the series of matches to come - with the Open AI agent beating every single one.  Enjoy the journey, even if you know the destination.
 
-Thanks for reading!!!
+Thanks for reading!
 
 ## further reading
 
