@@ -62,14 +62,12 @@ while not done:
 ## simplicity
 - API (like gym)
 
-## focus on one agent
+## focus on one agent and single version of envs
 - two bad implementations don't equal one good one
 - low dimensional action spaces (either discrete or managabely discretizable)
 
 discrete representations of env should be ok in energy
 dont have combinations of actions (which is what causes the exponential blowup in discrete actions)
-
-## one version of envs
 
 ---
 
