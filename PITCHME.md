@@ -81,6 +81,9 @@ dont have combinations of actions (which is what causes the exponential blowup i
 allows scaling (v traditional economy of scale)
 
 ---
+## testing
+
+---
 ## basic functionality
 
 - logging
@@ -90,6 +93,11 @@ allows scaling (v traditional economy of scale)
 - test suite
 - training and testing experiments
 - spaces
+- wrapping gym envs
+- loading memories
+- test and train expts
+- early stopping
+- memory olympics (ask audience which is quicker?)
 
 Global space from spaces (I think go into detail on spaces)
 Space design is fundamental to the library - because it is code that interacts both with agents and environments
@@ -97,6 +105,8 @@ Space design is fundamental to the library - because it is code that interacts b
 Show simple changes like
 
 space.observation_space_shape -> space.observation_space.shape
+
+use of a default dict for the info dict - can add and remove keys as wanted
 
 
 ---
