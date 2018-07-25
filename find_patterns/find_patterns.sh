@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-grep -onf patterns.txt post.txt
+post=$1
+grep -onf patterns.txt $post
