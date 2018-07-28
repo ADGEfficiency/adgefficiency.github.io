@@ -26,7 +26,11 @@ link to this talk in the readme
 
 ---
 
-## energy_py - lessons learnt building a energy reinforcement learning library
+## energy_py
+
+---
+
+## lessons learnt building a energy reinforcement learning library
 
 ---
 
