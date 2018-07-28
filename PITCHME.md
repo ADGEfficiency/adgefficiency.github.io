@@ -1,16 +1,11 @@
-
 ## goals
 
 only pictures, code and phrases
 
 ## abstract
+
 This talk reviews two years of work on energy_py - [a reinforcement learning for energy systems(https://github.com/ADGEfficiency/energy_py)].  We will look at lessons learned designing the library, experience using the library with Open AI gym and energy_py environments.  Also covered is the use of synthetic data generation in energy_py environments. 
 
-Inspiration for this talk is world models (show at start)
-
-The difference in ability to compete across supervised, unsupervised + rl
-
-comapre leading tech giants, startups AND traditional vertical energy utilities (who are below on all now, but will be above eventually)
 
 ```
 run experiment during talk
@@ -29,11 +24,29 @@ link to this talk in the readme
 
 3 - next
 
-## energy_py - lesson learnt building a reinforcement learning library
+---
+
+## energy_py - lessons learnt building a energy reinforcement learning library
+
+---
 
 ---?image=/assets/energy_py_talk/humber.jpg&size=auto 100%
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
+
+---?image=/assets/energy_py_talk/climate.png&size=auto 100%
+
+Motivation to learn how to use a computer
+
+- climate
+- value at the intersection (energy + ml)
+
+Explain the business today - right after the climate change bit
+
+- demand side traditional vs price responsive
+- big negative is the minimum sizes, also misallocation of total secured flexibility
+
+Both batteries and demand side flex are storage
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 80%
 
@@ -69,21 +82,26 @@ while not done:
 discrete representations of env should be ok in energy
 dont have combinations of actions (which is what causes the exponential blowup in discrete actions)
 
----
-
 ## focus on one deep learning library
+
 - original idea was to allow support for any library
 - better to use one library fully than half of two
 
 ---
-## iteration over design
 
-allows scaling (v traditional economy of scale)
+## style guide
+
+a master and dev branch
+
+single inheritance
+
+Use tensorflow where possible (processors, schedulers etc)
+
+Full docstrings are optional
+Defined if needed, otherwise rely on the infomation about a variable type being visible in the code (ie from being used in a function, having a method called on it etc)
 
 ---
-## testing
 
----
 ## basic functionality
 
 - logging
@@ -99,22 +117,21 @@ allows scaling (v traditional economy of scale)
 - early stopping
 - memory olympics (ask audience which is quicker?)
 
+Go into detail on - spaces, memories
+
 Global space from spaces (I think go into detail on spaces)
 Space design is fundamental to the library - because it is code that interacts both with agents and environments
 
 Show simple changes like
 
+use of shape dict, use of named tuple
 space.observation_space_shape -> space.observation_space.shape
 
 use of a default dict for the info dict - can add and remove keys as wanted
 
+Naive agents as baselines - helpful to confirm the performance of environments (ie we have a baseline agent that we know with perfect forecasts will never lose money, and then in simulation it does that, it suggests the environment is capturing the dynamics)
 
----
-## minor optimizations
-
-memory strucutre (deques versus arrays)
-
-use of shape dict, use of named tuple
+Naive agents also offer benefit of comparison with learning agnets (two benefits)
 
 ---
 
@@ -123,19 +140,6 @@ use of shape dict, use of named tuple
 previously supported processors and schedulers
 
 now using tensorflow for this (batch norm layer for Bellman target processing)
-
----
-
-## style guide
-
-a master and dev branch
-
-single inheritance
-
-Use tensorflow where possible (processors, schedulers etc)
-
-Full docstrings are optiomal
-Defined if needed, otherwise rely on the infomation about a variable type being visible in the code (ie from being used in a function, having a method called on it etc)
 
 ---
 
@@ -149,21 +153,20 @@ editors - notepad ++ -> spyder -> atom -> vim
 
 ---
 
-## context of model
+## performance
 
-MCTS beating DQN
+insert latest learning curves
 
-If you need simulation (because of sample inefficiency) -> you need to have a model
+show currently running experiment
 
-If you get a model for free - what next?
-
-sample inefficiency -> need simulation
-
-simulation is a model!
-
----
 
 ## poor mans gans
+
+Inspiration for this talk is world models (show at start)
+
+The difference in ability to compete across supervised, unsupervised + rl
+
+comapre leading tech giants, startups AND traditional vertical energy utilities (who are below on all now, but will be above eventually)
 
 sample vs distributional model
 
@@ -186,14 +189,6 @@ this limits the data you can train an rl agent with
 if having different distributions is valuable (ie makes generalisation better) - this is a great thing! the anti iid
 
 ---
-
-## preseeding with experience of high quality policies
-
-DQN has drawbacks and advantages - try to take advantage of all the advantages
-
-One of these is being off-policy - the ability of DQN to learn from the experience of other policies
-
----
 ## combining with supervised learning
 ie use time series forecasting to reduce dimensionality of the observation
 because rl tuning process is longer + runs over mutltiple random seeds -> want to keep the supervised separate
@@ -203,6 +198,23 @@ because rl tuning process is longer + runs over mutltiple random seeds -> want t
 ## lessons
 
 python setup.py develop
+
+---
+
+## context of model
+
+MCTS beating DQN
+
+If you need simulation (because of sample inefficiency) -> you need to have a model
+
+If you get a model for free - what next?
+
+sample inefficiency -> need simulation
+
+simulation is a model!
+
+---
+
 
 ## ml and energy
 
@@ -222,8 +234,24 @@ BI = model based
 
 Allows measuring the quality of forecasts (i.e. - when the model is wrong)
 
+Just show code for object oriented BI
+
 ## next 
 
+---
+## preseeding with experience of high quality policies
+
+DQN has drawbacks and advantages - try to take advantage of all the advantages
+
+One of these is being off-policy - the ability of DQN to learn from the experience of other policies
+
+---
+
 wrapping other environments - has to be the most efficient use of resources (not repeating work)
+
+modern rl so sample inefficient that you need simualtion
+but if you have simulation, then there are other better models such as MCTS
+
+the work in energy is therefore in building useful simulation models - this unlocks both
 
 
