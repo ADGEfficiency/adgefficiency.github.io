@@ -40,6 +40,8 @@ link to this talk in the readme
 
 ---?image=/assets/energy_py_talk/climate.png&size=auto 100%
 
+---
+
 Motivation to learn how to use a computer
 
 - climate
