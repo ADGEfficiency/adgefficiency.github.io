@@ -8,7 +8,6 @@ This talk reviews two years of work on energy_py - [a reinforcement learning for
 
 
 ```
-run experiment during talk
 
 use what readme has
 feed stuff back into readme
@@ -23,6 +22,63 @@ link to this talk in the readme
 2 - functionality
 
 3 - next
+
+--- 
+
+notes
+
+three pieces of info on climate
+- size of the problem, moral problem, personal problem
+
+three pieces of info on energy and reinforcement learning
+- ???
+
+climate
+
+- https://scripps.ucsd.edu/programs/keelingcurve/
+- climate - was 40 oC in Adelaide in April when I was there.  Europes latest heatwave
+- value at the intersection (energy + ml)
+
+1. Climate change is our biggest long term problem.  Most climate models are optimistic - reality will be more painful than we expect.  Perverse feedback of running pumps in Miami to remove floodwater.
+
+Fundamentally a discount rate problem.
+
+2. More question of climate - disproportionately on the countries who have done the least.  Climate changes in northern Europe can actually be viewed as positive (if you like longer, hotter summers.  Impact on biodiversity (if you care about animals).
+
+3. Climate is a moral problem - solved by your actions day to day.  Travel and diet.  But be compassionate towards yourself and others.
+
+Also important to acknolwedge that nothing lasts forever - our grasping onto our current climate is an attachment to something that is impermanent.
+
+Motivation to learn how to use a computer = help solve the climate problem
+
+how does demand side response help with climate.
+
+Value in demand side response = avoiding expensive standby plant.  
+
+Analogy of taxi drivers (picture)
+
+- demand side traditional vs price responsive
+- big negative is the minimum sizes, also misallocation of total secured flexibility
+
+Both batteries and demand side flex are storage
+
+Role of reinforcement learning in energy = control
+
+Role of energy_py = supporting experimentation
+how does demand side response help with climate.
+
+Value in demand side response = avoiding expensive standby plant.  
+
+Analogy of taxi drivers (picture)
+
+- demand side traditional vs price responsive
+- big negative is the minimum sizes, also misallocation of total secured flexibility
+
+Both batteries and demand side flex are storage
+
+Role of reinforcement learning in energy = control
+
+Role of energy_py = supporting experimentation
 
 ---
 
@@ -43,27 +99,8 @@ link to this talk in the readme
 ---
 
 three pieces of info on climate
-- size of the problem, moral problem, personal problem
 
 three pieces of info on energy and reinforcement learning
-
----
-
-Motivation to learn how to use a computer
-
-- https://scripps.ucsd.edu/programs/keelingcurve/
-- climate - was 40 oC in Adelaide in April when I was there.  Europes latest heatwave
-- value at the intersection (energy + ml)
-
-1. Climate change is our biggest long term problem.  Most climate models are optimistic - reality will be more painful than we expect.  Perverse feedback of running pumps in Miami to remove floodwater.
-
-Fundamentally a discount rate problem.
-
-2. More question of climate - disproportionately on the countries who have done the least.  Climate changes in northern Europe can actually be viewed as positive (if you like longer, hotter summers.  Impact on biodiversity (if you care about animals).
-
-3. Climate is a moral problem - solved by your actions day to day.  Travel and diet.  But be compassionate towards yourself and others.
-
-Also important to acknolwedge that nothing lasts forever - our grasping onto our current climate is an attachment to something that is impermanent.
 
 ---
 
@@ -74,21 +111,27 @@ by this point
 
 ---
 
-how does demand side response help with climate.
-
-Value in demand side response = avoiding expensive standby plant.  
-
-Analogy of taxi drivers (picture)
-
-- demand side traditional vs price responsive
-- big negative is the minimum sizes, also misallocation of total secured flexibility
-
-Both batteries and demand side flex are storage
-
 ---?image=/assets/energy_py_talk/repo.png&size=auto 50%
 
 ---
+
+energy_py = supporting experimentation
+
+now run the experiment
+
+```
+#  high level api running experiments from config files
+
+$ cd energy_py/experiments
+
+$ python experiment.py example dqn
+
+$ tensorboard --logdir='./results/example/tensorboard'
+```
+
 ```python
+#  low level gym-style api
+
 import energy_py
 
 env = energy_py.make_env(env_id='battery')
@@ -107,6 +150,7 @@ while not done:
     training_info = agent.learn()
     observation = next_observation
 ```
+
 ---
 
 ## simplicity
@@ -210,6 +254,15 @@ sample vs distributional model
 key idea - we learn behaviour that will generalize
 
 fighting the generalization problem earlier
+
+this is a subtle point - that you want to hve ways to estimate your error accurately
+You don't care about the actual accuracy - getting a high test set error is useful feedback to learn from
+
+rl is careless about the test/train problem
+
+in energy we can test it specifically by keeping time series data separate
+
+want to fight the generalization problem head on - take advantage of it
 
 generating exact customer profiles is hard.  generating believeable ones is easier
 behaviours that are learnt for one demand profile can be used with another profile
