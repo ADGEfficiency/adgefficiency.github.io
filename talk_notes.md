@@ -104,24 +104,9 @@ Naive agents also offer benefit of comparison with learning agnets (two benefits
 
 --- 
 
-style guide
-
---- 
-
-functionality
-
-spaces, 
 Space design is fundamental to the library 
 
 - code that interacts both with agents and environments
-
-
-
-shape dicts, info dicts etc
-
---- 
-
-tools
 
 --- 
 
@@ -180,7 +165,70 @@ Use tensorflow where possible (processors, schedulers etc)
 Full docstrings are optional
 Defined if needed, otherwise rely on the infomation about a variable type being visible in the code (ie from being used in a function, having a method called on it etc)
 
----
+three pieces of info on energy and reinforcement learning
+
+1. the environment model problem
+2. using synthetic data for generalization
+3. combination with supervised learning
 
 ---
 
+modern rl so sample inefficient that you need simualtion
+but if you have simulation, then there are other better models such as MCTS
+
+the work in energy is therefore in building useful simulation models - this unlocks both
+
+bi
+
+goal with backwards induction is to allow an energy_py env to be instantly solvable using BI
+
+BI = model based
+
+Allows measuring the quality of forecasts (i.e. - when the model is wrong)
+
+Just show code for object oriented BI
+
+---
+synthetic data - aka poor mans gans
+
+
+Inspiration for this talk is world models (show at start)
+
+The difference in ability to compete across supervised, unsupervised + rl
+
+comapre leading tech giants, startups AND traditional vertical energy utilities (who are below on all now, but will be above eventually)
+
+sample vs distributional model
+
+key idea - we learn behaviour that will generalize
+
+fighting the generalization problem earlier
+
+this is a subtle point - that you want to hve ways to estimate your error accurately
+You don't care about the actual accuracy - getting a high test set error is useful feedback to learn from
+
+rl is careless about the test/train problem
+
+in energy we can test it specifically by keeping time series data separate
+
+want to fight the generalization problem head on - take advantage of it
+
+generating exact customer profiles is hard.  generating believeable ones is easier
+behaviours that are learnt for one demand profile can be used with another profile
+can learn on synthetic, and then test on real
+more test data generated continuously (ie if you wait you get a new holdout set)
+
+synthetic data allows a test set to be kept seprate, and allows a an estimation of generalization error
+
+the rl test problem
+if you use the input from a supervised model as observation for rl
+you should only use the test set press
+this limits the data you can train an rl agent with
+
+if having different distributions is valuable (ie makes generalisation better) - this is a great thing! the anti iid
+
+---
+combining with supervised learning
+
+ie use time series forecasting to reduce dimensionality of the observation
+because rl tuning process is longer + runs over mutltiple random seeds -> want to keep the supervised separate
