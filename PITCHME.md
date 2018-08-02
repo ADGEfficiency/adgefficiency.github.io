@@ -66,6 +66,7 @@ agent = energy_py.make_agent(
 
 observation = env.reset()
 
+done = False
 while not done:
     action = agent.act(observation)
     next_observation, reward, done, info = env.step(action)
