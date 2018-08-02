@@ -1,92 +1,8 @@
-## goals
-
-only pictures, code and phrases
-
-## abstract
-
-This talk reviews two years of work on energy_py - [a reinforcement learning for energy systems(https://github.com/ADGEfficiency/energy_py)].  We will look at lessons learned designing the library, experience using the library with Open AI gym and energy_py environments.  Also covered is the use of synthetic data generation in energy_py environments. 
-
-
-```
-
-use what readme has
-feed stuff back into readme
-link to this talk in the readme
-
-```
-
-## agenda
-
-1 - lessons
-
-2 - functionality
-
-3 - next
-
---- 
-
-notes
-
-three pieces of info on climate
-- size of the problem, moral problem, personal problem
-
-three pieces of info on energy and reinforcement learning
-- ???
-
-climate
-
-- https://scripps.ucsd.edu/programs/keelingcurve/
-- climate - was 40 oC in Adelaide in April when I was there.  Europes latest heatwave
-- value at the intersection (energy + ml)
-
-1. Climate change is our biggest long term problem.  Most climate models are optimistic - reality will be more painful than we expect.  Perverse feedback of running pumps in Miami to remove floodwater.
-
-Fundamentally a discount rate problem.
-
-2. More question of climate - disproportionately on the countries who have done the least.  Climate changes in northern Europe can actually be viewed as positive (if you like longer, hotter summers.  Impact on biodiversity (if you care about animals).
-
-3. Climate is a moral problem - solved by your actions day to day.  Travel and diet.  But be compassionate towards yourself and others.
-
-Also important to acknolwedge that nothing lasts forever - our grasping onto our current climate is an attachment to something that is impermanent.
-
-Motivation to learn how to use a computer = help solve the climate problem
-
-how does demand side response help with climate.
-
-Value in demand side response = avoiding expensive standby plant.  
-
-Analogy of taxi drivers (picture)
-
-- demand side traditional vs price responsive
-- big negative is the minimum sizes, also misallocation of total secured flexibility
-
-Both batteries and demand side flex are storage
-
-Role of reinforcement learning in energy = control
-
-Role of energy_py = supporting experimentation
-how does demand side response help with climate.
-
-Value in demand side response = avoiding expensive standby plant.  
-
-Analogy of taxi drivers (picture)
-
-- demand side traditional vs price responsive
-- big negative is the minimum sizes, also misallocation of total secured flexibility
-
-Both batteries and demand side flex are storage
-
-Role of reinforcement learning in energy = control
-
-Role of energy_py = supporting experimentation
-
----
-
 ## energy_py
 
----
-
 ## lessons learnt building a energy reinforcement learning library
+
+### Adam Green - adam.green@adgefficiency.com
 
 ---
 
@@ -100,24 +16,28 @@ Role of energy_py = supporting experimentation
 
 three pieces of info on climate
 
-three pieces of info on energy and reinforcement learning
+1. it's bad
+2. it's going to be worse for poor countires
+3. your personal choices matter
 
 ---
 
-by this point
-1 - established my personal history
-2 - climate problem
-3 - energy solution
+ml + energy solution to the climate problem
+
+---
+
+price response flexible demand and the lazy taxi driver
+
+---
+
+energy_py = supporting experimentation
 
 ---
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 50%
 
 ---
-
-energy_py = supporting experimentation
-
-now run the experiment
+running an experiment
 
 ```
 #  high level api running experiments from config files
@@ -128,6 +48,8 @@ $ python experiment.py example dqn
 
 $ tensorboard --logdir='./results/example/tensorboard'
 ```
+
+---
 
 ```python
 #  low level gym-style api
@@ -153,20 +75,15 @@ while not done:
 
 ---
 
-## simplicity
-- API (like gym)
+## contributions
 
-## focus on one agent and single version of envs
-- two bad implementations don't equal one good one
-- low dimensional action spaces (either discrete or managabely discretizable)
+DQN
 
-discrete representations of env should be ok in energy
-dont have combinations of actions (which is what causes the exponential blowup in discrete actions)
+naive agents
 
-## focus on one deep learning library
+energy envs
 
-- original idea was to allow support for any library
-- better to use one library fully than half of two
+tools for experiment
 
 ---
 
@@ -176,6 +93,8 @@ a master and dev branch
 
 single inheritance
 
+Use standard library where possible 
+
 Use tensorflow where possible (processors, schedulers etc)
 
 Full docstrings are optional
@@ -183,48 +102,49 @@ Defined if needed, otherwise rely on the infomation about a variable type being 
 
 ---
 
-## basic functionality
+## low level functionality
 
 - logging
 - saving of agent & env setup
 - tensorboard
 - saving and analyzing environment historiees
 - test suite
-- training and testing experiments
 - spaces
 - wrapping gym envs
+
+In progress
+
 - loading memories
 - test and train expts
 - early stopping
-- memory olympics (ask audience which is quicker?)
 
-Go into detail on - spaces, memories
+---
 
-Global space from spaces (I think go into detail on spaces)
-Space design is fundamental to the library - because it is code that interacts both with agents and environments
+## spaces 
 
-Show simple changes like
+Space design is fundamental to the library 
+- code that interacts both with agents and environments
+
+---
+
+## shape dict
 
 use of shape dict, use of named tuple
 space.observation_space_shape -> space.observation_space.shape
 
-use of a default dict for the info dict - can add and remove keys as wanted
-
-Naive agents as baselines - helpful to confirm the performance of environments (ie we have a baseline agent that we know with perfect forecasts will never lose money, and then in simulation it does that, it suggests the environment is capturing the dynamics)
-
-Naive agents also offer benefit of comparison with learning agnets (two benefits)
-
 ---
 
-## removing functionality
+## default dicts
 
-previously supported processors and schedulers
+used to create the info dict
 
-now using tensorflow for this (batch norm layer for Bellman target processing)
+easily turned into a dataframe
 
 ---
 
 ## tools
+
+`python setup.py develop`
 
 dl libraries - keras -> tf
 
@@ -238,10 +158,46 @@ editors - notepad ++ -> spyder -> atom -> vim
 
 insert latest learning curves
 
-show currently running experiment
+---
 
+lessons
 
-## poor mans gans
+three pieces of info on energy and reinforcement learning
+- , importance of a model, using synthetic data for generalization
+
+---
+
+simplicity
+
+---
+
+the env model problem
+
+## context of model
+
+MCTS beating DQN
+
+If you need simulation (because of sample inefficiency) -> you need to have a model
+
+If you get a model for free - what next?
+
+sample inefficiency -> need simulation
+
+simulation is a model!
+
+## backwards induction
+
+goal with backwards induction is to allow an energy_py env to be instantly solvable using BI
+
+BI = model based
+
+Allows measuring the quality of forecasts (i.e. - when the model is wrong)
+
+Just show code for object oriented BI
+
+---
+
+## synthetic data - aka poor mans GANS
 
 Inspiration for this talk is world models (show at start)
 
@@ -285,59 +241,9 @@ because rl tuning process is longer + runs over mutltiple random seeds -> want t
 
 ---
 
-## lessons
-
-python setup.py develop
-
----
-
-## context of model
-
-MCTS beating DQN
-
-If you need simulation (because of sample inefficiency) -> you need to have a model
-
-If you get a model for free - what next?
-
-sample inefficiency -> need simulation
-
-simulation is a model!
-
----
-
-
-## ml and energy
-
-advantage in energy - stuff that generates data once often generates it a lot
-because data of interest is streaming time series, once you connect to data it keeps on giving
-contrast this with a business where you get customer info on signup, and then never again (ie inactive user)
-
-disadvantage in energy - the digitisation challenge
-Every project I’ve been involved had digitisation as a key component
-This slows down learning, limits datasets, makes datasets heavily non-iid
-
-## backwards induction
-
-goal with backwards induction is to allow an energy_py env to be instantly solvable using BI
-
-BI = model based
-
-Allows measuring the quality of forecasts (i.e. - when the model is wrong)
-
-Just show code for object oriented BI
-
 ## next 
 
 model based methods - monte carlo tree search
-
----
-## preseeding with experience of high quality policies
-
-DQN has drawbacks and advantages - try to take advantage of all the advantages
-
-One of these is being off-policy - the ability of DQN to learn from the experience of other policies
-
----
 
 wrapping other environments - has to be the most efficient use of resources (not repeating work)
 
@@ -345,5 +251,3 @@ modern rl so sample inefficient that you need simualtion
 but if you have simulation, then there are other better models such as MCTS
 
 the work in energy is therefore in building useful simulation models - this unlocks both
-
-
