@@ -1,10 +1,8 @@
 ### energy_py
 
-#### lessons learnt building a energy reinforcement learning library
+#### lessons learnt building an energy reinforcement learning library
 
 #### Adam Green - adam.green@adgefficiency.com
-
----
 
 ---?image=/assets/energy_py_talk/humber.jpg&size=auto 100%
 
@@ -31,8 +29,6 @@ price response flexible demand and the lazy taxi driver
 ---
 
 energy_py = supporting experimentation
-
----
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 80%
 
@@ -248,7 +244,7 @@ because rl tuning process is longer + runs over mutltiple random seeds -> want t
 
 model based methods - monte carlo tree search
 
-wrapping other environments - has to be the most efficient use of resources (not repeating work)
+**wrapping other environments** - has to be the most efficient use of resources (not repeating work)
 
 modern rl so sample inefficient that you need simualtion
 but if you have simulation, then there are other better models such as MCTS
