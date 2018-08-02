@@ -1,8 +1,8 @@
-## energy_py
+### energy_py
 
-## lessons learnt building a energy reinforcement learning library
+#### lessons learnt building a energy reinforcement learning library
 
-### Adam Green - adam.green@adgefficiency.com
+#### Adam Green - adam.green@adgefficiency.com
 
 ---
 
