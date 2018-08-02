@@ -34,10 +34,9 @@ energy_py = supporting experimentation
 
 ---
 
----?image=/assets/energy_py_talk/repo.png&size=auto 50%
+---?image=/assets/energy_py_talk/repo.png&size=auto 80%
 
 ---
-running an experiment
 
 ```bash
 #  high level api running experiments from config files
