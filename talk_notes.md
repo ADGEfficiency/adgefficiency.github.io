@@ -155,5 +155,20 @@ previously supported processors and schedulers
 
 now using tensorflow for this (batch norm layer for Bellman target processing)
 
+## style guide
+
+a master and dev branch
+
+single inheritance
+
+Use standard library where possible 
+
+Use tensorflow where possible (processors, schedulers etc)
+
+Full docstrings are optional
+Defined if needed, otherwise rely on the infomation about a variable type being visible in the code (ie from being used in a function, having a method called on it etc)
+
+---
+
 ---
 

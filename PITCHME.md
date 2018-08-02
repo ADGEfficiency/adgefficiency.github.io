@@ -30,7 +30,7 @@ price response flexible demand and the lazy taxi driver
 
 energy_py = supporting experimentation
 
----?image=/assets/energy_py_talk/repo.png&size=auto 80%
+---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
 ---
 
@@ -86,21 +86,6 @@ tools for experiment
 
 ---
 
-## style guide
-
-a master and dev branch
-
-single inheritance
-
-Use standard library where possible 
-
-Use tensorflow where possible (processors, schedulers etc)
-
-Full docstrings are optional
-Defined if needed, otherwise rely on the infomation about a variable type being visible in the code (ie from being used in a function, having a method called on it etc)
-
----
-
 ## low level functionality
 
 - logging
@@ -111,6 +96,7 @@ Defined if needed, otherwise rely on the infomation about a variable type being 
 - spaces
 - wrapping gym envs
 
+
 In progress
 
 - loading memories
@@ -119,50 +105,39 @@ In progress
 
 ---
 
+details
+
+---
+
 ## spaces 
 
 Space design is fundamental to the library 
+
 - code that interacts both with agents and environments
 
----
+```python
 
-## shape dict
 
-use of shape dict, use of named tuple
+
 space.observation_space_shape -> space.observation_space.shape
 
----
-
-## default dicts
-
-used to create the info dict
-
-easily turned into a dataframe
+```
 
 ---
 
-## tools
-
-`python setup.py develop`
-
-dl libraries - keras -> tf
-
-operating systems - windows -> ubuntu -> osx
-
-editors - notepad ++ -> spyder -> atom -> vim
+shape dict (replace with code)
 
 ---
 
-## performance
+default dicts - the info dict (replace with code)
 
-insert latest learning curves
+---
+
+performance
 
 ---
 
 lessons
-
-three pieces of info on energy and reinforcement learning
-- , importance of a model, using synthetic data for generalization
 
 ---
 
@@ -170,9 +145,15 @@ simplicity
 
 ---
 
-the env model problem
+three pieces of info on energy and reinforcement learning
 
-## context of model
+- importance of a model
+- using synthetic data for generalization
+- combination with supervised learning
+
+---
+
+the env model problem
 
 MCTS beating DQN
 
