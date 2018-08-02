@@ -74,8 +74,6 @@ while not done:
 
 ---
 
-## contributions
-
 DQN
 
 naive agents
@@ -85,8 +83,6 @@ energy envs
 tools for experiment
 
 ---
-
-## low level functionality
 
 - logging
 - saving of agent & env setup
