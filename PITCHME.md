@@ -92,12 +92,14 @@ tools for experiment
 - spaces
 - wrapping gym envs
 
+---
 
 In progress
 
 - loading memories
 - test and train expts
 - early stopping
+- backwards induction
 
 ---
 
@@ -105,11 +107,8 @@ details
 
 ---
 
-## spaces 
+spaces 
 
-Space design is fundamental to the library 
-
-- code that interacts both with agents and environments
 
 ```python
 
@@ -118,7 +117,6 @@ Space design is fundamental to the library
 space.observation_space_shape -> space.observation_space.shape
 
 ```
-
 ---
 
 shape dict (replace with code)
@@ -143,25 +141,26 @@ simplicity
 
 three pieces of info on energy and reinforcement learning
 
-- importance of a model
-- using synthetic data for generalization
-- combination with supervised learning
+1. the environment model problem
+2. using synthetic data for generalization
+3. combination with supervised learning
 
 ---
 
 the env model problem
 
-MCTS beating DQN
+modern RL is sample inefficient -> need simulation
 
-If you need simulation (because of sample inefficiency) -> you need to have a model
+but
 
-If you get a model for free - what next?
+if you have a simulator, there are better methods than modern RL
 
-sample inefficiency -> need simulation
 
-simulation is a model!
+MCTS beating DQN (show the ref!)
 
-## backwards induction
+---
+
+backwards induction
 
 goal with backwards induction is to allow an energy_py env to be instantly solvable using BI
 
@@ -173,7 +172,7 @@ Just show code for object oriented BI
 
 ---
 
-## synthetic data - aka poor mans GANS
+synthetic data - aka poor mans GANS
 
 Inspiration for this talk is world models (show at start)
 
@@ -211,7 +210,8 @@ this limits the data you can train an rl agent with
 if having different distributions is valuable (ie makes generalisation better) - this is a great thing! the anti iid
 
 ---
-## combining with supervised learning
+combining with supervised learning
+
 ie use time series forecasting to reduce dimensionality of the observation
 because rl tuning process is longer + runs over mutltiple random seeds -> want to keep the supervised separate
 

@@ -1,3 +1,8 @@
+not sure if I should have the  three pieces before i introduce each three or not???
+
+def have summaries of both the climate 3 and the ml 3
+ at the end
+
 ## goals
 
 only pictures, code and phrases
@@ -105,7 +110,14 @@ style guide
 
 functionality
 
-spaces, shape dicts, info dicts etc
+spaces, 
+Space design is fundamental to the library 
+
+- code that interacts both with agents and environments
+
+
+
+shape dicts, info dicts etc
 
 --- 
 
