@@ -82,7 +82,6 @@ details
 ---
 
 ```python
-
 action_space = GlobalSpace('action').from_spaces(
     [ContinuousSpace(0, 100), DiscreteSpace(3)],
     ['acceleration', 'gear']
@@ -100,7 +99,6 @@ action = action_space.sample_discrete()
 ---
 
 ```python
-
 #  load a state or observation space from a dataset
 state_space = GlobalSpace('state').from_dataset('example')
 
@@ -129,19 +127,11 @@ three pieces of info on energy and reinforcement learning
 
 ---
 
-the env model problem
-
-modern RL is sample inefficient -> need simulation
-
-but
-
-if you have a simulator, there are better methods than modern RL
-
-MCTS beating DQN (show the ref!)
+MCTS DQN result
 
 ---
 
-backwards induction
+the env model problem
 
 ---
 
@@ -153,20 +143,22 @@ combining with supervised learning
 
 ---
 
-next for energy_py
+short term work in energy_py
 
 loading memories
+
 test and train expts
+
 early stopping
+
 backwards induction
 
 ---
 
-
-next for ???
-
-model based methods 
-
-building simulations
+long term work
 
 wrapping other environments
+
++
+
+model based methods 
