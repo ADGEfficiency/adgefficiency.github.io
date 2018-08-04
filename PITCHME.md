@@ -28,24 +28,40 @@ energy_py = supporting experimentation
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
----?code=assets/high_level.py&lang=bash
+```bash
+cd energy_py/experiments
 
----?code=assets/low_level.py&lang=bash
+python experiment.py example dqn
 
----
-
-logging
-saving of agent & env setup
-tensorboard
-saving and analyzing environment historiees
-test suite
-spaces
-wrapping gym envs
+tensorboard --logdir='./results/example/tensorboard'
+```
 
 ---
 
-In progress
+```python
+import energy_py
 
+env = energy_py.make_env(env_id='battery')
+
+agent = energy_py.make_agent(
+    agent_id='dqn',
+    env=env,
+    total_steps=1000000
+    )
+
+observation = env.reset()
+```
+
+---
+
+```python
+done = False
+while not done:
+    action = agent.act(observation)
+    next_observation, reward, done, info = env.step(action)
+    training_info = agent.learn()
+    observation = next_observation
+```
 
 ---
 
