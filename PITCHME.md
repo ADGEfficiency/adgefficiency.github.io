@@ -21,22 +21,13 @@ price response flexible demand and the lazy taxi driver
 
 ---
 
-energy_py = supporting experimentation of reinforcement learning and energy problems
+energy_py = supporting experimentation 
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
 ---?code=assets/high_level.py&lang=bash
 
 ---?code=assets/low_level.py&lang=bash
-
-
-DQN
-
-naive agents
-
-energy envs
-
-tools for experiment
 
 ---
 
@@ -52,10 +43,6 @@ wrapping gym envs
 
 In progress
 
-loading memories
-test and train expts
-early stopping
-backwards induction
 
 ---
 
@@ -134,7 +121,17 @@ synthetic data - aka poor mans GANS
 combining with supervised learning
 
 ---
-next 
+next for energy_py
+
+loading memories
+test and train expts
+early stopping
+backwards induction
+
+---
+
+
+next for ???
 
 model based methods 
 
