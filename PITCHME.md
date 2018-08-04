@@ -14,10 +14,6 @@
 
 three pieces of info on climate
 
-1. it's bad
-2. it's going to be worse for poor countires
-3. your personal choices matter
-
 ---
 
 ml + energy solution to the climate problem

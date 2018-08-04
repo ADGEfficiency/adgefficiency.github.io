@@ -43,13 +43,11 @@ climate
 ---
 
 three pieces of info on climate
-- size of the problem, moral problem, personal problem
+1. it's bad
+2. it's going to be worse for poor countires
+3. your personal choices matter
 
-- https://scripps.ucsd.edu/programs/keelingcurve/
-- climate - was 40 oC in Adelaide in April when I was there.  Europes latest heatwave
-- value at the intersection (energy + ml)
 
-1. Climate change is our biggest long term problem.  Most climate models are optimistic - reality will be more painful than we expect.  Perverse feedback of running pumps in Miami to remove floodwater.
 
 Fundamentally a discount rate problem.
 
