@@ -1,1 +1,2 @@
 highlight: tomorrow
+theme-override : assets/css/custom.css
