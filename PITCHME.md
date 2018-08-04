@@ -8,13 +8,10 @@
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
----?image=/assets/energy_py_talk/climate.png&size=auto 80%
-
----
-
 three pieces of info on climate
 
----
+---?image=/assets/energy_py_talk/climate.png&size=auto 80%
+
 
 ml + energy solution to the climate problem
 
