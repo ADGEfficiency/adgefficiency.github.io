@@ -1,0 +1,11 @@
+.reveal code {
+  box-shadow: none;
+}
+
+.reveal section code {
+  box-shadow: none;
+}
+
+.reveal .slides {
+  box-shadow: none;
+}
