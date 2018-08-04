@@ -48,7 +48,7 @@ In progress
 
 details
 
---- ds:noborder
+---
 
 ```python
 
