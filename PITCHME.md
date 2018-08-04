@@ -121,6 +121,7 @@ synthetic data - aka poor mans GANS
 combining with supervised learning
 
 ---
+
 next for energy_py
 
 loading memories
