@@ -9,3 +9,9 @@
 .reveal .slides {
   box-shadow: none;
 }
+
+.noborder .reveal section img {
+  background:none;
+  border:none;
+  box-shadow:none;
+}
