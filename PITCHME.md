@@ -26,6 +26,8 @@ price response flexible demand and the lazy taxi driver
 
 energy_py = supporting experimentation 
 
+---
+
 ---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
 ```bash
@@ -41,21 +43,27 @@ tensorboard --logdir='./results/example/tensorboard'
 ```python
 import energy_py
 
-env = energy_py.make_env(env_id='battery')
-
-agent = energy_py.make_agent(
-    agent_id='dqn',
-    env=env,
-    total_steps=1000000
+with tf.Session() as sess:
+    env = energy_py.make_env(
+        env_id='battery',
+        episode_length=288,
+        dataset='example'
     )
 
-observation = env.reset()
+    agent = energy_py.make_agent(
+        sess=sess,
+        agent_id='dqn',
+        env=env,
+        total_steps=1000000
+        )
 ```
 
 ---
 
 ```python
+observation = env.reset()
 done = False
+
 while not done:
     action = agent.act(observation)
     next_observation, reward, done, info = env.step(action)
