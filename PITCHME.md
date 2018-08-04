@@ -21,7 +21,7 @@ price response flexible demand and the lazy taxi driver
 
 ---
 
-energy_py = supporting experimentation
+energy_py = supporting experimentation of reinforcement learning and energy problems
 
 ---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
