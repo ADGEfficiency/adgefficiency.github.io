@@ -143,6 +143,9 @@ combining with supervised learning
 
 ---
 
+short term work
+
+
 loading memories
 
 test and train expts
@@ -156,6 +159,7 @@ backwards induction
 ---
 
 long term work
+
 
 wrapping other environments
 
