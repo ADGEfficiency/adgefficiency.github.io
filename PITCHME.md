@@ -143,13 +143,13 @@ combining with supervised learning
 
 ---
 
-short term work in energy_py
-
 loading memories
 
 test and train expts
 
 early stopping
+
+experiment result analysis
 
 backwards induction
 
@@ -162,3 +162,7 @@ wrapping other environments
 +
 
 model based methods 
+
+---
+
+thank you
