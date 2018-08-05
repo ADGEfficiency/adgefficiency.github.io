@@ -143,8 +143,7 @@ combining with supervised learning
 
 ---
 
-short term work
-
+*short term work*
 
 loading memories
 
@@ -158,8 +157,7 @@ backwards induction
 
 ---
 
-long term work
-
+**long term work**
 
 wrapping other environments
 
