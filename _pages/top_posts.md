@@ -15,6 +15,8 @@ time series forecasting - [GitHub](https://github.com/ADGEfficiency/forecast)
 
 mixed integer linear programming models of combined heat and power plants - [GitHub](https://github.com/ADGEfficiency/energy_py/tree/master/energy_py/envs/chp)
 
+---
+
 ## Top posts
 
 ### Machine learning
