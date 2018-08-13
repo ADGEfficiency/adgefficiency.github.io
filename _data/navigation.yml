@@ -1,9 +1,7 @@
 main:
-  - title: "archive"
-    url: /archive/
-  - title: "year archive"
-    url: /year/
   - title: "my work"
     url: /top_posts/
   - title: "reading list"
     url: /reading_list/
+  - title: "arch"
+    url: '/:year/:month/'

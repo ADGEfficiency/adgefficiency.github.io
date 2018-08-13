@@ -230,17 +230,14 @@ whitelist:
 
 # https://github.com/jekyll/jekyll-archives
 jekyll-archives:
-  enabled: all 
+  enabled: []
   layout: 'archive'
   permalinks:
-    # year: '/:year/'
-    # month: '/:year/:month/'
-    # day: '/:year/:month/:day/'
-    # tag: '/tag/:name/'
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
     category: '/category/:name/'
-    year: '/archives/year/:year/'
-    month: '/archives/month/:year-:month/'
-    tag: '/archives/tag/:name/'
 
 # HTML Compression
 # - http://jch.penibelst.de/
