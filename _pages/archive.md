@@ -1,9 +1,7 @@
 ---
 title:  "archive"
-layout: collection
-permalink: /archive/
-collection: portfolio
-entries_layout: grid
+layout: posts
+permalink: /year-archive/
 classes: wide
 
 ---
