@@ -6,21 +6,39 @@ classes: wide
 
 ---
 
-## Top ten books
+## Top books
 
 An arbitrary list of books
 
-1. 
+### Data & machine learning
+
+For reinforcement learning - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
+
+For neural networks - [Deep Learning - Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://www.deeplearningbook.org/)
+
+For everything else (linear models, random forests etc) - [Elements of Staistical Learning - Trevor Hastie, Robert Tibshirani and Jerome Friedman](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
+
+### Energy
+
+Energy Transitions: History, Requirements, Prospects - Vaclav Smil
+
+The Prize: The Epic Quest for Oil, Money & Power - Daniel Yergin
+
+### Misc
+
+Principles: Life and Work - Ray Dalio
+
+Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
 ## Every book I have read since May 2016
 
-  1. What I learnt losing 1 million dollars
+  1. What I Learned Losing A Million Dollars - Brendan Moynihan
 
-  2. Talent code
+  2. The Talent Code: Greatness isn't born. It's grown - Daniel Coyle 
 
-  3. As a man thinketh
+  3. As a Man Thinketh - James Allen
 
-  4. Surely you're joking
+  4. Surely You're Joking Mr Feynman: Adventures of a Curious Character as Told to Ralph Leighton - Richard P Feynman
 
   5. 6th extinction
 
@@ -238,14 +256,14 @@ An arbitrary list of books
 
   112. The one thing
 
-  113. leonardo da vinci (walter issacson)
+  113. Leonardo Da Vinci: Amazon.co.uk: Walter Isaacson
 
   114. Medici effect
 
-  115. Skin in the game
+  115. Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
   116. Seneca - letters
 
-  117. Franklin autobiography (Walter Issacson)
+  117. Benjamin Franklin: An American Life - Walter Isaacson
 
 
