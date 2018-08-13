@@ -6,7 +6,7 @@ classes: wide
 
 ---
 
-## An arbitrary list of books
+# An arbitrary list of books
 
 ### Data & machine learning
 
@@ -64,7 +64,7 @@ Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment
 
 Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
-## Every book I have read since May 2016
+# Every book I have read since May 2016
 
 ### 1 - What I Learned Losing A Million Dollars - Brendan Moynihan
 
