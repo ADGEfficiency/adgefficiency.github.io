@@ -5,6 +5,8 @@ permalink: /top_posts/
 
 ---
 
+## Open source projects
+
 energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
 two day reinforcement learning course - [course notes](https://github.com/ADGEfficiency/dsr_rl)
