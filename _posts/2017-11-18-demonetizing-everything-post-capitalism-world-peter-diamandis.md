@@ -1,5 +1,5 @@
 ---
-title: 'Demonetizing Everything: A Post Capitalism World - Peter Diamandis'
+title: Demonetizing Everything: A Post Capitalism World - Peter Diamandis
 date: 2017-11-18
 categories:
   - Energy Insights
