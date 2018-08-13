@@ -46,9 +46,11 @@ Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
   *Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue)*
 
-  7. Luck factor
+  7. The Luck Factor: The Scientific Study of the Lucky Mind - Richard Wiseman 
 
-  8. Against the gods
+  *Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past*
+
+  8. Against the Gods: The Remarkable Story of Risk - Peter L. Bernstein 
 
   9. Business adventures
 
