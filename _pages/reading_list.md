@@ -72,6 +72,8 @@ Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
 
 Sapiens: A Brief History of Humankind -  Yuval Noah Harari
 
+---
+
 # Every book I have read since May 2016
 
 ### 1 - What I Learned Losing A Million Dollars - Brendan Moynihan
