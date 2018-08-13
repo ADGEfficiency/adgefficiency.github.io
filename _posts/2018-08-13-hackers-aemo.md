@@ -3,7 +3,7 @@ title: 'A hackers guide to AEMO data'
 date: 2018-08-13
 categories:
   - Energy
-excerpt:  A simple guide to the Australian electricity grid data.
+excerpt:  A simple guide to Australian electricity grid data.
 
 ---
 
