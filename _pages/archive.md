@@ -1,7 +1,7 @@
 ---
-title:  "year archive"
+title: "archive"
 layout: posts
-permalink: /year-archive/
+permalink: /year/
 classes: wide
 
 ---
