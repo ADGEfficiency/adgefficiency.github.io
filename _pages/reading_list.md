@@ -212,7 +212,7 @@ a compelling argument for the checklist, which he believes to be the most promis
 
 ### 53 - Blue Ocean Stragety - W. Chan Kim and Renée Mauborgne
 
-### 54 - Tibet: A History - Sam Van SchaikA
+### 54 - Tibet: A History - Sam Van Schaik
 
 ### 55 - The Miracle of Mindfulness: An Introduction to the Practice of Meditation - Thich Nhat Hanh
 
