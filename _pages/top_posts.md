@@ -1,8 +1,7 @@
 ---
-title:  "top Posts"
+title:  "top posts"
 layout: archive
 permalink: /top_posts/
 
 ---
 
-This is my blog page.
