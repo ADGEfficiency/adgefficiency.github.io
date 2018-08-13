@@ -7,6 +7,8 @@ categories:
 ---
 **energy_py is reinforcement learning for energy systems** - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
+energy_py is a tool for running reinforcment learning experiments with energy environments.
+
 Using reinforcement learning agents to control virtual energy environments is a necessary step in using reinforcement learning to optimize real world energy systems.
 
 energy_py supports this goal by providing a **collection of agents, energy environments and tools to run experiments.**
