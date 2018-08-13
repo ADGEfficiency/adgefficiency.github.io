@@ -1,5 +1,5 @@
 ---
-title:  "reading list"
+title: ""
 layout: archive
 permalink: /reading_list/
 classes: wide
