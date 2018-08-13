@@ -1,5 +1,5 @@
 ---
-title:  "top posts"
+title:  "my work"
 layout: archive
 permalink: /top_posts/
 
