@@ -238,9 +238,9 @@ jekyll-archives:
     day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
-    # year: '/archives/year/:year/'
-    # month: '/archives/month/:year-:month/'
-    # tag: '/archives/tag/:name/'
+    year: '/archives/year/:year/'
+    month: '/archives/month/:year-:month/'
+    tag: '/archives/tag/:name/'
 
 # HTML Compression
 # - http://jch.penibelst.de/
