@@ -33,6 +33,8 @@ DQN [debugging](https://www.adgefficiency.com/dqn-debugging/) and [hyperparamete
 
 ### Energy
 
+[CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/)
+
 [The Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/)
 
 [Average vs. Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/)
