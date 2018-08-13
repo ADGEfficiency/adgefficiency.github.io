@@ -6,9 +6,7 @@ classes: wide
 
 ---
 
-## Top books
-
-An arbitrary list of books
+## An arbitrary list of books
 
 ### Data & machine learning
 
@@ -42,11 +40,11 @@ Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
   5. The Sixth Extinction: An Unnatural History - Elizabeth Kolbert
 
-  The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.
+  *The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.*
 
   6. Euthyphro - Plato
 
-  Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue)
+  *Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue)*
 
   7. Luck factor
 

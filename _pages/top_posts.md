@@ -12,3 +12,5 @@ DQN [debugging](https://www.adgefficiency.com/dqn-debugging/) and [hyperparamete
 energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
 two day reinforcement learning course - [course notes](https://github.com/ADGEfficiency/dsr_rl)
+
+![MILP for CHP plants]({{"assets/energy_py/humber_excel.png"}})
