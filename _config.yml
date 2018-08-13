@@ -264,3 +264,5 @@ defaults:
       share: true
       related: true
       classes: wide
+
+paginate: 50
