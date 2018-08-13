@@ -8,7 +8,7 @@ classes: wide
 
 # An arbitrary list of books
 
-### Data & machine learning
+## Data & machine learning
 
 For reinforcement learning - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
 
@@ -16,7 +16,15 @@ For neural networks - [Deep Learning - Ian Goodfellow, Yoshua Bengio and Aaron C
 
 For everything else (linear models, random forests etc) - [Elements of Staistical Learning - Trevor Hastie, Robert Tibshirani and Jerome Friedman](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
 
-### Energy
+The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World - Pedro Domingos
+
+## Python
+
+Fluent Python - Luciano Ramalho
+
+Effective Python: 59 Specific Ways to Write Better Python - Brett Slatkin
+
+## Energy
 
 Energy Transitions: History, Requirements, Prospects - Vaclav Smil
 
@@ -24,9 +32,31 @@ Energy Myths and Realities: Bringing Science to the Energy Policy Debate - Vacla
 
 The Prize: The Epic Quest for Oil, Money & Power - Daniel Yergin
 
-### Misc
+## Business
 
 Principles: Life and Work - Ray Dalio
+
+The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz
+
+The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success - William N. Thorndike
+
+Purple Cow: Transform Your Business by Being Remarkable - Seth Godin
+
+Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
+
+Founders at Work: Stories of Startups' Early Days - Jessica Livingston
+
+Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
+
+The Four Steps to the Epiphany - Steve Blank
+
+## Dharma books
+
+The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
+
+Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment - Robert Wright
+
+## Everything else
 
 Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
@@ -34,35 +64,13 @@ How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
 
 The Power of Myth - Joseph Campbell
 
-The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz
-
-The Four Steps to the Epiphany - Steve Blank
-
-Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
-
 How to Get Filthy Rich In Rising Asia - Mohsin Hamid
 
 Island - Aldous Huxley
 
-The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success - William N. Thorndike
-
-Purple Cow: Transform Your Business by Being Remarkable - Seth Godin
-
 Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
 
 Sapiens: A Brief History of Humankind -  Yuval Noah Harari
-
-Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
-
-Founders at Work: Stories of Startups' Early Days - Jessica Livingston
-
-The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World - Pedro Domingos
-
-The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
-
-Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment - Robert Wright
-
-Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
 # Every book I have read since May 2016
 
@@ -327,3 +335,13 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 ### 107 - Letters from a Stoic: Epistulae Morales Ad Lucilium - Seneca
 
 ### 108 - Benjamin Franklin: An American Life - Walter Isaacson
+
+### 109 - Fluent Python - Luciano Ramalho
+
+### 110 - Effective Python: 59 Specific Ways to Write Better Python - Brett Slatkin
+
+
+
+
+
+
