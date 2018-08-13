@@ -20,6 +20,8 @@ For everything else (linear models, random forests etc) - [Elements of Staistica
 
 Energy Transitions: History, Requirements, Prospects - Vaclav Smil
 
+Energy Myths and Realities: Bringing Science to the Energy Policy Debate - Vaclav Smil
+
 The Prize: The Epic Quest for Oil, Money & Power - Daniel Yergin
 
 ### Misc
@@ -29,6 +31,14 @@ Principles: Life and Work - Ray Dalio
 Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
 How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
+
+The Power of Myth - Joseph Campbell
+
+The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz
+
+The Four Steps to the Epiphany - Steve Blank
+
+Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
 
 ## Every book I have read since May 2016
 
@@ -68,7 +78,7 @@ the Socratic dialogue that presents the speech of legal self-defence, which Socr
 
 Socrates introduces positive ideas: the immortality of the soul and the theory of knowledge as recollection
 
-### 13 - Critical Thinking Skills: Developing Effective Analysis and Argument - Stella Cottrell 
+### 13 - Critical Thinking: Tools for Taking Charge of Your Professional and Personal Life - Richard Paul
 
 ### 14 - Seven Years in Tibet: My Life Before, During and After - Heinrich Harrer
 
@@ -78,45 +88,61 @@ Socrates introduces positive ideas: the immortality of the soul and the theory o
 
 ...connects various economic and societal philosophies with basic mathematics and statistical principles.
 
-  16. Art of R programming
+### 16 - The Art of R Programming: A Tour of Statistical Software Design - Norman Matloff 
 
-  17. Dragon in land of snows
+### 17 - Dragon In The Land Of Snows: The History of Modern Tibet since 1947 
 
-  18. Energy myths and realities
+### 18 - Energy Myths and Realities: Bringing Science to the Energy Policy Debate - Vaclav Smil
 
-  19. Dhampadda
+### 19 - Dhammapada
 
-  20. Power of myth
+a collection of sayings of the Buddha in verse form
 
-  21. How to get rich
+### 20 - The Power of Myth - Joseph Campbell
 
-  22. Hard thing about hard things
+... reveals how the themes and symbols of ancient narratives continue to bring meaning to birth, death, love, and war.
 
-  23. Python - Ultimate begineers guide
+### 21 - How to Get Rich - Felix Dennis
 
-  24. Zero Zero Zero
+### 22 - The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz
 
-  25. Journey to the East
+### 23 - Python: The Ultimate Beginner's Guide! - Andrew Johansen
 
-  26. Python ML
+### 24 - Zero Zero Zero - Roberto Saviano
 
-  27. 4 steps to the epiphany
+### 25 - Journey to the East - Hermann Hesse
 
-  28. Get real
+### 26 - Python Machine Learning - Sebastian Raschka 
 
-  29. Meditations
+### 27 - The Four Steps to the Epiphany - Steve Blank
 
-  30. Maharbarata
+... launched the Lean Startup approach to new ventures.
 
-  31. Buddhist meditation
+### 28 - Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
 
-  32. Still forest pool
+### 29 - Meditations - Marcus Aurelius
 
-  33. Breath by Breath
+... a series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.
 
-  34. Getting real
+### 30 - Mahābhārata 
 
-  35. Obstacle is the way
+one of the two major Sanskrit epics of ancient India.  Among the principal works and stories in the Mahābhārata is the Bhagavad Gita,
+
+### 31 - Buddhist Meditation - Kamalashila
+
+### 32 - A Still Forest Pool: The Insight Meditation of Achaan Chah - Jack Kornfield
+
+A Still Forest Pool reflects the quiet, intensive, and joyous practice of the forest monks of Thailand.
+
+### 33 - Breath by Breath: The Liberating Practice of Insight Meditation - Larry Rosenberg 
+
+The Ānāpānasati Sutta is a discourse that details the Buddha's instruction on using awareness of the breath as an initial focus for meditation.
+
+### 34 - Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
+
+### 35 - The Obstacle is the Way: The Ancient Art of Turning Adversity to Advantage - Ryan Holiday
+
+... draws on the philosophy of the Stoics to guide you in every situation, showing that what blocks our path actually opens one that is new and better.
 
   36. Rich in rising asia
 
