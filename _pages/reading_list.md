@@ -40,6 +40,30 @@ The Four Steps to the Epiphany - Steve Blank
 
 Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
 
+How to Get Filthy Rich In Rising Asia - Mohsin Hamid
+
+Island - Aldous Huxley
+
+The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success - William N. Thorndike
+
+Purple Cow: Transform Your Business by Being Remarkable - Seth Godin
+
+Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
+
+Sapiens: A Brief History of Humankind -  Yuval Noah Harari
+
+Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
+
+Founders at Work: Stories of Startups' Early Days - Jessica Livingston
+
+The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World - Pedro Domingos
+
+The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
+
+Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment - Robert Wright
+
+Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
+
 ## Every book I have read since May 2016
 
 ### 1 - What I Learned Losing A Million Dollars - Brendan Moynihan
@@ -144,168 +168,162 @@ The Ānāpānasati Sutta is a discourse that details the Buddha's instruction on
 
 ... draws on the philosophy of the Stoics to guide you in every situation, showing that what blocks our path actually opens one that is new and better.
 
-  36. Rich in rising asia
+### 36 - How to Get Filthy Rich In Rising Asia - Mohsin Hamid
 
-  37. Four agreements
+### 37 - The Four Agreements: A Practical Guide to Personal Freedom (A Toltec Wisdom Book) - Don Miguel Ruiz 
 
-  38. Crush it
+### 38 - Crush It!: Why NOW Is the Time to Cash In on Your Passion - Gary Vaynerchuk
 
-  39. Content machine
+### 39 - Content Machine: Use Content Marketing to Build a 7-figure Business With Zero Advertising - Dan Norris
 
-  40. Maori tales & legends
+### 40 - Maori Myth and Legend - A. W. Reed
 
-  41. Phaedrus
+### 41 - Phaedrus - Plato
 
-  42. On writing well
+Although ostensibly about the topic of love, the discussion in the dialogue revolves around the art of rhetoric and how it should be practiced
 
-  43. Island
+### 42 - On Writing Well: The Classic Guide to Writing Nonfiction - William Zinsser 
 
-  44. Limits to Crush
+### 43 - Island - Aldous Huxley
 
-  45. Zero Zero Zero
+Island is Huxley's utopian counterpart to his most famous work, the 1932 dystopian novel Brave New World. 
 
-  46. Authority mindset
+### 44 - The Limits to Growth
 
-  47. Four steps to the epiphany
+A 1972 report on the computer simulation of exponential economic and population growth with a finite supply of resources.
 
-  48. Superforecasting
+### 45 - The Authority Mindset: Proven Principles For Establishing Yourself as an Expert in Any Industry - David Bame Jr.
 
-  49. Last lecture
+### 46 - Superforecasting: The Art and Science of Prediction - Philip Tetlock
 
-  50. Checklist manifesto
+### 47 - The Last Lecture - Randy Pausch
 
-  51. 7 day startup
+### 48 - The Checklist Manifesto: How To Get Things Right - Atul GawandeA
 
-  52. Outsiders
+a compelling argument for the checklist, which he believes to be the most promising method available in surmounting failure.
 
-  53. Purple cow
+### 49 - The 7 Day Startup: You Don't Learn Until You Launch  - Dan NorrissA
 
-  54. Deep work
+### 50 - The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success - William N. Thorndike
 
-  55. Blue ocean stagety
+### 51 - Purple Cow: Transform Your Business by Being Remarkable - Seth Godin
 
-  56. Tibet - A History
+### 52 - Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
 
-  57. Miracle of Mindfulness
+### 53 - Blue Ocean Stragety - W. Chan Kim and Renée Mauborgne
 
-  58. 7 Habits of Highly Effective People
+### 54 - Tibet: A History - Sam Van SchaikA
 
-  59. What you gonna do with that duck
+### 55 - The Miracle of Mindfulness: An Introduction to the Practice of Meditation - Thich Nhat Hanh
 
-  60. Made to stick
+### 56 - The 7 Habits of Highly Effective People - Stephen R. Covey
 
-  61. Yoga for stiffer bodyu
+### 57 - Whatcha Gonna Do With That Duck?: And Other Provocations, 2006-2012 - Seth Godin
 
-  62. Never split the difference
+### 58 - Made to Stick: Why some ideas take hold and others come unstuck - Chip and Dan Heath
 
-  63. Zero to One
+### 59 - Yoga for the Stiffer Body: Inspirational Yoga Sequences Made Accessible for Real People -  Lin Craddock
 
-  64. Getting Things Done
+### 60 - Never Split the Difference: Negotiating As If Your Life Depended On It - Chris Voss
 
-  65. Start with WHY
+A former international hostage negotiator for the FBI offers a new, field-tested approach to high-stakes negotiations
 
-  66. Ideas into Words
+### 61 - Zero to One: Notes on Start Ups, or How to Build the Future - Blake Masters and Peter Thiel
 
-  67. 59 Seconds
+### 62 - Getting Things Done: The Art of Stress-Free Productivity - David Allen
 
-  68. Art of Work
+### 63 - Start With Why: How Great Leaders Inspire Everyone To Take Action - Simon Sinek
 
-  69. How will you measure your life
+### 64 - Ideas into Words: Mastering the Craft of Science Writing - Elise Hancock
 
-  70. Last Hours of Waking Sunlight
+### 65 - 59 Seconds: Think a little, change a lot - Richard Wiseman
 
-  71. Energy Myths & Realities
+### 66 - The Art of Work: A Proven Path to Discovering What You Were Meant to Do - Jeff Goins
 
-  72. The Bet
+### 67 - How Will You Measure Your Life? - James Allworth 
 
-  73. This changes everything
+### 68 - The Last Hours Of Ancient Sunlight: Waking up to personal and global transformation - Thom Hartmann
 
-  74. Sapiens
+### 69 - The Bet: Paul Ehrlich, Julian Simon, and Our Gamble Over Earth's Future - Paul Sabin
 
-  75. Limits to Growth
+### 70 - This Changes Everything: Capitalism vs. the Climate - Naomi Klein
 
-  76. A Path with Heart
+### 71 - Sapiens: A Brief History of Humankind -  Yuval Noah Harari
 
-  77. Dreaming yourself awake
+### 72 - A Path With Heart: The Classic Guide Through The Perils And Promises Of Spiritual Life - Jack Kornfield
 
-  78. The goal: a process of ongoing improvement
+### 73 - Dreaming Yourself Awake: Lucid Dreaming and Tibetan Dream Yoga for Insight and Transformation - B. Alan Wallance and Brain HodelA
 
-  79. Anything you want (Sivers)
+### 74 - The Goal: A Process of Ongoing Improvement - Eliyahu M. Goldratt
 
-  80. Hooked: How to build habit forming products
+### 75 - Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
 
-  81. Decisive
+### 76 - Hooked: How to Build Habit-Forming Products - Nir Eyal
 
-  82. Stress test
+### 77 - Decisive: How to make better choices in life and work - Chip and Dan Heath
 
-  83. Founders at work
+### 78 - Stress Test: Reflections on Financial Crises - Timothy Geithner
 
-  84. Weapons of math destruction
+### 79 - Founders at Work: Stories of Startups' Early Days - Jessica Livingston
 
-  85. The social animal
+### 80 - Weapons of Math Destruction: How Big Data Increases Inequality and Threatens Democracy - Cathy O'Neil
 
-  86. The rise of superman
+### 81 - The Social Animal: The Hidden Sources of Love, Character, and Achievement - David Brooks
 
-  87. Siddartha
+the building blocks of human flourishing in a multilayered, profoundly illuminating work grounded in everyday life. This is the story of how success happens, told through the lives of one composite American couple, Harold and Erica.
 
-  88. Joseph campbell companion
+### 82 - The Rise of Superman: Decoding the Science of Ultimate Human Performance - Steven Kotler 
 
-  89. master algorithm
+### 83 - Siddhartha - Hermann Hesse 
 
-  90. The shallows
+The spiritual journey of self-discovery of a man named Siddhartha during the time of the Gautama Buddha.
 
-  91. how will you measure your life
+### 84 - A Joseph Campbell Companion: Reflections on the Art of Living - Joseph Campbell
 
-  92. the path
+### 85 - The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World - Pedro Domingos
 
-  93. hackers & painters
+### 86 - The Shallows: How the internet is changing the way we think, read and remember - Nicholas Carr 
 
-  94. The Heart of Understanding: Commentaries on the Prajnaparamita
+### 87 - The Path: What Chinese Philosophers Can Teach Us about the Good Life - Michael Puett and Christine Gross-Loh
 
-  95. Homo Deus
+### 88 - Hackers & Painters: Big Ideas from the Computer Age - 
 
-  96. Predictably Irrational
+### 89 - The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
 
-  97. What they don't teach you at Harvard Business School
+### 90 - Homo Deus: A Brief History of Tomorrow - Yuval Noah Harari
 
-  98. Superintelligence: Paths, Dangers, Strageties
+### 91 - Predictably Irrational: The Hidden Forces that Shape Our Decisions - Dan Ariely 
 
-  99. Principles: Life and Work (Ray Dalio)
+### 92 - What They Don't Teach You At Harvard Business School - Mark H. McCormack
 
-  100. In My Own Way: Autobiography of Alan Watts
+### 93 - Superintelligence: Paths, Dangers, Strageties - Nick Bostrom
 
-  101. Founders at Work: Stories of Startup' Early Days
+### 94 - In My Own Way: Autobiography of Alan Watts
 
-  102. The Subtle Art of Not Giving a Fuck
+### 95 - The Subtle Art of Not Giving a F&#42;ck: A Counterintuitive Approach to Living a Good Life - Mark Manson
 
-  103. The Happiness Hypothesis
+### 96 - The Happiness Hypothesis: Putting Ancient Wisdom to the Test of Modern Science - Jonathan Haidt
 
-  104. Green Illusions: The Dirty Secrets of Clean Energy and the Future of
+### 97 - Green Illusions: The Dirty Secrets of Clean Energy and the Future of Environmentalism (Our Sustainable Future) - Ozzie ZehnerA
 
-  105. Energy Transitions
+### 98 - Start Small, Stay Small: A Developer's Guide to Launching a Startup - Rob Walling
 
-  106. Start Small, Stay Small
+### 100 - Ego is the Enemy: The Fight to Master Our Greatest Opponent - Ryan Holiday
 
-  107. Ego is the Enemy
+### 101 - Do the Work - Steven Pressfield
 
-  108. Do the Work
+### 101 - Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment - Robert Wright
 
-  109. Turning Pro
+### 102 - Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian and Tom Griffiths
 
-  110. Why Buddhism is True
+### 103 - The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results: Achieve your goals with one of the world's bestselling success books - Gary Keller
 
-  111. Algorithms to Live By
+### 104 - Leonardo Da Vinci - Walter Isaacson
 
-  112. The one thing
+### 105 - The Medici Effect: Breakthrough Insights at the Intersection of Ideas, Concepts, and Cultures -   Frans Johansson
 
-  113. Leonardo Da Vinci: Amazon.co.uk: Walter Isaacson
+### 106 - Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
-  114. Medici effect
+### 107 - Letters from a Stoic: Epistulae Morales Ad Lucilium - Seneca
 
-  115. Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
-
-  116. Seneca - letters
-
-  117. Benjamin Franklin: An American Life - Walter Isaacson
-
-
+### 108 - Benjamin Franklin: An American Life - Walter Isaacson
