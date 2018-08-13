@@ -68,7 +68,7 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ### [nemlog](http://nemlog.com.au/)
 
-![]({{"/assets/hacker_aemo/nem_log.png"}})
+![]({{"/assets/hacker_aemo/nemlog.png"}})
 
 ### [opennem](https://opennem.org.au/#/all-regions) - [github](https://github.com/opennem/)
 
