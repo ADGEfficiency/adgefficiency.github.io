@@ -2,5 +2,5 @@
 main:
   - title: "archive"
     url: /archive/
-  # - title: "Sitemap"
-  #   url: /sitemap/
+  - title: "top posts"
+    url: /top_posts/
