@@ -4,7 +4,11 @@ date: 2017-04-03
 categories:
   - Energy
   - Reinforcement Learning
+classes: wide
+excerpt: An introduction to the open source energy focused reinforcement learning library energy_py.
+
 ---
+
 **energy_py is reinforcement learning for energy systems** - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
 energy_py is a tool for running reinforcment learning experiments with energy environments.  This is the first step before using agents with real world environments.

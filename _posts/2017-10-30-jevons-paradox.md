@@ -1,5 +1,5 @@
 ---
-title: 'Jevon's paradox' 
+title: Jevon's paradox
 date: 2017-10-30
 categories:
   - Energy Basics
