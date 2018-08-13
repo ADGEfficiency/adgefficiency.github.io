@@ -314,7 +314,7 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 
 ### 96 - The Happiness Hypothesis: Putting Ancient Wisdom to the Test of Modern Science - Jonathan Haidt
 
-### 97 - Green Illusions: The Dirty Secrets of Clean Energy and the Future of Environmentalism (Our Sustainable Future) - Ozzie ZehnerA
+### 97 - Green Illusions: The Dirty Secrets of Clean Energy and the Future of Environmentalism (Our Sustainable Future) - Ozzie Zehner
 
 ### 98 - Start Small, Stay Small: A Developer's Guide to Launching a Startup - Rob Walling
 
