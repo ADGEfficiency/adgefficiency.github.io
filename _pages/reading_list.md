@@ -40,9 +40,11 @@ Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
   4. Surely You're Joking Mr Feynman: Adventures of a Curious Character as Told to Ralph Leighton - Richard P Feynman
 
-  5. 6th extinction
+  5. The Sixth Extinction: An Unnatural History - Elizabeth Kolbert
 
-  6. Euthyphtro
+  The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.
+
+  6. Euthyphro - Plato
 
   7. Luck factor
 
