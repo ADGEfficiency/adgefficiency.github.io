@@ -3,7 +3,7 @@ title: 'A hackers guide to AEMO data'
 date: 2018-08-13
 categories:
   - Energy
-excerpt:  A simple guide to the Australian electricity grid data provided by AEMO.
+excerpt:  A simple guide to the Australian electricity grid data.
 
 ---
 
@@ -60,23 +60,23 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ### [AEMO dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard)
 
-![]({{"/assets/hacker_aemo.png"}})
+![]({{"/assets/hacker_aemo/aemo_dashboard.png"}})
 
 ### [electricityMap](https://www.electricitymap.org/)
 
-![]({{"/assets/elect_map.png"}})
+![]({{"/assets/hacker_aemo/elect_map.png"}})
 
 ### [nemlog](http://nemlog.com.au/)
 
-![]({{"/assets/nem_log.png"}})
+![]({{"/assets/hacker_aemo/nem_log.png"}})
 
 ### [opennem](https://opennem.org.au/#/all-regions) - [github](https://github.com/opennem/)
 
-![]({{"/assets/opennem.png"}})
+![]({{"/assets/hacker_aemo/opennem.png"}})
 
 ### [nemsight](http://analytics.com.au/energy-analysis/nemsight-trading-tool/)
 
-![]({{"/assets/nemsight.png"}})
+![]({{"/assets/hacker_aemo/nemsight.png"}})
 
 ## Further reading
 
