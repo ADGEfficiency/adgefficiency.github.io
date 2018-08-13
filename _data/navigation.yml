@@ -1,6 +1,6 @@
 main:
   - title: "archive"
-    url: /year/
+    url: /archive/
   - title: "top posts"
     url: /top_posts/
   - title: "reading list"
