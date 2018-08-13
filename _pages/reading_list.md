@@ -46,6 +46,8 @@ Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
   6. Euthyphro - Plato
 
+  Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue)
+
   7. Luck factor
 
   8. Against the gods
