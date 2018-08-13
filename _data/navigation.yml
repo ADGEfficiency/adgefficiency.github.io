@@ -3,5 +3,5 @@ main:
     url: /top_posts/
   - title: "reading list"
     url: /reading_list/
-  - title: "arch"
+  - title: "archive"
     url: '/:year/:month/'
