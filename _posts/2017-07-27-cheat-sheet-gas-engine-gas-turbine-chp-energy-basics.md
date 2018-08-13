@@ -1,5 +1,5 @@
 ---
-title: 'CHP Cheat Sheet - Gas engines & gas turbines'
+title: CHP Cheat Sheet - Gas engines & gas turbines
 date: 2017-07-27
 categories:
   - Energy Basics

@@ -1,5 +1,5 @@
 ---
-title: 'Inertia in electricity systems'
+title: 'Inertia in Electricity Systems'
 date: 2017-09-22
 categories:
   - Energy Basics
