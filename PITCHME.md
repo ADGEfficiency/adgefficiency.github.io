@@ -8,11 +8,12 @@
 
 ---?image=/assets/energy_py_talk/humber_excel.png&size=auto 100%
 
+---?image=/assets/energy_py_talk/climate.png&size=auto 80%
+
 ---
 
 three pieces of info on climate
 
----?image=/assets/energy_py_talk/climate.png&size=auto 80%
 
 ---
 
@@ -22,20 +23,20 @@ ml + energy solution to the climate problem
 
 price response flexible demand and the lazy taxi driver
 
----
-
-energy_py = supporting experimentation 
-
 ---?image=/assets/energy_py_talk/repo.png&size=auto 100%
 
 ---
 
+energy_py = supporting experimentation 
+
+---
+
 ```bash
-cd energy_py/experiments
+$ cd energy_py/experiments
 
-python experiment.py example dqn
+$ python experiment.py example dqn
 
-tensorboard --logdir='./results/example/tensorboard'
+$ tensorboard --logdir='./results/example/tensorboard'
 ```
 
 ---
@@ -127,11 +128,13 @@ three pieces of info on energy and reinforcement learning
 
 ---
 
-MCTS DQN result
+---?image=/assets/energy_py_talk/mcts_dqn.png&size=auto 100%
+
+> [Deep Reinforcment Learning Doesn't Work Yet](https://www.alexirpan.com/2018/02/14/rl-hard.html)
 
 ---
 
-the env model problem
+the environment model problem / oppourtunity
 
 ---
 
@@ -143,7 +146,7 @@ combining with supervised learning
 
 ---
 
-*short term work*
+**short term work**
 
 loading memories
 
@@ -168,3 +171,8 @@ model based methods
 ---
 
 thank you
+
+climate
+
+energy + rl
+1. 
