@@ -28,43 +28,55 @@ Principles: Life and Work - Ray Dalio
 
 Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
+How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
+
 ## Every book I have read since May 2016
 
-  1. What I Learned Losing A Million Dollars - Brendan Moynihan
+### 1 - What I Learned Losing A Million Dollars - Brendan Moynihan
 
-  2. The Talent Code: Greatness isn't born. It's grown - Daniel Coyle 
+### 2 - The Talent Code: Greatness isn't born. It's grown - Daniel Coyle 
 
-  3. As a Man Thinketh - James Allen
+### 3 - As a Man Thinketh - James Allen
 
-  4. Surely You're Joking Mr Feynman: Adventures of a Curious Character as Told to Ralph Leighton - Richard P Feynman
+### 4 - Surely You're Joking Mr Feynman: Adventures of a Curious Character as Told to Ralph Leighton - Richard P Feynman
 
-  5. The Sixth Extinction: An Unnatural History - Elizabeth Kolbert
+### 5 - The Sixth Extinction: An Unnatural History - Elizabeth Kolbert
 
-  *The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.*
+The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.
 
-  6. Euthyphro - Plato
+### 6 - Euthyphro - Plato
 
-  *Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue)*
+Socrates and Euthyphro attempt to establish a definitive meaning for the word piety (virtue).
 
-  7. The Luck Factor: The Scientific Study of the Lucky Mind - Richard Wiseman 
+### 7 - The Luck Factor: The Scientific Study of the Lucky Mind - Richard Wiseman 
 
-  *Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past*
+Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
 
-  8. Against the Gods: The Remarkable Story of Risk - Peter L. Bernstein 
+### 8 - Against the Gods: The Remarkable Story of Risk - Peter L. Bernstein 
 
-  9. Business adventures
+... the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
 
-  10. Apology
+### 9 - Business Adventures: Twelve Classic Tales from the World of Wall Street - John Brooks
 
-  11. Distres
+### 10 - Apology - Plato
 
-  12. Meno 
+the Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption
 
-  13. Critical thinking
+### 11 - Distress
 
-  14. 7 years in tibet
+### 12 - Meno - Plato
 
-  15. How not to be wrong
+Socrates introduces positive ideas: the immortality of the soul and the theory of knowledge as recollection
+
+### 13 - Critical Thinking Skills: Developing Effective Analysis and Argument - Stella Cottrell 
+
+### 14 - Seven Years in Tibet: My Life Before, During and After - Heinrich Harrer
+
+...experiences in Tibet between 1944 and 1951 during the Second World War and the interim period before the Communist Chinese People's Liberation Army invaded Tibet in 1950
+
+### 15 - How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
+
+...connects various economic and societal philosophies with basic mathematics and statistical principles.
 
   16. Art of R programming
 
