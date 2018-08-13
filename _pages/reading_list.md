@@ -296,7 +296,7 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 
 ### 87 - The Path: What Chinese Philosophers Can Teach Us about the Good Life - Michael Puett and Christine Gross-Loh
 
-### 88 - Hackers & Painters: Big Ideas from the Computer Age - 
+### 88 - Hackers & Painters: Big Ideas from the Computer Age - Paul Graham
 
 ### 89 - The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
 
