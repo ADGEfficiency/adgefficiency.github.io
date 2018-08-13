@@ -3,3 +3,5 @@ main:
     url: /archive/
   - title: "top posts"
     url: /top_posts/
+  - title: "reading list"
+    url: /reading_list/

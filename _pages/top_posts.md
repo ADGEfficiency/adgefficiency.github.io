@@ -5,3 +5,6 @@ permalink: /top_posts/
 
 ---
 
+Machine learning in energy
+
+energy_py
