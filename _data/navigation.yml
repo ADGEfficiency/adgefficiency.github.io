@@ -4,4 +4,4 @@ main:
   - title: "reading list"
     url: /reading_list/
   - title: "archive"
-    url: '/:year/:month/'
+    url: '/year/'
