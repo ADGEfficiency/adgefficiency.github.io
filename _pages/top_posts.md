@@ -1,5 +1,5 @@
 ---
-title:  "my work"
+title:  ""
 layout: archive
 permalink: /top_posts/
 
@@ -13,4 +13,4 @@ energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-le
 
 two day reinforcement learning course - [course notes](https://github.com/ADGEfficiency/dsr_rl)
 
-![MILP for CHP plants]({{"assets/energy_py/humber_excel.png"}})
+Mixed integer linear programming models of combined heat and power plants
