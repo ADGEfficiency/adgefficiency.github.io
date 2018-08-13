@@ -5,3 +5,5 @@ main:
     url: /reading_list/
   - title: "archive"
     url: /year/
+  - title: "archive2"
+    url: /year2/
