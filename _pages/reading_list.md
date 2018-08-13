@@ -8,6 +8,8 @@ classes: wide
 
 # An arbitrary list of books
 
+Books I really love, grouped by topic.
+
 ## Data & machine learning
 
 For reinforcement learning - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
