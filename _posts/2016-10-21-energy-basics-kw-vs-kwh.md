@@ -7,6 +7,7 @@ categories:
 excerpt: Being careful and consistent when dealing with kilowatts kilowatt-hours is basic for all energy professionals.
 
 ---
+
 Being careful and consistent when dealing with kilowatts `kW` and kilowatt-hours `kWh` is a basic for all energy professionals.  Someone who misuses these shows either a lack of care or a lack of understanding - both of which can be fatal.
 
 Understanding the difference between kilowatts `kW` and kilowatt-hours `kWh` is therefore a basic for energy industry professionals.  The key to understanding the difference is understanding the how they relate to time.
