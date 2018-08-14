@@ -104,7 +104,7 @@ Peter Bernstein argues that the notion of bringing risk under control is one of 
 
 ### 10 - Apology - Plato
 
-the Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption
+The Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption
 
 ### 11 - Distress
 
@@ -116,11 +116,11 @@ Socrates introduces positive ideas: the immortality of the soul and the theory o
 
 ### 14 - Seven Years in Tibet: My Life Before, During and After - Heinrich Harrer
 
-...experiences in Tibet between 1944 and 1951 during the Second World War and the interim period before the Communist Chinese People's Liberation Army invaded Tibet in 1950
+Experiences in Tibet between 1944 and 1951 during the Second World War and the interim period before the Communist Chinese People's Liberation Army invaded Tibet in 1950
 
 ### 15 - How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
 
-...connects various economic and societal philosophies with basic mathematics and statistical principles.
+Connects various economic and societal philosophies with basic mathematics and statistical principles.
 
 ### 16 - The Art of R Programming: A Tour of Statistical Software Design - Norman Matloff 
 
@@ -134,7 +134,7 @@ a collection of sayings of the Buddha in verse form
 
 ### 20 - The Power of Myth - Joseph Campbell
 
-... reveals how the themes and symbols of ancient narratives continue to bring meaning to birth, death, love, and war.
+Reveals how the themes and symbols of ancient narratives continue to bring meaning to birth, death, love, and war.
 
 ### 21 - How to Get Rich - Felix Dennis
 
@@ -150,17 +150,17 @@ a collection of sayings of the Buddha in verse form
 
 ### 27 - The Four Steps to the Epiphany - Steve Blank
 
-... launched the Lean Startup approach to new ventures.
+Launched the Lean Startup approach to new ventures.
 
 ### 28 - Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
 
 ### 29 - Meditations - Marcus Aurelius
 
-... a series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.
+A series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.
 
 ### 30 - Mahābhārata 
 
-one of the two major Sanskrit epics of ancient India.  Among the principal works and stories in the Mahābhārata is the Bhagavad Gita,
+One of the two major Sanskrit epics of ancient India.  Among the principal works and stories in the Mahābhārata is the Bhagavad Gita,
 
 ### 31 - Buddhist Meditation - Kamalashila
 
@@ -176,7 +176,7 @@ The Ānāpānasati Sutta is a discourse that details the Buddha's instruction on
 
 ### 35 - The Obstacle is the Way: The Ancient Art of Turning Adversity to Advantage - Ryan Holiday
 
-... draws on the philosophy of the Stoics to guide you in every situation, showing that what blocks our path actually opens one that is new and better.
+Draws on the philosophy of the Stoics to guide you in every situation, showing that what blocks our path actually opens one that is new and better.
 
 ### 36 - How to Get Filthy Rich In Rising Asia - Mohsin Hamid
 
@@ -210,7 +210,7 @@ A 1972 report on the computer simulation of exponential economic and population 
 
 ### 48 - The Checklist Manifesto: How To Get Things Right - Atul GawandeA
 
-a compelling argument for the checklist, which he believes to be the most promising method available in surmounting failure.
+A compelling argument for the checklist, which he believes to be the most promising method available in surmounting failure.
 
 ### 49 - The 7 Day Startup: You Don't Learn Until You Launch  - Dan NorrissA
 
@@ -280,7 +280,7 @@ A former international hostage negotiator for the FBI offers a new, field-tested
 
 ### 81 - The Social Animal: The Hidden Sources of Love, Character, and Achievement - David Brooks
 
-the building blocks of human flourishing in a multilayered, profoundly illuminating work grounded in everyday life. This is the story of how success happens, told through the lives of one composite American couple, Harold and Erica.
+The building blocks of human flourishing in a multilayered, profoundly illuminating work grounded in everyday life. This is the story of how success happens, told through the lives of one composite American couple, Harold and Erica.
 
 ### 82 - The Rise of Superman: Decoding the Science of Ultimate Human Performance - Steven Kotler 
 
@@ -347,7 +347,3 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 ### 112 - Walden - Henry David Thoreau
 
 Part personal declaration of independence, social experiment, voyage of spiritual discovery, satire, and—to some degree—a manual for self-reliance.
-
-
-
-
