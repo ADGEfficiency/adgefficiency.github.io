@@ -33,9 +33,10 @@ It’s quite different from supervised learning. In supervised learning we start
 
 In reinforcement learning we start out with no data. The agent generates data (sequences of experience) by interacting with the environment. The agent uses it’s experience to learn how to interact with the environment. In reinforcement learning we not only learn patterns from data, we also generate our own data.
 
-We also create our own targets.  Data collected in reinforcement learning (the experience tuple $(s,a,r,s')$) has no implicit target.  Agents must label experience (for example, a Bellman target) in order to be able to learn from it.
+We also create our own targets.  Data collected in reinforcement learning (the experience tuple `(s,a,r,s')`) has no implicit target.  Agents must label experience (for example, a Bellman target) in order to be able to learn from it.
 
 If you are interested in learning more about reinforcement learning, I would recommend these resources
+
 - [Li (2017) Deep Reinforcement Learning: An Overview](https://arxiv.org/pdf/1701.07274.pdf)
 - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
 - [UCL video lectures by David Silver](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
@@ -56,7 +57,9 @@ Optimal operating strategies can be developed from abstract models. Yet abstract
 
 With reinforcement learning we can use the ability of the same agent to generalize to a number of different environments. This means we can use a single agent to both learn how to control a battery and to dispatch flexible demand. It’s a more scalable solution than developing site by site heuristics or building an abtract model for each site.
 
-There are challenges to be overcome. The first and most important is safety. Safety is the number one concern in any engineering discipline.
+## Challenges
+
+The first and most important is safety. Safety is the number one concern in any engineering discipline.
 
 I believe that by reinforcement learning should be first applied on as high a level of the control system as possible. This allows the number of actions to be limited and existing lower level safety & control systems can remain in place. The agent is limited to only making the high level decisions operators make today.
 
@@ -68,7 +71,7 @@ The value of using a reinforcement learner is to let operations teams do their j
 
 Any machine requires downtime – a reinforcement learner is no different. There will still be time periods where the plant will operate in manual or semi-automatic modes with human guidance.
 
-energy_py is one step on a long journey of getting reinforcement learners helping us in the energy industry. The fight against climate change is the greatest that humanity faces. Reinforcement learning will be a key ally in fighting it. You can [checkout the repository on GitHub here](https://github.com/ADGEfficiency/energy_py).
+energy_py is one step on a long journey of getting reinforcement learners helping us in the energy industry. The fight against climate change is the greatest that humanity faces. Reinforcement learning will be a key ally in fighting it. The project is open source and hosted on [GitHub](https://github.com/ADGEfficiency/energy_py).
 
 ## Design choices
 
