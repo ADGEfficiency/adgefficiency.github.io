@@ -27,7 +27,7 @@ Simulation is required because
 
 ![Figure 1]({{"/assets/energy_py/sl_usl_rl.png"}})
 
-Reinforcement learning is the branch of machine learning where an agent **learns through action**.  It's about making good decisions.  
+Machine learning can be separated into three broad categories, based on the type of feedback signal available to the learner.  In reinforcement learning an agent learns through action.  It's about making good decisions.  
 
 It’s quite different from supervised learning. In supervised learning we start with (hopefully big) dataset.  We train a model to predict the target associated with each sample.
 
@@ -41,7 +41,7 @@ If you are interested in learning more about reinforcement learning, I would rec
 - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
 - [UCL video lectures by David Silver](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 
-I also teach a two day introduction to reinforcement learning course at Data Science Retreat in Berlin.  You can find the [course materials on GitHub](https://github.com/ADGEfficiency/dsr_rl).  **I am always happy to come give this course for free at interesting companies and universities**.
+I also teach a two day introduction to reinforcement learning course at Data Science Retreat in Berlin.  You can find the [course materials on GitHub](https://github.com/ADGEfficiency/dsr_rl).  I am always happy to come give this course for free at interesting companies and universities.
 
 ## Why reinforcement learning in energy?
 
