@@ -6,9 +6,9 @@ classes: wide
 
 ---
 
-# An arbitrary list of books
+# A list of books
 
-Books I really love, grouped by topic.
+Books I love, grouped by topic.
 
 ## Data & machine learning
 
@@ -78,7 +78,7 @@ Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian
 
 ---
 
-# Every book I have read since May 2016
+# All the books I've read since May 2016
 
 ### 1 - What I Learned Losing A Million Dollars - Brendan Moynihan
 
