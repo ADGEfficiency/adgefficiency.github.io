@@ -212,7 +212,7 @@ A 1972 report on the computer simulation of exponential economic and population 
 
 A compelling argument for the checklist, which he believes to be the most promising method available in surmounting failure.
 
-### 49 - The 7 Day Startup: You Don't Learn Until You Launch  - Dan NorrissA
+### 49 - The 7 Day Startup: You Don't Learn Until You Launch  - Dan Norriss
 
 ### 50 - The Outsiders: Eight Unconventional CEOs and Their Radically Rational Blueprint for Success - William N. Thorndike
 
