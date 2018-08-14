@@ -11,7 +11,7 @@ excerpt: An introduction to the open source energy focused reinforcement learnin
 
 **energy_py is reinforcement learning for energy systems** - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
-energy_py is a tool for running reinforcment learning experiments with energy environments.  This is the first step before using agents with real world environments.
+energy_py is a tool for running reinforcment learning experiments with virtual energy environments.  This is the first step before using agents with real world environments.
 
 energy_py supports this goal by providing a **collection of agents, energy environments and tools to run experiments.**
 
@@ -29,13 +29,11 @@ Simulation is required because
 
 Reinforcement learning is the branch of machine learning where an agent **learns through action**.  It's about making good decisions.  
 
-It’s quite different from supervised learning. In supervised learning we start with a big dataset. We train a model to replicate the patterns found in this dataset so that we can make predictions.
+It’s quite different from supervised learning. In supervised learning we start with a big dataset. We train a model to replicate the patterns found in this dataset so that we can make predictions.  
 
 In reinforcement learning we start out with no data. The agent generates data (sequences of experience) by interacting with the environment. The agent uses it’s experience to learn how to interact with the environment. In reinforcement learning we not only learn patterns from data, we also generate our own data.
 
-This makes reinforcement learning more democratic than supervised learning. Modern supervised learning requires massive amounts of labelled training data.  This requirement allows tech companies to build defensible moats around their unique datasets.
-
-In reinforcement learning all that is needed is an environment (real or virtual) and an agent.  There is also a requirement for hardware (which has become increasingly democratised by variable cost access through the cloud) and the expertise to setup, debug and roll out the agents and environments.
+We also create our own targets.  Data collected in reinforcement learning (the experience tuple $(s,a,r,s')$) has no implicit target.  Agents must label experience (for example, a Bellman target) in order to be able to learn from it.
 
 If you are interested in learning more about reinforcement learning, I would recommend these resources
 - [Li (2017) Deep Reinforcement Learning: An Overview](https://arxiv.org/pdf/1701.07274.pdf)
@@ -46,7 +44,7 @@ I also teach a two day introduction to reinforcement learning course at Data Sci
 
 ## Why reinforcement learning in energy?
 
-Optimal operation of energy assets is challenging. Our current energy transition makes this difficult problem even harder.
+Optimal operation of energy assets is challenging. Our current energy transition is making this difficult problem even harder.
 
 The rise of intermittent generation is introducing uncertainty on the generation and demand side.  Delivering value from new technologies such as demand side flexibility and storage require smart decision making.
 
@@ -112,9 +110,4 @@ actions_list = action_space.discretize(n_discr=20)
 random_action = action_space.sample_discrete()
 ```
 
-Processors can be used to preprocess numpy arrays.  In reinforcement learning different agents will want to normalize or
-standardize observations, actions, or targets for neural networks.
-
-The Normalizer transforms a batch to range [0,1], optionally using a historical min & max transforms a batch to range
-[0,1], optionally using a historical min & max.  The Standardizer transforms a batch to mean 0, standard deviation of 1
-using a historical min & max.
+Thanks for reading!
