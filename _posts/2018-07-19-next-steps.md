@@ -1,5 +1,5 @@
 ---
-title: 'Next steps in the clean energy transition'
+title: 'Next Steps in the Clean Energy Transition'
 date: 2018-07-19
 categories:
 - Energy
