@@ -88,7 +88,7 @@ Sapiens: A Brief History of Humankind -  Yuval Noah Harari
 
 ### 5 - The Sixth Extinction: An Unnatural History - Elizabeth Kolbert
 
-The book argues that the Earth is in the midst of a modern, man-made, sixth extinction.
+Argues that the Earth is in the midst of a modern, man-made, sixth extinction.
 
 ### 6 - Euthyphro - Plato
 
@@ -333,6 +333,8 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 ### 105 - The Medici Effect: Breakthrough Insights at the Intersection of Ideas, Concepts, and Cultures -   Frans Johansson
 
 ### 106 - Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
+
+Skin in the game means that you do not pay attention to what people say, only to what they do, and how much of their neck they are putting on the line
 
 ### 107 - Letters from a Stoic: Epistulae Morales Ad Lucilium - Seneca
 
