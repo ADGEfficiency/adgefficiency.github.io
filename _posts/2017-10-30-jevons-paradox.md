@@ -4,6 +4,7 @@ date: 2017-10-30
 categories:
   - Energy Basics
 classes: wide
+excerpt: Energy efficiency is not so simple.
 
 ---
 
