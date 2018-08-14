@@ -36,6 +36,8 @@ The Prize: The Epic Quest for Oil, Money & Power - Daniel Yergin
 
 ## Business
 
+Business Adventures: Twelve Classic Tales from the World of Wall Street - John Brooks
+
 Principles: Life and Work - Ray Dalio
 
 The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers - Ben Horowitz
@@ -49,8 +51,6 @@ Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
 Founders at Work: Stories of Startups' Early Days - Jessica Livingston
 
 Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
-
-The Four Steps to the Epiphany - Steve Blank
 
 ## Dharma books
 
@@ -326,7 +326,11 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 
 ### 101 - Why Buddhism is True: The Science and Philosophy of Meditation and Enlightenment - Robert Wright
 
+An evolutionary & psychological perspective on Buddhism.
+
 ### 102 - Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian and Tom Griffiths
+
+How the simple, precise algorithms used by computers can also untangle very human questions
 
 ### 103 - The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results: Achieve your goals with one of the world's bestselling success books - Gary Keller
 
