@@ -1,5 +1,5 @@
 ---
-title: What is the UK Imbalance Price?
+title: 'What is the UK Imbalance Price?'
 date: 2016-12-01
 categories:
   - Electricity Price Forecasting
