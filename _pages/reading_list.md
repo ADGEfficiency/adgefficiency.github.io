@@ -96,11 +96,9 @@ Socrates and Euthyphro attempt to establish a definitive meaning for the word pi
 
 ### 7 - The Luck Factor: The Scientific Study of the Lucky Mind - Richard Wiseman 
 
-Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
-
 ### 8 - Against the Gods: The Remarkable Story of Risk - Peter L. Bernstein 
 
-... the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
+Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
 
 ### 9 - Business Adventures: Twelve Classic Tales from the World of Wall Street - John Brooks
 
