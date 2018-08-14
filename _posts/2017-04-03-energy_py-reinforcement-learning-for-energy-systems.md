@@ -79,14 +79,14 @@ import energy_py
 TOTAL_STEPS = 1000000
 
 env = energy_py.make_env(
-    env_id='BatteryEnv',
+    env_id='battery',
     dataset_name=example,
     episode_length=288,
     power_rating=2
 )
 
 agent = energy_py.make_agent(
-    agent_id='DQN',
+    agent_id='dqn',
     env=env
     total_steps=TOTAL_STEPS
 )
