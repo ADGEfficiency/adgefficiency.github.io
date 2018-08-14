@@ -43,7 +43,9 @@ I also teach a two day introduction to reinforcement learning course at Data Sci
 
 ## Why reinforcement learning in energy?
 
-Optimal operation of energy assets is challenging. Our current energy transition is making this difficult problem even harder.  The rise of intermittent generation is introducing uncertainty on the generation and demand side.  Intelligent operation of clean technologies such as batteries and demand side flexibility are required to smooth out renewables.
+Optimal operation of energy assets is challenging. Our current energy transition is making this difficult problem even harder.  The rise of intermittent generation is introducing uncertainty on the generation and demand side.  
+
+Intelligent operation of clean technologies such as batteries and demand side flexibility are required to smooth out renewables.
 
 Today many operators use rules or abstract models to dispatch assets. A set of rules is not able to guarantee optimal operation in many energy systems.  Optimal operating strategies can be developed from abstract models.   Traditionally these models were linear or required hand engineering.
 
@@ -68,8 +70,7 @@ energy_py is one step on a long journey of getting reinforcement learners helpin
 Inspiration for the design of energy_py environments comes from [OpenAI gym](https://github.com/openai/gym).
 
 The ultimate goal for energy_py is to have a collection of high quality implementations of different reinforcement
-learning agents.  Currently the focus is on implementing a single high quality implementation of DQN and it's
-extensions.  A good summary of the DQN extensions is given in [Hessel et. al (2017) Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/pdf/1710.02298.pdf).
+learning agents.  Currently the focus is on implementing a single high quality implementation of [DQN and it's extensions](https://arxiv.org/pdf/1710.02298.pdf).
 
 Creating environments and agents follows a simple API familiar to any users of Open AI gym.
 
