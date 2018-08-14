@@ -344,7 +344,11 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 
 ### 110 - Effective Python: 59 Specific Ways to Write Better Python - Brett Slatkin
 
+### 111 - So Good They Can't Ignore You - Cal Newport 
 
+### 112 - Walden - Henry David Thoreau
+
+Part personal declaration of independence, social experiment, voyage of spiritual discovery, satire, and—to some degree—a manual for self-reliance.
 
 
 
