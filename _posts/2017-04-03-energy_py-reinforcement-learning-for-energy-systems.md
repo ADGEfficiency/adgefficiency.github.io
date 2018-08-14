@@ -71,7 +71,7 @@ The ultimate goal for energy_py is to have a collection of high quality implemen
 learning agents.  Currently the focus is on implementing a single high quality implementation of DQN and it's
 extensions.  A good summary of the DQN extensions is given in [Hessel et. al (2017) Rainbow: Combining Improvements in Deep Reinforcement Learning](https://arxiv.org/pdf/1710.02298.pdf).
 
-Creating environments and agents follows a simple API familiar to any users of Open AI gym
+Creating environments and agents follows a simple API familiar to any users of Open AI gym.
 
 ```python
 import energy_py
