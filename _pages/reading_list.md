@@ -74,6 +74,8 @@ Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
 
 Sapiens: A Brief History of Humankind -  Yuval Noah Harari
 
+Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian and Tom Griffiths
+
 ---
 
 # Every book I have read since May 2016
