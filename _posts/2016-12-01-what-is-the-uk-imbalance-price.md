@@ -3,8 +3,8 @@ title: 'What is the UK Imbalance Price?'
 date: 2016-12-01
 categories:
   - Electricity Price Forecasting
-excerpt: 
-An introduction to the economics of imbalance in electricity systems.
+classes: wide
+excerpt: An introduction to the economics of imbalance in electricity systems.
 
 ---
 
