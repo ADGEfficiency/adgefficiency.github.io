@@ -158,11 +158,11 @@ Launched the Lean Startup approach to new ventures.
 
 ### 29 - Meditations - Marcus Aurelius
 
-A series of personal writings by Marcus Aurelius, Roman Emperor from 161 to 180 AD, recording his private notes to himself and ideas on Stoic philosophy.
+The personal writings by the Roman Emperor Marcus Aurelius recording his private notes to himself and ideas on Stoic philosophy.
 
 ### 30 - Mahābhārata 
 
-One of the two major Sanskrit epics of ancient India.  Among the principal works and stories in the Mahābhārata is the Bhagavad Gita,
+One of the two major Sanskrit epics of ancient India - within it is the Bhagavad Gita.
 
 ### 31 - Buddhist Meditation - Kamalashila
 
@@ -192,13 +192,13 @@ Draws on the philosophy of the Stoics to guide you in every situation, showing t
 
 ### 41 - Phaedrus - Plato
 
-Although ostensibly about the topic of love, the discussion in the dialogue revolves around the art of rhetoric and how it should be practiced
+Although ostensibly about the topic of love, the discussion in the dialogue revolves around the art of rhetoric and how it should be practiced.
 
 ### 42 - On Writing Well: The Classic Guide to Writing Nonfiction - William Zinsser 
 
 ### 43 - Island - Aldous Huxley
 
-Island is Huxley's utopian counterpart to his most famous work, the 1932 dystopian novel Brave New World. 
+Huxley's utopian counterpart to Brave New World.
 
 ### 44 - The Limits to Growth
 
@@ -238,7 +238,7 @@ A compelling argument for the checklist, which he believes to be the most promis
 
 ### 60 - Never Split the Difference: Negotiating As If Your Life Depended On It - Chris Voss
 
-A former international hostage negotiator for the FBI offers a new, field-tested approach to high-stakes negotiations
+A former international hostage negotiator for the FBI offers a new, field-tested approach to high-stakes negotiations.
 
 ### 61 - Zero to One: Notes on Start Ups, or How to Build the Future - Blake Masters and Peter Thiel
 
@@ -301,6 +301,8 @@ The spiritual journey of self-discovery of a man named Siddhartha during the tim
 ### 88 - Hackers & Painters: Big Ideas from the Computer Age - Paul Graham
 
 ### 89 - The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
+
+The bodhisattva Avalokiteshvara describes how to train in the perfection of wisdom by seeing through the illusory nature of all things.
 
 ### 90 - Homo Deus: A Brief History of Tomorrow - Yuval Noah Harari
 
