@@ -108,7 +108,7 @@ Peter Bernstein argues that the notion of bringing risk under control is one of 
 
 The Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption
 
-### 11 - Distress
+### 11 - Distress - Greg Egan
 
 ### 12 - Meno - Plato
 
