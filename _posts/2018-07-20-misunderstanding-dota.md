@@ -1,5 +1,5 @@
 ---
-title: 'All hail the Open AI Dota 2 agent'
+title: 'All hail Open AI Five'
 date: 20/07/2018
 categories: 
 - reinforcement learning
