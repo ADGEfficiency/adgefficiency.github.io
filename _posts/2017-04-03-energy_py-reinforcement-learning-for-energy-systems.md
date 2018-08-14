@@ -45,9 +45,7 @@ I also teach a two day introduction to reinforcement learning course at Data Sci
 
 Optimal operation of energy assets is challenging. Our current energy transition is making this difficult problem even harder.  The rise of intermittent generation is introducing uncertainty on the generation and demand side.  Intelligent operation of clean technologies such as batteries and demand side flexibility are required to smooth out renewables.
 
-Today many operators use rules or abstract models to dispatch assets. A set of rules is not able to guarantee optimal operation in many energy systems.
-
-Optimal operating strategies can be developed from abstract models. Yet abstract models (such as linear programming) are often constrained. These models are limited to approximations of the actual plant.  Reinforcement learners are able to learn directly from their experience of the actual plant. These abstract models also require significant amount of bespoke effort by an engineer to setup and validate.
+Today many operators use rules or abstract models to dispatch assets. A set of rules is not able to guarantee optimal operation in many energy systems.  Optimal operating strategies can be developed from abstract models.   Traditionally these models were linear or required hand engineering.
 
 Neural network powered machine learning has achieved impressive results in computer vision and natural language processing.  Modern reinforcement learning has also achieved landmark results.
 
