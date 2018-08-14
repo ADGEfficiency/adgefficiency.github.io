@@ -27,7 +27,7 @@ Simulation is required because
 
 ![Figure 1]({{"/assets/energy_py/sl_usl_rl.png"}})
 
-Reinforcement learning is the branch of machine learning where an agent **learns through action**.  Fundamentally it's about making good decisions.  
+Reinforcement learning is the branch of machine learning where an agent **learns through action**.  It's about making good decisions.  
 
 It’s quite different from supervised learning. In supervised learning we start with a big dataset. We train a model to replicate the patterns found in this dataset so that we can make predictions.
 
@@ -46,7 +46,7 @@ I also teach a two day introduction to reinforcement learning course at Data Sci
 
 ## Why reinforcement learning in energy?
 
-Optimal operation of energy assets is very challenging. Our current energy transition makes this difficult problem even harder.
+Optimal operation of energy assets is challenging. Our current energy transition makes this difficult problem even harder.
 
 The rise of intermittent generation is introducing uncertainty on the generation and demand side.  Delivering value from new technologies such as demand side flexibility and storage require smart decision making.
 
@@ -56,7 +56,7 @@ Today many operators use rules or abstract models to dispatch assets. A set of r
 
 Optimal operating strategies can be developed from abstract models. Yet abstract models (such as linear programming) are often constrained. These models are limited to approximations of the actual plant.  Reinforcement learners are able to learn directly from their experience of the actual plant. These abstract models also require significant amount of bespoke effort by an engineer to setup and validate.
 
-With reinforcement learning we can use the ability of the same agent to generalize to a number of different environments. This means we can use a single agent to both learn how to control a battery and to dispatch flexible demand. It’s a much more scalable solution than developing site by site heuristics or building an abtract model for each site.
+With reinforcement learning we can use the ability of the same agent to generalize to a number of different environments. This means we can use a single agent to both learn how to control a battery and to dispatch flexible demand. It’s a more scalable solution than developing site by site heuristics or building an abtract model for each site.
 
 There are challenges to be overcome. The first and most important is safety. Safety is the number one concern in any engineering discipline.
 
@@ -74,7 +74,7 @@ energy_py is one step on a long journey of getting reinforcement learners helpin
 
 ## Design choices
 
-Inspiration for a lot of the design of energy_py comes from [OpenAI gym](https://github.com/openai/gym).
+Inspiration for the design of energy_py environments comes from [OpenAI gym](https://github.com/openai/gym).
 
 The ultimate goal for energy_py is to have a collection of high quality implementations of different reinforcement
 learning agents.  Currently the focus is on implementing a single high quality implementation of DQN and it's
