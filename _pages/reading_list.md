@@ -100,25 +100,25 @@ Socrates and Euthyphro attempt to establish a definitive meaning for the word pi
 
 ### 8 - Against the Gods: The Remarkable Story of Risk - Peter L. Bernstein 
 
-Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past
+Peter Bernstein argues that the notion of bringing risk under control is one of the central ideas that distinguishes modern times from the distant past.
 
 ### 9 - Business Adventures: Twelve Classic Tales from the World of Wall Street - John Brooks
 
 ### 10 - Apology - Plato
 
-The Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption
+The Socratic dialogue that presents the speech of legal self-defence, which Socrates presented at his trial for impiety and corruption.
 
 ### 11 - Distress - Greg Egan
 
 ### 12 - Meno - Plato
 
-Socrates introduces positive ideas: the immortality of the soul and the theory of knowledge as recollection
+Socrates introduces positive ideas: the immortality of the soul and the theory of knowledge as recollection.
 
 ### 13 - Critical Thinking: Tools for Taking Charge of Your Professional and Personal Life - Richard Paul
 
 ### 14 - Seven Years in Tibet: My Life Before, During and After - Heinrich Harrer
 
-Experiences in Tibet between 1944 and 1951 during the Second World War and the interim period before the Communist Chinese People's Liberation Army invaded Tibet in 1950
+Experiences in Tibet before the Communist Chinese People's Liberation Army invaded Tibet in 1950.
 
 ### 15 - How Not to Be Wrong: The Power of Mathematical Thinking - Jordan Ellenberg
 
@@ -132,7 +132,7 @@ Connects various economic and societal philosophies with basic mathematics and s
 
 ### 19 - Dhammapada
 
-a collection of sayings of the Buddha in verse form
+A collection of sayings of the Buddha in verse form.
 
 ### 20 - The Power of Myth - Joseph Campbell
 
@@ -168,7 +168,7 @@ One of the two major Sanskrit epics of ancient India - within it is the Bhagavad
 
 ### 32 - A Still Forest Pool: The Insight Meditation of Achaan Chah - Jack Kornfield
 
-A Still Forest Pool reflects the quiet, intensive, and joyous practice of the forest monks of Thailand.
+The quiet, intensive, and joyous practice of the forest monks of Thailand.
 
 ### 33 - Breath by Breath: The Liberating Practice of Insight Meditation - Larry Rosenberg 
 
@@ -178,7 +178,7 @@ The Ānāpānasati Sutta is a discourse that details the Buddha's instruction on
 
 ### 35 - The Obstacle is the Way: The Ancient Art of Turning Adversity to Advantage - Ryan Holiday
 
-Draws on the philosophy of the Stoics to guide you in every situation, showing that what blocks our path actually opens one that is new and better.
+What blocks our path actually opens one that is new and better.
 
 ### 36 - How to Get Filthy Rich In Rising Asia - Mohsin Hamid
 
@@ -332,7 +332,7 @@ An evolutionary & psychological perspective on Buddhism.
 
 ### 102 - Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian and Tom Griffiths
 
-How the simple, precise algorithms used by computers can also untangle very human questions
+How the simple, precise algorithms used by computers can also untangle very human questions.
 
 ### 103 - The One Thing: The Surprisingly Simple Truth Behind Extraordinary Results: Achieve your goals with one of the world's bestselling success books - Gary Keller
 
@@ -342,7 +342,7 @@ How the simple, precise algorithms used by computers can also untangle very huma
 
 ### 106 - Skin in the Game: Hidden Asymmetries in Daily Life - Nassim Nicholas Taleb
 
-Skin in the game means that you do not pay attention to what people say, only to what they do, and how much of their neck they are putting on the line
+Don't pay attention to what people say, only to what they do, and how much of their neck they are putting on the line.
 
 ### 107 - Letters from a Stoic: Epistulae Morales Ad Lucilium - Seneca
 
