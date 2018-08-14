@@ -29,11 +29,11 @@ Simulation is required because
 
 Reinforcement learning is the branch of machine learning where an agent **learns through action**.  It's about making good decisions.  
 
-It’s quite different from supervised learning. In supervised learning we start with a big dataset. We train a model to replicate the patterns found in this dataset so that we can make predictions.  
+It’s quite different from supervised learning. In supervised learning we start with (hopefully big) dataset.  We train a model to predict the target associated with each sample.
 
-In reinforcement learning we start out with no data. The agent generates data (sequences of experience) by interacting with the environment. The agent uses it’s experience to learn how to interact with the environment. In reinforcement learning we not only learn patterns from data, we also generate our own data.
+Reinforcement learning faces two additional challenges.  The first is data generation.  Data is generated through the agent taking actions in the environment.  The agent must take care to explore the state space when it is learning and then exploit it once it has learnt.
 
-We also create our own targets.  Data collected in reinforcement learning are sequences of experience - transitions between states, the actions taken and rewards recieved.  The experience tuple `(s,a,r,s')` has no implicit target.  Agents must label experience (for example, a Bellman target) in order to be able to learn from it.
+The second challenge is target creation.  Data collected in reinforcement learning are sequences of experience - transitions between states, the actions taken and rewards recieved.  The experience tuple `(s,a,r,s')` has no implicit target.  Agents must label experience (for example, a Bellman target) in order to be able to learn from it.
 
 If you are interested in learning more about reinforcement learning, I would recommend these resources
 
@@ -53,7 +53,7 @@ Optimal operating strategies can be developed from abstract models. Yet abstract
 
 Neural network powered machine learning has achieved impressive results in computer vision and natural language processing.  Modern reinforcement learning has also achieved landmark results.
 
-Reinforcement learning offers a solution that can learn across a variety of tasks - including control of non-linear systems that require long term planning.
+Reinforcement learning offers a solution that can learn across a variety of tasks - including control of non-linear systems that require long term planning.  
 
 ## Challenges
 
@@ -67,7 +67,7 @@ Modern reinforcement learning has achieved impressive results - notably DQN and 
 
 energy_py is one step on a long journey of getting reinforcement learners helping us in the energy industry. The fight against climate change is the greatest that humanity faces. Reinforcement learning will be a key ally in fighting it. The project is open source and hosted on [GitHub](https://github.com/ADGEfficiency/energy_py).
 
-## Design choices
+## Design 
 
 Inspiration for the design of energy_py environments comes from [OpenAI gym](https://github.com/openai/gym).
 
