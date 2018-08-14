@@ -1,5 +1,5 @@
 ---
-title: Composition, not consumption - why we can't learn from Costa Rica
+title: Why we can't learn from Costa Rica
 date: 2016-12-02
 categories:
   - Energy
