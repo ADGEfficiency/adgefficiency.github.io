@@ -1,9 +1,11 @@
 ---
 title: 'blockchain in energy - part one - what is blockchain'
-date: 2017-06-26T11:32:39+00:00
+date: 2017-06-26
 categories:
   - Energy
 excerpt: An introduction to blockchain the technology.
+
+---
 
 This is a two part series on blockchain in the energy system.  This post will give an introduction to the blockchain technology - what it is, how it works, the advantages and the challenges.   We will also take a look at two of the largest implementations of blockchain, bitcoin and Ethereum.
 

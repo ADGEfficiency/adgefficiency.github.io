@@ -4,6 +4,7 @@ date: 2017-07-17
 author: Adam Green
 categories:
   - Energy
+excerpt: How far can blockchain and the grid go?
 
 ---
 
@@ -97,6 +98,6 @@ Thanks for reading!
 
 [WePower](https://wepower.network/) - fuels renewable energy production by enabling developers to raise capital by selling their energy production upfront
 
-[PowerLedger](https://powerledger.io/)
+[PowerLedger](https://powerledger.io/) - peer-to-peer marketplace for renewable energy.
 
-
+[Exergy](https://exergy.energy/) - peer-to-peer solar trading.
