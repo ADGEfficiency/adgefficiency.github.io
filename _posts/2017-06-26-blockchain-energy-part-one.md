@@ -9,7 +9,7 @@ excerpt: An introduction to blockchain the technology.
 
 This is a two part series on blockchain in the energy system.  This post will give an introduction to the blockchain technology - what it is, how it works, the advantages and the challenges.   We will also take a look at two of the largest implementations of blockchain, bitcoin and Ethereum.
 
-[The second part theorizes how far we might be able to go with blockchain and the grid](http://adgefficiency.com/blockchain-energy-part-two/). We look what a smart contract enabled blockchain might mean for system operators, electricity consumers & generators, machines and regulators.
+[The second part theorizes how far we might be able to go with blockchain and the grid](http://adgefficiency.com/blockchain-energy-part-two/) - looking at what a smart contract enabled blockchain might mean for system operators, electricity consumers & generators, machines and regulators.
 
 ## what is blockchain
 
