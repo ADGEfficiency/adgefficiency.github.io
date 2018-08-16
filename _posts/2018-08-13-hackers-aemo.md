@@ -9,9 +9,23 @@ excerpt:  A simple guide to Australian electricity grid data.
 
 This is a short guide to Australian electricity grid data supplied by AEMO (the market operator) for the NEM (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
 
+## Price structure
+
+The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the six **dispatch prices** that occur within a half hour - the dispatch price is a 5 minute price for electricity.
+
+AEMO provide both actual data and forecasts.  
+
+Data from AEMO is supplied from three different, overlapping sources
+
+- [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours
+- [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
+- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until present
+
+Some report names are slighty different in each source - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
+
 ## AEMO timestamping
 
-AEMO timestamp their data with the time **at the end of the interval**.  This means that `01/01/2018 14:00` refers to the time period `01/01/2018 13:30 - 01/01/2018 14:00`.
+AEMO timestamp with the time **at the end of the interval**.  This means that `01/01/2018 14:00` refers to the time period `01/01/2018 13:30 - 01/01/2018 14:00`.
 
 Personally I shift the AEMO time stamp backwards by one step of the index frequency (i.e. 5 minutes).  This allows the following to be true
 
@@ -19,25 +33,13 @@ Personally I shift the AEMO time stamp backwards by one step of the index freque
 dispatch_prices.loc['01/01/2018 13:30': '01/01/2018 14:00'].mean() == trading_price.loc['01/01/2018 13:30']
 ```
 
+The shifting also allows easier alignment with external data sources such as weather, which is usually stamped with the timestamp at the beginning of the interval.
+
 If the AEMO timestamp is not shifted, then the following is true
 
 ```python
 dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_price.loc['01/01/2018 14:00']
 ```
-
-Which personally I find less inutitive.  The shifting also allows eaiser alignment with weather data which is stamped as measured.
-
-## Price structure
-
-The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the 6 **dispatch prices** that occur within a half hour.
-
-AEMO provide both actual data and forecasts.  
-
-Data from AEMO is supplied in three forms
-
-- [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours
-- [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
-- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until present
 
 ## Useful reports
 
@@ -56,7 +58,7 @@ The MMSDM links are for `2018_05`.  There are many more useful reports that have
 
 ## Ecosystem
 
-A major benefit of the large AEMO dataset is the ecosystem of third parties who can build useful tools from it.  
+A major benefit of the large AEMO dataset is the ecosystem of third parties who can build useful (and often open source) tools on top of it.
 
 ### [AEMO dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard)
 
@@ -82,3 +84,5 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 - [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)
 - [Li, Zili (2016) Topics in deregulated electricity markets. PhD thesis, Queensland University of Technology](https://eprints.qut.edu.au/98895/)
+
+Thanks for reading!
