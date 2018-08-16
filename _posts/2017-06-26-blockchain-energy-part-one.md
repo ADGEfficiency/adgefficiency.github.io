@@ -1,5 +1,5 @@
 ---
-title: 'blockchain in energy - part one - what is blockchain'
+title: blockchain in energy - part one - what is blockchain
 date: 2017-06-26
 categories:
   - Energy
