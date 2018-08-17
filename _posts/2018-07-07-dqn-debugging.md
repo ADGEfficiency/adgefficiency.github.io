@@ -1,5 +1,5 @@
 ---
-title: 'DQN debugging using Open AI gym cartpole'
+title: 'DQN debugging using Open AI gym Cartpole'
 date: '2018-07-07'
 categories:
   - Machine Learning
