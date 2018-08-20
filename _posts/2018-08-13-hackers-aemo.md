@@ -3,17 +3,16 @@ title: 'A hackers guide to AEMO data'
 date: 2018-08-13
 categories:
   - Energy
+  - Machine Learning
 excerpt:  A simple guide to Australian electricity grid data.
 
 ---
 
 This is a short guide to Australian electricity grid data supplied by AEMO (the market operator) for the NEM (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
 
-## Price structure
+## Data
 
-The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the six **dispatch prices** that occur within a half hour - the dispatch price is a 5 minute price for electricity.
-
-AEMO provide both actual data and forecasts.  
+AEMO provide both actual data and forecasts for a range of variables - including prices, demand and electricity flows.
 
 Data from AEMO is supplied from three different, overlapping sources
 
@@ -21,7 +20,13 @@ Data from AEMO is supplied from three different, overlapping sources
 - [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
 - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until present
 
-Some report names are slighty different in each source - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
+Some report names can be slighty different across sources - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
+
+## Price structure
+
+The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the six **dispatch prices** that occur within a half hour - the dispatch price is a 5 minute price for electricity.
+
+The trading price is used for settlement - it is the price that matters.  AEMO plan to move to 5 minute pricing in the future.
 
 ## AEMO timestamping
 

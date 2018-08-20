@@ -20,13 +20,13 @@ Our transition towards a physically decentralized, small scale and clean electri
 
 > It would be a waste to just use the blockchain to just do meter billing - [Joi Ito](https://www.greentechmedia.com/articles/read/the-energy-blockchain-could-bitcoin-be-a-catalyst-for-the-distributed-grid)
 
-I'm excited about the potential for blockchain to be the transaction and control layer for the grid. **Blockchain could enable a living, self-organizing grid powered by smart contracts**. Smart contracts would automatically match generators with consumers, balancing the grid in near real time. Virtual power plants and storage could also be dispatched using smart contracts.
+Blockchain might have a role to play in transaction and control layers of the grid. **Blockchain could enable a living, self-organizing grid**. Smart contracts would automatically match generators with consumers, balancing the grid in near real time. Virtual power plants and storage could also be dispatched using smart contracts.
 
-A blockchain could make smaller scale (in both time and volume) transactions more viable. This would make a more diverse range of resources available to the system operator for real time balancing. It would also reduce the length of the settlement process - no need for complex and costly processes such as profiling.
+A blockchain could make smaller scale (in time and volume) transactions more viable. This would make a more diverse range of resources available to the system operator for real time balancing. It would also reduce the length of the settlement process - no need for complex and costly processes such as profiling.
 
-This blockchain would provide an excellent database for managing grid operations. Data would be available for every transaction - price, quantity and time all down to a fine scale. This dataset would also allow more accurate forecasts of generation & demand. More accurate forecasts will reduce spinning reserve and imbalance costs.
+This blockchain would provide an excellent database for managing grid operations. Price, quantity and time data would be available for every transaction. This dataset would allow more accurate forecasts of generation & demand. More accurate forecasts can reduce spinning reserve and imbalance costs.
 
-**Blockchain is the first technology that can identify of the origin of electricity.** This would simplify certification of renewable generation or tracking carbon emissions.
+**Blockchain migh also play a role in identifying the origin of electricity.** This would simplify certification of renewable generation or tracking carbon emissions.
 
 It would also allow a system operator to see which parts of the grid were used to supply electricity. This would allow charging based on how the transmission and distribution system was actually used.
 

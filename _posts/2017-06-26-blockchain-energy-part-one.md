@@ -11,7 +11,7 @@ This is a two part series on blockchain in the energy system.  This post will gi
 
 [The second part theorizes how far we might be able to go with blockchain and the grid](http://adgefficiency.com/blockchain-energy-part-two/) - looking at what a smart contract enabled blockchain might mean for system operators, electricity consumers & generators, machines and regulators.
 
-## what is blockchain
+## What is blockchain
 
 Blockchain is a technology that **enables decentralization**. It allows a true peer to peer economy - no third party needed. Blockchain can offer progress in three dimensions - **security, access and efficiency**.  Blockchain aligns with our transition towards a decentralized and clean energy future.
 
@@ -21,9 +21,9 @@ Blockchain is a technology that **enables decentralization**. It allows a true p
 
 Large scale third parties provide the trust in today's transaction systems and markets. They perform vital market roles such as identification, clearing, settling and keeping records.
 
-But large scale third parties have downsides that blockchains can address. Blockchain offers advantages in three dimensions - **security, access and efficiency**.
+But large scale third parties have downsides that blockchains can address. Blockchain offers advantages in three dimensions - security, access and efficiency.
 
-A centralized system offers a single point of failure for attack - **reducing security**. Third parties can limit access to markets and data - **reducing access**. They introduce temporal & monetary costs by increasing the complexity of transactions - **reducing efficiency**.
+A centralized system offers a single point of failure for attack - reducing security. Third parties can limit access to markets and data - reducing access. They introduce temporal & monetary costs by increasing the complexity of transactions - reducing efficiency.
 
 Blockchain stores data on every member node - **increasing security**. Public blockchains are open to all, with individuals able to transact on an equal footing with large corporations - **increasing access**. Peer to peer transactions are made quickly and at low cost - **improving efficiency**.
 
@@ -33,13 +33,13 @@ There are significant technical, legal and regulatory challenges to overcome. Ye
 
 ## Queen Chain Approximately
 
-Two key technical innovations in blockchain are the **decentralization of data storage** and **decentralization of verification**. They both contribute towards the increased security, access and efficiency of the blockchain.
+Two key technical innovations in blockchain are the **decentralization of data storage and verification**. They both contribute towards the increased security, access and efficiency of the blockchain.
 
-Decentralization of data storage improves security and access. Each member stores a copy of the entire blockchain. This removes the possibility losing data from a central database - **improving security**. 
+Decentralization of data storage improves security and access. Each member stores a copy of the entire blockchain. This removes the possibility losing data from a central database - improving security. 
 
-As each member stores the entire blockchain, she can access infomation about any transaction - **democratizing data access**. A public blockchain is open for all to join - **democratizing market access**.
+As each member stores the entire blockchain, she can access infomation about any transaction - democratizing data access. A public blockchain is open for all to join - democratizing market access.
 
-Decentralization of verification improves access and efficiency. By allowing any node to verify transactions, no central authority can limit access to the market - **improving access**. Rewarding the fastest verification incentives reduced transaction time and cost - **improving efficiency**.
+Decentralization of verification improves access and efficiency. By allowing any node to verify transactions, no central authority can limit access to the market - improving access. Rewarding the fastest verification incentives reduced transaction time and cost - improving efficiency.
 
 Verification of decentralization is what allows peer to peer transactions. The ability of the collective to verify transactions means you don't need to wait for a central authority to authorize your transaction.
 
@@ -55,7 +55,7 @@ This fake blockchain could outcompete the true blockchain if enough resource was
 
 ## Jenny From The Block
 
-A key challenge in blockchain is what mechanism to use for validating transactions.  A simplifed description of the mechanics of a **proof of work** and a **proof of stake** blockchains are given below.  Currently there is no clear consensus on which mechanism is optimal - so there is significant innovation occuring in developing new mechanisms.
+A key challenge in blockchain is what mechanism to use for validating transactions.  A simplifed description of the mechanics of **proof of work** and **proof of stake** blockchains are given below.  Currently there is no clear consensus on which mechanism is optimal - so there is significant innovation occurring in developing new mechanisms.
 
 ### Proof of work
 
@@ -67,7 +67,7 @@ Blockchain members (known as nodes) run the blockchain. Each node can generate &
 
 ![[Figure 2 - the blockchain process](https://www.pwc.ch/en/2017/pdf/pwc_blockchain_opportunity_for_energy_producers_and_consumers_en.pdf)]({{"/assets/blockchain/fig2.png"}})
 
-It's then the role of &#8216;miners' (verification nodes) to create blocks from these lists of transactions. Miners first check the balances of both parties - available through the distributed blockchain. Miners then compete to solve a mathematical problem that allows transactions to be chained together. Solving the problem requires scarce real world resources (hardware and energy) **meaning there is no way to cheat**.
+It's then the role of miners' (verification nodes) to create blocks from these lists of transactions. Miners first check the balances of both parties - available through the distributed blockchain. Miners then compete to solve a mathematical problem that allows transactions to be chained together. Solving the problem requires scarce real world resources (hardware and energy) meaning there is no way to cheat.
   
 ![[Figure 3 - the verification process](https://www.pwc.ch/en/2017/pdf/pwc_blockchain_opportunity_for_energy_producers_and_consumers_en.pdf)]({{"/assets/blockchain/fig3.png"}})
 
@@ -99,13 +99,39 @@ Today the most largest and most visible use of the blockchain technology are in 
 
 Bitcoin is both a cryptocurrency and a digital payment system. The main blockchain of bitcoin is public - anyone can mine, buy and trade bitcoin. The technology behind bitcoin is open source. Yet bitcoin is not an ideal blockchain implementation - **on key KPIs such as throughput speed, latency bitcoin lags well behind VISA.**
 
-Storage of the blockchain is also an issue - in April 2017 the size of the bitcoin ledger was around 200 GB. If VISA were implemented using a blockchain it would take up around 200 PB per year. Electricity consumption is also a problem - i**n April 2017 bitcoin mining consumed around 300 MW of electricity.**
+Storage of the blockchain is also an issue - in April 2017 the size of the bitcoin ledger was around 200 GB. If VISA were implemented using a blockchain it would take up around 200 PB per year. Electricity consumption is also a problem - **in April 2017 bitcoin mining consumed around 300 MW of electricity.**
 
 Ethereum is a bitcoin competitor. Ethereum is also a public, open source blockchain with it's own currency known as 'ether'.  **The key advantage of Ethereum over bitcoin is that it allows more flexible smart contracts**. Ethereum has an integrated, Turing complete and all purpose programming language. Bitcoin's language is not Turing complete - meaning there are solvable problems that bitcoin's language cannot solve.
 
-This limits the flexbility of smart contracts on the bitcoin implementation of blockchain. Bitcoin is limited to a currency and payment system. Ethererum could allow many different kinds of assets to be traded for many different business purposes.
+Bitoins's smart contracts limit it to being a currency and payment system. Ethererum could allow many different kinds of assets to be traded for many different business purposes.
 
 Another difference between bitcoin and Ethereum is the algorithm used for reaching a consensus on the true state of the blockchain. Both historically use proof of work to reach a consensus on blockchain truth. Recently Ethereum is phasing in proof of stake as a lower cost way of reaching consensus on blockchain truth.
+
+## On versus off chain transactions
+
+Off chain = tracked in private databases.  Not publically tracked.  High transaction speeds.
+
+On chain = an insurance/proof that a payment exchange happened between parties
+
+> Off-chain transactions are a divisive concept, obviously. Defeating the purpose of the open ledger aspect to the protocol is a concern - [Scott Robinson](https://www.coindesk.com/block-chain-transactions-bad-bitcoin/)
+
+Off chain makes coinbase to coinbase tranactions faster (compared with coinbase to blockchain).
+
+Off chain = no charges from miners that are paid to verfiy the ledger.
+
+Off chain = helps potential scaling issues.  
+
+On chain makes more sense for large transactions.  
+
+bitcoin = 10 minutes, litecoin = 2.5, dodgecoin = 60 secs
+
+Possible that solutions exist to improving block generation speeds.
+
+Off chain = loses some decentralization.
+
+
+
+
 
 Thanks for reading!
 
@@ -138,3 +164,4 @@ Thanks for reading!
   *  [Why Do I Need a Public and Private Key on the Blockchain?](https://blog.wetrust.io/why-do-i-need-a-public-and-private-key-on-the-blockchain-c2ea74a69e76)
   * [What are Bitcoin miners actually solving?](https://www.quora.com/What-are-Bitcoin-miners-actually-solving-What-kind-of-math-problems-are-they-solving-and-what-do-they-achieve-by-solving-them)
   * [The Blockchain Immutability Myth](http://www.coindesk.com/blockchain-immutability-myth/)
+  * [Are Off-Block Chain Transactions Bad for Bitcoin?](https://www.coindesk.com/block-chain-transactions-bad-bitcoin/)
