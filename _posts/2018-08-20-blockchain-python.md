@@ -35,15 +35,14 @@ Block = namedtuple(
      'proof',
      'previous_hash',
      'hash',
-     'transactions'
-     ]
-)
+     'transactions'])
 ```
 
 A blockchain is represented as a class, inheriting from list.  This gives us functionality like indexing and appending for free.  The elements of this list are blocks.  
 
 ```python
 class BlockChain(list):
+
     def __init__(self):
 
         genesis_block = OrderedDict(
@@ -64,7 +63,6 @@ class BlockChain(list):
         return self[-1].transactions + new
 
     def next_block(self, new_transactions, proof):
-
         last_block = self[-1]
         next_block = OrderedDict(
             {'index': len(self) + 1,
@@ -168,37 +166,7 @@ if __name__ == '__main__':
         net.consensus()
 ```
 
-```python
-In [14]: %run main.py
-simulating 3 transactions
-processing to:other sender:node amount:7.0
-accepted
-processing to:other sender:node amount:0.0
-accepted
-processing to:other sender:node amount:1.0
-accepted
-balances defaultdict(<class 'int'>, {'node': -8.0, 'other': 8.0})
-
-simulating 3 transactions
-processing to:other sender:node amount:6.0
-rejected - node is overdrawn with bal of -14.0
-processing to:other sender:node amount:4.0
-rejected - node is overdrawn with bal of -12.0
-processing to:other sender:node amount:2.0
-accepted
-balances defaultdict(<class 'int'>, {'node': -10.0, 'other': 10.0})
-
-simulating 3 transactions
-processing to:other sender:node amount:3.0
-rejected - node is overdrawn with bal of -13.0
-processing to:other sender:node amount:9.0
-rejected - node is overdrawn with bal of -19.0
-processing to:other sender:node amount:4.0
-rejected - node is overdrawn with bal of -14.0
-balances defaultdict(<class 'int'>, {'node': -10.0, 'other': 10.0})
-
-finished
-```
+![]({{ "/assets/blockchain_python/fig1.png"}}) 
 
 Next step for this work is to distribute the blockchain over multiple processes using Flask.
 
@@ -213,4 +181,3 @@ ecomusing - [blog post](http://ecomunsing.com/build-your-own-blockchain) - [GitH
 Gerald Nash - [blog post one](https://medium.com/crypto-currently/lets-build-the-tiniest-blockchain-e70965a248b) - [blog post two](https://medium.com/crypto-currently/lets-make-the-tiniest-blockchain-bigger-ac360a328f4d)
 
 Adil Moujahid - [blog post](http://adilmoujahid.com/posts/2018/03/intro-blockchain-bitcoin-python/) - [GitHub](https://github.com/adilmoujahid/blockchain-python-tutorial)
-
