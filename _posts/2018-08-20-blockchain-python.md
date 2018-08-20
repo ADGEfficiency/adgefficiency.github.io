@@ -1,11 +1,11 @@
 ---
-title: 'A blockchain built in Python'
+title: 'A Pythonic blockchain'
 date: 2018-08-13
-excerpt:  Making use of some of Python's cool standard library features.
+excerpt:  Making use of some really cool standard library features.
 
 ---
 
-Implementation of blockchain in Python - [hosted on GitHub here](https://github.com/ADGEfficiency/blockchain).  I'm particularly proud of
+[See the source code on GitHub](https://github.com/ADGEfficiency/blockchain).  I'm particularly proud of
 
 - use of `defaultdict` and `namedtuple` from the standard library
 - inheriting from list for the `Blockchain` and `Network` classes
@@ -174,7 +174,9 @@ Thanks for reading!
 
 ## Resources and references
 
-Brett Slatkin's excellent 'Effective Python' - I highly recommend this book. 
+Python's Class Development Toolkit - Raymond Hettinger - [youtube](https://www.youtube.com/watch?v=HTLu2DFOdTg)
+
+Effective Python - Brett Slatkin  - [book](https://www.amazon.co.uk/Effective-Python-Specific-Software-Development/dp/0134034287)
 
 ecomusing - [blog post](http://ecomunsing.com/build-your-own-blockchain) - [GitHub](https://github.com/emunsing/tutorials/blob/master/BuildYourOwnBlockchain.ipynb)
 
