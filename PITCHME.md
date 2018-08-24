@@ -134,11 +134,17 @@ three pieces of info on energy and reinforcement learning
 
 ---
 
-the environment model problem / oppourtunity
+current performance (show the image of the really smooth learning - don't think this is good (looks like rollout memorization)
 
 ---
 
 synthetic data - aka poor mans GANS
+
+---
+
+---
+
+the environment model problem / oppourtunity
 
 ---
 

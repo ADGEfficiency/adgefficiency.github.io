@@ -85,6 +85,10 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ![]({{"/assets/hacker_aemo/nemsight.png"}})
 
+### [gas & coal watch](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1k0rmFKexrYUBbHSb2opLO2y-f3lGx2vOUsx8uIFygro&amp;font=Default&amp;lang=en&amp;start_at_end=true&amp;initial_zoom=2&amp;height=650)
+
+![]({{"/assets/hacker_aemo/gas_coal_watch.png"}})
+
 ## Further reading
 
 - [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)

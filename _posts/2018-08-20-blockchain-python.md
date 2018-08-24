@@ -5,12 +5,14 @@ excerpt:  Making use of some really cool standard library features.
 
 ---
 
-[See the source code on GitHub](https://github.com/ADGEfficiency/blockchain).  I'm particularly proud of
+[Source code on GitHub](https://github.com/ADGEfficiency/blockchain).  I'm particularly proud of
 
 - use of `defaultdict` and `namedtuple` from the standard library
 - inheriting from list for the `Blockchain` and `Network` classes
 
 Transactions and blocks are represented using `namedtuple`.  Both are immutable - use of `namedtuple` allows indexing by key and take care of stuff like `__repr__`.  They also represent the most primitive objects in our blockchain network.
+
+The objects in our network are
 
 - one network
 - n nodes 
