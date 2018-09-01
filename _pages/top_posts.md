@@ -5,6 +5,10 @@ permalink: /top_posts/
 
 ---
 
+## About
+
+Energy engineer who likes to build models of energy systems.  Also likes Python.  I work at Tempus Energy, where we are using data to unlock flexible electricity demand.
+
 ## Open source projects
 
 energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [GitHub](https://github.com/ADGEfficiency/energy_py)
