@@ -13,13 +13,7 @@ energy_py is a tool for running reinforcement learning experiments with energy e
 
 energy_py provides a **collection of agents, energy environments and tools to run experiments**.
 
-The goal of the project is to demonstrate and experiment with the ability of reinforcement learning to operate virtual energy systems.  This is the first step in using reinforcement learning to operate real energy systems.
-
-Simulation is required because
-
-1. modern RL is sample inefficient - simulation is required for learning
-2. proving that agents are able to solve energy problems
-3. finding the best configuration of agent for specific energy problems
+The goal of the project is to demonstrate and experiment with the ability of reinforcement learning to operate simulations of energy systems.  This is the first step in using reinforcement learning to operate real energy systems.
 
 ## What is reinforcement learning
 
@@ -39,7 +33,7 @@ If you are interested in learning more about reinforcement learning, I would rec
 - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
 - [UCL video lectures by David Silver](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 
-I also teach a two day introduction to reinforcement learning course at Data Science Retreat in Berlin.  You can find the [course materials on GitHub](https://github.com/ADGEfficiency/dsr_rl).  I am always happy to come give this course for free at interesting companies and universities.
+I also teach a two day introduction to reinforcement learning course at Data Science Retreat in Berlin - you can find the [course materials on GitHub](https://github.com/ADGEfficiency/dsr_rl).
 
 ## Why reinforcement learning in energy?
 
@@ -53,17 +47,15 @@ Neural network powered machine learning has achieved impressive results in compu
 
 Reinforcement learning offers a solution that can learn across a variety of tasks - including control of non-linear systems that require long term planning.  
 
+Energy systems also have a key feautre of a well-defined reward signals such as energy cost or carbon emmissions.  The lack of a well defined reward signal is a limiting factor in applications such as self driving cars - in energy we can take advantage of reward signals that align with our goals.
+
 ## Challenges
 
-The first and most important is safety. Safety is the number one concern in any engineering discipline.
+The first and most important is safety. Safety is the number one concern in any engineering discipline.  Reinforcement learning should be first applied on as high a level of the control system as possible. This allows the number of actions to be limited and existing lower level safety & control systems can remain in place. The agent is limited to only making the high level decisions operators make today.
 
-I believe that by reinforcement learning should be first applied on as high a level of the control system as possible. This allows the number of actions to be limited and existing lower level safety & control systems can remain in place. The agent is limited to only making the high level decisions operators make today.
+Reward functions can also be desgined to favour safety.  A well-designed reinforcement learner could actually reduce hazards to operators. Operators also benefit from freeing up more time for maintenance.
 
-There is also the possibility to design the reward function to incentivize safety. A well-designed reinforcement learner could actually reduce hazards to operators. Operators also benefit from freeing up more time for maintenance.
-
-Modern reinforcement learning has achieved impressive results - notably DQN and AlphaGo.  Yet modern reinforcment learning is sample inefficient.  This inefficiency means that simulation is required for learning.  Generalization from simulation to real world is a challenge.
-
-energy_py is one step on a long journey of getting reinforcement learners helping us in the energy industry. The fight against climate change is the greatest that humanity faces. Reinforcement learning will be a key ally in fighting it. The project is open source and hosted on [GitHub](https://github.com/ADGEfficiency/energy_py).
+Modern reinforcement learning has achieved impressive results - notably DQN and AlphaGo.  Yet modern reinforcment learning is sample inefficient.  This inefficiency means that simulation is required for learning.  Building useful simulation models is another grand challenge for sample inefficient learners.  Generalization from the simulators to real world is also a massive challenge.
 
 ## Design 
 
