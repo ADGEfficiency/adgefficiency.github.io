@@ -1,7 +1,7 @@
 ---
 title: 'A Pythonic blockchain'
 date: 2018-08-13
-excerpt:  Making use of some really cool standard library features.
+excerpt:  Making use of the Python standard library.
 
 ---
 
