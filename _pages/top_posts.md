@@ -7,7 +7,7 @@ permalink: /top_posts/
 
 ## About
 
-Energy engineer who likes to build models of energy systems.  Also likes Python.  I work at Tempus Energy, where we are using data to unlock flexible electricity demand.
+Using computation to solve the control and climate problem.  Energy engineer who likes to build models of energy systems.  Also likes Python.  I work at Tempus Energy, where we are using data to unlock flexible electricity demand.
 
 ## Open source projects
 
