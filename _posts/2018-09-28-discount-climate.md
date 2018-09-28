@@ -13,13 +13,10 @@ Technical, political and business model challenges dominate the climate change c
 
 ## The discount rate
 
-(also known as an intertemporal discount function or hyperbolic discounting)
+A discount rate **reduces the magnitude of future benefit or harm relative to the present**.  It encourages making decisions that get reward sooner - even if this leads to equal or greater amounts of harm in the future.  A discount rate is what allows a smoker who knows the risk of lung cancer to keep smoking.
 
-A discount rate **reduces the magnitude of future benefit or harm relative to the present**.  It encourages making decisions that get reward sooner - even if this leads to equal or greater amounts of harm in the future.
+![The discount rate reduces the perceived benefit or harm of actions relative to the short term benefits]({{ "/assets/discount/fig1.png" }})
 
-![The discount rate reduces the perceived benefit or harm of actions relative to the short term benefits]({{"assets/discount/fig1.png"}})
-
-A discount rate is what allows a smoker who knows the risk of lung cancer to keep smoking.
 
 Like other mental models, the discount rate appears across disciplines.  One is **finance**.  The discount rate decreases the value of future cash flows relative to today. Cash is more valuable today than in the future because I can invest it and generate more cash.
 
@@ -51,7 +48,7 @@ This explains why even climate warriors make climate unfriendly decisions.  They
 
 ## Why it's ok if we don't solve climate change
 
-![]({{"assets/discount/fig2.png"}})
+![]({{ "/assets/discount/fig2.png" }})
 
 Natural selection is the reason we have this bias - and it was likely crucial to us being where we are today.  Like many cognitive biases in the correct context it is useful - natural selection wouldn't have favoured it otherwise.
 
