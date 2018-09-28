@@ -1,5 +1,5 @@
 ---
-title: "We won't solve climate change - and this is ok"
+title: "We won't solve climate change - and why it's ok"
 date: 2018-09-28
 categories:
   - Energy
