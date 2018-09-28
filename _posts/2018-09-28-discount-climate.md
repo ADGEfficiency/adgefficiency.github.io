@@ -44,7 +44,7 @@ If we defined return as the undiscounted sum of future rewards, in an infinite h
 
 ## Why the discount rate makes the climate problem intractable
 
-A discount rate is used in **human decision making**.  Psychologists have found that humans have a variable discount rate - men shown pictures of attractive women become less willing to forgo cash in the short term for larger amounts of cash in the future.
+We use a discount rate when we make decisions.  Psychologists have found that humans have a variable discount rate - men shown pictures of attractive women become less willing to forgo cash in the short term for larger amounts of cash in the future.
 
 Humans struggle to accurately balance the future damage of using fossil fuels versus the benefits we get today.  It's built in to us that even in face of massive amounts of long term damage to the planet, biodiversity and the quality of lives, we will make decisions that give us smaller amounts of immediate benefit.
 
@@ -66,7 +66,7 @@ By this point you might be disillusioned.  If our psychology actively favours sh
 
 The discount rate problem may be an opportunity.  In order to make better long term decisions we can do three things
 
-1. increase the undiscounted magnitude of future damage
+1. increase the percieved undiscounted magnitude of future damage
 2. bring forward the perceived timing of damage
 3. change our discount rate
 
@@ -74,7 +74,7 @@ It's unclear which of these would be most effective.  We already understand the 
 
 > You have the right to work, but never to the fruit of work. You should never engage in action for the sake of reward, nor should you long for inaction. Perform work in this world, Arjuna, as a man established within himself - without selfish attachments, and like in success and defeat - The Bhagavad Gita
 
-This doesn't mean that I will stop working on decarbonization.  Even if we end up in the 5 degree world (which is where we are headed), **working in the clean-tech space is an honor**.  The people are great, and working towards a positive mission is a privilege.
+This doesn't mean that I will stop working on decarbonization.  Even if we end up in a 5 degree world (which is where we are headed), **working in the clean-tech space is an honor**.  The people are great, and working towards a positive mission is a privilege.
 
 But I'm not attached to the outcome.  Whatever the future of the CO<sub>2</sub> concentration on this planet - the show will go on.
 
