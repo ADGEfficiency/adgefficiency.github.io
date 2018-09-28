@@ -8,6 +8,8 @@ mathjax: true
 
 ---
 
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
 One of the most curious aspects of the clean-tech space is professionals dedicated to solving the climate problem (myself included) making personal decisions that are well known to be carbon intense (such as flying or eating meat).  What allows this level of inconsistency?
 
 Technical, political and business model challenges dominate the climate change conversation - but our evolution shaped psychology poses a more fundamental problem.
