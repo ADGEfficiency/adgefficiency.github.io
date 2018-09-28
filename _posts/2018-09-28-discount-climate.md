@@ -31,7 +31,7 @@ $$ (\mathcal{S}, \mathcal{A}, \mathcal{R}, P, R, d_0, \gamma) $$
 
 In an MDP the agent and environment interact through a cyclic process of the agent taking actions and the environment responding with a scalar reward and the next state.  How long this interaction occurs is known as the **horizon**.  The horizon can be a fixed length, a variable but finite length or an infinite length.
 
-In reinforcement learning the goal of the agent is to maximize expected **discounted future reward** over the horizon of the MDP.  The sum of future rewards is known as the return ($G_t$) and is also formalized as a value function ($V_{\pi}(s)$).  The discount factor serves to exponentially decay the value of future rewards relative to the current time step.
+In reinforcement learning the goal of the agent is to maximize expected **discounted future reward** over the horizon of the MDP.  The sum of future rewards is known as the return ($$G_t$$) and is also formalized as a value function ($$V_{\pi}(s)$$).  The discount factor serves to exponentially decay the value of future rewards relative to the current time step.
 
 *Both the value function and the return are equal to the expected discounted future reward*
 
