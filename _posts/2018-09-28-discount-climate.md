@@ -4,6 +4,7 @@ date: 2018-09-28
 categories:
   - Energy
 excerpt: Our evolution shaped psychology is the reason why.
+mathjax: true
 
 ---
 
@@ -72,6 +73,6 @@ It's unclear which of these would be most effective.  We already understand the 
 
 This doesn't mean that I will stop working on decarbonization.  Even if we end up in the 5 degree world (which is where we are headed), **working in the clean-tech space is an honor**.  The people are great, and working towards a positive mission is a privilege.
 
-But I'm not attached to the outcome.  Whatever the future of the CO<sup>2</sup> concentration on this planet - the show will go on.
+But I'm not attached to the outcome.  Whatever the future of the CO<sub>2</sub> concentration on this planet - the show will go on.
 
 Thanks for reading!
