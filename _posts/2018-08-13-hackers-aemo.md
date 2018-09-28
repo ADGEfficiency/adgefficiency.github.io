@@ -65,9 +65,10 @@ The MMSDM links are for `2018_05`.  There are many more useful reports that have
 
 A major benefit of the large AEMO dataset is the ecosystem of third parties who can build useful (and often open source) tools on top of it.
 
-### [AEMO dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard)
+### AEMO [dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard) - [interative map](http://www.aemo.com.au/aemo/apps/visualisations/map.html)
 
 ![]({{"/assets/hacker_aemo/aemo_dashboard.png"}})
+
 
 ### [electricityMap](https://www.electricitymap.org/)
 
