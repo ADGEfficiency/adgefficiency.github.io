@@ -3,7 +3,7 @@ title: "We won't solve climate change - and why it's ok"
 date: 2018-09-28
 categories:
   - Energy
-excerpt: Our evolution shaped psychology is the reason why.
+excerpt: Our evolution shaped psychology is a big reason why.
 mathjax: true
 
 ---
@@ -18,8 +18,9 @@ Technical, political and business model challenges dominate the climate change c
 
 A discount rate **reduces the magnitude of future benefit or harm relative to the present**.  It encourages making decisions that get reward sooner - even if this leads to equal or greater amounts of harm in the future.  A discount rate is what allows a smoker who knows the risk of lung cancer to keep smoking.
 
-![The discount rate reduces the perceived benefit or harm of actions relative to the short term benefits]({{ "/assets/discount/fig1.png" }})
+![]({{ "/assets/discount/fig1.png" }})
 
+**The discount rate reduces the perceived benefit or harm of actions relative to the short term benefits**
 
 Like other mental models, the discount rate appears across disciplines.  One is **finance**.  The discount rate decreases the value of future cash flows relative to today. Cash is more valuable today than in the future because I can invest it and generate more cash.
 
