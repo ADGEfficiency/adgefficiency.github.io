@@ -3,7 +3,7 @@ title: "We won't solve climate change - and why it's ok"
 date: 2018-09-28
 categories:
   - Energy
-excerpt: It's our evolution shaped psychology that is the real problem.
+excerpt: Our evolution shaped psychology is the reason why.
 
 ---
 
