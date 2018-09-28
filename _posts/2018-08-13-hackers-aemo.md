@@ -18,7 +18,7 @@ Data from AEMO is supplied from three different, overlapping sources
 
 - [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours
 - [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
-- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until present
+- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until the end of last month
 
 Some report names can be slighty different across sources - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
 
