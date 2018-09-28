@@ -69,10 +69,13 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ![]({{"/assets/hacker_aemo/aemo_dashboard.png"}})
 
-
 ### [electricityMap](https://www.electricitymap.org/)
 
 ![]({{"/assets/hacker_aemo/elect_map.png"}})
+
+### [AREMI](https://nationalmap.gov.au/renewables/)
+
+![]({{"/assets/hacker_aemo/aremi.png"}})
 
 ### [nemlog](http://nemlog.com.au/)
 
