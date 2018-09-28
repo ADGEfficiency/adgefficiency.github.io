@@ -1,5 +1,5 @@
 ---
-title: 'We won't solve climate change - and this is ok'
+title: "We won't solve climate change - and this is ok"
 date: 2018-09-28
 categories:
   - Energy
@@ -7,7 +7,7 @@ excerpt: It's our evolution shaped psychology that is the real problem.
 
 ---
 
-One of the most curious aspects of the clean-tech space is professionals dedicated to solving the climate problem (myself included) making personal decisions that are well known to be carbon intense (such as flying or eating meat).  What is it that allows this level of inconsistency?
+One of the most curious aspects of the clean-tech space is professionals dedicated to solving the climate problem (myself included) making personal decisions that are well known to be carbon intense (such as flying or eating meat).  What allows this level of inconsistency?
 
 Technical, political and business model challenges dominate the climate change conversation - but our evolution shaped psychology poses a more fundamental problem.
 
@@ -61,7 +61,7 @@ This isn't to say that climate change isn't a tragedy. The cruelty of sudden cha
 
 ## You should keep working on the climate problem
 
-By this point you might be a bit disillusioned.  If our psychology actively favours short term thinking, how can we ever hope to solve a long term problem like climate change?
+By this point you might be disillusioned.  If our psychology actively favours short term thinking, how can we ever hope to solve a long term problem like climate change?
 
 The discount rate problem may be an opportunity.  In order to make better long term decisions we can do three things
 

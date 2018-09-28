@@ -357,3 +357,11 @@ Don't pay attention to what people say, only to what they do, and how much of th
 ### 112 - Walden - Henry David Thoreau
 
 Part personal declaration of independence, social experiment, voyage of spiritual discovery, satire, and—to some degree—a manual for self-reliance.
+
+### 113 - Sex at Dawn: The Prehistoric Origins of Modern Sexuality - Christopher Ryan & Cacilda Jethá
+
+In opposition to what the authors see as the "standard narrative" of human sexual evolution, they contend that having multiple sexual partners was common and accepted in the environment of evolutionary adaptedness.
+
+### 114 - The Elephant in the Brain: Hidden Motives in Everyday Life - Kevin Simler & Robin Hanson
+
+Our brains are designed not just to hunt and gather, but also to help us get ahead socially, often via deception and self-deception. But while we may be self-interested schemers, we benefit by pretending otherwise.
