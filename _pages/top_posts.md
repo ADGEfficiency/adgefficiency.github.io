@@ -7,7 +7,11 @@ permalink: /top_posts/
 
 ## About
 
-Using computation to solve the control and climate problem.  Energy engineer who likes to build models of energy systems.  Also likes Python.  I work at Tempus Energy, where we are using data to unlock flexible electricity demand.
+My work focues on computation to solve the control and climate problem.  
+
+I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  
+
+I'm currently employed at Tempus Energy, where we are using data to unlock flexible electricity demand.
 
 ## Open source projects
 
@@ -18,6 +22,10 @@ two day reinforcement learning course - [course notes](https://github.com/ADGEff
 time series forecasting - [GitHub](https://github.com/ADGEfficiency/forecast)
 
 mixed integer linear programming models of combined heat and power plants - [GitHub](https://github.com/ADGEfficiency/energy_py/tree/master/energy_py/envs/chp)
+
+## Talks
+
+I've given two talks in the last two years - 
 
 ---
 
