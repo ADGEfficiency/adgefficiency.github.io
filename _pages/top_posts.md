@@ -7,7 +7,7 @@ permalink: /top_posts/
 
 ## About
 
-My work focues on computation to solve the control and climate problem.  
+My work focuses on computation to solve the control and climate problem.  
 
 I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  
 
@@ -25,7 +25,11 @@ mixed integer linear programming models of combined heat and power plants - [Git
 
 ## Talks
 
-I've given two talks in the last two years - 
+April 3 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.meetup.com/berlin-machine-learning/events/234989414/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+
+June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+
+September 3 2018 - Berlin Machine Learninr Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
 
 ---
 
