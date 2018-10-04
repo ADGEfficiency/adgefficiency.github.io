@@ -16,6 +16,8 @@ Technical, political and business model challenges dominate the climate change c
 
 ## The discount rate
 
+> Given the discount rate, nothing could be more understandable than a government's failure to grapple with climate change - Charles C. Mann, The Wizard and the Prophet
+
 **A discount rate reduces the percieved magnitude of future benefit or harm relative to the present**.  It encourages making decisions that get reward sooner - even if this leads to equal or greater amounts of harm in the future.  A discount rate is what allows a smoker who knows the risk of lung cancer to keep smoking.
 
 ![]({{ "/assets/discount/fig1.png" }})
