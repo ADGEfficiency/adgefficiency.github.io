@@ -10,7 +10,7 @@ mathjax: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-One of the most curious aspects of the clean-tech space are professionals dedicated to solving the climate problem (myself included) making personal decisions that are well known to be carbon intense (such as flying or eating meat).  What allows this level of inconsistency?
+One of the most curious aspects of the clean-tech space are professionals dedicated to solving the climate problem (myself included) making climate unfriendly personal decisions (such as flying or eating meat).  What allows this level of inconsistency?
 
 Technical, political and business model challenges dominate the climate change conversation - but our evolution shaped psychology poses a more fundamental problem.
 
@@ -28,7 +28,7 @@ Like other mental models, the discount rate appears across disciplines.  One is 
 
 Another is **reinforcement learning**.  The discount rate is one element of the tuple that makes up a Markov Decision Process (MDP) - the mathematical framework for reinforcement learning problems.
 
-<center>*The tuple defining a Markov Decision Process*</center>
+*<center>The tuple defining a Markov Decision Process</center>*
 
 $$ (\mathcal{S}, \mathcal{A}, \mathcal{R}, P, R, d_0, \gamma) $$
 
@@ -36,7 +36,7 @@ In an MDP the agent and environment interact through a cyclic process of the age
 
 In reinforcement learning the goal of the agent is to maximize expected **discounted future reward** over the horizon of the MDP.  The sum of future rewards is known as the return ($$G_t$$) and is also formalized as a value function ($$V_{\pi}(s)$$).  The discount factor serves to exponentially decay the value of future rewards relative to the current time step.
 
-<center>*Both the value function and the return are equal to the expected discounted future reward*</center>
+*<center>Both the value function and the return are equal to the expected discounted future reward</center>*
 
 $$ V_{\pi}(s) = \mathbf{E}[G_t | s_t] = r_{t+1} + \gamma r_{t+2} + \gamma^2 r_{t+3} + ... = \sum_{t=0}^{\infty} \gamma^{t} r_{t} $$
 

@@ -7,9 +7,7 @@ permalink: /top_posts/
 
 ## About
 
-My work focuses on computation to solve the control and climate problem.  
-
-I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  
+I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  My work focuses on using computation to solve the control and climate problem.  
 
 I'm currently employed at Tempus Energy, where we are using data to unlock flexible electricity demand.
 
