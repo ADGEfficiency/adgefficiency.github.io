@@ -1,7 +1,7 @@
 ---
 title:  ""
 layout: archive
-permalink: /top_posts/
+permalink: /my-work/
 
 ---
 

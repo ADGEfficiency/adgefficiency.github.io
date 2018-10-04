@@ -1,7 +1,7 @@
 main:
   - title: "my work"
-    url: /top_posts/
+    url: /my-work/
   - title: "reading list"
-    url: /reading_list/
+    url: /reading-list/
   - title: "archive"
     url: /year-archive/

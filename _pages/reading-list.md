@@ -1,12 +1,10 @@
 ---
 title: ""
 layout: archive
-permalink: /reading_list/
+permalink: /reading-list/
 classes: wide
 
 ---
-
-# A list of books
 
 Books I love, grouped by topic.
 
