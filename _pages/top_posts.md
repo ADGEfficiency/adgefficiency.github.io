@@ -25,11 +25,11 @@ mixed integer linear programming models of combined heat and power plants - [Git
 
 ## Talks
 
-April 3 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.meetup.com/berlin-machine-learning/events/234989414/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup page](https://www.meetup.com/berlin-machine-learning/events/234989414/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
 June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
-September 3 2018 - Berlin Machine Learninr Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
+September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
 
 ---
 
@@ -56,7 +56,3 @@ DQN [debugging](https://www.adgefficiency.com/dqn-debugging/) and [hyperparamete
 [Average vs. Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/)
 
 [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
-
-
-
-
