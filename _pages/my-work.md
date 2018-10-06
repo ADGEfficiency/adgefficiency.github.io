@@ -5,7 +5,7 @@ permalink: /my-work/
 
 ---
 
-<img src="../assets/adg.png" width="50%" height="50%">
+<img src="../assets/adg.png" width="30%" height="30%">
 
 I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  My work focuses on using computation to solve the control and climate problem.  
 
