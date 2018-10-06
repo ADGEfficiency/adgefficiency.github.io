@@ -65,11 +65,11 @@ Now lets look at this framework in the context of a real problem.  The problem i
 
 The problem involves the incremental updating the value function for a bandit problem.
 
-$$ Q_{n+1} = Q_{n} + \alpha \[R_{n} - Q_{n} \] $$
+$$ Q_{n+1} = Q_{n} + \alpha [R_{n} - Q_{n} ] $$
 
 Sutton suggest that an improvement to using a constant step size (say $$\alpha=0.5$$) to use a step size $$\beta$$.
 
-$$\beta_{n} = \alpha / \overline{o}_{n}$$
+$$\beta_{n} = \frac{\alpha}{\overline{o}_{n}}$$
 
 Where we update $$\overline{o}_{n}$$ by
 
