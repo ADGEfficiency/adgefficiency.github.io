@@ -5,8 +5,6 @@ permalink: /my-work/
 
 ---
 
-![]({{ "/assets/adg.png" }})
-
 <img align="right" src="assets/adg.png">
 
 I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  My work focuses on using computation to solve the control and climate problem.  
