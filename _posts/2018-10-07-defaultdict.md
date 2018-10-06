@@ -1,13 +1,21 @@
 ---
-title: 'A great Python workflow for time series simulations'
+title: 'A Python workflow for time series simulations'
 date: 2018-10-07
 categories:
   - Machine Learning
 excerpt: Using the defaultdict to smash through temporal problems
+mathjax: true
 
 ---
 
-I often step through temporal processes - not only the real (or is it?) process of time but also simulations in Python.  I commonly want to simulate a process, collect the results at each step and output a simple plot of the variables over time.
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+I often step through temporal processes - not only the real (or is it?) process of time but also simulations in Python.  
+
+I commonly want to
+- simulate a process
+- collect the results at each step
+- output a simple plot of the variables over time
 
 I've settled on an implementation in Python that works really well.
 
@@ -53,7 +61,7 @@ stats.plot(y='other_variable', ax=axes)
 
 ### Updating the value function for a bandit
 
-Now lets look at this framework in the context of a real problem.  The problem is the solution to a question posed in Section 2.6 of *Sutton & Barto - An Introduction to Reinforcement Learning*.  To fully understand the problem I suggest reading the chapter - [you can find the 2nd Edition online for free here](http://incompleteideas.net/book/bookdraft2017nov5.pdf).
+Now lets look at this framework in the context of a real problem.  The problem is the solution to a question posed in Section 2.6 of *Sutton & Barto - An Introduction to Reinforcement Learning*.  To fully understand the problem I suggest reading the chapter - [you can find the 2nd Edition online for free here](http://incompleteideas.net/book/the-book-2nd.html).
 
 The problem involves the incremental updating the value function for a bandit problem.
 
