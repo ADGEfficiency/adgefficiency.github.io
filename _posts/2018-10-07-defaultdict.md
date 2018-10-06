@@ -137,8 +137,6 @@ The results of the run are stored in the `result` dataframe.
 4   4.673794  0.0004  0.200040  3.663734
 ```
 
-We can see how the variables change over time in a simple plot.
-
 ![fig1]({{ "/assets/defaultdict/fig1.png"}})
 
 **Figure 1 - Results using the hyperparameters in the code snippet above**
