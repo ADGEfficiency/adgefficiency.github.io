@@ -57,7 +57,7 @@ stats.plot(y='variable', ax=axes)
 stats.plot(y='other_variable', ax=axes)
 ```
 
-## Updating the value function for a bandit
+## Example - updating the value function for a bandit
 
 Now lets look at this framework in the context of a real problem.  The problem is the solution to a question posed in Section 2.6 of *Sutton & Barto - An Introduction to Reinforcement Learning*.  To fully understand the problem I suggest reading the chapter - [you can find the 2nd Edition online for free here](http://incompleteideas.net/book/the-book-2nd.html).
 
