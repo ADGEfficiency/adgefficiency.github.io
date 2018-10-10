@@ -43,7 +43,7 @@ stats['variable'].append(var)
 stats['other_variable'].append(other_var)
 ```
 
-Having a dictionary full of lists is not particularly useful.  But once our `defaultdict` is full of data, we can eaisly turn it into a pandas dataframe using the `from_dict` method.  
+Having a dictionary full of lists is not particularly useful.  But once our `defaultdict` is full of data, we can easily turn it into a pandas `DataFrame` using the `from_dict` method.  
 
 We need to make sure that all of the values in our `stats` dictionary are lists of the same length.  This will be the case if we added one value for each variable at each step.
 
@@ -59,7 +59,7 @@ stats.plot(y='variable', ax=axes)
 stats.plot(y='other_variable', ax=axes)
 ```
 
-### Updating the value function for a bandit
+## Updating the value function for a bandit
 
 Now lets look at this framework in the context of a real problem.  The problem is the solution to a question posed in Section 2.6 of *Sutton & Barto - An Introduction to Reinforcement Learning*.  To fully understand the problem I suggest reading the chapter - [you can find the 2nd Edition online for free here](http://incompleteideas.net/book/the-book-2nd.html).
 
@@ -75,13 +75,7 @@ Where we update $$\overline{o}_{n}$$ by
 
 $$\overline{o}_{n} = \overline{o}_{n-1} + \alpha (1-\overline{o}_{n-1})$$
 
-The program written for this problem is given below.  To get the figure to show, you need to first save the code snippet to `bandit.py`, then run the program in interactive mode.
-
-```bash
-$ python -i bandit.py
-```
-
-The Python implementation is centered around the `defaultdict`.
+The program written for this problem is given below.  To get the figure to show, you need to first save the code snippet to `bandit.py`, then run the program in interactive mode (`$ python -i bandit.py`).
 
 ```python
 from collections import defaultdict
@@ -98,7 +92,6 @@ omega = 0
 stats = defaultdict(list)
 
 for step in range(50):
-
     stats['q'].append(q)
     stats['omega'].append(omega)
 
@@ -136,6 +129,8 @@ The results of the run are stored in the `result` dataframe.
 3   4.707125  0.0003  0.250038  4.573823
 4   4.673794  0.0004  0.200040  3.663734
 ```
+
+What pops out the end is a simple time series plot of how our variables changed over time.
 
 ![fig1]({{ "/assets/defaultdict/fig1.png"}})
 
