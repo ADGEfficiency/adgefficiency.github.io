@@ -116,7 +116,7 @@ print('final estimate {}'.format(stats['q'][-1]))
 f.show()
 ```
 
-The results of the run are stored in the `result` dataframe.
+The results of the run are stored in the `result` dataframe:
 
 ```bash
 >>> result.head()
@@ -128,7 +128,7 @@ The results of the run are stored in the `result` dataframe.
 4   4.673794  0.0004  0.200040  3.663734
 ```
 
-What pops out the end is a simple time series plot of how our variables changed over time.
+What pops out the end is a simple time series plot of how our variables changed over time:
 
 ![fig1]({{ "/assets/defaultdict/fig1.png"}})
 
