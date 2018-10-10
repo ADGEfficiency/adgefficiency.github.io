@@ -1,9 +1,9 @@
 ---
-title: 'A Python workflow for time series simulations'
+title: 'A simple Python workflow for time series simulations'
 date: 2018-10-07
 categories:
   - Machine Learning
-excerpt: Using the defaultdict to smash through temporal problems
+excerpt: Using the defaultdict to simulate temporal problems.
 mathjax: true
 
 ---
