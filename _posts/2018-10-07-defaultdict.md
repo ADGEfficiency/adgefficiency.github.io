@@ -11,7 +11,7 @@ mathjax: true
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 
-A common workflow I encounter is simulating a process through time.  I often want to:
+A common workflow I encounter in my data science work is simulating a process through time.  I often want to:
 
 - simulate a process
 - collect the results at each step
