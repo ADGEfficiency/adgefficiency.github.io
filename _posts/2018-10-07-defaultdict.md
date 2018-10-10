@@ -116,7 +116,7 @@ print('final estimate {}'.format(stats['q'][-1]))
 f.show()
 ```
 
-The results of the run are stored in the `result` dataframe:
+The results of the run are stored in the `result` DataFrame:
 
 ```bash
 >>> result.head()
