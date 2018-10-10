@@ -23,9 +23,7 @@ For those in a rush I'll first introduce the key components separately.  I'll th
 
 ## I'm in love with defaultdict, and I feel fine
 
-The first component is a `defaultdict` from the `collections` module in the Python standard library.  
-
-The advantage of a `defaultdict` is flexibility - instead of needing to initialize a key/value pair, you can add keys on the fly and append to an already initialized list.
+The first component is a `defaultdict` from the `collections` module in the Python standard library.  The advantage of a `defaultdict` is flexibility - instead of needing to initialize a key/value pair, you can add keys on the fly and append to an already initialized list.
 
 ```python
 #  if we use a normal python dictionary, adding a new key requires the following
