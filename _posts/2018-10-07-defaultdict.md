@@ -10,14 +10,14 @@ mathjax: true
 
 <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
-I often step through temporal processes - not only the real (or is it?) process of time but also simulations in Python.  
 
-I commonly want to
+A common workflow I encounter is simulating a process through time.  I often want to:
+
 - simulate a process
 - collect the results at each step
 - output a simple plot of the variables over time
 
-I've settled on an implementation in Python that works really well.
+In this post I introduce a simple Python implementation for this that works really well.
 
 For those in a rush I'll first introduce the key components separately.  I'll then show how this simple framework is used to tackle a problem from the machine learning classic *Sutton & Barto - An Introduction to Reinforcement Learning*.
 
