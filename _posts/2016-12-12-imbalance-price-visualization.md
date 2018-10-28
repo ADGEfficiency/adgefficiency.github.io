@@ -52,10 +52,6 @@ plot_grouped(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/year_month.png')
 
 **Figure 3 - Monthly statistics of the imbalance price across 2015-2017**
 
-```python 
-plot_grouped(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/year_month.png')
-```
-
 This function can also be used with different grouping.  In Figure 3 we can see how the prices changes for each month.
 
 ```python
@@ -74,7 +70,7 @@ The `plot_grouped` function can also be used to show how the price changes acros
 plot_grouped(elexon, 'Imbalance_price [£/MWh]', group_type='hour', fig_name='figs/hour.png')
 ```
 
-![fig4]({{ "/assets/imba_vis/hour.png"}}) 
+![]({{ "/assets/imba_vis/hour.png"}}) 
 
 **Figure 5 - Daily statistics of the imbalance price across 2015-2017** 
 
@@ -86,7 +82,7 @@ It can also be useful to look at the distribution of time series.  Figure 6 show
 plot_distribution(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/distribution.png')
 ```
 
-![fig5]({{ "/assets/imba_vis/fig5.png"}}) 
+![]({{ "/assets/imba_vis/fig5.png"}}) 
 
 **Figure 6 - Histogram and kernel density plot of the imbalance price** 
 
@@ -95,6 +91,8 @@ Finally we can take a look at the autocorrelation and partial autocorrelation of
 ```python
 plot_autocorrelation(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/acf.png')
 ```
+
+![]({{ "/assets/imba_vis/acf.png"}}) 
 
 **Figure 7 - Autocorrelation and partial autocorrelation of the imbalance price**
 
