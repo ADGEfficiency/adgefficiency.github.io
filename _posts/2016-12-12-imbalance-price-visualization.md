@@ -96,6 +96,8 @@ plot_autocorrelation(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/acf.png'
 
 **Figure 7 - Autocorrelation and partial autocorrelation of the Imbalance Price**
 
+We can see that the majority of the autocorrelation exists at lags two and three, with some small amounts at 12 and 24 hours.
+
 ---
 
 Thanks for reading!
