@@ -16,13 +16,13 @@ This post is part of a series applying machine learning techniques to an energy 
 
 Visualization is a crucial first step in data analysis.  In this post we use the visualization library in the [forecast Python package](https://github.com/ADGEfficiency/forecast).  The notebook where this work was done is [here](https://github.com/ADGEfficiency/forecast/blob/master/projects/elexon/visualization.ipynb).
 
-The dataset was downloaded using the script [`forecast/projects/elexon/data_scraping.py`](https://github.com/ADGEfficiency/forecast/blob/master/projects/elexon/data_scraping.py) and cleaned using the script [`forecast/projects/elexon/cleaning_data.py`](https://github.com/ADGEfficiency/forecast/blob/master/projects/elexon/cleaning_data.py).
+The dataset was downloaded using the script [`forecast/projects/elexon/data_scraping.py`](https://github.com/ADGEfficiency/forecast/blob/master/projects/elexon/data_scraping.py) and cleaned using the script [`forecast/projects/elexon/cleaning_data.py`](https://github.com/ADGEfficiency/forecast/blob/master/projects/elexon/cleaning_data.py).  All the functions I used in this post come from the visualization module of the forecast package.
 
-The dataset has three variables - the imbalance price for the excess and insufficient balance and the imbalance volume.  The imbalance price ranges from -153 to 3,000 £/MWh.
+The dataset has three variables - the Imbalance Price for the excess and insufficient balance and the imbalance volume.  The Imbalance Price ranges from -153 to 3,000 £/MWh.
 
 ![]({{ "/assets/imba_vis/describe.png"}}) 
 
-A good start for time series visualization is to simply plot the series.  I do this using the `plot_time_series` function from the forecast library:
+A good start for time series visualization is to simply plot the series.  I do this using the `plot_time_series` function from the forecast library.
 
 ```python
 plot_time_series(elexon, 'Imbalance_price [£/MWh]', fig_name='time_series.png')
@@ -30,9 +30,9 @@ plot_time_series(elexon, 'Imbalance_price [£/MWh]', fig_name='time_series.png')
 
 ![]({{ "/assets/imba_vis/time_series.png"}}) 
 
-**Figure 1 - A plot of the imbalance price from 2015 to 2017**
+**Figure 1 - A plot of the Imbalance Price from 2015 to 2017**
 
-We can also just take a look at 2017:
+We can also just take a look at 2017.
 
 ```python
 plot_time_series(elexon.loc['2017-01-01':, :], 'Imbalance_price [£/MWh]', fig_name='time_series_2017.png')
@@ -40,7 +40,7 @@ plot_time_series(elexon.loc['2017-01-01':, :], 'Imbalance_price [£/MWh]', fig_n
 
 ![]({{ "/assets/imba_vis/time_series_2017.png"}}) 
 
-**Figure 2 - A plot of the imbalance price in 2017**
+**Figure 2 - A plot of the Imbalance Price in 2017**
 
 Next we look at how statistics such as mean, median and standard deviation have changed over time.  We use the `plot_grouped` function to show how these statistics change month by month.
 
@@ -50,7 +50,7 @@ plot_grouped(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/year_month.png')
 
 ![fig2]({{ "/assets/imba_vis/year_month.png"}}) 
 
-**Figure 3 - Monthly statistics of the imbalance price across 2015-2017**
+**Figure 3 - Monthly statistics of the Imbalance Price across 2015-2017**
 
 This function can also be used with different grouping.  In Figure 3 we can see how the prices changes for each month.
 
@@ -60,7 +60,7 @@ f = plot_grouped(elexon, 'Imbalance_price [£/MWh]', group_type='month', fig_nam
 
 ![]({{ "/assets/imba_vis/month.png"}}) 
 
-**Figure 4 - Monthly statistics of the imbalance price across 2015-2017** 
+**Figure 4 - Monthly statistics of the Imbalance Price across 2015-2017** 
 
 Figure 4 shows some seasonality - the price tends to be higher and more volatile in the winter and lower in the summer.  The higher level of the price is expected - in the UK demand peaks in the winter.
 
@@ -72,11 +72,11 @@ plot_grouped(elexon, 'Imbalance_price [£/MWh]', group_type='hour', fig_name='fi
 
 ![]({{ "/assets/imba_vis/hour.png"}}) 
 
-**Figure 5 - Daily statistics of the imbalance price across 2015-2017** 
+**Figure 5 - Daily statistics of the Imbalance Price across 2015-2017** 
 
 Figure 5 also shows seasonality - this time on a daily basis.  Interestingly the price is most volatile in the afternoon - although it is likely that an outlier is distoriting this (seen by the maximum price also occurs in this time period).
 
-It can also be useful to look at the distribution of time series.  Figure 6 shows a histogram and the kernel density plot of the imbalance price.
+It can also be useful to look at the distribution of time series.  Figure 6 shows a histogram and the kernel density plot of the Imbalance Price.
 
 ```python
 plot_distribution(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/distribution.png')
@@ -84,9 +84,9 @@ plot_distribution(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/distributio
 
 ![]({{ "/assets/imba_vis/fig5.png"}}) 
 
-**Figure 6 - Histogram and kernel density plot of the imbalance price** 
+**Figure 6 - Histogram and kernel density plot of the Imbalance Price** 
 
-Finally we can take a look at the autocorrelation and partial autocorrelation of the imbalance price.   Autocorrelation is the correlation of a variable with a lagged version of itself - spikes in autocorrelation suggest seasonality.  Partial autocorrelation measures the degree of association between the variable and a lagged version of itself, controlling for the values of the time series at all shorter lags.
+Finally we can take a look at the autocorrelation and partial autocorrelation of the Imbalance Price.   Autocorrelation is the correlation of a variable with a lagged version of itself - spikes in autocorrelation suggest seasonality.  Partial autocorrelation measures the degree of association between the variable and a lagged version of itself, controlling for the values of the time series at all shorter lags.
 
 ```python
 plot_autocorrelation(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/acf.png')
@@ -94,7 +94,7 @@ plot_autocorrelation(elexon, 'Imbalance_price [£/MWh]', fig_name='figs/acf.png'
 
 ![]({{ "/assets/imba_vis/acf.png"}}) 
 
-**Figure 7 - Autocorrelation and partial autocorrelation of the imbalance price**
+**Figure 7 - Autocorrelation and partial autocorrelation of the Imbalance Price**
 
 ---
 
