@@ -17,15 +17,18 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This is the story of debugging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py).
+This is the story of debugging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py) that I've been building for the past two years.
 
 ![]({{ "/assets/debug_dqn/commits.png"}})
 
-The experiments ran on the dev branch at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  The [environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) is the the energy_py wrapper around the Open AI gym CartPole-v0 environment]
+The experiments ran on the dev branch of energypy at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  The [environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) is the the energy_py wrapper around the Open AI gym CartPole-v0 environment.
 
-Cartpole is a good environment to use for debugging for two reasons.  Cartpole is a simple, classic reinforcement learning problem.  Using a simple environment means experiment run times can be reduced, increasing the rate of hyperparameter iteration.  Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
+Cartpole is a simple, classic reinforcement learning problem - it's a good environment to use for debugging:
 
-The second reason is that I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
+- using a simple environment means experiment run times can be reduced, increasing the rate of hyperparameter iteration.  
+- I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
+
+Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
 
 The idea of documenting the debug and tuning process comes from [Lessons Learned Reproducing a Deep Reinforcement Learning Paper](http://amid.fish/reproducing-deep-rl). This post recommends keeping a detailed log of your debugging and also taking the time to form hypotheses about what might be wrong. This is because of the long lead time between cause and effect for reinforcement learning experiments.
 
