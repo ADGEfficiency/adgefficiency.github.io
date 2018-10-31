@@ -8,15 +8,13 @@ excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning
 
 ---
 
-This is the second post in a three part series:
+This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment is at [this commit](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
 1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
 2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
 3. [Solving Open AI gym Cartpole using DQN](https://adgefficiency.com/dqn-solving/)
 
 ---
-
-This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment is at [this commit](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
 **These posts follow a problem-hypothesis structure**.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypotheses.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the value of taking the time to think about the problem relative to the cost of testing a hypothesis.
 
