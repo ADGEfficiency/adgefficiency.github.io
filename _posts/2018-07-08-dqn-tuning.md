@@ -96,9 +96,9 @@ Up until now I have been using a neural network structure of `5, 5, 5` (i.e. 3 l
 
 Updated hyperparameters were
 
-```
-layers=256,256
-batch_size=256
+```python
+layers = 256,256
+batch_size = 256
 ```
 
 ![fig2]({{ "/assets/dqn_debug_2/fig2.png"}}) 
@@ -130,7 +130,7 @@ One issue with the `tau=0.001` strategy is that perhaps a neural network has to 
 
 Luckily the new energy_py implementation of DQN can easily handle both, by setting two parameters in the DQN agent `__init__`
 
-```
+```python
 #  parameters to fully copy weights every 5000 steps 
 tau=1.0
 update_target_net=5000
@@ -143,11 +143,11 @@ update_target_net=1
 
 The hyperparameters for the different target net update experiment are below.  I reduced the size of the neural network - the previous structure of `256, 256` seemed overkill for a network with an input shape of `(4,)` and output shape of `(2,)`!
 
-```
-batch_size=256
-layers=128,128
-tau=1.0
-update_target_net=5000
+```python
+batch_size = 256
+layers = 128,128
+tau = 1.0
+update_target_net = 5000
 ```
 
 ![fig3]({{ "/assets/dqn_debug_2/fig3.png"}}) 
@@ -179,7 +179,7 @@ While preprocessing Bellman targets is often given as advice for reinforcement l
 
 Up until now I was using [`tf.layers.batch_normalization`](https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization) with the Bellman target as follows
 
-```
+```python
 self.bellman = self.reward + self.discount * self.next_state_max_q
 
 bellman_norm = tf.layers.batch_normalization(
@@ -198,7 +198,7 @@ error = tf.losses.huber_loss(
 
 I changed the batch norm arguments to default (i.e. `training=False`).  In the `tf.layers` implementation of batch norm the layer will use historical statistics to normalize the batch.  The effect of this on the Bellman target is quite dramatic.
 
-```
+```python
 bellman_norm = tf.layers.batch_normalization(
     tf.reshape(self.bellman, (-1, 1)),
     center=True,
@@ -243,5 +243,7 @@ This process of debugging has been an emotional journey.  It's something I'm ver
 While you can learn from reading, there is no replacement for getting your hands dirty.  Spending the time training a whole bunch of models and hypothesizing what the effects of hyperparameters might be is time well spent.
 
 When I was reviewing other implementations of DQN around GitHub or on blogs, I often saw a successful iteration in the blog post then a number of comments saying that the implementation didn't work.
+
+[Read the conclusion of this epic journey in the final post in this series, Solving Open AI gym Cartpole using DQN](https://adgefficiency.com/dqn-solving/)
 
 Thanks for reading!
