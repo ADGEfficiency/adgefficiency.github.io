@@ -7,11 +7,20 @@ categories:
 excerpt: Tuning hyperparameters of the new energy_py DDQN reinforcement learning agent.
 
 ---
+
+This is the second post in a three part series:
+
+1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
+2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
+3. [Solving Open AI gym Cartpole using DQN](https://adgefficiency.com/dqn-solving/)
+
+---
+
 This is the second post on the new energy_py implementation of DQN.  [The first post documents the debugging process and started the hyperparameter tuning](https://adgefficiency.com/dqn-debugging/).  This post continues the emotional hyperparameter tuning journey where the first post left off.  The code used to run the experiment is at [this commit](https://github.com/ADGEfficiency/energy_py/commit/a0b26578bb550605c405fae3026a8a6fdfd7b889).
 
 **These posts follow a problem-hypothesis structure**.  Often the speed between seeing cause and effect is quick in computer programming.  This allows a rapid cycling through hypotheses.  In reinforcement learning, the long training time (aka the sample inefficiency) increases the value of taking the time to think about the problem relative to the cost of testing a hypothesis.
 
-This kind of interactive tuning has two benefits.  First it can be faster than grid searching (if the debugger is skilled).  **The second is that the engineer can gain intuition and understanding of how the algorithm is working**.  For all experiments I perform three runs over three different random seeds.  These random seeds are kept constant for each experiment.  The random seed for the environment action sampling is not kept constant - it is intentionally kept separate.  A good discussion on [why the Open AI library does this is here](https://github.com/openai/gym/commit/58e6aa95e5af2c738557431f812abb81c505a7cf#commitcomment-17669277).  This means that some randomness will be kept the same (i.e. neural network weight initialization), other sources of randomness won't be.
+Interactive tuning has two benefits.  First it can be faster than grid searching (if the debugger is skilled).  **The second is that the engineer can gain intuition and understanding of how the algorithm is working**.  For all experiments I perform three runs over three different random seeds.  These random seeds are kept constant for each experiment.  The random seed for the environment action sampling is not kept constant - it is intentionally kept separate.  A good discussion on [why the Open AI library does this is here](https://github.com/openai/gym/commit/58e6aa95e5af2c738557431f812abb81c505a7cf#commitcomment-17669277).  This means that some randomness will be kept the same (i.e. neural network weight initialization), other sources of randomness won't be.
 
 ## problem - stability
 
@@ -42,8 +51,7 @@ if self.double_q:
     online_actions = tf.argmax(self.online_next_obs_q, axis=1)
 
     unmasked_next_state_max_q = tf.reduce_sum(
-        self.target_q_values * tf.one_hot(online_actions,
-				          self.num_actions),
+        self.target_q_values * tf.one_hot(online_actions, self.num_actions),
         axis=1,
         keepdims=True
 )
@@ -84,9 +92,9 @@ Another reason batches are used is to avoid GPU constraints.  If you are using i
 
 For these simple reinforcement learning problems the idea is that smaller neural networks should be preferred, as they have less change to overfit.
 
-One reason why a small neural network could cause instability is a lot of aliasing (sharing of weights).  Aliasing could mean that changes to one part of the network disrupt the understanding encoded in another part of the network.
+One reason why a small neural network could cause instability is aliasing (sharing of weights).  Aliasing could mean that changes to one part of the network disrupt the understanding encoded in another part of the network.
 
-Up until now I have been using a neural network structure of `5, 5, 5` (i.e. 3 layers with 5 nodes per layer).  My hypothesis was that even though this is not a lot of nodes, because the network has three layers there will be a lot of aliasing (i.e. changes in the input layer affect all the layers below it).  
+Up until now I have been using a neural network structure of `5, 5, 5` (i.e. 3 layers with 5 nodes per layer).  My hypothesis was that even though this is not a lot of nodes, because the network has three layers there will be aliasing (i.e. changes in the input layer affect all the layers below it).  
 
 Updated hyperparameters were
 
@@ -120,7 +128,7 @@ for p, c in zip(parent, child):
     )
 ```
 
-One issue with the `tau=0.001` strategy is that perhaps a neural network has to be taken as a whole.  Because of the massive connectivity, changing the value of one weight might lead to drastic changes in other parts of the network (a machine learning version of the butterfly effect).  While the `tau=0.001` stragety should allow a smoother and more gradual update, in fact it might cause instability.
+One issue with the `tau=0.001` strategy is that perhaps a neural network has to be taken as a whole.  Because of the massive connectivity, changing the value of one weight might lead to drastic changes in other parts of the network (a machine learning version of the butterfly effect).  While the `tau=0.001` strategy should allow a smoother and more gradual update, in fact it might cause instability.
 
 Luckily the new energy_py implementation of DQN can easily handle both, by setting two parameters in the DQN agent `__init__`
 
@@ -135,7 +143,7 @@ tau=0.001
 update_target_net=1
 ```
 
-The hyperparameters for the different target net update experiment are below.  I reduced the size of the neural network - the previous structure of `256, 256` seemed a bit overkill for a network with an input shape of `(4,)` and output shape of `(2,)`!
+The hyperparameters for the different target net update experiment are below.  I reduced the size of the neural network - the previous structure of `256, 256` seemed overkill for a network with an input shape of `(4,)` and output shape of `(2,)`!
 
 ```
 batch_size=256
@@ -151,12 +159,12 @@ update_target_net=5000
 
 Figure 3 shows the target net update strategy slows learning.  This is expected - rather than taking advantage of online network weight updates as they happen, the agent must wait until the target network reflects the agent's new understanding of the world.  Run 2 is especially promising, with the agent able to perform well for around 100k steps.
 
-The main hyperparameter with this style of target network updating is the number of steps between updates.  I ran a set of experiments with a quicker update (`update_target_net=2500`) to see if I could get learning to happen a bit quicker and maintain a bit of stability.  The results for these runs are shown in Figure 4.
+The main hyperparameter with this style of target network updating is the number of steps between updates.  I ran a set of experiments with a quicker update (`update_target_net=2500`) to see if I could get learning to happen quicker and maintain of stability.  The results for these runs are shown in Figure 4.
 
 ![fig4]({{ "/assets/dqn_debug_2/fig4.png"}}) 
 **Figure 4 - Updating the target network every 2500 steps seems to worsen performance** 
 
-Looks like that didn't work!  By this point I started to get a bit concerned that I was torturing hyperparameters a bit too much (leading to a form of selection bias where I 'overfit' the implementation of DQN to this specific environment).  So rather than continuing my (somewhat) scientific approach of changing only one thing at a time, I decided to try to combine all the lessons I had learnt and train the best agent I could.  I gave myself two more experiments until I would force myself to stop.  
+Looks like that didn't work!  By this point I started to get concerned that I was torturing hyperparameters too much (leading to a form of selection bias where I 'overfit' the implementation of DQN to this specific environment).  So rather than continuing my (somewhat) scientific approach of changing only one thing at a time, I decided to try to combine all the lessons I had learnt and train the best agent I could.  I gave myself two more experiments until I would force myself to stop.  
 
 Given that reducing the steps between target network updates seems to reduce performance, I decided to set `update_target_net=10000`.  I also increased the learning rate and decreased the size of the neural network.  Both of these changes were in the context of looking at lot of other implementations of DQN for the Cartpole environment.
 
@@ -169,7 +177,7 @@ I increased the learning rate to `0.001` to take advantage of the large batch si
 
 ## finally, the final run (finally)
 
-While preprocessing Bellman targets is often given as advice for reinforcement learning, many DQN implementations (including the DeepMind 2015 implementation) don't do any processing of the Bellman target.  For this reason I decided to play around with the batch norm layer a bit.
+While preprocessing Bellman targets is often given as advice for reinforcement learning, many DQN implementations (including the DeepMind 2015 implementation) don't do any processing of the Bellman target.  For this reason I decided to play around with the batch norm layer.
 
 Up until now I was using [`tf.layers.batch_normalization`](https://www.tensorflow.org/api_docs/python/tf/layers/batch_normalization) with the Bellman target as follows
 
@@ -190,7 +198,7 @@ error = tf.losses.huber_loss(
 )
 ```
 
-I changed the batch norm arguments to default (i.e. `training=False`).  In the `tf.layers` implementation of batch norm this means that the layer will use historical statistics to normalize the batch.  The effect of this on the Bellman target is quite dramatic.
+I changed the batch norm arguments to default (i.e. `training=False`).  In the `tf.layers` implementation of batch norm the layer will use historical statistics to normalize the batch.  The effect of this on the Bellman target is quite dramatic.
 
 ```
 bellman_norm = tf.layers.batch_normalization(
@@ -216,7 +224,7 @@ For the final run I increased the number of steps from 400k to 1000k.  While thi
 ![fig8]({{ "/assets/dqn_debug_2/fig8.png"}}) 
 **Figure 8 - Results for the final run**
 
-So after a whole heap of CPU time - what can we say about the final performance?  All three runs do solve the environment (this enviroment is considered solved when an an average of 195 is achieved over the last 100 episodes).  
+So after a whole heap of CPU time - what can we say about the final performance?  All three runs do solve the environment (this environment is considered solved when an average of 195 is achieved over the last 100 episodes).  
 
 All three runs also show catastrophic forgetting - i.e. after they solve the environment they all managed to forget their good work.  What then is the solution to this?  
 
@@ -228,13 +236,13 @@ This is a potential solution to the stability problem.  Rather than training for
 
 If you think about how we learn skills in the real world, we do often use early stopping.  Once we learn handwriting write to a decent level we commonly don't continue to train the skill.  Instead we fall into a repeated pattern of writing in the same way for the rest of our lives.
 
-It's perhaps a bit cruel to continue to force gradient updates on an agent when it has solved an environment.  A small enough learning rate should solve this problem but it's likely that the learning rate would be so small that there is no point doing the update in the first place.
+It's perhaps cruel to continue to force gradient updates on an agent when it has solved an environment.  A small enough learning rate should solve this problem but it's likely that the learning rate would be so small that there is no point doing the update in the first place.
 
 ## takeaways
 
 This process of debugging has been an emotional journey.  It's something I'm very glad I did - Yoshua Bengio often talks about how it's crucial to ones development as a machine learning professional to spend the time training and debugging algorithms.  
 
-While you can learn a lot from reading, there is no replacement for getting your hands dirty.  Spending the time training a whole bunch of models and hypothesizing what the effects of hyperparameters might be is time well spent.
+While you can learn from reading, there is no replacement for getting your hands dirty.  Spending the time training a whole bunch of models and hypothesizing what the effects of hyperparameters might be is time well spent.
 
 When I was reviewing other implementations of DQN around GitHub or on blogs, I often saw a successful iteration in the blog post then a number of comments saying that the implementation didn't work.
 
