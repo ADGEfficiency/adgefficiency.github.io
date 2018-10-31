@@ -299,7 +299,7 @@ One of the hyperparameters in using batch norm is whether to use accumulated sta
 
 **Figure 8 - The Bellman target before and after batch normalization**
 
-After making these changes the first signs of life appeared
+After making these changes the first signs of life appeared.
 
 ![fig9]({{ "/assets/debug_dqn/fig9.png"}})
 

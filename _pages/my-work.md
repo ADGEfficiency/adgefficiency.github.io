@@ -37,7 +37,7 @@ September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](htt
 
 Machine learning in energy - [part one](https://www.adgefficiency.com/machine-learning-in-energy-part-one/) - [part two](https://www.adgefficiency.com/machine-learning-in-energy-part-two/)
 
-DQN [debugging](https://www.adgefficiency.com/dqn-debugging/) and [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/)
+DQN [debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [Cartpole solving](https://www.adgefficiency.com/dqn-solving/)
 
 ### Data
 
