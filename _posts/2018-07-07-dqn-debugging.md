@@ -381,6 +381,6 @@ Hyperparameters
 - exploration decay fraction from `0.3` to `0.5`
 - learning rate reduced and decayed
 
-[The next post in this series continues the story with hyperparameter tuning of the DQN agent](https://adgefficiency.com/dqn-tuning/).
+[The next post in this series continues the story with hyperparameter tuning of the DQN agent](https://adgefficiency.com/dqn-tuning/) - [or skip right ahead to the final post where the agent solves the Cartpole environment](https://adgefficiency.com/dqn-solving/).
 
 Thanks for reading!

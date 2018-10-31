@@ -74,6 +74,7 @@ layers=5,5,5
 The results across three random seeds are shown in Figure 1.
 
 ![fig1]({{ "/assets/dqn_debug_2/fig1.png"}}) 
+
 **Figure 1 - DDQN experiments**
 
 Figure 1 shows that the instability problem still exists!  On to the next hypothesis.
@@ -102,6 +103,7 @@ batch_size = 256
 ```
 
 ![fig2]({{ "/assets/dqn_debug_2/fig2.png"}}) 
+
 **Figure 2 - Larger batch size and neural network**
 
 The batch size and neural network size changes do seem to have improved stability - the agents are able to stay at the maximum reward of 200 for a longer.  The issue is that later in the experiment, the agents forget everything they have learnt and collapse to poor quality policies.  Run 1 is especially disappointing! 
@@ -153,6 +155,7 @@ update_target_net = 5000
 ![fig3]({{ "/assets/dqn_debug_2/fig3.png"}}) 
 
 ![fig35]({{ "/assets/dqn_debug_2/fig3.5.png"}}) 
+
 **Figure 3.1 - The target network weights during training.  The weights stay fixed for a number of steps.**
 
 Figure 3 shows the target net update strategy slows learning.  This is expected - rather than taking advantage of online network weight updates as they happen, the agent must wait until the target network reflects the agent's new understanding of the world.  Run 2 is especially promising, with the agent able to perform well for around 100k steps.
@@ -160,6 +163,7 @@ Figure 3 shows the target net update strategy slows learning.  This is expected 
 The main hyperparameter with this style of target network updating is the number of steps between updates.  I ran a set of experiments with a quicker update (`update_target_net=2500`) to see if I could get learning to happen quicker and maintain of stability.  The results for these runs are shown in Figure 4.
 
 ![fig4]({{ "/assets/dqn_debug_2/fig4.png"}}) 
+
 **Figure 4 - Updating the target network every 2500 steps seems to worsen performance** 
 
 Looks like that didn't work!  By this point I started to get concerned that I was torturing hyperparameters too much (leading to a form of selection bias where I 'overfit' the implementation of DQN to this specific environment).  So rather than continuing my (somewhat) scientific approach of changing only one thing at a time, I decided to try to combine all the lessons I had learnt and train the best agent I could.  I gave myself two more experiments until I would force myself to stop.  
@@ -171,6 +175,7 @@ I increased the learning rate to `0.001` to take advantage of the large batch si
 `slower_update_lr_2`
 
 ![fig5]({{ "/assets/dqn_debug_2/fig5.png"}}) 
+
 **Figure 5 - Results of the less frequent target net update, larger learning rate, smaller neural network**
 
 ## finally, the final run (finally)
@@ -210,9 +215,11 @@ bellman_norm = tf.layers.batch_normalization(
 Figure 6 shows the batch normed Bellman target with `training=True` (i.e. normalize each batch using the batch statistics) for the runs show in Figure 5 above.  Figure 7 shows the Bellman target 
 
 ![fig6]({{ "/assets/dqn_debug_2/fig6.png"}}) 
+
 **Figure 6 - The effect of `training=True` on the Bellman target.  As training progresses the Bellman target remains in a range of around 2 to -4**
 
 ![fig7]({{ "/assets/dqn_debug_2/fig7.png"}}) 
+
 **Figure 7 - The effect of `training=False` on the Bellman target for Run 2 of the final run.  As training progresses the Bellman target increases with every update of the target network.  Also note how the batch norm operation is not changing the Bellman target!**
 
 So it seems that using the batch norm layer with default parameters is essentially like not using it at all.
@@ -220,6 +227,7 @@ So it seems that using the batch norm layer with default parameters is essential
 For the final run I increased the number of steps from 400k to 1000k.  While this is a massive number of steps, the reality of reinforcement learning is that it is sample inefficient.  While it's possible that torturing hyperparameters can help with the sample inefficiency, another valid fix for sample inefficiency is more samples.  This is equivalent to getting more data in a supervised learning setting.
 
 ![fig8]({{ "/assets/dqn_debug_2/fig8.png"}}) 
+
 **Figure 8 - Results for the final run**
 
 So after a whole heap of CPU time - what can we say about the final performance?  All three runs do solve the environment (this environment is considered solved when an average of 195 is achieved over the last 100 episodes).  
