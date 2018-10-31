@@ -9,7 +9,7 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This is the first post in a three part series:
+*This is the first post in a three part series:*
 
 1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
 2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
