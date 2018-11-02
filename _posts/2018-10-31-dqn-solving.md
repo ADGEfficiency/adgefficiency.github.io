@@ -9,7 +9,7 @@ excerpt: Finally - stable learning.
 
 ---
 
-This is the final post in a three part series of debugging and tuning the energypy implementation of DQN.  In the previous posts I debugged and tuned the agent using a problem - hypothesis - solution structure.  In this post I share some final hyperparameters that both solved the Cartpole environment and resulted in stable policies.
+This is the final post in a three part series of debugging and tuning the energypy implementation of DQN.  In the previous posts I debugged and tuned the agent using a problem - hypothesis - solution structure.  In this post I share some final hyperparameters that solved the Cartpole environment - but more importantly ended up with stale policies.
 
 1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
 2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
@@ -17,7 +17,7 @@ This is the final post in a three part series of debugging and tuning the energy
 
 ---
 
-The main changes I made that (I think!) contributed towards the high quality and stable policy were:
+The main changes that (I think!) contributed towards the high quality and stable policy were:
 
 - small neural network - two hidden layers of (8, 4) nodes
 - increasing the steps between target network updates to 10,000 steps
