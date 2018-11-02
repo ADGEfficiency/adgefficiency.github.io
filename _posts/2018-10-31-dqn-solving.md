@@ -96,7 +96,7 @@ seed=42
 
 Because I've spent so much time tuning this DQN agent to Cartpole, I wanted to see if I was overfitting by looking at how the agent performed on another benchmark problem from gym, the Pendulum environment.  This environment is doesn't have solved criteria - however the maximum possible reward per episode is 0.  Figure 2 shows the performance of the same set of agents on Pendulum.
 
-[]({{ "/assets/dqn_solving/fig3.png"}})
+[]({{"/assets/dqn_solving/fig3.png"}})
 
 Pendulum has a continuous action space - I choose to discretize the space with five actions.  It's possible that this is too coarse of a discretization for the agent to find the optimal policy.  It's also possible that Pendulum might need a larger network to model the action-value function.
 
