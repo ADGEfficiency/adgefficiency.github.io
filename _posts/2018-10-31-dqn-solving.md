@@ -28,7 +28,7 @@ I ran four runs - two with an epsilon-greedy policy and two with a softmax polic
 
 The performance of the four agents is shown below in Figure 1.  This environment (`Cartpole-v0`) is considered solved when the agent achieves a score of 195 over 100 consecutive episodes - which occured after around 150,000 steps for the epsilon-greedy agents.
 
-[]({{"/assets/dqn_solving/fig1.png"}})
+![]({{"/assets/dqn_solving/fig1.png"}})
 
 The epsilon-greedy policy outperformed the softmax policy - although I wasn't quite sure how to decay the softmax temperature (in the runs above I decayed it from 0.5 to 0.1 over the experiment.  The softmax policy implementation is shown below - it lives in the energypy library at [energypy/common/policies/softmax.py](https://github.com/ADGEfficiency/energy-py/blob/master/energypy/common/policies/softmax.py).
 
@@ -96,7 +96,7 @@ seed=42
 
 Because I've spent so much time tuning this DQN agent to Cartpole, I wanted to see if I was overfitting by looking at how the agent performed on another benchmark problem from gym, the Pendulum environment.  This environment is doesn't have solved criteria - however the maximum possible reward per episode is 0.  Figure 2 shows the performance of the same set of agents on Pendulum.
 
-[]({{"/assets/dqn_solving/fig3.png"}})
+![]({{"/assets/dqn_solving/fig3.png"}})
 
 Pendulum has a continuous action space - I choose to discretize the space with five actions.  It's possible that this is too coarse of a discretization for the agent to find the optimal policy.  It's also possible that Pendulum might need a larger network to model the action-value function.
 
