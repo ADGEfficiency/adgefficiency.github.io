@@ -9,7 +9,7 @@ excerpt: Finally - stable learning.
 
 ---
 
-This is the third post in a three part series:
+This is the final post in a three part series of debugging and tuning the energypy implementation of DQN.  In the previous posts I debugged and tuned the agent using a problem - hypothesis - solution structure.  In this post I share some final hyperparameters that both solved the Cartpole environment and resulted in stable policies.
 
 1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
 2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
@@ -17,7 +17,12 @@ This is the third post in a three part series:
 
 ---
 
-This is the final post in a three part series of debugging and tuning the energypy implementation of DQN.  In the previous posts I debugged and tuned the agent using a problem - hypothesis - solution structure.  In this post I share some final hyperparameters that both solved the Cartpole environment and resulted in stable policies.
+The main changes I made that (I think!) contributed towards the high quality and stable policy were:
+
+- small neural network - two hidden layers of (8, 4) nodes
+- increasing the steps between target network updates to 10,000 steps
+- increasing the replay memory to hold the entire history of the agents experience
+- learning rate at 0.0001
 
 I ran four runs - two with an epsilon-greedy policy and two with a softmax policy.  The experiments were run on [the master branch of energypy at this commit](https://github.com/ADGEfficiency/energy-py/tree/868129cb1a9912bbc69239eb9d2882137dbbff68).
 
@@ -36,13 +41,6 @@ entropy = -tf.reduce_sum(softmax * log_probs, 1, name='softmax_entropy')
 samples = tf.multinomial(log_probs, num_samples=1)
 policy = tf.gather(discrete_actions, samples)
 ```
-
-The main changes I made that (I think!) contributed towards the high quality and stable policy were:
-
-- small neural network - two hidden layers of (8, 4) nodes
-- increasing the steps between target network updates to 10,000 steps
-- increasing the replay memory to hold the entire history of the agents experience
-- learning rate at 0.0001
 
 Previously I had been using much larger neural networks - typically three layers with 50 to 250 nodes per layer.  For the Cartpole problem this is far too much!  A smaller network can represent a high quality policy.  
 
