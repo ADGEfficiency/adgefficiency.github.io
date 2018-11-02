@@ -28,7 +28,7 @@ I ran four runs - two with an epsilon-greedy policy and two with a softmax polic
 
 The performance of the four agents is shown below in Figure 1.  This environment (`Cartpole-v0`) is considered solved when the agent achieves a score of 195 over 100 consecutive episodes - which occured after around 150,000 steps for the epsilon-greedy agents.
 
-[]({{ "/assets/dqn_solving/fig1.png"}})
+[]({{"/assets/dqn_solving/fig1.png"}})
 
 The epsilon-greedy policy outperformed the softmax policy - although I wasn't quite sure how to decay the softmax temperature (in the runs above I decayed it from 0.5 to 0.1 over the experiment.  The softmax policy implementation is shown below - it lives in the energypy library at [energypy/common/policies/softmax.py](https://github.com/ADGEfficiency/energy-py/blob/master/energypy/common/policies/softmax.py).
 
