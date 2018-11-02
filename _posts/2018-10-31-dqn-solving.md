@@ -44,7 +44,7 @@ samples = tf.multinomial(log_probs, num_samples=1)
 policy = tf.gather(discrete_actions, samples)
 ```
 
-Previously I had been using much larger neural networks - typically three layers with 50 to 250 nodes per layer.  For the Cartpole problem this is far too much!  A smaller network can represent a high quality policy.  
+Previously I had been using much larger neural networks - typically three layers with 50 to 250 nodes per layer.  For the Cartpole problem this is far too much!  A smaller and shallower network has enough capacity to represent the action-value function for a high quality policy.
 
 There is an argument for larger networks - the agent can learn to only use the capacity required, and a larger network will mean less weight sharing which should give more stability.  But on the other hand, a larger network means more weights to change, and more of a change that a bad gradient will destroy the policy.
 
@@ -107,6 +107,6 @@ Pendulum has a continuous action space - I choose to discretize the space with f
 ## key takeaways
 
 - stability, not speed, is the goal in reinforcement learning
-- you probably don't need that three layer, hundreds of nodes per layer network
+- you probably don't need that three layer, hundred of nodes per layer network
 
 Thanks for reading!
