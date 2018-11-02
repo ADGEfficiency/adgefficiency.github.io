@@ -95,6 +95,7 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ## Further reading
 
+- [NEM on the AEMO website](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM)
 - [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)
 - [Li, Zili (2016) Topics in deregulated electricity markets. PhD thesis, Queensland University of Technology](https://eprints.qut.edu.au/98895/)
 
