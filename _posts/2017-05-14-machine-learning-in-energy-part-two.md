@@ -117,7 +117,7 @@ Abstract models (such as linear programming) can account for changes in key vari
 
 Reinforcement learning gives a machine the ability to learn to take actions. The machine takes actions in an environment to optimize a reward signal. In the context of an energy system that reward signal could be energy cost, carbon or safety - whatever behaviour we want to incentivize.
 
-![]({{"/asserts/ml_energy/rl_energy.png"}})
+![]({{"/assets/ml_energy/rl_energy.png"}})
 
 The potential and promise of reinforcement learning is for an agent to learn to control a system better than any human can.  This superhuman level of performance has been demonstrated in environments such as Atari games, Chess and Go.  
 
