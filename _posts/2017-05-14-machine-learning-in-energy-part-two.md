@@ -8,36 +8,31 @@ excerpt: Applications of machine learning in energy
 
 ---
 
-This is the second of a two part series on the intersection of machine learning and the energy industry.  Read the [first part here](http://adgefficiency.com/machine-learning-in-energy-part-two/)
+This is the second of a two part series on the intersection of machine learning and the energy industry.  The [first part](https://adgefficiency.com/machine-learning-in-energy-part-one/) introduces what machine learning is, why it’s a fundamental paradigm shift, what’s driving performance and what some of the challenges are.
 
-This post will detail three applications of machine learning in energy
-- forecasting of electricity generation, consumption and price
-- energy disaggregation
-- reinforcement learning
-
-We will also take a look at one of the most famous applications of machine learning in an energy system - optimization of Google's data centers. 
+This second part will detail three applications of machine learning in energy - time series forecasting, disaggregation and reinforcement learning.  It also takes a look at the most visible application of machine learning in energy - Alphabet/Google's optimization of their own datacenters.
 
 ## forecasting of electricity generation, consumption and price
 
 ### what's the problem
 
-The time of energy generation and consumption has a major economic and environmental impact.  Large scale storage of electricity is only just becoming economic - without storage generation must match consumption.  When demand is high the grid can be forced to use expensive and inefficient peaking plants.  In periods of low demand electricity can be so abundant that the price becomes negative.
+The first major lesson I learnt as an energy engineer was the importance of time in energy systems.  The economic and environmental impact of energy generation or consumption changes massively depending on the time when they occur.
 
-The more accurately a system operator understands what generation and demand will be in the future, the better they can manage the grid. Historically there wasn't major uncertanity on either side.  
+Large scale storage of electricity is only just becoming economic - without storage, generation must match consumption.  When demand is high the grid can be forced to use expensive and inefficient peaking plants.  In periods of low demand electricity can be so abundant that the price becomes negative.
 
-The major uncertantity with dispatchable fossil fuel generators is unscheduled maintenance - usually expected to cause around 5-10% downtime annually.  On the demand side the aggregation of an entire grid's demand made the forecast a challenging but acceptable problem.
+The more accurately system operators and market participants understand what generation and demand will be in the future, the better they can manage the grid.  The major uncertainty with dispatchable fossil fuel generators is unscheduled maintenance - usually expected to cause around 5-10% downtime annually.
 
-Our current energy transition is making the forecasting problem more difficult.  **Our transition towards intermittent and distributed generation is introducing uncertantity on both the generation and demand side**.
+Our current energy transition is making the forecasting problem more difficult.  **Our transition towards intermittent and distributed generation is introducing more uncertainty on both the generation and demand side**.
 
-[<img class="size-large wp-image-1142 aligncenter" src="http://adgefficiency.com/wp-content/uploads/2017/05/energy_transition-1-1024x583.png" alt="Our current energy transition is moving us away from dispatchable, centralized and large-scale generation towards intermittent, distributed and small scale generation." width="525" height="299" srcset="http://adgefficiency.com/wp-content/uploads/2017/05/energy_transition-1-1024x583.png 1024w, http://adgefficiency.com/wp-content/uploads/2017/05/energy_transition-1-300x171.png 300w, http://adgefficiency.com/wp-content/uploads/2017/05/energy_transition-1-768x437.png 768w" sizes="(max-width: 525px) 100vw, 525px" />](http://adgefficiency.com/wp-content/uploads/2017/05/energy_transition-1.png)
+![]("{{/assets/ml_energy/energy_transition.png}}")
 
-Like the weather, intermittent generation is hard to forecast. Wind generation depends on forecasting wind speeds over vast areas. Solar power is more predictable but can still see variation as cloud cover changes.
+Intermittent, renewable generation is powered by the weather - making it hard to forecast.  Wind generation depends on forecasting wind speeds over vast areas. Solar power is more predictable but can still see variation as cloud cover changes.  As grid scale wind & solar penetration increase balancing the grid becomes difficult. Higher levels of renewables can lead to more fossil fuel backup kept in reserve in case forecasts are wrong.
 
-As grid scale wind & solar penetration increase balancing the grid becomes difficult. Higher levels of renewables can lead to more fossil fuel backup kept in reserve in case forecasts are wrong.  
+The distributed and small scale of renewables (solar in particular) also makes demand forecasting more difficult.  A solar panel sitting on a residential home is not directly metered - the system operator has no idea it is there. As this solar panel generates throughout the day it appears to the grid as reduced consumption. 
 
-The distributed and small scale of renewables (solar in particular) also makes demand forecasting more difficult.
+The most famous example of this the 'duck curve'.  In California the loss of distributed solar power as the sunsets appears to the system operator as a massive increase in demand, requiring dispatchable generation to quickly ramp up to meet the loss of solar.
 
-A solar panel sitting on a residential home is not directly metered - the system operator has no idea it is there. As this solar panel generates throughout the day it appears to the grid as reduced consumption. The most famous example of this the 'duck curve'.  In California the loss of distributed solar power as the sunsets appears to the system operator as a massive increase in demand, requiring dispatchable generation to quickly ramp up to meet the loss of solar.
+![]("{{/assets/ml_energy/duck_curve.png}}")
 
 **Our current energy transition is a double whammy for grid balancing.** Forecasting of both generation and consumption is becoming more challenging.
 
@@ -53,7 +48,7 @@ Well trained random forests, support vector machines and neural networks can all
 
 A key challenge is data. As renewables are weather driven forecasts of weather can be useful exogenous variables. It's key that we only train models on data that will be available at the time of the forecast. This means that historical information about weather forecasts can be more useful than the actual weather data.
 
-Other useful variables for forecasting electricity generation, demand or prices include
+Other useful variables for forecasting electricity generation, demand or prices include:
 - lagged values of the target (i.e. what the price was last half hour
 - prices in neighbouring markets
 - prices of primary fuels such as natural gas or coal
@@ -64,21 +59,18 @@ Other useful variables for forecasting electricity generation, demand or prices 
 
 Improving forecasts allows us to better balance the grid, reduce reliance on fossil fuel peaking or backup plants and reduce curtailment of renewables.
 
-It's not only the economic & environmental cost of keeping backup plant spinning. Incorrect forecasts can lead to fossil fuel generators paid to reduce output. This increases the cost to supply electricity to customers.
+It's not only the economic & environmental cost of keeping backup plant spinning. Incorrect forecasts can lead to fossil fuel generators paid to reduce output - known as redispatching. This increases the cost to supply electricity to customers.
 
 There are benefits for consumers of electricity as well. Improved prediction can also allow flexible electricity consumption to respond to market signals.  More accurate forecasts that can look further ahead will allow more electricity consumers to be flexible. Using flexible assets to manage the grid will reduce our reliance on fossil fuels for grid balancing.
 
 ### sources and further reading
 
 - [Forecasting UK Imbalance Price using a Multilayer Perceptron Neural Network](http://adgefficiency.com/forecasting-uk-imbalance-price-using-a-multilayer-perceptron/)
-  
 - [Machine Learning in Energy (Fayadhoi Ibrahima)](http://large.stanford.edu/courses/2015/ph240/ibrahima2/)
-  
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning)
-  
 - [Germany enlists machine learning to boost renewables revolution](http://www.nature.com/news/germany-enlists-machine-learning-to-boost-renewables-revolution-1.20251)
-  
 - [Weron (2014) Electricity price forecasting: A review of the state-of-the-art with a look into the future](http://www.sciencedirect.com/science/article/pii/S0169207014001083)
+- [Re-dispatch costs in the German power grid](https://www.cleanenergywire.org/factsheets/re-dispatch-costs-german-power-grid)
 
 ## energy disaggregation
 
