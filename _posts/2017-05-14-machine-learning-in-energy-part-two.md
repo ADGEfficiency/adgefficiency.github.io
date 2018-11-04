@@ -131,7 +131,7 @@ Letting machines make decisions in energy systems allows operators to spend more
 
 ### sources and further reading
 
-- [energy_py – reinforcement learning in energy systems](http://adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/)
+- [energy_py – reinforcement learning in energy systems](http://adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/)
 - [Minh et. al (2016) Human-level control through deep reinforcement learning](http://www.nature.com/articles/nature14236) - [Reinforcement learning course by David Silver (Google DeepMind)](https://www.youtube.com/watch?v=2pWv7GOvuf0)
 - [Deep reinforcement learning doesn't work yet](http://www.alexirpan.com/2018/02/14/rl-hard.html)
 
