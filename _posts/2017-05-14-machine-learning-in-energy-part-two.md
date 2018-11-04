@@ -10,7 +10,7 @@ excerpt: Applications of machine learning in energy
 
 This is the second of a two part series on the intersection of machine learning and the energy industry.  The [first part](https://adgefficiency.com/machine-learning-in-energy-part-one/) introduces what machine learning is, why it’s a fundamental paradigm shift, what’s driving performance and what some of the challenges are.
 
-This second part will detail three applications of machine learning in energy - time series forecasting, disaggregation and reinforcement learning.  It also takes a look at the most visible application of machine learning in energy - Alphabet/Google's optimization of their own datacenters.
+This second part will detail three applications of machine learning in energy - time series forecasting, disaggregation and reinforcement learning.
 
 ## forecasting of electricity generation, consumption and price
 
