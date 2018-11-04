@@ -4,7 +4,7 @@ date: 2017-05-14
 categories:
   - Energy
   - Machine Learning
-excerpt: Applications of machine learning in energy
+excerpt: Applications of machine learning in energy - forecasting, disaggregation and reinforcement learning.
 
 ---
 
@@ -138,32 +138,3 @@ Letting machines make decisions in energy systems allows operators to spend more
 ---
 
 Thanks for reading!
-
-
-
-## Alphabet/Google data centre optimization
-
-One of the most famous applications of machine learning is Google's work in their own data centers.  In 2014 Google used supervised machine learning to predict the Power Usage Effectiveness (PUE) of data centres.
-
-This supervised model did no control of its own. Operators used the predictive model to create a target PUE for the plant. The predictive model also allowed operators to simulate the impact of changes in key parameters on PUE.
-
-In 2016 DeepMind published details of a how they applied machine learning to optimizing data centre efficiency. The technical details of this implementation are not as clear as the 2014 work. It is pretty clear that both supervised and reinforcement learning techniques were used.
-
-The focus on the project again was on improving PUE. Deep neural networks predicted future PUE as well as future temperatures & pressures. The predictions of future temperature & pressures simulated the effect of recommended actions.
-
-DeepMind claim a '40 percent reduction in the amount of energy used for cooling' which equates to a '15 percent reduction in overall PUE overhead after accounting for electrical losses and other non-cooling inefficiencies'. Without seeing actual data it's hard to know exactly what this means.
-
-What I am able to understand is that this produced the lowest PUE the site had ever seen'.
-
-**This is why as an energy engineer I'm so excited about machine learning.** Google's data centers were most likely well optimized before these projects. The fact that machine learning was able to improve PUE beyond what human operators had been able to achieve before is inspiring.
-
-The potential level of savings across the rest of our energy systems is exciting to think about. The challenges & impact of our energy systems are massive - we need the intelligence of machine learning to help us solve these challenges.
-
-#### Sources and further reading
-
-- [Jim Gao (Google) - Machine Learning Applications for Data Center Optimization
-  
-](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42542.pdf) - [DeepMind AI Reduces Google Data Centre Cooling Bill by 40%](https://deepmind.com/blog/deepmind-ai-reduces-google-data-centre-cooling-bill-40/)
-
-Thanks for reading!
-
