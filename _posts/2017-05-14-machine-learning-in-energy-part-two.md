@@ -65,7 +65,7 @@ There are benefits for consumers of electricity as well. Improved prediction can
 
 ### sources and further reading
 
-- [Forecasting UK Imbalance Price using a Multilayer Perceptron Neural Network](http://adgefficiency.com/forecasting-uk-imbalance-price-using-a-multilayer-perceptron/)
+- [Forecasting UK Imbalance Price using a Multilayer Perceptron Neural Network](http://adgefficiency.com/forecasting-uk-imbalance-price-using-a-multilayer-perceptron/)
 - [Machine Learning in Energy (Fayadhoi Ibrahima)](http://large.stanford.edu/courses/2015/ph240/ibrahima2/)
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning)
 - [Germany enlists machine learning to boost renewables revolution](http://www.nature.com/news/germany-enlists-machine-learning-to-boost-renewables-revolution-1.20251)
