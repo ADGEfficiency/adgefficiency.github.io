@@ -65,18 +65,18 @@ There are benefits for consumers of electricity as well. Improved prediction can
 
 ### sources and further reading
 
-- [Forecasting UK Imbalance Price using a Multilayer Perceptron Neural Network](http://adgefficiency.com/forecasting-uk-imbalance-price-using-a-multilayer-perceptron/)
 - [Machine Learning in Energy (Fayadhoi Ibrahima)](http://large.stanford.edu/courses/2015/ph240/ibrahima2/)
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning)
 - [Germany enlists machine learning to boost renewables revolution](http://www.nature.com/news/germany-enlists-machine-learning-to-boost-renewables-revolution-1.20251)
 - [Weron (2014) Electricity price forecasting: A review of the state-of-the-art with a look into the future](http://www.sciencedirect.com/science/article/pii/S0169207014001083)
 - [Re-dispatch costs in the German power grid](https://www.cleanenergywire.org/factsheets/re-dispatch-costs-german-power-grid)
+- [This “duck curve” is solar energy’s greatest challenge](https://www.vox.com/2018/5/9/17336330/duck-curve-solar-energy-supply-demand-problem-caiso-nrel)
 
 ## energy disaggregation
 
 ### what's the problem
 
-Imagine if every time you went to the restaurant you only got the total bill. Understanding the line by line breakdown of where your money went is valuable. Energy disaggregation can help give customers this level of infomation about their utility bill.
+Imagine if every time you went to the restaurant you only got the total bill, with no breakdown of what you spent on your main and dessert.  Having a line by line breakdown of your spending is valuable.  This is the idea behind energy disaggregation - giving customers a breakdown of where their electricity went.
 
 In an ideal world we would have visibility of each individual consumer of energy. We would know when a TV is turned on in a home or a pump is running in an industrial process. One solution would be to install metering on every consumer - an expensive, complex and impractical process.
 
@@ -97,34 +97,31 @@ Imagine if you got an electricity bill that told you how much it cost you to run
 ### sources and further reading
 
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning) 
-
 - [Neural NILM: Deep Neural Networks Applied to Energy Disaggregation](https://arxiv.org/pdf/1507.06594.pdf) 
-  
-- [Energy Disaggregation: The Holy Grail (Carrie Armel)](https://web.stanford.edu/group/peec/cgi-bin/docs/events/2011/becc/presentations/3%20Disaggregation%20The%20Holy%20Grail%20-%20Carrie%20Armel.pdf)
-  
-- [Putting Energy Disaggregation Tech to the Test](https://www.greentechmedia.com/articles/read/putting-energy-disaggregation-tech-to-the-test)
+- [Energy Disaggregation: The Holy Grail (Carrie Armel)](https://web.stanford.edu/group/peec/cgi-bin/docs/events/2011/becc/presentations/3%20Disaggregation%20The%20Holy%20Grail%20-%20Carrie%20Armel.pdf)
+- [Putting Energy Disaggregation Tech to the Test](https://www.greentechmedia.com/articles/read/putting-energy-disaggregation-tech-to-the-test)
 
 ## reinforcement learning
 
 ### what's the problem
 
-Optimal control of energy systems is hard. Key variables such as price and energy consumption constantly change. Operators control systems with a large number of actions, with the optimal action changing throughout the day.
+Optimal control of energy systems is hard. Key variables such as price and energy consumption exhibit seasonality and are non-stationary. Operators control systems with a large number of actions, with the optimal action changing throughout the day.
 
-Our current energy transition makes this problem harder. Increased uncertantity on the generation and demand side leads to more volatility in key variables such as electricity prices.  The need for smarter ways of managing energy systems, such as demand flexibility, introduce more actions that need to be considered.
+Our current energy transition makes this problem harder. Increased uncertainty on the generation and demand side leads to more volatility in key variables such as electricity prices.  The need for smarter ways of managing energy systems, such as demand flexibility, introduce more actions that need to be considered.
 
 Today deterministic sets of rules or abstract models are commonly used to dispatch plant. Deterministic rules for operating any non-stationary system can't guarantee optimality. Changes in key variables can turn a profitable operation to one that loses money.
 
-Abstract models (such as linear programming) can account for changes in key variables. But abstract models often force the use of unrealistic models of energy systems. More importantly the performance of the model is limited by the skill and experience of the modeler.
+Abstract models (such as linear programming) can account for changes in key variables. But abstract models often force the use of unrealistic models of energy systems. More importantly the performance of the model is limited by the skill and experience of the modeller.
 
 ### how machine learning will help
 
-Reinforcement learning gives a machine the ability to learn to take actions. The machine takes actions in an environment to optimize a reward signal. In the context of an energy system that reward signal could be energy cost, carbon or safety - whatever behavior we want to incentivize.
+Reinforcement learning gives a machine the ability to learn to take actions. The machine takes actions in an environment to optimize a reward signal. In the context of an energy system that reward signal could be energy cost, carbon or safety - whatever behaviour we want to incentivize.
 
-[<img class="size-large wp-image-1123 aligncenter" src="http://adgefficiency.com/wp-content/uploads/2017/05/reinforcement_learning_in_energy-1024x578.png" alt="reinforcement_learning_in_energy" width="525" height="296" srcset="http://adgefficiency.com/wp-content/uploads/2017/05/reinforcement_learning_in_energy-1024x578.png 1024w, http://adgefficiency.com/wp-content/uploads/2017/05/reinforcement_learning_in_energy-300x169.png 300w, http://adgefficiency.com/wp-content/uploads/2017/05/reinforcement_learning_in_energy-768x433.png 768w" sizes="(max-width: 525px) 100vw, 525px" />](http://adgefficiency.com/wp-content/uploads/2017/05/reinforcement_learning_in_energy.png)
+![]("{{/asserts/ml_energy/rl_energy.png}}")
 
-What is exciting about reinforcement learning is that we don't need to build any domain knowledge into the model. A reinforcement learner learns from its own experience of the environment. This allows a reinforcement learner to see patterns that we can't see - leading to superhuman levels of performance.  Another exciting thing about reinforcement learning is that you don't need a data set. All you need is an environment (real or virtual) that the learner can interact with.
+The potential and promise of reinforcement learning is for an agent to learn to control a system better than any human can.  This superhuman level of performance has been demonstrated in environments such as Atari games, Chess and Go.  
 
-It's important to clarify that modern reinforcement learning, as advanced as impressive as it is, is not currently able to take control of our decisions for us.  Modern reinforcement learning is very sample inefficient, and learning requires simulation.  But the promise of intelligent machines that can see patterns we can't see and take optimal decisions is a future that could happen.
+A key problem with modern reinforcement learning is sample efficiency - agents need vast amounts of experience to learn high quality actions.  This limits reinforcement learning to environments that can be simulated - note that all of the landmark achievements have been with virtual environments.  The environments we want to control are real - meaning that either we need a human designed simulation model or to learn simulation models, in order to sample enough experience to learn from.
 
 ### what's the value to the world
 
@@ -135,12 +132,14 @@ Letting machines make decisions in energy systems allows operators to spend more
 ### sources and further reading
 
 - [energy_py – reinforcement learning in energy systems](http://adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/)
-  
-- [Minh et. al (2016) Human-level control through deep reinforcement learning
-  
-](http://www.nature.com/articles/nature14236) - [Reinforcement learning course by David Silver (Google DeepMind)](https://www.youtube.com/watch?v=2pWv7GOvuf0)
-
+- [Minh et. al (2016) Human-level control through deep reinforcement learning](http://www.nature.com/articles/nature14236) - [Reinforcement learning course by David Silver (Google DeepMind)](https://www.youtube.com/watch?v=2pWv7GOvuf0)
 - [Deep reinforcement learning doesn't work yet](http://www.alexirpan.com/2018/02/14/rl-hard.html)
+
+---
+
+Thanks for reading!
+
+
 
 ## Alphabet/Google data centre optimization
 
