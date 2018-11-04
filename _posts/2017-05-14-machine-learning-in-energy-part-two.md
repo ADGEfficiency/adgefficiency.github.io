@@ -8,7 +8,7 @@ excerpt: Applications of machine learning in energy - forecasting, disaggregatio
 
 ---
 
-This is the second of a two part series on the intersection of machine learning and the energy industry.  The [first part](https://adgefficiency.com/machine-learning-in-energy-part-one/) introduces what machine learning is, why it’s a fundamental paradigm shift, what’s driving performance and what some of the challenges are.
+This is the second of a two part series on the intersection of machine learning and the energy industry.  [The first part introduces what machine learning is, why it’s a fundamental paradigm shift, what’s driving performance and what some of the challenges are](https://adgefficiency.com/machine-learning-in-energy-part-one/).
 
 This second part will detail three applications of machine learning in energy - time series forecasting, disaggregation and reinforcement learning.
 
@@ -24,7 +24,7 @@ The more accurately system operators and market participants understand what gen
 
 Our current energy transition is making the forecasting problem more difficult.  **Our transition towards intermittent and distributed generation is introducing more uncertainty on both the generation and demand side**.
 
-![]("{{/assets/ml_energy/energy_transition.png}}")
+![]({{"/assets/ml_energy/energy_transition.png"}})
 
 Intermittent, renewable generation is powered by the weather - making it hard to forecast.  Wind generation depends on forecasting wind speeds over vast areas. Solar power is more predictable but can still see variation as cloud cover changes.  As grid scale wind & solar penetration increase balancing the grid becomes difficult. Higher levels of renewables can lead to more fossil fuel backup kept in reserve in case forecasts are wrong.
 
@@ -32,7 +32,7 @@ The distributed and small scale of renewables (solar in particular) also makes d
 
 The most famous example of this the 'duck curve'.  In California the loss of distributed solar power as the sunsets appears to the system operator as a massive increase in demand, requiring dispatchable generation to quickly ramp up to meet the loss of solar.
 
-![]("{{/assets/ml_energy/duck_curve.png}}")
+![]({{"/assets/ml_energy/duck_curve.png"}})
 
 **Our current energy transition is a double whammy for grid balancing.** Forecasting of both generation and consumption is becoming more challenging.
 
@@ -117,7 +117,7 @@ Abstract models (such as linear programming) can account for changes in key vari
 
 Reinforcement learning gives a machine the ability to learn to take actions. The machine takes actions in an environment to optimize a reward signal. In the context of an energy system that reward signal could be energy cost, carbon or safety - whatever behaviour we want to incentivize.
 
-![]("{{/asserts/ml_energy/rl_energy.png}}")
+![]({{"/asserts/ml_energy/rl_energy.png"}})
 
 The potential and promise of reinforcement learning is for an agent to learn to control a system better than any human can.  This superhuman level of performance has been demonstrated in environments such as Atari games, Chess and Go.  
 
