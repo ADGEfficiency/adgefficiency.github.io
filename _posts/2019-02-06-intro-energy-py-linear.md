@@ -54,22 +54,22 @@ The dispatch above is for perfectly forecast prices - the library can also be us
 energy-py-linear can be used to optimize CHP systems.  First a list of the assets in the plant is made, then this plant configuration is optimized for given prices:
 
 ```python
->>> from energypylinear import chp
+from energypylinear import chp
 
->>> assets = [
+assets = [
     chp.GasTurbine(size=10, name='gt1'),
     chp.Boiler(size=100, name='blr1'),
     chp.Boiler(size=100, name='blr2', efficiency=0.9),
     chp.SteamTurbine(size=6, name='st1')
-    ]
+]
 
-    >>> info = chp.optimize(
-        assets,
-        gas_price=20,
-        electricity_price=1000,
-        site_steam_demand=100,
-        site_power_demand=100,
-    )
+info = chp.optimize(
+    assets,
+    gas_price=20,
+    electricity_price=1000,
+    site_steam_demand=100,
+    site_power_demand=100,
+)
 
 total steam generated 130.0 t/h
 total steam consumed 30.0 t/h
