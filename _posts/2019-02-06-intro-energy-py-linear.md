@@ -36,7 +36,9 @@ pd.DataFrame().from_dict(info)
 4          NaN          NaN         NaN      0.000000
 ```
 
-The battery charges during the low price periods and discharges during the high price periods.  The battery is fully discharged during the last period (a sign of optimal behaviour).  The last `NaN` row is given because the `Charge` is the battery level at the start of each interval.  This last row tells us what the `Charge` level is for the battery after the optimization is finished.
+The battery charges during the low price periods and discharges during the high price periods.  The battery is fully discharged during the last period (a sign of optimal behaviour).  
+
+The last `NaN` row is given because the `Charge` is the battery level at the start of each interval.  This last row tells us what the `Charge` level is for the battery after the optimization is finished.
 
 The dispatch above is for perfectly forecast prices - the library can also be used to measure forecast quality by passing in a forecast along with true prices:
 
@@ -51,8 +53,7 @@ The dispatch above is for perfectly forecast prices - the library can also be us
 
 energy-py-linear can be used to optimize CHP systems.  First a list of the assets in the plant is made, then this plant configuration is optimized for given prices:
 
-python
-```
+```python
 >>> from energypylinear import chp
 
 >>> assets = [
