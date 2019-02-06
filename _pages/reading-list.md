@@ -363,3 +363,51 @@ In opposition to what the authors see as the "standard narrative" of human sexua
 ### 114 - The Elephant in the Brain: Hidden Motives in Everyday Life - Kevin Simler & Robin Hanson
 
 Our brains are designed not just to hunt and gather, but also to help us get ahead socially, often via deception and self-deception. But while we may be self-interested schemers, we benefit by pretending otherwise.
+
+### 115 - From Bacteria to Bach and Back - Daniel Dennett
+
+A book that covers the evolutionary origin of human consciousness.  I especially enjoyed the Darwin's and Turing's strange inversions of reasoning - that competence is more common without competence than with it.
+
+### 116 - Switch: How to Change Things When Change Is Hard - Chip & Dan Heath
+
+### 117 - Island - Aldous Huxley
+
+### 118 - Zen and the Art of Motorcycle Maintenance - Robert Pirsig
+
+### 119 - Agile Data Science 2.0 - Russell Jurney
+
+### 120 - The Lean Startup - Eric Ries
+
+### 121 - Iconic Advantage - Soon Yu
+
+### 122 - The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
+
+### 123 - Emotional Intelligence: Why It Can Matter More Than IQ - Daniel Goleman
+
+### 124 - Clean Architecture: A Craftsman's Guide to Software Structure and Design - Robert C. Martin 
+
+### 125 - Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann 
+
+### 126 - Competiting Against Luck - Clayton M. Christensen
+
+### 127 - Dune - Frank Herbet
+
+### 128 - Foundation - Issac Asimov
+
+### 129 - Becoming Wise: An Inquiry into the Mystery and Art of Living - Krista Tippett 
+
+### 130 - Still the Mind - Alan Watts
+
+### 131 - Happiness by Design: Finding Pleasure and Purpose in Everyday Life - Paul Dolan
+
+### 132 - The Mythical Man-Month - Frederick P. Brooks Jr.
+
+### 133 - Hackers & Painters: Big Ideas from the Computer Age - Paul Graham
+
+### 134 - The Art of Learning: An Inner Journey to Optimal Performance - Josh WaitzkinS
+
+### 135 - Interactive Data Visualization for the Web: An Introduction to Designing with D3 - Scott Murray 
+
+### 136 - Python Testing with pytest: Simple, Rapid, Effective, and Scalable - Brian Okken 
+
+### 137 - Buddhism - Brain Conze

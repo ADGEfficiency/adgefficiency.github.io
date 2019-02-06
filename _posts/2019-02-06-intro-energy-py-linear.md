@@ -44,9 +44,9 @@ The dispatch above is for perfectly forecast prices - the library can also be us
 
 ```python
 #  a forecast that is the inverse of the prices we used above
->>> forecasts = [50, 10, 50, 10, 50]
+forecasts = [50, 10, 50, 10, 50]
 
->>> info = model.optimize(prices, forecasts=forecasts, timestep='30min')
+info = model.optimize(prices, forecasts=forecasts, timestep='30min')
 ```
 
 ### Optimizing combined heat and power
@@ -71,13 +71,15 @@ info = chp.optimize(
     site_power_demand=100,
 )
 
-total steam generated 130.0 t/h
-total steam consumed 30.0 t/h
-steam to site 100.0 t/h
-total power generated 16.0 MWe
-total power consumed 0.2 MWe
-net grid 84.2 MWe
-power to site 100.0 MWe
+info
+
+    total steam generated 130.0 t/h
+    total steam consumed 30.0 t/h
+    steam to site 100.0 t/h
+    total power generated 16.0 MWe
+    total power consumed 0.2 MWe
+    net grid 84.2 MWe
+    power to site 100.0 MWe
 ```
 
 Thanks for reading!
