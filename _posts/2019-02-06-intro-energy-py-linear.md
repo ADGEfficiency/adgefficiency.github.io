@@ -1,5 +1,5 @@
 ---
-title: 'Introduction to energy-py-linear'
+title: 'Introducing energy-py-linear'
 date: 2019-02-06
 categories:
 - Energy
@@ -7,16 +7,15 @@ excerpt: A library for optimizing energy systems using mixed integer linear prog
 
 ---
 
-This post introduces **energy-py-linear**, a Python library for optimizing energy assets using mixed integer linear programming (MILP).
+This post introduces **energy-py-linear**, [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
 
-MILP gurantees convergence to the global optimum of a cost function for linear systems.  In energy battery storage and combined heat and power can be modelled and optimized using linear programming.
+MILP guarantees convergence to the global optimum of a cost function for linear systems.  In energy battery storage and combined heat and power can be modelled and optimized using linear programming.
 
 ### Optimizing battery dispatch into a wholesale market
 
 energy-py-linear can be used to optimize a battery that uses price arbitrage in a wholesale market:
 
-python
-```
+```python
 import energypylinear as epl
 
 model = epl.Battery(power=2, capacity=4)
