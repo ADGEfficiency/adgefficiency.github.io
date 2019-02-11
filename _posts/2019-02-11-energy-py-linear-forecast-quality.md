@@ -11,8 +11,8 @@ excerpt: Using the energy-py-linear Battery model to measure the cost of using a
 
 *Posts in this series:*
 
-*1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)*
-*2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)*
+ *1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)*
+ *2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)*
 
 ---
 
@@ -26,7 +26,7 @@ The battery model is part of the Python package [energy-py-linear](https://githu
 
 ## NEM electricity prices & forecast data
 
-The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.  A copy of the data is available in [energy-py-linear/notebooks/data/forecast_sample.csv]().
+The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.  A copy of the data is available in [energy-py-linear/notebooks/data/forecast_sample.csv](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/data/forecast_sample.csv).
 
 ```python
 import pandas as pd
