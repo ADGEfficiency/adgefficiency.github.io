@@ -12,6 +12,7 @@ excerpt: Using the energy-py-linear Battery model to measure the cost of using a
 *Posts in this series:*
 
 *1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)*
+
 *2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)*
 
 ---
