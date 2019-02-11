@@ -7,9 +7,10 @@ excerpt: A library for optimizing energy systems using mixed integer linear prog
 
 ---
 
-This post introduces **energy-py-linear**, [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
+This post introduces **energy-py-linear** - [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
 
 *Posts in this series:*
+
 *1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)*
 
 *2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)*

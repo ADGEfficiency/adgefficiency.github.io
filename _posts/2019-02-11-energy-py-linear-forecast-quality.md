@@ -17,11 +17,13 @@ excerpt: Using the energy-py-linear Battery model to measure the cost of using a
 
 ---
 
-Forecast quality measurement can be done in a variety of ways.  Techniques include error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.  Percentage based methods such as mean absolute percentage error allow quantifying error in units understandable in a range of buisness contexts.  Of particular importance is mean absolute scaled error, which measures forecast quality against an alternative naive forecast (see [Hyndman & Koehler (2005) Another look at measures of forecast accuracy](https://robjhyndman.com/papers/mase.pdf)).
+Forecast quality measurement can be done in a variety of ways.  Techniques include error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.  Percentage based methods such as mean absolute percentage error allow quantifying error in units understandable in a range of buisness contexts.  
+
+Of particular importance is mean absolute scaled error, which measures forecast quality against an alternative naive forecast (see [Hyndman & Koehler (2005) Another look at measures of forecast accuracy](https://robjhyndman.com/papers/mase.pdf)).
 
 In this post I introduce a method for measuring forecast quality using mixed integer linear programming.  A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money the forecast dispatch leaves on the table versus dispatching with perfect foresight of prices.
 
-The battery model is part of the Python package [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - a library for optimizing energy systems using mixed integer linear programming.  A [Jupyter notebook]() with the code used in this blog post is available in the energy-py-linear GitHub repo.
+The battery model is part of the Python package [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - a library for optimizing energy systems using mixed integer linear programming.  A [Jupyter notebook](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb) with the code used in this blog post is available in the energy-py-linear GitHub repo.
 
 ## NEM electricity prices & forecast data
 
