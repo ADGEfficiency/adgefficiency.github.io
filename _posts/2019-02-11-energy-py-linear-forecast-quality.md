@@ -7,12 +7,12 @@ excerpt: Using the energy-py-linear Battery model to measure the cost of using a
 
 ---
 
-*This is the second post in a series looking at [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) -  a library for optimizing energy systems using mixed integer linear programming.*
+This is the second post in a series looking at [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) -  a library for optimizing energy systems using mixed integer linear programming.
 
-*Posts in this series:*
+Posts in this series:
 
- *1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)*
- *2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)*
+1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)
+2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
 
 ---
 
