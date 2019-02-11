@@ -56,7 +56,10 @@ model = energypylinear.Battery(capacity=1000, power=2, efficiency=1.0)
 We then dispatch the battery using perfect foresight of prices:
 
 ```python
-perfect_foresight = model.optimize(prices=dataset.loc[:, 'Trading Price [$/MWh]'], timestep='30min')
+perfect_foresight = model.optimize(
+    prices=dataset.loc[:, 'Trading Price [$/MWh]'], 
+    timestep='30min'
+)
 ```
 
 Next we dispatch using the forecast:
