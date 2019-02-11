@@ -22,7 +22,7 @@ Of particular importance is mean absolute scaled error, which measures forecast 
 
 In this post I introduce a method for measuring forecast quality using mixed integer linear programming.  A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money the forecast dispatch leaves on the table versus dispatching with perfect foresight of prices.
 
-The battery model is part of the Python package [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - a library for optimizing energy systems using mixed integer linear programming.  A [Jupyter notebook](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb) with the code used in this blog post is available in the energy-py-linear GitHub repo.
+A [Jupyter notebook](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb) with the code used in this blog post is available in the energy-py-linear GitHub repo.
 
 ## NEM electricity prices & forecast data
 
