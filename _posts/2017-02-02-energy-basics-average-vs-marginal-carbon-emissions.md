@@ -51,7 +51,7 @@ An ideal electricity market will reduce output on the most expensive plant, and 
 |Carbon emissions|	tC|	83,329|	61,489|	21,840|
 |Carbon intensity|	tC/MWh|	0.456|	0.387|	0.910|
 
-Our carbon saving is equal to `1 GW` multiplied by the carbon intensity of the marginal plant.  If we were to use the average grid carbon intensity (`0.456 tC/MWh`) we calculate a daily carbon saving of only `21,480 tC`.
+Our carbon saving is equal to `1 GW` multiplied by the carbon intensity of the marginal plant.  If we were to use the average grid carbon intensity (`0.456 tC/MWh`) we calculate a daily carbon saving of only `21,840 tC`.
 
 How do we know what the marginal generator is?  It’s likely to be the most expensive generator at that time.  It may not be if the plant needs to be kept on for technical reasons.  
 
