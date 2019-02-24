@@ -13,8 +13,6 @@ This Energy Insights post comes from a recent Intechange podcast [Steal This Dec
 
 ## Good policy
 
-Good policy is composed of:
-
 - stable, long term goals that don't rely on repassing legislation
 - rates of change, not fixed targets
 - prices where consumers are price sensitive (i.e. industry)
@@ -25,7 +23,7 @@ Good policy is composed of:
 
 ![](/assets/steal_decarb/fig1.png)
 
-**Figure 1 - The costs of solar photovoltaic modules have decreased apace with deployment - Figure 2.1 from [Harvey, Orvis & Rissman - Designing Climate Solutions: A Policy Guide for Low-Carbon Energy](https://www.amazon.co.uk/Designing-Climate-Solutions-Policy-Low-Carbon-ebook/dp/B07KY494ZT/ref=sr_1_1?ie=UTF8&qid=1550535298&sr=8-1&keywords=designing+climate+solutions+policy+guide)**
+**Figure 1 - The costs of solar photovoltaic modules have decreased apace with deployment - [Figure 2.1 from Designing Climate Solutions: A Policy Guide for Low-Carbon Energy](https://www.amazon.co.uk/Designing-Climate-Solutions-Policy-Low-Carbon-ebook/dp/B07KY494ZT/ref=sr_1_1?ie=UTF8&qid=1550535298&sr=8-1&keywords=designing+climate+solutions+policy+guide)**
 
 Harvey defines a learning curve as how fast prices drop as volume increases.  Interestingly, Harvey notes that while component costs in solar and batteries have reduced significantly, much slower progress has been made on system prices.  There is also variance in system costs across regions - with Germany being half of the US!
 
@@ -35,7 +33,9 @@ Methane leaks are a large and immediate climate change problem - a leak of only 
 
 ## Better than batteries
 
-While storage will be crucial in the decarbonization journey, interconnection and demand side response as seen as quicker wins.  Interconnecting markets that are already physically connected is an esepcially quick win.
+While storage will be crucial in the decarbonization journey, interconnection and demand side response as seen as quicker wins.  
+
+Interconnection is especially effective if the grids are already physically connected, and the only work needed is to interconnect the markets.
 
 ---
 
