@@ -8,7 +8,7 @@ excerpt:  A simple guide to Australian electricity grid data.
 
 ---
 
-This is a short guide to Australian electricity grid data supplied by AEMO (the market operator) for the NEM (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
+This is a short guide to Australian electricity grid data supplied by AEMO (the market operator) for the Australian National Electricity Market (NEM) (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
 
 ## Data
 
@@ -100,5 +100,6 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 - [NEM on the AEMO website](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM)
 - [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)
 - [Li, Zili (2016) Topics in deregulated electricity markets. PhD thesis, Queensland University of Technology](https://eprints.qut.edu.au/98895/)
+- [Dungey et. al (2018) Strategic Bidding of Electric Power Generating Companies: Evidence from the Australian National Energy Market](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126673)
 
 Thanks for reading!

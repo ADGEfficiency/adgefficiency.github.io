@@ -388,7 +388,7 @@ A book that covers the evolutionary origin of human consciousness.  I especially
 
 ### 125 - Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems - Martin Kleppmann 
 
-### 126 - Competiting Against Luck - Clayton M. Christensen
+### 126 - Competing Against Luck - Clayton M. Christensen
 
 ### 127 - Dune - Frank Herbet
 
@@ -404,10 +404,18 @@ A book that covers the evolutionary origin of human consciousness.  I especially
 
 ### 133 - Hackers & Painters: Big Ideas from the Computer Age - Paul Graham
 
-### 134 - The Art of Learning: An Inner Journey to Optimal Performance - Josh WaitzkinS
+### 134 - The Art of Learning: An Inner Journey to Optimal Performance - Josh Waitzkin
 
 ### 135 - Interactive Data Visualization for the Web: An Introduction to Designing with D3 - Scott Murray 
 
 ### 136 - Python Testing with pytest: Simple, Rapid, Effective, and Scalable - Brian Okken 
 
 ### 137 - Buddhism - Brain Conze
+
+### 138 - Small Is Beautiful: A Study of Economics As If People Mattered - E. F. Schumacher
+
+First published in 1973, Small Is Beautiful brought Schumacher's critiques of Western economics to a wider audience during the 1973 energy crisis and emergence of globalization.  I especially enjoyed the chapter 'Buddhist Economics'.
+
+### 139 - A Mind at Play: How Claude Shannon Invented the Information Age - Jimmy Soni & Rob Goodman
+
+
