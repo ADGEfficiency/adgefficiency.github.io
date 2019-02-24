@@ -7,7 +7,7 @@ excerpt: Hal Harvey shows the way.
 
 ---
 
-This Energy Insights post comes from a recent Intechange podcast [Steal This Decarbonization Plan!](https://www.greentechmedia.com/articles/read/steal-this-decarbonization-plan#gs.esosbU3J) with Hal Harvey, who is talking about his excellent new book - [Harvey, Orvis & Rissman - Designing Climate Solutions: A Policy Guide for Low-Carbon Energy](https://www.amazon.co.uk/Designing-Climate-Solutions-Policy-Low-Carbon-ebook/dp/B07KY494ZT/ref=sr_1_1?ie=UTF8&qid=1550535298&sr=8-1&keywords=designing+climate+solutions+policy+guide)
+This Energy Insights post comes from a recent Intechange podcast [Steal This Decarbonization Plan!](https://www.greentechmedia.com/articles/read/steal-this-decarbonization-plan#gs.esosbU3J) with Hal Harvey, who is talking about his excellent new book [Designing Climate Solutions: A Policy Guide for Low-Carbon Energy](https://www.amazon.co.uk/Designing-Climate-Solutions-Policy-Low-Carbon-ebook/dp/B07KY494ZT/ref=sr_1_1?ie=UTF8&qid=1550535298&sr=8-1&keywords=designing+climate+solutions+policy+guide)
 
 ---
 
