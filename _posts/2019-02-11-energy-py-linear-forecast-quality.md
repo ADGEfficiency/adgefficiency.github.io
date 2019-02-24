@@ -3,7 +3,7 @@ title: 'Measuring forecast quality using linear programming'
 date: 2019-02-11
 categories:
 - Energy
-excerpt: Using the energy-py-linear Battery model to measure the cost of using a forecast.
+excerpt: Using energy-py-linear to measure the economic value of using a forecast.
 
 ---
 
