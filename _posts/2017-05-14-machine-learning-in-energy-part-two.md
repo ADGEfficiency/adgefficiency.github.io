@@ -1,5 +1,5 @@
 ---
-title: 'machine learning in energy - part two'
+title: 'Machine learning in energy - part two'
 date: 2017-05-14
 categories:
   - Energy
