@@ -25,7 +25,9 @@ This Energy Insights post comes from a recent Intechange podcast [Steal This Dec
 
 **Figure 1 - The costs of solar photovoltaic modules have decreased apace with deployment - [Figure 2.1 from Designing Climate Solutions: A Policy Guide for Low-Carbon Energy](https://www.amazon.co.uk/Designing-Climate-Solutions-Policy-Low-Carbon-ebook/dp/B07KY494ZT/ref=sr_1_1?ie=UTF8&qid=1550535298&sr=8-1&keywords=designing+climate+solutions+policy+guide)**
 
-Harvey defines a learning curve as how fast prices drop as volume increases.  Interestingly, Harvey notes that while component costs in solar and batteries have reduced significantly, much slower progress has been made on system prices.  There is also variance in system costs across regions - with Germany being half of the US!
+Harvey defines a learning curve as how fast prices drop as volume increases.  
+
+Interestingly, Harvey notes that while component costs in solar and batteries have reduced significantly, much slower progress has been made on system prices.  There is also variance in system costs across regions - with Germany being half of the US!
 
 ## Methane - the quick fix
 
