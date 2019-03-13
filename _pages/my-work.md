@@ -15,13 +15,11 @@ I'm currently employed at Tempus Energy, where we are using data to unlock flexi
 
 energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [GitHub](https://github.com/ADGEfficiency/energy_py)
 
-energy-py-linear - [intro blog post](https://adgefficiency.com/intro-energy-py-linear/) - [GitHub](https://github.com/ADGEfficiency/energy-py-linear)
+energy-py-linear - mixed integer linear programming of battery storage and combined heat and power - [intro blog post](https://adgefficiency.com/intro-energy-py-linear/) - [GitHub](https://github.com/ADGEfficiency/energy-py-linear)
 
 two day reinforcement learning course - [course notes](https://github.com/ADGEfficiency/dsr_rl)
 
 time series forecasting - [GitHub](https://github.com/ADGEfficiency/forecast)
-
-mixed integer linear programming models of combined heat and power plants - [GitHub](https://github.com/ADGEfficiency/energy_py/tree/master/energy_py/envs/chp)
 
 ## Talks
 
