@@ -7,26 +7,19 @@ excerpt: Using energy-py-linear to measure the economic value of using a forecas
 
 ---
 
-This is the second post in a series looking at [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) -  a library for optimizing energy systems using mixed integer linear programming.
-
-Posts in this series:
-
-1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)
-2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
+This is the second post in a series looking at [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) -  a library for optimizing energy systems using mixed integer linear programming.  Read the [introductory post here](https://adgefficiency.com/intro-energy-py-linear/).
 
 ---
 
-Forecast quality measurement can be done in a variety of ways.  Techniques include error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.  Percentage based methods such as mean absolute percentage error allow quantifying error in units understandable in a range of buisness contexts.  
+The ideal forecast quality measurement is one that directly aligns with a key business metric.  Models are not often able to be trained in this way - often models are trained using error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.
 
-Of particular importance is mean absolute scaled error, which measures forecast quality against an alternative naive forecast (see [Hyndman & Koehler (2005) Another look at measures of forecast accuracy](https://robjhyndman.com/papers/mase.pdf) for an in-depth look at forecast accuracy measures).
-
-In this post I introduce a method for measuring forecast quality using mixed integer linear programming.  A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money the forecast dispatch leaves on the table versus dispatching with perfect foresight of prices.
+In this post I introduce a method for measuring forecast quality using mixed integer linear programming.  A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money dispatching the battery using the forecast leaves on the table versus dispatching with perfect foresight of prices.
 
 [A Jupyter notebook with the code used in this blog post is available in the energy-py-linear GitHub repo](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb).
 
 ## NEM electricity prices & forecast data
 
-The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.  
+The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.
 
 ```python
 import pandas as pd
@@ -61,7 +54,7 @@ We then dispatch the battery using perfect foresight of prices:
 
 ```python
 perfect_foresight = model.optimize(
-    prices=dataset.loc[:, 'Trading Price [$/MWh]'], 
+    prices=dataset.loc[:, 'Trading Price [$/MWh]'],
     timestep='30min'
 )
 ```
@@ -95,13 +88,13 @@ Forecast error is 29.55 %
 
 ## Thoughts on using linear programming to measure forecast quality
 
-The most attractive feature of this accuracy measure is that it is in units businesses care about - the amount of economic value captured when using a forecast.
+The most attractive feature of this accuracy measure is that it is in units businesses care about - the amount of economic value captured when using a forecast.  This is enabled by using an optimization algorithm that can use the forecast to operate an arbitrage asset.  As I'm interested in energy, battery storage is an application where we can build this optimization algorithm.
 
 This can can be specific to a certain battery configuration - for example a battery developer could measure how much using a certain forecast costs them.  This can also be extended to other energy systems such as combined heat and power which can be modelled as linear programs.  The ability to get measurements of forecast quality as a function of specific asset configurations is attractive for energy engineers.
 
 A challenge with using this measurement of forecast error is what happens when the net benefit of dispatching the battery to a forecast - i.e. when the forecast quality is so bad that using it ends up losing money.  Unlike other error measures such as mean squared error it's not appropriate to simply take the absolute.
 
-A final consideration is how this method can be used for other time series, such as stock prices or weather prediction.  A very large capacity battery operating in price arbitrage does somewhat resemble arbitrage of stocks, so the error measurement might be useful for comparing forecasts.  It's less clear how useful this model would be for a temperature prediction - perhaps a different linear model would be useful for comparing forecasts. 
+A final consideration is how this method can be used for other time series, such as stock prices or weather prediction.  A very large capacity battery operating in price arbitrage does somewhat resemble arbitrage of stocks, so the error measurement might be useful for comparing forecasts.  It's less clear how useful this model would be for a temperature prediction, and most likely this method wouldn't be suitable.
 
 ---
 
