@@ -1,8 +1,9 @@
+
 ---
 title: 'Measuring forecast quality using linear programming'
 date: 2019-02-11
 categories:
--Energy
+ -Energy
 excerpt: Using energy-py-linear to measure the economic value of using a forecast.
 
 ---
