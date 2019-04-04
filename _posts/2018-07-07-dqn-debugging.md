@@ -9,7 +9,7 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-*This is the first post in a three part series:*
+*This is the first post in a three part series on getting DQN to work*
 
 1. [DQN debugging using Open AI gym Cartpole](https://adgefficiency.com/dqn-debugging/)
 2. [DDQN hyperparameter tuning using Open AI gym Cartpole](https://adgefficiency.com/dqn-tuning/)
@@ -17,16 +17,13 @@ excerpt: Debugging the new energy_py DQN reinforcement learning agent.
 
 ---
 
-This is the story of debugging and hyperparameter tuning of the new energy_py implementation of DQN.  [energy_py is a reinforcement learning library for energy systems](https://github.com/ADGEfficiency/energy_py) that I've been building for the past two years.
+This is the story of debugging and hyperparameter tuning of the new energy_py implementation of DQN.  
 
 ![]({{ "/assets/debug_dqn/commits.png"}})
 
-The experiments ran on the dev branch of energypy at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  The [environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py) is the the energy_py wrapper around the Open AI gym CartPole-v0 environment.
+[energy_py is a reinforcement learning library for energy systems that I've been building for the past two years](https://github.com/ADGEfficiency/energy_py).  The experiments ran on the dev branch of energypy at [this commit](https://github.com/ADGEfficiency/energy_py/tree/46fd1bf36f744918c962539eb8a84df96102d930).  The [environment is the energy_py wrapper around the Open AI gym CartPole-v0 environment](https://github.com/ADGEfficiency/energy_py/blob/master/energy_py/envs/register.py).
 
-Cartpole is a simple, classic reinforcement learning problem - it's a good environment to use for debugging:
-
-- using a simple environment means experiment run times can be reduced, increasing the rate of hyperparameter iteration.  
-- I am personally familiar with how agents perform in this environment.  I know what agent performance looks like, and I have personally run experiments on this environment many times.
+Cartpole is a simple, classic reinforcement learning problem - it's a good environment to use for debugging.  A good debug environment is one where you are familiar with how fast an agent should be able to learn.
 
 Once learning has been proven on a simple environment, the generalizability of reinforcement learning should mean it can learn on more difficult environments as well.
 
@@ -75,16 +72,15 @@ While I think obsession over what tools (i.e. which editor to use) is unhelpful,
 
 I used two tmux windows, one that kept track of the experiment and another with the `energy_py/agents/dqn.py` script open for editing in vim.  The experiment window shows both the `info.log` and `debug.log`.  The debug log moves too fast to be viewed but is useful for seeing if the agent is working.
 
+Switching between tmux windows is as easy at `Ctrl b p`.
+
 ![]({{ "/assets/debug_dqn/tmux_setup.png"}})
-tmux window one setup
 - left pane running the script and showing the info log
 - the top right pane showing the debug log using `tail -f debug.log`
 - a Tensorboard server running in the bottom right pane
 
 ![]({{ "/assets/debug_dqn/vim_setup.png"}})
-tmux window two setup - vim with `agent/dqn.py` open
-
-Switching between tmux windows is as easy at `Ctrl b p`.
+- vim with `agent/dqn.py` open
 
 ## debugging code
 
@@ -175,7 +171,7 @@ What I was seeing was a drop in average reward to around 10 per episode after ex
 ##  hypothesis - are my weights changing
 The idea was that if the online network weights were never changed, then the argmax across the online network might select the same action in every state - leading to the behaviour we saw.
 
-To do this I added the weights as histograms in Tensorboard by indexing a list of parameters for the online and target networks.  This is hacky - tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
+To do this I added the weights as histograms in Tensorboard by indexing a list of parameters for the online and target networks.  This is hacky - Tensorflow didn't like iterating over this list so I just indexed out the last layer weights and biases for both networks.
 
 ```python
 self.act_summaries.extend([
@@ -257,7 +253,7 @@ Now after running the experiment we see the increase in Q values that I saw with
 
 ![fig7]({{ "/assets/debug_dqn/fig7.png"}})
 
-**Figure 7 - Increasingly optimistic Bellman targets and a loss function that now reflects the non-staionary target creation**
+**Figure 7 - Increasingly optimistic Bellman targets and a loss function that now reflects the non-stationary target creation**
 
 The loss function in Figure 7 is maybe scary for supervised learners - a increasing loss function means that your errors in predicting the target are getting worse.  In the context of reinforcement learning this loss function is a commentary on the non-stationary target being used to train.  Increases in loss function can actually be seen as a good thing, as this means the agent is surprised about how much return it should expect for a particular sample of experience.
 
