@@ -5,21 +5,19 @@ permalink: /my-work/
 
 ---
 
-<img src="../assets/adg.png" width="30%" height="30%">
+[Linkedin](https://www.linkedin.com/in/adgefficiency/)
 
-I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  My work focuses on using computation to solve the control and climate problem.  
+I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  
 
 I'm currently employed at Tempus Energy, where we are using data to unlock flexible electricity demand.
 
-## Open source projects
+## Projects
 
-energy_py - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [GitHub](https://github.com/ADGEfficiency/energy_py)
+Reinforcement learning for energy systems - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy_py)
 
-energy-py-linear - mixed integer linear programming of battery storage and combined heat and power - [intro blog post](https://adgefficiency.com/intro-energy-py-linear/) - [GitHub](https://github.com/ADGEfficiency/energy-py-linear)
+Mixed integer linear programming of battery storage and combined heat and power - [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear)
 
-two day reinforcement learning course - [course notes](https://github.com/ADGEfficiency/dsr_rl)
-
-time series forecasting - [GitHub](https://github.com/ADGEfficiency/forecast)
+Teaching a two day reinforcement learning course - [course materials]( TODOD  )
 
 ## Talks
 
