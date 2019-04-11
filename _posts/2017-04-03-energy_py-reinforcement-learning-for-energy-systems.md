@@ -17,7 +17,7 @@ The goal of the project is to demonstrate and experiment with the ability of rei
 
 ## What is reinforcement learning
 
-![Figure 1]({{"/assets/energy-py/sl_usl_rl.png"}})
+![Figure 1]({{ "/assets/energy-py/sl_usl_rl.png" }})
 
 Machine learning can be separated into three broad categories, based on the type of feedback signal available to the learner.  In reinforcement learning an agent learns through action.  It's about making good decisions.  
 

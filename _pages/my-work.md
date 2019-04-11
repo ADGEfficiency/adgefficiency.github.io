@@ -5,15 +5,13 @@ permalink: /my-work/
 
 ---
 
-[Linkedin](https://www.linkedin.com/in/adgefficiency/)
+I'm an energy engineer / data scientist who likes to build models to control energy systems.
 
-I'm an energy engineer / data scientist who likes to build models of energy systems in Python.  
-
-I'm currently employed at Tempus Energy, where we are using data to unlock flexible electricity demand.
+Contact me [on Linkedin](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com).
 
 ## Projects
 
-Reinforcement learning for energy systems - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy_py)
+Reinforcement learning for energy systems - [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py)
 
 Mixed integer linear programming of battery storage and combined heat and power - [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear)
 
@@ -26,8 +24,6 @@ April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup 
 June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
 September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
-
----
 
 ## Top posts
 
