@@ -418,4 +418,12 @@ First published in 1973, Small Is Beautiful brought Schumacher's critiques of We
 
 ### 139 - A Mind at Play: How Claude Shannon Invented the Information Age - Jimmy Soni & Rob Goodman
 
+### 140 - Statistics Done Wrong - Alex Reinhart
 
+### 141 - Man's Search For Meaning - Viktor Frankl
+
+### 141 - Draft No. 4: On the Writing Process - John McPhee
+
+### 142 - Clean Architecture - Robert Martin
+
+### 143 - Lovingkindness - Sharon Salzberg
