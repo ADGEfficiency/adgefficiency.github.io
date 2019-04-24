@@ -18,7 +18,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 locale                   : "en-US"
 title                    : "the intersection of energy and machine learning"
 title_separator          : "-"
-name                     : 
+name                     :
 url                      : "https://adgefficiency.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "ADGEfficiency/adgefficiency.github.io"
@@ -57,7 +57,7 @@ reCaptcha:
   secret                 :
 atom_feed:
   path                   : # blank (default) uses feed.xml
-search                   : true 
+search                   : true
 search_full_content      : # true, false (default)
 search_provider          : # lunr (default), algolia, google
 algolia:
@@ -91,7 +91,7 @@ social:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" 
+  provider               : "google-gtag"
   google:
     tracking_id          : "UA-86096844-1"
     anonymize_ip         : false
@@ -100,7 +100,7 @@ analytics:
 author:
   name             : "Adam Green"
   avatar           : # "/assets/adg.png"
-  bio              : 
+  bio              :
   location         :
   email            : "adam.green@adgefficiency.com"
   uri              :
@@ -108,7 +108,7 @@ author:
   bitbucket        :
   codepen          :
   dribbble         :
-  flickr           : "https://www.flickr.com/photos/37628582@N00/"
+  # flickr           : "https://www.flickr.com/photos/37628582@N00/"
   facebook         :
   foursquare       :
   github           : "/ADGEfficiency/"

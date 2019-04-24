@@ -7,17 +7,15 @@ excerpt: Using energy-py-linear to measure the economic value of using a forecas
 
 ---
 
-This is the second post in a series looking at [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) -  a library for optimizing energy systems using mixed integer linear programming.  [Read the introductory post here](https://adgefficiency.com/intro-energy-py-linear/).
-
----
-
 The ideal forecast quality measurement directly aligns with a key business metric.  Models are not often able to be trained in this way - often models are trained using error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.
 
-In this post I introduce a method for measuring forecast quality using mixed integer linear programming.  A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money dispatching the battery using the forecast leaves on the table versus dispatching with perfect foresight of prices.
+This post uses [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) to measure forecast quality in terms of a key business metric - cost.  energy-py-linear is a Python library for optimizing energy systems using mixed integer linear programming - [read the introductory post here](https://adgefficiency.com/intro-energy-py-linear/).
+
+A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money dispatching the battery using the forecast leaves on the table versus dispatching with perfect foresight of prices.
 
 [A Jupyter notebook with the code used in this blog post is available in the energy-py-linear GitHub repository](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb).
 
-## NEM electricity prices & forecast data
+# NEM electricity prices & forecast data
 
 The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.
 

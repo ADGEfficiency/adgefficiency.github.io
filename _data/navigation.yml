@@ -5,3 +5,13 @@ main:
     url: /reading-list/
   - title: "archive"
     url: /year-archive/
+
+docs:
+  - title: Top Posts
+    children:
+      - title: "energy-py-linear"
+        url: /intro-energy-py-linear/
+      - title: "Four Truths of the Transition"
+        url: /four-inconvenient-truths-clean-energy-transition/
+      - title: "Machine Learning in Energy"
+        url: /machine-learning-in-energy-part-one/
