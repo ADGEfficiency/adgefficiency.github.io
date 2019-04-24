@@ -19,7 +19,7 @@ Contact me on [Linkedin](https://www.linkedin.com/in/adgefficiency/) or [via ema
 
 ## Mixed integer linear programming of battery storage and combined heat and power 
 
-[blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear)
+[blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
 
 ```python
 import energypylinear as epl
@@ -34,7 +34,7 @@ The Australian grid is a unique combination of high coal penetrations, quality p
 
 [A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/)
 
-[Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/)
+[Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://localhost:4000/what-is-the-uk-imbalance-price/)
 
 ## Combined heat and power
 
@@ -46,11 +46,11 @@ I spent four years working as an industrial energy engineer, and worked with a l
 
 ## Energy
 
-I'm an energy engineer at heart.
+I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://localhost:4000/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://localhost:4000/energy-basics-kw-vs-kwh/).
 
-[Average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/)
+I've also written about [average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/) and [the Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/).
 
-[The Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/)
+I've written about the [intersection of energy and machine learning](http://localhost:4000/machine-learning-in-energy-part-one/).
 
 ## Parallelized Cross Entropy Method
 
@@ -71,6 +71,3 @@ April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup 
 June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
 September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
-
-
-
