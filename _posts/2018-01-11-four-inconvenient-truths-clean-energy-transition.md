@@ -7,28 +7,27 @@ classes: wide
 excerpt: All is not well with the clean energy transition.
 
 ---
-**All is not well with the clean energy transition**. At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.
+**All is not well with the clean energy transition**. 
 
-The motivation for the clean energy transition is to reduce the damage of climate change.  But the threat of violent climate change doesn't allow us to ignore historical truths.
+At this stage positive commentary on the transition is dangerous. 2017 saw a 2% rise in global carbon emissions, with the concentration of CO<sub>2</sub> passing 400 ppm for the first time in several million years.
 
-**This post highlights four reasons why progress of the clean energy transition is slow**. All four reflect the experience of previous transitions. All four are unwelcome.
+The motivation for the clean energy transition is to reduce the damage of climate change.  But the threat of violent climate change doesn't allow us to avoid obeying historical truths.
 
-I’m not arguing against the need for the clean energy transition. I’m trying to show  that history suggests this transition will continue to be slow and difficult.
+**This post highlights four reasons why progress is slow**. All four reflect the experience of previous transitions. All four are unwelcome.
 
-The primary source for these ideas is Vaclav Smil's excellent work on energy transitions ([book](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), [lecture](https://www.youtube.com/watch?v=5guXaWwQpe4) and [another lecture](https://www.youtube.com/watch?v=NxO3s0U5WdY)).  Smil is my favorite energy writer; prolific, confidentially numeric and intelligently contrarian. Smil’s work is for me the best on energy ever written.  I've also previously written about [Smil's work on carbon capture and storage](http://adgefficiency.com/energy-insights-vaclav-smil-on-carbon-capture-storage/).
+I'm not arguing against the need for the clean energy transition. I’m showing how history suggests this transition will continue to be slow and difficult.
+
+The primary source for these ideas is Vaclav Smil's excellent work on energy transitions ([book](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771), [lecture](https://www.youtube.com/watch?v=5guXaWwQpe4) and [another lecture](https://www.youtube.com/watch?v=NxO3s0U5WdY)).  Smil is my favorite energy writer; prolific, confidentially numeric and intelligently contrarian -his work is for me the best on energy ever written.  
 
 ## The Four Inconvenient Truths of Energy Transitions
 
-Energy transitions drive the development of civilization. Muscle and wood powered our early days; today we use coal and gas to drive turbines, oil to enable global transportation and can harness the nuclear energy of celestial bodies.  Now we are moving toward clean and smart technologies; wind turbines, solar panels, energy storage and data driven optimization.
+Energy transitions drive the development of civilization.  For thousands of years ancient civilization was powered by muscle, wind and wood; today we use coal and gas in turbines, oil to enable global transportation and can harness the nuclear energy of celestial bodies
 
-This transition is simultaneously similar and different to past transitions.  This post will highlight four truths about energy transitions.  
+Now we are trying to move toward clean technologies; wind turbines, solar panels and energy storage .
 
-Three ways in which this transition is similar to the past
-- **slow**
-- **additive**
-- **sequential**
+This post will highlight four truths about energy transitions.  Three ways in which this transition is similar to the past, and And one in which the clean energy transition is departing from previous transitions 
 
-And one in which the clean energy transition is departing from previous transitions - **enabling new utility**
+Like the past, this transition will be **slow, additive and sequential**.  Unlike this past, this transition **will not enable new utility** - clean tech lacks a killer app.
 
 ## The First Inconvenient Truth - Energy transitions are slow
 
@@ -49,7 +48,7 @@ This is the most inconvenient of the four truths. Each transition increases the 
 Figure 1 shows the history of US primary fuel consumption. US coal consumption has risen all the way through to the start of the 21st century. Each new fuel has not displaced coal, instead they add to an existing and increasing coal consumption.
 
 ![Figure 1]({{ "/assets/four_truths_transitions/fig1.png"}})
-**Figure 1 - U.S. Primary Energy Use over time in Quads from 1800 to the present by source - [US Department of Energy Quadrennial Technology Review 2015](https://energy.gov/sites/prod/files/2015/09/f26/Quadrennial-Technology-Review-2015_0.pdf)**
+*Figure 1 - U.S. Primary Energy Use over time in Quads from 1800 to the present by source - [US Department of Energy Quadrennial Technology Review 2015](https://energy.gov/sites/prod/files/2015/09/f26/Quadrennial-Technology-Review-2015_0.pdf)*
 
 Renewables already make up a significant part of generation we are building to supply our increased energy demand.  But it’s the older fossil fuel generation that also need to be cleaned up - history shows us this doesn’t happen quickly.
 
@@ -94,6 +93,8 @@ One hope is the role that inverter based renewables & storage can play supportin
 Thanks for reading.
 
 ## References and further reading
+
+I've previously written about [Smil's work on carbon capture and storage](http://adgefficiency.com/energy-insights-vaclav-smil-on-carbon-capture-storage/).
 
 [Energy Transitions: History, Requirements, Prospects (Smil 2010)](https://www.amazon.co.uk/Energy-Transitions-History-Requirements-Prospects/dp/0313381771)
 

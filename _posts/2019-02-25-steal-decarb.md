@@ -18,7 +18,7 @@ This Energy Insights post comes from a recent Intechange podcast [Steal This Dec
 
 # Divergent learning curves
 
-<img src="assets/steal_decarb/fig1.png"
+<img src="/assets/steal_decarb/fig1.png"
 	width="90%"
 	height="90%">
 

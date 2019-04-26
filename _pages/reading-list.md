@@ -6,17 +6,7 @@ classes: wide
 
 ---
 
-Books I love, grouped by topic.
-
-## Data & machine learning
-
-For reinforcement learning - [Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition (in progress)](http://people.inf.elte.hu/lorincz/Files/RL_2006/SuttonBook.pdf)
-
-For neural networks - [Deep Learning - Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://www.deeplearningbook.org/)
-
-For everything else (linear models, random forests etc) - [Elements of Statistical Learning - Trevor Hastie, Robert Tibshirani and Jerome Friedman](https://web.stanford.edu/~hastie/Papers/ESLII.pdf) and [Pattern Recognition and Machine Learning - Christopher M. Bishop](http://users.isr.ist.utl.pt/~wurmd/Livros/school/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf)
-
-The Master Algorithm: How the Quest for the Ultimate Learning Machine Will Remake Our World - Pedro Domingos
+For recommended reading on reinforcement learning see [rl-resources](https://github.com/ADGEfficiency/rl-resources) - for machine learning see [ml-resources](https://github.com/ADGEfficiency/ml-resources).
 
 ## Python
 
@@ -73,8 +63,6 @@ Deep Work: Rules for Focused Success in a Distracted World - Cal Newport
 Sapiens: A Brief History of Humankind -  Yuval Noah Harari
 
 Algorithms to Live By: The Computer Science of Human Decisions - Brian Christian and Tom Griffiths
-
----
 
 # All the books I've read since May 2016
 

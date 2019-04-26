@@ -7,33 +7,21 @@ excerpt: A library for optimizing energy systems using mixed integer linear prog
 
 ---
 
-This post introduces **energy-py-linear** - [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
-
-Posts in this series:
-
-1. [introduction to energy-py-linear](https://adgefficiency.com/intro-energy-py-linear/)
-
-2. [using energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
-
----
+This post introduces `energy-py-linear` - [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
 
 MILP guarantees convergence to the global optimum of a cost function for linear systems.  In energy battery storage and combined heat and power can be modelled and optimized using linear programming.
 
-### Optimizing battery dispatch into a wholesale market
+## Optimizing battery dispatch into a wholesale market
 
-energy-py-linear can be used to optimize a battery that uses price arbitrage in a wholesale market:
+energy-py-linear can be used to optimize a battery that uses price arbitrage in a wholesale market ([see the source code here](https://github.com/ADGEfficiency/energy-py-linear/blob/master/energypylinear/battery/battery.py):
 
 ```python
+import pandas as pd
 import energypylinear as epl
 
-model = epl.Battery(power=2, capacity=4)
-
 prices = [10, 50, 10, 50, 10]
-
+model = epl.Battery(power=2, capacity=4)
 info = model.optimize(prices, timestep='30min')
-
-import pandas as pd
-
 pd.DataFrame().from_dict(info)
 
    Import [MW]  Export [MW]  Power [MW]  Charge [MWh]
@@ -57,9 +45,9 @@ forecasts = [50, 10, 50, 10, 50]
 info = model.optimize(prices, forecasts=forecasts, timestep='30min')
 ```
 
-### Optimizing combined heat and power
+## Optimizing combined heat and power
 
-energy-py-linear can be used to optimize CHP systems.  First a list of the assets in the plant is made, then this plant configuration is optimized for given prices:
+energy-py-linear can be used to optimize CHP systems.  First a list of the assets in the plant is made, then this plant configuration is optimized for given prices ([see the source code here](https://github.com/ADGEfficiency/energy-py-linear/blob/master/energypylinear/chp/chp.py)):
 
 ```python
 from energypylinear import chp
@@ -79,8 +67,7 @@ info = chp.optimize(
     site_power_demand=100,
 )
 
-info
-
+print(info)
     total steam generated 130.0 t/h
     total steam consumed 30.0 t/h
     steam to site 100.0 t/h
@@ -89,5 +76,7 @@ info
     net grid 84.2 MWe
     power to site 100.0 MWe
 ```
+
+Check out this other post where I demonstrate how to [use energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
 Thanks for reading!
