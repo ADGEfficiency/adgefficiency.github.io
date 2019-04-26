@@ -9,7 +9,7 @@ I'm an energy engineer / data scientist who likes to build models to control ene
 
 I also [teach an introduction to reinforcement learning course](https://github.com/ADGEfficiency/rl-course) and maintain repositories of [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources).
 
-Contact me on [Linkedin](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - and check out my code [github](https://github.com/ADGEfficiency).
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [Check out my work on GitHub](https://github.com/ADGEfficiency).
 
 ## Reinforcement learning for energy systems 
 
