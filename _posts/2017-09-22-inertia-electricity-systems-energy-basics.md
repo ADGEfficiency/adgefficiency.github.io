@@ -36,7 +36,7 @@ So now we understand that fossil fuel generators have inertia and how it is valu
 
 Modern wind turbines can draw upon kinetic energy stored in the generator and blades to provide a boost during a grid stress. This ‘synthetic inertia’ has been used successfully in Canada, where wind turbines were able to supply a similar level of inertia to conventional synchronous generators.
 
-![fig1]({{ "/assets//fig1.png"}}) 
+![fig1]({{ "/assets/inertia/fig1.png"}}) 
 **Figure 1  –  Conceptual fast frequency response from a wind turbine**
 
 Photovoltaic solar and batteries also have a role to play. Both operate with inverters that convert DC into AC electricity. The solid-state nature of the devices means that they operate without any inertia. Yet this solid-state nature allows inverters the ability to quickly change operation in a highly controllable way. Inverters can quickly react to deliver whatever kind of support the grid needs during stress events.

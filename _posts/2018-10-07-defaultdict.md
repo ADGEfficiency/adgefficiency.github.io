@@ -132,6 +132,4 @@ What pops out the end is a simple time series plot of how our variables changed 
 
 ![fig1]({{ "/assets/defaultdict/fig1.png"}})
 
-**Figure 1 - Results using the hyperparameters in the code snippet above**
-
 Thanks for reading!

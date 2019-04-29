@@ -1,5 +1,5 @@
 ---
-title: 'Measuring forecast quality using linear programming'
+title: 'Measuring Forecast Quality using Linear Programming'
 date: 2019-02-11
 categories:
  - Energy

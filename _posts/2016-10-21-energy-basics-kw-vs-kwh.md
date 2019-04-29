@@ -4,7 +4,7 @@ date: 2016-10-21
 author: Adam Green
 categories:
   - Energy Basics
-excerpt: Being careful and consistent when dealing with kilowatts kilowatt-hours is basic for all energy professionals.
+excerpt: Being careful and consistent when dealing with kilowatts and kilowatt-hours is a basic for all energy professionals.
 
 ---
 

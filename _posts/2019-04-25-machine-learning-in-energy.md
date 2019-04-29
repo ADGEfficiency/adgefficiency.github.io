@@ -8,7 +8,7 @@ excerpt:  What is machine learning anyway?
 
 ---
 
-Almost every industry is being impacted by machine learning - energy is no different.  This post is aimed at energy industry professionals with little familiarity with machine learning, and answers the following questions:
+This post is aimed at introducing energy industry professionals with to machine learning, and answers the following questions:
 - what is machine learning?
 - why is machine learning so hot right now?
 - what is driving performance?
@@ -22,21 +22,39 @@ We will then take a survey current applications of energy and machine learning, 
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
-Machine learning is often interchanged with artificial intelligence (AI).  Machine learning is only a subset of the broader field of AI.  AI encompasses multiple distinct approaches that are beyond both the scope of this article and my field of knowledge.
+The hype has officially peaked - deep learning is right at the top of the peak of inflated expectations.
 
-They are often interchanged due to how modern machine learning is performing - some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, and we are many breakthroughs away from providing general intelligence.  Narrow intelligence (outperforming humans on a single task) is already here.
+![]({{ '/assets/ml_energy/hype.png' }})
+
+[The 2018 Gartner Hype Cycle](https://www.gartner.com/smarterwithgartner/5-trends-emerge-in-gartner-hype-cycle-for-emerging-technologies-2018/)
+
+Deep learning is foundation of the hype in modern machine learning.  Deep learning uses complex, many layered neural networks to learn patterns from large datasets.  This is the primary intelligence of machine learning - pattern recognition.  Giving computers the ability to learn high dimensional patterns from data defines modern machine learning.
+
+Machine learning has blown past the previous state of the art across a wide range of problems, and is impacting a wide range of industries.  The ability of machine learning to generalize across industries stems from the ability of neural networks to learn from images and text - the same raw high dimensional data that we use and learn from.
+
+So where are we today?  Currently, machine learning forms a core part of the breakthrough performance of computer vision and language processing.  In both cases, deep neural networks are used to transform high dimensional data into valuable insights.  Examples include patterns include predicting power generation and dispatching battery storage.
+
+## Machine learning versus artificial intelligence
+
+So far machine learning has provided a number of examples of superhuman narrow artificial intelligence (AI), in areas such as computer vision, language processing and playing complex board games such as chess and Go. But in all these cases, the system has been specially designed for that single tasks.
+
+While it's likely that machine learning will form part of a more general artificial intelligence, much more is needed to provide an intelligent machine that can perform a variety of tasks.
+
+This means that machine learning and artificial intelligence (AI) shouldn't be used interchangeably.  Machine learning is only a subset of the broader field of AI.  AI encompasses multiple distinct approaches that are beyond both the scope of this article.
+
+One reason for this is how well modern machine learning is performing - some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, and we are many breakthroughs away from providing general intelligence.
 
 ![fig2]({{ '/assets/ml_energy/ai_ml.png' }})
 
-The kind of intelligence we see in modern machine learning is pattern recognition.  Giving computers the ability to learn high dimensional patterns from large datasets defines modern machine learning.  Examples of these patterns include predicting power generation from wind and solar and dispatching battery storage.
+## Three branches of machine learning
 
-To learn these pattern, machine learning makes use of three distinct learning signals, which can be used to separate machine learning into three branches.
+To learn these patterns, machine learning makes use of three distinct learning signals, which can be used to separate machine learning into three branches.
 
 The first is **supervised learning**, where the machine used labelled training data to learn how to predict the labels of unseen data.  Examples include time series forecasting, computer vision and language translation.  Supervised learning is the reason why Facebook can tell which of your friends is in your photo, or why Google can translate text from on a photo on your smart phone.
 
 ![fig2]({{ '/assets/ml_energy/fig1.png' }})
 
-*Recent progress in computer vision - [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)*
+*Recent progress in computer vision on the ImageNet benchmark - [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)*
 
 The second is **unsupervised learning**, where the machine is able to generate new data without the supervision of labels.  Examples include artistic style transfer and generating realistic faces.
 
@@ -66,6 +84,8 @@ These artificial neural networks are inspired by the biological neural networks 
 
 A neural network is like any other function - it takes some input and produces an output.  Reducing a high dimensional sample of data to a lower dimension is the fundamental process in machine learning.  Examples include predicting solar power generation from satellite images, or dispatching a battery from grid data.
 
+![fig1]({{ '/assets/ml_energy/nn_black_box.png' }})
+
 Neural networks are general purpose.  If neural networks were only applicable in computer vision, this would still be a huge deal.  Yet neural networks are pushing the boundaries in multiple directions.  This generalizability of neural networks has allowed them to be state of the art across a wide range of problems.
 
 The atomic unit of a neural network is the perceptron - a simple model that combines input from other perceptrons, squeezes it through a non-linear function (such as a sigmoid or rectifier) and sends output to child perceptrons.  The mathematics of this are beyond the scope of this article - the key takeaway is that stacking these perceptrons together into many layers allows neural networks to learn complex functions from large amounts of data.
@@ -76,9 +96,7 @@ The depth is what allows neural networks to break through the limits of classica
 
 *Deep neural networks are able to learn from massive amounts of data  - [adapted from 'AI is the New Electricity' (Andrew Ng)](https://www.youtube.com/watch?v=21EiKfQYZXc)*
 
-The performance of deep neural networks does scale with data.  This allows neural networks to learn from the same dimensions as we do, such as vision and temporal structure.  Layers can be selected to take advantage of the structure in raw data.
-
-Three common layers are fully connected, convolution and recurrent.
+The performance of deep neural networks do scale with data.  Layers can be selected to take advantage of the structure in raw data.  Three common layers are fully connected, convolution and recurrent.
 
 ![]({{ '/assets/ml_energy/conv.png' }})
 
@@ -158,6 +176,8 @@ The neural networks perform computations on the cloud, with the suggested action
 ![fig2]({{ '/assets/ml_energy/data_centre.png' }})
 
 *Performance of the data centre measured using energy input per ton of cooling (kW/tonC), and improves with more data, from an initial 12% to 30% over nine months.*
+
+# Summary and key takeaways
 
 # Sources and further reading
 
