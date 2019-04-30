@@ -4,7 +4,7 @@ date: 2019-04-25
 categories:
   - Energy
   - Machine Learning
-excerpt:  What is machine learning anyway?
+excerpt:  A guide for the energy professional.
 
 ---
 
