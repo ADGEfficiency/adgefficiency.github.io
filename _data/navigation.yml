@@ -5,3 +5,20 @@ main:
     url: /reading-list/
   - title: "archive"
     url: /year-archive/
+
+top:
+  - title: "Projects"
+    children:
+      - title: "energy-py"
+        url: /energy-py-reinforcement-learning-for-energy-systems/
+      - title: "energy-py-linear"
+        url: /intro-energy-py-linear/
+
+  - title: "Top Posts"
+    children:
+      - title: "Four Truths of the Transition"
+        url: /four-inconvenient-truths-clean-energy-transition/
+      - title: "Average versus Marginal Carbon"
+        url: /energy-basics-average-vs-marginal-carbon-emissions/
+      - title: "Machine Learning in Energy"
+        url: /machine-learning-in-energy/
