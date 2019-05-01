@@ -27,11 +27,11 @@ import tensorflow as tf
 np.random.seed(42)
 tf.random.set_seed(42)
 
-input_dim=3
-output_dim=3
-num_timesteps=2
-batch_size=10
-nodes=10
+input_dim =	3
+output_dim = 3
+num_timesteps =	2
+batch_size =10
+nodes =	10
 
 input_layer = tf.keras.Input(shape=(num_timesteps, input_dim), batch_size=batch_size)
 
