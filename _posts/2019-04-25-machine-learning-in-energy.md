@@ -6,7 +6,8 @@ categories:
   - Machine Learning
 excerpt:  A guide for the energy professional.
 redirect_from:
-  - https://adgefficiency.com/machine-learning-in-energy-part-one/
+  - /machine-learning-in-energy-part-one/
+  - /machine-learning-in-energy-part-two/
 
 ---
 
