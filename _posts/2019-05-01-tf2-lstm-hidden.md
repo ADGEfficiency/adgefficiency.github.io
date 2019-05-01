@@ -3,7 +3,7 @@ title: 'Setting and resetting LSTM hidden states in Tensorflow 2'
 date: 2019-05-01
 categories:
   - Machine Learning
-excerpt:  Getting control using a stateful LSTM.
+excerpt:  Getting control using a stateful and stateless LSTM.
 
 ---
 
