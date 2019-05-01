@@ -1,5 +1,5 @@
 ---
-title: 'Setting and resetting LSTM hidden states in Tensorflow 2.0'
+title: 'Setting and resetting LSTM hidden states in Tensorflow 2'
 date: 2019-05-01
 categories:
   - Machine Learning
@@ -7,12 +7,13 @@ excerpt:  Getting control using a stateful LSTM.
 
 ---
 
-Tensorflow 2.0 is currently in alpha, which means the old ways to do things have changed.  I'm working on a project where I want fine grained control of the hidden state of an LSTM layer.
+Tensorflow 2 is currently in alpha, which means the old ways to do things have changed.  I'm working on a project where I want fine grained control of the hidden state of an LSTM layer.
 
 After a bit of hacking around I settled on the solution below (note - the TF 2.0 docs say that you should be able to pass an `initial_state` when calling the layer - I couldn't get this to work).
 
 ![]({{ '/assets/lstm-hidden/fig1.svg' }})
 
+## Using a stateful LSTM
 
 This solution requires using a **stateful LSTM** - stateful here means that the final states of batch `i` will be used as the initial states of batch `i+1`.  Often this isn't the behaviour that we want (when training each batch is independent of other batches) but it is required to be able to call `tf.keras.layers.RNN().reset_states(state)`.   
 
@@ -30,7 +31,7 @@ tf.random.set_seed(42)
 input_dim =	3
 output_dim = 3
 num_timesteps =	2
-batch_size =10
+batch_size = 10
 nodes =	10
 
 input_layer = tf.keras.Input(shape=(num_timesteps, input_dim), batch_size=batch_size)
@@ -98,4 +99,86 @@ print(np.mean(out))
 -0.21755001
 ```
 
+## Using a non-stateful LSTM
+
+One major downside of using a stateful LSTM is that you are forced to use the same batch sizes when doing forward and backward passes.  I wanted the ability to pass single sample through the LSTM as well as being able to train in batches.  
+
+This method actually overrides one of the functions used internally in Tensorflow (`tf.keras.layers.LSTMCell().get_initial_state`).  I felt a bit dirty doing this but whenever I tried to pass the states through in the `call` I got a `TypeError: call() got an unexpected keyword argument 'states'`.
+
+Here I inherit from `tf.keras.Model` and define a `call` method which handles the initial state:
+
+```python
+import numpy as np
+import tensorflow as tf
+
+np.random.seed(42)
+tf.random.set_seed(42)
+
+
+class Model(tf.keras.Model):
+    
+    def __init__(self):
+        super(Model, self).__init__()
+        
+        cell = tf.keras.layers.LSTMCell(
+            nodes,
+            kernel_initializer='glorot_uniform',
+            recurrent_initializer='glorot_uniform',
+            bias_initializer='zeros',
+        )
+        
+        self.lstm = tf.keras.layers.RNN(
+            cell,
+            return_state=True,
+            return_sequences=True,
+            stateful=False,
+        )
+        
+    def get_zero_initial_state(self, inputs):
+        return [tf.zeros((batch_size, nodes)), tf.zeros((batch_size, nodes))]    
+    
+    def get_initial_state(self):
+        return self.initial_state
+        
+    def call(self, inputs, states=None):
+        if states is None:
+            self.lstm.get_initial_state = self.get_zero_initial_state
+            
+        else:
+            self.initial_state = states
+            self.lstm.get_initial_state = self.get_initial_state
+        
+        return self.lstm(inputs, states)
+
+```
+
+So does this work?  Let's generate another batch, this time a single sample:
+
+```python
+x = np.random.rand(1, num_timesteps, input_dim).astype(np.float32)
+out, hidden_state, cell_state = mdl(x)
+print(np.mean(out))
+
+0.00057914766
+```
+
+Unlike a stateful LSTM, if we try this again we get the same result:
+
+```python
+out, hidden_state, cell_state = mdl(x)
+np.mean(out)
+
+0.00057914766
+```
+
+And most importantly, we gain the ability to control the initial state for the sequence:
+
+```python
+out, hidden_state, cell_state = mdl(x, states=[tf.ones((1, nodes)), tf.ones((1, nodes))] )
+np.mean(out)
+
+0.25189233
+```
+
 Thanks for reading!
+
