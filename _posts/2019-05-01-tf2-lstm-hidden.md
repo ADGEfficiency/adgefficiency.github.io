@@ -105,8 +105,6 @@ One major downside of using a stateful LSTM is that you are forced to use the sa
 
 This method actually overrides one of the functions used internally in Tensorflow (`tf.keras.layers.LSTMCell().get_initial_state`).  I felt a bit dirty doing this but whenever I tried to pass the states through in the `call` I got a `TypeError: call() got an unexpected keyword argument 'states'`.
 
-Here I inherit from `tf.keras.Model` and define a `call` method which handles the initial state:
-
 ```python
 import numpy as np
 import tensorflow as tf
@@ -114,11 +112,9 @@ import tensorflow as tf
 np.random.seed(42)
 tf.random.set_seed(42)
 
-
-class Model(tf.keras.Model):
+class Model():
     
     def __init__(self):
-        super(Model, self).__init__()
         
         cell = tf.keras.layers.LSTMCell(
             nodes,
@@ -133,14 +129,19 @@ class Model(tf.keras.Model):
             return_sequences=True,
             stateful=False,
         )
+
+		lstm_out, hidden_state, cell_state = self.lstm(input_layer)
+		output = tf.keras.layers.Dense(output_dim)(lstm_out)
+
+		self.net = tf.keras.Model(inputs=input_layer, outputs=[output, hidden_state, cell_state])
         
     def get_zero_initial_state(self, inputs):
         return [tf.zeros((batch_size, nodes)), tf.zeros((batch_size, nodes))]    
     
-    def get_initial_state(self):
+    def get_initial_state(self, inputs):
         return self.initial_state
         
-    def call(self, inputs, states=None):
+    def __call__(self, inputs, states=None):
         if states is None:
             self.lstm.get_initial_state = self.get_zero_initial_state
             
@@ -148,13 +149,13 @@ class Model(tf.keras.Model):
             self.initial_state = states
             self.lstm.get_initial_state = self.get_initial_state
         
-        return self.lstm(inputs, states)
-
+        return self.net(inputs, states)
 ```
 
 So does this work?  Let's generate another batch, this time a single sample:
 
 ```python
+mdl = Model()
 x = np.random.rand(1, num_timesteps, input_dim).astype(np.float32)
 out, hidden_state, cell_state = mdl(x)
 print(np.mean(out))
