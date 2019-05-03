@@ -216,6 +216,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
 
 
 # Archives
@@ -264,4 +265,3 @@ defaults:
       classes: wide
       sidebar:
         nav: "top"
-

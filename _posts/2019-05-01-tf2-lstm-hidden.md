@@ -132,7 +132,6 @@ class Model():
 
 		lstm_out, hidden_state, cell_state = self.lstm(input_layer)
 		output = tf.keras.layers.Dense(output_dim)(lstm_out)
-
 		self.net = tf.keras.Model(inputs=input_layer, outputs=[output, hidden_state, cell_state])
         
     def get_zero_initial_state(self, inputs):

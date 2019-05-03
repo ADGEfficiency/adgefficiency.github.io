@@ -5,9 +5,8 @@ categories:
   - Energy
   - Machine Learning
 excerpt:  A guide for the energy professional.
-redirect_from:
+redirect_from: 
   - /machine-learning-in-energy-part-one/
-  - /machine-learning-in-energy-part-two/
 
 ---
 
