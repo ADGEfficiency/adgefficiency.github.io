@@ -13,6 +13,8 @@ top:
         url: /energy-py-reinforcement-learning-for-energy-systems/
       - title: "energy-py-linear"
         url: /intro-energy-py-linear/
+      - title: "CEM"
+        url: /cem/
 
   - title: "Top Posts"
     children:
