@@ -6,7 +6,21 @@ classes: wide
 
 ---
 
-For recommended reading on reinforcement learning see [rl-resources](https://github.com/ADGEfficiency/rl-resources) - for machine learning see [ml-resources](https://github.com/ADGEfficiency/ml-resources).
+# Reading List
+
+Here I'll recommend a few resources on a bunch of topics - for more see my collections of resources for [reinforcement learning](https://github.com/ADGEfficiency/rl-resources), [machine learning](https://github.com/ADGEfficiency/ml-resources) and [programming](https://github.com/ADGEfficiency/programming-resources) on github.
+
+## Reinforcement Learning
+
+[Sutton & Barto - Reinforcement Learning: An Introduction - 2nd Edition](http://incompleteideas.net/book/the-book-2nd.html) - highly awaited second edition released in 2019
+
+Open AI Spinning Up in Deep Reinforcement Learning - [notes](https://spinningup.openai.com/en/latest/) - [lecture](https://www.youtube.com/watch?v=fdY7dt3ijgY)
+
+## Machine Learning
+
+For neural networks - [Deep Learning - Ian Goodfellow, Yoshua Bengio and Aaron Courville](https://www.deeplearningbook.org/)
+
+For everything else (linear models, random forests etc) - [Elements of Statistical Learning - Trevor Hastie, Robert Tibshirani and Jerome Friedman](https://web.stanford.edu/~hastie/Papers/ESLII.pdf)
 
 ## Python
 

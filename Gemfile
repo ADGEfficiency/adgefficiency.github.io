@@ -25,8 +25,6 @@ gem "minimal-mistakes-jekyll"
 #   gem "jekyll-data"
 #   gem "jekyll-include-cache"
 
-gem "jekyll-redirect-from"
-
 # If you have any other plugins, put them here!
 group :jekyll_plugins do
 end

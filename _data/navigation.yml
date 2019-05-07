@@ -1,4 +1,6 @@
 main:
+  - title: "blog"
+    url: /
   - title: "my work"
     url: /my-work/
   - title: "reading list"
