@@ -38,6 +38,25 @@ The Australian grid is a unique combination of high coal penetrations, quality p
 
 I spent four years working as an industrial energy engineer, and worked with a lot of CHP plant.  [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) has a CHP model that can be configured with a number of gas and steam turbines, then optimized as a function of gas and electricity prices.
 
+```python
+from energypylinear.chp import Boiler, GasTurbine, SteamTurbine
+
+assets = [
+	GasTurbine(size=10, name='gt1'),
+	Boiler(size=100, name='blr1'),
+	Boiler(size=100, name='blr2', efficiency=0.9),
+	SteamTurbine(size=6, name='st1')
+]
+
+info = optimize(
+	assets,
+	gas_price=20,
+	electricity_price=1000,
+	site_steam_demand=100,
+	site_power_demand=100,
+)
+```
+
 [CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/) - [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
 
 ## Energy
