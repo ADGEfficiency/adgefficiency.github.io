@@ -1,6 +1,8 @@
 main:
   - title: "blog"
     url: /
+  - title: "chp consulting"
+    url: /chp-consulting/
   - title: "my work"
     url: /my-work/
   - title: "reading list"
@@ -17,6 +19,10 @@ top:
         url: /intro-energy-py-linear/
       - title: "CEM"
         url: /cem/
+      - title: "ml-resources"
+        url: https://github.com/ADGEfficiency/ml-resources
+      - title: "rl-resources"
+        url: https://github.com/ADGEfficiency/rl-resources
 
   - title: "Top Posts"
     children:
@@ -26,3 +32,16 @@ top:
         url: /energy-basics-average-vs-marginal-carbon-emissions/
       - title: "Machine Learning in Energy"
         url: /machine-learning-in-energy/
+
+  - title: "Energy Basics"
+    children:
+      - title: "kW versus kWh"
+        url: /energy-basics-kw-vs-kwh/
+      - title: "HHV vs LHV"
+        url: /energy-basics-hhv-versus-lhv/
+      - title: "Gas Turbines and Ambient Temperature"
+        url: /energy-basics-ambient-temperature-impact-on-gas-turbine-performance/
+      - title: "Capacity Factor"
+        url: /energy-basics-capacity-factor/
+      - title: "CHP Cheat Sheet"
+        url: /cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/

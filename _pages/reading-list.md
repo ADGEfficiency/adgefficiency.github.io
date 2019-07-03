@@ -429,3 +429,15 @@ First published in 1973, Small Is Beautiful brought Schumacher's critiques of We
 ### 142 - Clean Architecture - Robert Martin
 
 ### 143 - Lovingkindness - Sharon Salzberg
+
+### 144 - Fire Under The Snow - Palden Gyatso
+
+The story of a brave Tibetan monk who spent 33 years imprisoned by the Chinese.  Hard to read at times due to the brutality of his treatment, but an important story about one of the major tragedies of the 20th century.
+
+### 145 - The Storytelling Animal: How Stories Make Us Human - Jonathan Gottschall
+
+### 146 - The Stranger - Albert Camus
+
+### 147 - The Dip - Seth Godin
+
+### 148 - Fooled By Randomness - Nassim Nicholas Taleb
