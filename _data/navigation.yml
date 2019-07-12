@@ -1,8 +1,6 @@
 main:
   - title: "blog"
     url: /
-  - title: "chp consulting"
-    url: /chp-consulting/
   - title: "my work"
     url: /my-work/
   - title: "reading list"
