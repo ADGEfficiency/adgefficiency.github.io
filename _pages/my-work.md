@@ -5,7 +5,7 @@ permalink: /my-work/
 
 ---
 
-I'm an energy engineer / data scientist who likes to build models to control energy systems.  I've worked on industrial energy projects at a large utility and demand side flexibility at a start-up.
+I'm an energy engineer / data scientist who likes to build models to control energy systems.  I've worked on industrial energy projects at a large utility and on demand side flexibility at a start-up.  Currently I'm the director at Data Science Retreat.
 
 I also [teach an introduction to reinforcement learning course](https://github.com/ADGEfficiency/rl-course) and maintain repositories of [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources).
 

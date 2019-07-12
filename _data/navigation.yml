@@ -21,6 +21,8 @@ top:
         url: https://github.com/ADGEfficiency/ml-resources
       - title: "rl-resources"
         url: https://github.com/ADGEfficiency/rl-resources
+      - title: "programming-resources"
+        url: https://github.com/ADGEfficiency/programming-resources
 
   - title: "Top Posts"
     children:
