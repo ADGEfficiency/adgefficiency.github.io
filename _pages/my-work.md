@@ -6,8 +6,6 @@ classes: wide
 
 ---
 
-## Teaching backprop
-
 ![]({{"/assets/working.png"}})
 
 I'm an energy engineer / data scientist who likes to build models to control energy systems.  I've worked on industrial & district energy projects at a international energy utility and on demand side flexibility at an early stage company.
