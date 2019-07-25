@@ -6,6 +6,8 @@ classes: wide
 
 ---
 
+![]({{"/assets/working.png"}})
+
 ## My work
 
 I'm an energy engineer / data scientist who likes to build models to control energy systems.  I've worked on industrial energy projects at a large utility and on demand side flexibility at a start-up.  
