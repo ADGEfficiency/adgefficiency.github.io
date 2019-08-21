@@ -12,9 +12,15 @@ This is a short guide to Australian electricity grid data supplied by AEMO (the 
 
 ## Data
 
-AEMO provide both actual data and forecasts for a range of variables - including prices, demand and electricity flows.
+Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Participant-information/Current-participants/Current-registration-and-exemption-lists).  The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
 
-Data from AEMO is supplied from three different, overlapping sources
+Data about the NEM is provied in two soucres:
+- [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/)
+- [MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/)
+
+The NEMDE provides infomation about the price setter (aka the marginal generator)	in the `NemPriceSetter` XML files.
+
+The MMSDM provides both actual data and forecasts for a range of variables - including prices, demand and electricity flows.  Data in the MMSDM is supplied from three different, overlapping sources:
 
 - [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours
 - [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
