@@ -8,11 +8,13 @@ classes: wide
 
 ![]({{"/assets/teaching.jpg"}})
 
-I'm an energy engineer / data scientist who likes to build models to control energy systems.  I've worked on industrial & district energy projects at a international energy utility and on demand side flexibility at an early stage company.
+**Teaching backpropagation at Data Science Retreat*
 
-Currently I'm the director at Data Science Retreat - an advanced Berlin bootcamp.  I'm also doing a bit of teaching on topics I am passionate about - [backpropagation](https://github.com/ADGEfficiency/teaching-monolith/tree/master/backprop), [bash + Git](https://github.com/ADGEfficiency/teaching-monolith/tree/master/bash-and-git), [test driven development](https://github.com/ADGEfficiency/teaching-monolith/tree/master/test-driven-development) and [reinforcement learning](https://github.com/ADGEfficiency/rl-course).
+I'm an energy engineer / data scientist who builds models of energy systems.  I've worked on industrial & district energy projects at a international energy utility and on price responsive demand side flexibility at an early stage company.
 
-I also maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources.
+Currently I'm the Director at Data Science Retreat - an advanced Berlin bootcamp.  I'm also doing a bit of teaching on topics I am passionate about - [backpropagation](https://github.com/ADGEfficiency/teaching-monolith/tree/master/backprop), [bash + Git](https://github.com/ADGEfficiency/teaching-monolith/tree/master/bash-and-git), [test driven development](https://github.com/ADGEfficiency/teaching-monolith/tree/master/test-driven-development) and [reinforcement learning](https://github.com/ADGEfficiency/rl-course).
+
+I also maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources on GitHub.
 
 Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [Check out my work on GitHub](https://github.com/ADGEfficiency).
 
