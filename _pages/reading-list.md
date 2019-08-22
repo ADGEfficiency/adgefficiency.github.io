@@ -50,6 +50,8 @@ Purple Cow: Transform Your Business by Being Remarkable - Seth Godin
 
 Anything You Want: 40 Lessons for a New Kind of Entrepreneur - Derek Sivers
 
+Hackers & Painters: Big Ideas from the Computer Age - Paul Graham
+
 Founders at Work: Stories of Startups' Early Days - Jessica Livingston
 
 Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
@@ -441,3 +443,31 @@ The story of a brave Tibetan monk who spent 33 years imprisoned by the Chinese. 
 ### 147 - The Dip - Seth Godin
 
 ### 148 - Fooled By Randomness - Nassim Nicholas Taleb
+
+### 150 - The River of Consciousness - Oliver Sacks 
+
+Sacks, an Oxford-educated polymath, had a deep familiarity not only with literature and medicine but with botany, animal anatomy, chemistry, the history of science, philosophy, and psychology.  The River of Consciousness is one of two books Sacks was working on up to his death.
+
+### 151 - Wetware: A Computer in Every Living Cell - Dennis Bray
+
+The internal chemistry of living cells is a form of computation. Cells are built out of molecular circuits that perform logical operations.
+
+### 152 - The Four - Scott Galloway
+
+### 153 - The Laws of Human Nature - Robert Greene
+
+### 154 - Map and Territory - Eliezer Yudkowsky
+
+First book contained in the ebook Rationality: From AI to Zombies, by Eliezer Yudkowsky. It is the edited and expanded version of a series of blog posts in "the Sequences", and discusses the nature of rationality, belief, and explanation.
+
+### 155 - How To Actually Change Your Mind - Eliezer Yudkowsky
+
+The second book contained in the ebook Rationality: From AI to Zombies, by Eliezer Yudkowsky. It is the edited version of a series of blog posts in "the Sequences", and covers the ultra-high-level penultimate technique of rationality: triumphing over confirmation bias and motivated cognition.
+
+### 156 - Atomic Habits - James Clear
+
+### 157 - Finite and Infinite Games  - James P. Carse
+
+There are at least two kinds of games: finite and infinite. A finite game is played for the purpose of winning, an infinite game for the purpose of continuing the play. Finite games are those instrumental activities - from sports to politics to wars - in which the participants obey rules, recognize boundaries and announce winners and losers. The infinite game - there is only one - includes any authentic interaction, from touching to culture, that changes rules, plays with boundaries and exists solely for the purpose of continuing the game.
+
+### 158 - How To Fail at Almost Everything And Still Win Big - Scott Adams
