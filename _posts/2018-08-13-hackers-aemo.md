@@ -12,7 +12,7 @@ This is a short guide to Australian electricity grid data supplied by AEMO (the 
 
 ## Data
 
-Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Participant-information/Current-participants/Current-registration-and-exemption-lists).  The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
+Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/-/media/Files/Electricity/NEM/Participant_Information/NEM-Registration-and-Exemption-List.xls).  The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
 
 Data about the NEM is provied in two soucres:
 - [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/)
