@@ -1,10 +1,10 @@
 ---
-title: 'A hackers guide to AEMO data'
+title: 'A hackers guide to AEMO & NEM data'
 date: 2018-08-13
 categories:
   - Energy
   - Machine Learning
-excerpt:  A simple guide to Australian electricity grid data.
+excerpt:  A simple guide to the data for the Australian electricity grid  - the NEM.
 
 ---
 
