@@ -8,7 +8,7 @@ classes: wide
 
 ![]({{"/assets/teaching.jpg"}})
 
-**Teaching backpropagation at Data Science Retreat*
+*Teaching backpropagation at Data Science Retreat*
 
 I'm an energy engineer / data scientist who builds models of energy systems.  I've worked on industrial & district energy projects at a international energy utility and on price responsive demand side flexibility at an early stage company.
 
