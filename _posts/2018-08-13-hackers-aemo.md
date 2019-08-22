@@ -14,7 +14,7 @@ This is a short guide to Australian electricity grid data supplied by AEMO (the 
 
 Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/-/media/Files/Electricity/NEM/Participant_Information/NEM-Registration-and-Exemption-List.xls).  The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
 
-Data about the NEM is provied in two soucres:
+Data about the NEM is provided in two sources:
 - [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/)
 - [MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/)
 
@@ -26,7 +26,7 @@ The MMSDM provides both actual data and forecasts for a range of variables - inc
 - [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
 - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until the end of last month
 
-Some report names can be slighty different across sources - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
+Some report names can be different across sources - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
 
 ## Price structure
 
