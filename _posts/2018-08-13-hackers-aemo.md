@@ -54,7 +54,7 @@ dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_pr
 
 ## Useful reports
 
-The MMSDM links are for `2018_05`.  There are many more useful reports that have data for interconnector flows, demand and market settlement.
+The MMSDM links are for the reports linked below are all for [2018_05](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/).
 
 ### actual data
 
@@ -63,6 +63,8 @@ The MMSDM links are for `2018_05`.  There are many more useful reports that have
 - generation of market participants - UNIT_SCADA - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCH_UNIT_SCADA_201805010000.zip)
 - market participant bid volumes - BIDPEROFFER - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDPEROFFER_201805010000.zip)
 - market participant bid prices - BIDAYOFFER - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDDAYOFFER_201805010000.zip)
+- demand - DISPATCHREGIONSUM - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip)
+- interconnectors - INTERCONNECTORRES - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip)
 
 ### forecasts
 
