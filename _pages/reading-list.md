@@ -8,6 +8,8 @@ classes: wide
 
 # Reading List
 
+Various lists of books - first some highlights then my reading history.
+
 ## Programming, machine learning & reinforcement learning
 
 I maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources on GitHub.
