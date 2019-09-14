@@ -1,5 +1,5 @@
 ---
-title: blockchain in energy - part one - what is blockchain
+title: Blockchain in Energy 
 date: 2017-06-26
 categories:
   - Energy
@@ -7,9 +7,7 @@ excerpt: An introduction to blockchain the technology.
 
 ---
 
-This is a two part series on blockchain in the energy system.  This post will give an introduction to the blockchain technology - what it is, how it works, the advantages and the challenges.   We will also take a look at two of the largest implementations of blockchain, bitcoin and Ethereum.
-
-[The second part theorizes how far we might be able to go with blockchain and the grid](http://adgefficiency.com/blockchain-energy-part-two/) - looking at what a smart contract enabled blockchain might mean for system operators, electricity consumers & generators, machines and regulators.
+This post will give an introduction to the blockchain technology - what it is, how it works, the advantages and the challenges.   We will also take a look at two of the largest implementations of blockchain, bitcoin and Ethereum.
 
 ## What is blockchain
 
@@ -107,32 +105,6 @@ Bitoins's smart contracts limit it to being a currency and payment system. Ether
 
 Another difference between bitcoin and Ethereum is the algorithm used for reaching a consensus on the true state of the blockchain. Both historically use proof of work to reach a consensus on blockchain truth. Recently Ethereum is phasing in proof of stake as a lower cost way of reaching consensus on blockchain truth.
 
-## On versus off chain transactions
-
-Off chain = tracked in private databases.  Not publically tracked.  High transaction speeds.
-
-On chain = an insurance/proof that a payment exchange happened between parties
-
-> Off-chain transactions are a divisive concept, obviously. Defeating the purpose of the open ledger aspect to the protocol is a concern - [Scott Robinson](https://www.coindesk.com/block-chain-transactions-bad-bitcoin/)
-
-Off chain makes coinbase to coinbase tranactions faster (compared with coinbase to blockchain).
-
-Off chain = no charges from miners that are paid to verfiy the ledger.
-
-Off chain = helps potential scaling issues.  
-
-On chain makes more sense for large transactions.  
-
-bitcoin = 10 minutes, litecoin = 2.5, dodgecoin = 60 secs
-
-Possible that solutions exist to improving block generation speeds.
-
-Off chain = loses some decentralization.
-
-
-
-
-
 Thanks for reading!
 
 ## Sources and further reading
@@ -144,9 +116,9 @@ Thanks for reading!
 
 ### Talks & Podcasts
 
-  * [Blockchain Revolution | Alex Tapscott](https://www.youtube.com/watch?v=3PdO7zVqOwc)
+  * [Blockchain Revolution - Alex Tapscott](https://www.youtube.com/watch?v=3PdO7zVqOwc)
   * [The Blockchain: Enabling a Distributed and Connected Energy Future](https://www.youtube.com/watch?v=cpMwPhA9QzM)
-  * [Blockchain is Eating Wall Street | Alex Tapscott](https://www.youtube.com/watch?v=WnEYakUxsHU)
+  * [Blockchain is Eating Wall Street - Alex Tapscott](https://www.youtube.com/watch?v=WnEYakUxsHU)
   * [The Quiet Master of Cryptocurrency — Nick Szabo (Tim Ferriss)](http://tim.blog/2017/06/04/nick-szabo/)
   * [What is Blockchain](https://www.youtube.com/watch?v=93E_GzvpMA0)
 
