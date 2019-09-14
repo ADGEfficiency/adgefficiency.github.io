@@ -11,17 +11,17 @@ excerpt: Badges of honour for the accomplished data scientist.
 
 > If you don't make mistakes, you’re not working on hard enough problems. And that’s a big mistake – Frank Wilczek - Nobel Prize in Physics 2004
 
-The antifragile system uses error for improvement.  **Using mistakes for progress is a paradox**.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also learning data science.
+The antifragile system uses error for improvement.  **Using mistakes for progress is a fascinating paradox**.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also learning data science.
 
-I've made many mistakes while learning, working in and teaching data science. I see those same mistakes made by my students at [Data Science Retreat](https://datascienceretreat.com).
+I've made many mistakes while learning, working and teaching data science. I see those same mistakes made by my students at [Data Science Retreat](https://datascienceretreat.com).
 
 Patterns exist in the mistakes made learning data science - hopefully sharing them will help you to only make them once.  But do make them - the mistake is useful for progress.
 
 ## Not plotting the target
 
-Data scientists use supervised machine learning for predicting a target from features.  
+Data scientists use supervised machine learning to predict a target from features.  
 
-The target can be either a number (regression) or a type (classification), and is a prediction that can be used to make business decisions with.
+This target can be either a number (regression) or a type (classification), and is a prediction that can be used to optimize business decisions.
 
 Understanding the **distribution of your target** is a key step in data exploration, and will inform many decisions the data scientist makes in the future about what techniques to use.
 
