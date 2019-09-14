@@ -19,7 +19,9 @@ Patterns exist in the mistakes made learning data science - hopefully sharing th
 
 ## Not plotting the target
 
-Data scientists use supervised machine learning to predict a target from features.  
+Prediction is a skill that separates the data scientist from the data analyst.  The data analyst analyzes the past - the data scientist **predicts the future**.
+
+Data scientists use supervised machine learning as a tool to predict a target from features.  
 
 This target can be either a number (regression) or a type (classification), and is a prediction that can be used to optimize business decisions.
 
@@ -204,22 +206,22 @@ IID is another lens through which to look at sources of error.  IID stands for *
 
 ## An obsession with the width & depth of fully connected neural nets
 
-We saw above in *Not understanding bias & variance* that model capacity & architecture reducing model bias.  Yet when it comes to fully connected (aka feedforward aka dense) neural nets, the architecture doesn't matter so much.  As long as you give the model enough capacity, it will learn.
+We saw above in *Not understanding bias & variance* that model capacity & architecture reduce model bias.  Yet when it comes to fully connected (aka feedforward aka dense) neural nets, the architecture doesn't matter so much.  As long as you give the model enough capacity and sensible hyperparameters, it should be able to learn.
 
-Case in point - [Schulman et. al (2015) Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477), which uses a simple feedforward neural network as a policy on the locomotion tasks.  These locomotion tasks use a flat input vector, unlike the pixel based tasks, where a convolutional neural network is used.
+A dense network has very little inductive bias - meaning that playing around with architecture isn't likely to help!  Let your gradients work with the capacity you give them.
+
+Case in point - [Schulman et. al (2015) Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477), which uses a simple feedforward neural network as a policy on locomotion tasks.  The locomotion tasks use a flat input vector, unlike the pixel based tasks, where a convolutional neural network is used.
 
 <center><img src="/assets/mistakes-data-sci/trpo.png"></center>
 
 
 The correct mindset with a fully connected neural network is a depth of two or three, with a width that is similar to your input (features) and output (target).  If this isn't enough capacity (i.e. your error metrics are indicating bias), consider adding a layer or some width.
 
-A dense network has very little inductive bias - meaning that playing around with architecture isn't likely to help!  Let your gradients work with the capacity you give them.
-
 The **wide & deep** architecture mixes wide memorization feature interactions with deep unseen, learned feature combinations.  I've never used one, but experimenting with this architecture seems like a better bet than adding a dense layer.
 
 <center><img src="/assets/mistakes-data-sci/wide-deep.png"></center>
 
-<center>[Cheng et. al (2016) Wide & Deep Learning for Recommender Systems](https://arxiv.org/abs/1606.07792)</center>
+<center>Cheng et. al (2016) Wide & Deep Learning for Recommender Systems - https://arxiv.org/abs/1606.07792</center>
 
 ## Not paying attention to PEP 8
 
