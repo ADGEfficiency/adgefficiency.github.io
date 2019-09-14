@@ -11,7 +11,9 @@ excerpt: Badges of honour for the accomplished data scientist.
 
 > If you don't make mistakes, you’re not working on hard enough problems. And that’s a big mistake – Frank Wilczek - Nobel Prize in Physics 2004
 
-The antifragile system uses error for improvement.  **Using mistakes for progress is a fascinating paradox**.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also learning data science.
+I'm fascinated by systems that use error to improve.  These are Nassim Nicholas Taleb's **antifragile** systems, which use error/pain/volatility/mistakes to improve.  This is an observable paradox - a sign of a fundamental truth.
+
+Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also learning data science.
 
 I've made many mistakes while learning, working and teaching data science. I see those same mistakes made by my students at [Data Science Retreat](https://datascienceretreat.com).
 
