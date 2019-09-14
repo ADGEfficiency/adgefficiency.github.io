@@ -278,7 +278,7 @@ Or normalization:
 normalized = (data - np.min(data)) / (np.max(data) - np.min(data))
 ```
 
-The same requirement for scale applies to features as well (but not for random forests!).
+The same requirement for scale applies to features as well (but not for random forests!).  The reason scale matters is that an unscaled target or features can lead to a large error, which means large gradients and hard to tune learning.
 
 ## Not working with a sample of the data during development
 
