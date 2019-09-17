@@ -15,7 +15,7 @@ I'm fascinated by systems that use error to improve.  These are Nassim Nicholas 
 
 Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also **learning data science**.
 
-I've made many mistakes while learning, working and teaching data science. I see those same mistakes made by my students at [Data Science Retreat](https://datascienceretreat.com).
+I've made many mistakes while learning, working and teaching data science. I see those same mistakes made by students at [Data Science Retreat](https://datascienceretreat.com).
 
 Patterns exist in the mistakes made learning data science - hopefully sharing them will help you to only make them once.  But do make them - the mistake is useful for progress.
 
