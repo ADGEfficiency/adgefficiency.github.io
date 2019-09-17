@@ -44,7 +44,7 @@ data = np.concatenate([
 pd.DataFrame(data).plot(kind='hist', legend=None, bins=100)
 ```
 
-The histogram shows the four distributions generated this dataset - two normal and two uniform.
+The histogram shows the four distributions that generated this dataset - two normal and two uniform.
 
 <center><img src="/assets/mistakes-data-sci/reg.png"></center>
 
@@ -58,7 +58,7 @@ pd.Series(data).value_counts().plot(kind='bar')
 
 <center><img src="/assets/mistakes-data-sci/class.png"></center>
 
-Both of these plots are simple, yet many new data scientists are not in the habit of plotting them.
+Both of these plots are simple, and should be a part of all supervised learning projects.
 
 ## Not thinking in terms of dimensionality
 
@@ -71,23 +71,17 @@ Examples of dimensionality reduction include:
 - pixels in an image -> image caption text
 - customer data -> lifetime value estimation (regression)
 
-**Business decisions are made in low dimensional spaces** - this is the value of dimensionality reduction.
+The value of dimensionality reduction is that **business decisions are made in low dimensional spaces**.  A list of 50 numbers about a customer becomes an estimate of lifetime value, which can be used to take an action.  Prediction becomes control.
 
-A list of 50 numbers about a customer becomes an estimate of lifetime value, which can be used to take an action.  Prediction becomes control.
-
-Reducing dimensionality is desirable, and increasing dimensionality is undesirable.  The difficulty of working in high dimensional spaces is the curse of dimensionality.
+If reducing dimensionality is desirable, then increasing dimensionality is likely to be undesirable.  The difficulty of working in high dimensional spaces is the curse of dimensionality.
 
 ### The curse of dimensionality
 
-To understand the curse of dimensionality we need to reason about the space (aka volume) that data occupies.
-
-We can imagine a dense dataset - a large number of diverse samples within a small volume.  We can also imagine a sparse dataset - a small number of samples in a large volume.
+To understand the curse of dimensionality we need to reason about the space (aka volume) that data occupies.  We can imagine a dense dataset - a large number of diverse samples within a small volume.  We can also imagine a sparse dataset - a small number of samples in a large volume.
 
 What happens to the density of a dataset as we add dimensions?  It becomes less dense, because the data is now more spread out.  The problem is that adding a dimension makes understanding the size of the space exponentially larger.  
 
-Why?  Because this new dimension needs to be understood in relation to every other combination of all the existing dimensions.
-
-The **curse of dimensionality** is this exponential increase in the size of the space that occurs as we add dimensions:
+Why?  Because this new dimension needs to be understood in relation to every other combination of all the existing dimensions.  The **curse of dimensionality** is this exponential increase in the size of the space that occurs as we add dimensions:
 
 ```python
 import itertools
@@ -123,7 +117,7 @@ print(curse)
  (10, 3628800)]
 ```
 
-To be useful, a model needs to understand the space - the larger the size of the space the longer it can take to learn it.  This is why adding features with no information (uncorrelated noise or perfect correlation) is extra painful.  The model needs to understand the relationship of this new column with all other combinations of all other columns.
+To be useful, a model needs to understand the space - the larger the size of the space the longer it can take to learn it.  This is why adding features with no information (uncorrelated noise or perfect correlation) is painful.  The model needs to understand the relationship of this new column with all other combinations of all other columns.
 
 Getting a theoretical understanding of dimensionality is step one. Next is noticing where it appears in the daily practice of data science. An experienced data scientist will be take actions to avoid it.  Prediction becomes control.
 
@@ -155,7 +149,7 @@ The first mistake was not realizing that convolution provides useful inductive b
 
 This is especially common for new data scientists working on regression problems - reporting a range of metrics (such as mean absolute error, mean absolute percentage error, root mean squared error etc) rather than a single metric.
 
-Combine this with reporting a test & train error (or even one test & train per cross validation fold), the number of metrics becomes too many to glance at and make decisions with.  Pick one metric that best aligns with your business goal and stick with it - reduce the dimensionality of your metrics so you can take actions with them.
+Combine this with reporting a test & train error (or test & train per cross validation fold), the number of metrics becomes too many to glance at and make decisions with.  Pick one metric that best aligns with your business goal and stick with it - reduce the dimensionality of your metrics so you can take actions with them.
 
 ### Too many models
 
@@ -187,7 +181,7 @@ error = bias + variance + noise
 
 **Bias is a lack of signal** - the model misses seeing relationships that can be use to predict the target.  This is underfitting.  Bias can be reduced by increasing model capacity (either through more layers / trees, a different architecture or more features).
 
-**Variance is the model fitting to noise** - patterns in the training data that will not appear in the data at test time.  This is overfitting.  Variance can be reduced by adding training data.
+**Variance is confusing noise for signal** - patterns in the training data that will not appear in the data at test time.  This is overfitting.  Variance can be reduced by adding training data.
 
 It is possible to have a model that is high bias & high variance - to simultaneously over and underfit.  Most of the time you will train a model with some bias & high variance, and your options will usually result in a tradeoff between bias & variance.
 
@@ -204,7 +198,7 @@ Three common sources of error are in a dataset are:
 
 Is is the first step to understand these three sources of error while in statistics class - harder when you are working with a real dataset.
 
-IID is another lens through which to look at sources of error.  IID stands for **independent & identically distributed**.  Non-independent sampling causes sampling bias, non-identical distributions is an example of sampling error.
+IID is another lens through which to look at sources of error.  IID is an assumption that data is **independent & identically distributed**.  Non-independent sampling causes sampling bias, non-identical distributions is an example of sampling error.
 
 ## An obsession with the width & depth of fully connected neural nets
 
@@ -280,7 +274,7 @@ Or normalization:
 normalized = (data - np.min(data)) / (np.max(data) - np.min(data))
 ```
 
-The same requirement for scale applies to features as well (but not for random forests!).  The reason scale matters is that an unscaled target or features can lead to a large error, which means large gradients and hard to tune learning.
+The same requirement for scale applies to features as well (but not for random forests!).  Scale matters because an unscaled target or features can lead to large errors, which mean large gradients and hard to tune learning.
 
 ## Not working with a sample of the data during development
 
@@ -305,11 +299,15 @@ if debug:
     data = data[:1000]
 ```
 
+## Writing over raw data
+
+Raw data is holy - it should never be overwritten.  This is true both within a program and on disk.
+
 ## Bonus - not using $HOME to store data
 
 This one isn't a mistake - but it is a pattern that has made my life dramatically simpler.  
 
-One issue you have when developing Python packages is that you don't know where the user will clone your repo, or where they scripts that execute the code will live.  This makes saving and loading data in a portable way difficult!
+One issue you have when developing Python packages is that you don't know where the user will clone your repo, or where they scripts that execute the code will live.  This makes saving and loading data in a portable way difficult.
 
 One solution to this is to create a folder in the user's `$HOME` directory, and use it to store data:
 
