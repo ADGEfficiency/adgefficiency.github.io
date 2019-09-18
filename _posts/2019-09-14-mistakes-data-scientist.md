@@ -187,7 +187,7 @@ It is possible to have a model that is high bias & high variance - to simultaneo
 
 Increasing model capacity will reduce bias, but can increase variance (if that capacity is used to fit to noise).  Decreasing model capacity (such as through regularization) will reduce variance but can increase bias.
 
-Another option is more data - this should reduce variance, but will have no effect on bias.  More data can even make bias worse - it gives your model the chance to give highly precise, wrong answers (see [Statistical Thinking for Data Science - SciPy 2015 - Chris Fonnesbeck](https:/www.youtube.com/watch?v=TGGGDpb04Yc)).
+Another option is more data - this should reduce variance, but will have no effect on bias.  More data can even make bias worse - it gives your model the chance to give highly precise, wrong answers - see [Statistical Thinking for Data Science - SciPy 2015 - Chris Fonnesbeck](https:/www.youtube.com/watch?v=TGGGDpb04Yc).
 
 ## Not thinking about where error comes from
 
