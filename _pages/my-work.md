@@ -12,11 +12,9 @@ classes: wide
 
 I'm an Energy Data Scientist who likes to build models of energy systems in Python.  Most of my work is around optimal dispatch of industrial scale energy systems, using constrained optimization or machine learning.  I am particularly interested in the space that exists between economic and carbon optimization.
 
-I've worked on industrial & district energy projects as an Energy Engineer at a international energy utility. 
+I have experience on industrial & district energy projects as an Energy Engineer at a international energy utility.  I have also worked as a Data Scientist on price responsive demand side flexibility at an early stage clean tech company.
 
-I have also worked as a Data Scientist on price responsive demand side flexibility at an early stage clean tech company.
-
-I am currently the Director at [Data Science Retreat](https://datascienceretreat.com/) - one of Europe's oldest and advanced data science bootcamps.  You can see the resources I use to teach there [on GitHub](https://github.com/ADGEfficiency/teaching-monolith).
+Currently I am the Director at [Data Science Retreat](https://datascienceretreat.com/) - one of Europe's oldest and advanced data science bootcamps.  You can see the resources I use to teach there [on GitHub](https://github.com/ADGEfficiency/teaching-monolith).
 
 [I blog at adgefficiency.com](https://adgefficiency.com), and maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources on GitHub.
 
