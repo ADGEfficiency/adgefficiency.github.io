@@ -1,5 +1,5 @@
 ---
-title: 'Mistakes data scientists make'
+title: 'Mistakes Data Scientists Make'
 date: 2019-09-14
 categories:
   - Data Science, Python, Machine Learning
