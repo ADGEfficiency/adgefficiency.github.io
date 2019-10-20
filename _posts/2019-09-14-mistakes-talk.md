@@ -17,7 +17,7 @@ I'll be giving an update on our work in my four months as Director and introduci
 
 [My blog post was well received by reddit](https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/):
 
-<center><img src="/assets/mistakes-data-sci/reddit.png" width="300"></center>
+<center><img src="/assets/mistakes-data-sci/reddit.png" width="600"></center>
 
 I'm very lucky to be able to share my work with the world.
 
