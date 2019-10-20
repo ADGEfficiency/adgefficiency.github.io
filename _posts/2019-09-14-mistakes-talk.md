@@ -13,8 +13,6 @@ I'll be giving an update on our work in my four months as Director and introduci
 
 [You can sign up to attend the event on Meetup](https://www.meetup.com/Data-Science-Community-Day/).  Hope to see some of you there!
 
----
-
 ## Update 
 
 [My blog post was well received by reddit!](https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/):
