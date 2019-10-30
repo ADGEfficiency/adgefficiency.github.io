@@ -1,5 +1,5 @@
 ---
-title: 'Mistakes Data Scientists Make - Talk'
+title: 'Talk on Mistakes Data Scientists Make'
 date: 2019-09-18
 categories:
   - Data Science, Python, Machine Learning
