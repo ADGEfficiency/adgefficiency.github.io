@@ -262,3 +262,5 @@ defaults:
       classes: wide
       sidebar:
         nav: "top"
+
+logo: "/favicon.ico"
