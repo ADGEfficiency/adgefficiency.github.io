@@ -11,11 +11,11 @@ excerpt: Badges of honour for the accomplished data scientist.
 
 > If you don't make mistakes, you’re not working on hard enough problems. And that’s a big mistake – Frank Wilczek - Nobel Prize in Physics 2004
 
-I'm fascinated by systems that use error to improve.  These are Nassim Nicholas Taleb's **antifragile** systems, which use error/pain/volatility/mistakes to improve.  This is an observable paradox - a sign of a fundamental truth.
+I'm fascinated by systems that use error to improve.  
 
-Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also **learning data science**.
+These are Nassim Nicholas Taleb's **antifragile** systems, which use error/pain/volatility/mistakes to improve.  This is an observable paradox - a sign of a fundamental truth.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also **learning data science**.
 
-I've made many mistakes while learning, working and teaching data science. I see those same mistakes made by students at [Data Science Retreat](https://datascienceretreat.com).
+I've made many mistakes while learning, working and teaching data science. I see those same mistakes repeated by my students at [Data Science Retreat](https://datascienceretreat.com).
 
 Patterns exist in the mistakes made learning data science - hopefully sharing them will help you to only make them once.  But do make them - the mistake is useful for progress.
 
@@ -210,6 +210,8 @@ Case in point - [Schulman et. al (2015) Trust Region Policy Optimization](https:
 
 <center><img src="/assets/mistakes-data-sci/trpo.png"></center>
 
+<center>Schulman et. al (2015) Trust Region Policy Optimization - https://arxiv.org/abs/1502.05477</center>
+<p></p>
 
 The correct mindset with a fully connected neural network is a depth of two or three, with a width that is similar to your input (features) and output (target).  If this isn't enough capacity (i.e. your error metrics are indicating bias), consider adding a layer or some width.
 

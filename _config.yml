@@ -263,4 +263,4 @@ defaults:
       sidebar:
         nav: "top"
 
-logo: "/favicon.ico"
+logo: "favicon.png"
