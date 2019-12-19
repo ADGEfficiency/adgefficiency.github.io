@@ -457,3 +457,39 @@ The second book contained in the ebook Rationality: From AI to Zombies, by Eliez
 There are at least two kinds of games: finite and infinite. A finite game is played for the purpose of winning, an infinite game for the purpose of continuing the play. Finite games are those instrumental activities - from sports to politics to wars - in which the participants obey rules, recognize boundaries and announce winners and losers. The infinite game - there is only one - includes any authentic interaction, from touching to culture, that changes rules, plays with boundaries and exists solely for the purpose of continuing the game.
 
 ### 158 - How To Fail at Almost Everything And Still Win Big - Scott Adams
+
+### 159 - The Flaw of Averages - Sam L. Savage
+
+### 160 - Location is (Still) Everything - David R. Bell
+
+Wharton professor and marketing expert David R. Bell argues that the way we use the Internet is still largely shaped by the physical world we inhabit.
+
+### 161 - In The Plex: How Google Thinks, Works, and Shapes Our Lives - Steven Levy
+
+### 162 - Making Learning Whole: How Seven Principles of Teaching Can Transform Education - David Perkins
+
+### 163 - Into The Woods: How Stories Work and Why We Tell Them - John Yorke
+
+Here he takes us on a journey to the heart of storytelling, revealing that there truly is a unifying shape to narrative forms - one that echoes the fairytale journey into the woods and, like any great art, comes from deep within.
+
+### 164 - Predictably Irrational: The Hidden Forces That Shape Our Decisions - Dan Ariely
+
+Challenges readers' assumptions about making decisions based on rational thought.
+
+### 165 - In Search of Excellence - Tom Peters and Robert H. Waterman, Jr.
+
+In 1982, at the time of publication of In Search of Excellence, America was looking to Japan as the rising economic force. American businesses were studying Japanese management techniques and looking to learn from their successes.
+
+In Search of Excellence went against this trend, by focusing on American companies and studying what made the most successful American companies successful.
+
+### 166 - The Myth of Sisyphus - Albert Camus
+
+Camus introduces his philosophy of the absurd, that life is inherently devoid of meaning and consequently absurd, but humans will nevertheless forever search for meaning.
+
+### 167 - The Fall - Albert Camus
+
+His crisis, and his ultimate "fall" from grace, was meant to invoke, in secular terms, the fall of man from the Garden of Eden. The Fall explores themes of innocence, imprisonment, non-existence, and truth. In a eulogy to Albert Camus, existentialist philosopher Jean-Paul Sartre described the novel as "perhaps the most beautiful and the least understood" of Camus' books.
+
+### 168 - On Writing: A Memoir of the Craft - Stephen King
+
+On Writing is organized into five sections: "C.V.", in which King highlights events in his life that influenced his writing career; "What Writing Is", in which King urges the reader to take writing seriously; "Toolbox", which discusses English mechanics; "On Writing", in which King details his advice to aspiring writers; and "On Living: A Postscript", in which King describes his van accident and how it affected his life.
