@@ -42,6 +42,8 @@ Founders at Work: Stories of Startups' Early Days - Jessica Livingston
 
 Getting Real: The Smarter, Faster, Easier Way to Build a Successful Web Application - Jason Fried
 
+In Search of Excellence - Tom Peters and Robert H. Waterman, Jr.
+
 ## Dharma books
 
 The Heart of Understanding: Commentaries on the Prajñaparamita - Thich Nhat Hanh
