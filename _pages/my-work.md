@@ -8,17 +8,19 @@ classes: wide
 
 ![]({{"/assets/teaching.jpg"}})
 
-*Teaching backpropagation at Data Science Retreat*
+*Teaching backpropagation*
 
-I'm an Energy Data Scientist who likes to build models of energy systems in Python.  Most of my work is around optimal dispatch of industrial scale energy systems, using constrained optimization or machine learning.  I am particularly interested in the space that exists between economic and carbon optimization.
+An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp. 
 
-I have experience on industrial & district energy projects as an Energy Engineer at a international energy utility.  I have also worked as a Data Scientist on price responsive demand side flexibility at an early stage clean tech company.
+I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
-Currently I am the Director at [Data Science Retreat](https://datascienceretreat.com/) - one of Europe's oldest and advanced data science bootcamps.  You can see the resources I use to teach there [on GitHub](https://github.com/ADGEfficiency/teaching-monolith).
+I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.  I am currently rounding out a solid technical base with management experience running Data Science Retreat.
 
-[I blog at adgefficiency.com](https://adgefficiency.com), and maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources on GitHub.
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [All of my work is open source](https://github.com/ADGEfficiency).
 
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [Check out my work on GitHub](https://github.com/ADGEfficiency).
+## Data science teaching
+
+[You can see the resources I use to teach data science in the teaching monolith](https://github.com/ADGEfficiency/teaching-monolith).
 
 ## Reinforcement learning for energy systems 
 
