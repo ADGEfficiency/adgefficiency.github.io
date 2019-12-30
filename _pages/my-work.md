@@ -16,11 +16,13 @@ I like building models to optimize the control of energy systems. I am particula
 
 I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.  I am currently rounding out a solid technical base with management experience running Data Science Retreat.
 
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [All of my work is open source](https://github.com/ADGEfficiency).  [See my photos on flickr](https://www.flickr.com/photos/37628582@N00/).
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [All of my work is open source](https://github.com/ADGEfficiency).  [See my photos on flickr](https://www.flickr.com/photos/37628582@N00/).  [I sometimes stream on Twitch](https://www.twitch.tv/climatecoder).
 
 ## Data science teaching
 
 [You can see the resources I use to teach data science in the teaching monolith](https://github.com/ADGEfficiency/teaching-monolith).
+
+[I'm offering personalized mentoring on Mentor Cruise](https://mentorcruise.com/mentor/AdamGreen/).
 
 ## Reinforcement learning for energy systems 
 
