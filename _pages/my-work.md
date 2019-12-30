@@ -18,11 +18,7 @@ I have been an energy engineer on industrial & district energy projects at ENGIE
 
 Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com).
 
-[All of my work is open source](https://github.com/ADGEfficiency).
-
-[See my photos on flickr](https://www.flickr.com/photos/37628582@N00/).
-
-[I sometimes stream on Twitch](https://www.twitch.tv/climatecoder).
+[All of my work is open source](https://github.com/ADGEfficiency). [See my photos on flickr](https://www.flickr.com/photos/37628582@N00/). [I sometimes stream on Twitch](https://www.twitch.tv/climatecoder).
 
 ## Data science teaching
 
