@@ -10,13 +10,19 @@ classes: wide
 
 *Teaching backpropagation*
 
-An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp. 
+An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp.
 
 I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
 I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.  I am currently rounding out a solid technical base with management experience running Data Science Retreat.
 
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com). [All of my work is open source](https://github.com/ADGEfficiency).  [See my photos on flickr](https://www.flickr.com/photos/37628582@N00/).  [I sometimes stream on Twitch](https://www.twitch.tv/climatecoder).
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com).
+
+[All of my work is open source](https://github.com/ADGEfficiency).
+
+[See my photos on flickr](https://www.flickr.com/photos/37628582@N00/).
+
+[I sometimes stream on Twitch](https://www.twitch.tv/climatecoder).
 
 ## Data science teaching
 
@@ -24,13 +30,13 @@ Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via ema
 
 [I'm offering personalized mentoring on Mentor Cruise](https://mentorcruise.com/mentor/AdamGreen/).
 
-## Reinforcement learning for energy systems 
+## Reinforcement learning for energy systems
 
 [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
 
 ![]({{"/assets/dqn_solving/fig1.png"}})
 
-## Mixed integer linear programming of battery storage and combined heat and power 
+## Mixed integer linear programming of battery storage and combined heat and power
 
 [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
 
