@@ -17,14 +17,12 @@ top:
         url: /energy-py-reinforcement-learning-for-energy-systems/
       - title: "energy-py-linear"
         url: /intro-energy-py-linear/
-      - title: "CEM"
-        url: /cem/
+      - title: "programming-resources"
+        url: https://github.com/ADGEfficiency/programming-resources
       - title: "ml-resources"
         url: https://github.com/ADGEfficiency/ml-resources
       - title: "rl-resources"
         url: https://github.com/ADGEfficiency/rl-resources
-      - title: "programming-resources"
-        url: https://github.com/ADGEfficiency/programming-resources
 
   - title: "Top Posts"
     children:
