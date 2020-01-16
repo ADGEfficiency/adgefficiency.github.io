@@ -42,15 +42,17 @@ Deep learning is foundation of the hype in modern machine learning.  Deep learni
 
 Machine learning has blown past the previous state of the art across a wide range of difficult problems.  It is impacting every industry - this ability stems from the capability of neural networks to learn from the same raw high dimensional data that we use and learn from, such as images or text.
 
-So where are we today?  Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by deep learning.  Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning.
+So where are we today?  Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by deep learning.  
+
+Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
 
 ## Machine learning versus artificial intelligence
 
 So far machine learning has provided narrow artificial intelligence (AI).  The power of these systems are often superhuman, and more than enough to justify the hype around machine learning.  Typically the task involves perception, using high dimensional data (i.e. images).  This is the main contribution of machine learning - being able to create business value from raw, high dimensional data.
 
-This narrow intelligence stands in contrast to the goal of many AI researchers - general AI, where a machine can perform a single machine can variety of tasks.  While its almost certain that machine learning will form part of a general artificial intelligence, much more is needed to provide an intelligent machine that can perform a variety of tasks.
+This narrow intelligence stands in contrast to the goal of many AI researchers - general AI, where a machine can perform a single machine can variety of tasks.  While it is almost certain that machine learning will form part of a general artificial intelligence, much more is needed to provide an intelligent machine that can perform a variety of tasks.
 
-Machine learning and artificial intelligence (AI) shouldn't be used interchangeably.  Machine learning is only a subset of the broader field of AI.  AI encompasses multiple distinct approaches that are beyond both the scope of this article.
+Machine learning and artificial intelligence shouldn't be used interchangeably.  Machine learning is only a subset of the broader field of AI.  AI encompasses multiple distinct approaches that are beyond both the scope of this article.
 
 One reason machine learning is often confused with AI is how well modern machine learning is performing - some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
 

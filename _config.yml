@@ -90,11 +90,11 @@ social:
   links: # An array of links to social media profiles
 
 # Analytics
-analytics:
-  provider               : "google-gtag"
-  google:
-    tracking_id          : "UA-86096844-1"
-    anonymize_ip         : false
+# analytics:
+#   provider               : "google-gtag"
+#   google:
+#     tracking_id          : "UA-86096844-1"
+#     anonymize_ip         : false
 
 # Site Author
 author:
