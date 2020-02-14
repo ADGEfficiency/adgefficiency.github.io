@@ -47,7 +47,7 @@ info = model.optimize(prices, timestep='30min')
 
 The Australian grid is a unique combination of high coal penetrations, quality potential renewable resources (and high penetration in South Australia) and a deregulated, volatile electricity market.  It also has good data availability - if you know where to look for it.
 
-[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://localhost:4000/what-is-the-uk-imbalance-price/)
+[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
 
 ## Combined heat and power
 
@@ -76,7 +76,7 @@ info = optimize(
 
 ## Energy
 
-I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://localhost:4000/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://localhost:4000/energy-basics-kw-vs-kwh/).
+I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://www.adgefficiency.com/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://www.adgefficiency.com/energy-basics-kw-vs-kwh/).
 
 I've also written about [Average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/), the [Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/) and the [intersection of energy and machine learning](http://localhost:4000/machine-learning-in-energy-part-one/).
 
@@ -99,3 +99,5 @@ April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup 
 June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
 September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
+
+September 24 2019 - Data Science Retreat Demo Day - [blog post](http://localhost:4000/mistakes-talk/)
