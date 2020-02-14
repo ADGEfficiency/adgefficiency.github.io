@@ -94,10 +94,10 @@ $ python cem.py pendulum --num_process 6 --epochs 15 --batch_size 4096
 
 ## Talks
 
-April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup page](https://www.meetup.com/berlin-machine-learning/events/234989414/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup](https://www.meetup.com/berlin-machine-learning/events/234989414/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
-June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
-September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
+September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
 
-September 24 2019 - Data Science Retreat Demo Day - Mistakes Data Scientists Make - [blog post](http://www.adgefficiency.com/mistakes-talk/) - [DSR talk](https://www.canva.com/design/DADlQld9yF0/share/preview?token=DoG2rySn8x8KGT5xMyoe6A&role=EDITOR&utm_content=DADlQld9yF0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) - [mistakes talk](https://www.canva.com/design/DADl9pRJd0c/share/preview?token=ptRfgqrLSz5BSZHgLXYTgA&role=EDITOR&utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+September 24 2019 - Data Science Retreat Demo Day - Mistakes Data Scientists Make - [meetup](https://www.meetup.com/Data-Science-Retreat/events/264686728/) - [blog post](http://www.adgefficiency.com/mistakes-talk/) - [DSR talk](https://www.canva.com/design/DADlQld9yF0/share/preview?token=DoG2rySn8x8KGT5xMyoe6A&role=EDITOR&utm_content=DADlQld9yF0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) - [mistakes talk](https://www.canva.com/design/DADl9pRJd0c/share/preview?token=ptRfgqrLSz5BSZHgLXYTgA&role=EDITOR&utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
