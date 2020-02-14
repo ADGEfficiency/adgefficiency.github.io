@@ -100,4 +100,4 @@ June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup page](ht
 
 September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup page](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [GitHub repo](https://github.com/ADGEfficiency/energy-py-talk)
 
-September 24 2019 - Data Science Retreat Demo Day - [blog post](http://localhost:4000/mistakes-talk/)
+September 24 2019 - Data Science Retreat Demo Day - Mistakes Data Scientists Make - [blog post](http://www.adgefficiency.com/mistakes-talk/) - [DSR talk](https://www.canva.com/design/DADlQld9yF0/share/preview?token=DoG2rySn8x8KGT5xMyoe6A&role=EDITOR&utm_content=DADlQld9yF0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) - [mistakes talk](https://www.canva.com/design/DADl9pRJd0c/share/preview?token=ptRfgqrLSz5BSZHgLXYTgA&role=EDITOR&utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
