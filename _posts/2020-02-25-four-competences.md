@@ -1,5 +1,5 @@
 ---
-title: "Daniel C. Dennet's Four Competences"
+title: "Daniel C. Dennett's Four Competences"
 date: 2020-02-26
 categories:
   - Machine Learning, Reinforcement Learning
@@ -7,18 +7,19 @@ excerpt: A useful idea to help understand computational control algorithms.
 
 ---
 
+In 2018, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) while hiking the Annapurna Circuit.  The book is full of interesting ideas - it is one I have studied closely, look forward to reading again.
+
 <center>
 	<img src="/assets/world-models/bach-bacteria.jpg">
 </center>
 
 <p></p>
 
+**One of the ideas is the four grades of competence**. These describe four progressively competent intelligences, that learn through successive applications of trial and error learning.  
 
-I read Daniel C. Dennet's *From Bacteria to Bach and Back* while hiking the Annapurna Circuit in 2018.  The book is full of interesting ideas - one I look forward to reading again.
+The four competences are not the central idea of the book.  I introduce them here as I have found them invaluable for my own understanding computational control algorithms.
 
-**One of those ideas is the four grades of competence**. It describes four progressively competent intelligences, that learn through successive applications of trial and error learning.  The four competences are not the central idea of the book. I have found them invaluable for my own understanding computational control algorithms.
-
-**They are also useful for teaching**. They organize computational control algorithms by asymptotic performance and sample efficiency.  The four competences also allows classification of relatable examples such as cells, animals or humans.
+**They are also useful for teaching**. They organize computational control algorithms by asymptotic performance and sample efficiency.  The four competences also allow classification of examples such as cells, animals or humans, which can be relate to less familiar computational algorithms.
 
 But exactly what do we mean by competence?
 
@@ -46,7 +47,7 @@ There is much to learn from evolutionary learning:
 - the effectiveness of iterative improvement
 - the need of a dualistic (agent and environment) view for it to work, at odds with the truth of non-duality
 
-These are lessons to explore another time. For now we will focus on the four grades of competence.
+These are lessons to explore another time. For now we are focused on the four grades of competence.
 
 ## The four competences
 
@@ -94,9 +95,9 @@ These dimensions (what is learnt and from what data) are useful to understand th
 
 ## Summary
 
-**In this article we took a quick look at Daniel C. Dennet's four grades of competence**.  This idea organizes agents that learn by trial and error. It applies to both biological and computational approaches.
+**In this article we took a quick look at Daniel C. Dennett's four grades of competence**.  This idea organizes agents that learn by trial and error. It applies to both biological and computational approaches.
 
-It allows understanding of the asymptotic performance and sample efficiency of learning algorithms.
+It allows understanding of the asymptotic performance and sample efficiency of learning algorithms, and highlights two important dimensions of intelligent agents - what data they use and what they learn from this data.  
 
 Of the most competent of our agents, humans are the only biological examples.  We have no computational examples.
 
