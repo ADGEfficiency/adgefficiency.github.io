@@ -7,7 +7,9 @@ excerpt: A useful idea to help understand computational control algorithms.
 
 ---
 
-In 2018, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) while hiking the Annapurna Circuit.  The book is full of interesting ideas - it is one I have studied closely, look forward to reading again.
+In 2018, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) while hiking the Annapurna Circuit.  
+
+The book is full of interesting ideas - it is one I have studied closely, look forward to reading again.
 
 <center>
 	<img src="/assets/world-models/bach-bacteria.jpg">
@@ -15,7 +17,7 @@ In 2018, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://e
 
 <p></p>
 
-**One of the ideas is the four grades of competence**. These describe four progressively competent intelligences, that learn through successive applications of trial and error learning.  
+**One of these ideas are the four grades of competence**. These describe four progressively competent intelligences, that learn through successive applications of trial and error learning.  
 
 The four competences are not the central idea of the book.  I introduce them here as I have found them invaluable for my own understanding computational control algorithms.
 
