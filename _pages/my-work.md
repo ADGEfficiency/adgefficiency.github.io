@@ -10,11 +10,9 @@ classes: wide
 
 *Teaching backpropagation*
 
-An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp.
+An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp.  Previously I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.
 
 I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
-
-I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.  I am currently rounding out a solid technical base with management experience running Data Science Retreat.
 
 Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com).
 
@@ -78,7 +76,7 @@ info = optimize(
 
 I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://www.adgefficiency.com/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://www.adgefficiency.com/energy-basics-kw-vs-kwh/).
 
-I've also written about [Average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/), the [Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/) and the [intersection of energy and machine learning](http://localhost:4000/machine-learning-in-energy-part-one/).
+I've also written about [Average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/), the [Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/) and the [intersection of energy and machine learning](http://localhost:4000/machine-learning-in-energy/).
 
 ## Parallelized Cross Entropy Method
 
