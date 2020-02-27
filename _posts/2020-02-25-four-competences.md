@@ -3,7 +3,7 @@ title: "Daniel C. Dennett's Four Competences"
 date: 2020-02-26
 categories:
   - Machine Learning, Reinforcement Learning
-excerpt: A useful idea to help understand computational control algorithms.
+excerpt: A useful idea to understand computational control algorithms.
 
 ---
 
@@ -25,7 +25,7 @@ But what do we mean by competence?
 
 ## What is competence?
 
-**Competence is the ability to act well**.  It is the ability of an agent to interact with it's environment to achieve goals.
+**Competence is the ability to act well**.  It is the ability of an agent to interact with its environment to achieve goals.
 
 **Competence can be contrasted with comprehension, which is the ability to understand**.  Together both form a useful decomposition of intelligence.
 
