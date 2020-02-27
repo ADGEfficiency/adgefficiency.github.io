@@ -7,9 +7,7 @@ excerpt: A useful idea to help understand computational control algorithms.
 
 ---
 
-In 2018, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) while hiking the Annapurna Circuit.  
-
-The book is full of interesting ideas - it is one I have studied closely, look forward to reading again.
+I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) in 2018. The book is full of interesting ideas - it is one I have studied closely, and I look forward to reading again.
 
 <center>
 	<img src="/assets/world-models/bach-bacteria.jpg">
@@ -17,13 +15,13 @@ The book is full of interesting ideas - it is one I have studied closely, look f
 
 <p></p>
 
-**One of these ideas are the four grades of competence**. These describe four progressively competent intelligences, that learn through successive applications of trial and error learning.  
+**One of the ideas is the four grades of competence**. It describes four progressively competent intelligences, that learn through successive applications of trial and error learning.  
 
 The four competences are not the central idea of the book.  I introduce them here as I have found them invaluable for my own understanding computational control algorithms.
 
 **They are also useful for teaching**. They organize computational control algorithms by asymptotic performance and sample efficiency.  The four competences also allow classification of examples such as cells, animals or humans, which can be relate to less familiar computational algorithms.
 
-But exactly what do we mean by competence?
+But what do we mean by competence?
 
 ## What is competence?
 
@@ -49,7 +47,7 @@ There is much to learn from evolutionary learning:
 - the effectiveness of iterative improvement
 - the need of a dualistic (agent and environment) view for it to work, at odds with the truth of non-duality
 
-These are lessons to explore another time. For now we are focused on the four grades of competence.
+These are lessons to explore another time - for now we are focused on the four grades of competence.
 
 ## The four competences
 
@@ -93,7 +91,7 @@ Compare with the Skinnerian agent, which can improve both through selection and 
 
 The Popperian agent can further improve within it's lifetime by learning models of it's world.  Generating data from these models can be used for planning, or to produce low dimensional representations of the environment.
 
-These dimensions (what is learnt and from what data) are useful to understand the different approaches of intelligent agents.
+These dimensions (what is learnt and from what data) further illuminate the different approaches of intelligent agents.
 
 ## Summary
 
