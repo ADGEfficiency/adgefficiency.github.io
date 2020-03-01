@@ -495,3 +495,22 @@ His crisis, and his ultimate "fall" from grace, was meant to invoke, in secular 
 ### 168 - On Writing: A Memoir of the Craft - Stephen King
 
 On Writing is organized into five sections: "C.V.", in which King highlights events in his life that influenced his writing career; "What Writing Is", in which King urges the reader to take writing seriously; "Toolbox", which discusses English mechanics; "On Writing", in which King details his advice to aspiring writers; and "On Living: A Postscript", in which King describes his van accident and how it affected his life.
+
+### 169 - The Soul of a New Machine - Tracy Kidder 
+
+It chronicles the experiences of a computer engineering team racing to design a next-generation computer at a blistering pace under tremendous pressure. 
+
+### 170 - The 33 Strategies of War - Robert Greene
+
+A guide to the subtle social game of everyday life informed by the military principles in war.
+
+### 171 - Making Learning Whole - David Perkins
+
+Teaching any subject can be made more effective if students are introduced to the "whole game," rather than isolated pieces of a discipline.
+
+### 172 - The Man Who Solved the Market - Gregory Zuckerman
+
+After a legendary career as a mathematician and a stint breaking Soviet codes, Simons set out to conquer financial markets with a radical approach. Simons hired physicists, mathematicians and computer scientists - most of whom knew little about finance - to amass piles of data and build algorithms hunting for the deeply hidden patterns in global markets.
+
+### 173 - At the Existentialist Café: Freedom, Being, and Apricot Cocktails - Sarah Bakewell
+
