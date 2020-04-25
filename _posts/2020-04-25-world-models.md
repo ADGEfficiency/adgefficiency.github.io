@@ -1,13 +1,11 @@
 ---
 title: 'World Models (the long version)'
-date: 2019-12-21
+date: 2020-04-25
 categories:
   - Python, Machine Learning, Reinforcement Learning
 excerpt: Ha & Schmidhuber's World Models reimplemented in Tensorflow 2.0.
 
 ---
-
-link cleanup - > DONE
 
 <center>
   <img src="/assets/world-models/f0.gif">
