@@ -1,11 +1,13 @@
 ---
 title: 'World Models (the long version)'
-date: 2020-04-25
+date: 2019-12-21
 categories:
   - Python, Machine Learning, Reinforcement Learning
 excerpt: Ha & Schmidhuber's World Models reimplemented in Tensorflow 2.0.
 
 ---
+
+link cleanup - > DONE
 
 <center>
   <img src="/assets/world-models/f0.gif">
@@ -157,7 +159,7 @@ These two uses can be combined together, where world models are used to generate
 
 World Models can also be used for planning. An offline planning algorithm (such as Monte Carlo Tree Search, which powers AlphaGo) can be used to take the action that performs the best in the simulation of many rollouts.
 
-Now that we understand the motivations and context of this project, we can look at one side of the Markov Decision Process (MDP) coin - the environment (if you aren't familiar with what an MDP is, take a look at Appendix One).
+Now that we understand the motivations and context of this project, we can look at one side of the Markov Decision Process (MDP) coin - the environment (*if you aren't familiar with what an MDP is, take a look at Appendix One*).
 
 # The Environment
 
@@ -799,7 +801,7 @@ How do we learn this latent representation if we don't have examples? The agent 
 
 The VAE is a generative model that learns the data generating process $P(x,z)$ - the joint distribution over our data (the probability of $x$ and $z$ occurring together).
 
-*[If the generative/discriminative concept is unfamiliar, take a look at Appendix !]().*
+*If the generative/discriminative concept is unfamiliar, take a look at Appendix Two.*
 
 ## The VAE in context
 
@@ -840,7 +842,7 @@ So how do we get meaningful encoding? The intuition behind autoencoders is to co
 
 The VAE is formed of three components - an encoder, a latent space and a decoder.  
 
-As the raw data is an image, the VAE makes use of convolution and deconvolution layers.  *[If you need a quick refresher on convolution, see Appendix !]().*
+As the raw data is an image, the VAE makes use of convolution and deconvolution layers.  *If you need a quick refresher on convolution, see Appendix Three.*
 
 ## Encoder
 
@@ -855,8 +857,6 @@ Constraining the size of the latent space to $(32)$ is one way auto-encoders lea
 The statistics parameterized by the encoder are used to form a distribution over the latent space - a diagonal Gaussian.  
 
 This diagonal Gaussian is a multivariate Gaussian with a diagonal covariance matrix - meaning that each variable is independent.
-
-(is this enforcing a gaussian prior or posterior?)
 
 This parameterized Gaussian is an approximation - using it will limit how expressive our latent space is.
 
@@ -1583,9 +1583,7 @@ $$ \mathbf{LOSS} = - \log  \sum_{mixes} \alpha(z, a) \cdot \phi (z'| z, a) $$
 
 In a more general setting, the variances learnt by a Gaussian mixture can be used as a measure of uncertainty.
 
-A mixture model requires statistics (probabilities, means and variances) as input.  In the World Models memory, these statistics are supplied by a long short-term memory (LSTM) network.
-
-*[If the LSTM is unfamiliar, take a look at Appendix !]().*
+A mixture model requires statistics (probabilities, means and variances) as input.  In the World Models memory, these statistics are supplied by a long short-term memory (LSTM) network.  *If the LSTM is unfamiliar, take a look at Appendix Four.*
 
 ## Implementing the memory
 
@@ -2198,7 +2196,7 @@ We first update our estimate of the mean using a sample average over $n_{best}$ 
 
 $$ \mu_{g+1} = \frac{1}{n_{best}} \sum_{n_{best}} x_{g} $$
 
-Our next step is to update our covariance matrix $C$.  *[You can find a refresher on estimating a covariance matrix from samples in Appendix Four]().*
+Our next step is to update our covariance matrix $C$.  *You can find a refresher on estimating a covariance matrix from samples in Appendix Five.*
 
 The CMA-ES covariance matrix estimation is more complex than this, and involves the combination of two updates known as rank-one and rank-$\mu$.  Combining these update strategies helps to prevent degeneration with small population sizes, and to improve performance on badly scaled or non-separable problems.
 

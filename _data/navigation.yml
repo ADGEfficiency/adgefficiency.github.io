@@ -11,6 +11,8 @@ main:
 top:
   - title: "Projects"
     children:
+      - title: "world-models"
+        url: https://github.com/ADGEfficiency/world-models
       - title: "teaching-monolith"
         url: https://github.com/ADGEfficiency/teaching-monolith
       - title: "energy-py"
@@ -26,6 +28,8 @@ top:
 
   - title: "Top Posts"
     children:
+      - title: "World Models (the long version)"
+        url: /world-models/
       - title: "Machine Learning in Energy"
         url: /machine-learning-in-energy/
       - title: "Mistakes Data Scientists Make"
