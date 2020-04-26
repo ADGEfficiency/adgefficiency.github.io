@@ -7,8 +7,6 @@ excerpt: Ha & Schmidhuber's World Models reimplemented in Tensorflow 2.0.
 
 ---
 
-link cleanup - > DONE
-
 <center>
   <img src="/assets/world-models/f0.gif">
 <figcaption>Performance of the final agent on a conveniently selected random seed.</figcaption>
@@ -22,7 +20,7 @@ link cleanup - > DONE
 
 **In 2019 I reimplemented the 2018 paper World Models by David Ha & Jürgen Schmidhuber**. This post takes a unapologetically deep and indulgent look at the theory and practice of the reimplementation.
 
-The remiplementation code base is in [adgefficiency/world-models](https://github.com/ADGEfficiency/world-models). References & resources are kept in [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
+The remiplementation source code is in [ADGEfficiency/world-models](https://github.com/ADGEfficiency/world-models). References & resources are in [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
 
 This project took around ten months:
 
@@ -2521,6 +2519,8 @@ def shape_controller_params(params, output_size=3):
 > Kurtz: Are my methods unsound?
 >
 > Willard: I don't see any method at all, sir.
+>
+> Apocalypse Now (1979)
 
 <center>
   <img src="/assets/world-models/methods.jpg">
@@ -2528,11 +2528,11 @@ def shape_controller_params(params, output_size=3):
   <div></div>
 </center>
 
-This section shines light on the 
-
-More details on methodology are all held in the [reimplementation Github repo](https://github.com/ADGEfficiency/world-models).
+This section shines light on the implementation methodology. Instructions to download a pretrained agent or to train your own agent from scratch are in the [readme of the reimplementation source code](https://github.com/ADGEfficiency/world-models).
 
 ## Agents trained
+
+A number of iterations were required to work through bugs (Agents One & Two) and then to explore (Agent Three & Four) and finally to exploit (Agent Five).
 
 | Agent | Policy | Episodes | VAE epochs | Memory epochs |
 |---|---|---|
