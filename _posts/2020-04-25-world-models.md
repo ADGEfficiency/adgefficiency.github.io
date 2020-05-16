@@ -508,7 +508,7 @@ def rollouts(
         print('{} episodes stored locally'.format(len(episodes)))
 ```
 
-Code to sample the learned latent space statistincs of the vision Variational Autoencoder:
+Code to sample the learned latent space statistics of the VAE:
 
 ```bash
 # worldmodels/data/sample_latent_stats.py
@@ -1045,11 +1045,7 @@ $$\mathbf{KLD} \Big (E_{\theta}(z \mid x) \mid \mid P(z \mid x) \Big) = \mathbf{
 
 This $\mathbf{KLD}$ is something that we can minimize - it is a loss function.  But our exponential time $P(x)$ (in the form of $\log P(x)$) has reappeared!
 
-Now for another trick from the VAE.  We will make use of
-- the Evidence Lower Bound ($\mathbf{ELBO}$)
-- Jensen's Inequality
-
-The $\mathbf{ELBO}$ is given as the expected difference in log probabilities when we are sampling our latent vectors from our encoder $E_{\theta}(z \mid x)$:
+Now for another trick from the VAE.  We will make use of the Evidence Lower Bound ($\mathbf{ELBO}$) and Jensen's Inequality.  The $\mathbf{ELBO}$ is given as the expected difference in log probabilities when we are sampling our latent vectors from our encoder $E_{\theta}(z \mid x)$:
 
 $$\mathbf{ELBO}(\theta) = \mathbf{E}_{z \sim E_{\theta}} \Big[\log P(x,z) - \log E_{\theta}(z \mid x) \Big]$$
 

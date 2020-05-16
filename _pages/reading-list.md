@@ -514,3 +514,8 @@ After a legendary career as a mathematician and a stint breaking Soviet codes, S
 
 ### 173 - At the Existentialist Café: Freedom, Being, and Apricot Cocktails - Sarah Bakewell
 
+### 174 - The Pragmatic Programmer - David Thomas
+
+### 175 - Bird by Bird - Anne Lamott
+
+### 176 - Python Data Science Handbook - Jake VanderPlas
