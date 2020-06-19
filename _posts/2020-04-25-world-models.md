@@ -85,13 +85,13 @@ worldmodels
 
 # References
 
-A full list of reference material for this project is kept in a repository I use to store my reinforcement learning resources - you can find the world models references at [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
+A full list of reference material for this project is kept in a repository I use to store my reinforcement learning resources - you can find the World Models references at [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
 
 <p></p>
 
 # Motivations and Context
 
-In this post **the agent** refers to the World Models agent as introduced by Ha & Schmidhuber.  When I refer to this agent as **our agent**, this is not showing ownership over the idea, only the instance of our agent that lived on CPU we paid for.
+In this post the agent refers to the World Models agent as introduced by Ha & Schmidhuber.  When I refer to this agent as **our** agent, this is not showing ownership over the idea, only the instance of our agent that lived on the CPU I paid for.
 
 ## Why reimplement a paper?
 
@@ -118,7 +118,7 @@ I had no way of knowing that the algorithm I was watching would be one I impleme
 
 ## AlphaGo Zero
 
-I had just completed the second iteration of teaching my reinforcement learning class when AlphaGo Zero was published in October 2017.
+I had just completed the second iteration of teaching a reinforcement learning class when AlphaGo Zero was published in October 2017.
 
 <center>
   <img src="/assets/world-models/Zero_act_learn.png">
@@ -141,33 +141,35 @@ The third paper is World Models, which introduced a novel machine learning algor
 <figcaption><a href="https://worldmodels.github.io/">https://worldmodels.github.io/</a></figcaption>
 </center>
 
-**World Models is strong technical work presented well**. Ha & Schmidhuber's [2018 paper](https://github.com/ADGEfficiency/rl-resources/blob/master/world-models/2018_Ha_world_models.pdf) was accompanied by a [blog post](https://worldmodels.github.io/) that was both interactive and full of `.gif`, making the work engaging and impressive. 
+**World Models is strong technical work presented well**. Ha & Schmidhuber's [2018 paper](https://github.com/ADGEfficiency/rl-resources/blob/master/world-models/2018_Ha_world_models.pdf) was accompanied by a [blog post](https://worldmodels.github.io/) that was both interactive and full of `.gif`, making the work engaging.
 
 ## The promise of learning a model of the world
 
+So what is a world model?
+
 **A world model is an abstract representation of the spatial or temporal dimensions of our world**.  A world model can be useful in a number of ways.
 
-One use of a world model is to use their low dimensional, internal representations for control.  We will see that the agent uses it's vision and memory in this way.  The value of having these low dimensional representations is that both prediction and control are easier in low dimensional spaces.
+**One use of a world model is to use their low dimensional, internal representations for control**.  We will see that the agent uses it's vision and memory in this way.  The value of having these low dimensional representations is that both prediction and control are easier in low dimensional spaces.
 
-Another is to generate data for training.  A model that is able to approximate the environment transition dynamics can be used recurrently to generate rollouts of simulated experience.
+**Another is to generate data for training**.  A model that is able to approximate the environment transition dynamics can be used recurrently to generate rollouts of simulated experience.
 
 Being able to generate data is a superpower for a reinforcement learning agent.  The primary problem in modern reinforcement learning is sample efficiency - the algorithms require vast amounts of data.  Being able to learn an environment model and sample transitions means this sample inefficiency can managed.
 
 These two uses can be combined together, where world models are used to generate synthetic rollouts in the low dimensional, internal representation spaces.  **This is learning within a dream**, and is demonstrated by Ha & Schmidhuber on the `ViSDoom` environment.
 
-World Models can also be used for planning. An offline planning algorithm (such as Monte Carlo Tree Search, which powers AlphaGo) can be used to take the action that performs the best in the simulation of many rollouts.
+**World models can also be used for planning**. An offline planning algorithm (such as Monte Carlo Tree Search, which powers AlphaGo) can be used to take the action that performs the best in the simulation of many rollouts.
 
 Now that we understand the motivations and context of this project, we can look at one side of the Markov Decision Process (MDP) coin - the environment (*if you aren't familiar with what an MDP is, take a look at Appendix One*).
 
 # The Environment
 
-he agent interacts with the `car-racing-v0` environment from OpenAI's `gym` library.  I used the same version of `gym` as the paper codebase (`gym==0.9.4`).
+The agent interacts with the `car-racing-v0` environment from OpenAI's `gym` library.  I used the same version of `gym` as the paper codebase (`gym==0.9.4`).
 
 `car-racing-v0` has two attributes that make it a challenging control problem - a high dimensional observation space and a continuous action space.
 
-## Working with `car-racing-v0` 
+## Working with `car-racing-v0`
 
-We can describe the `car-racing-v0` environment as a Markov Decision Process.  
+Lets describe the `car-racing-v0` environment as a Markov Decision Process.
 
 In the `car-racing-v0` environment, the agents observation space is raw image pixels $(96, 96, 3)$.  The observation has both a spatial $(96, 96, 3)$ and temporal structure, given the sequential nature of sampling transitions from the environment.  An observation is always a single frame.
 
@@ -175,7 +177,7 @@ The action space has three continuous dimensions - `[steering, gas, break]`.  Th
 
 The reward function is $-0.1$ for each frame, $+1000 / N$ for each tile visited, where $N$ is the total tiles on track.  This reward function encourages quickly driving forward on the track.
 
-The horizon (aka episode length) is set to $1000$ throughout the paper codebase.  
+The horizon (aka episode length) is set to $1000$ throughout the paper codebase.
 
 ## Getting the resizing right
 
@@ -188,7 +190,7 @@ This was where I made my first mistake.  After training my first agent, I inspec
 <figcaption>Performance of Agent One with the incorrect resizing.</figcaption>
 </center>
 
-The rendering of the observation was blocky, compared to the images from the paper.  After some investigation, I found the reason - a different resampling filter. You can see more detail in [world-models/notebooks/resizing-observation.ipynb](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/resizing-observation.ipynb).  
+The rendering of the observation was blocky, compared to the images from the paper.  After some investigation, I found the reason - a different resampling filter. You can see more detail in [world-models/notebooks/resizing-observation.ipynb](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/resizing-observation.ipynb).
 
 The final function used is given below, and uses `PIL.Image.BILINEAR`:
 
@@ -205,7 +207,7 @@ Using this, the agent's observation appears similar to the images from the paper
 
 <center>
   <img src="/assets/world-models/f1-final.png">
-  <figcaption>The raw observation (96, 96, 3) - the correctly resized observation (64, 64, 3) - the learnt latent variables (32,)</figcaption>
+  <figcaption>The raw observation (96, 96, 3) - the correctly resized observation (64, 64, 3) - the learnt latent variables (32,) (more on them later)</figcaption>
   <div></div>
 </center>
 
@@ -218,6 +220,8 @@ One important required hack when working with `car-racing-v0` is to use `env.vie
   <figcaption>If you see this, your environment observation is corrupt!</figcaption>
   <div></div>
 </center>
+
+An example of using this correctly is the `step` function of the environment:
 
 ```python
 def step(self, action, save_img=False):
@@ -240,9 +244,9 @@ def step(self, action, save_img=False):
 
 See the [`worldmodels/notebooks/car_race_consistency.ipynb`](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/car_race_consistency.ipynb) for more about avoiding corrupt `car-racing-v0` observations.
 
-## Implementing the data generating in code
+## Implementing the environment code
 
-The code responsible for generating data lives in [worldmodels/data]():
+The code responsible for generating data lives in [ADGEfficiency/worldmodels/data](https://github.com/ADGEfficiency/world-models/tree/master/worldmodels/data):
 
 ```bash
 $ tree worldmodels
@@ -387,7 +391,7 @@ def get_max_gen():
     path = os.path.join(home, 'control', 'generations')
     gens = os.listdir(path)
     gens = [int(s.split('_')[-1]) for s in gens]
-    max_gen = max(gens) 
+    max_gen = max(gens)
     return max_gen
 
 
@@ -609,7 +613,6 @@ And finally code to interface with `tf.data`.  Raw data was saved into `tfrecord
 
 ```python
 # worldmodels/data/tf_records.py
-
 import os
 
 import tensorflow as tf
@@ -713,33 +716,29 @@ def batch_episodes(parse_func, records, episode_length, num_cpu=4):
   <div></div>
 </center>
 
-[The World Models agent is a Popperian intelligence](https://adgefficiency.com/four-competences/) - able to improve via global selection, respond to reinforcement and to learn models of it's environment.  The agent has three components.
+The World Models agent is a [Popperian intelligence](https://adgefficiency.com/four-competences/) - able to improve via global selection, respond to reinforcement and to learn models of it's environment.
+
+The agent has three components - vision, memory and a controller.
 
 ## The three components
 
-**The first component is vision** - a Variational Autoencoder (VAE) that compresses the environment observation $x$ into a latent space $z$ and then reconstruct it into $x'$.
+**The first component is vision - a Variational Autoencoder (VAE) that compresses the environment observation $x$ into a latent space $z$ and then reconstruct it into $x'$.**
 
 The controller doesn't ever use the reconstruction $x'$ - instead it uses the lower dimensional latent representation $z$. This low dimensional, latent representation $z$ is used as one of the controllers two inputs.
 
-**The second component is memory**, which uses a Long Short-Term Memory (LSTM) network with a Mixed Density Network (MDN) to predict environment transitions in latent space - to predict $z'$ given $z$ and an action $a$.
+**The second component is memory, which uses a Long Short-Term Memory (LSTM) network with a Mixed Density Network (MDN) to predict environment transitions in latent space - to predict $z'$ given $z$ and an action $a$.**
 
 The controller doesn't ever use the prediction $z'$,  but instead the hidden state $h$ of the LSTM. The prediction $z'$ represents only one step in the future - hidden state $h$ contains information many steps into the future, and is the controllers second input.
 
-**The third component is the controller**, a linear function that maps the vision latent state $z$ and memory hidden state $h$ to an action $a$.  The controller parameters are found using an evolutionary algorithm called CMA-ES, with a fitness function of total episode reward.
+**The third component is the controller, a linear function that maps the vision latent state $z$ and memory hidden state $h$ to an action $a$.**  The controller parameters are found using an evolutionary algorithm called CMA-ES, with a fitness function of total episode reward.
 
-## Controller never sees the real world
+## The controller never sees the real world
 
-The attentive reader will note that the controller never uses the final outputs of the vision or memory - either for the VAE's reconstructed environment observation or the memory's predicted next latent state.  
+The attentive reader will note that the controller never uses the final outputs of the vision or memory - either for the VAE's reconstructed environment observation or the memory's predicted next latent state.
 
-**The controller never sees the real world** - instead it only has access to the internal state of the vision and memory.  These low dimensional representations are all that is used for control.  Using smaller dimension inputs means less parameters in the controller, opening up using an evolutionary method to find the controller parameters.
+**The controller never sees the real world directly - instead it only has access to the internal state of the vision and memory**.  These low dimensional representations are all that is used for control.  Using smaller dimension inputs means less parameters in the controller, opening up using an evolutionary method to find the controller parameters.
 
-## Independent model learning
-
-The separation of the agent into three components allows them to be trained separately (but still sequentially):
-
-- first train the vision on observations
-- then train the memory using sequences of observations and actions.  The observations are encoded into latent space $z$ statistics, meaning we can sample a different $z$ each epoch
-- finally train the controller, using the vision to provide $z$ and the memory to provide $h$, using total episode reward
+## The vision and memory never see rewards
 
 Both the vision & memory components are trained without access to rewards - they learn only from observations and actions. Rewards are only used when learning parameters of the controller.
 
@@ -747,11 +746,21 @@ By training the vision and memory without access to rewards, these components ar
 
 This allows all three components to focus on one task.  It can however mean that without the context of reward information, the vision & memory might learn features of the environment that are not useful for control.
 
-Another benefit of the independent learning is stability.  Reinforcement learning is notoriously unstable - by training the vision and memory on a fixed dataset, the training will be more stable than the more common situation in reinforcement learning, where as the policy improves the data distribution changes.  
+## Independent model learning
+
+The decomposition of the agent different tasks to be trained separately (but still sequentially):
+
+- first train the vision on observations
+- then train the memory using sequences of observations and actions.  The observations are encoded into latent space $z$ statistics, meaning we can sample a different $z$ each epoch
+- finally train the controller, using the vision to provide $z$ and the memory to provide $h$, using total episode reward
+
+One benefit of independent learning is stability.  Reinforcement learning is notoriously unstable - by training the vision and memory on a fixed dataset, the training will be more stable than the more common situation in reinforcement learning, where as the policy improves the data distribution changes.
 
 Another factor changing the distribution of the data is exploration.  Whether you learn from a fixed dataset or a non-stationary one, the exploration-exploitation dilemma cannot be ignored.  The fixed dataset will have been generated with a suboptimal policy (if it wasn't, you already have the optimal policy!).
 
-Now that we have been introduced to the agent, we can take a look at each of it's three components - starting with vision.
+A final benefit of decomposing the training is being able to use the correct hardware for each component.  Both the vision and memory are trained on GPU, with the controller being trained on 64 CPUs.  Being able to spin up earh instance separately helps to keep the
+
+Now that we have been introduced to the agent, we can take a look at each of it's three components in detail - starting with vision.
 
 # Vision
 
@@ -763,13 +772,13 @@ Now that we have been introduced to the agent, we can take a look at each of it'
   <div></div>
 </center>
 
-The vision is a generative model, that models the conditional distribution of the environment observation $x$ and a latent representation $z$:
+The vision of our agent is a generative model, that models the conditional distribution of the environment observation $x$ and a latent representation $z$:
 
 $$z \sim E_{\theta}(z \mid x)$$
 
 ## Why do we need to see?
 
-We use vision to understand our environment - our agent does the same. **Here we will see vision is dimensionality reduction** - the process of reducing high dimensional data into a lower dimensional space.
+We use vision to understand our environment - our agent does the same. **Here we will see vision as dimensionality reduction - the process of reducing high dimensional data into a lower dimensional space**.
 
 The vision component provides a low dimensional representation of the environment to the controller.  The value of this representation is that it is easier to make decisions in low dimensional spaces.
 
@@ -778,12 +787,17 @@ A canonical example in computer vision is image classification, where an image c
 In our `car-racing-v0` environment, a low dimensional representation of the environment observation might be something like:
 
 ```python
-observation = [on_road=1, corner_to_the_left=1, corner_to_the_right=0, on_straight=1]
+observation = [
+	on_road=1,
+	corner_to_the_left=1,
+	corner_to_the_right=0,
+	on_straight=1
+]
 ```
 
 Using this representation, we could imagine deriving a simple control policy.  Try to do this with $27,648$ numbers, even if they are arranged in a shape $(96, 96, 3)$.
 
-Note that we don't know which variables to have in our latent representation. **The latent representation is hidden.** It is unobserved - for a given image, we have no labels for these variables.  We don't know how many there are - or if they exist at all!
+Note that we don't know which variables to have in our latent representation. **The latent representation is hidden - it is unobserved**. For a given image, we have no labels for these variables.  We don't know how many there are - or if they even exist at all!
 
 ## How does our agent see?
 
@@ -791,7 +805,7 @@ We have a definition of vision as reducing the dimensionality of data, so that w
 
 The vision of the agent reduces the environment observation $x$ $(96, 96, 3)$ into a low dimensional, latent representation $z$ $(32,)$.
 
-How do we learn this latent representation if we don't have examples? The agent uses a Variational Autoencoder.
+How do we learn this latent representation if we don't have examples? **Our agent uses a Variational Autoencoder**.
 
 ## The Variational Autoencoder
 
@@ -799,9 +813,9 @@ How do we learn this latent representation if we don't have examples? The agent 
 
 The VAE is a generative model that learns the data generating process $P(x,z)$ - the joint distribution over our data (the probability of $x$ and $z$ occurring together).
 
-*If the generative/discriminative concept is unfamiliar, take a look at Appendix Two.*
+*If the concept of generative or discriminative models is unfamiliar, take a look at Appendix Two.*
 
-## The VAE in context
+## Context in generative modelling
 
 The VAE sits alongside the Generative Adversarial Network (GAN) as the state of the art in generative modelling.
 
@@ -818,27 +832,27 @@ The progress in GANs has been outstanding.  GANs typically outperform VAEs on re
 The VAE has less in common with classical (sparse or denoising) autoencoders, which both require the use of the computationally expensive Markov Chain Monte Carlo.
 
 The contributions of the VAE include:
-- using variational inference to approximate
-- compression / regularization of the latent space using a KLD between our learnt latent space and a prior $P(z) = \mathbf{N} (0, 1)$
+- using variational inference to approximate the latent space $P(z)$
+- compression / regularization of the latent space using a Kullback-Leibler Divergence between our learnt latent space and a prior $P(z) = \mathbf{N} (0, 1)$
 - stochastic encoding of a sample $x$ into the latent space $z$ and into a reconstruction $x'$
 
-## What makes the VAE a good choice?
+## Why use a Variational Autoencoder?
 
 A major benefit of generative modelling is the ability to generate new samples $x'$.  Yet our agent never uses $x'$ (the data it generates, whether a reconstruction or a new sample).
 
-The role of the VAE in our agent is to provide a compressed representation $z$ by learning to encode and decode a latent space.  This lower dimensional latent space is easier for our memory and controller to work with.
+**The role of the VAE in our agent is to provide a compressed representation $z$ by learning to encode and decode a latent space**.  This lower dimensional latent space is easier for our memory and controller to work with.
 
 What qualities do we want in our latent space?  **One is meaningful grouping**.  This requirement is a challenge in traditional autoencoders, which tend to learn spread out latent spaces.
 
 Meaningful grouping means that similar observations exist in the same part of the latent space, with samples that are close together in the latent space producing similar images when decoded.  This grouping means that even observations that the agent hadn't seen before could be responded to the same way.
 
-**Meaningful grouping allows interpolation**.  Encoding similar observations close together makes the space between observed data meaningful.  
+**Meaningful grouping allows interpolation**.  Encoding similar observations close together makes the space between observed data meaningful.
 
-So how do we get meaningful encoding? The intuition behind autoencoders is to constrain the size of the latent space ($32$ variables for the World Models VAE).  The VAE takes this one step further by imposing a Kullback-Leibler Divergence on the latent space - we will see more on this in Section !.
+So how do we get meaningful encoding? The intuition behind autoencoders is to constrain the size of the latent space ($32$ variables for our agent's VAE).  The VAE takes this one step further by imposing a Kullback-Leibler Divergence on the latent space - we will expand on this more below.
 
 ## VAE structure
 
-The VAE is formed of three components - an encoder, a latent space and a decoder.  
+The VAE is formed of three components - an encoder, a latent space and a decoder.
 
 As the raw data is an image, the VAE makes use of convolution and deconvolution layers.  *If you need a quick refresher on convolution, see Appendix Three.*
 
@@ -850,21 +864,19 @@ The encoder is built from convolutional blocks that map from the input image $x$
 
 ## Latent space
 
-Constraining the size of the latent space to $(32)$ is one way auto-encoders learn efficient compression of images.  All of the information needed to reconstruct a sample $x$ must exist in only 32 numbers!
+Constraining the size of the latent space to $(32, )$ is one way auto-encoders learn efficient compression of images.  All of the information needed to reconstruct a sample $x$ must exist in only $32$ numbers!
 
-The statistics parameterized by the encoder are used to form a distribution over the latent space - a diagonal Gaussian.  
+The statistics parameterized by the encoder are used to form a distribution over the latent space - a multivariate Gaussian with a diagonal covariance matrix.  This covariance matrix has zero for all the covariances (meaning that the variables are all independent).
 
-This diagonal Gaussian is a multivariate Gaussian with a diagonal covariance matrix - meaning that each variable is independent.
+$$\sigma_{\theta} = \begin{bmatrix}\sigma_{\theta,1} & 0 & 0\\0 & \sigma_{\theta,2} & 0\\ 0 & 0 & \sigma_{\theta,3}\end{bmatrix}$$
 
-This parameterized Gaussian is an approximation - using it will limit how expressive our latent space is.
+This parameterized Gaussian (by weights $\theta$) is an approximation - using it will limit how expressive our latent space is. We can sample from this latent space distribution, making the encoding of an image $x$ stochastic.
 
 $$z \sim P(z \mid x)$$
 
 $$ z \mid x \approx \mathbf{N} \Big(\mu_{\theta}, \sigma_{\theta}\Big) $$
 
-We can sample from this latent space distribution, making the encoding of an image $x$ stochastic.
-
-Because the latent space fed to the decoder is spread (controlled by the parameterized variance of the latent space), it learns to decode a range of variations for a given $x$.  **This is stochastic encoding** - Ha & Schmidhuber propose that this leads to a more robust controller in the agent.
+Ha & Schmidhuber propose that this stochastic encoding promotes a robust controller. Because the latent space fed to the decoder is spread (controlled by the parameterized variance of the latent space), it learns to decode a range of variations for a given $x$.
 
 ## Decoder
 
@@ -872,7 +884,10 @@ The decoder uses deconvolutional blocks to reconstruct the sampled latent space 
 
 ## The three forward passes
 
-Now that we have the structure of the VAE mapped out, we can be specific about how we pass data through the model.
+Now that we have the structure of the VAE mapped out, we can be specific about how we pass data through the model.  We have three ways to do this:
+- compression of a sample $x$ into a latent representation $z$
+- reconstruction of a $x$ into a decoded $x'$
+- generation of $x'$ from $z$
 
 ## Compression
 
@@ -978,7 +993,7 @@ class VAE(tf.keras.Model):
 
 Later in that same file (and in the same class, `VAE`), we have the code for our three forward passes:
 
-```python 
+```python
 # worldmodels/vision/vae.py
 
     def forward(self, batch):
@@ -1008,9 +1023,9 @@ Later in that same file (and in the same class, `VAE`), we have the code for our
 
 *This section owes much to the excellent tutorial [What is a variational autoencoder? by Jaan Altosaar](https://jaan.io/what-is-variational-autoencoder-vae-tutorial/).*
 
-Above we mapped out the various forward passes we can do in an VAE.  But before are able to make meaningful forward passes, we need to train the VAE using backwards passes.
+Above we mapped out the various forward passes we can do in our VAE.  But before are able to make meaningful forward passes, we need to train the VAE using backwards passes.
 
-We do the backward pass to learn - maximizing the joint likelihood of an image $x$ and the latent space $z$.
+**We do backward passes to learn - maximizing the joint likelihood of an image $x$ and the latent space $z$**.
 
 The VAE uses likelihood maximization to learn this joint distribution $P(x,z)$.  **Likelihood maximization maximizes the similarity between two distributions**.  In our case these distributions are over our training data (the data generating process, $P(x,z)$) and our parametrized approximation (a convolutional neural network $E_{\theta}(z \mid x))$.
 
@@ -1032,14 +1047,14 @@ $$ x \mid z \sim \mathbf{N} \Big(\mu_{\theta}, \sigma_{\theta}\Big) $$
 
 $$P(x \mid z) \approx E(x \mid z ; \theta) = \mathbf{N} \Big(x \mid \mu_{theta}, \sigma_{\theta}\Big)$$
 
-**This approximation is variational inference** - using a family of distributions (in this case Gaussian) to approximate the latent variables.  Using variational inference is is a key contribution of the VAE.
+**This approximation is variational inference - using a family of distributions (in this case Gaussian) to approximate the latent variables**.  This use of variational inference to approximate is a key contribution of the VAE.
 
 Now that we have made a decision about how to approximate the latent space distribution, we want to think about how to bring our parametrized latent space $E_{\theta}(z \mid x)$ closer to the true posterior $P(z \mid x)$.
 
-In order to minimize the difference between our two distributions, we need way to measure the difference.  The VAE uses a Kullback-Leibler divergence ($\mathbf{KLD}$),  which has a number of interpretations:
-- measures the information lost when using one distribution to approximate another
-- measures a non-symmetric difference between two distributions
-- measures how close distributions are
+In order to minimize the difference between our two distributions, we need way to measure the difference.  The VAE uses a Kullback-Leibler divergence ($\mathbf{KLD}$),  which has a number of interpretations - measuring:
+- the information lost when using one distribution to approximate another
+- the non-symmetric difference between two distributions
+- how close distributions are
 
 $$\mathbf{KLD} \Big (E_{\theta}(z \mid x) \mid \mid P(z \mid x) \Big) = \mathbf{E}_{z \sim E_{\theta}} \Big[\log E_{\theta}(z \mid x) \Big] - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log P(x, z) \Big] + \log P(x)$$
 
@@ -1053,28 +1068,33 @@ Combining this with our $\mathbf{KLD}$ we can form the following:
 
 $$\log P(x) = \mathbf{ELBO}(\theta) + \mathbf{KLD} \Big (E_{\theta}(z \mid x) \mid \mid P(z \mid x) \Big) $$
 
-Jensen's Inequality tells us that the $\mathbf{KLD}$ is always greater than or equal to zero. Because $\log P(x)$ is constant (and does not depend on our parameters $\theta$), a large $\mathbf{ELBO}$ requires a small $\mathbf{KLD}$ (and vice versa).
+A third trick - we know from [Jensen's Inequality](https://en.wikipedia.org/wiki/Jensen%27s_inequality#Information_theory) that the $\mathbf{KLD}$ is always non-negative.  Because $\log P(x)$ is constant (and does not depend on our parameters $\theta$), a large $\mathbf{ELBO}$ requires a small $\mathbf{KLD}$ (and vice versa).
 
 Remember that we have a $\mathbf{KLD}$ we want to minimize!  We have just shown that we can do this by ELBO maximization.  After a bit more mathematical massaging )) we can arrive at:
 
-$$ \mathbf{ELBO}(\theta, \theta) = \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta}(x' \mid z) \Big] - \mathbf{KLD} \Big (E_{\theta}(z \mid x) \mid \mid P(z) \Big) $$
+$$ \mathbf{ELBO}(\theta) = \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta}(x' \mid z) \Big] - \mathbf{KLD} \Big (E_{\theta}(z \mid x) \mid \mid P(z) \Big) $$
 
 Note the appearance of our decoder $D_{\theta}(x \mid z)$.  The decoder is used to approximate the true posterior $P(x' \mid z)$ - the conditional probability distribution over the reconstruction of latent variables into a generated $x'$ (given $x$).
 
-The last step is to convert this $\mathbf{ELBO}$ maximization into a more familiar loss function minimization.  We now have the VAE loss function's final mathematical form - in all it's tractable glory:
+The last step is to convert this $\mathbf{ELBO}$ maximization into a more familiar loss function minimization.  **We now have the VAE loss function's final mathematical form - in all it's tractable glory**:
+
+<center>
+  <img src="/assets/world-models/grail.jpg">
+<figcaption>Ich habe es gesehen!</figcaption>
+</center>
 
 $$ \mathbf{LOSS}(\theta) = - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta} (x' \mid z) \Big] + \mathbf{KLD} \Big( E_{\theta} (z \mid x) \mid \mid P(z) \Big)  $$
 
-The loss function has two terms - the log probability of the reconstruction (aka the decoder) and a $\mathbf{KLD}$ between the latent space (sampled from our encoder) and the latent space prior $P(z)$.
+Our final loss function has two terms - the log probability of the reconstruction (aka the decoder) and a $\mathbf{KLD}$ between the latent space (sampled from our encoder) and the latent space prior $P(z)$.
 
-Remember that the loss function above is the result of minimizing the $\mathbf{KLD}$ between our encoder $E_{\theta}(z \mid x)$ and the data generating distribution $P(z \mid x)$.  What we have is a result of maximizing the log-likelihood of the data.
+The genesis of this loss function is our original maximization the log-likelihood of our data.  It is perfect in it's mathematical expression - yet to implement this in code will require more work.
 
-## Implementing the loss function in code
+## Implementing the loss function in a Python program
 
 Although our loss function is in it's final mathematical form, we will make three more modifications before we implement it in code:
 - convert the log probability of the decoder into a pixel wise reconstruction loss
 - use a closed form solution to the $\mathbf{KLD}$ between our encoded latent space distribution and the prior over our latent space $P(x)$
-- refactor the randomness using reparameterization
+- refactor the randomness using the reparameterization trick
 
 ## First term - reconstruction loss
 
@@ -1084,7 +1104,7 @@ The first term in the VAE loss function is the log-likelihood of reconstruction 
 
 Minimizing the negative log-likelihood is equivalent to likelihood maximization.  In our case, the likelihood maximization maximizes the similarity between  the distribution over our training data $P(x \mid z)$ and our parametrized approximation.
 
-[Section 5.1 of the Deep Learning textbook](http://www.deeplearningbook.org/) shows that for a Gaussian approximation, maximizing the log-likelihood is equivalent to minimizing mean square error ($\mathbf{MSE}$):
+[Section 5.1 of Deep Learning (Goodfellow, Benjio & Courville)](http://www.deeplearningbook.org/) shows that for a Gaussian approximation, maximizing the log-likelihood is equivalent to minimizing mean square error ($\mathbf{MSE}$):
 
 $$\mathbf{MSE} = \frac{1}{n} \sum \Big[ \mid \mid x' - x \mid \mid \Big]^{2} $$
 
@@ -1100,15 +1120,15 @@ reconstruction_loss = tf.reduce_mean(
 )
 ```
 
+This is intuitive - this reconstruction loss penalizes the network based on the average squared difference of pixel values.
+
 ## Second term - regularization
+
+The second term in the VAE loss function is the $\mathbf{KLD}$ between the and the latent space prior $P(z)$. The intuition of the second term in the VAE loss function is compression or regularization.
 
 $$ \mathbf{LOSS}(\theta) = - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta} (x' \mid z) \Big] + \mathbf{KLD} \Big( E_{\theta} (z \mid x) \mid \mid P(z) \Big)  $$
 
-The intuition of the second term in the VAE loss function is compression or regularization.
-
-The second term in the VAE loss function is the $\mathbf{KLD}$ between the and the latent space prior $P(z)$.
-
-We haven't yet specified what the prior over the latent space should be.  A convenient choice is a Standard Normal - a Gaussion with a mean of zero, variance of one.
+We haven't yet specified what the prior over the latent space should be.  A convenient choice is a Gaussian with a mean of zero, variance of one (the Standard Normal).
 
 Minimizing the $\mathbf{KLD}$ means we are trying to make the latent space look like random noise.  It encourages putting encodings near the center of the latent space.
 
@@ -1138,23 +1158,23 @@ kl_loss = tf.reduce_mean(
 
 ## Reparameterization trick
 
-Because our encoder is stochastic, we need one last trick - a rearrangement of the model architecture, so that we can backprop through it.  This is the **reparameterization trick**, and results in a latent space architecture as follows:
+Because our encoder is stochastic, we need one last trick - a rearrangement of the model architecture, so that we can backprop through it.  **This is the reparameterization trick**. It results in a latent space architecture as follows:
 
 $$ n \sim \mathcal{N}(0, 1) $$
 
 $$ z = \sigma_{theta} (x) \cdot n + \mu_{theta} (x) $$
 
-After the refactor of the randomness, we can now take a gradient of our loss function and train the VAE.
+After the refactor of the randomness, we can now pass the gradients from our loss function through the latent space and into the encoder.
 
 ## Final VAE loss function
 
-In math:
+A quick summary - first in math:
 
 $$ \mathbf{E}_{z \sim E_{\theta}} \Big[ \mid \mid x' - x \mid \mid \Big]^{2} $$
 
 $$ \mathbf{LOSS}(\theta) = - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta} (x' \mid z) \Big] + \mathbf{KLD} \Big( E_{\theta} (z \mid x) \mid \mid P(z) \Big)  $$
 
-In code:
+And in code:
 
 ```python
 # worldmodels/vision/vae.py
@@ -1183,16 +1203,16 @@ def loss(self, batch):
     }
 ```
 
-Below a few artifacts of training the VAE:
+Below a few artifacts from the training the VAE, which was done on GPU:
 
 <center>
   <img src="/assets/world-models/vae-training.png">
-<figcaption>Training curve of the first iteration VAE over 8 epochs.  You can clearly see the effect of the `kl_tolerance=16`.</figcaption>
+<figcaption>Training curve of the first iteration VAE over 8 epochs.  You can clearly see the effect of the `kl_tolerance=16` in the second plot.</figcaption>
 </center>
 
 <center>
   <img src="/assets/world-models/vae-reconstructions.png">
-<figcaption>Observations and their reconstructions from the final VAE, along with the reconstruction and KLD losses</figcaption>
+<figcaption>Observations (`true`) and their reconstructions (`recon`) from the final VAE, along with the reconstruction loss and KLD loss</figcaption>
 </center>
 
 <center>
@@ -1206,7 +1226,6 @@ Below the code for the vision component, see the source in ([world-models/vision
 
 ```python
 # worldmodels/vision/train_vae.py
-
 import argparse
 import os
 
@@ -1325,7 +1344,6 @@ The code for the VAE structure:
 
 ```python
 # worldmodels/vision/vae.py
-
 import os
 
 import tensorflow as tf
@@ -1499,53 +1517,51 @@ class VAE(tf.keras.Model):
 
 <center>
   <img src="/assets/world-models/memory.png">
-  <figcaption>The World Models memory</figcaption>
+  <figcaption>The World Models memory - the latent space `z` and last action `a` are used to predict the next latent state `z'`</figcaption>
   <div></div>
 </center>
 
-The memory is the second of our agent's three components. **The role of the agent's memory is to predict how the environment will respond to its actions.**  This prediction is not done in the high dimensional space $x$, but instead in the lower dimensional latent space $z$ learnt by the vision component.
+The memory is the second of our agent's three components. **The memory predicts how the environment will respond to its actions.**  This prediction is not done in the high dimensional space $x$, but instead in the lower dimensional latent space $z$ learnt by the vision component.
 
-More formally we can say the memory is a discriminative model, that models the conditional probability of seeing an environment transition in latent space, from $z$ to $z'$, conditional on an action $a$:
+The memory is a discriminative model, that models the conditional probability of seeing an environment transition in latent space (from $z$ to $z'$) conditional on an action $a$:
 
 $$ M_{\theta}(z'| z, a, h, c) $$
 
-As with the vision component, the final output of the memory (the predicted next environment latent representation $z'$) is not used by the controller.  
+The memory is predicting how the environment will change based on the last action it took.  As with the vision component, the final output of the memory (the predicted next environment latent representation $z'$) is not used by the controller.
 
-Instead, the controller makes use of an internal representation learnt by the memory - the hidden state $h$ of an LSTM.  This internal representation is a compressed representation of time - a compressed representation of what the memory has learnt is useful to predict the future.
+**Instead, the controller makes use of an internal representation learnt by the memory - the hidden state $h$ of an LSTM**.  This internal representation is a compressed representation of time - a compressed representation of what the memory has learnt is useful to predict the future.
 
 ## Why do we remember?
 
-Some think that the entire purpose of a human life is to generate memories, to be looked back on after a life well lived.  
+Some think that the entire purpose of a human life is to generate memories, to be looked back on after a life well lived.  Human memory is fantastic in it's ability to recall details (such as lyrics of a tune heard long ago), while also being able to completely misremember recent events.
 
-Human memory is fantastic in it's ability to recall details (such as lyrics of a tune heard long ago), while also being able to completely misremember recent events.
+There is a fascinating intersection between memory and identity, with misremembering twisting towards being consistent with an established self image.  Certainly perfect recall is not ideal (or efficient) - yet misremembering to align with a self image is somewhat troubling.  What of our well lived life that we love to look back on?
 
-There is a fascinating intersection between memory and identity, with misremembering twisting towards being consistent with an established self image.
-
-**The use of memory relevant to both the agent and ourselves is learning from experience**.  One way to learn from past experience is to use it to predict the future.
+All that in mind, the value of memory to our agent is to learn from experience. **One way to learn from past experience is to use it to predict the future**.
 
 ## Mixed Density Networks
 
-**The memory has two components - an LSTM with a Gaussian Mixture head.**  Together these form a Mixed Density Network.  Mixed Density Networks were introduced in 1994 by Christopher Bishop (who you may recognize from the classic *Pattern Recognition and Machine Learning*).  
+**The memory has two components - an LSTM and a Gaussian Mixture head - together these form a Mixed Density Network**.  Mixed Density Networks were introduced in 1994 by Christopher Bishop (author of the classic *Pattern Recognition and Machine Learning*).
 
-They combine a neural network (that can represent arbitrary non-linear functions) with a mixture model (that can model arbitrary conditional distributions).
+A Mixed Density Network combines a neural network (that can represent arbitrary non-linear functions) with a mixture model (that can model arbitrary conditional distributions).
 
-A primary motivation of Mixed Density Networks is to learn multimodal distributions. Many distributions we are interested in are multimodal, with multiple peaks in probability density.  
+**A primary motivation of Mixed Density Networks is to learn multimodal distributions**. Many distributions we are interested in are multimodal, with multiple peaks in probability density.
 
-In the section ! above we saw that if we make the assumption of Gaussian distributed data, we can derive the mean square error loss function from likelihood maximization.  This loss function leads to learning of the conditional average of the target.
+We saw above in the derivation of the VAE loss function, that if we make the assumption of Gaussian distributed data, we can derive the mean square error loss function from likelihood maximization.  This loss function leads to learning of the conditional average of the target.
 
-Learning the conditional average can be useful, but also has drawbacks.  **For multimodal data, taking the average is unlikely to be informative**.  An example of the flaw of the conditional average is Nassim Taleb's 3 foot deep river, which demonstrates how misleading the average can be.
+Learning the conditional average can be useful, but also has drawbacks.  **For multimodal data, taking the average is unlikely to be informative**.  An example is Nassim Taleb's 3 foot deep river, which demonstrates how misleading the average can be.
 
 <center>
   <img src="/assets/world-models/4ft.png">
-  <figcaption>from The Flaw of Averages - Sam L. Savage</figcaption>
+  <figcaption>The Flaw of Averages - Sam L. Savage</figcaption>
   <div></div>
 </center>
 
 ##  Gaussian Mixtures
 
-In the 1994 paper *Mixture Density Networks*, Bishop shows that by training a neural network using a least squares loss function, we are able to learn two statistics.  
+In the 1994 paper *Mixture Density Networks*, Bishop shows that by training a neural network using a least squares loss function, we are able to learn two statistics.
 
-One is the conditional mean, which is our prediction.  The second statistic is the variance, which we can approximate from the residual.  We can use these two statistics to form a Gaussian.
+One is the conditional mean, which is our prediction.  The second statistic is the variance, which we can approximate from the residual.  **We can use these two statistics to form a Gaussian**.
 
 Being able to learn both the mean and variance motivates the parametrization of a mixture model with Gaussian kernels.  A mixture model is a linear combination of kernel functions:
 
@@ -1557,7 +1573,9 @@ $$ \phi (z' \mid z, a) = \frac{1}{\sqrt{(2 \pi) \sigma(z, a)}} \exp \Bigg[ - \fr
 
 The cool thing about Gaussian mixtures is their ability to approximate complex probability densities using Gaussian's with a diagonal covariance matrix.
 
-Probability distribution output by a mixture can (in principle!) be calculated.  The flexibility is similar to a feed forward neural network, and likely has the same distinction between being able approximate versus being able to learn.
+Any probability distribution can be approximated with a mixture of Gaussians.
+
+The flexibility is similar to a feed forward neural network (see the [Universal approximation theorem](https://en.wikipedia.org/wiki/Universal_approximation_theorem)), and likely has the same distinction between being able to approximate in theory versus being able to learn with our data.
 
 In practice, the mixture probabilities are parameterized as $\log \pi$, recovering the probabilities by taking the exponential.  These probabilities are priors of the target having been generated by a mixture component.  These are transformed via a softmax:
 
@@ -1567,7 +1585,7 @@ Meaning our mixture probabilities satisfy the constraint:
 
 $$ \sum_{mixes} \pi(z, a) = 1 $$
 
-As with the VAE, the memory $\theta$ parameters are found using likelihood maximization.
+As with the Variational Autoencoder, the memory $\theta$ parameters are found using likelihood maximization.
 
 $$ M(z' \mid z, a) = \sum_{mixes} \alpha(z, a) \cdot \phi (z'| z, a) $$
 
@@ -1577,17 +1595,17 @@ $$ \mathbf{LOSS} = - \log  \sum_{mixes} \alpha(z, a) \cdot \phi (z'| z, a) $$
 
 In a more general setting, the variances learnt by a Gaussian mixture can be used as a measure of uncertainty.
 
-A mixture model requires statistics (probabilities, means and variances) as input.  In the World Models memory, these statistics are supplied by a long short-term memory (LSTM) network.  *If the LSTM is unfamiliar, take a look at Appendix Four.*
+A mixture model requires statistics (probabilities, means and variances) as input.  In the World Models memory, these statistics are supplied by a long short-term memory (LSTM) network.  (*If the LSTM is unfamiliar, take a look at Appendix Four*).
 
-## Implementing the memory
+## Implementing the memory in Python
 
 The reimplementation memory is built in a way that the Gaussian mixture can be tested separately from the LSTM, using a simpler feedforward neural network feeding the mixture statistics.
 
-From a software development perspective, development of the `Memory` class was done in two distinct approaches.  
+From a software development perspective, development of the `Memory` class was done in two distinct approaches.
 
 ## Performance based testing
 
-The first was testing the generalization of the MDN on a toy dataset.  The inspiration and dataset came directly from [Mixture Density Networks with TensorFlow](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/) by David Ha. It is in Tensorflow 1.0, which required updating to Tensorflow 2.0.  You can see the notebook I used to develop the MDN + LSTM at [world-models/notebooks/memory-quality-check.ipynb]().
+The first was testing the generalization of the MDN on a toy dataset.  The inspiration and dataset came directly from [Mixture Density Networks with TensorFlow by David Ha](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/). It is in Tensorflow 1.0, which required updating to Tensorflow 2.0.  You can see the notebook I used to develop the MDN + LSTM at [world-models/notebooks/memory-quality-check.ipynb]().
 
 The next test was with an LSTM generating the statistics of the mixture:
 
@@ -1598,11 +1616,10 @@ The next test was with an LSTM generating the statistics of the mixture:
 
 ## Unit testing
 
-The performance based testing was combined with lower level unit style testing (the tests are still within the notebooks).  You can see the notebook I used to develop the MDN + LSTM at [worldmodels/notebooks/Gaussian-mix-kernel-check.ipynb]() - a short snippet is below.
+The performance based testing was combined with lower level unit style testing (the tests are still within the notebooks).  You can see the notebook I used to develop the MDN + LSTM at [worldmodels/notebooks/Gaussian-mix-kernel-check.ipynb](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/Gaussian-mix-kernel-check.ipynb) - a short snippet is below:
 
 ```python
 # worldmodels/notebooks/Gaussian-mix-kernel-check.ipynb
-
 import math
 import numpy as np
 import tensorflow as tf
@@ -1629,11 +1646,10 @@ tf.divide(tf.exp(gaussian_kernel), sig) * constant
 <figcaption>Training curve for the memory for Agent Four (40 epochs)</figcaption>
 </center>
 
-Below the code for the memory component, see the source in ([world-models/memory](https://github.com/ADGEfficiency/world-models/blob/master/worldmodels/memory)).
+Below the code for the memory component, see the source in ([world-models/memory](https://github.com/ADGEfficiency/world-models/blob/master/worldmodels/memory)).  
 
 ```python
 #worldmodels/memory/train_memory.py
-
 import argparse
 import os
 
@@ -2034,7 +2050,7 @@ class Memory:
 
 > Never let the future disturb you. You will meet it, if you have to, with the same weapons of reason which today arm you against the present - Marcus Aurelius
 
-The final component of our agent is the controller.  **The controller is a learner and decision maker**.  It has two roles - to make decisions, and to learn to make better decisions.  Balancing well between these two means our agent has made an effective trade off between exploitation of it's current knowledge with the need to explore the unknown.
+The final component of our agent is the controller.  **The controller is a learner and a decision maker**.  It has two roles - to make decisions, and to learn to make better decisions.  Balancing well between these two means our agent has made an effective trade off between exploitation of it's current knowledge with the need to explore the unknown.
 
 The controller uses the compressed representations of the current $z$ and future environment $h$, provided by the vision and memory components, to select the next action $a$:
 
@@ -2246,7 +2262,7 @@ The mean is updated using a simple average of the $N_{best}$ population members 
 
 $$ \mu_{g+1} = \frac{1}{N_{best}} \sum_{N_{best}} x_{g} $$
 
-The covariance matirx is updated using 
+The covariance matirx is updated using
 
 $$ C_{g+1} = (1 - c_{1} - c_{\mu} \cdot \sum w) \cdot C_{g} + c_{1} \cdot p_{g+1} \cdot p_{g+1}^{T} + c_{\mu} \cdot \sum_{gens} w \cdot \Big( \frac{x_{g+1} - \mu_{g}}{\sigma_{g}} \Big) \cdot \Big( \frac{x_{g+1} - \mu_{g}}{\sigma_{g}} \Big)^{T} $$
 
@@ -2257,7 +2273,7 @@ These updates allow separate control of the mean, covariance and step-size:
 
 ## Implementing the controller & CMA-ES
 
-Above we looked at some of the mechanics of CMA-ES.  
+Above we looked at some of the mechanics of CMA-ES.
 
 I did not need to reimplement CMA-ES from scratch - I used [`pycma`](https://github.com/CMA-ES/pycma).
 
@@ -2624,7 +2640,7 @@ This was the final month of technical work (finishing on December 19), where Age
 
 - editing of draft two
 - notebook clean up
-- transfer from `ADGEfficiency/world-models-dev` to `ADGEfficiency/world-models` 
+- transfer from `ADGEfficiency/world-models-dev` to `ADGEfficiency/world-models`
 
 ## Working habits
 
@@ -2664,9 +2680,9 @@ The methodology for using pretrained agent is given in the `readme.md` of the Gi
 
 This section summarizes the performance of the final agent, along with training curves for the agent components. Due to the expense of training the controller (see the section on AWS costs below), [I was very glad to find the following from David Ha](http://blog.otoro.net/2018/06/09/world-models-experiments/):
 
-> After 150-200 generations (or around 3 days), it should be enough to get around a mean score of ~ 880, which is pretty close to the required score of 900. 
-> If you don’t have a lot of money or credits to burn, I recommend you stop if you are satistifed with a score of 850+ (which is around a day of training). 
-> Qualitatively, a score of ~ 850-870 is not that much worse compared to our final agent that achieves 900+, and I don’t want to burn your hard-earned money on cloud credits. To get 900+ it might take weeks (who said getting SOTA was easy? :) 
+> After 150-200 generations (or around 3 days), it should be enough to get around a mean score of ~ 880, which is pretty close to the required score of 900.
+> If you don’t have a lot of money or credits to burn, I recommend you stop if you are satistifed with a score of 850+ (which is around a day of training).
+> Qualitatively, a score of ~ 850-870 is not that much worse compared to our final agent that achieves 900+, and I don’t want to burn your hard-earned money on cloud credits. To get 900+ it might take weeks (who said getting SOTA was easy? :)
 
 The training curve for the controller.  We show a much worse performing minimum than Ha & Schmidhuber, perhaps due to the use of a much higher `sigma` in `pycma`.
 
@@ -2958,7 +2974,7 @@ def make_directories(*dirs):
 
 This was the first machine learning paper I have reimplemented.  It is something I am going to do again, and would recommend.
 
-The work closely matches the work data scientists often do on the job (taking existing code and using it for your task).  
+The work closely matches the work data scientists often do on the job (taking existing code and using it for your task).
 
 If you are thinking about remiplementating a paper, key questions are if the official codebase for the paper available or are there many other reimplemenations.
 
@@ -2974,7 +2990,7 @@ I now have a decent grasp of evolutionary methods. I know there are many more al
 
 One of the more pleasant insights I had while working on this project was discovering the many blog posts by David Ha on the various components of the agent (in particular MDNs & evolutionary algorithms), a few of my favourites are below:
 
-- [Mixture Density Networks with TensorFlow](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/) 
+- [Mixture Density Networks with TensorFlow](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/)
 - [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/).
 - [Evolving Stable Strategies](http://blog.otoro.net/2017/11/12/evolving-stable-strategies/).
 
