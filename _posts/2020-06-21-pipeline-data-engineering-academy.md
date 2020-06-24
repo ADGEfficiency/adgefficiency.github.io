@@ -81,7 +81,7 @@ Alongside the project work was more traditional tutorial content. The technical 
 - connect things together
 - `get / load, store, deploy`
 
-Enriching data to make it valuable to the business - including a brilliant example of converting UNIX time to data with semantic meaning:
+A particularly useful insight was enriching data to make it valuable to the business - including a brilliant example of converting a UNIX timestamp to data with semantic meaning and value:
 - UNIX epoch time
 - datetime (5th Jan 2020 etc)
 - thursday (calculable)
