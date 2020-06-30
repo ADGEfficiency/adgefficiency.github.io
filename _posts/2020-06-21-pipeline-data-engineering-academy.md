@@ -72,7 +72,7 @@ Another was the usefulness of Makefiles to build DAGs.  I was familiar with the 
 
 There were a few other tools taught on the course, including Datasette & GitHub Actions - playing with these is on my `TODO`.
 
-I've also been able to use lessons & learnings in other projects such as the [climate-news-db](https://github.com/ADGEfficiency/climate-news-db).  It's also given me a stack (Python, Flask, SQLite, PythonAnywhere, Jinja & Bootstrap) that allows full stack, agile data science
+I've also been able to use lessons & learnings in other projects such as the [climate-news-db](https://github.com/ADGEfficiency/climate-news-db).  It's also given me a stack (Python, Flask, SQLite, PythonAnywhere, Jinja & Bootstrap) that allows full stack, agile data science.
 
 ## What can you learn in a week anyway?
 
@@ -102,6 +102,6 @@ There was also a strong emphasis on being pragmatic, avoiding absolutes and real
 
 ## Where to go next
 
-If you are someone considering transitioning into a data professional, [consider data engineering with Pipeline Data Engineering Academy](https://www.dataengineering.academy/).
+If you are someone considering transitioning into a data (especially data engineering), [consider data engineering with Pipeline Data Engineering Academy](https://www.dataengineering.academy/).
 
 Thanks for reading!
