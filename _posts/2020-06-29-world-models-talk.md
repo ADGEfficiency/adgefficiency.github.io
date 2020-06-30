@@ -1,9 +1,9 @@
 ---
-title: 'Talk on World Models reimplementation'
+title: 'Talk on Reimplementing World Models'
 author: Adam Green
 categories:
   - Data Science
-excerpt:
+excerpt: A short talk on my 2019 side project.
 
 ---
 
@@ -15,6 +15,7 @@ The talk will give an introduction to the vision, memory and control components 
 
 The talk will be [streamed on Twitch](https://www.twitch.tv/climatecode) on June 30th 2020, 1700 CET.
 - [link to the stream](https://www.twitch.tv/climatecode)
+- [slides](https://www.canva.com/design/DAEAprZCheM/YiP7XIqbPDeKgnOC7bNaNg/view?utm_content=DAEAprZCheM&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink)
 - [blog post](https://www.twitch.tv/climatecode)
 - [reimplementation codebase](https://github.com/ADGEfficiency/world-models)
 - [collection of related resources](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models)
