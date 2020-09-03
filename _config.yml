@@ -182,7 +182,7 @@ kramdown:
   auto_ids: true
   footnote_nr: 1
   entity_output: as_char
-  toc_levels: 1..6
+  toc_levels: 1..2
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   enable_coderay: false
 
@@ -253,14 +253,11 @@ defaults:
       path: ""
       type: posts
     values:
-      layout: single
-      author_profile: true
+      layout: single_no_bar
+      author_profile: false
       read_time: true
       comments: # true
       share: true
-      related: true
-      classes: wide
-      sidebar:
-        nav: "top"
+      classes: wide2
 
 logo: "favicon.png"

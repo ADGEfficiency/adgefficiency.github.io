@@ -519,3 +519,5 @@ After a legendary career as a mathematician and a stint breaking Soviet codes, S
 ### 175 - Bird by Bird - Anne Lamott
 
 ### 176 - Python Data Science Handbook - Jake VanderPlas
+
+### 177 - Burn Your Portfolio - Michael Janda

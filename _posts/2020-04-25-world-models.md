@@ -4,8 +4,13 @@ date: 2019-12-21
 categories:
   - Python, Machine Learning, Reinforcement Learning
 excerpt: Ha & Schmidhuber's World Models reimplemented in Tensorflow 2.0.
+classes: wide2
+toc: true
+toc_sticky: true
 
 ---
+
+
 
 <center>
   <img src="/assets/world-models/f0.gif">

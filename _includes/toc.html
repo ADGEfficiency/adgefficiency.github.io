@@ -22,8 +22,8 @@
     {%- endcomment -%}
 
     {% capture my_toc %}{% endcapture %}
-    {% assign minHeader = include.h_min | default: 1 %}
-    {% assign maxHeader = include.h_max | default: 6 %}
+    {% assign minHeader = 1 | default: 1 %}
+    {% assign maxHeader = 1 | default: 6 %}
     {% assign nodes = include.html | split: '<h' %}
     {% assign firstHeader = true %}
 
