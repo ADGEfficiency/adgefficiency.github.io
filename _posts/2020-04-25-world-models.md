@@ -10,8 +10,6 @@ toc_sticky: true
 
 ---
 
-
-
 <center>
   <img src="/assets/world-models/f0.gif">
 <figcaption>Performance of the final agent on a conveniently selected random seed.</figcaption>
@@ -25,7 +23,7 @@ toc_sticky: true
 
 **In 2019 I reimplemented the 2018 paper World Models by David Ha & Jürgen Schmidhuber**. This post takes a unapologetically deep and indulgent look at the theory and practice of the reimplementation.
 
-The remiplementation source code is in [ADGEfficiency/world-models](https://github.com/ADGEfficiency/world-models). References & resources are in [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
+The remiplementation source code is in [ADGEfficiency/world-models](https://github.com/ADGEfficiency/world-models). References & resources are in [ADGEfficiency/rl-resources/world-models](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models). I gave a short talk about this project - [you can find the slides here](https://adgefficiency.com/world-models/).
 
 This project took around ten months:
 

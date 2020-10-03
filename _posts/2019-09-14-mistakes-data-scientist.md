@@ -7,11 +7,19 @@ excerpt: Badges of honour for the accomplished data scientist.
 
 ---
 
+<i>Update </i>
+<i>- [slides for a talk on this blog post](https://www.canva.com/design/DADl9pRJd0c/Ay44vvr7SCtp2aUNrWevpw/view?utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=homepage_lightbox)</i>
+<i>- [reddit coverage ](https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/)</i>
+
+<center><img src="/assets/mistakes-data-sci/reddit.png" width="700"></center>
+
+---
+
 > An expert is a person who has made all the mistakes that can be made in a very narrow field - Niels Bohr - Nobel Prize in Physics 1922
 
 > If you don't make mistakes, you’re not working on hard enough problems. And that’s a big mistake – Frank Wilczek - Nobel Prize in Physics 2004
 
-I'm fascinated by systems that use error to improve.  
+I'm fascinated by systems that use error to improve.
 
 These are Nassim Nicholas Taleb's **antifragile** systems, which use error/pain/volatility/mistakes to improve.  This is an observable paradox - a sign of a fundamental truth.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also **learning data science**.
 

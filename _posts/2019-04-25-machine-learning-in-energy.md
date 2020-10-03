@@ -1,22 +1,28 @@
 ---
 title: 'Machine Learning in Energy'
 date: 2019-04-25
+classes: wide2
+toc: true
+toc_sticky: true
 categories:
   - Energy
   - Machine Learning
 excerpt:  A guide for the energy professional.
 redirect_from: 
   - /machine-learning-in-energy-part-one/
+  - /machine-learning-in-energy-part-two/
 
 ---
 
-This post is aimed at introducing energy industry professionals to machine learning.  By the end of the article you will be able to answer the following questions:
+This post is aimed at introducing energy industry professionals to machine learning - no prior knowledge is required.  
+
+By the end of the article you will be able to answer the following questions:
 - what is machine learning?
 - why is machine learning so hot right now?
-- what is driving performance?
+- what is driving the performance of modern machine learning?
 - what are the challenges?
-- what's going on in machine learning and energy today?
-- what might the future of energy and machine learning hold?
+
+This post finishes with a review of two of the most visible applications of machine learning in the energy industry - forecasting of wind and control of data centers.
 
 ## Glossary
 
@@ -26,17 +32,24 @@ This post is aimed at introducing energy industry professionals to machine learn
 
 *Deep learning = a family of machine learning models, that use multi-layered neural networks to approximate functions*
 
-## What is machine learning?
 
-> The business plans of the next 10,000 startups are easy to forecast: *Take X and add AI* - Kevin Kelly
+# What is data?
+
+
+
+# What is machine learning?
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
-The hype has officially peaked - deep learning is right at the top of the peak of inflated expectations.
+
+
+
+
+The hype has officially peaked - as of 2018 deep learning is right at the top of the peak of inflated expectations.
 
 ![]({{ '/assets/ml_energy/hype.png' }})
 
-*[The 2018 Gartner Hype Cycle](https://www.gartner.com/smarterwithgartner/5-trends-emerge-in-gartner-hype-cycle-for-emerging-technologies-2018/)*
+<figcaption>*[The 2018 Gartner Hype Cycle](https://www.gartner.com/smarterwithgartner/5-trends-emerge-in-gartner-hype-cycle-for-emerging-technologies-2018/)*</figcaption>
 
 Deep learning is foundation of the hype in modern machine learning.  Deep learning uses complex, many layered neural networks to learn patterns from large datasets.  This is the primary intelligence of machine learning - pattern recognition.
 
@@ -88,7 +101,7 @@ AlphaGo stands in contrast to Deep Blue, the computer that solved chess with a 1
 
 DeepMind (the London lab behind AlphaGo) then introduced AlphaZero, which beat the previous version 100-0.  This version never relied on a dataset of human expert moves, and learnt entirely from adversarial self-play.
 
-## Why is machine learning so hot right now?
+# Why is machine learning so hot right now?
 
 Each of these three branches is undergoing a tremendous period of performance, research activity and hype.  Fundamental to all of this improvement is deep learning - the use of multiple layer neural networks as complex function approximators.
 
@@ -126,7 +139,7 @@ A recurrent layer processes input and generates output as sequences, and powers 
 
 The ability to see and understand language not only drives performance, it also allows machine learning to generalize.  Vision and language understanding are low level skills used in essentially every domain of human life.  Mastering these low level skills means that machines can be useful in a range of industries.  Energy is no different.
 
-## What's driving the performance of modern machine learning?
+# What's driving the performance of modern machine learning?
 
 The performance of modern deep learning is driven by the interaction of two processes - the increased availability of data and the ability to train large models with lots of data.
 
@@ -138,7 +151,7 @@ The second hardware trend is cloud computing.  The cloud gives access to computa
 
 A final trend driving modern machine learning is access to algorithms and tools.  Almost all the relevant literature for machine learning is available for free on sites like arXiv.  It's also possible to access high quality implementations of machine learning tools on GitHub.  This tendency for openness stands in stark contrast with the paywalls and licensed software of the energy industry.
 
-## Challenges
+# Challenges
 
 There are a wide range of challenges in machine learning.  Examining them all is outside the scope of this article - issues such as interpretability, worker displacement and misuse of powerful narrow AI are significant issues and the focus of much research.  There is also much work to be done extending the powerful, narrow machine intelligence we have today into a general artificial intelligence.  Instead we will focus on challenges specific to using machine learning on energy problems.
 
