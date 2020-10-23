@@ -521,3 +521,17 @@ After a legendary career as a mathematician and a stint breaking Soviet codes, S
 ### 176 - Python Data Science Handbook - Jake VanderPlas
 
 ### 177 - Burn Your Portfolio - Michael Janda
+
+### 178 - The Art of Doing Science and Engineering: Learning to Learn - Richard W. Hamming 
+
+### 179 - Practical Natural Language Processing - Sowmya Vajjala
+
+### 180 - Sid Meier's Memoir!: A Life in Computer Games - Sid Meier
+
+### 181 - Masters of Doom - David Kushner
+
+### 182 - Tea War - Andrew B. Liu
+
+### 183 - Data Scientists at Work - Sebastian Gutierrez
+
+### 184 - Data Science at the Command Line - Jeroen Janssens

@@ -33,17 +33,9 @@ This post finishes with a review of two of the most visible applications of mach
 *Deep learning = a family of machine learning models, that use multi-layered neural networks to approximate functions*
 
 
-# What is data?
-
-
-
 # What is machine learning?
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
-
-
-
-
 
 The hype has officially peaked - as of 2018 deep learning is right at the top of the peak of inflated expectations.
 
