@@ -8,21 +8,16 @@ classes: wide
 
 ![]({{"/assets/teaching.jpg"}})
 
-*Teaching backpropagation*
+<p align="center"><i>Teaching backpropagation</i></p>
 
-An energy engineer turned data scientist.  [Currently I am the Director at Data Science Retreat](https://datascienceretreat.com/) - Europe's most advanced data science bootcamp.  Previously I have been an energy engineer on industrial & district energy projects at ENGIE, as well as a data scientist at Tempus Energy.
+An energy engineer turned data scientist. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
-I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
-
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com).
-
-[All of my work is open source](https://github.com/ADGEfficiency). [See my photos on flickr](https://www.flickr.com/photos/37628582@N00/). [I sometimes stream on Twitch](https://www.twitch.tv/climatecode).
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - [most of my work is open source](https://github.com/ADGEfficiency) - [I offer mentoring on Mentor Cruise](https://mentorcruise.com/mentor/AdamGreen/).
 
 ## Data science teaching
 
-[You can see the resources I use to teach data science in the teaching monolith](https://github.com/ADGEfficiency/teaching-monolith).
+[Resources I use to teach data science are all in the teaching-monolith](https://github.com/ADGEfficiency/teaching-monolith).
 
-[I'm offering personalized mentoring on Mentor Cruise](https://mentorcruise.com/mentor/AdamGreen/).
 
 ## Reinforcement learning for energy systems
 

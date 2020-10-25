@@ -14,11 +14,29 @@ redirect_from:
 
 ---
 
-*Updated on 2020-10-21: Rewrite!*
+*Update history* 
+- *2017-04-30 - original two part posts*
+- *2019-04-25 - conoslidation of part one & two*
+- *2020-10-21 - rewrite*
+
+
+# Introduction
 
 The energy industry is used to technological change.  Experienced engineers have seen transitions from coal to oil to gas - all within a single lifetime. We are now in the middle of another transition towards renewables.
 
-In the last ten years, artificial intelligence & machine learning have revolutionized computing.  Is artficial intelligence important for energy industry professionals?  What about machine learning - is this a revolution for energy?
+In the last ten years, artificial intelligence & machine learning have revolutionized computing.  Is this revolution important for energy industry professionals?  What about machine learning - is this a revolution for energy?
+
+
+## How to use this post
+
+This post is aimed at two audiences:
+- energy professionals wanting to understand how machine learning and energy fit together
+- data scientists & machine learning engineers wanting get an energy industry perspective
+
+This post is organized into three main sections - best read together but designed to be readable separately:
+- section one - the concepts of AI, machine learning and deep learning
+- section two - how machine learning intersects with energy
+- section three - case studies of machine learning applications in energy
 
 Understanding how these technologies impact the work of energy professionals and the industry at large is not simple.  That's what this post is about - helping energy industry professionals to understand:
 
@@ -33,17 +51,17 @@ A secondary audience for this article are machine learning professionals who wan
 The article is for suitable for both a technical and non-technical reader.
 
 
-# AI, machine learning & deep learning
+# SECTION ONE
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
 The last ten years has seen a revolution in artificial intelligence, powered by machine learning.  Machine learning has blown past the previous state of the art across a wide range of difficult problems.
 
-Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by a specific kind of machine learning - deep learning.
-
 ![fig2]({{ '/assets/ml_energy/fig1.png' }})
 
 *Recent progress in computer vision on the ImageNet benchmark - [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)*
+
+Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by a specific kind of machine learning - deep learning.
 
 ![fig1]({{ '/assets/ml_energy/gans.png' }})
 
@@ -58,20 +76,19 @@ This section will clarify the relationship between these three concepts that are
 ![fig2]({{ '/assets/ml_energy/ai-ml-dl.png' }})
 
 
+# What is AI?
 
-
-## What is AI?
-
-The pursuit of artificial intelligence (AI) is older than modern computing. The dream of making intelligent machines that can solve our problems is the primary motivation of many researchers.
+The pursuit of artificial intelligence (AI) is older than modern computing. Making intelligent machines that can solve our problems is a dream of many researchers.
 
 This section will answer:
+
+- where does intelligence stop and automation begin?
 - is an elevator an AI?
-- 
 
-Where does intelligence stop and automation begin?  
+The term *artificial* is clear - machines, computer programs.  Intelligence however is more complex.
 
 
-### What is intelligence?
+## What is intelligence?
 
 We find two concepts useful to understand intelligence - competence & comprehension:
 
@@ -91,7 +108,7 @@ We've seen above that given a broader definition of intelligence, AI has been he
 In order to understand the relationship between AI and machine learning, we will split AI into two broad approaches - rule based and learning based.
 
 
-### Rule based AI 
+## Rule based AI 
 
 As we have seen above, if we define competence (the ability to do a task well) as intelligence, then much of what we today call automation can also be called AI.
 
@@ -102,7 +119,7 @@ Because these systems are based on rules, human programmers need to develop thes
 Because these systems are human designed, they can be understood by their programmers.
 
 
-### Learning based AI
+## Learning based AI
 
 Another approach to creating intelligent machines is to let them learn for themselves.  In the case of machine learning, learning occurs from data.
 
@@ -116,7 +133,7 @@ Learning systems can also have some disadvantages
 - reliance on data to learn from
 
 
-### Case study - DeepBlue vs. AlphaGo
+## Case study - DeepBlue vs. AlphaGo
 
 The crown jewel of modern reinforcement learning is the 2016 AlphaGo victory over Lee Sedol.  Go was the last great challenge for AI in board games - creating a superhuman Go computer was thought to be a decade away.  AlphaGo used deep neural networks to to map from the high dimensional board state to an optimal next move.
 
@@ -129,7 +146,7 @@ AlphaGo stands in contrast to Deep Blue, the computer that solved chess with a 1
 DeepMind (the London lab behind AlphaGo) then introduced AlphaZero, which beat the previous version 100-0.  This version never relied on a dataset of human expert moves, and learnt entirely from adversarial self-play.
 
 
-## What is machine learning?
+# What is machine learning?
 
 Machine learning is the branch of artificial intelligence where machines learn from data.
 
@@ -138,14 +155,7 @@ This section will cover
 Because machine learning is a subset of artificial intelligence, they should not be used interchangeably.  One reason machine learning is often confused with AI is how well modern machine learning is performing.  The other reason is that AI is better at generating hype - you'll likely raise more money for your startup if you are 'an innovative AI platform'.
 
 
-### How does machine learning work?
-
-The way machine learning works is by trial & error
-
-![fig1]({{ '/assets/ml_energy/nn_black_box.png' }})
-
-
-### What is data?
+## What is data?
 
 Data is central to machine learning - it's one of the three things you need to get it to work:
 
@@ -170,70 +180,172 @@ It is impacting every industry - this ability stems from the capability of neura
 ![]({{ '/assets/ml_energy/tabular.png' }})
 
 
-### Tabular data
+## Tabular data
 
 Tabular data will be familiar to anyone who has spent time in Excel - data is organized into rows and columns.  Each row represents a sample of data, each column represents a certain feature or characteristic about each row.
 
 A key feature of tabular data is that the order doesn't matter.
 
 
-### Time series data
+## Time series data
 
 Time series data looks very similar to tabular data - the key difference is that now there
 
 
-### Decision data
+## Decision data
 
 Order matters, action changes the data you see next.
 
 
-## Two perspectives on machine learning
+## Case study - customer data
 
-### Perspective one - Learning without explicit programming
+Let's now use an example to explain the difference between these three common types of data collected by energy companies - collecting an energy retail company (called EnergyCo) collecting information about their customers.
 
-Supervision from data, learning from experience
+An example of tabular data EnergyCo would collect would be fixed infomation, such as where the customer lives or when they signed up:
+
+| Name | Address         | Contract Start |
+|------|-----------------|----------------|
+| Bill | 123 Fake Street | 2016-01-01     |
+| Jane | 321 Real Lane   | 2016-01-15     |
+
+An example of time series data would be the monthly consumption of these customers - the data has a temporal & sequential structure:
+
+| Month   | Name | Consumption |
+|---------|------|-------------|
+| 2016-01 | Bill | 116.8       |
+| 2016-02 | Bill | 204.3       |
+| 2016-01 | Jane | 50.4        |
+| 2016-02 | Jane | 311.0       |
+
+An example of decision data would be the data collected by EnergyCo's customer support team:
+
+| Timestamp  | Customer Name | Reason for call  | Action                  |
+|------------|---------------|------------------|-------------------------|
+| 2016-01-03 | Bill          | Invoice too high | Reissue invoice         |
+| 2016-02-15 | Jane          | Invoice late     | Update customer address |
 
 
-### Perspective two - pattern recognition
-
-Generalization
-
+## What tasks can machine learning do?
 
 ### Three branches of machine learning
 
 To learn these patterns, machine learning makes use of three distinct learning signals, which separates machine learning into three branches.
+There are three main tasks commonly done by machine learning:
+
+- predicting
+- generating data
+- making decisions
+
+can
+- rl, vae, bayesian inference, image augmentation, clustering (smote), hidden markov models
+
+Some may say augmentation != generation - but the aug is learnt from data same way gradients are
+
+can't
+- supervised learning,
+
+## Prediction or control
+
+both
+- linear programs
+- reinforcement learning
+
+## Supervised learning
 
 The first is **supervised learning**, where the machine used labelled training data to learn how to predict the labels of unseen data.  Examples include time series forecasting, computer vision and language translation.  Supervised learning is the reason why Facebook can tell which of your friends is in your photo, or why Google can translate text from on a photo on your smart phone.
+
+
+## Unsupervised learning
 
 The second is **unsupervised learning**, where the machine is able to generate new data without the supervision of labels.  Examples include artistic style transfer and generating realistic faces.
 
 Generative Adversarial Networks (GANs) learn to generate realistic images using two competing neural networks.  One network generates images (the generator) and a second network has to decide if the image is real or fake.  This kind of adversarial learning is can be effective.
 
 
+## Reinforcement learning
+
 Adversarial learning can also be used in our final branch of machine learning - **reinforcement learning**.  In reinforcement learning the machine learns to select actions with the supervision of a scalar reward signal.  Reinforcement learning is applicable to a wide range of decision making problems with a reward signal, such as cost or carbon emissions.
 
 
+## How does machine learning work?
 
-## What is deep learning?
+The way machine learning works is by trial & error
 
-Deep learning is foundation of the hype in modern machine learning.  Deep learning uses complex, many layered neural networks to learn patterns from large datasets.  This is the primary intelligence of machine learning - pattern recognition.
-
-### Classical ML versus deep learning
-
-
-# Is the hype justified?
-
-Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
-
-## What about general AI?
-
-some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
+![fig1]({{ '/assets/ml_energy/nn_black_box.png' }})
 
 
-## Achievements
+
+## Two perspectives on machine learning
+
+- dimensionality reduction
+- function approximation
+
+Let's return to our equation for machine learning - the three things you need to get machine learning to work:
+
+<center>
+  <code>machine learning = data + compute + algorithm</code>
+</center>
+<p></p>
+
+Machine learning is a deep topic - below we offer two useful perspectives to help you understand the complexity without having to dive deep into math or code.
 
 
-## What is driving the performance?
+## Perspective one - programming without explicit programming
+
+Earlier when we discussed AI, we made a distinction between rule based AI and learning AI.
+
+This is our first useful perspective on machine learning - **programming without explicit programming**.
+
+With machine learning, supervision comes from data.  Lear
+
+Learning from experience
+
+
+## Perspective two - pattern recognition
+
+A second useful perspective on machine learning is of pattern recognition.
+
+A key challenge in pattern recognition is separating signal from the noise.  
+
+This is known as generalization.
+
+Examples of failing to generalize include:
+
+
+Examples of successful generalization include:
+
+
+
+These three 
+
+
+
+
+# What is deep learning?
+
+In this section you will understand:
+
+- why deep learning works on data with structure
+
+
+**Deep learning is foundation of the hype in modern machine learning.**  Deep learning is a family of machine learning models based on artificial neural networks - inspired by our own biological neural network (our brain).
+
+Deep learning uses complex, many layered neural networks to learn patterns from large datasets.  
+
+As with AI, we are going to split machine learning roughly into two branches - classical machine learning and deep learning.  To best understand this split, we need a third perspective on what machine learning is - function approximation.
+
+
+### Perspective three - function approximation
+
+
+### How does function approximation relate to supervised, unsupervised & reinforcement learning?
+
+
+
+## Classical machine learning
+
+
+## Deep learning
 
 Each of these three branches is undergoing a tremendous period of performance, research activity and hype.  Fundamental to all of this improvement is deep learning - the use of multiple layer neural networks as complex function approximators.
 
@@ -246,8 +358,6 @@ Neural networks are general purpose.  If neural networks were only applicable in
 
 The atomic unit of a neural network is the perceptron - a simple model that combines input from other perceptrons, squeezes it through a non-linear function (such as a sigmoid or rectifier) and sends output to child perceptrons.  The mathematics of this are beyond the scope of this article - the key takeaway is that stacking these perceptrons together into many layers allows neural networks to learn complex functions from large amounts of data.
 
-![]({{ '/assets/ml_energy/mlp.png' }})
-
 There is more to machine learning than just deep neural networks - algorithms like logistic regression and random forests are suitable for many business problems.      The problem with classical machine learning is that it doesn't benefit from massive amounts of data.  Because the capacity of a neural network can be increased by adding depth, neural networks are able to break through the limits of classical machine learning models.
 
 ![fig3]({{ '/assets/ml_energy/fig2.png' }})
@@ -256,35 +366,29 @@ There is more to machine learning than just deep neural networks - algorithms li
 
 Layers are selected to take advantage of the structure in raw data.  Three common layers are fully connected, convolution and recurrent.
 
-![]({{ '/assets/ml_energy/conv.png' }})
-
-*Deep convolutional neural network used in the [2015 DeepMind Atari work](https://github.com/ADGEfficiency/dsr_rl/blob/master/literature/reinforcement_learning/2015_Minh_Atari_Nature.pdf)*
-
-The convolutional layer is inspired by our own visual cortex, and is what powers modern computer vision.  They allow machines to see.  They can be used to classify the contents of the image, recognize faces and create captions for images.
-
-![]({{ '/assets/ml_energy/recurr.png' }})
-
-*An unrolled recurrent neural network - [colah's blog](http://colah.github.io/posts/2015-08-Understanding-LSTMs/)*
-
-A recurrent layer processes input and generates output as sequences, and powers modern natural language processing.  Recurrent networks allow machines to understand the temporal structure in data, such as words in a sentence.
-
 The ability to see and understand language not only drives performance, it also allows machine learning to generalize.  Vision and language understanding are low level skills used in essentially every domain of human life.  Mastering these low level skills means that machines can be useful in a range of industries.  Energy is no different.
 
 
-## What's driving the performance of modern machine learning?
+# Is the hype justified?
 
-The performance of modern deep learning is driven by the interaction of two processes - the increased availability of data and the ability to train large models with lots of data.
+Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
 
-The rise of the internet and devices that generate raw data (sensors, images and text) has lead to the curation of massive datasets.  These massive datasets are the food of deep neural networks - without the data, the models can't learn.
 
-The ability to train large models rests upon the ability to access specialized hardware in the cloud.  In the 2000's researchers repurposed hardware designed for video games (graphics processing units, or GPUs) to train neural networks.  This led to dramatic speedup in training times, which is important - all our understanding of machine learning is empirical (learned through experiment).
+## What about general AI?
 
-The second hardware trend is cloud computing.  The cloud gives access to computation on a fully variable cost basis.  Platforms such as Amazon Web Services allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.  This access to computing power works both vertically within large technology companies and for smaller companies.  It enables the balance sheet benefit of shifting a capital expense (building data centres) into an operating expense.
+some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
 
-A final trend driving modern machine learning is access to algorithms and tools.  Almost all the relevant literature for machine learning is available for free on sites like arXiv.  It's also possible to access high quality implementations of machine learning tools on GitHub.  This tendency for openness stands in stark contrast with the paywalls and licensed software of the energy industry.
+
+## Achievements
 
 
 ## Challenges
+
+energy = small data
+- renewables plant only 2 years old
+- combinigc datasets useful
+- Poor state of digitization means working with small data is the primary work of energy data scientists
+
 
 So far machine learning has provided narrow artificial intelligence (AI).  The power of these systems are often superhuman, and more than enough to justify the hype around machine learning.  Typically the task involves perception, using high dimensional data (i.e. images).  This is the main contribution of machine learning - being able to create business value from raw, high dimensional data.
 
@@ -299,13 +403,14 @@ Forward thinking energy companies know that data can only be collected once.  It
 
 The curation of large and interesting datasets is one of the few defensible advantages an energy company can build (another is brand).  These datasets are valuable not only because of how we can use them today, but because of the insights that can be generated tomorrow.
 
+
 # Machine learning & energy
 
-### Trends in energy
+## Trends in energy
 
 More things to measure (distributed), more measurements
 
-### Trends in machine learning
+## Trends in machine learning
 
 ## Why
 
@@ -320,10 +425,11 @@ More things to measure (distributed), more measurements
 
 # Applications
 
-- chatbots
 - cutomer segmentation
+- chatbots
+- customer service demand prediction
 - churn prediction
-- reccomendation
+- reccomendation emails to customers
 
 - predictive maintenance
 - forecasting
