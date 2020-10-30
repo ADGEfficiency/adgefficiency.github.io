@@ -3102,7 +3102,7 @@ Due to reusing kernels, the convolution neural network is translation invariant,
 
 ## Appendix Four - LSTM
 
-*For a deeper look at LSTM's, I cannot reccomend the blog post [Understanding LSTM Networks - colah's blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) highly enough.*
+*For a deeper look at LSTM's, I cannot recommend the blog post [Understanding LSTM Networks - colah's blog](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) highly enough.*
 
 The motivation for using an LSTM to approximate the transition dynamics of the environment is that an LSTM is a **recurrent neural network**.  In the `car-racing-v0` environment the data is a sequence of latent representations $z$ of the observation
 
@@ -3111,8 +3111,6 @@ Recurrent neural networks process data in a sequence:
 $$ P(x' | x, h) $$
 
 Where $h$ is the hidden state of the recurrent neural network.
-
-
 
 The LSTM was introduced in 1997 by Hochreiter & Schmidhuber.  A key contribution of the LSTM was overcoming the challenge of long term memory with only a single representation of the future.
 
