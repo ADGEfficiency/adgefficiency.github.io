@@ -10,22 +10,45 @@ classes: wide
 
 <p align="center"><i>Teaching backpropagation</i></p>
 
-An energy engineer turned data scientist. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
+I'm an energy engineer turned data scientist. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - [most of my work is open source](https://github.com/ADGEfficiency) - [I offer mentoring on Mentor Cruise](https://mentorcruise.com/mentor/AdamGreen/).
+Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - [most of my work is open source](https://github.com/ADGEfficiency) - [I offer personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
-## Data science teaching
+# Projects
 
-[Resources I use to teach data science are all in the teaching-monolith](https://github.com/ADGEfficiency/teaching-monolith).
+## climate-news-db
 
+A tool for downloading climate change newspaper articles.
 
-## Reinforcement learning for energy systems
+[app](https://www.climate-news-db.com/) - [blog post](https://www.climate-code.com/project/climate-news-db) - [source code](https://github.com/ADGEfficiency/climate-news-db)
+
+![]({{"/assets/my-work/db.png"}})
+
+## Soft Actor Critic (SAC) Reimplementation
+
+[source code](https://github.com/ADGEfficiency/sac)
+
+![]({{"/assets/my-work/sac.png"}})
+
+## World Models Reimplementation
+
+[blog post](https://adgefficiency.com/world-models/) - [source code](https://github.com/ADGEfficiency/world-models) - [references & resources](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models)
+
+![]({{"/assets/my-work/world.png"}})
+
+## Teaching Monolith
+
+[data science teaching materials](https://github.com/ADGEfficiency/teaching-monolith).
+
+![]({{"/assets/my-work/monolith.png"}})
+
+## Reinforcement Learning for Energy Systems
 
 [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
 
 ![]({{"/assets/dqn_solving/fig1.png"}})
 
-## Mixed integer linear programming of battery storage and combined heat and power
+## Mixed Integer Linear Programming of Battery Storage and Combined Heat & Power
 
 [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
 
@@ -35,14 +58,6 @@ model = epl.Battery(power=2, capacity=4, efficiency=1.0)
 prices = [10, 50, 10, 50, 10]
 info = model.optimize(prices, timestep='30min')
 ```
-
-## UK and Australian grid data
-
-The Australian grid is a unique combination of high coal penetrations, quality potential renewable resources (and high penetration in South Australia) and a deregulated, volatile electricity market.  It also has good data availability - if you know where to look for it.
-
-[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
-
-## Combined heat and power
 
 I spent four years working as an industrial energy engineer, and worked with a lot of CHP plant.  [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) has a CHP model that can be configured with a number of gas and steam turbines, then optimized as a function of gas and electricity prices.
 
@@ -67,7 +82,15 @@ info = optimize(
 
 [CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/) - [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
 
-## Energy
+
+## UK and Australian Grid Data
+
+The Australian grid is a unique combination of high coal penetrations, quality potential renewable resources (and high penetration in South Australia) and a deregulated, volatile electricity market.  It also has good data availability - if you know where to look for it.
+
+[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
+
+
+## Writing on Energy
 
 I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://www.adgefficiency.com/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://www.adgefficiency.com/energy-basics-kw-vs-kwh/).
 
