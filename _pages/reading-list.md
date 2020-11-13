@@ -535,3 +535,9 @@ After a legendary career as a mathematician and a stint breaking Soviet codes, S
 ### 183 - Data Scientists at Work - Sebastian Gutierrez
 
 ### 184 - Data Science at the Command Line - Jeroen Janssens
+
+### 185 - How Emotions Are Made - Lisa Feldman Barrett
+
+... emotion is constructed in the moment by core systems interacting across the whole brain, aided by a lifetime of learning.
+
+### 186 - Ho Chi Minh: A Life - William J. Duiker
