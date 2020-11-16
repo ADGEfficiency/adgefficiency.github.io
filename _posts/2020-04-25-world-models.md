@@ -47,9 +47,9 @@ I spent a total of $USD 3,648 on the project:
 
 | AWS Costs           |   Cost [$] |
 |:--------------------|-----------:|
-| compute-total       |       2485 |
-| storage-total       |       1162 |
-| total               |       3648 |
+| compute-total       |       2,485 |
+| storage-total       |       1,162 |
+| total               |       3,648 |
 
 <p></p>
 
@@ -2653,13 +2653,13 @@ This was the final month of technical work (finishing on December 19), where Age
 
 <center>
   <img src="/assets/world-models/commits-week.png">
-  <figcaption>Commits per weekday</figcaption>
+  <figcaption>Commits grouped by weekday</figcaption>
   <div></div>
 </center>
 
 <center>
   <img src="/assets/world-models/commits-hour.png">
-  <figcaption>Commits per hour</figcaption>
+  <figcaption>Commits grouped by hour of the day</figcaption>
   <div></div>
 </center>
 
@@ -2991,8 +2991,8 @@ I now have a decent grasp of evolutionary methods. I know there are many more al
 One of the more pleasant insights I had while working on this project was discovering the many blog posts by David Ha on the various components of the agent (in particular MDNs & evolutionary algorithms), a few of my favourites are below:
 
 - [Mixture Density Networks with TensorFlow](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/)
-- [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/).
-- [Evolving Stable Strategies](http://blog.otoro.net/2017/11/12/evolving-stable-strategies/).
+- [A Visual Guide to Evolution Strategies](http://blog.otoro.net/2017/10/29/visual-evolution-strategies/)
+- [Evolving Stable Strategies](http://blog.otoro.net/2017/11/12/evolving-stable-strategies/)
 
 It is inspiring to actually be able to see and follow some of the strands of the development.  It is also a perfect example of why working in machine learning is amazing - world class reseachers publically sharing content that helps others learn.
 
