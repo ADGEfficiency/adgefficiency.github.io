@@ -1608,7 +1608,7 @@ From a software development perspective, development of the `Memory` class was d
 
 ## Performance based testing
 
-The first was testing the generalization of the MDN on a toy dataset.  The inspiration and dataset came directly from [Mixture Density Networks with TensorFlow by David Ha](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/). It is in Tensorflow 1.0, which required updating to Tensorflow 2.0.  You can see the notebook I used to develop the MDN + LSTM at [world-models/notebooks/memory-quality-check.ipynb]().
+The first was testing the generalization of the MDN on a toy dataset.  The inspiration and dataset came directly from [Mixture Density Networks with TensorFlow by David Ha](http://blog.otoro.net/2015/11/24/mixture-density-networks-with-tensorflow/). It is in Tensorflow 1.0, which required updating to Tensorflow 2.0.  You can see the notebook I used to develop the MDN + LSTM at [world-models/notebooks/memory-quality-check.ipynb](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/memory-quality-check.ipynb).
 
 The next test was with an LSTM generating the statistics of the mixture:
 
@@ -2583,11 +2583,9 @@ I didn't work on this project in June - I was busy with lots of teaching for Bat
 - development of memory
 - first run of the full agent *Agent One* - achieved an average of 500
 
-assets/world/first.png etc
-
 <center>
   <img src="/assets/world-models/first.png">
-  <figcaption>Francis Ford Coppola and Marlin Brando - Apocalypse Now</figcaption>
+  <figcaption>Agent One performance</figcaption>
   <div></div>
 </center>
 
@@ -2613,11 +2611,11 @@ Very little work done in October - I was busy with lots of teaching for Batch 20
 - sampling episodes from trained controller
 - train **Agent Two** - problem with the VAE not being able to encode images (i.e. off track), memory trains well - gets confused when on the edge of track
 - train **Agent Three** - using data sampled from the controller (5000 episodes),
-- train **Agent Four** - using data sampled from the controller, 40 epochs on mem
-
-*December 2019*
+- train **Agent Four** - using data sampled from the controller, 40 epochs on memory
 
 > Know you don’t hit it on the first generation, don’t think you hit it on the second, on the third generation maybe, on the fourth & fifth, thats when we start talking - Linus Torvalds
+
+*December 2019*
 
 This was the final month of technical work (finishing on December 19), where Agent Five was trained.  Work achieved this month:
 - training Agent Five
@@ -2701,7 +2699,7 @@ Performance of the best controller (generation 299):
 <figcaption>Histogram of the best agent (generation 229) episode rewards across 48 random seeds</figcaption>
 </center>
 
-An example of the debug gif I used at various stages of the project.
+A debug gif I used at various stages of the project:
 
 <center>
   <img src="/assets/world-models/rollout.gif">
@@ -2710,7 +2708,7 @@ An example of the debug gif I used at various stages of the project.
 
 ## AWS costs
 
-See the project AWS costs in [worldmodels/notebooks/aws-costs.ipynb]().  Compute costs are the EC2 costs - storage is EBS, S3 and all other costs.
+See the project AWS costs in [worldmodels/notebooks/aws-costs.ipynb](https://github.com/ADGEfficiency/world-models/blob/master/notebooks/aws-costs.ipynb).  Compute costs are the EC2 costs - storage is EBS, S3 and all other costs.
 
 |                     |   Cost [$] |
 |:--------------------|-----------:|
@@ -2770,10 +2768,9 @@ This suggests that slightly more care is needed than relying on a random policy.
 ## Important debugging steps
 
 Most of the time I stuck to using the same hyperparameters as in the paper code base.  Hyperparameters I changed:
-- batch size to 256 in the VAE training (originally !)
+- batch size to 256 in the VAE training (originally 32)
 - CMA-ES `s0` set to 0.5
 - amount of training data & epochs for the later iterations of VAE & memory training
-
 - image antialiasing
 - VAE not performing well when it went off track (loss + inspect the reconstruction) - exporation problem
 
@@ -2888,9 +2885,9 @@ def batch_episodes(parse_func, records, episode_length, num_cpu=4):
     dataset = dataset.batch(episode_length)
 ```
 
-The coverage for our implementation of `tf.data` is tested - see [worldmodels/tests/test_tf_records.py']().
+The coverage for our implementation of `tf.data` is tested - see [worldmodels/tests/test_tf_records.py'](https://github.com/ADGEfficiency/world-models/blob/master/worldmodels/tests/test_tf_records.py).
 
-Occasionally I get corrupt records - a small helper utility is given in [worldmwodels/utils.py]():
+Occasionally I get corrupt records - a small helper utility is given in [worldmwodels/utils.py](https://github.com/ADGEfficiency/world-models/blob/master/worldmodels/utils.py):
 
 It is possible to load the `.tfrecord` files directly from S3.  As neural network training requires multiple passes over the dataset, it makes more sense to pull these down onto the instance using the S3 CLI and access them locally.
 
