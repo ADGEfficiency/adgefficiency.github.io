@@ -335,6 +335,12 @@ Deep learning uses complex, many layered neural networks to learn patterns from 
 As with AI, we are going to split machine learning roughly into two branches - classical machine learning and deep learning.  To best understand this split, we need a third perspective on what machine learning is - function approximation.
 
 
+https://youtu.be/0oyCUWLL_fU?t=584 (fast.ai)
+
+- what deep learning is good at
+- 
+
+
 ### Perspective three - function approximation
 
 

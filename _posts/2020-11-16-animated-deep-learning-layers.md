@@ -1,12 +1,12 @@
 ---
 title: 'An Animated Guide to Deep Learning Layers'
-date: 2020-10-26
+date: 2020-11-16
 classes: wide2
 toc: true
 toc_sticky: true
 categories:
   - Machine Learning
-excerpt:  What they are, when to use them.
+excerpt: Four of the most important deep learning layer architectures explained.
 
 ---
 
@@ -294,9 +294,7 @@ So what other kinds of structure can data have, other than spatial?  Many types 
 
 # LSTM Layer
 
-The third of our layers is the LSTM (Long Short-Term Memory) layer.
-
-**The LSTM is a recurrent layer - it processes input and generates output as a sequence**.Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
+The third of our layers is the LSTM (Long Short-Term Memory) layer. **The LSTM is a recurrent layer - it processes input and generates output as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
 
 A normal neural network receives a single input tensor $x$ and generates a single output tensor $y$.  A recurrent architecture differs from a non-recurrent neural network in two ways:
 
@@ -501,8 +499,6 @@ Attention is a simple and powerful idea - when processing a sequence, we should 
 
 Take the example of machine translation, to translate the German sentence `Ich bin eine Maschine` into the English `I am a machine`.
 
-TODO TRANS.MP4 VIDEO!
-
 When predicting the last word in the translation `machine`, all of our attention should be placed on the last word of the source sentence `Maschine`.  There is no point looking at earlier words in the source sequence when translating this token.
 
 If we take a more complex example of translating the German `Ich habe ein bisschen Deutsch gelernt` into the English `I have learnt a little German`.  When predicting the third token of our English sentence (`learnt`), attention should be placed on the last token of the German sentence (`gelernt`).
@@ -518,14 +514,14 @@ There is no such restriction in a fully connected layer, where increasing one we
 
 The attention layer receives three inputs - a query, keys and values:
 
-- *query* = what we are looking for
-- *key* = what we compare the query with
-- *value* = what we place attention over
+- **query** = what we are looking for
+- **key** = what we compare the query with
+- **value** = what we place attention over
 
 The attention layer can be thought of as three mechanisms in sequence:
 
 1. **alignment** (or similarity) of a query and keys
-2. a **softmax** to convert the alignment into a probability distribution
+2. **softmax** to convert the alignment into a probability distribution
 3. **selecting keys** based on the alignment
 
 <center><img align="center" src="/assets/four-dl-arch/attention.gif"></center>
@@ -709,9 +705,15 @@ One additional benefit of an attention layer is being able to use the alignment 
 
 # Summary
 
+I hope you enjoyed this post and found it useful.  It's my first time using animations - it feels good to be moving up in the quality of what I'm offering here.
+
+Below is a short table summarizing the article:
+
 | Layer           | Intuition                      | Inductive bias          | When to use                                             |
 |-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
 | Fully connected | Allow all possible connections | None                    | Data without structure (i.e. tabular)                   |
 | 2D Convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
 | LSTM            | Database                       | Sequences                         | Data with sequential structure (i.e. text, time series) |
 | Attention       | Focus on similarity            | Similarity, limit information flow  | Data with sequential structure (i.e. text, time series) |
+
+Thanks for reading!

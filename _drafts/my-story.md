@@ -1,6 +1,10 @@
 
 The story of how I went from 
 
+What was hard, what was easy
+
+https://youtu.be/0oyCUWLL_fU?t=500
+- what you need to learn deep learning
 
 
 # chem eng ds
