@@ -6,13 +6,13 @@ toc: true
 toc_sticky: true
 categories:
   - Machine Learning
-excerpt: Four of the most important deep learning layer architectures explained.
+excerpt: Four important deep learning layer architectures explained.
 
 ---
 
 # Introduction
 
-Some of the many things a machine learning engineer must master include:
+Machine learning is complex - some of the many things a machine learning engineer must master include:
 
 - **layer architectures**, such as convolution or attention
 - **network architectures**, such as ResNet50
@@ -22,14 +22,7 @@ Some of the many things a machine learning engineer must master include:
 - **optimizers**, such as stochastic gradient descent or Adam
 - **hyperparameters**, including learning rate and batch size
 
-**This post is about layer architectures** - together we will look at four of the most common & important deep learning layers that are commonly used for deep learning on images, text and audio:
-
-- [the fully connected layer](#fully-connected-layer)
-- [the 2D convolutional layer](#2D-convolution-layer)
-- [the LSTM layer](#lstm-layer)
-- [the attention layer](#attention-layer)
-
-After this article you will understand:
+**This post is about layer architectures**, specifically:
 
 - **how each layer works**
 - the **intuition & inductive bias** of each layer
@@ -37,18 +30,30 @@ After this article you will understand:
 - **when to use** each layer
 - **how to use** each layer in TensorFlow 2.0
 
+Together we will look at four important layers that are commonly used for deep learning on images, text and audio:
+
+- [the fully connected layer](#fully-connected-layer)
+- [the 2D convolutional layer](#2D-convolution-layer)
+- [the LSTM layer](#lstm-layer)
+- [the attention layer](#attention-layer)
+
 All code examples are built using `tensorflow==2.2.0` using the Keras Functional API.
+
 
 ## What is inductive bias?
 
-This motivates the use of the more specialized layer architectures we will look at later.  By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.  **This is known as inductive bias - making assumptions that make a network less general but more useful**.
+One term we will be using a lot in this article is **inductive bias**, which you may not be familiar with.
+
+Inductive bias is the hardcoding of assumptions into the structure of a layer.  These assumptions make a layer more special purpose and less flexible, but often much more useful.
+
+By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.  **This is inductive bias - making assumptions that make a network less general but more useful**.
 
 <p></p>
 # Fully Connected Layer
 
 **The fully connected layer** (also known as dense or feed-forward) **is the most general and least specialized deep learning layer**.
 
-The fully connected layer imposes the least amount of structure of any layer architecture.  It will be found in almost all neural networks.
+The fully connected layer imposes the least amount of structure of any layer architecture.  It will be found in almost all neural network models - often being a convenient way to control network size & shape after complex transformations.
 
 
 ## How does the fully connected layer work?
