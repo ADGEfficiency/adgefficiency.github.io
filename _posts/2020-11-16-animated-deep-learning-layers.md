@@ -188,7 +188,7 @@ The 2D convolutional layer is inspired by our own visual cortex.  Work by Hubel 
 
 <center><img align="center" width="50%" src="/assets/four-dl-arch/hubel.jpg"></center>
 
-<p align="center"><i>Applying different filters to a small image</i></p>
+<p align="center"><i>Hubel & Wiesel</i></p>
 
 The history of using convolution in artificial neural networks goes back decades to the neocognitron, an architecture introduced by Kunihiko Fukushima in 1980, inspired by the work of Hubel & Wiesel.
 
@@ -220,7 +220,7 @@ For larger images (which are often `32x32` or larger), this same basic operation
 
 <center><img align="center" src="/assets/four-dl-arch/conv.gif"></center>
 
-<p align="center">A filter producing a filter map by convolving over an image</p>
+<p align="center"><i>A filter producing a filter map by convolving over an image</i></p>
 
 The feature maps produced by each filter are concatenated, resulting in a 3D volume (the length of the third dimension being the number of filters). The next layer then performs convolution over this new volume, using a new set of learned filters.
 
@@ -292,7 +292,7 @@ An example of using convolution occurs in DeepMind's 2015 DQN work.  The agent l
 
 ![]({{ '/assets/ml_energy/conv.png' }})
 
-<p align="center">Deep convolutional neural network used in the 2015 DeepMind DQN Atari work - the input to the network is an image</p>
+<p align="center"><i>Deep convolutional neural network used in the 2015 DeepMind DQN Atari work - the input to the network is an image</i></p>
 
 So what other kinds of structure can data have, other than spatial?  Many types of data have a sequential structure - motivating our next two layer architectures.
 
@@ -310,7 +310,7 @@ The memory of a recurrent architecture is known as the **hidden state** $h$.  Wh
 
 <center><img align="center" src="/assets/four-dl-arch/recurr.gif"></center>
 
-<p align="center">A recurrent neural network</p>
+<p align="center"><i>A recurrent neural network</i></p>
 
 Working with recurrent architectures requires being comfortable with the idea of a timestep dimension - knowing how to shape your data correctly is half the battle of working with recurrence.
 
@@ -380,7 +380,7 @@ One important architecture that uses LSTMs is seq2seq. The source sentence is fe
 
 <p align="center"><i>The seq2seq model</i></p>
 
-*For a deeper look at the internal of the LSTM, take a look at the excellent [Understanding LSTM Networks(https://colah.github.io/posts/2015-08-Understanding-LSTMs/) from colah's blog.
+*For a deeper look at the internal of the LSTM, take a look at the excellent [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) from colah's blog.
 
 
 ## What is the intuition and inductive bias of an LSTM?
