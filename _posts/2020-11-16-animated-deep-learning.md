@@ -1,12 +1,12 @@
 ---
-title: 'An Animated Guide to Deep Learning Layers'
+title: 'An Animated Guide to Deep Learning'
 date: 2020-11-16
 classes: wide2
 toc: true
 toc_sticky: true
 categories:
   - Machine Learning
-excerpt: Four important deep learning layer architectures explained.
+excerpt: Four deep learning layer architectures explained - including Attention.
 
 ---
 
@@ -14,15 +14,15 @@ excerpt: Four important deep learning layer architectures explained.
 
 Machine learning is complex - some of the many things a machine learning engineer must master include:
 
-- **layer architectures**, such as convolution or attention
-- **network architectures**, such as ResNet50
-- **activation functions**, including the ReLu or Sigmoid
-- **loss functions**, such as cross entropy or the Huber loss
-- **backpropagation**, to assign error to weight updates
-- **optimizers**, such as stochastic gradient descent or Adam
-- **hyperparameters**, including learning rate and batch size
+- layer architectures, such as convolution or attention
+- network architectures, such as ResNet50
+- activation functions, including the ReLu or Sigmoid
+- loss functions, such as cross entropy or the Huber loss
+- backpropagation, to assign error to weight updates
+- optimizers, such as stochastic gradient descent or Adam
+- hyperparameters, including learning rate and batch size
 
-**This post is about layer architectures**, specifically:
+**This post is about layer architectures** - the building blocks that machine learning engineers use to construct a full neural network.  In this post we will look at:
 
 - **how each layer works**
 - the **intuition & inductive bias** of each layer
@@ -30,7 +30,7 @@ Machine learning is complex - some of the many things a machine learning enginee
 - **when to use** each layer
 - **how to use** each layer in TensorFlow 2.0
 
-Together we will look at four important layers that are commonly used for deep learning on images, text and audio:
+Together we will look at four important layers that are commonly used in deep learning:
 
 - [the fully connected layer](#fully-connected-layer)
 - [the 2D convolutional layer](#2D-convolution-layer)
@@ -42,31 +42,36 @@ All code examples are built using `tensorflow==2.2.0` using the Keras Functional
 
 ## What is inductive bias?
 
-One term we will be using a lot in this article is **inductive bias**, which you may not be familiar with.
+One term we will be using a lot in this article is **inductive bias** - a useful term to sound clever and impress your friends at dinner parties.
 
-Inductive bias is the hardcoding of assumptions into the structure of a layer.  These assumptions make a layer more special purpose and less flexible, but often much more useful.
+**Inductive bias is the hard-coding of assumptions into the structure of a learning algorithm**.  These assumptions make the method more special purpose and less flexible, but often much more useful.  By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.
 
-By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.  **This is inductive bias - making assumptions that make a network less general but more useful**.
+Examples of inductive bias in machine learning include margin maximization (classes should be separated by as large a boundary as possible - used in Support Vector Machines) and nearest neighbours (samples close together in feature space are in the same class - used in the k-nearest neighbours algorithm).
 
-<p></p>
+It's a common lesson in machine learning - a bit of bias is usually a good thing (especially if you trade it for variance).
+
+Now we are clear about what inductive bias is, let's meet the first of our four deep learning layers.
+
+
+<br />
 # Fully Connected Layer
 
-**The fully connected layer** (also known as dense or feed-forward) **is the most general and least specialized deep learning layer**.
+Also known as a dense or feed-forward layer, **the fully connected layer is the most general purpose deep learning layer**.
 
-The fully connected layer imposes the least amount of structure of any layer architecture.  It will be found in almost all neural network models - often being a convenient way to control network size & shape after complex transformations.
+The fully connected layer imposes the least amount of structure of any layer architecture.  It will be found in almost all neural networks - often being used to control network size & shape after complex transformations.
 
 
 ## How does the fully connected layer work?
 
 At the heart of the fully connected layer is the artificial neuron - the history of which goes all the way back to 1943 with McCulloch & Pitt's *Threshold Logic Unit*.  
 
-**The artificial neuron is inspired by the biological neurons in our brains**.  The actual mechanics of an artificial neuron are far simpler from than a biological neuron.  Yet even with this simplification, artificial neurons are capable of learning powerful things.
+**The artificial neuron is inspired by the biological neurons in our brains**.  The actual mechanics of an artificial neuron are an approxmiation of the complexity of a biological neuron.  Yet even with this simplification, artificial neurons remain useful.
 
 The artificial neuron composed of three steps:
 
-1. a weighted linear combination of inputs
-2. a sum across all weighted inputs
-3. an activation function
+1. **weighted linear combination** of inputs
+2. **a sum** across all weighted inputs
+3. an **activation function**
 
 <center><img align="center" src="/assets/four-dl-arch/neuron.gif"></center>
 
@@ -75,6 +80,9 @@ The artificial neuron composed of three steps:
 ### Weighted linear combination
 
 The strength of the connection between nodes in different layers are controlled by weights - the shape of these weights depending on the number of nodes layers on either side.  Each node has an additional parameter known as a bias, which can be used to shift the output of the node independently of it's input.
+
+The weights and biases are learnt - commonly in modern machine learning backpropagation is used to find good values of these weights - good values being those that lead to good predictive accuracy of the network on unseen data.
+
 
 ### Sum & activation function
 
@@ -85,7 +93,7 @@ After applying the weight and bias, all of the inputs into the neuron are summed
 - a Sigmoid squashes the input to the range 0, 1
 - a Tanh squashes the input to the range 0, 1
 
-The output of the activation function is then sent as input to all neurons (also known as nodes or units) in the next layer.  **This is where the fully connected layer gets it's name from - each layer is fully connected to the layers before & after it**.
+The output of the activation function is then sent as input to all neurons (also known as nodes or units) in the next layer.  **This is where the fully connected layer gets it's name from - each node is fully connected to the nodes in the layers before & after it**.
 
 For the first layer, the node gets it's input from the data being fed into the network (each data point is connected to each node).  For last layer, the output is the prediction of the network.
 
@@ -96,17 +104,17 @@ For the first layer, the node gets it's input from the data being fed into the n
 
 ## What is the intuition & inductive bias of a fully connected layer?
 
-The intuition behind all the connections in a fully connected layer is to put **no constraints on how information can flow through the network**.
+The intuition behind all the connections in a fully connected layer is to put **no restriction on how information can flow through the network**.  It's the intuition of having no intuition.
 
 The fully connected layer imposes no structure and makes no assumption about the data or task the network will perform.  **A neural network built of fully connected layers can be thought of as a blank canvas**.  The intuition is to impose no structure and let the network figure everything out.
 
-**This lack of structure is what gives neural networks of fully connected layers (of sufficient depth & width) the ability to approximate any function**. This is known as the Universal Approximation Theorem.
+**This lack of structure is what gives neural networks of fully connected layers (of sufficient depth & width) the ability to approximate any function** - known as the Universal Approximation Theorem.
 
 The ability to approximate any function at first sounds attractive.  Why do we need any other architecture if a fully connected layer can learn anything?
 
 **Being able to learn in theory does not mean we can learn in practice**.  Actually finding the correct weights, using the data and learning algorithms (such as backpropagation) we have available may be impractical and unreachable.
 
-The solution to these practical challenges is to use less specialized layers - layers that have assumptions about the data & task they are expected to perform. **This specialization is inductive bias**.  It's a common lesson in machine learning - a bit of bias is usually a good thing (especially if you trade it for variance).
+The solution to these practical challenges is to use less specialized layers - layers that have assumptions about the data & task they are expected to perform. **This specialization is inductive bias**.
 
 
 ## When should I use a fully connected layer?
@@ -122,6 +130,7 @@ Fully connected layers are common in reinforcement learning when learning from a
 Most neural networks will have fully connected layers somewhere.  It's common to have them as the penultimate & final layer as fully connected on convolutional neural networks performing classification.  
 
 The number of units in the fully connected output layer will be equal to the number of classes, with a softmax activation function used to create a distribution over classes.
+
 
 ## What hyperparameters are important for a fully connected layer?
 
@@ -173,16 +182,18 @@ array([[ 0.23494382, -0.40392348],
 """
 ```
 
+<br></br>
+
 # 2D Convolutional Layer
 
-**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution**.
+**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (see what I did there?).
 
 AlexNet (that won the 2012 ImageNet competition) is seen by many as the start of modern deep learning.  Another landmark use of convolution was Le-Net-5 in 1998, a 7 layer convolutional neural network used by Yann LeCun to classify handwritten digits. 
 
 The convolutional neural network is the workhorse of deep learning - it can be used with text, audio, video and images.  Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.
 
 
-## What is the intuition and inductive bias of convolution?
+## What is the intuition and inductive bias of convolutional layers?
 
 The 2D convolutional layer is inspired by our own visual cortex.  Work by Hubel & Wiesel in the 1950's showed that individual neurons in the visual cortexes of mammals are activated by small regions of vision.  
 
@@ -194,17 +205,19 @@ The history of using convolution in artificial neural networks goes back decades
 
 Convolution itself is a mathematical operation, commonly used in signal processing.  A good mental model for convolution is the process of **sliding a filter over a signal, at each point checking to see how well the filter matches the signal**.  
 
-This checking process is pattern recognition, and is the intuition behind convolution - looking for small, spatial patterns anywhere in a larger space.  **The convolution layer has inductive bias for recognizing spatial patterns**. 
+This checking process is pattern recognition, and is the intuition behind convolution - looking for small, spatial patterns anywhere in a larger space.  **The convolution layer has inductive bias for recognizing local, spatial patterns**. 
 
 
 ## How does a 2D convoultion layer work?
 
-For 2D convolution, we have the following components:
+A 2D convolutional layer is defined by the interaction between two components:
 
 - a 3D image, with shape (height, width, color channels)
 - a 2D filter, with shape (height, width)
 
 Above we defined the intuition of convolution being looking for patterns in a larger space.  **In a 2D convolutional layer, the patterns we are looking for are filters, and the larger space is an image**.
+
+### Filters
 
 A convolutional layer is defined by it's filters.  These filters are learnt - they are equilivant to the weights of a fully connected layer. Filters in the first layers of a convolutional neural network detect simple features such as lines or edges.  Deeper in the network, filters can detect more complex features that help the network perform it's task.
 
@@ -286,25 +299,26 @@ Strides can be used to skip steps in the convolution, resulting in smaller featu
 
 Convolution works when your data has a spatial structure - for example, images have spatial structure in height & width.  You can also get this structure from a 1D signal using techniques such as Fourier Transforms, and then perform convolution in the frequency domain.
 
-If you are working with images, convolution is king.  While there is work applying attention based models to computer vision, because of it's similarity with our own visual cortex, it is likely that convolution will be relevant for many years to come.
+**If you are working with images, convolution is king**.  While there is work applying attention based models to computer vision, because of it's similarity with our own visual cortex, it is likely that convolution will be relevant for many years to come.
 
 An example of using convolution occurs in DeepMind's 2015 DQN work.  The agent learns to take decisions using pixels - making convolution a strong choice:
 
 ![]({{ '/assets/ml_energy/conv.png' }})
 
-<p align="center"><i>Deep convolutional neural network used in the 2015 DeepMind DQN Atari work - the input to the network is an image</i></p>
+<p align="center"><i>Deep convolutional neural network used in the 2015 DeepMind DQN Atari work</i></p>
 
 So what other kinds of structure can data have, other than spatial?  Many types of data have a sequential structure - motivating our next two layer architectures.
 
 
+<br />
 # LSTM Layer
 
-The third of our layers is the LSTM (Long Short-Term Memory) layer. **The LSTM is a recurrent layer - it processes input and generates output as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
+The third of our layers is the LSTM, or Long Short-Term Memory layer. The LSTM is recurrent - **it processes data as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
 
 A normal neural network receives a single input tensor $x$ and generates a single output tensor $y$.  A recurrent architecture differs from a non-recurrent neural network in two ways:
 
-1. data (both input & output) is processed as a sequence of timesteps
-2. the network has the ability to remember information and pass it to the next timestep 
+1. both the input $x$ & output $y$ data is **processed as a sequence of timesteps**
+2. the network has the **ability to remember** information and pass it to the next timestep 
 
 The memory of a recurrent architecture is known as the **hidden state** $h$.  What the network chooses to pass forward in the hidden state is learnt by the network.
 
@@ -356,14 +370,14 @@ print(x.shape)
 # (1, 5, 2)
 ```
 
-Our data $x$ is now structured with three dimensions - `(batch, timesteps, features)`.  A recurrent neural network will process the features one timestep at a time, experiencing the sequential structure of the data.
+**Our data $x$ is now structured with three dimensions** - `(batch, timesteps, features)`.  A recurrent neural network will process the features one timestep at a time, experiencing the sequential structure of the data.
 
-Now that we understand how to structure data to be used with a recurrent neural network, we can look at details of how the LSTM layer works.
+Now that we understand how to structure data to be used with a recurrent neural network, we can take a high-level look at details of how the LSTM layer works.
 
 
 ## How does an LSTM layer work?
 
-The LSTM was first introduced in 1997, and has formed the backbone of modern sequence based deep learning models, on tasks such as machine translation.
+The LSTM was first introduced in 1997, and has formed the backbone of modern sequence based deep learning models, excelling on challenging tasks such as machine translation.
 
 The LSTM is a specific type a recurrent neural network.  **The LSTM addresses a challenge that vanilla recurrent neural networks struggled with - the ability to think long term**.  In a recurrent neural network all information passed to the next time step has to fit in a single channel, the hidden state $h$. 
 
@@ -380,16 +394,16 @@ One important architecture that uses LSTMs is seq2seq. The source sentence is fe
 
 <p align="center"><i>The seq2seq model</i></p>
 
-*For a deeper look at the internal of the LSTM, take a look at the excellent [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) from colah's blog.
+For a deeper look at the internal of the LSTM, take a look at the excellent [Understanding LSTM Networks](https://colah.github.io/posts/2015-08-Understanding-LSTMs/) from colah's blog.
 
 
 ## What is the intuition and inductive bias of an LSTM?
 
-A good intiutive model for the LSTM layer is to think about it like a database.  **The output, input and delete gates allow LSTM to work like a database** - matching the `GET`, `POST` & `DELETE` of a REST API, or the `read-update-delete` operations of a CRUD application.
+A good intiutive model for the LSTM layer is to think about it like a database.  **The output, input and delete gates allow the LSTM to work like a database** - matching the `GET`, `POST` & `DELETE` of a REST API, or the `read-update-delete` operations of a CRUD application.
 
 The forget gate acts like a `DELETE`, allowing the LSTM to remove information that isn't useful.  The input gate acts like a `POST`, where the LSTM can choose information to remember.  The output gate acts like a `GET`, where the LSTM chooses what to send back to a user request for information.
 
-A recurrent neural network has has two forms of inductive bias - one for processing data as a sequence, and the other for storing a memory.  The LSTM adds on top of this bias for creating one long term and one short term memory channel.
+A recurrent neural network has has an inductive bias for processing data as a sequence, and for storing a memory.  The LSTM adds on top of this bias for creating one long term and one short term memory channel.
 
 
 ## Using an LSTM layer with the Keras Functional API
@@ -484,18 +498,20 @@ While not a hyperparameter, it can be useful to include gradient clipping when w
 
 ## When should I use an LSTM layer?
 
-When working with sequence data, an LSTM (or it's close cousin the GRU) is a common choice. **One major downside of the LSTM is that they are slow to train**.  This is because processing the sequence cannot be easily parallelized, as the error signal must be backpropagated through time.
+When working with sequence data, an LSTM (or it's close cousin the GRU) is a common choice. **One major downside of the LSTM is that they are slow to train**.  This is because processing the sequence cannot be easily parallelized, as **the error signal must be backpropagated through time**.
 
 One useful feature of the LSTM is the learnt hidden state.  This can be used by other models as a compressed representation of the future - such as in the 2017 World Models paper.
 
 
+<br />
+
 # Attention Layer
 
-Attention is by far the youngest of our four layers - the only layer architecture to have been developed during the current deep learning movement.  **Since it's introduction in 2015, attention has revolutionized natural language processing**. 
+Attention is the last of our four layers.  **Attention is by far the youngest of our four** - the only layer architecture to have been developed during the current deep learning movement.  **Since it's introduction in 2015, attention has revolutionized natural language processing**. 
 
 First used in combination with the LSTM based seq2seq model, attention is also to power the Transformer - a neural network architecture that forms the backbone of Open AI's GPT series of language models.
 
-Attention is important as it is effective as a sequence model without needing recurrence - avoiding the need to do backpropagation through time, making it faster to train.
+Attention is important as it is **an effective as a sequence model without recurrence** - avoiding the need to do backpropagation through time, making it faster to train.
 
 
 ## What is the intuition and inductive bias of attention layers?
@@ -510,20 +526,20 @@ If we take a more complex example of translating the German `Ich habe ein bissch
 
 So what inductive bias does our attention layer give us?  **One inductive bias of attention is alignment based on similarity** - the attention layer chooses where to look based on how similar things are.
 
-**Another inductive bias is to limit & prioritize information flow**.  As we will see below, the use of a softmax forces an attention layer to make tradeoffs about information flow - more weight in one place means less in another.
+**Another inductive bias of attention is to limit & prioritize information flow**.  As we will see below, the use of a softmax forces an attention layer to make tradeoffs about information flow - more weight in one place means less in another.
 
 There is no such restriction in a fully connected layer, where increasing one weight does not affect another. A fully connected layer can allow information to flow between all nodes in subsequent layers, and could in theory learn a similar pattern that an attention layer does.  We know by now however that in theory does note mean it will occur in practice.
 
 
 ## How does an attention layer work?
 
-The attention layer receives three inputs - a query, keys and values:
+The attention layer receives **three inputs**:
 
 - **query** = what we are looking for
 - **key** = what we compare the query with
 - **value** = what we place attention over
 
-The attention layer can be thought of as three mechanisms in sequence:
+The attention layer can be thought of as **three mechanisms in sequence**:
 
 1. **alignment** (or similarity) of a query and keys
 2. **softmax** to convert the alignment into a probability distribution
@@ -541,9 +557,9 @@ Different attention layers (such as Additive Attention or Dot-Product Attention)
 In the same way that understanding the time-step dimension is a key step in understanding recurrent neural networks, understanding what the query, key & value mean is foundational in attention.
 
 A good analogy is with the Python dictionary.  Let's start with a simple example, where we:
-- look up a **query** of `dog`
-- to match with **keys** of `dog` or `cat` with values of `1` or `2` respectively
-- and select the **value** of `2` based on this lookup of `dog`
+- **look up a query** of `dog`
+- to **match with keys** of `dog` or `cat` with values of `1` or `2` respectively
+- and **select the value** of `2` based on this lookup of `dog`
 
 ```python
 query = 'dog'
@@ -553,7 +569,7 @@ database[query]
 #  2
 ```
 
-In the above example, we find an exact match for our query `'dog'`.  In the neural network attention layer, we are not working with strings - we are working with vectors.  Our query, keys and values are all vectors:
+In the above example, we find an exact match for our query `'dog'`.  However, in a neural network, **we are not working with strings - we are working with tensors**.  Our query, keys and values are all tensors:
 
 ```python
 query = [0, 0.9]
@@ -568,20 +584,20 @@ database.similarity(query)
 #  [1]
 ```
 
-Note that often the keys are set equal to the values.  This simply means that the quantity we are doing the similarity comparison with is also the quantity we will place attention over.
+Small technicality - often the keys are set equal to the values.  This simply means that the quantity we are doing the similarity comparison with is also the quantity we will place attention over.
 
 
 ## Attention mechanisms
 
 By now we know that an attention layer involves three steps:
 
-1. alignment based on similarity
-2. softmax to create attention weights
-3. choosing values based on attention
+1. **alignment** based on similarity
+2. **softmax** to create attention weights
+3. **choosing values** based on attention
 
 The second & third steps are common to all attention layers - **the differences all occur in the first step - how the alignment on similarity is done**.
 
-We will briefly look at two popular mechanisms - Additive Attention and Dot-Product Attention.  For a more detailed look at these mechanisms, have a look at [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) by the excellent Lilian Wang.
+We will briefly look at two popular mechanisms - Additive Attention and Dot-Product Attention.  For a more detailed look at these mechanisms, have a look at the excellent [Attention? Attention!](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html) by Lilian Wang.
 
 
 ### Additive Attention
@@ -633,7 +649,7 @@ Dot-Product Attention is important as it forms part of the Transformer.  As you 
 <p align="center"><i>The multi-head attention layer used in the Transformer</i></p>
 
 The code below demonstrates the mechanics for a single head without scaling - see 
-[Transformer model for language understanding](https://www.tensorflow.org/tutorials/text/transformer) for a full implementation of a multi-head attention layer.
+[Transformer Model for Language Understanding](https://www.tensorflow.org/tutorials/text/transformer) for a full implementation of a multi-head attention layer & Transformer in Tensorflow 2.
 
 ```python
 import numpy as np
@@ -672,7 +688,7 @@ output shape (4, 16, 4)
 """
 ```
 
-This architecture also works with a different length query:
+This architecture also works with a different length query (now length `8` rather than `16`):
 
 ```python
 qry = np.random.rand(4, 8, 32).reshape(4, -1, 32).astype('float32')
@@ -708,6 +724,8 @@ The Transformer is a sequence model without recurrence (it doesn't use an LSTM),
 One additional benefit of an attention layer is being able to use the alignment scores for interpretability.
 
 
+<br />
+
 # Summary
 
 I hope you enjoyed this post and found it useful.  It's my first time using animations - it feels good to be moving up in the quality of what I'm offering here.
@@ -717,8 +735,8 @@ Below is a short table summarizing the article:
 | Layer           | Intuition                      | Inductive bias          | When to use                                             |
 |-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
 | Fully connected | Allow all possible connections | None                    | Data without structure (i.e. tabular)                   |
-| 2D Convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
-| LSTM            | Database                       | Sequences                         | Data with sequential structure (i.e. text, time series) |
-| Attention       | Focus on similarity            | Similarity, limit information flow  | Data with sequential structure (i.e. text, time series) |
+| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
+| LSTM            | Database                       | Sequences, memory                         | Data with sequential structure  |
+| Attention       | Focus on similarities            | Similarity, limit information flow  | Data with sequential structure  |
 
 Thanks for reading!
