@@ -524,6 +524,8 @@ When predicting the last word in the translation `machine`, all of our attention
 
 If we take a more complex example of translating the German `Ich habe ein bisschen Deutsch gelernt` into the English `I have learnt a little German`.  When predicting the third token of our English sentence (`learnt`), attention should be placed on the last token of the German sentence (`gelernt`).
 
+<center><img align="center" src="/assets/four-dl-arch/trans.gif"></center>
+
 So what inductive bias does our attention layer give us?  **One inductive bias of attention is alignment based on similarity** - the attention layer chooses where to look based on how similar things are.
 
 **Another inductive bias of attention is to limit & prioritize information flow**.  As we will see below, the use of a softmax forces an attention layer to make tradeoffs about information flow - more weight in one place means less in another.
@@ -710,7 +712,7 @@ output shape (4, 8, 4)
 
 When using attention heads as shown above, hyperparameters to consider are:
 
-- size of the linear layer used to transform the query, values & keys
+- size of the linear layers used to transform the query, values & keys
 - the type of attention mechanism (such as additive or dot-product)
 - how to scale the alignment before the softmax (often done using the square-root of the length of the layer)
 
