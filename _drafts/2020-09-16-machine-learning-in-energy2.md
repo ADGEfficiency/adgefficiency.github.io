@@ -14,126 +14,177 @@ redirect_from:
 
 ---
 
+todo
+
+- pictures everywhere
+
 *Update history* 
 - *2017-04-30 - original two part posts*
 - *2019-04-25 - conoslidation of part one & two*
 - *2020-10-21 - rewrite*
 
 
-# Introduction
+<br />
+# INTRODUCTION
 
-The energy industry is used to technological change.  Experienced engineers have seen transitions from coal to oil to gas - all within a single lifetime. We are now in the middle of another transition towards renewables.
+**The energy industry is driven by technological change**.  This is seen most in new technologies unlocking new fuels as energy sources, from biomass all the way to nuclear.
 
-In the last ten years, artificial intelligence & machine learning have revolutionized computing.  Is this revolution important for energy industry professionals?  What about machine learning - is this a revolution for energy?
+Experienced engineers have seen the transition from coal to oil to gas - all within a single lifetime. We are now in the middle of another transition towards renewables.
+
+An even faster transition has been happening in computing.  **In the last ten years, artificial intelligence & machine learning have revolutionized computing**.
+
+Computers are already used widely in the energy industry - will this new trend of machine learning, so important in computing, impact the energy industry as well?
 
 
 ## How to use this post
 
-This post is aimed at two audiences:
+This article is for suitable for both a technical and non-technical reader, and is aimed at two primary audiences:
 - energy professionals wanting to understand how machine learning and energy fit together
-- data scientists & machine learning engineers wanting get an energy industry perspective
+- data scientists & machine learning engineers wanting get an energy industry perspective on their craft
 
-This post is organized into three main sections - best read together but designed to be readable separately:
-- section one - the concepts of AI, machine learning and deep learning
-- section two - how machine learning intersects with energy
-- section three - case studies of machine learning applications in energy
+This article is organized into three main sections - best read together but designed to be readable separately:
+- [Section One - Concepts](#section-one---concepts) - the concepts of AI, machine learning and deep learning
+- [section two](#section-two) - how machine learning intersects with energy, challenges & impacts
+- [section three](#section-three) - case studies of machine learning applications in energy
 
-Understanding how these technologies impact the work of energy professionals and the industry at large is not simple.  That's what this post is about - helping energy industry professionals to understand:
+Outcomes for energy professionals:
 
-- What are artificial intelligence, machine learning and deep learning?  How are they different?
+- What are artificial intelligence, machine learning and deep learning?  How are they different?  What they are and aren't?
 - Is the hype justified?
 - What potential does machine learning have to be used to solve energy industry problems?
 - What will prevent a machine learning project being a success?
 - How it is being used today to solve energy industry problems?
 
-A secondary audience for this article are machine learning professionals who want to understand what impact their work can have in the energy industry.
-
-The article is for suitable for both a technical and non-technical reader.
+Outcomes for machine learning practitioners:
 
 
-# SECTION ONE
+Case studies:
+
+- Deep Blue vs Alpha Go
+- types of energy industry data 
+
+
+Application case studies:
+
+
+<br />
+
+# SECTION ONE - CONCEPTS
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
-The last ten years has seen a revolution in artificial intelligence, powered by machine learning.  Machine learning has blown past the previous state of the art across a wide range of difficult problems.
+Since 2010 there has been a revolution in artificial intelligence, powered by machine learning.  Machine learning has blown past the previous state of the art across a wide range of difficult problems:
 
 ![fig2]({{ '/assets/ml_energy/fig1.png' }})
 
 *Recent progress in computer vision on the ImageNet benchmark - [The Malicious Use of Artificial Intelligence: Forecasting, Prevention, and Mitigation](https://arxiv.org/pdf/1802.07228.pdf)*
 
-Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by a specific kind of machine learning - deep learning.
+Currently, machine learning forms the core part of the breakthrough performance in computer vision and language processing.  The state of the art on difficult tasks object recognition, image classification, speech recognition and language translation are all powered by a specific kind of machine learning - deep learning.
+
+The impacts of these technologies is seen most in digital industries, such as social media or entertainment companies.  It's what drives the performance of Google Translate, why the autocomplete is your email client becomes more useful over time, and why the accuracy of online advertisements has some convinced that Facebook is listening to you.
 
 ![fig1]({{ '/assets/ml_energy/gans.png' }})
 
 *All the images to the right are machine generated - [Karras et. al (2019) A Style-Based Generator Architecture for Generative Adversarial Networks (NVIDIA)](https://arxiv.org/pdf/1812.04948.pdf)*
 
-This section will clarify the relationship between these three concepts that are often misused & confused - artificial intelligence (AI), machine learning & deep learning:
+The impact of these technologies is felt less in more analogue industries, such as health, education or energy. 
+
+Before we look at energy & machine learning together, we will explain three concepts that are often misused & confused - artificial intelligence (AI), machine learning & deep learning:
 
 - artificial intelligence = creating intelligent machines that can solve problems
 - machine learning = a branch of AI, where machines learn from data
 - deep learning = branch of machine learning, using neural networks
 
+Because machine learning is a subset of artificial intelligence, they should not be used interchangeably.  One reason machine learning is often confused with AI is how well modern machine learning is performing.  The other reason is that AI is better at generating hype - you'll likely raise more money for your startup if you are 'an innovative AI platform'.
+
 ![fig2]({{ '/assets/ml_energy/ai-ml-dl.png' }})
 
+*The journey ahead - from AI to machine learning to deep learning*
+
+TODO center
+
+Section One will look at these three in detail, often comparing them to their alternatives to give context.
 
 # What is AI?
-
-The pursuit of artificial intelligence (AI) is older than modern computing. Making intelligent machines that can solve our problems is a dream of many researchers.
 
 This section will answer:
 
 - where does intelligence stop and automation begin?
 - is an elevator an AI?
+- competence versus comprehension perspective of AI
+- rules versus learning perspective of AI
 
-The term *artificial* is clear - machines, computer programs.  Intelligence however is more complex.
+The pursuit of artificial intelligence (AI) is older than computing. Making intelligent machines that can solve problems has been a dream of humanity since antiquity.  The modern era of AI started with the work of Alan Turing's theory of computation, proving that digital computers can perform any level of mathematical reasoning.
+
+The term *artificial* is clear - physical machines or computer programs.  Intelligence however, is harder to define.
+
+
+Rule based systems (commonly referred to as automation) display competence - and if you value competence (the ability to do a task well), 
 
 
 ## What is intelligence?
 
-We find two concepts useful to understand intelligence - competence & comprehension:
+Intelligence is one of those concepts that you know when you see it, but producing a formal definition is difficult.
 
-- competence = the ability to perform a task well
-- comprehension = the ability to understand
+It's a concept (like machine learning) that requires study from multiple perspectives.
 
-Let's take the task of operating an elevator.  Historically this task was done using human operators, who had both competence (to operate the elevator safely & efficiently) and comprehension (they understood what an elevator was, it's passengers etc).
+### Competence versus comprehension
 
-Now elevators are operated by machines - rule based, automated systems.  These systems are competent, but lack comprehension.  
+The first perspective we will look at is to **decompose intelligence into competence & comprehension**:
 
-When and how comprehension arises is well beyond the scope of this article.  The main point here is that rule based systems (commonly grouped as automation) display competence - and if you value competence (the ability to do a task well), then many machines we live and work with today can be considered intelligent.
+- competence being the ability to perform a task well
+- comprehension being the ability to understand
 
-Many energy industry professionals will be familiar with the programmable logic controller (PLC) - a simple device responsible for controlling over 95% of industrial systems on the planet.  Is a PLC AI?
+Let's take the task of operating an elevator.  Historically this task was done using human operators, who had both competence (to operate the elevator safely & efficiently) and comprehension (they understood what an elevator was, what their role was, who the passengers were etc).
+
+Now elevators are operated by machines - rule based, automated systems.  These systems are competent (more competent than human operators), but lack comprehension about the task they perform.
+
+The machine elevator operator is a rule based system - human designed but operated without human input. If we consider competence alone to be sufficient for intelligence, then many machines we live and work with today can be considered intelligent - including your elevator.
+
+Many energy industry professionals will be familiar with the programmable logic controller (PLC) - a simple device responsible for controlling over 95% of industrial systems on the planet.  These systems are very competent - but are they intelligent?
 
 We've seen above that given a broader definition of intelligence, AI has been here for a while, in the form of rule based automation.  But rule based automation is not the only approach to AI - there are multiple approaches to creating intelligent machines. 
 
-In order to understand the relationship between AI and machine learning, we will split AI into two broad approaches - rule based and learning based.
+In order to understand the relationship between AI and machine learning, we will introduce our second perspective of AI - that of rule based versus learning systems.
 
 
-## Rule based AI 
+## Rules versus learning
 
-As we have seen above, if we define competence (the ability to do a task well) as intelligence, then much of what we today call automation can also be called AI.
+### Rule based AI 
 
-There are also other approaches to building AI based on rules, such as knowledge bases or expert systems. 
+As we have seen above, if we define competence (the ability to do a task well) as intelligence, then much of what we today call automation can also be called AI.  There are also other approaches to building AI based on rules, such as knowledge bases or expert systems. 
 
-Because these systems are based on rules, human programmers need to develop these rules themselves.  This can lead to these systems being expensive (in terms of programmer time), and can limit the performance to human levels.
+**A defining feature of rule based systems is that they are human designed** -  human programmers need to develop these rules.  This can lead to these systems being expensive (in terms of programmer time), and can limit the performance to human levels.  They also will not be able to adapt to situations that the human designers didn't consider or account for.
 
-Because these systems are human designed, they can be understood by their programmers.
+Human design does come with benefits - they can be explained and interpreted.  There is also no reliance on data.
 
+Pros
+- can be explained & interpreted
+- no reliance on data
 
-## Learning based AI
+Cons
+- unable to adapt to changing situations
+- must be human designed
 
-Another approach to creating intelligent machines is to let them learn for themselves.  In the case of machine learning, learning occurs from data.
+But surely rules and heuristics are not AI?  One feature that rules lack is the ability to improve themselves through experience - the ability to learn.  If we consider learning to be a part of intelligence, then rule based systems are not AI - they are certainly artificial, but not intelligent.
+
+### Learning based AI
+
+A contrasting approach to creating intelligent machines is to let them learn for themselves.  In the case of machine learning, learning occurs from data - data can also be thought of as experience.
 
 Learning has a number of potential advantages over rule based systems:
 
 - less effort required by programmer to design rules
+- ability to solve problems outside of our capability
 
 Learning systems can also have some disadvantages
 
 - programmer effort is replaced by computing costs
 - reliance on data to learn from
+- difficult to explain model performance
 
 
-## Case study - DeepBlue vs. AlphaGo
+## Case study - rules vs. learning - DeepBlue vs. AlphaGo
 
 The crown jewel of modern reinforcement learning is the 2016 AlphaGo victory over Lee Sedol.  Go was the last great challenge for AI in board games - creating a superhuman Go computer was thought to be a decade away.  AlphaGo used deep neural networks to to map from the high dimensional board state to an optimal next move.
 
@@ -148,11 +199,18 @@ DeepMind (the London lab behind AlphaGo) then introduced AlphaZero, which beat t
 
 # What is machine learning?
 
-Machine learning is the branch of artificial intelligence where machines learn from data.
+This section will answer:
 
-This section will cover
+- what is data?
+- three branches
+- machine learning is programming without programming
+- machine learning is dimensionality reduction
 
-Because machine learning is a subset of artificial intelligence, they should not be used interchangeably.  One reason machine learning is often confused with AI is how well modern machine learning is performing.  The other reason is that AI is better at generating hype - you'll likely raise more money for your startup if you are 'an innovative AI platform'.
+Above we discussed two broad approaches to AI - rules based and learning based
+
+Machine learning is in the learning branch of artificial intelligence.
+
+Importance of data for learning systems - data == experience.
 
 
 ## What is data?
@@ -197,7 +255,7 @@ Time series data looks very similar to tabular data - the key difference is that
 Order matters, action changes the data you see next.
 
 
-## Case study - customer data
+## Case Study - Energy Customer Data
 
 Let's now use an example to explain the difference between these three common types of data collected by energy companies - collecting an energy retail company (called EnergyCo) collecting information about their customers.
 
@@ -227,6 +285,10 @@ An example of decision data would be the data collected by EnergyCo's customer s
 
 ## What tasks can machine learning do?
 
+What can we do with this data?
+
+Size, missing values, cover all seasons (dose the past look like the future)
+
 ### Three branches of machine learning
 
 To learn these patterns, machine learning makes use of three distinct learning signals, which separates machine learning into three branches.
@@ -254,6 +316,8 @@ both
 
 The first is **supervised learning**, where the machine used labelled training data to learn how to predict the labels of unseen data.  Examples include time series forecasting, computer vision and language translation.  Supervised learning is the reason why Facebook can tell which of your friends is in your photo, or why Google can translate text from on a photo on your smart phone.
 
+RELATE TO CASE STUDY
+
 
 ## Unsupervised learning
 
@@ -261,15 +325,24 @@ The second is **unsupervised learning**, where the machine is able to generate n
 
 Generative Adversarial Networks (GANs) learn to generate realistic images using two competing neural networks.  One network generates images (the generator) and a second network has to decide if the image is real or fake.  This kind of adversarial learning is can be effective.
 
+RELATE TO CASE STUDY
+
 
 ## Reinforcement learning
 
 Adversarial learning can also be used in our final branch of machine learning - **reinforcement learning**.  In reinforcement learning the machine learns to select actions with the supervision of a scalar reward signal.  Reinforcement learning is applicable to a wide range of decision making problems with a reward signal, such as cost or carbon emissions.
 
+RELATE TO CASE STUDY
+
 
 ## How does machine learning work?
 
 The way machine learning works is by trial & error
+
+Use the past to predict the future
+
+Work == how to check if it is working (generalization)
+Train & test set
 
 ![fig1]({{ '/assets/ml_energy/nn_black_box.png' }})
 
@@ -325,7 +398,8 @@ These three
 
 In this section you will understand:
 
-- why deep learning works on data with structure
+- the difference between classicial machine learning and deep learning
+- what deep learning needs to work (data + structure)
 
 
 **Deep learning is foundation of the hype in modern machine learning.**  Deep learning is a family of machine learning models based on artificial neural networks - inspired by our own biological neural network (our brain).
@@ -349,6 +423,10 @@ https://youtu.be/0oyCUWLL_fU?t=584 (fast.ai)
 
 
 ## Classical machine learning
+
+No structure
+
+Classical = more widely used in many industries (esp time series)
 
 
 ## Deep learning
@@ -379,26 +457,62 @@ The ability to see and understand language not only drives performance, it also 
 
 Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
 
+The spectre of being an overhyped bubble hangs heavy over
+
+The facts are this:
+
+- deep learning has allowed computers to demonstrate human level (or above) performance on a range of challenging tasks
+- classical machine learning
+
+However many problems still exist with modern deep learning:
+
+- reliance of huge amounts of data
+
 
 ## What about general AI?
 
+Narrow AI = 
+
+General AI = broad, able to solve any task at a superhuman level
+
+
 some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
-
-
-## Achievements
-
-
-## Challenges
-
-energy = small data
-- renewables plant only 2 years old
-- combinigc datasets useful
-- Poor state of digitization means working with small data is the primary work of energy data scientists
 
 
 So far machine learning has provided narrow artificial intelligence (AI).  The power of these systems are often superhuman, and more than enough to justify the hype around machine learning.  Typically the task involves perception, using high dimensional data (i.e. images).  This is the main contribution of machine learning - being able to create business value from raw, high dimensional data.
 
 This narrow intelligence stands in contrast to the goal of many AI researchers - general AI, where a machine can perform a single machine can variety of tasks.  While it is almost certain that machine learning will form part of a general artificial intelligence, much more is needed to provide an intelligent machine that can perform a variety of tasks.
+
+
+<br />
+
+# SECTION TWO - MACHINE LEARNING & ENERGY
+
+
+## Trends in energy
+
+- more things to measure (distributed)
+- more challenging control problems
+- more data available
+
+
+## Why ML + energy
+
+- cost functions
+
+
+## Why not ML + energy
+
+- unlearnable patterns - tasks we can't do
+- no data
+- non-stationary processes, black swans (predicting the US shale gas revolution)
+
+bias in customer data
+
+energy = small data
+- renewables plant only 2 years old
+- combinigc datasets useful
+- Poor state of digitization means working with small data is the primary work of energy data scientists
 
 
 There are a wide range of challenges in machine learning.  Examining them all is outside the scope of this article - issues such as interpretability, worker displacement and misuse of powerful narrow AI are significant issues and the focus of much research.  There is also much work to be done extending the powerful, narrow machine intelligence we have today into a general artificial intelligence.  Instead we will focus on challenges specific to using machine learning on energy problems.
@@ -409,27 +523,9 @@ Forward thinking energy companies know that data can only be collected once.  It
 
 The curation of large and interesting datasets is one of the few defensible advantages an energy company can build (another is brand).  These datasets are valuable not only because of how we can use them today, but because of the insights that can be generated tomorrow.
 
+<br />
 
-# Machine learning & energy
-
-## Trends in energy
-
-More things to measure (distributed), more measurements
-
-## Trends in machine learning
-
-## Why
-
-- cost functions
-
-## Why not
-
-- unlearnable patterns - tasks we can't do
-- no data
-- non-stationary / unpredictable
-
-
-# Applications
+# SECTION THREE - APPLICATIONS
 
 - cutomer segmentation
 - chatbots
@@ -476,7 +572,8 @@ The neural networks perform computations on the cloud, with the suggested action
 
 *Performance of the data centre measured using energy input per ton of cooling (kW/tonC), and improves with more data, from an initial 12% to 30% over nine months.*
 
-# Summary and Takeaways
+<br />
+# SUMMARY AND TAKEAWAYS
 
 - data challenge in energy
 - neural nets can generalize across multiple problems -> ML can generalize
@@ -492,5 +589,8 @@ We've just had a whirlwind introduction to machine learning.  Key takeaways are:
 
 # Further reading
 
+# , References
 
-# References
+https://en.wikipedia.org/wiki/Artificial_intelligence
+
+https://en.wikipedia.org/wiki/History_of_artificial_intelligence

@@ -54,6 +54,7 @@ Now we are clear about what inductive bias is, let's meet the first of our four 
 
 
 <br />
+
 # Fully Connected Layer
 
 Also known as a dense or feed-forward layer, **the fully connected layer is the most general purpose deep learning layer**.
@@ -182,7 +183,7 @@ array([[ 0.23494382, -0.40392348],
 """
 ```
 
-<br></br>
+<br />
 
 # 2D Convolutional Layer
 
@@ -311,6 +312,7 @@ So what other kinds of structure can data have, other than spatial?  Many types 
 
 
 <br />
+
 # LSTM Layer
 
 The third of our layers is the LSTM, or Long Short-Term Memory layer. The LSTM is recurrent - **it processes data as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
