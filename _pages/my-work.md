@@ -38,7 +38,7 @@ A tool for downloading climate change newspaper articles.
 
 ## Teaching Monolith
 
-[data science teaching materials](https://github.com/ADGEfficiency/teaching-monolith).
+[data science teaching materials](https://github.com/ADGEfficiency/teaching-monolith)
 
 ![]({{"/assets/my-work/monolith.png"}})
 
