@@ -1,8 +1,10 @@
 ---
-title:  ""
+title: my work
 layout: archive
 permalink: /my-work/
 classes: wide
+sidebar:
+  nav: "top"
 
 ---
 

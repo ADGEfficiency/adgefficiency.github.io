@@ -14,7 +14,18 @@ redirect_from:
 
 ---
 
-core messages
+Supervised
+- input, output, application table (min 8:41 in https://youtu.be/tsPuVAMaADY?t=539
+
+Want the intersection between
+- what AI can do
+- what is valuable for businesses
+
+Challenges - not enough data, or no labels
+
+Consumer internet industries
+
+Core messages
 
 
 curiosity
@@ -102,11 +113,15 @@ The impacts of these technologies is seen most in digital industries, such as so
 
 The impact of these technologies is felt less in more analogue industries, such as health, education or energy. 
 
-Before we look at energy & machine learning together, we will explain three concepts that are often misused & confused 
+This section will cover:
+
+Before we look at energy & machine learning together, we will explain three concepts that are often misused & confused:
+
 - artificial intelligence (AI) 
 - machine learning 
 - deep learning
-- is the hype justified?
+
+We will finish this first section with a discussion of if is the hype justified?
 
 ![fig2]({{ '/assets/ml_energy/ai-ml-dl.png' }})
 
@@ -370,12 +385,14 @@ Learning from experience
 
 ## Dimensionality reduction
 
+Reducing a high dimensional sample of data to a lower dimension is the fundamental process in machine learning.  Examples include predicting solar power generation from satellite images, or dispatching a battery from grid data.
 
 ## Pattern recoginition
 
 A key challenge in pattern recognition is separating signal from the noise.  
 
 This is known as generalization.
+
 
 ### Testing on unseen data
 
@@ -394,34 +411,59 @@ To combat overfitting, after training the performance of a model is measure on u
 This section will answer:
 
 - what is deep learning?
-- when does deep learning make sense?
-- what deep learning needs to work?
+- what is a neural network?
 - what tasks does deep learning perform well on?
-- why deep learning is probably not the best ML approach you can take
-- why a non-deep learning approach is probably where most of the business value is for your problem
+
+- when does deep learning make sense?
+- when does deep learning not make sense?
+
+- why are many companies aren't using deep learning?
+
+
+
 
 
 ## What is deep learning?
 
-**Deep learning is foundation of the hype in modern machine learning.**  Deep learning is the branch of machine learning based on artificial neural networks.  Artificial neural networks are inspired by our own biological neural networks - our brain.
+Deep learning is a branch of machine learning based on artificial neural networks.  Artificial neural networks are a class of models inspired by the biological neural networks in our brains.
 
-These artificial neural networks are inspired by the biological neural networks in our own brains.  The artificial neural networks used by machines are much simpler - yet they are powering the performance of modern machine learning.
+Artificial neural networks are simpler than their biological counterparts.  Yet even though they don't replicate the complexity of the brain, artificial neural networks are driving much of the progress in modern artificial intelligence and machine learning.
 
-deep learning - the use of multiple layer neural networks as complex function approximators.
 
-A neural network is like any other function - it takes some input and produces an output.  Reducing a high dimensional sample of data to a lower dimension is the fundamental process in machine learning.  Examples include predicting solar power generation from satellite images, or dispatching a battery from grid data.
+## What is a neural network?
 
+The fundamental building block of a neural network is the artificial neuron.  Many of these neurons together form a layer - these layers can then be stacked in a sequence.  This is where the deep in deep learning comes from - multiple layers of neurons connected to each other.
+
+A neural network is like any other function - it takes some input and produces an output. 
 
 Neural networks are general purpose.  If neural networks were only applicable in computer vision, this would still be a huge deal.  Yet neural networks are pushing the boundaries in multiple directions.  This generalizability of neural networks has allowed them to be state of the art across a wide range of problems, and also allows machine learning to be applied to a wide range of industries.
 
-The atomic unit of a neural network is the perceptron - a simple model that combines input from other perceptrons, squeezes it through a non-linear function (such as a sigmoid or rectifier) and sends output to child perceptrons.  The mathematics of this are beyond the scope of this article - the key takeaway is that stacking these perceptrons together into many layers allows neural networks to learn complex functions from large amounts of data.
+
+
+## What tasks does deep learning perform well on?
+
+Deep learning is currently the state of the art in a number of challenging tasks:
+
+- computer vision
+- natural language processing (NLP)
+- reinforcement learning
+
+
+This ability to use similar architectures and classes of models on very different tasks & types of data is one reason many are so excited about deep learning.
 
 
 ## When does deep learning make sense?
 
+
 ### Lots of data
 
 https://youtu.be/0oyCUWLL_fU?t=584 (fast.ai)
+
+![fig3]({{ '/assets/ml_energy/fig2.png' }})
+
+*Deep neural networks are able to learn from massive amounts of data  - [adapted from 'AI is the New Electricity' (Andrew Ng)](https://www.youtube.com/watch?v=21EiKfQYZXc)*
+
+The problem with classical machine learning is that it doesn't benefit from massive amounts of data.  Because the capacity of a neural network can be increased by adding depth, neural networks are able to break through the limits of classical machine learning models.
 
 
 ### Data structure / perception
@@ -434,50 +476,55 @@ https://youtu.be/0oyCUWLL_fU?t=584 (fast.ai)
 The ability to see and understand language not only drives performance, it also allows machine learning to generalize.  Vision and language understanding are low level skills used in essentially every domain of human life.  Mastering these low level skills means that machines can be useful in a range of industries.  Energy is no different.
 
 
-## Are there any machine learning approaches that outperform deep learning?
+## When does deep learning not make sense?
 
-There is more to machine learning than just deep neural networks - algorithms like logistic regression and random forests are suitable for many business problems.      The problem with classical machine learning is that it doesn't benefit from massive amounts of data.  Because the capacity of a neural network can be increased by adding depth, neural networks are able to break through the limits of classical machine learning models.
+No structure
 
-![fig3]({{ '/assets/ml_energy/fig2.png' }})
 
-*Deep neural networks are able to learn from massive amounts of data  - [adapted from 'AI is the New Electricity' (Andrew Ng)](https://www.youtube.com/watch?v=21EiKfQYZXc)*
+
+## Why are many companies not doing deep learning?
+
+There is more to machine learning than just deep neural networks - algorithms like logistic regression and random forests are suitable for many business problems.      
+
+It's very common for data driven companies doing machine learning at scale to not be using deep learning.
+
+This is because much of the data generated and used by businesses does not suit deep learning - it's tabular data.
+
+The other major constraint is the amount of data, which can be a bottle neck for using deep learning on NLP tasks.
+
+
+
 
 It's very important to point out that deep learning is not the only valuable machine learning approach.  Many data driven businesses are getting massive value from machine learning without doing any deep learning.
 
 Classical machine learning covers a number of different approaches.  The most performant and popular are a family of models based on ensembles of decision trees - most commonly XGBoost.
 
-No structure
-
 Classical = more widely used in many industries (esp time series)
 
-Many businesses are also getting massive value from data without machine learning at all!  Traditional data analysis based on dashboarding, heuristics and Powerpoint can be exactly what many businesses need.
+- why deep learning is probably not the best ML approach you can take
+- why a non-deep learning approach is probably where most of the business value is for your problem
 
 
 # Is the machine learning hype justified?
 
-Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
+The spectre of being an overhyped bubble hangs heavy artificial intelligence - the history of the field is of boom periods of overestimation of the near term potential of AI with periods of no progess - known as AI winters.
 
-The spectre of being an overhyped bubble hangs heavy over
+Machine learning has allowed computers to demonstrate human level (or above) performance on a range of challenging tasks.  Given enough data and compute, machines are able of learning to do complex tasks.
 
-The facts are this:
+The question of if the hype in machine learning is justified, needs to be asked in the context of a certain class of problems, or in a certain industry.
 
-- deep learning has allowed computers to demonstrate human level (or above) performance on a range of challenging tasks
-- classical machine learning
+The progress made in the last decade is real. Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
 
-However many problems still exist with modern machine learning:
-
-- reliance of huge amounts of data
+So should you be excited, or i
 
 
 ## What about general AI?
 
-Narrow AI = 
+Narrow AI = able to solve a single task at a superhuman level
 
 General AI = broad, able to solve any task at a superhuman level
 
-
-some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
-
+Some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
 
 So far machine learning has provided narrow artificial intelligence (AI).  The power of these systems are often superhuman, and more than enough to justify the hype around machine learning.  Typically the task involves perception, using high dimensional data (i.e. images).  This is the main contribution of machine learning - being able to create business value from raw, high dimensional data.
 
@@ -487,6 +534,8 @@ This narrow intelligence stands in contrast to the goal of many AI researchers -
 # Section One - Summary
 
 Because machine learning is a subset of artificial intelligence, they should not be used interchangeably.  One reason machine learning is often confused with AI is how well modern machine learning is performing.  The other reason is that AI is better at generating hype - you'll likely raise more money for your startup if you are 'an innovative AI platform'.
+
+In this section we have clarified three key terms in the AI & machine learning space:
 
 - artificial intelligence = creating intelligent machines that can solve problems
 - machine learning = a branch of AI, where machines learn from data
@@ -498,11 +547,21 @@ Because machine learning is a subset of artificial intelligence, they should not
 
 # SECTION TWO - MACHINE LEARNING & ENERGY
 
+> Intuition in n-dimensions isn't worth a dam - GEORGE DANZIG
+
+This section covers the intersection between
+
+
+This section will cover:
+
+- 
+
 
 ## Trends in energy
 
 - more things to measure (distributed)
-- more challenging control problems
+- more uncertainty (variable renewabels)
+- more challenging control problems - storage, flexible demand
 - more data available
 
 
@@ -529,6 +588,8 @@ energy = small data
 - renewables plant only 2 years old
 - combinigc datasets useful
 - Poor state of digitization means working with small data is the primary work of energy data scientists
+
+Many businesses are also getting massive value from data without machine learning at all!  Traditional data analysis based on dashboarding, heuristics and Powerpoint can be exactly what many businesses need.
 
 
 ## ML project checklist

@@ -13,39 +13,47 @@ top:
     children:
       - title: "world-models"
         url: https://github.com/ADGEfficiency/world-models
-      - title: "teaching-monolith"
-        url: https://github.com/ADGEfficiency/teaching-monolith
       - title: "energy-py"
         url: /energy-py-reinforcement-learning-for-energy-systems/
       - title: "energy-py-linear"
         url: /intro-energy-py-linear/
+
+  - title: "Top Posts"
+    children:
+      - title: "Mistakes Data Scientists Make"
+        url: /mistakes-data-scientist/
+      - title: "Machine Learning in Energy"
+        url: /machine-learning-in-energy/
+
+  - title: "Energy"
+    children:
+      - title: "kW versus kWh"
+        url: /energy-basics-kw-vs-kwh/
+      - title: "HHV vs LHV"
+        url: /energy-basics-hhv-versus-lhv/
+      - title: "Gas Turbines & Temperature"
+        url: /energy-basics-ambient-temperature-impact-on-gas-turbine-performance/
+      - title: "Capacity Factor"
+        url: /energy-basics-capacity-factor/
+      - title: "CHP Cheat Sheet"
+        url: /cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/
+      - title: "Average vs. Marginal Carbon"
+        url: /energy-basics-average-vs-marginal-carbon-emissions/
+
+  - title: "Machine Learning"
+    children:
+      - title: "Animated Deep Learning"
+        url: /animated-deep-learning
+      - title: "World Models (the long version)"
+        url: /world-models/
+
+  - title: "Resources"
+    children:
+      - title: "teaching-monolith"
+        url: https://github.com/ADGEfficiency/teaching-monolith
       - title: "programming-resources"
         url: https://github.com/ADGEfficiency/programming-resources
       - title: "ml-resources"
         url: https://github.com/ADGEfficiency/ml-resources
       - title: "rl-resources"
         url: https://github.com/ADGEfficiency/rl-resources
-
-  - title: "Top Posts"
-    children:
-      - title: "World Models (the long version)"
-        url: /world-models/
-      - title: "Machine Learning in Energy"
-        url: /machine-learning-in-energy/
-      - title: "Mistakes Data Scientists Make"
-        url: /mistakes-data-scientist/
-      - title: "Average versus Marginal Carbon"
-        url: /energy-basics-average-vs-marginal-carbon-emissions/
-
-  - title: "Energy Basics"
-    children:
-      - title: "kW versus kWh"
-        url: /energy-basics-kw-vs-kwh/
-      - title: "HHV vs LHV"
-        url: /energy-basics-hhv-versus-lhv/
-      - title: "Gas Turbines and Ambient Temperature"
-        url: /energy-basics-ambient-temperature-impact-on-gas-turbine-performance/
-      - title: "Capacity Factor"
-        url: /energy-basics-capacity-factor/
-      - title: "CHP Cheat Sheet"
-        url: /cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/

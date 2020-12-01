@@ -4,40 +4,63 @@ date: 2019-09-14
 categories:
   - Data Science, Python, Machine Learning
 excerpt: Badges of honour for the accomplished data scientist.
+classes: wide2
+toc: true
+toc_sticky: true
 
 ---
 
-<i>Update </i>
-<i>- [slides for a talk on this blog post](https://www.canva.com/design/DADl9pRJd0c/Ay44vvr7SCtp2aUNrWevpw/view?utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=homepage_lightbox)</i>
-<i>- [reddit coverage ](https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/)</i>
+<center><img src="/assets/mistakes-data-sci/f1.jpeg" width="900"></center>
+<br>
 
-<center><img src="/assets/mistakes-data-sci/reddit.png" width="700"></center>
+> An expert is a person who has made all the mistakes that can be made in a very narrow field
+>
+> Niels Bohr - Nobel Prize in Physics 1922
 
----
+Error driving improvement is a beautiful paradox. Neural networks learn from a backpropagated error signal - **data scientists learn from their mistakes**.
 
-> An expert is a person who has made all the mistakes that can be made in a very narrow field - Niels Bohr - Nobel Prize in Physics 1922
+Patterns exist in the mistakes data scientists make. **I've made and learnt from all these mistakes - I've seen these mistakes made by others**.
 
-> If you don't make mistakes, you’re not working on hard enough problems. And that’s a big mistake – Frank Wilczek - Nobel Prize in Physics 2004
+This article will guide you through some of the **most common mistakes that all data scientists make**.
 
-I'm fascinated by systems that use error to improve.
+<center>
+<img src="/assets/mistakes-data-sci/reddit.png" width="700">
+</center>
 
-These are Nassim Nicholas Taleb's **antifragile** systems, which use error/pain/volatility/mistakes to improve.  This is an observable paradox - a sign of a fundamental truth.  Examples of antifragile systems include business, evolutionary learning, biological evolution, training neural networks and also **learning data science**.
+<center>
+<i>
+<a href="https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/">Reddit thread on this post</a>
+</i>
+</center>
 
-I've made many mistakes while learning, working and teaching data science. I see those same mistakes repeated by my students at [Data Science Retreat](https://datascienceretreat.com).
 
-Patterns exist in the mistakes made learning data science - hopefully sharing them will help you to only make them once.  But do make them - the mistake is useful for progress.
+<br>
+# Not plotting the target
 
-## Not plotting the target
+Prediction separates the data scientist from the data analyst.  The data analyst analyzes the past - **the data scientist predicts the future**.  Using features to predict a target is supervised learning.
 
-Prediction is a skill that separates the data scientist from the data analyst.  The data analyst analyzes the past - the data scientist **predicts the future**.
+This target can be either a number (regression) or a category (classification).  **Understanding the distribution of the target is a must-do for any supervised learning project**.
 
-Data scientists use supervised machine learning as a tool to predict a target from features.  
+The distribution of the target will inform many decisions a data scientist makes, including:
 
-This target can be either a number (regression) or a type (classification), and is a prediction that can be used to optimize business decisions.
+- what models to consider using
+- whether scaling is required
+- if the target has outliers that should be removed
+- if the target is imbalanced
 
-Understanding the **distribution of your target** is a key step in data exploration, and will inform many decisions the data scientist makes in the future about what techniques to use.
 
-For regression, a histogram will show if the target distribution is multimodal and highlight outliers:
+## Regression
+
+In a regression problem, a data scientist wants to know the following about the target:
+
+- the minimum & maximum
+- how normally distributed the target it
+- if the distribution is multi-modal
+- if there are outliers
+
+**A histogram will answer all of these - making it an excellent choice for visualizing the target in regression problems**.  
+
+The code below generates a toy dataset of four distributions and plots a histogram:
 
 ```python
 import numpy as np
@@ -48,48 +71,73 @@ data = np.concatenate([
     np.random.normal(-5, 1, 10000),
     np.array([-20, 20] * 1000)
 ])
-
-pd.DataFrame(data).plot(kind='hist', legend=None, bins=100)
+ax = pd.DataFrame(data).plot(kind='hist', legend=None, bins=100)
 ```
 
-The histogram shows the four distributions that generated this dataset - two normal and two uniform.
+The histogram clearly shows the two normal and two uniform distributions that generated this dataset:
 
-<center><img src="/assets/mistakes-data-sci/reg.png"></center>
+<center><img src="/assets/mistakes-data-sci/reg.png" width="50%"></center>
 
-In classification you want to know how balanced your classes are - we can see this using a bar chart:
+## Classification
+
+In a classification problem, a data scientist wants to know the following about the target:
+
+- how many classes there are
+- how balanced are the classes
+
+We can answer these questions using a single bar chart:
 
 ```python
-data = ['awake'] * 1000 + ['asleep'] * 500 + ['dreaming'] * 50
+import pandas as pd
 
-pd.Series(data).value_counts().plot(kind='bar')
+data = ['awake'] * 1000 + ['asleep'] * 500 + ['dreaming'] * 50
+ax = pd.Series(data).value_counts().plot(kind='bar')
 ```
 
-<center><img src="/assets/mistakes-data-sci/class.png"></center>
+<center><img src="/assets/mistakes-data-sci/class.png" width="50%"></center>
 
-Both of these plots are simple, and should be a part of all supervised learning projects.
 
-## Not thinking in terms of dimensionality
+<br>
+# Not thinking in terms of dimensionality
 
-Data scientists learn to see the world through the lens of **dimensionality**.  Dimensionality is structure - this structure provides hope that the world can be understood.
+**Dimensionality provides structure for understanding the world**. An experienced data scientist learns to see the dimensions of data.
 
-**Dimensionality reduction** is a key skill of the data scientist.  Machine learning is excellent at it - dimensionality reduction is so often done with machine learning that it is a useful working definition for the entire field.
 
-Examples of dimensionality reduction include:
-- pixels in an image -> cat or dog (binary classification)
-- pixels in an image -> image caption text
-- customer data -> lifetime value estimation (regression)
+## The value of low dimensional data
 
-The value of dimensionality reduction is that **business decisions are made in low dimensional spaces**.  A list of 50 numbers about a customer becomes an estimate of lifetime value, which can be used to take an action.  Prediction becomes control.
+In business, lower dimensional representations are more valuable than high dimensional representations. **This is because business decisions are made in low dimensional spaces**.
 
-If reducing dimensionality is desirable, then increasing dimensionality is likely to be undesirable.  The difficulty of working in high dimensional spaces is the curse of dimensionality.
+Much of the work of a data scientist is using machine learning to reduce dimensionality:
 
-### The curse of dimensionality
+- using pixels in an satellite image to predict solar power output
+- using wind turbine performance data to estimate the probability of future breakdown
+- using customer data to predict customer lifetime value
 
-To understand the curse of dimensionality we need to reason about the space (aka volume) that data occupies.  We can imagine a dense dataset - a large number of diverse samples within a small volume.  We can also imagine a sparse dataset - a small number of samples in a large volume.
+**Each of the outputs can be used by a business in a way the raw data can't**.  Unlike their high dimensional raw data inputs, the lower dimensional outputs can be used to make decisions:
 
-What happens to the density of a dataset as we add dimensions?  It becomes less dense, because the data is now more spread out.  The problem is that adding a dimension makes understanding the size of the space exponentially larger.  
+- solar power output can be used to guide energy trader actions
+- a high wind turbine breakdown probability can lead to a maintenance team being sent out
+- a low customer lifetime estimation can lead to less money budgeting for marketing
 
-Why?  Because this new dimension needs to be understood in relation to every other combination of all the existing dimensions.  The **curse of dimensionality** is this exponential increase in the size of the space that occurs as we add dimensions:
+
+**The above are examples of the interaction between prediction and control**. The better you are able to predict the world, the better you can control it. 
+
+This is also a working definition of a data scientist - **making predictions that lead to action** - actions that change how a business is run.
+
+
+## The challenges of high dimensional data
+
+**The difficulty of working in high dimensional spaces is known as the curse of dimensionality**.
+
+To understand the curse of dimensionality we need to reason about the *space* and *density* of data.  We can imagine a dense dataset - a large number of diverse samples within a small space.  We can also imagine a sparse dataset - a small number of samples in a large space.
+
+What happens to the density of a dataset as we add dimensions?  It becomes less dense, because the data is now more spread out.
+
+**The decrease of data density with increasing dimensionality is not linear - it's exponential**.  The space becomes exponentially harder to understand as we add dimensions.
+
+Why?  It is because this new dimension needs to be understood not only in terms of the other dimensions (which is linear) but in terms of the **combination of every other dimension with every other dimension** (which is exponential).
+
+The curse of dimensionality is this exponential increase of space as we add dimensions.  The code below show this exponential effect:
 
 ```python
 import itertools
@@ -98,20 +146,14 @@ def calc_num_combinations(data):
     return len(list(itertools.permutations(data, len(data))))
 
 def test_calc_num_combinations():
-    test_data = (
-        ((0, ), 1), ((0, 1), 2), ((0, 1, 2), 6)
-    )
+    """To test it works :)"""
+    test_data = (((0, ), 1), ((0, 1), 2), ((0, 1, 2), 6))
     for data, length in test_data:
         assert length == calc_num_combinations(data)
 
 test_calc_num_combinations()
-
-curse = []
-for l in range(11):
-    curse.append((l, calc_num_combinations(range(l))))
-
-print(curse)
-
+print([(length, calc_num_combinations(range(length))) for length in range(11)])
+"""
 [(0, 1),
  (1, 1),
  (2, 2),
@@ -123,17 +165,21 @@ print(curse)
  (8, 40320),
  (9, 362880),
  (10, 3628800)]
+"""
 ```
 
-To be useful, a model needs to understand the space - the larger the size of the space the longer it can take to learn it.  This is why adding features with no information (uncorrelated noise or perfect correlation) is painful.  The model needs to understand the relationship of this new column with all other combinations of all other columns.
+The larger the size of the space, the more work a machine learning model needs to do to understand it. This is why adding features with no signal is painful.  Not only does the model need to learn it's noise - it needs to do this by considering how this noise interacts with each combination of every other column.
 
-Getting a theoretical understanding of dimensionality is step one. Next is noticing where it appears in the daily practice of data science. An experienced data scientist will be take actions to avoid it.  Prediction becomes control.
+Getting a theoretical understanding of dimensionality is step one. **Next is noticing where it appears in the daily practice of data science**.  Below we will go through a few practical cases where data scientists can not apply the curse of dimensionality to their own workflow.
 
-### Too many hyperparameters
 
-An expensive mistake of the new data scientist is **excessive grid searching**.  Now that we understand the curse of dimensionality, we now that adding a single new value in our grid means a massive increase in the number of models you need to train.
+## Too many hyperparameters
 
-A related mistake is **narrow grid searches** - a logarithmic scale will be more informative than a small linear range:
+New data scientists often waste time doing **excessive grid searching**.  Grid searches are expensive in both time and compute. The motivation of complex grid searches come from a good place - the desire for good hyperparameters.
+
+Yet we now know that adding just one additional search means an exponential increase in models trained - because this new search parameter needs to be tested in combination with every other search parameter.
+
+Another mistake is **narrow grid searches** - searching over small ranges of hyperparameters.  A logarithmic scale will be more informative than a small linear range:
 
 ```python
 #  this search isn't wide enough
@@ -147,132 +193,207 @@ useful_search = sklearn.model_selection.GridSearchCV(
 )
 ```
 
-### Too many features
+Different projects require different amounts of grid searching, over both models and their hyperparameters.  I find that I often build two grid searching pipelines:
 
-I had this misunderstanding when working for the first six months as a data scientist.  Seeing the results in computer vision, where deep neural networks are state of the art, I thought that any neural network were ideal for any high dimensionality data.
+- one to compare different models (using the best hyperparameters found so far for each)
+- one to compare different hyperparameters for a single model
 
-The first mistake was not realizing that convolution provides useful inductive bias, specific to the structure found in images.  The second mistake was not appreciating the exponential cost of adding columns (commonly done when one-hot encoding).  Adding columns is expensive!
+I'll start by comparing models in the first pipeline, then doing further tuning on a single model in the second gridsearch pipeline.  Once a model is reasonably tuned, it's best hyperparameters can be put into the first gridsearch pipeline.  The fine tuning on a single model is often searches over a single parameter at a time (two maximum). 
 
-### Too many metrics
 
-This is especially common for new data scientists working on regression problems - reporting a range of metrics (such as mean absolute error, mean absolute percentage error, root mean squared error etc) rather than a single metric.
+## Too many features
 
-Combine this with reporting a test & train error (or test & train per cross validation fold), the number of metrics becomes too many to glance at and make decisions with.  Pick one metric that best aligns with your business goal and stick with it - reduce the dimensionality of your metrics so you can take actions with them.
+A misconception I had as a junior data scientist was that adding features had no cost.  Put them all in and let the model figure it out!
 
-### Too many models
+Seeing the results in computer vision, where deep neural networks do all the work of feature engineering from raw pixels, I thought that the same was true of using neural networks on other data.  I was making two mistakes here:
 
-One of the pleasures of being a data scientist is the availability of high quality implementations of models in scikit-learn.  This can however be a problem when new data scientists repeatedly train a suite of models (say linear, svms and random forests) without a deliberate reason why these models should be looked at in parallel.  At most this should occur a few times, after which a single model is chosen and optimized.
+- not appreciating the useful inductive bias of convolutional neural networks
+- not appreciating the curse of dimensionality
 
-Quite often I see a new data scientist train a linear model, an SVM and a random forest.  An experienced data scientist will just train the random forest (or XGBoost), and focus on using the feature importances to either engineer or drop features.
+We know now there is an **exponential cost to adding more features**.  This also should change how you look at one-hot encoding, which dramatically increases the space that a model needs to understand, with low density data.
 
-Why is a random forest a good first model?  A few reasons:
+
+## Too many metrics
+
+In data science projects, performance is judged using metrics such as training or test performance.
+
+In industry, a data scientist will choose metrics that align with the goals of the business.  Different metrics have different trade-offs - part of a data scientists job is to select metrics that correlate best with the objectives of the business.
+
+However, it's common for junior data scientists to report a range of different metrics.  For example, on a regression problem they might report three metrics:
+
+- mean absolute error 
+- mean absolute percentage error 
+- root mean squared error
+
+Combine this with reporting a test & train error (or test & train per cross validation fold), the number of metrics becomes too many to glance at and make decisions with.
+
+**Pick one metric that best aligns with your business goal and stick with it**. Reduce the dimensionality of your metrics so you can take actions with them.
+
+
+## Too many models
+
+Data scientists are lucky to have access to many high quality implementations of models in open source packages such as `scikit-learn`. 
+
+This can become a problem when new data scientists repeatedly train a suite of models without a deliberate reason why these models should be looked at in parallel. 
+
+Quite often I see a new data scientist train a linear model, an SVM and a random forest.  An experienced data scientist will just train a tree based ensemble (a random forest or XGBoost), and focus on using the feature importances to either engineer or drop features.
+
+**Why is are tree based ensembles a good first model?**  A few reasons:
+
 - they can be used for either regression or classification
 - no scaling of target or features required
-- no one-hot encoding
 - training can be parallelized across CPU cores
-- they work well on tabular data (win many Kaggle competitions)
+- they perform well on tabular data 
 - feature importances are interpretable
 
-## Not seeing the interaction between prediction and control
 
-The interaction between prediction and control drives reinforcement learning.  The better you are able to predict the world, the better you can control it.
+<br>
+# Learning rate too high
 
-This is also a working definition of a data scientist - **making predictions that lead to action**.
+If there is one hyperparameter worthy of searching over when training neural networks it is learning rate (second is batch size).  **Setting the learning rate too high will make training of neural networks unstable** - LSTM's especially.  What the learning rate does is quite intuitive - higher learning rate means faster training. 
 
-## Not understanding bias & variance
+**Batch size is less intuitive** - a smaller batch size will mean high variance gradients, but some of the value of batches is using that variance to break out of local minima.  In general, batch size should be as large as possible to improve gradient quality - often it is limited by GPU memory.
 
-Error is the sum of bias, variance and noise.   **Noise is unmanageable** - no model can use it.
 
-```python
-error = bias + variance + noise
-```
+<br>
+# Not understanding bias & variance
+
+Error in supervised learning has three components:
+
+- bias
+- variance
+- noise
 
 **Bias is a lack of signal** - the model misses seeing relationships that can be use to predict the target.  This is underfitting.  Bias can be reduced by increasing model capacity (either through more layers / trees, a different architecture or more features).
 
 **Variance is confusing noise for signal** - patterns in the training data that will not appear in the data at test time.  This is overfitting.  Variance can be reduced by adding training data.
 
-It is possible to have a model that is high bias & high variance - to simultaneously over and underfit.  Most of the time you will train a model with some bias & high variance, and your options will usually result in a tradeoff between bias & variance.
+**Noise is unmanageable** - the best a model can do is avoid it.
 
-Increasing model capacity will reduce bias, but can increase variance (if that capacity is used to fit to noise).  Decreasing model capacity (such as through regularization) will reduce variance but can increase bias.
+The error of a machine learning model is usually due to a combination of all three.  Often data scientists will be able to make changes that lead to a trade off between bias & variance.  Three common levers a data scientist can pull are:
 
-Another option is more data - this should reduce variance, but will have no effect on bias.  More data can even make bias worse - it gives your model the chance to give highly precise, wrong answers - see [Statistical Thinking for Data Science, SciPy 2015, Chris Fonnesbeck](https:/www.youtube.com/watch?v=TGGGDpb04Yc).
+- adding model capacity
+- reducing model capacity
+- adding training data
 
-## Not thinking about where error comes from
+## Adding model capacity
 
-Three common sources of error are in a dataset are:
-- sampling error - arises from using statistics of a subset of a larger population
+Increasing model capacity will reduce bias, but can increase variance (that additional capacity can be used to fit to noise).
+
+
+## Reducing model capacity
+
+Decreasing model capacity (through regularization, dropout or a smaller model) will reduce variance but can increase bias.
+
+
+## Adding data
+
+More data will reduce variance, because the model has more examples to learn how to separate noise from signal.
+
+More data will have no effect on bias.  **More data can even make bias worse**, if the additional data has error from sampling bias. 
+
+More data only gives your model the chance to be more precise about being wrong - see Chris Fonnesbeck's talk on [Statistical Thinking for Data Science](https:/www.youtube.com/watch?v=TGGGDpb04Yc) for more on the relationship between bias, sampling bias and data quanitiy.
+
+
+<br>
+# Not thinking about where error comes from
+
+Above we looked at three components of prediction error - but where does this error come from?  
+
+Three common sources of error are:
+
+- sampling error - using statistics estimated on a subset of a larger population
 - sampling bias - samples having different probabilities than others
 - measurement error - difference between measurement & true value
 
-Is is the first step to understand these three sources of error while in statistics class - harder when you are working with a real dataset.
+Actually quantifying these is challenging.  **However there is still value in thinking qualitatively about the sampling error, sampling bias or measurement error in your data**.
 
-IID is another lens through which to look at sources of error.  IID is an assumption that data is **independent & identically distributed**.  Non-independent sampling causes sampling bias, non-identical distributions is an example of sampling error.
+Another useful framework for thinking about error is the independent & identically distributed (IID) assumption.  IID is the assumption that data is:
 
-## An obsession with the width & depth of fully connected neural nets
+- independently sampled (no sampling bias)
+- identically distributed (no sampling or measurement error)
 
-We saw above in *Not understanding bias & variance* that model capacity & architecture reduce model bias.  Yet when it comes to fully connected (aka feedforward aka dense) neural nets, the architecture doesn't matter so much.  As long as you give the model enough capacity and sensible hyperparameters, it should be able to learn.
+Thinking about the difference between the sampling & distribution of your training and test can help improve the generalization of a machine learning model, before it's failing to generalize in production.
 
-A dense network has very little inductive bias - meaning that playing around with architecture isn't likely to help!  Let your gradients work with the capacity you give them.
 
-Case in point - [Schulman et. al (2015) Trust Region Policy Optimization](https://arxiv.org/abs/1502.05477), which uses a simple feedforward neural network as a policy on locomotion tasks.  The locomotion tasks use a flat input vector, unlike the pixel based tasks, where a convolutional neural network is used.
+<br>
+# An obsession with the width & depth of fully connected neural nets
 
-<center><img src="/assets/mistakes-data-sci/trpo.png"></center>
+The reason why junior data scientists obsess over the architecture of fully connected neural networks comes from the process of building them.  Constructing a neural network requires defining the architecture - surely it's important?
 
-<center>Schulman et. al (2015) Trust Region Policy Optimization - https://arxiv.org/abs/1502.05477</center>
-<p></p>
+**Yet when it comes to fully connected neural nets, the architecture doesn't matter so much**.
 
-The correct mindset with a fully connected neural network is a depth of two or three, with a width that is similar to your input (features) and output (target).  If this isn't enough capacity (i.e. your error metrics are indicating bias), consider adding a layer or some width.
+As long as you give the model enough capacity and sensible hyperparameters, it will be able to learn the same function with a variety of architectures.  Let your gradients work with the capacity you give them.
 
-The **wide & deep** architecture mixes wide memorization feature interactions with deep unseen, learned feature combinations.  I've never used one, but experimenting with this architecture seems like a better bet than adding a dense layer.
+Case in point is *Trust Region Policy Optimization*, which uses a simple feedforward neural network as a policy on locomotion tasks.  The locomotion tasks use a flat input vector, with a simple fully connected architecture.
+
+<center><img width="80%" src="/assets/mistakes-data-sci/trpo.png"></center>
+
+<center><a href="https://arxiv.org/abs/1502.05477">Schulman et al. (2015) Trust Region Policy Optimization</a></center>
+<br>
+
+The correct mindset with a fully connected neural network is a depth of two or three, with the width set between 50 to 100 (or 64 to 128, if you want to fit in with the cool computer science folk). If your model is low bias, consider adding capacity through another layer or additional width.
+
+One interesting improvement on the simple fully connected architecture is the wide & deep architecture, which mixes **wide memorization feature interactions with deep unseen, learned feature combinations**.
 
 <center><img src="/assets/mistakes-data-sci/wide-deep.png"></center>
 
-<center>Cheng et. al (2016) Wide & Deep Learning for Recommender Systems - https://arxiv.org/abs/1606.07792</center>
+<center><a href="https://arxiv.org/abs/1606.07792">Cheng et al. (2016) Wide & Deep Learning for Recommender Systems</a></center>
 
-## Not paying attention to PEP 8
+<br>
+# Not paying attention to PEP 8
 
-Code is run by computers but it is read, written and rewritten by humans.  PEP8 violations scream junior programmer.
+> Programs must be written for people to read, and only incidentally for machines to execute.
+>
+> Abelson & Sussman - Structure and Interpretation of Computer Programs
+
+Code style is important.  I remember being confused at why more experienced programmers were so particular about code style.
+
+**After programming for five years, I now know where they were coming from**.
+
+Code that is laid out in the expected way requires less effort is required to read & understand code. Poor code style places additional burden on the reader to understand your unique code style, before they even think about the actual code itself.
 
 ```python
 #  bad
 Var=1
 
-#  good
-var = 1
-
-# bad
 def adder ( x =10 ,y= 5):
     return  x+y
 
-# good
+#  good
+var = 1
+
 def adder(x=10, y=5):
     return x + y
 ```
 
-The best way to pay attention to PEP8 is via automatic syntax highlighting - a good text editor will have this as a plugin.
+All good text editors will have a way to integrate in-line linting - highlighting code style mistakes as you write them.  **Automatic, in-line linting is the best way to learn code style.**
 
-## Not dropping the target
+<br>
+# Not dropping the target
 
-If you ever get a model with an impossibly low training error, it is likely that your target is a feature. 
+If you ever get a model with an impossibly perfect performance, it is likely that your target is a feature. 
 
 ```python
 #  bad
 data.drop('target', axis=1)
 
 #  good
-data.drop('target', axis=1, inplace=True)
 data = data.drop('target', axis=1)
 ```
 
-## Learning rate being too high
+We all do it once!
 
-If there is one hyperparameter worthy of searching over when training neural networks it is learning rate (second is batch size).  Setting this too high will make training of neural networks unstable - LSTM's especially.
+<br>
 
-Batch size is less intuitive - a smaller batch will mean high variance gradients, but some of the value of using batches is having that variance to break out of local minima.
 
-## Not scaling the target or features
+# Not scaling the target or features
 
-Notice this error by seeing a high loss - anything higher than 2-3 is a sign that your target hasn't been scaled.  By scaling, I mean either standardization:
+This is the advice I've given most when debugging machine learning projects.  Whenever I see a high loss (higher that say 2 or 3), it's a clear sign that the target has not been scaled to a reasonable range.
+
+Scale matters because **unscaled targets lead to large prediction errors**, which mean large gradients and hard to tune learning.
+
+By scaling, I mean either standardization:
 
 ```python
 standardized = (data - np.mean(data)) / np.std(data)
@@ -284,42 +405,91 @@ Or normalization:
 normalized = (data - np.min(data)) / (np.max(data) - np.min(data))
 ```
 
-The same requirement for scale applies to features as well (but not for random forests!).  Scale matters because an unscaled target or features can lead to large errors, which mean large gradients and hard to tune learning.
+Note that there is a lack of consistency between what these things are called - normalization is also often called min-max scaling, or even standardization!
 
-## Not working with a sample of the data during development
+Take the example below, where we are trying to predict how many people attend a talk, from the number of speakers and the start time.  Our first pipeline doesn't scale the features or targets, leading to a large error signal and large gradients:
 
-A no-brainer when writing code that processes data - and an expensive mistake in developer time if you run the data processing using your full dataset each time you are fixing a bug.
+<center><img src="/assets/mistakes-data-sci/scale1.png" width="900"></center>
 
-You can work on a sample of your data roughly using an integer index:
+Our second pipeline takes the time to properly scale features & target, leading to an error signal with appropriately sized gradients:
+
+<center><img src="/assets/mistakes-data-sci/scale2.png" width="900"></center>
+
+A similar logic holds for features - unscaled features can dominate and distort how information flows through a neural network.
+
+
+<br>
+# Not working with a sample of the data during development
+
+This is a small workflow improvement that leads to massive productivity gains.
+
+Development is a continual cycle of fixing errors, running code and fixing errors.  Developing your program on a large dataset can cost you time - especially if your debugging something that happens at the end of the pipeline.
+
+**During development, work on a small subset of the data**. There are a few ways to handle this.
+
+## Creating a subset of the data
+
+You can work on a sample of your data already in memory, using an integer index:
 
 ```python
 data = data[:1000]
 ```
 
+`pandas` allows you only load a subset of the data at a time (avoiding pulling the entire dataset into memory):
+
+```python
+data = pd.read_csv('data.csv', nrows=1000)
+```
+
+## Controlling the debugging
+
+A simple way to control this is a variable - this is what you would do in a Jupyter Notebook:
+
+```python
+nrows = 1000
+data = pd.read_csv('data.csv', nrows=nrows)
+```
+
 Or more cleanly with a command line argument:
 
 ```python
-parser.add_argument('--debug', default='local', nargs='?')
+#  data.py
+parser.add_argument('--nrows', nargs='?')
 args = parser.parse_args()
-
-#  paranoia!
-debug = bool(int(args.debug))
-
-if debug:
-    data = data[:1000]
+data = pd.read_csv('data.csv', nrows=args.nrows)
+print(f'loaded {data.shape[0]} rows')
 ```
 
-## Writing over raw data
+Which can be controlled when running the script `data.py`:
 
-Raw data is holy - it should never be overwritten.  This is true both within a program and on disk.
+```bash
+$ python data.py --nrows 1000
+```
 
-## Bonus - not using $HOME to store data
+<br>
+# Writing over raw data
 
-This one isn't a mistake - but it is a pattern that has made my life dramatically simpler.  
+Raw data is holy - it should never be overwritten.
 
-One issue you have when developing Python packages is that you don't know where the user will clone your repo, or where they scripts that execute the code will live.  This makes saving and loading data in a portable way difficult.
+<br>
+# Bonus - not using $HOME to store data
 
-One solution to this is to create a folder in the user's `$HOME` directory, and use it to store data:
+This one isn't a mistake - but it is a pattern that has made simplified my life dramatically.
+
+Managing paths in Python can be tricky.  There are few things that can change how path finding tools can work:
+
+- where the user clones source code
+- where a virtual environment installs that source code
+- which directory a user runs a script from
+
+Some of the problems that occur are:
+
+- `os.path.realpath` will change based on where the virtual environment installs your package
+- `os.getcwd` will change based on where the user runs Python
+
+Putting data in a fixed, consistent place can avoid these issues - you don't ever need to get the directory relative to anything except the users `$HOME` directory.
+
+The solution is to create a folder in the user's `$HOME` directory, and use it to store data:
 
 ```python
 import os
@@ -330,9 +500,8 @@ os.makedirs(path, exist_ok=True)
 np.save(path, data)
 ```
 
-This means your work is portable - both to your colleagues and to remote machines.
+This means your work is portable - both to on your colleagues laptops and on remote machines in the cloud.
 
 ---
-
 
 Thanks for reading!
