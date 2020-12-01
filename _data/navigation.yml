@@ -9,6 +9,13 @@ main:
     url: /year-archive/
 
 top:
+  - title: "Top Posts"
+    children:
+      - title: "Mistakes Data Scientists Make"
+        url: /mistakes-data-scientist/
+      - title: "Machine Learning in Energy"
+        url: /machine-learning-in-energy/
+
   - title: "Projects"
     children:
       - title: "world-models"
@@ -17,13 +24,6 @@ top:
         url: /energy-py-reinforcement-learning-for-energy-systems/
       - title: "energy-py-linear"
         url: /intro-energy-py-linear/
-
-  - title: "Top Posts"
-    children:
-      - title: "Mistakes Data Scientists Make"
-        url: /mistakes-data-scientist/
-      - title: "Machine Learning in Energy"
-        url: /machine-learning-in-energy/
 
   - title: "Energy"
     children:
