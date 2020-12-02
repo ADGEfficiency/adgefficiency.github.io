@@ -17,11 +17,11 @@ toc_sticky: true
 >
 > Niels Bohr - Nobel Prize in Physics 1922
 
-Error driving improvement is a beautiful paradox. Neural networks learn from a backpropagated error signal - **data scientists learn from their mistakes**.
+Error driving improvement is a beautiful paradox. Neural networks learn from a backpropagated error signal - data scientists learn from their mistakes.
 
-Patterns exist in the mistakes data scientists make. **I've made and learnt from all these mistakes - I've seen these mistakes made by others**.
+Patterns exist in the mistakes data scientists make. **I've made and learnt from all these mistakes - I've also seen these mistakes made by many others**.
 
-This article will guide you through some of the **most common mistakes that all data scientists make**.
+This article will guide you through some of the most common mistakes that all data scientists make.
 
 <center>
 <img src="/assets/mistakes-data-sci/reddit.png" width="700">
@@ -500,7 +500,7 @@ os.makedirs(path, exist_ok=True)
 np.save(path, data)
 ```
 
-This means your work is portable - both to on your colleagues laptops and on remote machines in the cloud.
+This means your work is portable - both to on your colleague's laptops and on remote machines in the cloud.
 
 ---
 
