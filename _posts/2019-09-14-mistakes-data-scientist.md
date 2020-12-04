@@ -126,7 +126,7 @@ Notice that much of the work of a data scientist is using machine learning to re
 
 The above are examples of the interaction between prediction and control. The better you are able to predict the world, the better you can control it.
 
-This is also a working definition of a data scientist - **making predictions that lead to action** - actions that change how a business is run**.
+This is also a working definition of a data scientist - **making predictions that lead to action - actions that change how a business is run**.
 
 
 ## The challenges of high dimensional data
@@ -200,7 +200,7 @@ useful_search = sklearn.model_selection.GridSearchCV(
 )
 ```
 
-Different projects require different amounts of grid searching, over both models and their hyperparameters.  I find that I often build two grid searching pipelines:
+<!-- Different projects require different amounts of grid searching, over both models and their hyperparameters.  I find that I often build two grid searching pipelines: -->
 
 - one to compare different models (using the best hyperparameters found so far for each)
 - one to compare different hyperparameters for a single model
@@ -325,7 +325,7 @@ More data will reduce variance, because the model has more examples to learn how
 
 More data will have no effect on bias.  **More data can even make bias worse**, if the sampling of additional is biased (sampling bias).  
 
-Additional data sampled with bias will only give your model the chance to be more precise about being wrong - see Chris Fonnesbeck's talk on [Statistical Thinking for Data Science](https:/www.youtube.com/watch?v=TGGGDpb04Yc) for more on the relationship between bias, sampling bias and data quanitiy.
+Additional data sampled with bias will only give your model the chance to be more precise about being wrong - see Chris Fonnesbeck's talk on [Statistical Thinking for Data Science](https:/www.youtube.com/watch?v=TGGGDpb04Yc) for more on the relationship between bias, sampling bias and data quantity.
 
 
 <br>
