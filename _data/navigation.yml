@@ -11,6 +11,8 @@ main:
 top:
   - title: "Top Posts"
     children:
+      - title: "Animated Guide to Deep Learning"
+        url: /animated-deep-learning/
       - title: "Mistakes Data Scientists Make"
         url: /mistakes-data-scientist/
       - title: "Machine Learning in Energy"
