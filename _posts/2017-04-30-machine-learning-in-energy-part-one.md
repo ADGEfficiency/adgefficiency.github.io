@@ -5,6 +5,8 @@ categories:
   - Energy
   - Machine Learning
 excerpt:  What is machine learning anyway? 
+redirect_to:
+  - https://adgefficiency.com/machine-learning-in-energy/
 
 ---
 
