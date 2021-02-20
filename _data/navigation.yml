@@ -11,6 +11,10 @@ main:
 top:
   - title: "Top Posts"
     children:
+      - title: "AI, Machine Learning and Deep Learning"
+        url: /ai-ml-dl/
+      - title: "Animated Guide to Deep Learning"
+        url: /animated-deep-learning/
       - title: "Mistakes Data Scientists Make"
         url: /mistakes-data-scientist/
       - title: "Machine Learning in Energy"
@@ -42,8 +46,12 @@ top:
 
   - title: "Machine Learning"
     children:
+      - title: "AI, Machine Learning and Deep Learning"
+        url: /ai-ml-dl/
       - title: "Animated Deep Learning"
         url: /animated-deep-learning
+      - title: "Mistakes Data Scientists Make"
+        url: /mistakes-data-scientist/
       - title: "World Models (the long version)"
         url: /world-models/
 

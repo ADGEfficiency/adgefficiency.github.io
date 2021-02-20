@@ -743,4 +743,8 @@ Below is a short table summarizing the article:
 | LSTM            | Database                       | Sequences, memory                         | Data with sequential structure  |
 | Attention       | Focus on similarities            | Similarity, limit information flow  | Data with sequential structure  |
 
+---
+
 Thanks for reading!
+
+If you enjoyed this post, make sure to check out my post on <a href="https://adgefficiency.com/ai-ml-dl/">Artificial Intelligence, Machine Learning and Deep Learning</a>.

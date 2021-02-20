@@ -14,6 +14,8 @@ sidebar:
 
 I'm an energy engineer turned data scientist. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
+Currently I'm a data scientist at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.
+
 Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - [most of my work is open source](https://github.com/ADGEfficiency) - [I offer personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
 # Projects

@@ -5,6 +5,8 @@ categories:
   - Energy
   - Machine Learning
 excerpt: Applications of machine learning in energy - forecasting, disaggregation and reinforcement learning.
+redirect_to:
+  - https://adgefficiency.com/machine-learning-in-energy/
 
 ---
 

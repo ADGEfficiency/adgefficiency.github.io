@@ -564,3 +564,17 @@ After a legendary career as a mathematician and a stint breaking Soviet codes, S
 ... emotion is constructed in the moment by core systems interacting across the whole brain, aided by a lifetime of learning.
 
 ### 186 - Ho Chi Minh: A Life - William J. Duiker
+
+### 187 - The Case Against Reality - Donald D. Hoffman
+
+A professor of cognitive science argues that the world is nothing like the one we experience through our senses
+
+### 188 - I Am A Strange Loop - Douglas Hofstadter
+
+Examines in depth the concept of a strange loop to explain the sense of "I".
+
+### 189 - Blood, Sweat and Pixels - Jason Schreier
+
+### 190 - Calling Bullshit - Jevin West
+
+### 191 - Facts and Fallacies of Software Engineering - Robert Glass
