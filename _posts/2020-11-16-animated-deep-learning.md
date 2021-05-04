@@ -1,61 +1,62 @@
 ---
-title: 'An Animated Guide to Deep Learning'
+title: 'A Guide to Deep Learning Layers'
 date: 2020-11-16
 classes: wide2
 toc: true
 toc_sticky: true
 categories:
   - Machine Learning
-excerpt: Four deep learning layer architectures explained - including Attention.
+excerpt: Four deep learning layer architectures explained.
 
 ---
 
+*A sneak peak of the summary:*
+
+| Layer           | Intuition                      | Inductive bias          | When to use                                             |
+|-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
+| Fully connected | Allow all possible connections | None                    | Data without structure (i.e. tabular)                   |
+| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
+| LSTM            | Database                       | Sequences, memory                         | Data with sequential structure  |
+| Attention       | Focus on similarities            | Similarity, limit information flow  | Data with sequential structure  |
+
+
 # Introduction
 
-Machine learning is complex - some of the many things a machine learning engineer must master include:
-
-- layer architectures, such as convolution or attention
-- network architectures, such as ResNet50
-- activation functions, including the ReLu or Sigmoid
-- loss functions, such as cross entropy or the Huber loss
-- backpropagation, to assign error to weight updates
-- optimizers, such as stochastic gradient descent or Adam
-- hyperparameters, including learning rate and batch size
-
-**This post is about layer architectures** - the building blocks that machine learning engineers use to construct a full neural network.  In this post we will look at:
-
-- **how each layer works**
-- the **intuition & inductive bias** of each layer
-- what are the **important hyperparameters** for each layer
-- **when to use** each layer
-- **how to use** each layer in TensorFlow 2.0
+**This post is about neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models. 
 
 Together we will look at four important layers that are commonly used in deep learning:
 
-- [the fully connected layer](#fully-connected-layer)
-- [the 2D convolutional layer](#2D-convolution-layer)
-- [the LSTM layer](#lstm-layer)
-- [the attention layer](#attention-layer)
+- [the fully connected layer](#fully-connected-layer),
+- [the 2D convolutional layer](#2D-convolution-layer),
+- [the LSTM layer](#lstm-layer),
+- [the attention layer](#attention-layer).
+
+For each layer we look at:
+
+- **how each layer works**,
+- the **intuition** behind each layer,
+- the **inductive bias** of each layer,
+- what the **important hyperparameters** are for each layer,
+- **when to use** each layer,
+- **how to use** each layer in TensorFlow 2.0.
 
 All code examples are built using `tensorflow==2.2.0` using the Keras Functional API.
 
 
-## What is inductive bias?
+## Background - what is inductive bias?
 
-One term we will be using a lot in this article is **inductive bias** - a useful term to sound clever and impress your friends at dinner parties.
+One term I use a lot in this article is **inductive bias** - a useful term to sound clever and impress your friends at dinner parties.
 
 **Inductive bias is the hard-coding of assumptions into the structure of a learning algorithm**.  These assumptions make the method more special purpose and less flexible, but often much more useful.  By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.
 
 Examples of inductive bias in machine learning include margin maximization (classes should be separated by as large a boundary as possible - used in Support Vector Machines) and nearest neighbours (samples close together in feature space are in the same class - used in the k-nearest neighbours algorithm).
 
-It's a common lesson in machine learning - a bit of bias is usually a good thing (especially if you trade it for variance).
-
-Now we are clear about what inductive bias is, let's meet the first of our four deep learning layers.
+**It's a common lesson in machine learning** - a bit of bias is usually a good thing (especially if you trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiation through Monte Carlo returns performs worse than bootstrapped temporal difference methods.
 
 
 <br />
 
-# Fully Connected Layer
+# 1. Fully Connected Layer
 
 Also known as a dense or feed-forward layer, **the fully connected layer is the most general purpose deep learning layer**.
 
@@ -74,7 +75,7 @@ The artificial neuron composed of three steps:
 2. **a sum** across all weighted inputs
 3. an **activation function**
 
-<center><img align="center" src="/assets/four-dl-arch/neuron.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/neuron.png"></center>
 
 <p align="center"><i>A single neuron with a ReLu activation function</i></p>
 
@@ -98,7 +99,7 @@ The output of the activation function is then sent as input to all neurons (also
 
 For the first layer, the node gets it's input from the data being fed into the network (each data point is connected to each node).  For last layer, the output is the prediction of the network.
 
-<center><img align="center" src="/assets/four-dl-arch/dense.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/dense.png"></center>
 
 <p align="center"><i>The fully connected layer</i></p>
 
@@ -185,7 +186,7 @@ array([[ 0.23494382, -0.40392348],
 
 <br />
 
-# 2D Convolutional Layer
+# 2. 2D Convolutional Layer
 
 **If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (see what I did there?).
 
@@ -224,7 +225,7 @@ A convolutional layer is defined by it's filters.  These filters are learnt - th
 
 To further understand how these filters work, let's work with a small image and two filters.  The basic operation in a convolutional neural network is to use these filters to detect patterns in the image, by performing element-wise multiplication and summing the result:
 
-<center><img align="center" width="75%" src="/assets/four-dl-arch/filters.gif"></center>
+<center><img align="center" width="75%" src="/assets/four-dl-arch/filters.png"></center>
 
 <p align="center"><i>Applying different filters to a small image</i></p>
 
@@ -232,13 +233,13 @@ To further understand how these filters work, let's work with a small image and 
 
 For larger images (which are often `32x32` or larger), this same basic operation is performed, with the filter being passed over the entire image.  The output of this operation acts as feature detection, for the filters that the network has learnt, producing a 2D feature map.
 
-<center><img align="center" src="/assets/four-dl-arch/conv.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/conv.png"></center>
 
 <p align="center"><i>A filter producing a filter map by convolving over an image</i></p>
 
 The feature maps produced by each filter are concatenated, resulting in a 3D volume (the length of the third dimension being the number of filters). The next layer then performs convolution over this new volume, using a new set of learned filters.
 
-<center><img align="center" width="75%" src="/assets/four-dl-arch/map.gif"></center>
+<center><img align="center" width="75%" src="/assets/four-dl-arch/map.png"></center>
 
 <p align="center"><i>The feature maps of multiple filters are concatenated to produce a volume, which is passed to the next layer.</i></p>
 
@@ -313,7 +314,7 @@ So what other kinds of structure can data have, other than spatial?  Many types 
 
 <br />
 
-# LSTM Layer
+# 3. LSTM Layer
 
 The third of our layers is the LSTM, or Long Short-Term Memory layer. The LSTM is recurrent - **it processes data as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
 
@@ -324,7 +325,7 @@ A normal neural network receives a single input tensor $x$ and generates a singl
 
 The memory of a recurrent architecture is known as the **hidden state** $h$.  What the network chooses to pass forward in the hidden state is learnt by the network.
 
-<center><img align="center" src="/assets/four-dl-arch/recurr.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/recurr.png"></center>
 
 <p align="center"><i>A recurrent neural network</i></p>
 
@@ -392,7 +393,7 @@ Internally the LSTM makes use of three gates to control the flow of information:
 
 One important architecture that uses LSTMs is seq2seq. The source sentence is fed through an encoder LSTM to generate a fixed length context vector.  A second decoder LSTM takes this contex vector and generates the target sentence.
 
-<center><img align="center" src="/assets/four-dl-arch/seq2seq.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/seq2seq.png"></center>
 
 <p align="center"><i>The seq2seq model</i></p>
 
@@ -507,7 +508,7 @@ One useful feature of the LSTM is the learnt hidden state.  This can be used by 
 
 <br />
 
-# Attention Layer
+# 4. Attention Layer
 
 Attention is the last of our four layers.  **Attention is by far the youngest of our four** - the only layer architecture to have been developed during the current deep learning movement.  **Since it's introduction in 2015, attention has revolutionized natural language processing**. 
 
@@ -526,7 +527,7 @@ When predicting the last word in the translation `machine`, all of our attention
 
 If we take a more complex example of translating the German `Ich habe ein bisschen Deutsch gelernt` into the English `I have learnt a little German`.  When predicting the third token of our English sentence (`learnt`), attention should be placed on the last token of the German sentence (`gelernt`).
 
-<center><img align="center" src="/assets/four-dl-arch/trans.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/trans.png"></center>
 
 So what inductive bias does our attention layer give us?  **One inductive bias of attention is alignment based on similarity** - the attention layer chooses where to look based on how similar things are.
 
@@ -549,7 +550,7 @@ The attention layer can be thought of as **three mechanisms in sequence**:
 2. **softmax** to convert the alignment into a probability distribution
 3. **selecting keys** based on the alignment
 
-<center><img align="center" src="/assets/four-dl-arch/attention.gif"></center>
+<center><img align="center" src="/assets/four-dl-arch/attention.png"></center>
 
 <p align="center"><i>The three steps in an attention layer - alignment, softmax & key selection</i></p>
 

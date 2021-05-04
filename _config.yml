@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "The intersection of energy & machine learning"
+title                    : "ADG Efficiency"
 title_separator          : "-"
 name                     :
 url                      : "https://adgefficiency.com"

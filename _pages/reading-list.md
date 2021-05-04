@@ -578,3 +578,5 @@ Examines in depth the concept of a strange loop to explain the sense of "I".
 ### 190 - Calling Bullshit - Jevin West
 
 ### 191 - Facts and Fallacies of Software Engineering - Robert Glass
+
+### 192 - Gödel's Proof - Ernest Nagel & James Newman
