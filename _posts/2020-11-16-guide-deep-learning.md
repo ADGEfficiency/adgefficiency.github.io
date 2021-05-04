@@ -65,7 +65,7 @@ This layer imposes the **least amount of structure** of our layers.  It will be 
 
 At the heart of the fully connected layer is the artificial neuron - the distant ancestor of McCulloch & Pitt's *Threshold Logic Unit* of 1943.
 
-**The artificial neuron is inspired by the biological neurons in our brains** - however an artificial neuron is a shallow approxmiation of the complexity of a biological neuron.
+**The artificial neuron is inspired by the biological neurons in our brains** - however an artificial neuron is a shallow approximation of the complexity of a biological neuron.
 
 The artificial neuron composed of three sequential steps:
 
@@ -218,12 +218,12 @@ Convolution itself is a mathematical operation, commonly used in signal processi
 This checking process is pattern recognition, and is the intuition behind convolution - looking for small, spatial patterns anywhere in a larger space.  **The convolution layer has inductive bias for recognizing local, spatial patterns**. 
 
 
-## How does a 2D convoultion layer work?
+## How does a 2D convolution layer work?
 
 A 2D convolutional layer is defined by the interaction between two components:
 
-1. a 3D image, with shape (height, width, color channels),
-2. a 2D filter, with shape (height, width).
+1. a 3D image, with shape `(height, width, color channels)`,
+2. a 2D filter, with shape `(height, width)`.
 
 Above we defined the intuition of convolution being looking for patterns in a larger space.  **In a 2D convolutional layer, the patterns we are looking for are filters, and the larger space is an image**.
 
