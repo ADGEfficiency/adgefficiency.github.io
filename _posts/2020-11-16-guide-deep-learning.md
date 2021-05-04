@@ -768,6 +768,6 @@ Below is a short table summarizing the article:
 
 ---
 
-Thanks for reading!
+**Thanks for reading!**
 
 If you enjoyed this post, make sure to check out my post on <a href="https://adgefficiency.com/ai-ml-dl/">Artificial Intelligence, Machine Learning and Deep Learning</a>.
