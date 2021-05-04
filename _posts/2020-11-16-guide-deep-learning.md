@@ -22,23 +22,21 @@ excerpt: Four deep learning layer architectures explained.
 
 # Introduction
 
-**This post is about neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models. 
+**This post is about four important neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models:
 
-Together we will look at four important layers that are commonly used in deep learning:
+1. [fully connected layer](#fully-connected-layer),
+2. [2D convolutional layer](#2D-convolution-layer),
+3. [LSTM layer](#lstm-layer),
+4. [attention layer](#attention-layer).
 
-- [the fully connected layer](#fully-connected-layer),
-- [the 2D convolutional layer](#2D-convolution-layer),
-- [the LSTM layer](#lstm-layer),
-- [the attention layer](#attention-layer).
-
-For each layer we look at:
+For each layer we will look at:
 
 - **how each layer works**,
 - the **intuition** behind each layer,
 - the **inductive bias** of each layer,
 - what the **important hyperparameters** are for each layer,
 - **when to use** each layer,
-- **how to use** each layer in TensorFlow 2.0.
+- **how to code** each layer in TensorFlow 2.0.
 
 All code examples are built using `tensorflow==2.2.0` using the Keras Functional API.
 
@@ -51,7 +49,7 @@ One term I use a lot in this article is **inductive bias** - a useful term to so
 
 Examples of inductive bias in machine learning include margin maximization (classes should be separated by as large a boundary as possible - used in Support Vector Machines) and nearest neighbours (samples close together in feature space are in the same class - used in the k-nearest neighbours algorithm).
 
-**It's a common lesson in machine learning** - a bit of bias is usually a good thing (especially if you trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiation through Monte Carlo returns performs worse than bootstrapped temporal difference methods.
+**It's a common lesson in machine learning - a bit of bias is ok** (if you trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiation through Monte Carlo returns performs worse than bootstrapped temporal difference methods.
 
 
 <br />
@@ -60,35 +58,30 @@ Examples of inductive bias in machine learning include margin maximization (clas
 
 Also known as a dense or feed-forward layer, **the fully connected layer is the most general purpose deep learning layer**.
 
-The fully connected layer imposes the least amount of structure of any layer architecture.  It will be found in almost all neural networks - often being used to control network size & shape after complex transformations.
+This layer imposes the **least amount of structure** of our layers.  It will be found in almost all neural networks - often being used to control the size & shape of the output layer.
 
 
 ## How does the fully connected layer work?
 
-At the heart of the fully connected layer is the artificial neuron - the history of which goes all the way back to 1943 with McCulloch & Pitt's *Threshold Logic Unit*.  
+At the heart of the fully connected layer is the artificial neuron - the distant ancestor of McCulloch & Pitt's *Threshold Logic Unit* of 1943.
 
-**The artificial neuron is inspired by the biological neurons in our brains**.  The actual mechanics of an artificial neuron are an approxmiation of the complexity of a biological neuron.  Yet even with this simplification, artificial neurons remain useful.
+**The artificial neuron is inspired by the biological neurons in our brains** - however an artificial neuron is a shallow approxmiation of the complexity of a biological neuron.
 
-The artificial neuron composed of three steps:
+The artificial neuron composed of three sequential steps:
 
 1. **weighted linear combination** of inputs
-2. **a sum** across all weighted inputs
-3. an **activation function**
-
-<center><img align="center" src="/assets/four-dl-arch/neuron.png"></center>
-
-<p align="center"><i>A single neuron with a ReLu activation function</i></p>
-
-### Weighted linear combination
 
 The strength of the connection between nodes in different layers are controlled by weights - the shape of these weights depending on the number of nodes layers on either side.  Each node has an additional parameter known as a bias, which can be used to shift the output of the node independently of it's input.
 
 The weights and biases are learnt - commonly in modern machine learning backpropagation is used to find good values of these weights - good values being those that lead to good predictive accuracy of the network on unseen data.
 
+2. **a sum** across all weighted inputs
 
-### Sum & activation function
+After applying the weight and bias, all of the inputs into the neuron are summed together to a single number.  
 
-After applying the weight and bias, all of the inputs into the neuron are summed together to a single number.  This is then passed through an activation function. The most important activation functions are:
+3. an **activation function**
+
+This is then passed through an activation function. The most important activation functions are:
 
 - a linear activation function -> unchanged output
 - a ReLu -> 0 if the input is negative, otherwise input is unchanged
@@ -96,6 +89,11 @@ After applying the weight and bias, all of the inputs into the neuron are summed
 - a Tanh squashes the input to the range 0, 1
 
 The output of the activation function is then sent as input to all neurons (also known as nodes or units) in the next layer.  **This is where the fully connected layer gets it's name from - each node is fully connected to the nodes in the layers before & after it**.
+
+
+<center><img align="center" src="/assets/four-dl-arch/neuron.png"></center>
+
+<p align="center"><i>A single neuron with a ReLu activation function</i></p>
 
 For the first layer, the node gets it's input from the data being fed into the network (each data point is connected to each node).  For last layer, the output is the prediction of the network.
 
