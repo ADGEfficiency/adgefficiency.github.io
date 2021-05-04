@@ -69,26 +69,28 @@ At the heart of the fully connected layer is the artificial neuron - the distant
 
 The artificial neuron composed of three sequential steps:
 
-1. **weighted linear combination** of inputs
+### 1. Weighted linear combination of inputs
 
 The strength of the connection between nodes in different layers are controlled by weights - the shape of these weights depending on the number of nodes layers on either side.  Each node has an additional parameter known as a bias, which can be used to shift the output of the node independently of it's input.
 
 The weights and biases are learnt - commonly in modern machine learning backpropagation is used to find good values of these weights - good values being those that lead to good predictive accuracy of the network on unseen data.
 
-2. **a sum** across all weighted inputs
+### 2. Sum across all weighted inputs
 
 After applying the weight and bias, all of the inputs into the neuron are summed together to a single number.  
 
-3. an **activation function**
+### 3. Activation function
 
 This is then passed through an activation function. The most important activation functions are:
 
-- a linear activation function -> unchanged output
-- a ReLu -> 0 if the input is negative, otherwise input is unchanged
-- a Sigmoid squashes the input to the range 0, 1
-- a Tanh squashes the input to the range 0, 1
+- **linear** activation function - unchanged output,
+- **ReLu** - $0$ if the input is negative, otherwise input is unchanged
+- **Sigmoid** squashes the input to the range $(0, 1)$
+- **Tanh** squashes the input to the range $(-1, 1)$
 
-The output of the activation function is then sent as input to all neurons (also known as nodes or units) in the next layer.  **This is where the fully connected layer gets it's name from - each node is fully connected to the nodes in the layers before & after it**.
+The output of the activation function is input to all neurons (also known as nodes or units) in the next layer.  
+
+**This is where the fully connected layer gets it's name from - each node is fully connected to the nodes in the layers before & after it**.
 
 
 <center><img align="center" src="/assets/four-dl-arch/neuron.png"></center>
@@ -134,10 +136,10 @@ The number of units in the fully connected output layer will be equal to the num
 
 ## What hyperparameters are important for a fully connected layer?
 
-The two hyperparameters you'll often set in a fully connected layer are:
+The two hyperparameters you'll often set in a fully connected layer are the:
 
-- the number of units 
-- the activation function
+1. number of units,
+2. activation function.
 
 A fully connected layer is defined by a number of nodes (also known as units), each with an activation function.  While you could have a layer with different activation functions on different nodes, most of the time each node in a layer has the same activation function.
 
@@ -151,7 +153,9 @@ For hidden layers, the most common choice of activation function is the rectifie
 
 ## Using fully connected layers with the Keras Functional API
 
-Below is an example of how to use a fully connected layer with the Keras functional API.  We are actually using input data that is shaped like an image, to show the flexibility of the fully connected layer.  This requires us to use a `Flatten` layer later in the network.
+Below is an example of how to use a fully connected layer with the Keras functional API.  
+
+We are using input data shaped like an image, to show the flexibility of the fully connected layer.  This requires us to use a `Flatten` layer later in the network.
 
 ```python
 import numpy as np
@@ -186,24 +190,30 @@ array([[ 0.23494382, -0.40392348],
 
 # 2. 2D Convolutional Layer
 
-**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (see what I did there?).
+**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (sea what I did there?).
 
-AlexNet (that won the 2012 ImageNet competition) is seen by many as the start of modern deep learning.  Another landmark use of convolution was Le-Net-5 in 1998, a 7 layer convolutional neural network used by Yann LeCun to classify handwritten digits. 
+The winner of the 2012 ImageNet competition, AlexNet, is seen by many as the start of modern deep learning.  Alexnet was a deep convolutional neural network, trained on GPU.
 
-The convolutional neural network is the workhorse of deep learning - it can be used with text, audio, video and images.  Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.
+Another landmark use of convolution was Le-Net-5 in 1998, a 7 layer convolutional neural network developed by Yann LeCun to classify handwritten digits. 
+
+**The convolutional neural network is the workhorse of modern deep learning** - it can be used with text, audio, video and images.  Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.  They are also easy to parallelize on GPU - making them fast to train.
 
 
 ## What is the intuition and inductive bias of convolutional layers?
 
-The 2D convolutional layer is inspired by our own visual cortex.  Work by Hubel & Wiesel in the 1950's showed that individual neurons in the visual cortexes of mammals are activated by small regions of vision.  
+The 2D convolutional layer is inspired by our own visual cortex.  
+
+The history of using convolution in artificial neural networks goes back decades to the neocognitron, an architecture introduced by Kunihiko Fukushima in 1980, inspired by the work of Hubel & Wiesel.
+
+Work by Hubel & Wiesel, both neurophysiologists, in the 1950's showed that individual neurons in the visual cortexes of mammals are activated by small regions of vision.  
 
 <center><img align="center" width="50%" src="/assets/four-dl-arch/hubel.jpg"></center>
 
 <p align="center"><i>Hubel & Wiesel</i></p>
 
-The history of using convolution in artificial neural networks goes back decades to the neocognitron, an architecture introduced by Kunihiko Fukushima in 1980, inspired by the work of Hubel & Wiesel.
+Convolution itself is a mathematical operation, commonly used in signal processing.  
 
-Convolution itself is a mathematical operation, commonly used in signal processing.  A good mental model for convolution is the process of **sliding a filter over a signal, at each point checking to see how well the filter matches the signal**.  
+**A good mental model for convolution is the process of sliding a filter over a signal, at each point checking to see how well the filter matches the signal**.  
 
 This checking process is pattern recognition, and is the intuition behind convolution - looking for small, spatial patterns anywhere in a larger space.  **The convolution layer has inductive bias for recognizing local, spatial patterns**. 
 
@@ -212,14 +222,14 @@ This checking process is pattern recognition, and is the intuition behind convol
 
 A 2D convolutional layer is defined by the interaction between two components:
 
-- a 3D image, with shape (height, width, color channels)
-- a 2D filter, with shape (height, width)
+1. a 3D image, with shape (height, width, color channels),
+2. a 2D filter, with shape (height, width).
 
 Above we defined the intuition of convolution being looking for patterns in a larger space.  **In a 2D convolutional layer, the patterns we are looking for are filters, and the larger space is an image**.
 
 ### Filters
 
-A convolutional layer is defined by it's filters.  These filters are learnt - they are equilivant to the weights of a fully connected layer. Filters in the first layers of a convolutional neural network detect simple features such as lines or edges.  Deeper in the network, filters can detect more complex features that help the network perform it's task.
+**A convolutional layer is defined by it's filters**.  These filters are learnt - they are equivalent to the weights of a fully connected layer. Filters in the first layers of a convolutional neural network detect simple features such as lines or edges.  Deeper in the network, filters can detect more complex features that help the network perform it's task.
 
 To further understand how these filters work, let's work with a small image and two filters.  The basic operation in a convolutional neural network is to use these filters to detect patterns in the image, by performing element-wise multiplication and summing the result:
 
@@ -235,7 +245,9 @@ For larger images (which are often `32x32` or larger), this same basic operation
 
 <p align="center"><i>A filter producing a filter map by convolving over an image</i></p>
 
-The feature maps produced by each filter are concatenated, resulting in a 3D volume (the length of the third dimension being the number of filters). The next layer then performs convolution over this new volume, using a new set of learned filters.
+The feature maps produced by each filter are concatenated, resulting in a 3D volume (the length of the third dimension being the number of filters). 
+
+The next layer then performs convolution over this new volume, using a new set of learned filters.
 
 <center><img align="center" width="75%" src="/assets/four-dl-arch/map.png"></center>
 
@@ -244,10 +256,10 @@ The feature maps produced by each filter are concatenated, resulting in a 3D vol
 
 ## 2D convolutional neural network built using the Keras Functional API
 
-Below is an example of how to use a 2D convolution layer with the Keras functional API.  Take care to note:
+Below is an example of how to use a 2D convolution layer with the Keras functional API:
 
-- the `Flatten` layer before the dense layer, to flatten our volume produced by the 2D convolutional layer
-- the `Dense` layer size of `8` - this controls how many classes our network can predict
+- the `Flatten` layer before the dense layer, to flatten our volume produced by the 2D convolutional layer,
+- the `Dense` layer size of `8` - this controls how many classes our network can predict.
 
 ```python
 import numpy as np
@@ -283,12 +295,12 @@ array([[-0.39803684, -0.08939186],
 
 The important hyperparameters in a convolutional layer are:
 
-- the number of filters
-- filter size
-- activation function
-- strides
-- padding
-- dilation rate
+- the number of filters,
+- filter size,
+- activation function,
+- strides,
+- padding,
+- dilation rate.
 
 The number of filters determines how many patterns each layer can learn.  It's common to have the number of filters increasing with the depth of the network. Filter size is commonly set to `(3, 3)`, with a ReLu as the activation function.
 
@@ -314,12 +326,14 @@ So what other kinds of structure can data have, other than spatial?  Many types 
 
 # 3. LSTM Layer
 
-The third of our layers is the LSTM, or Long Short-Term Memory layer. The LSTM is recurrent - **it processes data as a sequence**.  Recurrence allows a network to experience the temporal structure of data, such as words in a sentence.  
+The third of our layers is the LSTM, or Long Short-Term Memory layer.  The LSTM is recurrent - **it processes data as a sequence**.  
+
+Recurrence allows a network to experience the temporal structure of data, such as words in a sentence, or time of day.
 
 A normal neural network receives a single input tensor $x$ and generates a single output tensor $y$.  A recurrent architecture differs from a non-recurrent neural network in two ways:
 
-1. both the input $x$ & output $y$ data is **processed as a sequence of timesteps**
-2. the network has the **ability to remember** information and pass it to the next timestep 
+1. both the input $x$ & output $y$ data is **processed as a sequence of timesteps**,
+2. the network has the **ability to remember** information and pass it to the next timestep.
 
 The memory of a recurrent architecture is known as the **hidden state** $h$.  What the network chooses to pass forward in the hidden state is learnt by the network.
 
@@ -327,10 +341,10 @@ The memory of a recurrent architecture is known as the **hidden state** $h$.  Wh
 
 <p align="center"><i>A recurrent neural network</i></p>
 
-Working with recurrent architectures requires being comfortable with the idea of a timestep dimension - knowing how to shape your data correctly is half the battle of working with recurrence.
-
 
 ### Entering the timestep dimension
+
+Working with recurrent architectures requires being comfortable with the idea of a timestep dimension - knowing how to shape your data correctly is half the battle of working with recurrence.
 
 Imagine we have input data $x$, that is a sequence of integers `[0, 0] -> [2, 20] -> [4, 40]`.  If we were using a fully connected layer, we could present this data to the network as a flat array:
 
@@ -349,9 +363,13 @@ print(x.shape)
 # (1, 10)
 ```
 
-Although the sequence is obvious to us, it's not obvious to a fully connected layer.  **All a fully connected layer would see is a list of numbers - the sequential structure would need to be learnt by the network**.
+Although the sequence is obvious to us, it's not obvious to a fully connected layer.  
 
-We can restructure our data $x$ to explicitly model this sequential structure, by adding a timestep dimension.  **The values in our data do not change - only the shape changes**:
+**All a fully connected layer would see is a list of numbers - the sequential structure would need to be learnt by the network**.
+
+We can restructure our data $x$ to explicitly model this sequential structure, by adding a timestep dimension.  
+
+**The values in our data do not change - only the shape changes**:
 
 ```python
 import numpy as np
@@ -378,16 +396,18 @@ Now that we understand how to structure data to be used with a recurrent neural 
 
 ## How does an LSTM layer work?
 
-The LSTM was first introduced in 1997, and has formed the backbone of modern sequence based deep learning models, excelling on challenging tasks such as machine translation.
+The LSTM was first introduced in 1997, and has formed the backbone of modern sequence based deep learning models, excelling on challenging tasks such as machine translation.  For years the state of the art in machine translation was the seq2seq model, which is powered by the LSTM.
 
-The LSTM is a specific type a recurrent neural network.  **The LSTM addresses a challenge that vanilla recurrent neural networks struggled with - the ability to think long term**.  In a recurrent neural network all information passed to the next time step has to fit in a single channel, the hidden state $h$. 
+The LSTM is a specific type a recurrent neural network.  **The LSTM addresses a challenge that vanilla recurrent neural networks struggled with - the ability to think long term**.  
+
+In a recurrent neural network all information passed to the next time step has to fit in a single channel, the hidden state $h$. 
 
 **The LSTM addresses the long term memory problem by using two hidden states**, known as the hidden state $h$ and the cell state $c$.  Having two channels allows the LSTM to remember on both a long and short term.
 
 Internally the LSTM makes use of three gates to control the flow of information:
-- a forget gate to determine what information to delete
-- an input gate to determine what to remember
-- an output gate to determine what to predict
+1. forget gate to determine what information to delete,
+2. input gate to determine what to remember,
+3. output gate to determine what to predict.
 
 One important architecture that uses LSTMs is seq2seq. The source sentence is fed through an encoder LSTM to generate a fixed length context vector.  A second decoder LSTM takes this contex vector and generates the target sentence.
 
@@ -499,20 +519,24 @@ While not a hyperparameter, it can be useful to include gradient clipping when w
 
 ## When should I use an LSTM layer?
 
-When working with sequence data, an LSTM (or it's close cousin the GRU) is a common choice. **One major downside of the LSTM is that they are slow to train**.  This is because processing the sequence cannot be easily parallelized, as **the error signal must be backpropagated through time**.
+When working with sequence data, an LSTM (or it's close cousin the GRU) is a common choice. **One major downside of the LSTM is that they are slow to train**.  
 
-One useful feature of the LSTM is the learnt hidden state.  This can be used by other models as a compressed representation of the future - such as in the 2017 World Models paper.
+This is because processing the sequence cannot be easily parallelized, as **the error signal must be backpropagated through time**.
+
+Another useful feature of the LSTM is the learnt hidden state.  This can be used by other models as a compressed representation of the future - such as in the 2017 World Models paper.
 
 
 <br />
 
 # 4. Attention Layer
 
-Attention is the last of our four layers.  **Attention is by far the youngest of our four** - the only layer architecture to have been developed during the current deep learning movement.  **Since it's introduction in 2015, attention has revolutionized natural language processing**. 
+**Attention is the youngest of our four layers** - the only layer architecture to have been developed during the current deep learning moment.  
+
+**Since it's introduction in 2015, attention has revolutionized natural language processing**. 
 
 First used in combination with the LSTM based seq2seq model, attention is also to power the Transformer - a neural network architecture that forms the backbone of Open AI's GPT series of language models.
 
-Attention is important as it is **an effective as a sequence model without recurrence** - avoiding the need to do backpropagation through time, making it faster to train.
+**Attention is important as it is an effective as a sequence model without recurrence** - avoiding the need to do backpropagation through time, making it easier to parallelize and faster to train.
 
 
 ## What is the intuition and inductive bias of attention layers?
@@ -538,9 +562,9 @@ There is no such restriction in a fully connected layer, where increasing one we
 
 The attention layer receives **three inputs**:
 
-- **query** = what we are looking for
-- **key** = what we compare the query with
-- **value** = what we place attention over
+1. **query** = what we are looking for,
+2. **key** = what we compare the query with,
+3. **value** = what we place attention over.
 
 The attention layer can be thought of as **three mechanisms in sequence**:
 
@@ -594,9 +618,9 @@ Small technicality - often the keys are set equal to the values.  This simply me
 
 By now we know that an attention layer involves three steps:
 
-1. **alignment** based on similarity
-2. **softmax** to create attention weights
-3. **choosing values** based on attention
+1. **alignment** based on similarity,
+2. **softmax** to create attention weights,
+3. **choosing values** based on attention.
 
 The second & third steps are common to all attention layers - **the differences all occur in the first step - how the alignment on similarity is done**.
 
@@ -731,7 +755,7 @@ One additional benefit of an attention layer is being able to use the alignment 
 
 # Summary
 
-I hope you enjoyed this post and found it useful.  It's my first time using animations - it feels good to be moving up in the quality of what I'm offering here.
+**I hope you enjoyed this post and found it useful.**
 
 Below is a short table summarizing the article:
 
