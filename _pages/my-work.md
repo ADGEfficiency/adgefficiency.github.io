@@ -16,7 +16,7 @@ I'm an energy engineer turned data scientist. I'm working on using data & machin
 
 Currently I'm a data scientist at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.
 
-Contact me on [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [via email](adam.green@adgefficiency.com) - [most of my work is open source](https://github.com/ADGEfficiency) - [I offer personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
+[LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
 # Projects
 
@@ -124,4 +124,6 @@ September 24 2019 - Data Science Retreat Demo Day - Mistakes Data Scientists Mak
 
 April 10 2020 - Data Science Retreat Demo Day - [meetup](https://www.meetup.com/Data-Science-Retreat/events/269691369/) - [slides](https://www.canva.com/design/DAD1Z-Tx6n0/qZ1W579ElkdOifKzMOn1Og/view?utm_content=DAD1Z-Tx6n0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) - [recording](https://drive.google.com/open?id=1XyfRXAdNhh0zz6MWmPWRbeXgizSuLfbA)
 
-June 9 2020 - AI Guild #datacareer workshop - [slides](https://github.com/ADGEfficiency/datacareer-talk) - [eventbrite](https://www.eventbrite.de/e/datacareer-analyst-engineer-scientist-roles-in-industry-and-startups-registration-102463854146)
+June 9 2020 - AI Guild #datacareer workshop
+
+May 26 2021 - AI / ML / DL - [slides](https://docs.google.com/presentation/d/1T0Kbf63yf_nAiNJar8pS8xgFL1yJTu3MbRk9cj-D1oQ/edit?usp=sharing)
