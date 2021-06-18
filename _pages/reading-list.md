@@ -580,3 +580,13 @@ Examines in depth the concept of a strange loop to explain the sense of "I".
 ### 191 - Facts and Fallacies of Software Engineering - Robert Glass
 
 ### 192 - Gödel's Proof - Ernest Nagel & James Newman
+
+### 193 - The Innovators - Walter Isaacson
+
+... begins with Ada Lovelace, Lord Byron's daughter, who pioneered computer programming in the 1840s.
+
+### 194 - Radical Acceptance - Tara Brach
+
+Feelings of self-doubt and insecurity are what hold us back in life and cause true suffering.
+
+### 195 - Why We Sleep - Matthew Walker

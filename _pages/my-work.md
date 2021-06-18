@@ -12,9 +12,9 @@ sidebar:
 
 <p align="center"><i>Teaching backpropagation</i></p>
 
-I'm an energy engineer turned data scientist. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
+I'm an energy engineer turned data scientist turned data engineer. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
 
-Currently I'm a data scientist at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.
+Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.
 
 [LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
