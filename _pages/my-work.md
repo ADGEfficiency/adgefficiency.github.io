@@ -12,11 +12,15 @@ sidebar:
 
 <p align="center"><i>Teaching backpropagation</i></p>
 
-I'm an energy engineer turned data scientist turned data engineer. I'm working on using data & machine learning to combat climate change. I like building models to optimize the control of energy systems. I am particularly interested in the space that exists between economic and carbon optimization.
+I'm an energy engineer turned data scientist turned data engineer. 
 
-Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.
+I like to work on using data & machine learning to combat climate change, and building models to optimize the control of energy systems. 
 
-[LinkedIn](https://www.linkedin.com/in/adgefficiency/) or [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
+I am particularly interested in the space that exists between economic and carbon optimization.
+
+Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
+
+[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
 # Projects
 
@@ -24,7 +28,7 @@ Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), wo
 
 A tool for downloading climate change newspaper articles.
 
-[app](https://www.climate-news-db.com/) - [blog post](https://www.climate-code.com/project/climate-news-db) - [source code](https://github.com/ADGEfficiency/climate-news-db)
+[app](https://www.climate-news-db.com/) - [blog post](https://www.datasciencesouth.com/blog/climate-news-db) - [source code](https://github.com/ADGEfficiency/climate-news-db)
 
 ![]({{"/assets/my-work/db.png"}})
 
