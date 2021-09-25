@@ -1,3 +1,10 @@
+Digitization challenges:
+
+- 12 month historian is a common pattern
+- the energy industry still has a way to go in digitization, access within businesses, access to data talent
+
+---
+
 # Core message
 
 ## State
@@ -11,38 +18,14 @@
 - more data available
 - heavy seasonality & trends (non stationary)
 
+
 ## Potential
-
-- cost functions
-- data, things to measure
-- possibility to simulate
-
-Optimization or prediction problems
-
-Case for ML
-- more data in future
-- compute cheap
 
 ml-energy - raw data = real world data (sensors) - we have only just started to do
 
+
 ## Challenges
-Uncertantity
-- interpretability
 
-Digitization
-
-Unlearnable patterns
-
-- not enough data, or no labels
-- seasonality & trend
-- unlearnable patterns - tasks we can't do
-- messy data, data that can't be worked on properly (can't be joined - example of this!)
-- non-stationary processes, black swans (predicting the US shale gas revolution)
-
-energy = small data
-- renewables plant only 2 years old
-- combinigc datasets useful
-- Poor state of digitization means working with small data is the primary work of energy data scientists
 
 The primary challenge is access to data.  The energy industry is still in the process of digitization - all my work in the energy has involved setting up the basic data collection infrastructure.  We've seen how important large amounts of data is to machine learning - a lack of historical data can be a show stopper for many energy and machine learning projects.
 
