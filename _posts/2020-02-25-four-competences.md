@@ -7,9 +7,7 @@ excerpt: A useful idea to understand computational control algorithms.
 
 ---
 
-In 2018, while hiking the Annapurna Circuit, I read Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back).
-
-The book is one I have since studied carefully, and I look forward to rereading it.
+Daniel C. Dennett's [*From Bacteria to Bach and Back*](https://en.wikipedia.org/wiki/From_Bacteria_to_Bach_and_Back) is a book I have read & studied carefully - I look forward to rereading it.
 
 <center>
 	<img src="/assets/world-models/bach-bacteria.jpg">

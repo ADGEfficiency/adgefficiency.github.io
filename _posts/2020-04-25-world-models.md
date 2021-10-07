@@ -1079,14 +1079,16 @@ $$ \mathbf{ELBO}(\theta) = \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta}(
 
 Note the appearance of our decoder $D_{\theta}(x \mid z)$.  The decoder is used to approximate the true posterior $P(x' \mid z)$ - the conditional probability distribution over the reconstruction of latent variables into a generated $x'$ (given $x$).
 
-The last step is to convert this $\mathbf{ELBO}$ maximization into a more familiar loss function minimization.  **We now have the VAE loss function's final mathematical form - in all it's tractable glory**:
+The last step is to convert this $\mathbf{ELBO}$ maximization into a more familiar loss function minimization.  
+
+**We now have the VAE loss function's final mathematical form - in all it's tractable glory**:
+
+$$ \mathbf{LOSS}(\theta) = - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta} (x' \mid z) \Big] + \mathbf{KLD} \Big( E_{\theta} (z \mid x) \mid \mid P(z) \Big)  $$
 
 <center>
   <img src="/assets/world-models/grail.jpg">
 <figcaption>Ich habe es gesehen!</figcaption>
 </center>
-
-$$ \mathbf{LOSS}(\theta) = - \mathbf{E}_{z \sim E_{\theta}} \Big[ \log D_{\theta} (x' \mid z) \Big] + \mathbf{KLD} \Big( E_{\theta} (z \mid x) \mid \mid P(z) \Big)  $$
 
 Our final loss function has two terms - the log probability of the reconstruction (aka the decoder) and a $\mathbf{KLD}$ between the latent space (sampled from our encoder) and the latent space prior $P(z)$.
 
