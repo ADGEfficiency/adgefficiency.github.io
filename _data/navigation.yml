@@ -11,6 +11,8 @@ main:
 top:
   - title: "Top Posts"
     children:
+      - title: "Guide to Deep Learning Layers"
+        url: /guide-deep-learning/
       - title: "AI, Machine Learning and Deep Learning"
         url: /ai-ml-dl/
       - title: "Animated Guide to Deep Learning"
@@ -22,6 +24,10 @@ top:
 
   - title: "Projects"
     children:
+      - title: "climate-news-db"
+        url: https://www.climate-news-db.com/
+      - title: "nem-data"
+        url: https://github.com/ADGEfficiency/nem-data
       - title: "world-models"
         url: https://github.com/ADGEfficiency/world-models
       - title: "energy-py"
