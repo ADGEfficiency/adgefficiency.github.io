@@ -11,14 +11,14 @@ main:
 top:
   - title: "Top Posts"
     children:
-      - title: "Guide to Deep Learning Layers"
-        url: /guide-deep-learning/
-      - title: "AI, Machine Learning and Deep Learning"
+      - title: "Space Between Money & The Planet"
+        url: /space-between-money-and-the-planet/
+      - title: "AI, ML and Deep Learning"
         url: /ai-ml-dl/
-      - title: "Animated Guide to Deep Learning"
-        url: /animated-deep-learning/
       - title: "Mistakes Data Scientists Make"
         url: /mistakes-data-scientist/
+      - title: "A Guide to Deep Learning"
+        url: /guide-deep-learning/
       - title: "Machine Learning in Energy"
         url: /machine-learning-in-energy/
 
@@ -28,38 +28,12 @@ top:
         url: https://www.climate-news-db.com/
       - title: "nem-data"
         url: https://github.com/ADGEfficiency/nem-data
-      - title: "world-models"
-        url: https://github.com/ADGEfficiency/world-models
       - title: "energy-py"
         url: /energy-py-reinforcement-learning-for-energy-systems/
       - title: "energy-py-linear"
         url: /intro-energy-py-linear/
-
-  - title: "Energy"
-    children:
-      - title: "kW versus kWh"
-        url: /energy-basics-kw-vs-kwh/
-      - title: "HHV vs LHV"
-        url: /energy-basics-hhv-versus-lhv/
-      - title: "Gas Turbines & Temperature"
-        url: /energy-basics-ambient-temperature-impact-on-gas-turbine-performance/
-      - title: "Capacity Factor"
-        url: /energy-basics-capacity-factor/
-      - title: "CHP Cheat Sheet"
-        url: /cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/
-      - title: "Average vs. Marginal Carbon"
-        url: /energy-basics-average-vs-marginal-carbon-emissions/
-
-  - title: "Machine Learning"
-    children:
-      - title: "AI, Machine Learning and Deep Learning"
-        url: /ai-ml-dl/
-      - title: "Animated Deep Learning"
-        url: /animated-deep-learning
-      - title: "Mistakes Data Scientists Make"
-        url: /mistakes-data-scientist/
-      - title: "World Models (the long version)"
-        url: /world-models/
+      - title: "world-models"
+        url: https://github.com/ADGEfficiency/world-models
 
   - title: "Resources"
     children:

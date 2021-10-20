@@ -11,31 +11,34 @@ excerpt: Is there an opportunity cost to saving carbon with battery storage?
 <img src="/assets/space-between/hero.png">
 </center>
 
-I've had this question in the back of my mind for a while - **is there an environmental cost to making money from battery storage?**
+<br />
 
+I've had this question in the back of my mind for a while - **is there an environmental opportunity cost to making money from battery storage?** 
+
+In this post we will show how to use linear programming to estimate the size of this space in terms of a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
 
 ## Importance of battery storage
 
-Battery storage is a key technology for managing variable renewable (wind & solar) generation.  Operating batteries is a challenging control problem.  In the price arbitrage scenario, a battery must purchase cheap electricity and sell it at a higher price. 
+Battery storage is a key technology for the current energy transition.  Storage is necessary to manage a grid with high levels of variable generation.
 
-**Poorly dispatching a battery can lead to not only lost savings, but negative savings**. 
+Once a wind turbine or solar panel is built, operating that asset is straightforward - you generate as much as you can based on the amount of wind or sun available at that moment.  There is no decision to make or opportunity cost to trade off.
 
-A battery that charged when electricity prices are high and discharged when they are low will lose money. 
+**Batteries however, pose a more challenging control problem than wind or solar**.  A battery must make decisions to charge or discharge, based on an imperfect view of the future and competing objectives.
 
-Likewise a battery that charged with dirty electricity and displaced clean electricity would increase carbon.  Charging would increase the load on the marginal generator, and dispatching will descrease the load on the marginal generator.
+In the price arbitrage scenario, a battery wants to purchase cheap electricity and sell it at a higher price.  A battery that does the opposite, that is charges when electricity prices are high and discharges when they are low, will lose money. 
+
+Likewise a battery that charged with dirty electricity and displaced clean electricity would increase carbon.  Charging would increase the load on the dirtier marginal generator, and dispatching will decrease the load on the cleaner marginal generator.
 
 
 ## Price and carbon world
 
-**In an ideal world, we would be able to operate our battery to both make money and save carbon at the same time.**
+**In an ideal world, we would be able to operate a battery to both make money and save carbon at the same time.**
 
 If clean electricity is cheap and dirty electricity is expensive, we can operate our battery to make money, and know that we will also be saving carbon.
 
-In the opposite world, where dirty electricity is cheap and clean electricity is expensive, there would be an opportunity cost for saving carbon.  **There would be situations where you could reduce the environmental benefit of operating your battery in order to make more money.**
+In the opposite world, where dirty electricity is cheap and clean electricity is expensive, there would be an opportunity cost for saving carbon. **There would be situations where you would need to reduce the environmental benefit of operating your battery in order to make more money.**
 
-The delta between these two worlds can be measured in terms of two things we care about - money and carbon.
-
-The table below shows a scenario where there is an opportunity cost when saving carbon:
+The delta between these two worlds can be measured in terms of two things we care about - money and carbon. Below is a scenario where there is an opportunity cost to saving carbon - we can measure the delta between these two worlds:
 
 |                 | Optimize for Money   | Optimize for Carbon   | Delta |
 | --------------  | -------------------- | --------------------- | ----- |
@@ -47,10 +50,12 @@ Choosing to prioritize money over carbon means we make `$150` more than if we op
 
 This allows us to calculate a carbon price of `15 $/tC`.  This carbon price is the ratio of money gained by optimizing for money to the carbon saving gained by optimizing for carbon. 
 
-This carbon price gives some indication about the level of support (via a carbon tax on electricity market participants) required to counteract the misalignment between our price and carbon signals.  **We are would be giving the market `$150` to balance out the money that is lost when optimizing for carbon, and receiving `10 tC` in return.**
+This carbon price gives some indication about the level of support (via a carbon tax on electricity market participants) required to counteract the misalignment between our price and carbon signals.  
+
+**We are would be giving the market `$150` to balance out the money that is lost when optimizing for carbon, and receiving `10 tC` of carbon savings in return.**
 
 
-## Reproducing results
+## Reproducing these results
 
 ### View results
 
@@ -119,12 +124,12 @@ An important sense check when looking at optimized battery profiles is that the 
 
 ### Datasets
 
-Our two objectives of price and carbon require two signals - a price signal and a carbon signal.
-
-For this study I'm using data from 2014 to end of 2020:
+Our two objectives of price and carbon require two signals - a price signal and a carbon signal.  For this study I'm using data from 2014 to end of 2020:
 
 - price signal = 30 minute trading price in South Australia,
 - carbon signal = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
+
+The NEMDE data offers a marginal carbon intensity, which is different from the more commonly reported average carbon intensity.  If you aren't clear about the difference, [check out this post on average versus marginal carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
 
 The 30 minute price data is upsampled to 5 minutes to align with the carbon data. The battery is optimized in monthly blocks.
 
@@ -212,7 +217,7 @@ Optimizing with perfect foresight allows us to put an upper limit on both money 
 
 Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful. 
 
-We are essentially assuming that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
+We are assuming that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
 
 
 ### Simplistic battery model  
@@ -227,10 +232,22 @@ This study uses a battery configuration of 1 MW power rating with 2 MWh of capac
 
 ### Only one value stream
 
-Batteries often have access to many value streams - arbitrage of wholesale electricity is only one of them.  Including other value streams (such as reduced network charges) will change the size of the delta between our two worlds.
+Batteries often have access to many value streams - arbitrage of wholesale electricity is only one of them.  Including other value streams (such as reducing network charges or offering fast response grid services) will change the size of the delta between our two worlds.
 
 ---
 
 Thanks for reading!
 
 If you enjoyed this post, check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/), where I show how to use this same battery model to measure the quality of a forecast.
+
+
+Cited as:
+```
+@article{green2021spacebetween,
+  title   = "The Space Between Money and the Planet",
+  author  = "Green, Adam Derek",
+  journal = "adgefficiency.github.io",
+  year    = "2021",
+  url     = "https://adgefficiency.com/space-between-money-and-the-planet/"
+}
+```
