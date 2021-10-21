@@ -3,7 +3,10 @@ title: 'The Space Between Money and the Planet'
 date: 2021-10-18
 categories:
   - Energy
-excerpt: Is there an opportunity cost to saving carbon with battery storage?
+excerpt: Is there an opportunity cost to saving carbon with batteries?
+classes: wide2
+toc: true
+toc_sticky: true
 
 ---
 
@@ -15,7 +18,7 @@ excerpt: Is there an opportunity cost to saving carbon with battery storage?
 
 I've had this question in the back of my mind for a while - **is there an environmental opportunity cost to making money from battery storage?** 
 
-In this post we will show how to use linear programming to estimate the size of this space in terms of a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
+In this post I'll show how we can to use linear programming to estimate this in terms of a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
 
 ## Importance of battery storage
 
@@ -25,9 +28,9 @@ Once a wind turbine or solar panel is built, operating that asset is straightfor
 
 **Batteries however, pose a more challenging control problem than wind or solar**.  A battery must make decisions to charge or discharge, based on an imperfect view of the future and competing objectives.
 
-In the price arbitrage scenario, a battery wants to purchase cheap electricity and sell it at a higher price.  A battery that does the opposite, that is charges when electricity prices are high and discharges when they are low, will lose money. 
+In the price arbitrage scenario, a battery wants to purchase cheap electricity and sell it at a higher price.  A battery that does the opposite, that charges when electricity prices are high and discharges when they are low, will lose money. 
 
-Likewise a battery that charged with dirty electricity and displaced clean electricity would increase carbon.  Charging would increase the load on the dirtier marginal generator, and dispatching will decrease the load on the cleaner marginal generator.
+A battery that charged with dirty electricity and displaced clean electricity would increase carbon.  Charging would increase the load on the dirtier marginal generator, and dispatching will decrease the load on the cleaner marginal generator.
 
 
 ## Price and carbon world
@@ -73,7 +76,7 @@ After downloading these results you can use the [space-between-viewer](https://g
 
 ### Re-running the experiment
 
-You can run the code that generated these results by cloning energypy-linear at commit [1d19e3e1](https://github.com/ADGEfficiency/energy-py-linear/tree/1d19e3e11d2df48f3007c682afd437159651d062), and running `make space-between` to setup the experiment:
+You can run the code that generated these results by cloning energypy-linear at commit [1d19e3e1](https://github.com/ADGEfficiency/energy-py-linear/tree/1d19e3e11d2df48f3007c682afd437159651d062), and running `make space-between` to setup the experiment (you'll need Python installed):
 
 ```bash
 $ git clone https://github.com/ADGEfficiency/energy-py-linear
@@ -204,7 +207,7 @@ For this study I used the 30 minute South Australia trading price and the 5 minu
 
 The intensity from the NEMDE data is a marginal intensity, supplied by the NEMDE solver as the slack variable for increasing demand.
 
-By using this signal we are assuming that any actions we took would not change how the market is dispatched - this will be true up to a point (the size of the marginal bid)
+By using this signal we are assuming that any actions we took would not change how the market is dispatched - this will be true up to a point (the size of the marginal bid).
 
 Using different price and carbon signals will change the results of this study - this isn't a fatal criticism but it should reinforce that this study is heavily dependent on the choice of data.
 
