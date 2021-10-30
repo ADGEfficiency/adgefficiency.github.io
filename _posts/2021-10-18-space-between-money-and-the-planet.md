@@ -4,9 +4,6 @@ date: 2021-10-18
 categories:
   - Energy
 excerpt: Is there an opportunity cost to saving carbon with batteries?
-classes: wide2
-toc: true
-toc_sticky: true
 
 ---
 
@@ -68,7 +65,7 @@ I recommend installing the `awscli` Python package and syncing the `results` fol
 
 ```bash
 $ pip install awscli
-$ aws s3 sync s3://adgefficiency-public/space-between/results ./notebooks/results
+$ aws s3 sync s3://adgefficiency-public/space-between/results ./notebooks/results --no-sign-request
 ```
 
 After downloading these results you can use the [space-between-viewer](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-viewer.ipynb) notebook to inspect them.
