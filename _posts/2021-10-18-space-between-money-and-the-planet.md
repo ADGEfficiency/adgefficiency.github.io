@@ -95,10 +95,21 @@ If you can't get any of this working feel free to email me at [adam.green@adgeff
 
 ## Methods
 
-This work uses two tools:
+This work uses two tools - [nem-data](https://github.com/ADGEfficiency/nem-data) and [energypy-linear](https://github.com/ADGEfficiency/energy-py-linear).
 
-1. [nem-data](https://github.com/ADGEfficiency/nem-data) - a Python CLI for downloading Australian electricity market data,
-2. [energypy-linear](https://github.com/ADGEfficiency/energy-py-linear) - a Python library for optimizing the dispatch of batteries operating in price arbitrage.
+`nem-data` is a CLI for downloading Australian electricity market data from a shell:
+
+```bash
+$ nem -s 2014-01 -e 2020-12 -r trading-price
+```
+
+`energypy-linear` is a Python library for optimizing the dispatch of batteries operating in price arbitrage:
+
+```python
+import energypylinear as epl
+mdl = epl.Battery(power=2, capacity=4, efficiency=1.0)
+mdl.optimize(prices=[10, 20, 50, -10], freq="60T")
+```
 
 The battery model is a mixed-integer linear program built in PuLP, that optimizes the dispatch of a battery with perfect foresight of future prices and marginal carbon intensities.
 
@@ -107,9 +118,7 @@ The only value stream available to the battery is the arbitrage of electricity f
 
 ### Optimize for price or carbon
 
-The battery model can be optimized on one of two objectives - either price or carbon. 
-
-Optimizing for price means the battery will import electricity from the grid at low prices and export it during high prices, leading to an economic saving.
+The battery model can be optimized on one of two objectives - either price or carbon. Optimizing for price means the battery will import electricity from the grid at low prices and export it during high prices, leading to an economic saving.
 
 **Optimizing for carbon means the battery will import electricity from the grid at low marginal carbon intensity and export it during high marginal carbon intensity, leading to a carbon saving.**
 
@@ -132,9 +141,9 @@ This study uses data from 2014 to end of 2020:
 - **price signal** = 30 minute trading price in South Australia,
 - **carbon signal** = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
 
-The 30 minute price data is upsampled to 5 minutes to align with the carbon data. 
+The NEMDE dataset offers a marginal carbon intensity, which is different from the [more commonly reported average carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
 
-The NEMDE dataset offers a marginal carbon intensity, which is different from the more commonly reported and used average carbon intensity.  If you aren't clear about the difference, [check out this post on average versus marginal carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
+The 30 minute price data is upsampled to 5 minutes to align with the carbon data. 
 
 
 
@@ -150,9 +159,9 @@ When we optimize for money, we will have a negative effect on the environment fo
 
 The chart below again shows the data grouped by month - showing only the delta between our two worlds:
 
-- the price delta - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
-- the carbon delta - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
-- the monthly carbon price - the ratio of our price to carbon deltas.
+- **the price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
+- **the carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
+- **the monthly carbon price** - the ratio of our price to carbon deltas.
 
 ![](/assets/space-between/monthly.png)
 
@@ -217,9 +226,7 @@ We can add to this the generic but always relevant criticism of anything empiric
 
 Optimizing with perfect foresight allows us to put an upper limit on both money and carbon savings.  In reality, a battery will be operated with imperfect foresight of future prices.
 
-Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful. 
-
-We are assuming that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
+Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful.  We are making the assumption that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
 
 
 ### Simplistic battery model  
