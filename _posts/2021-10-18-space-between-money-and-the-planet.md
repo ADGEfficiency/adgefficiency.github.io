@@ -48,7 +48,7 @@ Choosing to prioritize money over carbon means we make `$150` more than if we op
 
 This allows us to calculate a carbon price of `15 $/tC`.  This carbon price is the ratio of money gained by optimizing for money to the carbon saving gained by optimizing for carbon. 
 
-This carbon price gives some indication about the level of support (via a carbon tax on electricity market participants) required to counteract the misalignment between our price and carbon signals.  
+This carbon price gives some indication about the level of support (via a revenue neutral carbon tax on electricity market participants) required to counteract the misalignment between our price and carbon signals.  
 
 **We are would be giving the market `$150` to balance out the money that is lost when optimizing for carbon, and receiving `10 tC` of carbon savings in return.**
 
@@ -192,11 +192,9 @@ If we make mistakes on the dispatch of our battery, we may end up with a delta o
 
 Assuming that we still have a delta of `50 tC` may be a stretch (roundtrip efficiency would affect price & carbon performance equally).
 
-I initially found this counter-intuitive - for years I had always thought that high electricity prices would be a good thing for helping to achieve carbon saving from battery storage - there is a reason that the
+I initially found this counter-intuitive.  I'm so used to the idea that high electricity prices are a good thing - a high electricity price makes the business case for renewable generation and battery storage stronger.  Here we see that the more expensive the electricity, the higher of carbon price to counter the value of the that electricity.
 
-I'm so used to the idea that high electricity prices are a good thing - a high electricity price makes the business case for renewable generation and battery storage stronger.  Here we see that the more expensive the electricity, the higher of carbon price to counter the value of the that electricity.
-
-The dirtier the electricity, the lower carbon price we need to incentive to save the same amount of money.  This is similar to the value of energy efficiency - highest when replacing dirty or inefficient plant.
+The dirtier the electricity, the lower carbon price we need to incentive to save the same amount of money.  This reminds me of a similar situation in energy efficiency - highest value when replacing dirty or inefficient plant.
 
 
 ## Criticism
