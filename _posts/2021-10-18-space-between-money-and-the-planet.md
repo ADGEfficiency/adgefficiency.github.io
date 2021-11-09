@@ -10,12 +10,23 @@ excerpt: Is there an opportunity cost to saving carbon with batteries?
 <center>
 <img src="/assets/space-between/hero.png">
 </center>
-
 <br />
 
-I've had this question in the back of my mind for a while - **is there an environmental opportunity cost to making money from battery storage?** 
+**Is there an environmental opportunity cost to making money from battery storage?** I've had this question in the back of my mind for a while.
 
-In this post I'll use linear programming to estimate the size of the is space in terms of a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
+In this post I'll show that there can be a significant environmental opportunity cost to making money from battery storage in the Australian electricity market - maximizing profit from operating a battery will completely wipe out any environmental value of the battery 50% of the time!
+
+In this post I'll also estimate a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
+
+
+## The 'just make money' fallacy
+
+In my career I've often encountered the following attitude:
+
+> Environmentally effective climate action must also be economically effective - we need to make money in order to save the planet.
+
+This is a great example of having your cake and eating it too.  **Here I'll show this attitude isn't always correct.**
+
 
 ## Importance of battery storage
 
