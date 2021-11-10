@@ -12,11 +12,12 @@ excerpt: Is there an opportunity cost to saving carbon with batteries?
 </center>
 <br />
 
-**Is there an environmental opportunity cost to making money from battery storage?** I've had this question in the back of my mind for a while.
 
-In this post I'll show that there can be a significant environmental opportunity cost to making money from battery storage in the Australian electricity market - maximizing profit from operating a battery will completely wipe out any environmental value of the battery 50% of the time!
+Is there an environmental opportunity cost to making money from batteries in Australia?
 
-In this post I'll also estimate a carbon price - how expensive it would be to correct the misalignment between price and carbon signals.
+**I'll show that there is** -  maximizing profit from operating a battery will completely wipe out any environmental value of the battery 50% of the time!
+
+I'll also estimate what carbon price would be needed to correct this misalignment between making money and saving carbon.
 
 
 ## The 'just make money' fallacy
@@ -24,6 +25,11 @@ In this post I'll also estimate a carbon price - how expensive it would be to co
 In my career I've often encountered the following attitude:
 
 > Environmentally effective climate action must also be economically effective - we need to make money in order to save the planet.
+
+
+It's often backed up with the logical view that renewables are low variable cost generators, always able to bid into electricity markets at prices much lower than high variable cost generators (like gas and coal).  This relationship between price and generator carbon intensity
+
+I've held this view at one point in my career - I've only just got around to answering it (with data).
 
 This is a great example of having your cake and eating it too.  **Here I'll show this attitude isn't always correct.**
 
@@ -145,12 +151,12 @@ An important sense check when looking at optimized battery profiles is that the 
 
 ### Datasets
 
-This experiments requires data for two signals - a price signal and a carbon signal.
+This experiment requires data - a price signal and a carbon signal.
 
 This study uses data from 2014 to end of 2020:
 
-- **price signal** = 30 minute trading price in South Australia,
-- **carbon signal** = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
+- price signal = 30 minute trading price in South Australia,
+- carbon signal = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
 
 The NEMDE dataset offers a marginal carbon intensity, which is different from the [more commonly reported average carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
 
