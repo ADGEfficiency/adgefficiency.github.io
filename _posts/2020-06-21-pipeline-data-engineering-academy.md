@@ -3,7 +3,7 @@ title: 'Warming up with Pipeline Data Engineering Academy'
 author: Adam Green
 categories:
   - Data Science
-excerpt: My experience being a part the Summer Camp - Pipeline's week long data engineering adventure.
+excerpt: My experience being a part of the Summer Camp - Pipeline's week long data engineering adventure.
 
 ---
 
