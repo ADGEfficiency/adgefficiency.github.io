@@ -17,8 +17,6 @@ Is there an environmental opportunity cost to making money from batteries in Aus
 
 **I'll show that there is** -  maximizing profit from operating a battery will completely wipe out any environmental value of the battery 50% of the time!
 
-I'll also estimate what carbon price would be needed to correct this misalignment between making money and saving carbon.
-
 
 ## The 'just make money' fallacy
 
