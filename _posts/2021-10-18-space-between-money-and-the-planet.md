@@ -188,7 +188,7 @@ The chart below shows the results grouped by year:
 
 <center><figcaption>Annual deltas from 2014 to end of 2020.</figcaption></center>
 
-**One takeaway from the plot above is that a carbon price of below `100 $/tC` would be enough to fully incentivize batteries to maximize both their economic and carbon savings.**
+**One takeaway from the plot above is that a carbon price of below `80 $/tC` would be enough to fully incentivize batteries to maximize both their economic and carbon savings.**
 
 This carbon price would be applied in proportion to the carbon intensity of the electricity produced by each market participant.
 
