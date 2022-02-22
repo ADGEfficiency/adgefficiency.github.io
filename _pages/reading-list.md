@@ -1,5 +1,5 @@
 ---
-title: "reading list"
+title: "Reading List"
 layout: archive
 permalink: /reading-list/
 classes: wide
@@ -598,3 +598,9 @@ Feelings of self-doubt and insecurity are what hold us back in life and cause tr
 ### 198 - When Einstein Walked with Gödel - Jim Holt
 
 ### 199 - Surfing Uncertainty: Prediction, Action, and the Embodied Mind - Andy Clark
+
+### 200 - Tibet: The Road Ahead - Dawa Norbu
+
+### 201 - From a Mountain In Tibet - Lama Yeshe Losal Rinpoche
+
+### 202 - A Thousand Brains - Jeff Hawkins

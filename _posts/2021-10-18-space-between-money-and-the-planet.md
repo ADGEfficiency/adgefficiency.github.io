@@ -12,27 +12,37 @@ excerpt: Is there an opportunity cost to saving carbon with batteries?
 </center>
 <br />
 
+Batteries are a key technology of current energy transition - crucial in enabling low carbon renewable generation to replace dirty electricity.
 
-Is there an environmental opportunity cost to making money from batteries in Australia?
+Operating a battery comes with questions - how should we operate it?  Do I care more about money or about carbon?  Is there a trade-off between making money and saving carbon when operating a battery?
 
-**I'll show that there is** -  maximizing profit from operating a battery will completely wipe out any environmental value of the battery 50% of the time!
+**This work demonstrates that there is.**
+
+Below I'll show how maximizing profit from operating a battery will **completely wipe out any environmental benefit** of the battery 50% of the time!
+
+This work also shows how to **estimate the size of this space in terms of a carbon price**.
 
 
 ## The 'just make money' fallacy
 
-In my career I've often encountered the following attitude:
+In my career I've often encountered (and still encounter) the following attitude:
 
 > Environmentally effective climate action must also be economically effective - we need to make money in order to save the planet.
 
+It's often backed up with the view that renewables are low variable cost generators, able to bid into electricity markets at lower prices than high variable cost generators (like gas and coal).
 
-It's often backed up with the logical view that renewables are low variable cost generators, always able to bid into electricity markets at prices much lower than high variable cost generators (like gas and coal).  This relationship between price and generator carbon intensity
+This viewpoint (and viewpoints similar to it) are convenient - just make money, ignore the carbon side and you are also saving the planet.
 
-I've held this view at one point in my career - I've only just got around to answering it (with data).
+**My view is that we cannot only focus on economic optimization to maximize carbon savings**.  
 
-This is a great example of having your cake and eating it too.  **Here I'll show this attitude isn't always correct.**
+This viewpoint was recently shared in The Economist, in an article titled [The truth about dirty assets](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
+
+> A lack of rigorous measurement means that greenwashing is rife and bogus claims go uncontested. 
+>
+> Many funds claim that there is no trade-off between maximising profits and green investing, which seems unlikely for as long as the externalities created by polluting firms are legal and untaxed.
 
 
-## Importance of battery storage
+## The importance of battery storage
 
 Battery storage is a key technology of the clean energy transition.  Storage is necessary to manage a grid with high levels of intermittent generation, like wind and solar.
 
@@ -51,7 +61,9 @@ In the price arbitrage scenario, a battery wants to purchase cheap electricity a
 
 In the opposite world, where dirty electricity is cheap and clean electricity is expensive, there would be an opportunity cost for saving carbon. **There would be situations where you would need to reduce the environmental benefit of operating your battery in order to make more money.**
 
-The delta between these two worlds can be measured in terms of two things we care about - money and carbon. Below is a scenario where there is an opportunity cost to saving carbon - we can measure the delta between these two worlds:
+Below is a scenario where there is an opportunity cost to saving carbon. We can measure the delta between these two worlds in terms of the two things we care about - money and carbon.
+
+Choosing to prioritize money over carbon means we make `$150` more than if we optimized for carbon, but we generate `10 tC` more than if we optimized for carbon:
 
 |                 | Optimize for Money   | Optimize for Carbon   | Delta |
 | --------------  | -------------------- | --------------------- | ----- |
@@ -59,32 +71,16 @@ The delta between these two worlds can be measured in terms of two things we car
 | Carbon saved tC | 10                   | 20                    | 10    |
 |                 |                      | **Carbon Price $/tC**      | 15    |
 
-Choosing to prioritize money over carbon means we make `$150` more than if we optimized for carbon, but we generate `10 tC` more than if we optimized for carbon.
+Looking at the delta between our two worlds allows us to calculate a carbon price of `15 $/tC`.  This carbon price is the ratio of money gained by optimizing for money to the carbon saving gained by optimizing for carbon. 
 
-This allows us to calculate a carbon price of `15 $/tC`.  This carbon price is the ratio of money gained by optimizing for money to the carbon saving gained by optimizing for carbon. 
+This price gives some indication about the level of support (via a revenue neutral carbon tax on electricity market participants - of course!) required to counteract the misalignment between our price and carbon signals.  
 
-This carbon price gives some indication about the level of support (via a revenue neutral carbon tax on electricity market participants) required to counteract the misalignment between our price and carbon signals.  
-
-**We are would be giving the market `$150` to balance out the money that is lost when optimizing for carbon, and receiving `10 tC` of carbon savings in return.**
+**We would be giving the market `$150` to balance out what we lose when optimizing for carbon, and receive `10 tC` of carbon savings in for our lost money.**
 
 
 ## Reproducing these results
 
-### View results
-
-If you want to view the results generated by this work, you can grab the results from the [adgefficiency-public](https://s3.console.aws.amazon.com/s3/buckets/adgefficiency-public) S3 bucket.
-
-The recommended way is to install the `awscli` Python package (you'll need Python installed) and sync the `results` folder to `notebooks/results` (this is where the notebooks that live inside the `notebooks` folder expect the data to be):
-
-```bash
-$ pip install awscli
-$ git clone https://github.com/ADGEfficiency/energy-py-linear
-$ cd energy-py-linear
-$ aws s3 sync s3://adgefficiency-public/space-between/results ./notebooks/results --no-sign-request
-```
-
-After downloading these results you can use the [space-between-viewer](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-viewer.ipynb) notebook to inspect them.
-
+I've done a bunch of technical work for this project - if you aren't interested in the technical stuff, feel free to skip to Results.
 
 ### Re-running the experiment
 
@@ -105,6 +101,21 @@ This `make` command will:
 - save results and generate a summary.
 
 After running `make space-between`, you can use the [space-between-expt](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-expt.ipynb) notebook to run the full experiment.
+
+### Download the results
+
+If you want to view the results generated by this work, you can grab the results from the [adgefficiency-public](https://s3.console.aws.amazon.com/s3/buckets/adgefficiency-public) S3 bucket.
+
+The recommended way is to install the `awscli` Python package (you'll need Python installed) and sync the `results` folder to `notebooks/results` (this is where the notebooks that live inside the `notebooks` folder expect the data to be):
+
+```bash
+$ pip install awscli
+$ git clone https://github.com/ADGEfficiency/energy-py-linear
+$ cd energy-py-linear
+$ aws s3 sync s3://adgefficiency-public/space-between/results ./notebooks/results --no-sign-request
+```
+
+After downloading these results you can use the [space-between-viewer](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-viewer.ipynb) notebook to inspect them.
 
 If you can't get any of this working feel free to email me at [adam.green@adgefficiency.com](mailto:adam.green@adgefficiency.com).
 
@@ -174,9 +185,9 @@ When we optimize for money, we will have a negative effect on the environment fo
 
 The chart below again shows the data grouped by month - showing only the delta between our two worlds:
 
-- **the price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
-- **the carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
-- **the monthly carbon price** - the ratio of our price to carbon deltas.
+- the **price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
+- the **carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
+- the **monthly carbon price** - the ratio of our price to carbon deltas.
 
 ![](/assets/space-between/monthly.png)
 

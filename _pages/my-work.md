@@ -1,5 +1,5 @@
 ---
-title: my work
+title: My Work
 layout: archive
 permalink: /my-work/
 classes: wide
