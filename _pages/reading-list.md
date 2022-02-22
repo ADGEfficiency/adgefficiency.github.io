@@ -590,3 +590,11 @@ Examines in depth the concept of a strange loop to explain the sense of "I".
 Feelings of self-doubt and insecurity are what hold us back in life and cause true suffering.
 
 ### 195 - Why We Sleep - Matthew Walker
+
+### 196 - The Infidel and the Professor: David Hume, Adam Smith - Dennis C. Rasmussen
+
+### 197 - Infrastructure as Code, 2nd Edition - Kief Morris
+
+### 198 - When Einstein Walked with Gödel - Jim Holt
+
+### 199 - Surfing Uncertainty: Prediction, Action, and the Embodied Mind - Andy Clark
