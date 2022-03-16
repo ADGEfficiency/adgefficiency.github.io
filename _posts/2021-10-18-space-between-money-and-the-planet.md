@@ -14,20 +14,20 @@ excerpt: Is there an opportunity cost to using batteries to save carbon?
 
 Batteries are a key technology in our current energy transition - crucial in enabling low carbon renewable generation to replace dirty electricity.
 
-Operating a battery is a decision - how should we operate it?  Depends on your goal - are you trying to maximize profit or save carbon?
+**Operating a battery is decision making** - how should we operate it?  Depends on your goal - are you trying to maximize profit or save carbon?
 
-A common mindset in energy is to pretend that optimizing for money will also optimize carbon savings.
+A common mindset in energy is to assume that optimizing for money will also optimize carbon savings.
 
-This work shows this mindset is wrong - that there is a trade-off between making money and saving carbon when operating a battery.
+**This work shows this mindset is wrong** - that there is a trade-off between making money and saving carbon when operating a battery.
 
-This work shows that maximizing profit will **completely wipe out any environmental benefit** of the battery 50% of the time!
+This work shows that **maximizing profit will completely wipe out any environmental benefit** of the battery 50% of the time!
 
-In addition, this work calculates a carbon price - the price needed to correct for the misalignment between price and carbon signals.
+This work calculates the carbon price needed to correct for the misalignment between price and carbon signals.
 
 
 ## The 'just make money' fallacy
 
-In my career I've encountered the following:
+In my career I've encountered (and held!) the following perspective:
 
 > Environmentally effective climate action must be economically effective - we need to make money in order to save the planet.
 
@@ -35,18 +35,18 @@ It's often backed up with the view that renewables are low variable cost generat
 
 This viewpoint (and viewpoints similar to it) is convenient - just make money, ignore the carbon side and you are also saving the planet.
 
-**We cannot only focus on economic optimization to maximize carbon savings**.  
+The central point of this work is the opposite - **we cannot rely only on economic optimization to maximize carbon savings**.  
 
-A similar view was recently shared in *The Economist*, who uncovered [the truth about dirty assets](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
+A similar view was recently shared in [The Economist](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
 
 > Many funds claim that there is no trade-off between maximising profits and green investing, which seems unlikely for as long as the externalities created by polluting firms are legal and untaxed.
 
-This post supports this intuition - there is a difference between operating a battery to save money versus the planet.
+This post supports this intuition - there is a difference between making money and saving versus the planet.
 
 
 ## The importance of battery storage
 
-Battery storage is a key technology of the clean energy transition.  Storage is necessary to manage a grid with high levels of intermittent generation, like wind and solar.  Yet batteries, wind and solar are not all alike.
+Battery storage is a key technology of the clean energy transition.  Storage is necessary to manage a grid with high levels of intermittent generation, like wind and solar.  Yet with batteries, wind and solar, one of these things is not like the other.
 
 Once a wind turbine or solar panel is built, operating that asset is straightforward - you generate as much as you can based on the amount of wind or sun available at that moment.  There is no decision to make or opportunity cost to trade off - when the resource is available, you use as much as possible.
 
