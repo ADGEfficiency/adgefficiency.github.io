@@ -7,22 +7,29 @@ excerpt: Is there an opportunity cost to using batteries to save carbon?
 
 ---
 
+A few months ago I completed a piece of work I've been working towards for three years - answering the question - is there a tradeoff between making money and saving carbon with batteries?
+
+The conclusion is that there is - 
+
+This result is specific to the dataset used here (South Australian wholesale & marginal intensity data) - but hopefully helps to combat the common mindset that we can ignore carbon signals and focus only on economic optimization - not only in electricity but throughout the economy.
+
+
+---
+
 <center>
 <img src="/assets/space-between/hero.png">
 </center>
 <br />
 
-Batteries are a key technology in our current energy transition - crucial in enabling low carbon renewable generation to replace dirty electricity.
+Batteries are a key technology in the clean energy transition - enabling low carbon renewable generation to replace dirty electricity.
 
-**Operating a battery is decision making** - how should we operate it?  Depends on your goal - are you trying to maximize profit or save carbon?
+**Operating a battery requires making decisions to achieve a goal**.  What do we want our battery to do?
 
-A common mindset in energy is to assume that optimizing for money will also optimize carbon savings.
+Two natural goals for a battery are to maximize profit or save carbon.  A common mindset in energy is to assume that these are the same thing - that optimizing for money will also optimize carbon savings.
 
 **This work shows this mindset is wrong** - that there is a trade-off between making money and saving carbon when operating a battery.
 
-This work shows that **maximizing profit will completely wipe out any environmental benefit** of the battery 50% of the time!
-
-This work calculates the carbon price needed to correct for the misalignment between price and carbon signals.
+This work shows that **maximizing profit will completely wipe out any environmental benefit 50% of the time**, and calculates the carbon price needed to correct for this misalignment between price and carbon signals.
 
 
 ## The 'just make money' fallacy
@@ -33,9 +40,7 @@ In my career I've encountered (and held!) the following perspective:
 
 It's often backed up with the view that renewables are low variable cost generators, able to bid into electricity markets at lower prices than high variable cost generators (like gas and coal).
 
-This viewpoint (and viewpoints similar to it) is convenient - just make money, ignore the carbon side and you are also saving the planet.
-
-The central point of this work is the opposite - **we cannot rely only on economic optimization to maximize carbon savings**.  
+This viewpoint (and viewpoints similar to it) is convenient - just make money, ignore the carbon side and you are also saving the planet.  The central point of this work is the opposite - **we cannot rely only on economic optimization to maximize carbon savings**.  
 
 A similar view was recently shared in [The Economist](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
 
@@ -166,8 +171,8 @@ This experiment requires data - a price signal and a carbon signal.
 
 This study uses data from the Australian National Electricity Market (NEM) from 2014 to end of 2020:
 
-- a **price signal** = 30 minute trading price in South Australia,
-- a **carbon signal** = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
+- **a price signal** = 30 minute trading price in South Australia,
+- **a carbon signal** = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
 
 The NEMDE dataset offers a marginal carbon generator, which allows calculation of a marginal carbon intensity - different from the [more commonly reported average carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
 
@@ -187,9 +192,9 @@ When we optimize for money, we will have a negative effect on the environment fo
 
 The chart below again shows the data grouped by month - showing only the delta between our two worlds:
 
-- the **price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
-- the **carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
-- the **monthly carbon price** - the ratio of our price to carbon deltas.
+- **the price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
+- **the carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
+- **the monthly carbon price** - the ratio of our price to carbon deltas.
 
 ![](/assets/space-between/monthly.png)
 
