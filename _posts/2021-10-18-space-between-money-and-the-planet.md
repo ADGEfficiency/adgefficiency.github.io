@@ -3,7 +3,7 @@ title: 'The Space Between Money and the Planet'
 date: 2021-10-31
 categories:
   - Energy
-excerpt: Is there an opportunity cost to using batteries to save carbon?
+excerpt: Is there an opportunity cost for using batteries to save carbon?
 
 ---
 

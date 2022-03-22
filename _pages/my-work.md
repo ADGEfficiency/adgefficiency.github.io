@@ -8,17 +8,23 @@ sidebar:
 
 ---
 
-I'm an energy engineer turned data scientist turned data engineer. 
+Hi - I'm Adam - an energy engineer turned data professional.
 
 I work on using data & machine learning to combat climate change, and like to build models to optimize the control of energy systems. 
 
-I am particularly interested in the space that exists between economic and carbon optimization - the different outcomes we get whether we design and optimize systems for money or for the environment.
+I am particularly interested in [the space that exists between](https://adgefficiency.com/space-between-money-and-the-planet/) economic and carbon optimization - the different outcomes we get when we design and optimize systems for money or for the environment.
 
 Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
 
-[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
+[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
 
 # Projects
+
+## Data Science South
+
+A sister website focusing on educating data professionals.
+
+[website](https://www.datasciencesouth.com/)
 
 ## climate-news-db
 
