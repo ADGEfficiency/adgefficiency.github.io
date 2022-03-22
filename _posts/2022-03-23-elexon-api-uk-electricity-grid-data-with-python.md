@@ -406,6 +406,8 @@ PriceCategory SettlementDate  SettlementPeriod                  datetime  Excess
 
 ## Cleaning Pipeline
 
+Here is our full cleaning pipeline - from our CSV datasets (one per report) on disk to a single dataset.
+
 ```python
 reports = [
     ElexonReport(
@@ -467,7 +469,10 @@ datetime
 """
 ```
 
+
 ## Full Data Pipeline
+
+And here is the entire pipeline - both the downloading of the data and the data cleaning pipeline:
 
 ```python
 from collections import defaultdict
