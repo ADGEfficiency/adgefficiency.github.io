@@ -7,19 +7,20 @@ excerpt: Downloading and processing UK electricity grid data with pandas, reques
 
 ---
 
-*Created 2016-12-08*
-*Updated 2022-03-18*
+```
+created: 2016-12-08, updated: 2022-03-18
+```
 
-This post accesses UK electricity data using the Elexon API.  We will write a Python program to download data for the [imbalance price](http://adgefficiency.com/what-is-the-uk-imbalance-price/) - both the imbalance prices and imbalance volumes.
+This post uses Python to download UK electricity data using the Elexon API - specifically data for the [imbalance price](http://adgefficiency.com/what-is-the-uk-imbalance-price/) - both the imbalance *prices* and imbalance *volumes*.
 
 This work was inspired by [Patrick Avis](http://energyanalyst.co.uk/) - the code looks different than it did in 2016, but the inspiration and credit for this work will always be with Patrick!
 
 
 ## The ELEXON API
 
-Elexon provides data for the UK grid such as generation, volumes and prices through the [Balancing Mechanism Reporting Service (BMRS)](https://www.bmreports.com/bmrs/?q=help/about-us) - the BRMS is best thought of as a dataset.
+Elexon provides generation, volume and price data for the UK electricity grid through the [Balancing Mechanism Reporting Service (BMRS)](https://www.bmreports.com/bmrs/?q=help/about-us) - the BRMS is best thought of as a dataset.
 
-[Their API guide](https://www.elexon.co.uk/guidance-note/bmrs-api-data-push-user-guide/) provides detail on the data available through the BRMS .  In this post we will be working with reports `B1770` for imbalance prices and `B1780` for the imbalance volumes.
+[The Elexon API guide](https://www.elexon.co.uk/guidance-note/bmrs-api-data-push-user-guide/) provides detail on the data available through the BRMS .  In this post we will be working with reports `B1770` for imbalance prices and `B1780` for the imbalance volumes.
 
 The BRMS data is available through the [Elexon Portal](https://www.elexonportal.co.uk/news/latest?cachebust=bgzrrqj2lj) (through your web browser) or the Elexon API (to access data programatically).  Both require a free Elexon account.
 
@@ -32,15 +33,13 @@ You will also need to create an Elexon account to use the API, as you need an AP
 
 ## Python Requirements
 
-In this post we will develop a Python program to access data from Elexon.
-
-You can install the Python packages needed with:
+You can install the Python packages needed to run the Python program with:
 
 ```shell
 $ pip install pandas pydantic requests
 ```
 
-The core logic of our program is below - if you have done this kind of thing before you can probably take the below and work with it:
+The core logic of our program is below (without the required imports) - if you have done this kind of thing before you can will be able to take the below and run with it:
 
 ```python
 url = f"https://api.bmreports.com/BMRS/{report}/v1?APIKey={api_key}&Period=*&SettlementDate={date}&ServiceType={service_type}"
@@ -54,17 +53,17 @@ The full program we develop is given at the end of the post - feel free to skip 
 
 ## Scraping the Elexon API
 
-Let's start by *requesting* data from the Elexon API.  We do this by making a HTTP *request* to a URL.
+Let's start by *requesting* data from the Elexon API.  We do this by making a *HTTP request* to a URL.
 
-The Elexon API documentation specifies how we need to format this URL:
+The Elexon API documentation specifies how we need to format our URL:
 
 <img src="/assets/elexon/f2.png" alt="drawing" width="512" align="center"/>
 
-We will need to specify a few things to get the data we want - the *report name* (like `B1770`), use our own *API key*, set the *settlement date* (like `2020-01-01`) we want and specify the *data format* we get back (either XML or CSV).
+We will need to specify a few things to get the data we want - the *report name* (like `B1770`), our  *API key*, the *settlement date* (like `2020-01-01`) and the *data format* we want back (either XML or CSV).
 
 The API key (which you can get through the Elexon portal) is a *secret* - it will not end up as part of our codebase (or this blog post!).
 
-One way to manage our secret is to create a file `secret.py`, which we can import from in other Python scripts:
+One way to manage secrets is to create a file `secret.py`, which we can import from in other Python scripts:
 
 ```python
 #  secret.py
@@ -73,9 +72,9 @@ api_key = "your-api-key-here"
 
 Very important that this file `secret.py` does not end up in your source control (commonly Git) - this file should be added to your `.gitignore` or equivalent.  If secrets are in your source control, you are going to have a bad time.
 
-Another way to manage these secrets is at build/deploy time - where the secret is injected into the environment as environment variables - commonly something Docker something.
+In production environments these secrets are often managed at build/deploy time - where the secret is injected into the environment as environment variables - commonly running something Docker something.
 
-Before we create this URL in as a string Python, we will define a `pydantic` type called `ElexonRequest`, to organize the data we need in the URL:
+Before we create our URL in as a string Python, we will define a `pydantic` type called `ElexonRequest`, to organize the data we need in the URL:
 
 ```python
 import datetime
@@ -295,8 +294,12 @@ We can then take these lists of data and create a single dataframe for each repo
 ```python
 for report, data in dataset.items():
     data = pd.concat(data, axis=0)
-    data.to_csv(f"./data/{report}-all.csv")
+    data.to_csv(f"./data/{report}-all.csv", index=False)
     print(f"combined {len(data)} days for {report} into {data.shape}")
+    """
+    combined 288 days for B1770 into (288, 15)
+    combined 144 days for B1780 into (144, 15)
+    """
 ```
 
 
@@ -312,7 +315,9 @@ There are two things we want to fix in data cleaning:
 
 ### Flatting `B1770`
 
-tidy data (one row per observation)
+Notice above how report `B1770` has twice the amount of data as `B1780`?  This is because the long and short imbalance prices are stacked on top of each other.  This is not tidy data - we do not have one row per observation.
+
+We can solve this problem using a pivot:
 
 ```python
 class ElexonReport(pydantic.BaseModel):
@@ -330,6 +335,12 @@ rep = ElexonReport(
       )
 
 data = pd.read_csv(f"./data/{rep.report}-all.csv")
+"""
+*DocumentID  DocumentRevNum ActiveFlag ProcessType
+285  ELX-EMFIP-IMBP-22452644             1.0          Y    Realised
+286  ELX-EMFIP-IMBP-22452512             1.0          Y    Realised
+287  ELX-EMFIP-IMBP-22452512             1.0          Y    Realised
+"""
 
 data = (
     data.pivot(
@@ -338,12 +349,32 @@ data = (
         values="ImbalancePriceAmount",
     )
     .sort_index()
-    .reset_index()
+    .reset_index(drop=True)
 )
+
+print(
+    data.loc[
+        :,
+        [
+            "SettlementDate",
+            "SettlementPeriod",
+            "Excess balance",
+            "Insufficient balance",
+        ],
+    ].iloc[:3, :]
+)
+"""
+PriceCategory SettlementDate  SettlementPeriod  Excess balance  Insufficient balance
+0                 2020-01-01               1.0        50.90000              50.90000
+1                 2020-01-01               2.0        51.00000              51.00000
+2                 2020-01-01               3.0        29.37006              29.37006
+"""
 ```
 
 
 ## Making our datetime column
+
+Now that we have a flat, tidy dataset, we can create a proper timestamp column to join on - by creating a date range:
 
 ```python
 data["datetime"] = pd.date_range(
@@ -352,9 +383,28 @@ data["datetime"] = pd.date_range(
     freq="30T",
     tz="Europe/London",
 )
+
+print(
+    data.loc[
+        :,
+        [
+            "SettlementDate",
+            "SettlementPeriod",
+            "datetime",
+            "Excess balance",
+            "Insufficient balance",
+        ],
+    ].iloc[:3, :]
+)
+"""
+PriceCategory SettlementDate  SettlementPeriod                  datetime  Excess balance  Insufficient balance
+0                 2020-01-01               1.0 2020-01-01 00:00:00+00:00        50.90000              50.90000
+1                 2020-01-01               2.0 2020-01-01 00:30:00+00:00        51.00000              51.00000
+2                 2020-01-01               3.0 2020-01-01 01:00:00+00:00        29.37006              29.37006
+"""
 ```
 
-## Full Cleaning Pipeline
+## Cleaning Pipeline
 
 ```python
 reports = [
@@ -417,7 +467,7 @@ datetime
 """
 ```
 
-## Our Final Data Pipeline
+## Full Data Pipeline
 
 ```python
 from collections import defaultdict

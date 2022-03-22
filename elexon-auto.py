@@ -122,8 +122,12 @@ for report in ["B1770", "B1780"]:
         dataset[report].append(data)
 for report, data in dataset.items():
     data = pd.concat(data, axis=0)
-    data.to_csv(f"./data/{report}-all.csv")
+    data.to_csv(f"./data/{report}-all.csv", index=False)
     print(f"combined {len(data)} days for {report} into {data.shape}")
+    """
+    combined 288 days for B1770 into (288, 15)
+    combined 144 days for B1780 into (144, 15)
+    """
 
 
 class ElexonReport(pydantic.BaseModel):
@@ -142,6 +146,12 @@ rep = ElexonReport(
 )
 
 data = pd.read_csv(f"./data/{rep.report}-all.csv")
+"""
+*DocumentID  DocumentRevNum ActiveFlag ProcessType
+285  ELX-EMFIP-IMBP-22452644             1.0          Y    Realised
+286  ELX-EMFIP-IMBP-22452512             1.0          Y    Realised
+287  ELX-EMFIP-IMBP-22452512             1.0          Y    Realised
+"""
 
 data = (
     data.pivot(
@@ -152,11 +162,35 @@ data = (
     .sort_index()
     .reset_index()
 )
+print(
+    data.loc[
+        :,
+        [
+            "SettlementDate",
+            "SettlementPeriod",
+            "Excess balance",
+            "Insufficient balance",
+        ],
+    ].iloc[:3, :]
+)
+
 data["datetime"] = pd.date_range(
     start=data["SettlementDate"].min(),
     periods=len(data),
     freq="30T",
     tz="Europe/London",
+)
+print(
+    data.loc[
+        :,
+        [
+            "SettlementDate",
+            "SettlementPeriod",
+            "datetime",
+            "Excess balance",
+            "Insufficient balance",
+        ],
+    ].iloc[:3, :]
 )
 reports = [
     ElexonReport(
@@ -178,7 +212,6 @@ reports = [
         ],
     ),
 ]
-
 
 dataset = {}
 for rep in reports:
@@ -205,14 +238,11 @@ for rep in reports:
         tz="Europe/London",
     )
     data = data.set_index("datetime")
-    print(data.head(2))
     dataset[rep.report] = data
 
 final = pd.concat(dataset.values(), axis=1)
-print(final.head(3))
+final.to_csv("./data/final.csv")
 final = final.loc[:, ~final.columns.duplicated()]
-print(final.head(3))
-
 """
 SettlementDate  SettlementPeriod  Excess balance  Insufficient balance  ImbalanceQuantity(MAW) ImbalanceQuantityDirection
 datetime
@@ -220,3 +250,102 @@ datetime
 2020-01-01 00:30:00+00:00     2020-01-01               2.0        51.00000              51.00000                194.7133                    SURPLUS
 2020-01-01 01:00:00+00:00     2020-01-01               3.0        29.37006              29.37006                -71.4292                    DEFICIT
 """
+from collections import defaultdict
+import datetime
+from pathlib import Path
+
+import requests
+import pandas as pd
+import pydantic
+
+from secret import api_key
+
+
+class ElexonRequest(pydantic.BaseModel):
+    report: str
+    date: datetime.date
+    api_key: pydantic.SecretStr = pydantic.SecretStr(api_key)
+    service_type: str = "csv"
+
+
+class ElexonReport(pydantic.BaseModel):
+    report: str
+    columns: list
+
+
+def send_elexon_request(req: ElexonRequest) -> pd.DataFrame:
+    url = f"https://api.bmreports.com/BMRS/{req.report}/v1?APIKey={req.api_key.get_secret_value()}&Period=*&SettlementDate={req.date.isoformat()}&ServiceType={req.service_type}"
+    res = requests.get(url)
+    assert res.status_code == 200
+
+    fi = Path().cwd() / "data" / f"{req.report}-{req.date}.csv"
+    fi.parent.mkdir(exist_ok=True)
+    fi.write_text(res.text)
+
+    data = pd.read_csv(fi, skiprows=4)
+    #  B1770 has SettlementDate, B1780 has Settlement Date
+    data.columns = [d.replace(" ", "") for d in data.columns]
+    return data.dropna(axis=0, subset=["SettlementDate"])
+
+
+if __name__ == "__main__":
+    reports = [
+        ElexonReport(
+            report="B1770",
+            columns=[
+                "SettlementDate",
+                "SettlementPeriod",
+                "ImbalancePriceAmount",
+                "PriceCategory",
+            ],
+        ),
+        ElexonReport(
+            report="B1780",
+            columns=[
+                "SettlementDate",
+                "SettlementPeriod",
+                "ImbalanceQuantity(MAW)",
+                "ImbalanceQuantityDirection",
+            ],
+        ),
+    ]
+
+    dataset = defaultdict(list)
+    for rep in reports:
+        for date in pd.date_range("2020-01-01", "2020-01-03", freq="D"):
+            dataset[rep.report].append(
+                send_elexon_request(ElexonRequest(report=rep.report, date=date))
+            )
+
+    for report, data in dataset.items():
+        data = pd.concat(data, axis=0)
+        data.to_csv(f"./data/{report}-all.csv")
+        print(f"combined {len(data)} days for {report} into {data.shape}")
+
+    dataset = {}
+    for rep in reports:
+        data = pd.read_csv(f"./data/{rep.report}-all.csv").loc[:, rep.columns]
+
+        if rep.report == "B1770":
+            data = (
+                data.pivot(
+                    index=["SettlementDate", "SettlementPeriod"],
+                    columns="PriceCategory",
+                    values="ImbalancePriceAmount",
+                )
+                .sort_index()
+                .reset_index()
+            )
+
+        data = data.sort_values(["SettlementDate", "SettlementPeriod"])
+        data["datetime"] = pd.date_range(
+            start=data["SettlementDate"].min(),
+            periods=len(data),
+            freq="30T",
+            tz="Europe/London",
+        )
+        dataset[rep.report] = data.set_index("datetime")
+
+    final = pd.concat(dataset.values(), axis=1)
+    final = final.loc[:, ~final.columns.duplicated()]
+    final.to_csv("./data/final.csv")
