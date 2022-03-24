@@ -4,13 +4,17 @@ date: 2022-03-24
 categories:
   - Electricity Price Forecasting
 classes: wide
-excerpt: An introduction to how the UK recovers grid balancing costs in their electricity system.
+excerpt: An introduction to how the UK recovers electricity grid balancing costs.
 
 ---
 
+```
+created: 2016-12-01, updated: 2022-03-24
+```
+
 ## What is the Imbalance Price?
 
-The Imbalance Price is the price of electricity that generators or suppliers pay for imbalance on the UK electricity grid.
+The *Imbalance Price* is the price of electricity that generators or suppliers pay for imbalance on the UK electricity grid.
 
 In the UK generators and suppliers (known as parties) contract with each other for the supply of electricity.  Generators sell electricity to suppliers who then sell electricity to residential, commercial and industrial customers.
 
@@ -36,4 +40,4 @@ Elexon uses the costs that National Grid incurs in correcting imbalance to calcu
 
 ## What data is available?
 
-Data for the UK grid is available through the [ELEXON API](https://www.elexon.co.uk/change/new-balancing-mechanism-reporting-service-bmrs/) - [see here for a guide on how to access the Elexon API data](https://adgefficiency.com/elexon-api-uk-electricity-grid-data-with-python/).
+Data for the UK grid is available through the [ELEXON API](https://www.elexon.co.uk/change/new-balancing-mechanism-reporting-service-bmrs/) - [see here for a guide on how to access the Elexon API data in Python](https://adgefficiency.com/elexon-api-uk-electricity-grid-data-with-python/).
