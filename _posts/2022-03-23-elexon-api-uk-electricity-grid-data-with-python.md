@@ -11,14 +11,16 @@ excerpt: Downloading, cleaning & joining UK electricity grid data with pandas, r
 created: 2016-12-08, updated: 2022-03-18
 ```
 
-This post uses Python to download UK electricity data using the Elexon API - specifically data for the [imbalance price](http://adgefficiency.com/what-is-the-uk-imbalance-price/) - both the imbalance *prices* and imbalance *volumes*.
+This post demonstrates how to use Python to download UK electricity data using the Elexon API - specifically data for the [imbalance price](http://adgefficiency.com/what-is-the-uk-imbalance-price/) - both the *imbalance prices* and *imbalance volumes*.
 
-This work was inspired by [Patrick Avis](http://energyanalyst.co.uk/) - the code looks different than it did in 2016, but the inspiration and credit for this work will always be with Patrick!
+In this post we will use the Python packages `pandas` for data processing, `requests` making HTTP requests and `pydantic` for structuring our data.
+
+This work is inspired by [Patrick Avis](http://energyanalyst.co.uk/) - the code looks different than it did in 2016, but the inspiration and credit for this work will always be with Patrick!
 
 
 ## The ELEXON API
 
-Elexon provides generation, volume and price data for the UK electricity grid through the [Balancing Mechanism Reporting Service (BMRS)](https://www.bmreports.com/bmrs/?q=help/about-us) - the BRMS is best thought of as a dataset.
+Elexon provides generation, volume and price data for the UK electricity grid through the [Balancing Mechanism Reporting Service (BMRS)](https://www.bmreports.com/bmrs/?q=help/about-us) - the BRMS can best thought of as a dataset.
 
 [The Elexon API guide](https://www.elexon.co.uk/guidance-note/bmrs-api-data-push-user-guide/) provides detail on the data available through the BRMS .  In this post we will be working with reports `B1770` for imbalance prices and `B1780` for the imbalance volumes.
 
@@ -470,7 +472,7 @@ datetime
 ```
 
 
-## Full Data Pipeline
+## Final Data Pipeline
 
 And here is the entire pipeline - both the downloading of the data and the data cleaning pipeline:
 
