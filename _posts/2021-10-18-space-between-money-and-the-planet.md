@@ -9,10 +9,9 @@ excerpt: Is there an opportunity cost for using batteries to save carbon?
 
 A few months ago I completed a piece of work I've been working towards for three years - answering the question - is there a tradeoff between making money and saving carbon with batteries?
 
-The conclusion is that there is - 
+The conclusion is that there is - a world where we optimize for price will not maximize carbon savings - in fact often focusing only on profit will wipe out any environmental benefit.
 
 This result is specific to the dataset used here (South Australian wholesale & marginal intensity data) - but hopefully helps to combat the common mindset that we can ignore carbon signals and focus only on economic optimization - not only in electricity but throughout the economy.
-
 
 ---
 
