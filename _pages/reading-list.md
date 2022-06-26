@@ -604,3 +604,7 @@ Feelings of self-doubt and insecurity are what hold us back in life and cause tr
 ### 201 - From a Mountain In Tibet - Lama Yeshe Losal Rinpoche
 
 ### 202 - A Thousand Brains - Jeff Hawkins
+
+### 203 - Wind, Sand and Stars - Antoine de Saint-Exupéry
+
+### 204 - Memories, Dreams, Reflections - Carl Jung

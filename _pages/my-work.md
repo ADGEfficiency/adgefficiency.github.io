@@ -8,15 +8,15 @@ sidebar:
 
 ---
 
-Hi - I'm Adam - an energy engineer turned data professional.
+Energy engineer turned data professional.  My work is focused on using data to combat climate change. 
 
-I work on using data & machine learning to combat climate change, and like to build models to optimize the control of energy systems. 
+I enjoy modelling energy systems, especially to optimize the control of energy systems. 
 
-I am particularly interested in [the space that exists between](https://adgefficiency.com/space-between-money-and-the-planet/) economic and carbon optimization - the different outcomes we get when we design and optimize systems for money or for the environment.
+I am interested in the [space that exists between economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
 
-Currently I'm a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
+Recently I've been working as a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
 
-[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [personalized mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
+[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
 
 # Projects
 
@@ -62,49 +62,13 @@ A tool for downloading climate change newspaper articles.
 
 [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
 
-```python
-import energypylinear as epl
-model = epl.Battery(power=2, capacity=4, efficiency=1.0)
-prices = [10, 50, 10, 50, 10]
-info = model.optimize(prices, timestep='30min')
-```
-
-I spent four years working as an industrial energy engineer, and worked with a lot of CHP plant.  [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) has a CHP model that can be configured with a number of gas and steam turbines, then optimized as a function of gas and electricity prices.
-
-```python
-from energypylinear.chp import Boiler, GasTurbine, SteamTurbine
-
-assets = [
-	GasTurbine(size=10, name='gt1'),
-	Boiler(size=100, name='blr1'),
-	Boiler(size=100, name='blr2', efficiency=0.9),
-	SteamTurbine(size=6, name='st1')
-]
-
-info = optimize(
-	assets,
-	gas_price=20,
-	electricity_price=1000,
-	site_steam_demand=100,
-	site_power_demand=100,
-)
-```
-
-[CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/) - [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
-
+[CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/) & [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
 
 ## UK and Australian Grid Data
 
 The Australian grid is a unique combination of high coal penetrations, quality potential renewable resources (and high penetration in South Australia) and a deregulated, volatile electricity market.  It also has good data availability - if you know where to look for it.
 
 [A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
-
-
-## Writing on Energy
-
-I'm an energy engineer at heart.  Some of my most popular work is the *Energy Basics* series - such as [the heat equation](http://www.adgefficiency.com/energy-basics-q-m-cp-dt/) and [kW versus kWh](http://www.adgefficiency.com/energy-basics-kw-vs-kwh/).
-
-I've also written about [Average versus Marginal Carbon Emissions](https://www.adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/), the [Four Inconvenient Truths of the Clean Energy Transition](https://www.adgefficiency.com/four-inconvenient-truths-clean-energy-transition/) and the [intersection of energy and machine learning](http://localhost:4000/machine-learning-in-energy/).
 
 ## Parallelized Cross Entropy Method
 
@@ -113,8 +77,6 @@ I've also written about [Average versus Marginal Carbon Emissions](https://www.a
 CEM on CartPole and Pendulum.  Parallelized across processes and through batch.
 
 ```bash
-$ python cem.py cartpole --num_process 6 --epochs 8 --batch_size 4096
-
 $ python cem.py pendulum --num_process 6 --epochs 15 --batch_size 4096
 ```
 
