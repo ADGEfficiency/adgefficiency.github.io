@@ -9,39 +9,12 @@ main:
     url: /year-archive/
 
 top:
-  - title: "Top Posts"
+  - title: "Top Post"
     children:
-      - title: "Space Between Money & The Planet"
+      - title: "Space Between Money & The Planet\n\n"
         url: /space-between-money-and-the-planet/
-      - title: "AI, ML and Deep Learning"
-        url: /ai-ml-dl/
-      - title: "Mistakes Data Scientists Make"
-        url: /mistakes-data-scientist/
-      - title: "A Guide to Deep Learning"
-        url: /guide-deep-learning/
-      - title: "Machine Learning in Energy"
-        url: /machine-learning-in-energy/
 
-  - title: "Projects"
+  - title: "Current Project"
     children:
       - title: "climate-news-db"
         url: https://www.climate-news-db.com/
-      - title: "nem-data"
-        url: https://github.com/ADGEfficiency/nem-data
-      - title: "energy-py"
-        url: /energy-py-reinforcement-learning-for-energy-systems/
-      - title: "energy-py-linear"
-        url: /intro-energy-py-linear/
-      - title: "world-models"
-        url: https://github.com/ADGEfficiency/world-models
-
-  - title: "Resources"
-    children:
-      - title: "teaching-monolith"
-        url: https://github.com/ADGEfficiency/teaching-monolith
-      - title: "programming-resources"
-        url: https://github.com/ADGEfficiency/programming-resources
-      - title: "ml-resources"
-        url: https://github.com/ADGEfficiency/ml-resources
-      - title: "rl-resources"
-        url: https://github.com/ADGEfficiency/rl-resources

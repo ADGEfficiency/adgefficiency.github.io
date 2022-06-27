@@ -12,7 +12,7 @@ Energy engineer turned data professional.  My work is focused on using data to c
 
 I enjoy modelling energy systems, especially to optimize the control of energy systems. 
 
-I am interested in the [space that exists between economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
+[I am interested in the space that exists between economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
 
 Recently I've been working as a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
 
@@ -82,16 +82,26 @@ $ python cem.py pendulum --num_process 6 --epochs 15 --batch_size 4096
 
 ## Talks
 
-April 3 2017 - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup](https://www.meetup.com/berlin-machine-learning/events/234989414/)
+### 2017
 
-June 21 2017 - Data Science Festival - A Glance at Q-Learning - [meetup](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
+April - Berlin Machine Learning Group - A Glance at Q-Learning - [meetup](https://www.meetup.com/berlin-machine-learning/events/234989414/)
 
-September 3 2018 - Berlin Machine Learning Group - energy-py - [meetup](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [repo](https://github.com/ADGEfficiency/energy-py-talk)
+June Data Science Festival - A Glance at Q-Learning - [meetup](https://www.datasciencefestival.com/adam-green-glance-q-learning/) - [youtube](https://www.youtube.com/watch?v=25NPjJ6hBmI)
 
-September 24 2019 - Data Science Retreat Demo Day - Mistakes Data Scientists Make - [meetup](https://www.meetup.com/Data-Science-Retreat/events/264686728/) - [blog post](http://www.adgefficiency.com/mistakes-talk/) - [DSR talk](https://www.canva.com/design/DADlQld9yF0/share/preview?token=DoG2rySn8x8KGT5xMyoe6A&role=EDITOR&utm_content=DADlQld9yF0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) - [mistakes talk](https://www.canva.com/design/DADl9pRJd0c/share/preview?token=ptRfgqrLSz5BSZHgLXYTgA&role=EDITOR&utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+### 2018 
 
-April 10 2020 - Data Science Retreat Demo Day - [meetup](https://www.meetup.com/Data-Science-Retreat/events/269691369/) - [slides](https://www.canva.com/design/DAD1Z-Tx6n0/qZ1W579ElkdOifKzMOn1Og/view?utm_content=DAD1Z-Tx6n0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) - [recording](https://drive.google.com/open?id=1XyfRXAdNhh0zz6MWmPWRbeXgizSuLfbA)
+Berlin Machine Learning Group - energy-py - [meetup](https://www.meetup.com/berlin-machine-learning/events/246637693/) - [slides](https://gitpitch.com/ADGEfficiency/energy-py-talk) - [repo](https://github.com/ADGEfficiency/energy-py-talk)
 
-June 9 2020 - AI Guild #datacareer workshop
+### 2019 
 
-May 26 2021 - AI / ML / DL - [slides](https://docs.google.com/presentation/d/1T0Kbf63yf_nAiNJar8pS8xgFL1yJTu3MbRk9cj-D1oQ/edit?usp=sharing)
+Data Science Retreat Demo Day - Mistakes Data Scientists Make - [meetup](https://www.meetup.com/Data-Science-Retreat/events/264686728/) - [blog post](http://www.adgefficiency.com/mistakes-talk/) - [DSR talk](https://www.canva.com/design/DADlQld9yF0/share/preview?token=DoG2rySn8x8KGT5xMyoe6A&role=EDITOR&utm_content=DADlQld9yF0&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton) - [mistakes talk](https://www.canva.com/design/DADl9pRJd0c/share/preview?token=ptRfgqrLSz5BSZHgLXYTgA&role=EDITOR&utm_content=DADl9pRJd0c&utm_campaign=designshare&utm_medium=link&utm_source=sharebutton)
+
+### 2020 
+
+Data Science Retreat Demo Day - [meetup](https://www.meetup.com/Data-Science-Retreat/events/269691369/) - [slides](https://www.canva.com/design/DAD1Z-Tx6n0/qZ1W579ElkdOifKzMOn1Og/view?utm_content=DAD1Z-Tx6n0&utm_campaign=designshare&utm_medium=link&utm_source=publishsharelink) - [recording](https://drive.google.com/open?id=1XyfRXAdNhh0zz6MWmPWRbeXgizSuLfbA)
+
+AI Guild #datacareer workshop
+
+### 2021 
+
+AI / ML / DL - [slides](https://docs.google.com/presentation/d/1T0Kbf63yf_nAiNJar8pS8xgFL1yJTu3MbRk9cj-D1oQ/edit?usp=sharing)
