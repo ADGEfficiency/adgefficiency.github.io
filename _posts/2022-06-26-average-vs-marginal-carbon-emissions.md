@@ -16,13 +16,13 @@ toc_sticky: true
 
 Electricity carbon intensities are an essential part of the clean energy transition.  Estimations & predictions of carbon intensities can drive decisions that clean up electricity grids.
 
-Carbon intensities are challenging - there are many different kinds of carbon intensity.  This post will help to shine a bit of light on this important energy & climate topic.
+Carbon intensities are challenging - there are different kinds of carbon intensity.  This post will help to shine light on this important energy & climate topic.
 
 In this post we will learn:
 
-- what a carbon intensity is & how to use them,
+- what a carbon intensity is & how to calculate them,
 - the two kinds of average carbon intensities,
-- what an average and marginal carbon intensities are,
+- what average and marginal carbon intensities are,
 - why the average carbon intensity is best for inventory, global carbon accounting,
 - why the marginal carbon intensity is best for short term decisions,
 - about a few problems with the marginal carbon intensity.
@@ -53,7 +53,7 @@ If we estimate an energy efficiency project will save `438 MWh` of electricity -
 carbon (tC) = carbon_intensity (tC/MWh) * electricity (MWh)
 ```
 
-The valuable part of that equation in business context's is often the `tC` - being able to estimate how much carbon we generate or save for some amount of electricity.
+The valuable part of that equation in business contexts is often the `tC` - being able to estimate how much carbon we generate or save for some amount of electricity.
 
 When doing the data work, often this equation is re-arranged.  A similar calculation can be done from the electricity consumption of an entire grid - if we measure a grid consumption of `400 MWh` and `200 tC`, this implies a carbon intensity of `0.5 tC/MWh` - an example of the equation below:
 
@@ -221,9 +221,13 @@ A final problem occurs with how *bouncy* a marginal carbon signal can be.  It's 
 Another problem with the marginal carbon intensity is challenges of data availability, calculating the carbon intensities and the difficulty of predicting them for control.
 
 
-The final problem with marginal approach, while accurate in terms of modelling how the grid responds, will never be able to target generation in the middle of the stack
+The final problem with marginal approach, even if we could be accurate in terms of modelling how the grid responds, will never be able to target generation in the middle of the stack.
 
-if we imagine a grid with a baseload of renewables & coal, with balancing & marginal generator done in gas
+Often in the NEM the marginal generator can be hydro, with dirtier coal generation sitting lower in the bid stack.
+
+If we imagine a grid with a baseload of renewables & coal, with balancing & marginal generator done in gas, then focusing on the marginal intensity only will only ever offset one type of generation - with no oppourtunities to reduce load on the coal generation.
+
+This is a point directly made by [Tomorrow](https://electricitymap.org/blog/marginal-vs-average-real-time-decision-making/) - it's a real flaw in focusing only on the margin that you miss out on targeting the rest of the stack.
 
 
 <br />
