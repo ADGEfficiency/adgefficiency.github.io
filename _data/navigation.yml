@@ -9,12 +9,12 @@ main:
     url: /year-archive/
 
 top:
-  - title: "Top Post"
+  - title: "Read"
     children:
-      - title: "Space Between Money & The Planet\n\n"
+      - title: "Space Between Money & the Planet"
         url: /space-between-money-and-the-planet/
 
-  - title: "Current Project"
+  - title: "Project Spotlight"
     children:
       - title: "climate-news-db"
         url: https://www.climate-news-db.com/
