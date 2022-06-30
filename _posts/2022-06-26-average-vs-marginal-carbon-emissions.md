@@ -27,8 +27,6 @@ In this post we will learn:
 - why the marginal carbon intensity is best for short term decisions,
 - about a few problems with the marginal carbon intensity.
 
-
-<br />
 ## Context
 
 A carbon intensity is the environmental equivalent of an electricity price - it is a signal that tells us something about the environmental health of the electricity grid.
@@ -147,7 +145,9 @@ Three bids are accepted - all for `20 MWh` of electricity.  Two bids are at low 
 We can create a bid stacks for the two markets (train tickets & wholesale electricity market).  The bid stack shows volume on the X axis and price on the Y axis -  the bid stacks show all our bids for both markets:
 
 <center>
-<img src="/temp.png" alt="drawing" width="512" align="center"/>
+<img src="/assets/avg_marginal/neu-f4.png" alt="drawing" width="512" align="center"/>
+<figcaption>Bid stacks for our train and electricity markets.</figcaption>
+<br />
 </center>
 
 In markets like the National Electricity Market (NEM) in Australia, this final bid sets the price for the entire market.  Every consumer of electricity will pay the marginal price of the most expensive generator.  Quite different from our train tickets, where each customer pays their own marginal price.
@@ -230,7 +230,6 @@ If we imagine a grid with a baseload of renewables & coal, with balancing & marg
 This is a point directly made by [Tomorrow](https://electricitymap.org/blog/marginal-vs-average-real-time-decision-making/) - it's a real flaw in focusing only on the margin that you miss out on targeting the rest of the stack.
 
 
-<br />
 ## Bringing more statistics to carbon intensities
 
 These problems are not the end of the road - as an industry we must continue to work on figuring out how to model carbon intensities to clean up the grid - in both the short and long term.
