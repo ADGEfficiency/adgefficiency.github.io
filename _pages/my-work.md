@@ -36,11 +36,15 @@ A tool for downloading climate change newspaper articles.
 
 ## Soft Actor Critic (SAC) Reimplementation
 
+Implementing the SAC Reinforcement learning algorithm - an off policy algorithm capable of both continuous and discrete policies.
+
 [source code](https://github.com/ADGEfficiency/sac)
 
 ![]({{"/assets/my-work/sac.png"}})
 
 ## World Models Reimplementation
+
+Implementing the 2017 classic paper - using a variational auto-encoder, mixed density networks and evolutionary optimization to learn to race a car from pixels.
 
 [blog post](https://adgefficiency.com/world-models/) - [source code](https://github.com/ADGEfficiency/world-models) - [references & resources](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models)
 
