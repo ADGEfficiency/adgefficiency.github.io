@@ -18,19 +18,19 @@ Recently I've been working as a data engineer at [Gridcognition](https://gridcog
 
 [LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
 
+
 # Projects
 
 ## Data Science South
 
-A sister website focusing on educating data professionals.
+A [sister website](https://www.datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
 
-[website](https://www.datasciencesouth.com/)
 
 ## climate-news-db
 
 A tool for downloading climate change newspaper articles.
 
-[app](https://www.climate-news-db.com/) - [blog post](https://www.datasciencesouth.com/blog/climate-news-db) - [source code](https://github.com/ADGEfficiency/climate-news-db)
+[app](https://www.climate-news-db.com/) - [source code](https://github.com/ADGEfficiency/climate-news-db)
 
 ![]({{"/assets/my-work/db.png"}})
 
