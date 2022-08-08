@@ -8,13 +8,11 @@ sidebar:
 
 ---
 
-Energy engineer turned data professional.  My work is focused on using data to combat climate change. 
-
-I enjoy modelling energy systems, especially to optimize the control of energy systems. 
+Energy engineer turned data professional.  My work is focused on using data to combat climate change.   I am passionate & enjoy modelling energy systems, especially for optimization & control.
 
 [I am interested in the space that exists between economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
 
-Recently I've been working as a data engineer at [Gridcognition](https://gridcognition.com/), working on building software to navigate the transition to a decentralised and decarbonised future.  I occasionally do some consulting, speaking and mentoring.
+Recently I've been working as a data engineer at [Orkestra Energy](https://www.orkestra.energy), working on building software to navigate the transition to a decentralised and decarbonised future.
 
 [LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
 
