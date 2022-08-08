@@ -25,7 +25,6 @@ Recently I've been working as a data engineer at [Gridcognition](https://gridcog
 
 A [sister website](https://www.datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
 
-
 ## climate-news-db
 
 A tool for downloading climate change newspaper articles.
@@ -65,8 +64,6 @@ Implementing the 2017 classic paper - using a variational auto-encoder, mixed de
 ## Mixed Integer Linear Programming of Battery Storage and Combined Heat & Power
 
 [blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
-
-[CHP Cheat Sheet - Gas Engines & Gas Turbines](https://www.adgefficiency.com/cheat-sheet-gas-engine-gas-turbine-chp-energy-basics/) & [Four Negative Effects of High Return Temperatures](https://www.adgefficiency.com/energy-basics-four-negative-effects-of-high-return-temperatures/)
 
 ## UK and Australian Grid Data
 
