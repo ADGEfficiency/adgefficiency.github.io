@@ -33,7 +33,7 @@ This post finishes with a review of two of the most visible applications of mach
 *Deep learning = a family of machine learning models, that use multi-layered neural networks to approximate functions*
 
 
-# What is machine learning?
+# What is Machine Learning?
 
 > Machine learning is the biggest advance in how we can do engineering since the scientific method - Steve Juvertson
 
@@ -41,7 +41,7 @@ The hype has officially peaked - as of 2018 deep learning is right at the top of
 
 ![]({{ '/assets/ml_energy/hype.png' }})
 
-<figcaption>*[The 2018 Gartner Hype Cycle](https://www.gartner.com/smarterwithgartner/5-trends-emerge-in-gartner-hype-cycle-for-emerging-technologies-2018/)*</figcaption>
+<figcaption>[The 2018 Gartner Hype Cycle](https://www.gartner.com/smarterwithgartner/5-trends-emerge-in-gartner-hype-cycle-for-emerging-technologies-2018/)</figcaption>
 
 Deep learning is foundation of the hype in modern machine learning.  Deep learning uses complex, many layered neural networks to learn patterns from large datasets.  This is the primary intelligence of machine learning - pattern recognition.
 
@@ -49,9 +49,9 @@ Machine learning has blown past the previous state of the art across a wide rang
 
 So where are we today?  Currently, machine learning forms a core part of the breakthrough performance in computer vision and language processing.  The state of the art on tasks object recognition, image classification, speech recognition and language translation are all powered by deep learning.  
 
-Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning. The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
+Google, Amazon and Facebook all have world class AI labs and much of their business has been transformed by machine learning.  The potential of machine learning is more latent in industries that are less digitized (such as healthcare, energy or education).
 
-## Machine learning versus artificial intelligence
+## Machine Learning versus Artificial Intelligence
 
 So far machine learning has provided narrow artificial intelligence (AI).  The power of these systems are often superhuman, and more than enough to justify the hype around machine learning.  Typically the task involves perception, using high dimensional data (i.e. images).  This is the main contribution of machine learning - being able to create business value from raw, high dimensional data.
 
@@ -61,7 +61,7 @@ Machine learning and artificial intelligence shouldn't be used interchangeably. 
 
 One reason machine learning is often confused with AI is how well modern machine learning is performing - some researchers even think it's all we will need to solve the general intelligence problem.  What exactly is needed is unclear, but we are many breakthroughs away from providing general intelligence.  Narrow superhuman machine intelligence is already here.
 
-## Three branches of machine learning
+## Three Branches of Machine Learning
 
 To learn these patterns, machine learning makes use of three distinct learning signals, which separates machine learning into three branches.
 
@@ -79,11 +79,11 @@ Generative Adversarial Networks (GANs) learn to generate realistic images using 
 
 ![fig1]({{ '/assets/ml_energy/gans.png' }})
 
-*All the images to the right are machine generated - [Karras et. al (2019) A Style-Based Generator Architecture for Generative Adversarial Networks (NVIDIA)](https://arxiv.org/pdf/1812.04948.pdf)*
+*All the images to the right are machine generated - [Karras et al. (2019) A Style-Based Generator Architecture for Generative Adversarial Networks (NVIDIA)](https://arxiv.org/pdf/1812.04948.pdf)*
 
 Adversarial learning can also be used in our final branch of machine learning - **reinforcement learning**.  In reinforcement learning the machine learns to select actions with the supervision of a scalar reward signal.  Reinforcement learning is applicable to a wide range of decision making problems with a reward signal, such as cost or carbon emissions.
 
-The crown jewel of modern reinforcement learning is the 2016 AlphaGo victory over Lee Sedol.  Go was the last great challenge for AI in board games - creating a superhuman Go computer was thought to be a decade away.  AlphaGo used deep neural networks to to map from the high dimensional board state to an optimal next move.
+The crown jewel of modern reinforcement learning is the 2016 AlphaGo victory over Lee Sedol.  Go was the last great challenge for AI in board games - creating a superhuman Go computer was thought to be a decade away.  AlphaGo used deep neural networks to map from the high dimensional board state to an optimal next move.
 
 ![]({{ '/assets/ml_energy/alphago.jpg' }})
 
@@ -91,9 +91,9 @@ The crown jewel of modern reinforcement learning is the 2016 AlphaGo victory ove
 
 AlphaGo stands in contrast to Deep Blue, the computer that solved chess with a 1996 victory over Garay Kasparov.  All of Deep Blue's intelligence originated from a team of programmers and chess Grandmasters, who handcrafted moves into the machine.  Contrast this to the supervision that AlphaGo used - learning by playing itself at the game of Go.
 
-DeepMind (the London lab behind AlphaGo) then introduced AlphaZero, which beat the previous version 100-0.  This version never relied on a dataset of human expert moves, and learnt entirely from adversarial self-play.
+DeepMind (the London lab behind AlphaGo) then introduced AlphaZero, which beat the previous version 100-0.  This version never relied on a dataset of human expert moves, and learned entirely from adversarial self-play.
 
-# Why is machine learning so hot right now?
+# Why is Machine Learning So Hot Right Now?
 
 Each of these three branches is undergoing a tremendous period of performance, research activity and hype.  Fundamental to all of this improvement is deep learning - the use of multiple layer neural networks as complex function approximators.
 
@@ -109,7 +109,7 @@ The atomic unit of a neural network is the perceptron - a simple model that comb
 
 ![]({{ '/assets/ml_energy/mlp.png' }})
 
-There is more to machine learning than just deep neural networks - algorithms like logistic regression and random forests are suitable for many business problems.      The problem with classical machine learning is that it doesn't benefit from massive amounts of data.  Because the capacity of a neural network can be increased by adding depth, neural networks are able to break through the limits of classical machine learning models.
+There is more to machine learning than just deep neural networks - algorithms like logistic regression and random forests are suitable for many business problems.  The problem with classical machine learning is that it doesn't benefit from massive amounts of data.  Because the capacity of a neural network can be increased by adding depth, neural networks are able to break through the limits of classical machine learning models.
 
 ![fig3]({{ '/assets/ml_energy/fig2.png' }})
 
@@ -131,17 +131,17 @@ A recurrent layer processes input and generates output as sequences, and powers 
 
 The ability to see and understand language not only drives performance, it also allows machine learning to generalize.  Vision and language understanding are low level skills used in essentially every domain of human life.  Mastering these low level skills means that machines can be useful in a range of industries.  Energy is no different.
 
-# What's driving the performance of modern machine learning?
+# What's Driving the Performance of Modern Machine Learning?
 
 The performance of modern deep learning is driven by the interaction of two processes - the increased availability of data and the ability to train large models with lots of data.
 
 The rise of the internet and devices that generate raw data (sensors, images and text) has lead to the curation of massive datasets.  These massive datasets are the food of deep neural networks - without the data, the models can't learn.
 
-The ability to train large models rests upon the ability to access specialized hardware in the cloud.  In the 2000's researchers repurposed hardware designed for video games (graphics processing units, or GPUs) to train neural networks.  This led to dramatic speedup in training times, which is important - all our understanding of machine learning is empirical (learned through experiment).
+The ability to train large models rests upon the ability to access specialized hardware in the cloud.  In the 2000s researchers repurposed hardware designed for video games (graphics processing units, or GPUs) to train neural networks.  This led to dramatic speedup in training times, which is important - all our understanding of machine learning is empirical (learned through experiment).
 
 The second hardware trend is cloud computing.  The cloud gives access to computation on a fully variable cost basis.  Platforms such as Amazon Web Services allow on-demand access to a large amount of GPU-enabled computing power with cheap data storage alongside it.  This access to computing power works both vertically within large technology companies and for smaller companies.  It enables the balance sheet benefit of shifting a capital expense (building data centres) into an operating expense.
 
-A final trend driving modern machine learning is access to algorithms and tools.  Almost all the relevant literature for machine learning is available for free on sites like arXiv.  It's also possible to access high quality implementations of machine learning tools on GitHub.  This tendency for openness stands in stark contrast with the paywalls and licensed software of the energy industry.
+A final trend driving modern machine learning is access to algorithms and tools.  Almost all the relevant literature for machine learning is available without pay-wall on sites like arXiv.  It's also possible to access high quality implementations of machine learning tools on GitHub.  This tendency for openness stands in stark contrast with the paywalls and licensed software of the energy industry.
 
 # Challenges
 
@@ -158,13 +158,13 @@ The curation of large and interesting datasets is one of the few defensible adva
 When thinking about applying machine learning to an energy problem, the first and most important consideration is the dataset.  In fact, the first step in many machine learning projects is the same - start collecting data.  A dataset for supervised machine learning has two parts - the features (such as images or raw text) and the target (what you want to predict).  A dataset for reinforcement learning is a simulator - something that the learning algorithm can interact with.
 
 Some potential applications of machine learning in energy include (but are not limited too):
-- predictive maintenance 
-- customer segmentation 
-- churn prediction and minimization
+- predictive maintenance,
+- customer segmentation,
+- churn prediction and minimization.
 
 Now we will dive into the details of a few applications of machine learning in energy that are happening today.
 
-## Time series forecasting
+## Time Series Forecasting
 
 The economics and environmental impact of energy depends on time of use.  Forecasting has always been an important practice in energy - increased deployment of variable wind and solar makes forecasting more valuable.  [DeepMind have claimed a 20 % improvement in the value of energy using a 36 hour ahead forecast](https://deepmind.com/blog/machine-learning-can-boost-value-wind-energy/).  Better forecasts can increase the value of renewables and reduce the requirement for backup fossil fuels.
 
@@ -190,20 +190,21 @@ The neural networks perform computations on the cloud, with the suggested action
 
 *Performance of the data centre measured using energy input per ton of cooling (kW/tonC), and improves with more data, from an initial 12% to 30% over nine months.*
 
-# Summary and key takeaways
+# Summary & Key Takeaways
 
-We've just had a whirlwind introduction to machine learning.  Key takeaways are:
-- machine learning is the subset of AI that is working
-- machine learning has three broad branches - supervised, unsupervised and reinforcement learning
-- deep learning is powering modern machine learning
-- convolution for vision, recurrent for sequences
-- performance is driven by the availability of data, cloud compute and algorithms
+We've had a whirlwind introduction to machine learning.  Key takeaways are:
 
-# Sources and further reading
+- machine learning is the subset of AI that is working,
+- machine learning has three broad branches - supervised, unsupervised and reinforcement learning,
+- deep learning is powering modern machine learning,
+- convolution for vision, recurrent for sequences,
+- performance is driven by the availability of data, cloud compute and algorithms.
+
+# Sources and Further Reading
 
 For more technical and non-technical machine learning resources, check out [ml-resources](https://github.com/ADGEfficiency/ml-resources).  For reinforcement learning resources, check out [rl-resources](https://github.com/ADGEfficiency/rl-resources).
 
-General machine learning
+### Machine Learning
 
 * [Demis Hassabis (CEO DeepMind) &#8211; Artificial Intelligence and the Future](https://www.youtube.com/watch?v=i3lEG6aRGm8)
 * <a style="font-size: 1rem;" href="https://en.wikipedia.org/wiki/Deep_Blue_(chess_computer)">Deep Blue &#8211; Wikipedia</a>
@@ -216,7 +217,7 @@ General machine learning
 * [What worries me about AI – François Chollet](https://medium.com/@francois.chollet/what-worries-me-about-ai-ed9df072b704)
 * [Software 2.0 - Andrej Karpathy (Tesla & OpenAI) ](https://medium.com/@karpathy/software-2-0-a64152b37c35)
 
-Machine learning and energy
+### Machine Learning & Energy
 
 - [Machine Learning in Energy (Fayadhoi Ibrahima)](http://large.stanford.edu/courses/2015/ph240/ibrahima2/)
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning)
@@ -226,7 +227,7 @@ Machine learning and energy
 - [This “duck curve” is solar energy’s greatest challenge](https://www.vox.com/2018/5/9/17336330/duck-curve-solar-energy-supply-demand-problem-caiso-nrel)
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning) 
 
-Time series forecasting
+### Time Series Forecasting
 
 - [Machine Learning in Energy (Fayadhoi Ibrahima)](http://large.stanford.edu/courses/2015/ph240/ibrahima2/)
 - [7 reasons why utilities should be using machine learning](https://blogs.oracle.com/utilities/utilities-machine-learning)
@@ -235,15 +236,15 @@ Time series forecasting
 - [Re-dispatch costs in the German power grid](https://www.cleanenergywire.org/factsheets/re-dispatch-costs-german-power-grid)
 - [This “duck curve” is solar energy’s greatest challenge](https://www.vox.com/2018/5/9/17336330/duck-curve-solar-energy-supply-demand-problem-caiso-nrel)
 
-Energy disaggregation
+### Energy Disaggregation
 
 - [Neural NILM: Deep Neural Networks Applied to Energy Disaggregation](https://arxiv.org/pdf/1507.06594.pdf) 
 - [Energy Disaggregation: The Holy Grail (Carrie Armel)](https://web.stanford.edu/group/peec/cgi-bin/docs/events/2011/becc/presentations/3%20Disaggregation%20The%20Holy%20Grail%20-%20Carrie%20Armel.pdf)
 - [Putting Energy Disaggregation Tech to the Test](https://www.greentechmedia.com/articles/read/putting-energy-disaggregation-tech-to-the-test)
 
-Control
+### Control
 
-- [Minh et. al (2016) Human-level control through deep reinforcement learning](http://www.nature.com/articles/nature14236) 
+- [Minh et al. (2016) Human-level control through deep reinforcement learning](http://www.nature.com/articles/nature14236) 
 - [Reinforcement learning course by David Silver (Google DeepMind)](https://www.youtube.com/watch?v=2pWv7GOvuf0)
 - [Deep reinforcement learning doesn't work yet](http://www.alexirpan.com/2018/02/14/rl-hard.html)
 
