@@ -1,40 +1,40 @@
 ---
-title: 'A hackers guide to AEMO & NEM data'
+title: 'A Hackers Guide to AEMO & NEM Electricity Market Data'
 date: 2018-08-13
 categories:
   - Energy
   - Machine Learning
-excerpt:  A simple guide to the data for the Australian electricity grid  - the NEM.
-
+excerpt:  A simple guide to data available for the NEM - an Australian electricity grid & market.
 ---
 
-This is a short guide to Australian electricity grid data supplied by AEMO (the market operator) for the Australian National Electricity Market (NEM) (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
+This is a short guide to the electricity grid & market data supplied by AEMO (the market operator) for the Australian National Electricity Market (NEM) (the grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania).
 
 ## Data
 
 Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/-/media/Files/Electricity/NEM/Participant_Information/NEM-Registration-and-Exemption-List.xls).  The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
 
 Data about the NEM is provided in two sources:
-- [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/)
-- [MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/)
+
+- [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/),
+- [MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/).
 
 The NEMDE provides infomation about the price setter (aka the marginal generator)	in the `NemPriceSetter` XML files.
 
 The MMSDM provides both actual data and forecasts for a range of variables - including prices, demand and electricity flows.  Data in the MMSDM is supplied from three different, overlapping sources:
 
-- [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours
-- [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months
-- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until the end of last month
+- [CURRENT](http://www.nemweb.com.au/REPORTS/CURRENT/) - last 24 hours,
+- [ARCHIVE](http://www.nemweb.com.au/REPORTS/ARCHIVE/) - last 13 months,
+- [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/) - from 2009 until the end of last month.
 
 Some report names can be different across sources - for example `DISPATCH_SCADA` versus `UNIT_SCADA`.
 
-## Price structure
+## Price Structure
 
 The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the six **dispatch prices** that occur within a half hour - the dispatch price is a 5 minute price for electricity.
 
 The trading price is used for settlement - it is the price that matters.  AEMO plan to move to 5 minute pricing in the future.
 
-## AEMO timestamping
+## AEMO Timestamping
 
 AEMO timestamp with the time **at the end of the interval**.  This means that `01/01/2018 14:00` refers to the time period `01/01/2018 13:30 - 01/01/2018 14:00`.
 
@@ -52,11 +52,11 @@ If the AEMO timestamp is not shifted, then the following is true
 dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_price.loc['01/01/2018 14:00']
 ```
 
-## Useful reports
+## Useful Reports
 
 The MMSDM links are for the reports linked below are all for [2018_05](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/).
 
-### actual data
+### Actual Data
 
 - trading price (30 min electricity price) - TRADINGPRICE - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_TRADINGPRICE_201805010000.zip)
 - dispatch price (5 min electricity price) - DISPATCHPRICE - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHPRICE_201805010000.zip)
@@ -66,7 +66,7 @@ The MMSDM links are for the reports linked below are all for [2018_05](http://ww
 - demand - DISPATCHREGIONSUM - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip)
 - interconnectors - INTERCONNECTORRES - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip)
 
-### forecasts
+### Forecasts
 
 - trading price forecast - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip)
 - dispatch price forecast - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip)
@@ -103,7 +103,7 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ![]({{"/assets/hacker_aemo/gas_coal_watch.png"}})
 
-## Further reading
+## Further Reading
 
 - [NEM on the AEMO website](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM)
 - [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)
