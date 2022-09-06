@@ -30,6 +30,12 @@ Some report names can be different across sources - for example `DISPATCH_SCADA`
 
 ## Price Structure
 
+### Current 5 Minute Settlement
+
+"2021-10-01T00:05:00"
+
+### Historical 30 Minute Settlement
+
 The wholesale electricity price is known as the **trading price** - a half hourly price for electricity.  The trading price is the average of the six **dispatch prices** that occur within a half hour - the dispatch price is a 5 minute price for electricity.
 
 The trading price is used for settlement - it is the price that matters.  AEMO plan to move to 5 minute pricing in the future.
