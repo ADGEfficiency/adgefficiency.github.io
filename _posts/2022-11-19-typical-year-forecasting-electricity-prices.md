@@ -19,6 +19,8 @@ Energy prices assumptions are crucial for investing & building new energy projec
 
 This post will show why the standard industry approaches to using energy prices for investment decisions in energy projects are hiding massive amounts of error.
 
+You can find the source code for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
+
 
 # What is a Typical Year Forecast?
 
@@ -306,4 +308,4 @@ Further extensions on the methods shown above include:
 
 Thanks for reading!  If you enjoyed this post, make sure to check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
-You can find the source code to reproduce the typical year forecasting results at [adgefficiency/typical-year-electricity-price-forecasting]().
+You can find the source code to reproduce the typical year forecasting results at [adgefficiency/typical-year-electricity-price-forecasting](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
