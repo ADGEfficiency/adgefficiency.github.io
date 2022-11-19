@@ -21,7 +21,7 @@ I'm currently working as a data scientist at [Orkestra Energy](https://www.orkes
 
 ## Data Science South
 
-A [sister website](https://www.datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
+[A sister website](https://www.datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
 
 ## climate-news-db
 
