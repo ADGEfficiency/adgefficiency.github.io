@@ -267,7 +267,7 @@ This alignment problem also occurs when you don't use a typical year forecast - 
 
 ### Domain Expertise
 
-There is some amount of domain expertise required to setup a typical year forecast - primarily in defining the appropriate statistics.  
+Domain expertise is required to setup a typical year forecast - primarily in defining the appropriate statistics.  
 
 Using multiple statistics can also require weighting - for example if the standard deviation is orders of magnitude higher than the mean, we may want to weight the mean higher.
 
@@ -287,7 +287,7 @@ For example, we could use statistics like:
 - number of time periods above a threshold price,
 - number of negative prices.
 
-This is an exciting feature of typical year forecasting - the flexibility and simplicity of using any statistic that aligns with the features your technical and financial models need to be accurate on.
+This is an exciting feature of typical year forecasting - the **flexibility and simplicity of using any statistic** that aligns with what your technical and financial models need to align with your business goals.
 
 # Summary
 
