@@ -254,12 +254,12 @@ This methodology requires multiple years of data - if we only have access to a s
 
 One problem that arises when concatenating interval data from different time periods together is alignment at the intersection - the sample below from the typical year forecast produced above shows the issue - our forecast jumps from Tuesday in January 2017 to Friday 2020:
 
-| interval-start      | original-timestamps   |   price |   day-of-week |
-|:--------------------|:----------------------|--------:|--------------:|
-| 2052-01-31 23:50:00 | 2017-01-31 23:50:00   |   39.52 |             1 |
-| 2052-01-31 23:55:00 | 2017-01-31 23:55:00   |   39.52 |             1 |
-| 2052-02-01 00:00:00 | 2020-02-01 00:00:00   |  299.2  |             5 |
-| 2052-02-01 00:05:00 | 2020-02-01 00:05:00   |  299.2  |             5 |
+| forecast            | original-timestamps   |   price |   day-of-week-forecast |   day-of-week-original |
+|:--------------------|:----------------------|--------:|-----------------------:|-----------------------:|
+| 2052-01-31 23:50:00 | 2017-01-31 23:50:00   |   39.52 |                      2 |                      1 |
+| 2052-01-31 23:55:00 | 2017-01-31 23:55:00   |   39.52 |                      2 |                      1 |
+| 2052-02-01 00:00:00 | 2020-02-01 00:00:00   |  299.2  |                      3 |                      5 |
+| 2052-02-01 00:05:00 | 2020-02-01 00:05:00   |  299.2  |                      3 |                      5 |
 
 This misalignment will cause issues with the incorrect number of weekdays or weekends in a year - important as energy demand and price has strong weekly seasonality.
 
