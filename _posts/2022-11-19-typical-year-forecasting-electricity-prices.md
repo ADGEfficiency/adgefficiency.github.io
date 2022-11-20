@@ -17,7 +17,7 @@ Energy prices are volatile - the price of gas, oil and electricity all vary wide
 
 Energy prices assumptions are crucial for investing & building new energy projects - the economic viability of solar, battery and energy efficiency projects depend heavily on energy prices used in business case models.
 
-This post will show why the standard industry approaches to using energy prices for investment decisions in energy projects are hiding massive amounts of error.
+This post will show why the standard [industry](industry.md) approaches to using energy prices for investment decisions in energy projects are hiding massive amounts of error.
 
 You can find the source code for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
 
@@ -291,18 +291,27 @@ This is an exciting feature of typical year forecasting - the flexibility and si
 
 In this post we introduced *typical year forecasting* - a flexible, powerful forecasting method suitable for use in energy project business case modelling.
 
-Typical year forecast address a hidden flaw in the price assumptions commonly used in industry - the large errors introduced by using recent price data.
+Typical year forecast address a **hidden flaw in the price assumptions commonly used in industry** - the large errors introduced by using recent price data.
 
-A typical year forecast addresses these issues by selecting historical price data that is most similar to all the historical data.
+A typical year forecast addresses these issues by **selecting historical price data that is most similar to all the historical data**.
 
 Typical year forecasts have the following advantages:
 
-Typical year forecasts have the following disadvantages:
+- **simple to create** - no machine learning, gradients or iterative calculations,
+- **interpretable** - easy to understand why one sample is selected over others,
+- **realistic** - the forecast is made from actual historical data,
+- **domain flexible** - can be used with any time series (not just electricity prices),
+- **statistically flexible** - can use a range of statistics to define what typical means.
+
+A typical year forecast has the following disadvantages:
+
+- **data quantity** - requires at least 2 years of historical data,
+- **domain knowledge** - requires selecting & weighting of statistics based on problem understanding.
 
 Further extensions on the methods shown above include:
 
-- higher frequency sampling,
-- using a variety of statistics to define similarity.
+- higher frequency sampling on a weekly or daily basis,
+- using a variety of statistics to define similarity, such as the number of price spikes or the number of negative prices.
 
 ---
 
