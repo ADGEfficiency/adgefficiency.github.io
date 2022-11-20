@@ -137,11 +137,11 @@ After following this procedure, we end up with 12 monthly samples - one for each
 
 ## Typical Year Forecast for South Australian Electricity Prices
 
-To demonstrate the idea, we will first limit ourselves to forecasting a single month - January, for electricity prices in South Australia, using 10 years of historical data.
+To demonstrate the idea, we will first limit ourselves to **forecasting a single month** - January, for electricity prices in South Australia, using 10 years of historical data.
 
-Let's first start by calculating our long term statistic - the average price in January across the entire dataset, which is `85.45 $/MWh`.
+Let's first start by **calculating our long term statistic** - the average price in January across the entire dataset, which is `85.45 $/MWh`.
 
-We can then look at what the average price was in each January and calculate the error versus the long term statistic.
+We can then look at what the average price was in each January and calculate the **error versus the long term statistic**.
 
 This leads us to selecting January 2017 as our typical month of electricity prices:
 
@@ -187,7 +187,7 @@ Above we only considered the mean when selecting a month.  The mean is a measure
 
 For some energy assets, **the variance can be more important than the average**.  Variance is how *spread out* or variable prices are.  The variance of prices is important for batteries operating in wholesale arbitrage - this spread puts an upper limit on how profitable shifting of electricity from low to high price intervals can be.
 
-Our procedure for creating a typical year forecast based on both the mean and the variance is similar to only considering the mean - we calculate two additional statistics (the long term standard deviation and the sample standard deviation), and include them in our sample error:
+Our procedure for creating a typical year forecast based on **both the mean and the variance** is similar to only considering the mean - we calculate two additional statistics (the long term standard deviation and the sample standard deviation), and include them in our sample error:
 
 ```python
 #  creating a typical year forecast based on the mean & standard deviation
@@ -236,9 +236,11 @@ Let's return to our original motivating example, with our additional estimate us
 
 ![Typical year forecast using the mean as a statistic.]({{ "/assets/typical-year/f5.png" }})
 
-**How great is that!** Our typical year forecast does a fantastic job of cutting through the variance - modelling our project right in the middle of the high variance estimates we get when taking the traditional, industry standard approaches of using historical price data.
+**How great is that!** Our typical year forecast does a **fantastic job of cutting through the variance** - modelling our project right in the middle of the high variance estimates we get when taking the traditional, industry standard approaches of using historical price data.
 
-No longer are we slaves to the cruel master of time - as the years go by, our estimation of project economics will stay stable and consistent, rather than varying wildly based on when we are doing our modelling.
+No longer are we slaves to the cruel master of time - as the years go by, our estimation of project economics will stay stable and consistent, rather than varying wildly based on when we are doing our modelling.  
+
+As new price data becomes available, it's possible that our typical year forecast may change (due to both the long term statistics changing, or recent data being more typical), but this will be minor compared to the massive year on year swings we get with the standard industry approaches.
 
 # Discussion
 
