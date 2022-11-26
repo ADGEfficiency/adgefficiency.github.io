@@ -313,13 +313,13 @@ A typical year forecast has the following disadvantages:
 
 Further extensions on the methods shown above include:
 
-- higher frequency sampling on a weekly or daily basis,
-- using a variety of statistics to define similarity, such as the number of price spikes or the number of negative prices.
+- **higher frequency sampling** on a weekly or daily basis,
+- using a **variety of statistics** to define similarity, such as the number of price spikes or the number of negative prices.
 
 ---
 
 Thanks for reading!  
 
-If you enjoyed this post, make sure to check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/).
+[If](if.md) you enjoyed this post, make sure to check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
 You can find the materials to reproduce [this](this.md) analysis at [adgefficiency/typical-year-electricity-price-forecasting](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
