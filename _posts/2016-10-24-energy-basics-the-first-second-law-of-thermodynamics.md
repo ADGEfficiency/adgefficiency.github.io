@@ -4,7 +4,7 @@ date: 2022-08-07
 author: Adam Green
 categories:
   - Energy Basics
-excerpt: Two simple laws are the foundation of energy engineering.
+excerpt: These two laws are the foundation of energy engineering.
 
 ---
 
