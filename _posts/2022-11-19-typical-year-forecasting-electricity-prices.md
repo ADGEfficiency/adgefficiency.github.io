@@ -1,4 +1,4 @@
----
+[---](---.md)
 title: Typical Year Forecasting of Electricity Prices
 date: 2022-11-19
 categories:
@@ -13,11 +13,11 @@ toc_sticky: true
 created: 2022-11-19, updated: 2022-11-19
 ```
 
-Energy prices are volatile - the price of gas, oil and electricity all vary widely year on year.  
+**Energy prices are volatile** - the price of gas, oil and electricity all swing significantly, driven by politics, technology, climate and the weather.
 
-Prices are crucial for allocating capital to energy projects - the economic viability of solar, battery and energy efficiency projects all depend on the energy price assumptions used in business case models.
+Prices are crucial for allocating capital to energy projects - the economic viability of solar, battery and energy efficiency projects all depend on **energy price assumptions** used in business case models.
 
-This post will show why the standard industry approaches to energy prices for investments in energy assets are hiding a huge source of error.
+This post will show why the **standard industry approaches** to energy prices for investments in energy assets are hiding a **huge source of error** - variance in estimations of project performance that occur due to improper handling of energy price data.
 
 You can find the source code & data for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
 
@@ -26,26 +26,26 @@ You can find the source code & data for this work at [adgefficiency/typical-year
 
 A **typical year forecast** uses historical data to create a **single, synthetic year of data**.  
 
-This single year of data is suitable for use in **business case modelling of energy projects** - it's not suitable for short term dispatch of energy assets.
+This single year forecast is suitable for use in **business case modelling of energy projects** - it's not suitable for short term dispatch of energy assets.
 
 A typical year forecast has the following advantages:
 
 - **simple to create** - no machine learning, gradients or iterative calculations,
 - **interpretable** - easy to understand why one sample is selected over others,
-- **realistic** - the forecast is made from actual historical data,
-- **domain flexible** - can be used with any time series (not just electricity prices),
+- **realistic** - the forecast is made from real historical data,
+- **domain flexible** - can be used with any time series,
 - **statistically flexible** - can use a range of statistics to define what typical means.
 
 A typical year forecast has the following disadvantages:
 
 - **data quantity** - requires at least 2 years of historical data,
-- **domain knowledge** - requires selecting & weighting of statistics based on problem understanding.
+- **domain knowledge** - requires selection & weighting of statistics.
 
-An example of a typical year forecast is a typical metrological year (TMY) forecast, used to create a dataset of typical year of weather.  TMY forecasts are commonly used in modelling solar generation or building energy use. 
+An example of a typical year forecast is a **typical metrological year** (TMY) forecast, used to create a dataset of typical year of weather.  TMY forecasts are commonly used in modelling solar generation or building energy use. 
 
 The idea & inspiration for this post came from using the [TMY forecast produced by Solcast](https://solcast.com/tmy) - thanks Solcast for the inspiration!
 
-# Motivation - The Problem with the Standard Industry Approach
+# The Problem with the Standard Industry Approach
 
 Estimating the economic performance (simple payback, IRR, NPV or rate of return on capital) of an investment in an energy project requires combining two models - **a technical model and a financial model**.
 
@@ -86,25 +86,26 @@ If we were setting up our model in November 2022 with a technical model based on
 - the most recent calendar year - January 2021 to December 2021,
 - align with the technical model - January 2019 to December 2019.
 
-Below we will demonstrate why **all of these commonly used methodologies introduce a large source of error**.
+Below we will demonstrate why all of these commonly used methodologies **introduce a large source of error**.
 
 ## Error of Using Recent Prices
 
-Let's expand on our example above - instead of assuming prices at `100 $/MWh`, let's use the actual annual average electricity prices for South Australia.
-
-The figure below shows the same financial model we introduced above with actual annual average prices for South Australia:
+In our example above, we assumed prices at `100 $/MWh`.  The figure below uses the same financial model with the actual annual average electricity prices for South Australia:
 
 ![Project savings versus annual average electricity prices.]({{ "/assets/typical-year/f1.png" }})
 
-**Look at the variance of these results!**  Around half of our projects lose money, with the other half being profitable.   This variance is the error that the standard industry approaches are hiding.
+**Look at the variance of these results!**  Around half of our projects lose money, with the other half being profitable.   
+This variance error that the standard industry approaches are hiding - normally we only get a single estimate, without seeing the spread across different years of price data.
 
-This variance in project performance is only occurring based on *when we do our modelling* - not based on the fundamental, underlying economics of the project.  We can do better!
+This variance in project performance is only occurring based on *when we do our modelling* - not based on the fundamental, underlying economics of the project.  **We can do better!**
 
 # Creating a Typical Year Forecast
 
-Creating a typical year forecast requires defining what typical means.  We will **define typical as similarity** - our typical year forecast will be made of *samples of data that are most similar to all the other data*.
+Creating a typical year forecast requires defining what typical means.  
 
-We can **quantify similarity by defining an error metric** - for us the error between **statistics measured across all our data and statistics measured across a candidate sample**.  The samples that minimize this error will be selected and used in our forecast.
+For these forecasts we will **define typical as similarity** - our typical year forecast will be made of *samples of data that are most similar to all the other data*.
+
+We can **quantify similarity by defining an error metric** - the error between **statistics measured across all our data and statistics measured across a candidate sample**.  The samples that minimize this error will be selected and used in our forecast.
 
 For our first typical year forecast, we will create a forecast based on a single statistic - **the average price within a month**.
 
@@ -113,7 +114,7 @@ The basic idea is as follows:
 ```python
 #  Creating a Typical Year Forecast based on the Mean with 5 Years of Historical Data.
 
-#  Iterate across each month in a year (12 months in total)
+#  Iterate across each month in a year (12 months in total).
 for each month in a year (Jan, Feb ... Nov, Dec)
  
   #  Calculate one long term statistic across all 5 years for this one month.
@@ -140,7 +141,9 @@ To further demonstrate the idea, we will first limit ourselves to **forecasting 
 
 Let's first start by **calculating our long term statistic** - the average price in January across the entire dataset, which is `85.449 $/MWh`.
 
-We can then look at what the average price was in each January and calculate the **error versus the long term statistic**.  This leads us to selecting January 2017 as our typical month of electricity prices:
+We can then look at what the average price was in each January and calculate the **error versus the long term statistic**.  
+
+This leads us to selecting January 2017 as our typical month of electricity prices:
 
 |   year | month   |   price-mean |   long-term-mean |   error-mean |
 |-------:|:--------|-------------:|-----------------:|-------------:|
@@ -184,25 +187,32 @@ We can compare this typical year forecast to actual historical prices - for the 
 
 Above we only considered the mean when selecting a month.  The mean is a measurement of the *central tendency* of a distribution - using the mean to select a month will mean our forecast has a similar central point to the long term average.
 
-For some energy models, **the variance is more important than the average**.  The variance is how *spread out* prices are.  The variance of prices is important for batteries operating in wholesale arbitrage - this spread puts an upper limit on how profitable shifting of electricity between different intervals can be.
+For some energy models, **the variance is more important than the average**.  
 
-Our procedure for creating a typical year forecast based on **both the mean and the variance** is similar to only considering the mean - we calculate two additional statistics (the long term standard deviation and the sample standard deviation), and include them in our sample error:
+The variance is how *spread out* prices are - it's important for batteries operating in wholesale arbitrage, as this spread puts an upper limit on the profitability of shifting of electricity between intervals can be.
+
+Our procedure for creating a typical year forecast based on **both the mean and the variance** is similar to only considering the mean.
+
+We instead calculate two additional statistics (the long term standard deviation and the sample standard deviation), and include them in our sample error:
 
 ```python
-#  creating a typical year forecast based on the mean & standard deviation
+#  Creating a typical year forecast based on the mean & standard deviation
 
-#  iterate across each month in a year
+#  Iterate across each month in a year.
 for month in (Jan, Feb ... Nov, Dec):
-  #  calculate two statistics - long term mean & standard deviation
+
+  #  Calculate two statistics - long term mean & standard deviation.
   long_term_mean = data.mean()
   long_term_std = data.std()
-  #  iterate across historical data & calculate sample errors
+
+  #  Iterate across historical data & calculate sample errors,
   #  using both long term statistics
   for year in (historical data):
     sample_mean = month.year.mean()
     sample_std = month.year.std()
     sample_error = absolute(long_term_mean - sample_mean) + absolute(long_term_std - sample_std)
-  #  select sample that minimizes error
+
+  #  Select sample that minimizes error.
   selected_sample = argmin(sample_errors)
 ```
 
@@ -235,9 +245,11 @@ Let's return to our original motivating example, with an additional estimate of 
 
 ![Typical year forecast using the mean as a statistic.]({{ "/assets/typical-year/f5.png" }})
 
-**How great is that!** Our typical year forecast does a **fantastic job of cutting through the variance** - modelling our project right in the middle of the high variance estimates we get when taking the traditional, industry standard approaches of using historical price data.
+**How great is that!** 
 
-No longer are we slaves to the cruel master of time - as the years go by, our estimation of project economics will stay stable and consistent, rather than varying wildly based on when we are doing our modelling.  
+Our typical year forecast does a **fantastic job of cutting through the variance** - modelling our project right in the middle of the high variance estimates we get when taking the traditional, industry standard approaches of using historical price data.
+
+No longer are we slaves to the cruel master of time (well, perhaps we still are) - as the years go by, our estimation of project economics will stay stable and consistent, rather than varying wildly based on when we are doing our modelling.  
 
 As new price data becomes available, our typical year forecast will change (due to both the long term statistics changing, or recent data being more typical), but the variance from these changes will be minor compared to the massive year on year swings we get with the standard industry approach.
 
@@ -320,6 +332,6 @@ Further extensions on the methods shown above include:
 
 Thanks for reading!  
 
-[If](if.md) you enjoyed this post, make sure to check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/).
+If you enjoyed this post, make sure to check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
-You can find the materials to reproduce [this](this.md) analysis at [adgefficiency/typical-year-electricity-price-forecasting](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
+You can find the materials to reproduce this analysis at [adgefficiency/typical-year-electricity-price-forecasting](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
