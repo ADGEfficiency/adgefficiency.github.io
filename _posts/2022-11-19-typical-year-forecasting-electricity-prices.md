@@ -10,16 +10,16 @@ toc_sticky: true
 ---
 
 ```
-created: 2022-11-19, updated: 2022-11-19
+created: 2022-11-19, updated: 2022-12-04
 ```
 
-**Energy prices are volatile** - the price of gas, oil and electricity all swing significantly, driven by politics, technology, climate and the weather.
+**Energy prices are volatile** - the prices of energy commodities such as gas, oil and electricity all change year on year, driven by politics, technology, climate and the weather.
 
-Prices are crucial for allocating capital to energy projects - the economic viability of solar, battery and energy efficiency projects all depend on **energy price assumptions** used in business case models.
+Prices are signals that guide capital allocation to energy projects - the **economic viability of solar, battery and energy efficiency** all depend on the **energy price assumptions** used in to model their economic return.
 
-This post will show why the **standard industry approaches** to energy prices for investments in energy assets are hiding a **huge source of error** - variance in estimations of project performance that occur due to improper handling of energy price data.
+This post will show why the **standard industry approaches** for handling energy prices for investments in energy assets are hiding a **huge source of error** - variance in estimations of project performance that occur due to improper handling of energy price data.
 
-You can find the source code & data for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
+You can find supporting materials (source code & data) for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
 
 
 # What is a Typical Year Forecast?
@@ -80,11 +80,11 @@ Choosing the reference year for prices is commonly done by:
 - taking the most recent full calendar year of prices,
 - taking the prices that align with the technical model.
 
-If we were setting up our model in November 2022 with a technical model based on 2019 data, we could choose:
+If we were setting up our model in November 2022 with a technical model based on 2019 data, the **standard industry approach** would likely be one of the following:
 
-- the most recent prices - October 2021 to September 2022,
-- the most recent calendar year - January 2021 to December 2021,
-- align with the technical model - January 2019 to December 2019.
+- the **most recent prices** - October 2021 to September 2022,
+- the **most recent calendar year** - January 2021 to December 2021,
+- prices that **align with the technical data** - January 2019 to December 2019.
 
 Below we will demonstrate why all of these commonly used methodologies **introduce a large source of error**.
 
@@ -95,9 +95,12 @@ In our example above, we assumed prices at `100 $/MWh`.  The figure below uses t
 ![Project savings versus annual average electricity prices.]({{ "/assets/typical-year/f1.png" }})
 
 **Look at the variance of these results!**  Around half of our projects lose money, with the other half being profitable.   
+
 This variance error that the standard industry approaches are hiding - normally we only get a single estimate, without seeing the spread across different years of price data.
 
-This variance in project performance is only occurring based on *when we do our modelling* - not based on the fundamental, underlying economics of the project.  **We can do better!**
+This variance in project performance is only occurring based on *when we do our modelling* - not based on the fundamental, underlying economics of the project.  
+
+**We can do better!**
 
 # Creating a Typical Year Forecast
 
@@ -251,11 +254,11 @@ Our typical year forecast does a **fantastic job of cutting through the variance
 
 No longer are we slaves to the cruel master of time (well, perhaps we still are) - as the years go by, our estimation of project economics will stay stable and consistent, rather than varying wildly based on when we are doing our modelling.  
 
-As new price data becomes available, our typical year forecast will change (due to both the long term statistics changing, or recent data being more typical), but the variance from these changes will be minor compared to the massive year on year swings we get with the standard industry approach.
+As new price data becomes available, our typical year forecast will change (due to both the long term statistics changing, or recent data being more typical), but the variance from these changes will be minor compared to the massive year on year swings we get with the standard industry approaches.
 
 # Discussion
 
-Above we have seen how great our typical year forecast is at reducing error - let's now discuss some challenges and potential extensions.
+Above we have seen how great our typical year forecast is at reducing the variance of our estimates of project performance - let's now discuss some challenges and potential extensions to this simple typical year forecasting method.
 
 ## Challenges
 
