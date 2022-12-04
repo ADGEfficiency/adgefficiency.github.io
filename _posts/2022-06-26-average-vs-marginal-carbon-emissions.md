@@ -92,7 +92,7 @@ For our example we will assume a carbon intensity of `0 tC/MWh` for solar and `0
 
 These two carbon intensities of `0.134` & `0.057` are interval level average carbon intensities.  They average across the grid - not across intervals.
 
-We ca, using our friendly equation from beforen now calculate an annual average carbon intensity:
+Using our friendly equation from before now calculate an annual average carbon intensity:
 
 ```python
 carbon_intensity (tC/MWh) = carbon (tC) / electricity (MWh) = (8 + 4) / (60 + 70) = 0.092
@@ -106,7 +106,7 @@ It's useful when you want to equally smear carbon emissions over a large amount 
 
 Note it's also possible to have an annual average marginal carbon intensity as well - where we take the marginal generator across the grid and average across time.
 
-The key takeaways here is that there are two oppourtunities to average a carbon intensity - once across the grid and once across time.  Three of the most common combinations are below:
+The key takeaways here is that there are two opportunities to average a carbon intensity - once across the grid and once across time.  Three of the most common combinations are below:
 
 | Carbon Intensity        | Grid aggregation              | Time aggregation         |
 |-------------------------|-------------------------------|--------------------------|
@@ -140,7 +140,7 @@ For the train tickets, the average price is `$46.67`.  This price is uninformati
 
 Let's now compare this with an electricity market that settles based on marginal prices.
 
-Three bids are accepted - all for `20 MWh` of electricity.  Two bids are at low prices, with a higher price bid being the final, marginal bid.  These three bids fufill our entire market demand of `60 MWh` for electricity.
+Three bids are accepted - all for `20 MWh` of electricity.  Two bids are at low prices, with a higher price bid being the final, marginal bid.  These three bids fulfil our entire market demand of `60 MWh` for electricity.
 
 We can create a bid stacks for the two markets (train tickets & wholesale electricity market).  The bid stack shows volume on the X axis and price on the Y axis -  the bid stacks show all our bids for both markets:
 
@@ -225,7 +225,7 @@ The final problem with marginal approach, even if we could be accurate in terms 
 
 Often in the NEM the marginal generator can be hydro, with dirtier coal generation sitting lower in the bid stack.
 
-If we imagine a grid with a baseload of renewables & coal, with balancing & marginal generator done in gas, then focusing on the marginal intensity only will only ever offset one type of generation - with no oppourtunities to reduce load on the coal generation.
+If we imagine a grid with a baseload of renewables & coal, with balancing & marginal generator done in gas, then focusing on the marginal intensity only will only ever offset one type of generation - with no opportunities to reduce load on the coal generation.
 
 This is a point directly made by [Tomorrow](https://electricitymap.org/blog/marginal-vs-average-real-time-decision-making/) - it's a real flaw in focusing only on the margin that you miss out on targeting the rest of the stack.
 
@@ -235,6 +235,11 @@ This is a point directly made by [Tomorrow](https://electricitymap.org/blog/marg
 These problems are not the end of the road - as an industry we must continue to work on figuring out how to model carbon intensities to clean up the grid - in both the short and long term.
 
 One idea to target middle of the bid stack, dirty generation would be to aggregate by taking the dirtiest generator across the grid - this would incentivize dispatch to target these time periods to reduce demand far enough to start to displace that dirty generation.
+
+Further reading:
+
+- [Marginal emissions: what they are, and when to use them](https://www.electricitymaps.com/blog/marginal-emissions-what-they-are-and-when-to-use-them),
+- [Marginal vs average: which one to use in practice?](https://www.electricitymaps.com/blog/marginal-vs-average-real-time-decision-making).
 
 ---
 
