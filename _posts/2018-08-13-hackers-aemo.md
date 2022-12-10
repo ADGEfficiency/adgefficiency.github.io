@@ -76,24 +76,22 @@ dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_pr
 
 ## Useful MMSDM Reports
 
-The MMSDM links are for the reports linked below are all for [2018_05](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/).
+Examples for [MMSDM May 2018](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/):
 
-## Actual Data
+Actual Data:
 
-Examples for [MMSDM May 2015](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/):
+- trading price (30 & 5 min electricity price) - TRADINGPRICE - [PUBLIC_DVD_TRADINGPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_TRADINGPRICE_201805010000.zip),
+- dispatch price (5 min electricity price) - DISPATCHPRICE - [PUBLIC_DVD_DISPATCHPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHPRICE_201805010000.zip),
+- generation of market participants - UNIT_SCADA - [PUBLIC_DVD_DISPATCH_UNIT_SCADA_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCH_UNIT_SCADA_201805010000.zip),
+- market participant bid volumes - BIDPEROFFER - [PUBLIC_DVD_BIDPEROFFER_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDPEROFFER_201805010000.zip),
+- market participant bid prices - BIDAYOFFER - [PUBLIC_DVD_BIDDAYOFFER_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDDAYOFFER_201805010000.zip),
+- demand - DISPATCHREGIONSUM - [PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip),
+- interconnectors - INTERCONNECTORRES - [PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip).
 
-- trading price (30 & 5 min electricity price) - TRADINGPRICE - [example ZIP - PUBLIC_DVD_TRADINGPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_TRADINGPRICE_201805010000.zip),
-- dispatch price (5 min electricity price) - DISPATCHPRICE - [example ZIP - PUBLIC_DVD_DISPATCHPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHPRICE_201805010000.zip),
-- generation of market participants - UNIT_SCADA - [example ZIP - PUBLIC_DVD_DISPATCH_UNIT_SCADA_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCH_UNIT_SCADA_201805010000.zip),
-- market participant bid volumes - BIDPEROFFER - [example ZIP - PUBLIC_DVD_BIDPEROFFER_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDPEROFFER_201805010000.zip),
-- market participant bid prices - BIDAYOFFER - [example ZIP - PUBLIC_DVD_BIDDAYOFFER_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_BIDDAYOFFER_201805010000.zip),
-- demand - DISPATCHREGIONSUM - [example ZIP - PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip),](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip),
-- interconnectors - INTERCONNECTORRES - [example ZIP - PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip).
+Forecasts:
 
-## Forecasts
-
-- trading price forecast - [example ZIP](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip),
-- dispatch price forecast - [example ZIP](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip).
+- trading price forecast - [PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip),
+- dispatch price forecast - [PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip).
 
 # Ecosystem
 
@@ -101,10 +99,32 @@ A major benefit of the large AEMO dataset is the ecosystem of third parties who 
 
 ## [nem-data](https://github.com/ADGEfficiency/nem-data)
 
-A simple CLI for downloading NEMDE & MMSDM data:
+A simple CLI for downloading NEMDE & MMSDM data - created & maintained by yours-truly:
 
 ```shell-session
 $ pip install nem-data
+$ nemdata --table trading-price --start 2020-01 --end 2020-12
+```
+
+## [NEMOSIS](https://github.com/UNSW-CEEM/NEMOSIS)
+
+A Python package for downloading historical data published by the Australian Energy Market Operator (AEMO):
+
+```shell-session
+$ pip install nemosis
+```
+
+Use in Python:
+
+```python
+from nemosis import dynamic_data_compiler
+
+start_time = '2017/01/01 00:00:00'
+end_time = '2017/01/01 00:05:00'
+table = 'DISPATCHPRICE'
+raw_data_cache = 'C:/Users/your_data_storage'
+
+price_data = dynamic_data_compiler(start_time, end_time, table, raw_data_cache)
 ```
 
 ## [AEMO Dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard) - [interactive map](http://www.aemo.com.au/aemo/apps/visualisations/map.html)
