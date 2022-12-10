@@ -28,7 +28,7 @@ Interval data for the NEM is provided in two sources the NEM Dispatch Engine [NE
 
 The NEMDE dataset provides infomation about how the grid is dispatched and price are set (including infomation about the marginal generator) in the `NemPriceSetter` XML files.  Data for each day is provided in a single ZIP file ([Example ZIP - NemPriceSetter_20220101_xml.zip](https://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/2022/NEMDE_2022_01/NEMDE_Market_Data/NEMDE_Files/NemPriceSetter_20220101_xml.zip)), which contains many XML files:
 
-```XML
+```xml
 # NemPriceSetter_20220101_xml/NEMPriceSetter_2022010100100.xml
 
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -58,9 +58,9 @@ Historically (before October 2021) it was settled on a 30 minute basis, as the a
 
 ## AEMO Timestamping
 
-AEMO timestamp with the time **at the end of the interval**.  This means that `01/01/2018 14:00` refers to the time period `01/01/2018 13:30 - 01/01/2018 14:00`.
+**AEMO timestamp with the time at the end of the interval**.  This means that `01/01/2018 14:00` refers to the time period `01/01/2018 13:30 - 01/01/2018 14:00`.  This will be true for columns like `SETTLEMENTDATE`, which refer to an interval.  Columns like `LASTCHANGED`, which refer to a single instant in time are not affected by this.
 
-Personally I shift the AEMO time stamp backwards by one step of the index frequency (i.e. 5 minutes).  This allows the following to be true
+I prefer shifting the AEMO time stamp backwards by one step of the index frequency (i.e. 5 minutes).  This allows the following to be true:
 
 ```python
 dispatch_prices.loc['01/01/2018 13:30': '01/01/2018 14:00'].mean() == trading_price.loc['01/01/2018 13:30']
@@ -68,7 +68,7 @@ dispatch_prices.loc['01/01/2018 13:30': '01/01/2018 14:00'].mean() == trading_pr
 
 The shifting also allows easier alignment with external data sources such as weather, which is usually stamped with the timestamp at the beginning of the interval.
 
-If the AEMO timestamp is not shifted, then the following is true
+If the AEMO timestamp is not shifted, then the following is true:
 
 ```python
 dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_price.loc['01/01/2018 14:00']
@@ -92,12 +92,20 @@ Examples for [MMSDM May 2015](http://www.nemweb.com.au/Data_Archive/Wholesale_El
 
 ## Forecasts
 
-- trading price forecast - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip),
-- dispatch price forecast - [MMSDM](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip).
+- trading price forecast - [example ZIP](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip),
+- dispatch price forecast - [example ZIP](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip).
 
 # Ecosystem
 
 A major benefit of the large AEMO dataset is the ecosystem of third parties who can build useful (and often open source) tools on top of it.
+
+## [nem-data](https://github.com/ADGEfficiency/nem-data)
+
+A simple CLI for downloading NEMDE & MMSDM data:
+
+```shell-session
+$ pip install nem-data
+```
 
 ## [AEMO Dashboard](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM/Data-dashboard) - [interactive map](http://www.aemo.com.au/aemo/apps/visualisations/map.html)
 
