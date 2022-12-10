@@ -13,8 +13,16 @@ top:
     children:
       - title: "Space Between Money & the Planet"
         url: /space-between-money-and-the-planet/
+      - title: Typical Year Forecasting of Electricity Prices
+        url: https://adgefficiency.com/typical-year-forecasting-electricity-prices/
+      - title: A Hackers Guide to AEMO & NEM Electricity Market Data
+        url: https://adgefficiency.com/hackers-aemo/
 
   - title: "Project Spotlight"
     children:
       - title: "climate-news-db"
         url: https://www.climate-news-db.com/
+      - title: "nem-data"
+        url: https://github.com/ADGEfficiency/nem-data
+      - title: "energy-py-linear"
+        url: https://github.com/ADGEfficiency/energy-py-linear
