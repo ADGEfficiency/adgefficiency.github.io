@@ -7,8 +7,6 @@ sidebar:
   nav: "top"
 ---
 
-Various lists of books - first some highlights then my reading history.
-
 
 ## Resources
 
