@@ -1,6 +1,6 @@
 ---
 title: 'A Hackers Guide to AEMO & NEM Electricity Market Data'
-date: 2018-08-13
+date: 2022-12-10
 categories:
   - Energy
   - Machine Learning
@@ -16,26 +16,34 @@ This is a short guide to the electricity grid & market data supplied by AEMO (th
 
 The NEM is Australia's electricity grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania.
 
-# Data
+# Participant Infomation & Carbon Intensities
 
-Information about the participants in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/-/media/Files/Electricity/NEM/Participant_Information/NEM-Registration-and-Exemption-List.xls).  
+Market participant information in the NEM is given in the [NEM Registration and Exemption List](https://www.aemo.com.au/-/media/Files/Electricity/NEM/Participant_Information/NEM-Registration-and-Exemption-List.xls):
 
-The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV).
+![]({{"/assets/hacker_aemo/nem-reg.png"}})
 
-Interval data for the NEM is provided in two sources the NEM Dispatch Engine [NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/) and the Market Management System Data Model [MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/).
+The carbon intensities for generators are given in the [Available Generators CDEII file](http://www.nemweb.com.au/Reports/CURRENT/CDEII/CO2EII_AVAILABLE_GENERATORS.CSV):
+
+![]({{"/assets/hacker_aemo/nem-carbon.png"}})
+
+Both of these files are linked by a Dispatchable Unit Identifier (DUID), which identifies generating unit.
+
+# Interval Data
+
+Interval data for the NEM is provided in two sources the NEM Dispatch Engine ([NEMDE](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/)) and the Market Management System Data Model ([MMSDM](http://nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/)).
 
 ## NEMDE
 
-The NEMDE dataset provides infomation about how the grid is dispatched and price are set (including infomation about the marginal generator) in the `NemPriceSetter` XML files.  Data for each day is provided in a single ZIP file ([Example ZIP - NemPriceSetter_20220101_xml.zip](https://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/2022/NEMDE_2022_01/NEMDE_Market_Data/NEMDE_Files/NemPriceSetter_20220101_xml.zip)), which contains many XML files:
+The NEMDE dataset provides infomation about how the grid is dispatched and price are set (including infomation about the marginal generator) in the `NemPriceSetter` XML files.  
+
+Data for each day is provided in a single ZIP file ([NemPriceSetter_20220101_xml.zip](https://nemweb.com.au/Data_Archive/Wholesale_Electricity/NEMDE/2022/NEMDE_2022_01/NEMDE_Market_Data/NEMDE_Files/NemPriceSetter_20220101_xml.zip)), which contains many XML files:
 
 ```xml
 # NemPriceSetter_20220101_xml/NEMPriceSetter_2022010100100.xml
 
-<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<SolutionAnalysis>
-	<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="LBBG1" DispatchedMarket="R5RE" BandNo="6" Increase="1" RRNBandPrice="23.7" BandCost="23.7" />
-	<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="BW04" DispatchedMarket="R5RE" BandNo="1" Increase="-0.47368" RRNBandPrice="1" BandCost="-0.473684" />
-	<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="BW03" DispatchedMarket="R5RE" BandNo="1" Increase="-0.52632" RRNBandPrice="1" BandCost="-0.526316" />
+<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="LBBG1" DispatchedMarket="R5RE" BandNo="6" Increase="1" RRNBandPrice="23.7" BandCost="23.7" />
+<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="BW04" DispatchedMarket="R5RE" BandNo="1" Increase="-0.47368" RRNBandPrice="1" BandCost="-0.473684" />
+<PriceSetting PeriodID="2022-01-01T04:05:00+10:00" RegionID="NSW1" Market="Energy" Price="87.69011" Unit="BW03" DispatchedMarket="R5RE" BandNo="1" Increase="-0.52632" RRNBandPrice="1" BandCost="-0.526316" />
 ```
 
 ## MMSDM
@@ -76,9 +84,11 @@ dispatch_prices.loc['01/01/2018 13:35': '01/01/2018 14:05'].mean() == trading_pr
 
 ## Useful MMSDM Reports
 
-Examples for [MMSDM May 2018](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/):
+All examples below are for [MMSDM May 2018](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/):
 
-Actual Data:
+![]({{"/assets/hacker_aemo/mmsdm.png"}})
+
+### Actual Data
 
 - trading price (30 & 5 min electricity price) - TRADINGPRICE - [PUBLIC_DVD_TRADINGPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_TRADINGPRICE_201805010000.zip),
 - dispatch price (5 min electricity price) - DISPATCHPRICE - [PUBLIC_DVD_DISPATCHPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHPRICE_201805010000.zip),
@@ -88,7 +98,7 @@ Actual Data:
 - demand - DISPATCHREGIONSUM - [PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHREGIONSUM_201805010000.zip),
 - interconnectors - INTERCONNECTORRES - [PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_DISPATCHINTERCONNECTORRES_201805010000.zip).
 
-Forecasts:
+### Forecasts
 
 - trading price forecast - [PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/PREDISP_ALL_DATA/PUBLIC_DVD_PREDISPATCHPRICE_201805010000.zip),
 - dispatch price forecast - [PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip](http://www.nemweb.com.au/Data_Archive/Wholesale_Electricity/MMSDM/2018/MMSDM_2018_05/MMSDM_Historical_Data_SQLLoader/DATA/PUBLIC_DVD_P5MIN_REGIONSOLUTION_201805010000.zip).
@@ -157,9 +167,11 @@ price_data = dynamic_data_compiler(start_time, end_time, table, raw_data_cache)
 
 # Further Reading
 
-- [NEM on the AEMO website](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM)
-- [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market)
-- [Li, Zili (2016) Topics in deregulated electricity markets. PhD thesis, Queensland University of Technology](https://eprints.qut.edu.au/98895/)
-- [Dungey et. al (2018) Strategic Bidding of Electric Power Generating Companies: Evidence from the Australian National Energy Market](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126673)
+- [NEM on the AEMO website](https://www.aemo.com.au/Electricity/National-Electricity-Market-NEM),
+- [Winds of change: An analysis of recent changes in the South Australian electricity market - University of Melbourne](https://energy.unimelb.edu.au/news-and-events/news/winds-of-change-an-analysis-of-recent-changes-in-the-south-australian-electricity-market),
+- [Li, Zili (2016) Topics in deregulated electricity markets. PhD thesis, Queensland University of Technology](https://eprints.qut.edu.au/98895/),
+- [Dungey et. al (2018) Strategic Bidding of Electric Power Generating Companies: Evidence from the Australian National Energy Market](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3126673).
+
+---
 
 Thanks for reading!
