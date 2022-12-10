@@ -1,5 +1,5 @@
 ---
-title: 'A Hackers Guide to AEMO & NEM Electricity Market Data'
+title: 'A Hackers Guide to AEMO & NEM Data'
 date: 2022-12-10
 categories:
   - Energy
@@ -12,7 +12,7 @@ excerpt:  A simple guide to data provided by AEMO for the Australia's National E
 created: 2018-08-13, updated: 2022-12-10
 ```
 
-This is a short guide to the electricity grid & market data supplied by AEMO (the market operator) for the Australian National Electricity Market (NEM).  
+This is a short guide to the electricity grid & market data supplied by the Australian Energy Market Operator (AEMO) for the Australian National Electricity Market (NEM).  
 
 The NEM is Australia's electricity grid in Queensland, New South Wales, Victoria, South Australia, and Tasmania.
 
@@ -105,7 +105,7 @@ All examples below are for [MMSDM May 2018](http://www.nemweb.com.au/Data_Archiv
 
 # Ecosystem
 
-A major benefit of the large AEMO dataset is the ecosystem of third parties who can build useful (and often open source) tools on top of it.
+A major benefit of data shared by AEMO is the ecosystem tools built on top of it.
 
 ## [nem-data](https://github.com/ADGEfficiency/nem-data)
 
@@ -141,7 +141,7 @@ price_data = dynamic_data_compiler(start_time, end_time, table, raw_data_cache)
 
 ![]({{"/assets/hacker_aemo/aemo_dashboard.png"}})
 
-## [ElectricityMap](https://www.electricitymap.org/)
+## [Electricity Map](https://www.electricitymap.org/)
 
 ![]({{"/assets/hacker_aemo/elect_map.png"}})
 
@@ -149,19 +149,19 @@ price_data = dynamic_data_compiler(start_time, end_time, table, raw_data_cache)
 
 ![]({{"/assets/hacker_aemo/aremi.png"}})
 
-## [NEMLog](http://nemlog.com.au/)
+## [NEM Log](http://nemlog.com.au/)
 
 ![]({{"/assets/hacker_aemo/nemlog.png"}})
 
-## [OpenNEM](https://opennem.org.au/#/all-regions)
+## [Open NEM](https://opennem.org.au/#/all-regions)
 
 ![]({{"/assets/hacker_aemo/opennem.png"}})
 
-## [NEMSight](http://analytics.com.au/energy-analysis/nemsight-trading-tool/)
+## [NEM Sight](http://analytics.com.au/energy-analysis/nemsight-trading-tool/)
 
 ![]({{"/assets/hacker_aemo/nemsight.png"}})
 
-## [gas & coal watch](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1k0rmFKexrYUBbHSb2opLO2y-f3lGx2vOUsx8uIFygro&amp;font=Default&amp;lang=en&amp;start_at_end=true&amp;initial_zoom=2&amp;height=650)
+## [Gas & Coal Watch](https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1k0rmFKexrYUBbHSb2opLO2y-f3lGx2vOUsx8uIFygro&amp;font=Default&amp;lang=en&amp;start_at_end=true&amp;initial_zoom=2&amp;height=650)
 
 ![]({{"/assets/hacker_aemo/gas_coal_watch.png"}})
 
