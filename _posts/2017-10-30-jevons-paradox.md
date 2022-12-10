@@ -6,7 +6,9 @@ categories:
   - Energy
 classes: wide
 excerpt: Energy efficiency is not so simple.
+
 ---
+
 ```
 created: 2017-10-30, updated: 2022-09-04
 ```
