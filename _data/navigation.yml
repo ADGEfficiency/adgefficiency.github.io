@@ -13,9 +13,9 @@ top:
     children:
       - title: "Space Between Money & the Planet"
         url: /space-between-money-and-the-planet/
-      - title: Typical Year Forecasting of Electricity Prices
+      - title: Typical Year Forecasting
         url: https://adgefficiency.com/typical-year-forecasting-electricity-prices/
-      - title: A Hackers Guide to AEMO & NEM Electricity Market Data
+      - title: A Hackers Guide to AEMO Data
         url: https://adgefficiency.com/hackers-aemo/
 
   - title: "Project Spotlight"
