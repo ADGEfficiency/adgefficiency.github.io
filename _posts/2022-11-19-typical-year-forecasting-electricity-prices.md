@@ -13,9 +13,11 @@ toc_sticky: true
 created: 2022-11-19, updated: 2022-12-04
 ```
 
-**Energy prices are volatile** - the price of gas, oil and electricity can all change significantly year on year.  Yet the energy industry often **ignores this volatility** when making investment decisions in energy projects.
+**Energy prices are volatile** - the price of gas, oil and electricity can all change significantly year on year.  Yet the energy industry **ignores this year on year volatility** when modelling investment decisions in energy projects.
 
-This exposes projects to a significant source of **hidden error** in the form of variance in financial model results.  This post introduces a simple solution to this problem in the form of a **typical year forecast**.
+This exposes projects to a significant source of **hidden error** in the form of variance in financial model results, leading to the wrong projects being built.
+
+This post introduces a simple solution to this problem in the form of a **typical year forecast**.
 
 You can find supporting materials for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
 
