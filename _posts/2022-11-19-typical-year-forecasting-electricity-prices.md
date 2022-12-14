@@ -13,13 +13,11 @@ toc_sticky: true
 created: 2022-11-19, updated: 2022-12-04
 ```
 
-**Energy prices are volatile** - the prices of energy commodities such as gas, oil and electricity all change year on year, driven by politics, technology, climate and the weather.
+**Energy prices are volatile** - the price of gas, oil and electricity can all change significantly year on year.  Yet the energy industry often **ignores this volatility** when making investment decisions in energy projects.
 
-Prices are signals that guide capital allocation to energy projects - the **economic viability of solar, battery and energy efficiency** all depend on the **energy price assumptions** used in to model their economic return.
+This exposes projects to a significant source of **hidden error** in the form of variance in financial model results.  This post introduces a simple solution to this problem in the form of a **typical year forecast**.
 
-This post will show why the **standard industry approaches** for handling energy prices for investments in energy assets are hiding a **huge source of error** - variance in estimations of project performance that occur due to improper handling of energy price data.
-
-You can find supporting materials (source code & data) for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
+You can find supporting materials for this work at [adgefficiency/typical-year-forecasting-electricity-prices](https://github.com/ADGEfficiency/typical-year-forecasting-electricity-prices).
 
 
 # What is a Typical Year Forecast?
@@ -163,20 +161,20 @@ This leads us to selecting January 2017 as our typical month of electricity pric
 
 We can then repeat the procedure above to forecast the remaining 11 months of the year, ending up with 12 months that make up our typical year forecast:
 
-| month     |   year |   price-mean |   long-term-mean |   error-mean |
-|:----------|-------:|-------------:|-----------------:|-------------:|
-| January   |   2017 |      84.2589 |          85.449  |     1.19009  |
-| February  |   2020 |      64.1771 |          71.2239 |     7.04685  |
-| March     |   2021 |      68.7727 |          66.6858 |     2.08692  |
-| April     |   2021 |      52.1361 |          64.1214 |    11.9854   |
-| May       |   2016 |      70.6976 |          70.1316 |     0.565976 |
-| June      |   2021 |      84.3886 |          81.6753 |     2.71335  |
-| July      |   2021 |      91.1873 |          94.7737 |     3.58638  |
-| August    |   2016 |      66.2397 |          64.8625 |     1.37717  |
-| September |   2012 |      53.7977 |          54.7594 |     0.961707 |
-| October   |   2012 |      50.9616 |          52.3186 |     1.35705  |
-| November  |   2016 |      61.8883 |          57.3279 |     4.56045  |
-| December  |   2015 |      66.8321 |          67.2765 |     0.444369 |
+|   year | month     |   price-mean |   long-term-mean |   error-mean |
+|-------:|:----------|-------------:|-----------------:|-------------:|
+|   2017 | January   |      84.2589 |          85.449  |     1.19009  |
+|   2020 | February  |      64.1771 |          71.2239 |     7.04685  |
+|   2021 | March     |      68.7727 |          66.6858 |     2.08692  |
+|   2021 | April     |      52.1361 |          64.1214 |    11.9854   |
+|   2016 | May       |      70.6976 |          70.1316 |     0.565976 |
+|   2021 | June      |      84.3886 |          81.6753 |     2.71335  |
+|   2021 | July      |      91.1873 |          94.7737 |     3.58638  |
+|   2016 | August    |      66.2397 |          64.8625 |     1.37717  |
+|   2012 | September |      53.7977 |          54.7594 |     0.961707 |
+|   2012 | October   |      50.9616 |          52.3186 |     1.35705  |
+|   2016 | November  |      61.8883 |          57.3279 |     4.56045  |
+|   2015 | December  |      66.8321 |          67.2765 |     0.444369 |
 
 Our typical year forecast, in all it's light blue glory:
 

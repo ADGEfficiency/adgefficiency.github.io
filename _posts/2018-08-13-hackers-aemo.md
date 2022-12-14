@@ -105,7 +105,7 @@ All examples below are for [MMSDM May 2018](http://www.nemweb.com.au/Data_Archiv
 
 # Ecosystem
 
-A major benefit of data shared by AEMO is the ecosystem tools built on top of it.
+A major benefit of the large & open dataset shared by AEMO is the ecosystem tools built on top of it.
 
 ## [nem-data](https://github.com/ADGEfficiency/nem-data)
 
