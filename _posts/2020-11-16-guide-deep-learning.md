@@ -24,10 +24,10 @@ excerpt: Fully connected, convolution, the LSTM and attention deep learning laye
 
 **This post is about four important neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models:
 
-1. [fully connected layer](#fully-connected-layer),
-2. [2D convolutional layer](#2D-convolution-layer),
-3. [LSTM layer](#lstm-layer),
-4. [attention layer](#attention-layer).
+1. fully connected layer,
+2. 2D convolutional layer,
+3. LSTM layer,
+4. attention layer.
 
 For each layer we will look at:
 
@@ -43,13 +43,13 @@ All code examples are built using `tensorflow==2.2.0` using the Keras Functional
 
 ## Background - what is inductive bias?
 
-One term I use a lot in this article is **inductive bias** - a useful term to sound clever and impress your friends at dinner parties.
+One term I use a lot in this article is **inductive bias** - a useful term if only to sound clever and impress your friends at dinner parties.
 
 **Inductive bias is the hard-coding of assumptions into the structure of a learning algorithm**.  These assumptions make the method more special purpose and less flexible, but often much more useful.  By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.
 
 Examples of inductive bias in machine learning include margin maximization (classes should be separated by as large a boundary as possible - used in Support Vector Machines) and nearest neighbours (samples close together in feature space are in the same class - used in the k-nearest neighbours algorithm).
 
-**It's a common lesson in machine learning - a bit of bias is ok** (if you trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiation through Monte Carlo returns performs worse than bootstrapped temporal difference methods.
+**It's a common lesson in machine learning - a bit of bias is good** as you can trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiations of a high variance Monte Carlo return performs worse than bootstrapped temporal difference methods.
 
 
 <br />
@@ -68,6 +68,11 @@ At the heart of the fully connected layer is the artificial neuron - the distant
 **The artificial neuron is inspired by the biological neurons in our brains** - however an artificial neuron is a shallow approximation of the complexity of a biological neuron.
 
 The artificial neuron composed of three sequential steps:
+
+1. weighted linear combination of inputs,
+2. sum across weighted inputs,
+3. activation function.
+
 
 ### 1. Weighted linear combination of inputs
 
@@ -112,7 +117,7 @@ The fully connected layer imposes no structure and makes no assumption about the
 
 **This lack of structure is what gives neural networks of fully connected layers (of sufficient depth & width) the ability to approximate any function** - known as the Universal Approximation Theorem.
 
-The ability to approximate any function at first sounds attractive.  Why do we need any other architecture if a fully connected layer can learn anything?
+The ability to learn any function at first sounds attractive.  Why do we need any other architecture if a fully connected layer can learn anything?
 
 **Being able to learn in theory does not mean we can learn in practice**.  Actually finding the correct weights, using the data and learning algorithms (such as backpropagation) we have available may be impractical and unreachable.
 
@@ -190,11 +195,11 @@ array([[ 0.23494382, -0.40392348],
 
 # 2. 2D Convolutional Layer
 
-**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (sea what I did there?).
+**If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (see what I did there?).
 
-The winner of the 2012 ImageNet competition, AlexNet, is seen by many as the start of modern deep learning.  Alexnet was a deep convolutional neural network, trained on GPU.
+The winner of the 2012 ImageNet competition, AlexNet, is seen by many as the start of modern deep learning.  Alexnet was a deep convolutional neural network, trained on GPU to classify images.
 
-Another landmark use of convolution was Le-Net-5 in 1998, a 7 layer convolutional neural network developed by Yann LeCun to classify handwritten digits. 
+Another landmark use of convolution is Le-Net-5 in 1998, a 7 layer convolutional neural network developed by Yann LeCun to classify handwritten digits. 
 
 **The convolutional neural network is the workhorse of modern deep learning** - it can be used with text, audio, video and images.  Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.  They are also easy to parallelize on GPU - making them fast to train.
 
@@ -755,9 +760,7 @@ One additional benefit of an attention layer is being able to use the alignment 
 
 # Summary
 
-**I hope you enjoyed this post and found it useful.**
-
-Below is a short table summarizing the article:
+I hope you enjoyed this post and found it useful!  Below is a short table summarizing the article:
 
 | Layer           | Intuition                      | Inductive bias          | When to use                                             |
 |-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
@@ -770,4 +773,4 @@ Below is a short table summarizing the article:
 
 **Thanks for reading!**
 
-If you enjoyed this post, make sure to check out my post on <a href="https://adgefficiency.com/ai-ml-dl/">Artificial Intelligence, Machine Learning and Deep Learning</a>.
+If you enjoyed this post, check out <a href="https://adgefficiency.com/ai-ml-dl/">Artificial Intelligence, Machine Learning and Deep Learning</a>.
