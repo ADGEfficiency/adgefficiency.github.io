@@ -11,11 +11,11 @@ author_profile: true
 
 Energy engineer turned data professional.  My work is focused on using data to combat climate change.   I am passionate & enjoy modelling energy systems, especially for optimization & control.
 
-[I am interested in the space that exists between economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
+I am interested in the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
 
 I'm currently working as a data scientist at [Orkestra Energy](https://www.orkestra.energy), working on building software to navigate the transition to a decentralised and decarbonised future.
 
-[LinkedIn](https://www.linkedin.com/in/adgefficiency/) - [Twitter](https://twitter.com/ADGEfficiency) - [email](adam.green@adgefficiency.com) - [GitHub](https://github.com/ADGEfficiency) - [mentoring](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf)
+I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
 
 
 # Projects
@@ -31,15 +31,26 @@ A tool for downloading climate change newspaper articles - [app](https://www.cli
 ![]({{"/assets/my-work/db.png"}})
 
 
-## [nem-data](https://github.com/ADGEfficiency/nem-data)
+## Australian Electricity Grid Data
 
-CLI for downloading data for Australia's National Energy Market (NEM):
+[nem-data](https://github.com/ADGEfficiency/nem-data) - a CLI for downloading data for Australia's National Energy Market (NEM):
 
 ```bash
 $ pip install nemdata
 ```
 
-/Users/adam/adgefficiency.github.io/_pages/my-work.md
+[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) 
+
+
+## UK Electricity Grid Data
+
+[Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
+
+
+## Creative Writing with GPT2
+
+Fine-tune a base GPT2 model for your favourite authors - [source code](https://github.com/ADGEfficiency/creative-writing-with-gpt2).
+
 
 ## Soft Actor Critic (SAC) Reimplementation
 
@@ -47,11 +58,13 @@ Implementing the SAC Reinforcement learning algorithm - an off policy algorithm 
 
 ![]({{"/assets/my-work/sac.png"}})
 
+
 ## World Models Reimplementation
 
 Implementing the 2017 classic paper - using a variational auto-encoder, mixed density networks and evolutionary optimization to learn to race a car from pixels - [blog post](https://adgefficiency.com/world-models/) - [source code](https://github.com/ADGEfficiency/world-models) - [references & resources](https://github.com/ADGEfficiency/rl-resources/tree/master/world-models).
 
 ![]({{"/assets/my-work/world.png"}})
+
 
 ## Teaching Monolith
 
@@ -59,21 +72,18 @@ Implementing the 2017 classic paper - using a variational auto-encoder, mixed de
 
 ![]({{"/assets/my-work/monolith.png"}})
 
+
+## Mixed-Integer Linear Programming for Energy Systems 
+
+[introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
+
+
 ## Reinforcement Learning for Energy Systems
 
 [blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
 
 ![]({{"/assets/dqn_solving/fig1.png"}})
 
-## Mixed Integer Linear Programming of Battery Storage and Combined Heat & Power
-
-[blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
-
-## UK and Australian Grid Data
-
-The Australian grid is a unique combination of high coal penetrations, quality potential renewable resources (and high penetration in South Australia) and a deregulated, volatile electricity market.  It also has good data availability - if you know where to look for it.
-
-[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) - [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
 
 ## Parallelized Cross Entropy Method
 
