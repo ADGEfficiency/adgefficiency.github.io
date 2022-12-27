@@ -15,20 +15,29 @@ I am interested in the space that exists between [economic and carbon optimizati
 
 I'm currently working as a data scientist at [Orkestra Energy](https://www.orkestra.energy), working on building software to navigate the transition to a decentralised and decarbonised future.
 
-I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/) - [CV](https://adgefficiency.com/cv.pdf).
+I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/) or look at my [CV here](https://adgefficiency.com/cv.pdf).
 
 
 # Projects
 
 ## Data Science South
 
-[A sister website](https://www.datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
+[A sister website](https://datasciencesouth.com/) focusing on data professional (analyst, engineer, scientist) education.
+
+![]({{"/assets/my-work/dss.png"}})
+
 
 ## climate-news-db
 
 A tool for downloading climate change newspaper articles - [app](https://www.climate-news-db.com/) - [source code](https://github.com/ADGEfficiency/climate-news-db).
 
 ![]({{"/assets/my-work/db.png"}})
+
+## Creative Writing with GPT2
+
+Fine-tune a base GPT2 model for your favourite authors - [source code](https://github.com/ADGEfficiency/creative-writing-with-gpt2).
+
+![]({{"/assets/my-work/creative.png"}})
 
 
 ## Australian Electricity Grid Data
@@ -45,11 +54,6 @@ $ pip install nemdata
 ## UK Electricity Grid Data
 
 [Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
-
-
-## Creative Writing with GPT2
-
-Fine-tune a base GPT2 model for your favourite authors - [source code](https://github.com/ADGEfficiency/creative-writing-with-gpt2).
 
 
 ## Soft Actor Critic (SAC) Reimplementation
