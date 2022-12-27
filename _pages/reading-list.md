@@ -5,12 +5,9 @@ permalink: /reading-list/
 classes: wide
 sidebar:
   nav: "top"
+author_profile: true
+
 ---
-
-
-## Resources
-
-I maintain repositories of [programming](https://github.com/ADGEfficiency/programming-resources), [reinforcement learning](https://github.com/ADGEfficiency/rl-resources) and [machine learning](https://github.com/ADGEfficiency/ml-resources) resources on GitHub.
 
 
 ## Energy

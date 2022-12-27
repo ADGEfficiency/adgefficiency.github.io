@@ -1,9 +1,11 @@
 main:
   - title: "blog"
     url: /
-  - title: "my work"
+  - title: "work"
     url: /my-work/
-  - title: "reading list"
+  - title: "talks"
+    url: /talks/
+  - title: "reading"
     url: /reading-list/
   - title: "archive"
     url: /year-archive/

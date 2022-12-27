@@ -5,35 +5,35 @@ layout: archive
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% for post in paginator.posts %}
-  {% include archive-single.html %}
+{% include archive-single.html %}
 {% endfor %}
 
 {% include paginator.html %}
 
 
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/javascript"
+  src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 <script>
-        MathJax.Hub.Config({
-            config: ["MMLorHTML.js"],
-            extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
-            jax: ["input/TeX"],
-            tex2jax: {
-                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-                processEscapes: false
-            },
-            TeX: {
-                TagSide: "right",
-                TagIndent: ".8em",
-                MultLineWidth: "85%",
-                equationNumbers: {
-                   autoNumber: "AMS",
-                },
-                unicode: {
-                   fonts: "STIXGeneral,'Arial Unicode MS'"
-                }
-            },
-            showProcessingMessages: false
-        });
+  MathJax.Hub.Config({
+    config: ["MMLorHTML.js"],
+    extensions: ["tex2jax.js", "TeX/AMSmath.js", "TeX/AMSsymbols.js"],
+    jax: ["input/TeX"],
+    tex2jax: {
+      inlineMath: [['$', '$'], ["\\(", "\\)"]],
+      displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+      processEscapes: false
+    },
+    TeX: {
+      TagSide: "right",
+      TagIndent: ".8em",
+      MultLineWidth: "85%",
+      equationNumbers: {
+        autoNumber: "AMS",
+      },
+      unicode: {
+        fonts: "STIXGeneral,'Arial Unicode MS'"
+      }
+    },
+    showProcessingMessages: false
+  });
 </script>
-
