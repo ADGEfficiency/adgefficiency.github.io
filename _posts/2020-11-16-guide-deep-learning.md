@@ -6,7 +6,7 @@ toc: true
 toc_sticky: true
 categories:
   - Machine Learning
-excerpt: Fully connected, convolution, the LSTM and attention deep learning layer architectures explained.
+excerpt: Explaning the fully connected, convolution, the LSTM and attention deep learning layer architectures.
 
 ---
 
