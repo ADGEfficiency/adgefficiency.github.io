@@ -10,24 +10,30 @@ excerpt: Fully connected, convolution, the LSTM and attention deep learning laye
 
 ---
 
-*A sneak peak of the summary:*
+```
+created: 2020-11-16, updated: 2023-01-23
+```
 
-| Layer           | Intuition                      | Inductive bias          | When to use                                             |
+# Summary
+
+| Layer           | Intuition                      | Inductive Bias          | When To Use                                             |
 |-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
-| Fully connected | Allow all possible connections | None                    | Data without structure (i.e. tabular)                   |
-| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
-| LSTM            | Database                       | Sequences, memory                         | Data with sequential structure  |
-| Attention       | Focus on similarities            | Similarity, limit information flow  | Data with sequential structure  |
+| Fully connected | Allow all possible connections | None                    | Data without structure (tabular data)                   |
+| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Data with spatial structure (images)                         |
+| LSTM            | Database                       | Sequences & memory                         | Never - use Attention |
+| Attention       | Focus on similarities            | Similarity & limit information flow  | Data with sequential structure  |
 
 
 # Introduction
 
-**This post is about four important neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models:
+**This post is about four fundamental neural network layer architectures** - the building blocks that machine learning engineers use to construct deep learning models.
 
-1. fully connected layer,
-2. 2D convolutional layer,
-3. LSTM layer,
-4. attention layer.
+The four layers are:
+
+1. the fully connected layer,
+2. the 2D convolutional layer,
+3. the LSTM layer,
+4. the attention layer.
 
 For each layer we will look at:
 
@@ -36,29 +42,29 @@ For each layer we will look at:
 - the **inductive bias** of each layer,
 - what the **important hyperparameters** are for each layer,
 - **when to use** each layer,
-- **how to code** each layer in TensorFlow 2.0.
+- **how to program** each layer in TensorFlow 2.0.
 
 All code examples are built using `tensorflow==2.2.0` using the Keras Functional API.
 
 
 ## Background - what is inductive bias?
 
-One term I use a lot in this article is **inductive bias** - a useful term if only to sound clever and impress your friends at dinner parties.
+A key term in this article is **inductive bias** - a useful term to sound clever and impress your friends.
 
-**Inductive bias is the hard-coding of assumptions into the structure of a learning algorithm**.  These assumptions make the method more special purpose and less flexible, but often much more useful.  By hard coding in assumptions about the structure of the data & task, we can learn functions in practice that we couldn't other wise.
+**Inductive bias is the hard-coding of assumptions into the structure of a learning algorithm**.  These assumptions make the method **more special purpose, less flexible but more useful**.  By hard coding in assumptions about the structure of the data & task, we can learn functions that we otherwise can't.
 
 Examples of inductive bias in machine learning include margin maximization (classes should be separated by as large a boundary as possible - used in Support Vector Machines) and nearest neighbours (samples close together in feature space are in the same class - used in the k-nearest neighbours algorithm).
 
-**It's a common lesson in machine learning - a bit of bias is good** as you can trade it for variance).  This also holds in reinforcement learning, where unbiased approxmiations of a high variance Monte Carlo return performs worse than bootstrapped temporal difference methods.
+**A bit of bias is good** - this is a common lesson in machine learning (bias can be traded off for variance).  This also holds in reinforcement learning, where unbiased approxmiations of a high variance Monte Carlo return performs worse than bootstrapped temporal difference methods.
 
 
 <br />
 
-# 1. Fully Connected Layer
+# 1. The Fully Connected Layer
 
-Also known as a dense or feed-forward layer, **the fully connected layer is the most general purpose deep learning layer**.
+**The fully connected layer is the most general purpose deep learning layer**. 
 
-This layer imposes the **least amount of structure** of our layers.  It will be found in almost all neural networks - often being used to control the size & shape of the output layer.
+Also known as a dense or feed-forward layer, this layer imposes the **least amount of structure** of our layers.  It will be found in almost all neural networks - if only used to control the size & shape of the output layer.
 
 
 ## How does the fully connected layer work?
@@ -111,9 +117,12 @@ For the first layer, the node gets it's input from the data being fed into the n
 
 ## What is the intuition & inductive bias of a fully connected layer?
 
-The intuition behind all the connections in a fully connected layer is to put **no restriction on how information can flow through the network**.  It's the intuition of having no intuition.
+The intuition behind all the connections in a fully connected layer is to put **no restriction on information flow**.  It's the intuition of having no intuition.
 
-The fully connected layer imposes no structure and makes no assumption about the data or task the network will perform.  **A neural network built of fully connected layers can be thought of as a blank canvas**.  The intuition is to impose no structure and let the network figure everything out.
+The fully connected layer imposes no structure and makes no assumptions about the data or task the network will perform.  **A neural network built of fully connected layers can be thought of as a blank canvas** - impose no structure and let the network figure everything out.
+
+
+### Universal Approximation (Except in Practice)
 
 **This lack of structure is what gives neural networks of fully connected layers (of sufficient depth & width) the ability to approximate any function** - known as the Universal Approximation Theorem.
 
@@ -121,46 +130,48 @@ The ability to learn any function at first sounds attractive.  Why do we need an
 
 **Being able to learn in theory does not mean we can learn in practice**.  Actually finding the correct weights, using the data and learning algorithms (such as backpropagation) we have available may be impractical and unreachable.
 
-The solution to these practical challenges is to use less specialized layers - layers that have assumptions about the data & task they are expected to perform. **This specialization is inductive bias**.
+The solution to these practical challenges is to use less specialized layers - layers that have assumptions about the data & task they are expected to perform. **This specialization is their inductive bias**.
 
 
 ## When should I use a fully connected layer?
 
-A fully connected layer is the most general deep learning architecture - it imposes no constraints on connectivity except by depth. **Use it when your data has no structure that you can take advantage of** - if your data is a flat array (common in tabular data problems).
+A fully connected layer is the most general deep learning architecture - it imposes no constraints on the connectivity of each laver.  
 
-Fully connected layers are common in reinforcement learning when learning from a flat environment observation. For example, a network with a single fully connected layer is used in the Trust Region Policy Optimization (TRPO) paper from 2015: 
+**Use it when your data has no structure that you can take advantage of** - if your data is a flat array (common in tabular data problems), then a fully connected layer is a good choice.  Most neural networks will have fully connected layers somewhere.  
+
+Fully connected layers are common in reinforcement learning when learning from a flat environment observation. 
+
+For example, a network with a single fully connected layer is used in the Trust Region Policy Optimization (TRPO) paper from 2015: 
 
 <center><img align="center" width="50%" src="/assets/mistakes-data-sci/trpo.png"></center>
 
 <p align="center"><i>A fully connected layer being used to power the reinforcement learning algorithm TRPO</i></p>
 
-Most neural networks will have fully connected layers somewhere.  It's common to have them as the penultimate & final layer as fully connected on convolutional neural networks performing classification.  
-
-The number of units in the fully connected output layer will be equal to the number of classes, with a softmax activation function used to create a distribution over classes.
+Fully connected layers are common as the penultimate & final layer as fully connected on convolutional neural networks performing classification. The number of units in the fully connected output layer will be equal to the number of classes, with a softmax activation function used to create a distribution over classes.
 
 
 ## What hyperparameters are important for a fully connected layer?
 
 The two hyperparameters you'll often set in a fully connected layer are the:
 
-1. number of units,
-2. activation function.
+1. **number of nodes**,
+2. **activation function**.
 
 A fully connected layer is defined by a number of nodes (also known as units), each with an activation function.  While you could have a layer with different activation functions on different nodes, most of the time each node in a layer has the same activation function.
 
-For hidden layers, the most common choice of activation function is the rectified-linear unit (the ReLu). For the output layer, the correct activation function depends on what the network is predicting:
+For hidden layers, the **most common choice of activation function is the rectified-linear unit (the ReLu)**. For the output layer, the correct activation function depends on what the network is predicting:
 
-- regression, target can be positive or negative -> linear (no activation)
-- regression, target can be positive only -> ReLu
-- classification -> Softmax
-- control action, bound between -1 & 1 -> Tanh
+- regression, target can be positive or negative -> linear (no activation),
+- regression, target can be positive only -> ReLu,
+- classification -> Softmax,
+- control action, bound between -1 & 1 -> Tanh.
 
 
 ## Using fully connected layers with the Keras Functional API
 
 Below is an example of how to use a fully connected layer with the Keras functional API.  
 
-We are using input data shaped like an image, to show the flexibility of the fully connected layer.  This requires us to use a `Flatten` layer later in the network.
+We are using input data shaped like an image, to show the flexibility of the fully connected layer - this requires us to use a `Flatten` layer later in the network:
 
 ```python
 import numpy as np
@@ -193,7 +204,7 @@ array([[ 0.23494382, -0.40392348],
 
 <br />
 
-# 2. 2D Convolutional Layer
+# 2. The 2D Convolutional Layer
 
 **If you had to pick one architecture as the most important in deep learning, it's hard to look past convolution** (see what I did there?).
 
@@ -201,24 +212,24 @@ The winner of the 2012 ImageNet competition, AlexNet, is seen by many as the sta
 
 Another landmark use of convolution is Le-Net-5 in 1998, a 7 layer convolutional neural network developed by Yann LeCun to classify handwritten digits. 
 
-**The convolutional neural network is the workhorse of modern deep learning** - it can be used with text, audio, video and images.  Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.  They are also easy to parallelize on GPU - making them fast to train.
+**The convolutional neural network is the original workhorse of the modern deep learning revolution** - it can be used with text, audio, video and images.  
+
+Convolutional neural networks can be used to classify the contents of the image, recognize faces and create captions for images.  They are also easy to parallelize on GPU - making them fast to train.
 
 
 ## What is the intuition and inductive bias of convolutional layers?
 
-The 2D convolutional layer is inspired by our own visual cortex.  
+Convolution itself is a mathematical operation, commonly used in signal processing. The 2D convolutional layer is inspired by our own visual cortex.  
 
 The history of using convolution in artificial neural networks goes back decades to the neocognitron, an architecture introduced by Kunihiko Fukushima in 1980, inspired by the work of Hubel & Wiesel.
 
-Work by Hubel & Wiesel, both neurophysiologists, in the 1950's showed that individual neurons in the visual cortexes of mammals are activated by small regions of vision.  
+Work by the neurophysiologists Hubel & Wiesel in the 1950's showed that individual neurons in the visual cortexes of mammals are activated by small regions of vision.  
 
 <center><img align="center" width="50%" src="/assets/four-dl-arch/hubel.jpg"></center>
 
 <p align="center"><i>Hubel & Wiesel</i></p>
 
-Convolution itself is a mathematical operation, commonly used in signal processing.  
-
-**A good mental model for convolution is the process of sliding a filter over a signal, at each point checking to see how well the filter matches the signal**.  
+**A good mental model for convolution is the process of sliding a filter over a signal, at each point checking to see how well the filter matches the signal**.
 
 This checking process is pattern recognition, and is the intuition behind convolution - looking for small, spatial patterns anywhere in a larger space.  **The convolution layer has inductive bias for recognizing local, spatial patterns**. 
 
@@ -230,11 +241,15 @@ A 2D convolutional layer is defined by the interaction between two components:
 1. a 3D image, with shape `(height, width, color channels)`,
 2. a 2D filter, with shape `(height, width)`.
 
-Above we defined the intuition of convolution being looking for patterns in a larger space.  **In a 2D convolutional layer, the patterns we are looking for are filters, and the larger space is an image**.
+The intuition of convolution is looking for patterns in a larger space.  
+
+**In a 2D convolutional layer, the patterns we are looking for are filters, and the larger space is an image**.
 
 ### Filters
 
-**A convolutional layer is defined by it's filters**.  These filters are learnt - they are equivalent to the weights of a fully connected layer. Filters in the first layers of a convolutional neural network detect simple features such as lines or edges.  Deeper in the network, filters can detect more complex features that help the network perform it's task.
+**A convolutional layer is defined by it's filters**.  These filters are learnt - they are equivalent to the weights of a fully connected layer. 
+
+Filters in the first layers of a convolutional neural network detect simple features such as lines or edges.  Deeper in the network, filters can detect more complex features that help the network perform it's task.
 
 To further understand how these filters work, let's work with a small image and two filters.  The basic operation in a convolutional neural network is to use these filters to detect patterns in the image, by performing element-wise multiplication and summing the result:
 
@@ -307,9 +322,9 @@ The important hyperparameters in a convolutional layer are:
 - padding,
 - dilation rate.
 
-The number of filters determines how many patterns each layer can learn.  It's common to have the number of filters increasing with the depth of the network. Filter size is commonly set to `(3, 3)`, with a ReLu as the activation function.
+The **number of filters** determines how many patterns each layer can learn.  It's common to have the number of filters increasing with the depth of the network. Filter size is commonly set to `(3, 3)`, with a ReLu as the activation function.
 
-Strides can be used to skip steps in the convolution, resulting in smaller feature maps.  Padding can be used to allow pixels on the edge of the image to act as if they are in the middle of an image.  Dilation allow the filters to operate over a larger area of the image, while still producing feature maps of the same size.
+**Strides can be used to skip** steps in the convolution, resulting in smaller feature maps.  Padding allows pixels on the edge of the image to act as if they are in the middle of an image.  Dilation allow the filters to operate over a larger area of the image, while still producing feature maps of the same size.
 
 
 ## When should I use a convolutional layer?
@@ -331,7 +346,7 @@ So what other kinds of structure can data have, other than spatial?  Many types 
 
 # 3. LSTM Layer
 
-The third of our layers is the LSTM, or Long Short-Term Memory layer.  The LSTM is recurrent - **it processes data as a sequence**.  
+The third of our layers is the LSTM, or Long Short-Term Memory layer.  The LSTM is recurrent and **processes data as a sequence**.  
 
 Recurrence allows a network to experience the temporal structure of data, such as words in a sentence, or time of day.
 
@@ -349,7 +364,7 @@ The memory of a recurrent architecture is known as the **hidden state** $h$.  Wh
 
 ### Entering the timestep dimension
 
-Working with recurrent architectures requires being comfortable with the idea of a timestep dimension - knowing how to shape your data correctly is half the battle of working with recurrence.
+Working with recurrent architectures requires being comfortable with the idea of a **timestep dimension** - knowing how to shape your data correctly is half the battle of working with recurrence.
 
 Imagine we have input data $x$, that is a sequence of integers `[0, 0] -> [2, 20] -> [4, 40]`.  If we were using a fully connected layer, we could present this data to the network as a flat array:
 
@@ -372,9 +387,7 @@ Although the sequence is obvious to us, it's not obvious to a fully connected la
 
 **All a fully connected layer would see is a list of numbers - the sequential structure would need to be learnt by the network**.
 
-We can restructure our data $x$ to explicitly model this sequential structure, by adding a timestep dimension.  
-
-**The values in our data do not change - only the shape changes**:
+We can restructure our data $x$ to explicitly model this sequential structure, by adding a timestep dimension. **The values in our data do not change - only the shape changes**:
 
 ```python
 import numpy as np
@@ -401,7 +414,7 @@ Now that we understand how to structure data to be used with a recurrent neural 
 
 ## How does an LSTM layer work?
 
-The LSTM was first introduced in 1997, and has formed the backbone of modern sequence based deep learning models, excelling on challenging tasks such as machine translation.  For years the state of the art in machine translation was the seq2seq model, which is powered by the LSTM.
+The LSTM was first introduced in 1997 and has formed the backbone of modern sequence based deep learning models, excelling on challenging tasks such as machine translation.  For years the state of the art in machine translation was the seq2seq model, which is powered by the LSTM.
 
 The LSTM is a specific type a recurrent neural network.  **The LSTM addresses a challenge that vanilla recurrent neural networks struggled with - the ability to think long term**.  
 
@@ -517,31 +530,31 @@ If you wanted to access the hidden states at each timestep, then you can combine
 
 ## What hyperparameters are important for an LSTM layer?
 
-For an LSTM layer, the main hyperparameter is the number of units.  The number of units will determine the capacity of the layer and size of the hidden state .
+For an LSTM layer, the main hyperparameter is the number of units.  The number of units will determine the capacity of the layer and size of the hidden state.
 
 While not a hyperparameter, it can be useful to include gradient clipping when working with LSTMs, to deal with exploding gradients that can occur from the backpropagation through time.  It is also common to use lower learning rates to help manage gradients.
 
 
 ## When should I use an LSTM layer?
 
-When working with sequence data, an LSTM (or it's close cousin the GRU) is a common choice. **One major downside of the LSTM is that they are slow to train**.  
+In 2023, the answer to this is never.  If you have the type of data (sequential) that is suitable for an LSTM, you should look at using attention.
 
-This is because processing the sequence cannot be easily parallelized, as **the error signal must be backpropagated through time**.
+When working with sequence data, an LSTM (or it's close cousin the GRU) used to be the best choice. **One major downside of the LSTM is that they are slow to train** as **the error signal must be backpropagated through time**.  Backpropagating through an LSTM cannot be parallelized. 
 
-Another useful feature of the LSTM is the learnt hidden state.  This can be used by other models as a compressed representation of the future - such as in the 2017 World Models paper.
+One useful feature of the LSTM is the learnt hidden state.  This can be used by other models as a compressed representation of the future - such as in the [2017 World Models paper](https://adgefficiency.com/world-models/).
 
 
 <br />
 
 # 4. Attention Layer
 
-**Attention is the youngest of our four layers** - the only layer architecture to have been developed during the current deep learning moment.  
+Attention is the youngest of our four layers.
 
-**Since it's introduction in 2015, attention has revolutionized natural language processing**. 
+**Since it's introduction in 2015, attention has revolutionized natural language processing**. Attention powers some of the most breathtaking achievements in deep learning, such as the GPT-X series of language models.
 
-First used in combination with the LSTM based seq2seq model, attention is also to power the Transformer - a neural network architecture that forms the backbone of Open AI's GPT series of language models.
+First used in combination with the LSTM based seq2seq model, attention powers the Transformer - a neural network architecture that forms the backbone of modern language models.
 
-**Attention is important as it is an effective as a sequence model without recurrence** - avoiding the need to do backpropagation through time, making it easier to parallelize and faster to train.
+**Attention is as a sequence model without recurrence** - by avoiding the need to do backpropagation through time, attention can be parallelized on GPU, which means it's fast to train.
 
 
 ## What is the intuition and inductive bias of attention layers?
@@ -749,11 +762,11 @@ When using attention heads as shown above, hyperparameters to consider are:
 
 ## When should I use an attention layer?
 
-Attention layers should be considered for any sequence problem.  Unlike recurrent neural networks, they can be easily parallelized, making training fast.  Fast training means either cheaper training, or more training for the same amount of compute.
+Attention layers should be considered for **any sequence problem**.  Unlike recurrent neural networks, they can be easily parallelized, making training fast.  Fast training means either cheaper training, or more training for the same amount of compute.
 
-The Transformer is a sequence model without recurrence (it doesn't use an LSTM), allowing it to be efficiently trained (avoiding backpropagation through time).
+The Transformer is a sequence model without recurrence (it doesn't use an LSTM), allowing it to be trained without backpropagation through time.
 
-One additional benefit of an attention layer is being able to use the alignment scores for interpretability.
+One additional benefit of an attention layer is being able to use the alignment scores for interpretability - similar to how we can use the hidden state in an LSTM as a representation of the sequence.
 
 
 <br />
@@ -762,12 +775,12 @@ One additional benefit of an attention layer is being able to use the alignment 
 
 I hope you enjoyed this post and found it useful!  Below is a short table summarizing the article:
 
-| Layer           | Intuition                      | Inductive bias          | When to use                                             |
+| Layer           | Intuition                      | Inductive Bias          | When To Use                                             |
 |-----------------|--------------------------------|-------------------------|---------------------------------------------------------|
-| Fully connected | Allow all possible connections | None                    | Data without structure (i.e. tabular)                   |
-| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Spatial structure (i.e. images)                         |
-| LSTM            | Database                       | Sequences, memory                         | Data with sequential structure  |
-| Attention       | Focus on similarities            | Similarity, limit information flow  | Data with sequential structure  |
+| Fully connected | Allow all possible connections | None                    | Data without structure (tabular data)                   |
+| 2D convolution  | Recognizing spatial patterns   | Local, spatial patterns | Data with spatial structure (images)                         |
+| LSTM            | Database                       | Sequences & memory                         | Never - use Attention |
+| Attention       | Focus on similarities            | Similarity & limit information flow  | Data with sequential structure  |
 
 ---
 
