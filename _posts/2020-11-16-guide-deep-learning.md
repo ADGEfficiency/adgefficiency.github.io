@@ -1,6 +1,6 @@
 ---
 title: 'A Guide to Deep Learning Layers'
-date: 2020-11-16
+date: 2023-01-23
 classes: wide2
 toc: true
 toc_sticky: true
