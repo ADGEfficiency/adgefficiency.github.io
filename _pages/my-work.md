@@ -48,12 +48,12 @@ Fine-tune a base GPT2 model for your favourite authors - [source code](https://g
 $ pip install nemdata
 ```
 
-[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) 
+[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) for a developer focused guide to the data provide by AEMO for the NEM.
 
 
 ## UK Electricity Grid Data
 
-[Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) - [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/)
+[Elexon API Web Scraping using Python](https://www.adgefficiency.com/elexon-api-web-scraping-using-python/) and [What is the UK Imbalance Price?](http://www.adgefficiency.com/what-is-the-uk-imbalance-price/).
 
 
 ## Soft Actor Critic (SAC) Reimplementation
@@ -79,23 +79,22 @@ Implementing the 2017 classic paper - using a variational auto-encoder, mixed de
 
 ## Mixed-Integer Linear Programming for Energy Systems 
 
-[introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/)
+[Introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
 
 ## Reinforcement Learning for Energy Systems
 
-[blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
+[Blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
 
 ![]({{"/assets/dqn_solving/fig1.png"}})
 
 
 ## Parallelized Cross Entropy Method
 
-[github](https://github.com/ADGEfficiency/cem) - [blog post](https://adgefficiency.com/cem/)
+[Github](https://github.com/ADGEfficiency/cem) - [blog post](https://adgefficiency.com/cem/).
 
-CEM on CartPole and Pendulum.  Parallelized across processes and through batch.
+CEM to learn CartPole and Pendulum control problems.  Parallelized across processes and in `numpy`.
 
 ```bash
 $ python cem.py pendulum --num_process 6 --epochs 15 --batch_size 4096
 ```
-
