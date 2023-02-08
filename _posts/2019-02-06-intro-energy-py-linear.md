@@ -1,17 +1,43 @@
 ---
-title: 'Introducing energy-py-linear'
+title: Introducing `energy-py-linear`
 date: 2019-02-06
-categories:
+date_updated: 2023-01-30
+categories: 
 - Energy
-excerpt: A library for optimizing energy systems using mixed integer linear programming.
+excerpt: A Python library for optimizing energy systems using mixed integer linear programming.
 
 ---
 
-This post introduces `energy-py-linear` - [a Python library for optimizing energy assets using mixed integer linear programming (MILP)](https://github.com/ADGEfficiency/energy-py-linear).
+```
+created: 2019-02-06, updated: 2023-01-30
+```
 
-MILP guarantees convergence to the global optimum of a cost function for linear systems.  In energy battery storage and combined heat and power can be modelled and optimized using linear programming.
+This post introduces [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - a Python library for optimizing energy assets using mixed integer linear programming (MILP).
 
-## Optimizing battery dispatch into a wholesale market
+## Why Linear Programming?
+
+Linear programming is a popular choice for solving many energy industry problems - many energy systems can be modelled as linear, and suitable for optimization using linear solvers.
+
+Linear models have the quality that if a feasible solution exists, it exists on the boundary of a constraint.  This makes solving linear programs fast in practice. The optimization itself is also deterministic - it doesn't rely on randomness like gradient descent.
+
+
+## Why `energy-py-linear`?
+
+
+
+## What can `energy-py-linear` do?
+
+
+
+## What is planned for `energy-py-linear`?
+
+
+
+## Examples
+
+JUST PUT THE README!!!!!!!!!!
+
+### Optimizing Battery Dispatch into a Wholesale Market
 
 energy-py-linear can be used to optimize a battery that uses price arbitrage in a wholesale market ([see the source code here](https://github.com/ADGEfficiency/energy-py-linear/blob/master/energypylinear/battery/battery.py):
 
@@ -76,6 +102,9 @@ print(info)
     net grid 84.2 MWe
     power to site 100.0 MWe
 ```
+
+
+## Related Work
 
 Check out this other post where I demonstrate how to [use energy-py-linear to measure forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 

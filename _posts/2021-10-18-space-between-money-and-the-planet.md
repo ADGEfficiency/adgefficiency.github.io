@@ -1,9 +1,13 @@
 ---
 title: 'The Space Between Money and the Planet'
 date: 2021-10-31
+date_updated: 2022-02-08
 categories:
   - Energy
 excerpt: Is there an opportunity cost for using batteries to save carbon?
+classes: wide2
+toc: true
+toc_sticky: true
 
 ---
 
@@ -30,6 +34,7 @@ Two natural goals for a battery are to maximize profit or save carbon.  A common
 
 This work shows that **maximizing profit will completely wipe out any environmental benefit 50% of the time**, and calculates the carbon price needed to correct for this misalignment between price and carbon signals.
 
+# Motivation
 
 ## The 'just make money' fallacy
 
@@ -83,6 +88,7 @@ This price gives some indication about the level of support (via a revenue neutr
 
 **We would be giving the market `$150` to balance out what we lose when optimizing for carbon, and receive `10 tC` of carbon savings in for our lost money.**
 
+# Methods
 
 ## Reproducing these results
 
@@ -90,23 +96,15 @@ I've done a bunch of technical work for this project - if you aren't interested 
 
 ### Re-running the experiment
 
-You can run the code that generated these results by cloning energypy-linear at commit [1d19e3e1](https://github.com/ADGEfficiency/energy-py-linear/tree/1d19e3e11d2df48f3007c682afd437159651d062), and running `make space-between` to setup the experiment (you'll need Python and `make` installed):
+You can re-run the experiment code that generated these results by either:
 
-```bash
-$ git clone https://github.com/ADGEfficiency/energy-py-linear
-$ cd energy-py-linear
-$ git checkout 6fdaa6eb25667fc1acdaa8712c2d783f0c560427
-$ make space-between
-```
+1.  cloning the [space-between Github repo]() running the [notebooks/experiment.ipynb notebook]() locally,
+2.  running the [notebook on Binder]().
 
-This `make` command will:
+### View the Results
 
-- install the `energypylinear` and `nemdata` Python packages and their requirements,
-- use `nemdata` to get price & carbon data,
-- run the linear programs for the price & carbon signals,
-- save results and generate a summary.
+Can I do this in binder as well?
 
-After running `make space-between`, you can use the [space-between-expt](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-expt.ipynb) notebook to run the full experiment.
 
 ### Download the results
 
@@ -125,7 +123,7 @@ After downloading these results you can use the [space-between-viewer](https://g
 
 If you can't get any of this working feel free to email me at [adam.green@adgefficiency.com](mailto:adam.green@adgefficiency.com).
 
-## Methods
+## Dependencies
 
 This work uses two tools - [nem-data](https://github.com/ADGEfficiency/nem-data) and [energypy-linear](https://github.com/ADGEfficiency/energy-py-linear).
 
@@ -179,7 +177,7 @@ The 30 minute price data is upsampled to 5 minutes to align with the carbon data
 
 
 
-## Results
+# Results
 
 The chart below shows the price & carbon benefit from optimizing our battery for price and carbon:
 
@@ -210,6 +208,8 @@ The chart below shows the results grouped by year:
 This carbon price would be applied in proportion to the carbon intensity of the electricity produced by each market participant.
 
 
+# Discussion
+
 ## Exploring this carbon price metric
 
 Imagine we have a system where our deltas are `$500` and `50 tC`, giving a carbon price of `$/tC 10`.
@@ -239,7 +239,6 @@ The dirtier the electricity, the lower carbon price we need to incentive to save
 
 
 ## Criticism
-
 
 ### Choice of data
 
@@ -276,6 +275,8 @@ This study uses a battery configuration of 1 MW power rating with 2 MWh of capac
 Batteries often have access to many value streams - arbitrage of wholesale electricity is only one of them.
 
 Including other value streams (such as reducing network charges or offering fast response grid services) will change the size of the delta between our two worlds.
+
+# Summary
 
 ---
 
