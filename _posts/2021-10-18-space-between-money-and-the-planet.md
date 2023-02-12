@@ -11,8 +11,6 @@ toc_sticky: true
 
 ---
 
-## The tradeoff between profit and carbon
-
 This study proposes the existence of a **tradeoff between monetary gain and carbon emissions reduction** in the dispatch of electric batteries for arbitrage. 
 
 A focus on economic profit is demonstrated to not result in maximum carbon savings.  **A focus only on wholesale prices often removes the entire carbon benefit** and leads to a carbon emissions increase.
@@ -21,12 +19,12 @@ A calculation of the breakeven carbon price necessary to remove the tradeoff bet
 
 The calculation of the breakeven carbon price provides an estimate of the market correction required to reconcile the conflicting objectives of financial and environmental performance in the dispatch of electric batteries for arbitrage.
 
-You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
-
 <center>
 <img src="/assets/space-between/hero.png">
 </center>
 <br />
+
+You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 # Motivation
 
