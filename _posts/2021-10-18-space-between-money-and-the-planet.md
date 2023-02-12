@@ -287,21 +287,9 @@ This study stops with the calculation of a carbon delta, which is reducing over 
 
 ## Effect of efficiency & forecast error on carbon price
 
-The optimization done in this work is with perfect foresight.
-
-Optimizing with perfect foresight allows us to put an upper limit on both money and carbon savings.  In reality, a battery will be operated with imperfect foresight of future prices.
+The optimization done in this work is with perfect foresight.  Optimizing with perfect foresight allows us to put an upper limit on both money and carbon savings.  In reality, a battery will be operated with imperfect foresight of future prices.
 
 Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful.  The assumption is that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
-
-If we make mistakes on the dispatch of our battery due to forcast errors, we may end up with a delta of `$400` and `50 tC`, giving a carbon price of `$/tC 8`.
-
-Assuming that we still have a carbon delta of `50 tC` may be a stretch. Roundtrip efficiency would affect price & carbon performance equally, but the signals are different.
-
-Initially this was counter-intuitive.  It makes sense that high electricity prices are a good thing for low carbon electricity - a high electricity price makes the business case for renewable generation and battery storage stronger.  
-
-Here we see that the more expensive the electricity, the higher of carbon price to counter the value of the that electricity.
-
-The dirtier the electricity, the lower carbon price we need to incentive to save the same amount of money.  This reminds me of a similar situation in energy efficiency - highest value when replacing dirty or inefficient plant.
 
 ## Data
 
