@@ -72,7 +72,7 @@ This viewpoint (and viewpoints similar to it) are convenient - just make money, 
 
 # Methods
 
-You can see the [experiment source code here](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
+[Experiment source code is here](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 ## Experiment design
 
@@ -330,7 +330,6 @@ If you enjoyed the style of this post, check out [Typical Year Forecasting of El
 
 You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
-Cited as:
 ```
 @article{green2023spacebetween,
   title   = "The Space Between Money and the Planet",
