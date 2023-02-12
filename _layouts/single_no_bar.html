@@ -64,7 +64,7 @@ layout: default
         {% if page.date_updated %}
             <strong> {{
             site.data.ui-text[site.locale].date_label_updated | default: "Updated:" }}</strong> <time
-            datetime="{{ page.date | date_to_xmlschema }}">{{ page.date_updated | date: " ,%B %d, %Y" }}</time>
+            datetime="{{ page.date | date_to_xmlschema }}">{{ page.date_updated | date: "%B %d, %Y" }}</time>
         {% endif %}
         </p>
 

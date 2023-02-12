@@ -1,7 +1,7 @@
 ---
-title: 'The Space Between Money and the Planet'
+title: 'Space Between Money and the Planet'
 date: 2021-10-31
-date_updated: 2022-02-08
+date_updated: 2023-02-08
 categories:
   - Energy
 excerpt: Is there an opportunity cost for using batteries to save carbon?
@@ -11,66 +11,94 @@ toc_sticky: true
 
 ---
 
-A few months ago I completed a piece of work I've been working towards for three years - answering the question - is there a tradeoff between making money and saving carbon with batteries?
+## The tradeoff between profit and carbon
 
-The conclusion is that there is - a world where we optimize for price will not maximize carbon savings - in fact often focusing only on profit will wipe out any environmental benefit.
+This study proposes the existence of a **tradeoff between monetary gain and carbon emissions reduction** in the dispatch of electric batteries for arbitrage. 
 
-This result is specific to the dataset used here (South Australian wholesale & marginal intensity data) - but hopefully helps to combat the common mindset that we can ignore carbon signals and focus only on economic optimization - not only in electricity but throughout the economy.
+A focus on economic profit is demonstrated to not result in maximum carbon savings.  **A focus only on wholesale prices often removes the entire carbon benefit** and leads to a carbon emissions increase.
 
----
+A calculation of the breakeven carbon price necessary to remove the tradeoff between prices and carbon is performed. **This carbon price represents the price needed to align the world where we optimize for monetary gain with the world where we prioritize carbon reduction**. 
+
+The calculation of the breakeven carbon price provides an estimate of the market correction required to reconcile the conflicting objectives of financial and environmental performance in the dispatch of electric batteries for arbitrage.
+
+You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 <center>
 <img src="/assets/space-between/hero.png">
 </center>
 <br />
 
-Batteries are a key technology in the clean energy transition - enabling low carbon renewable generation to replace dirty electricity.
-
-**Operating a battery requires making decisions to achieve a goal**.  What do we want our battery to do?
-
-Two natural goals for a battery are to maximize profit or save carbon.  A common mindset in energy is to assume that these are the same thing - that optimizing for money will also optimize carbon savings.
-
-**This work shows this mindset is wrong** - that there is a trade-off between making money and saving carbon when operating a battery.
-
-This work shows that **maximizing profit will completely wipe out any environmental benefit 50% of the time**, and calculates the carbon price needed to correct for this misalignment between price and carbon signals.
-
 # Motivation
+
+## The importance of battery storage
+
+Battery storage is a key technology of the clean energy transition.  Batteries enable low carbon, intermittent renewable generation to replace dirty electricity.
+
+**Batteries pose a different set of control problems** than other key energy transition technologies like solar or wind.  
+
+A battery makes decisions to charge or discharge based on an imperfect view of the world, with competing objectives and value streams.
+
+Once a wind turbine or solar panel is built, operating that asset is straightforward - you generate as much as you can based on the amount of wind or sun available at that moment.  There is no decision to make or opportunity cost to trade off - when the resource is available, you use as much as possible.
+
+
+### Arbitrage of money and carbon
+
+A common battery operation stragety is arbitrage - the movement of electricity between periods of high and low value.
+
+In the price arbitrage scenario, a battery wants to purchase cheap electricity and sell it at a higher price.  A battery that does the opposite, that charges when electricity prices are high and discharges when they are low, will lose money. 
+
+A battery that charges with dirty electricity and discharges when electricity is clean increases carbon emissions.  Charging increases the load on a dirtier generator, while discharging decreases the load on a cleaner generator.
+
+## Tradeoff between profit maximization and emissions minimization
+
+Operating a battery requires making decisions to achieve a goal. Two natural goals for a battery are to maximize profit or save carbon.  
+
+A central point of this work is that we cannot rely only on optimization driven only by price signals to maximize carbon savings.  
+
+This view was shared in 2022 by [The Economist](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
+
+> Many funds claim that there is no trade-off between maximising profits and green investing, which seems unlikely for as long as the externalities created by polluting firms are legal and untaxed.
+
 
 ## The 'just make money' fallacy
 
-In my career I've encountered (and held!) the following perspective:
+In my career I've personally held and often encountered the following perspective:
 
 > Environmentally effective climate action must be economically effective - we need to make money in order to save the planet.
 
 It's often backed up with the view that renewables are low variable cost generators, able to bid into electricity markets at lower prices than high variable cost generators (like gas and coal).
 
-This viewpoint (and viewpoints similar to it) is convenient - just make money, ignore the carbon side and you are also saving the planet.  The central point of this work is the opposite - **we cannot rely only on economic optimization to maximize carbon savings**.  
+This viewpoint (and viewpoints similar to it) are convenient - just make money, ignore the carbon side and you are also saving the planet.
 
-A similar view was recently shared in [The Economist](https://www.economist.com/leaders/2022/02/12/the-truth-about-dirty-assets):
+# Methods
 
-> Many funds claim that there is no trade-off between maximising profits and green investing, which seems unlikely for as long as the externalities created by polluting firms are legal and untaxed.
+You can see the [experiment source code here](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
-This post supports this intuition - there is a difference between making money and saving versus the planet.
+## Experiment design
 
+1. Join raw price and carbon intensity data.
+2. Simulate battery with objectives of:
+  a. profit maximization,
+  b. carbon emissions minimization,
+3. Compare the economic and carbon benefits of the two objective.
 
-## The importance of battery storage
+### Re-run the experiment
 
-Battery storage is a key technology of the clean energy transition.  Storage is necessary to manage a grid with high levels of intermittent generation, like wind and solar.  Yet with batteries, wind and solar, one of these things is not like the other.
+Requires Python 3.10+ - the command `make results` will re-run the entire experiment including downloading & joining the raw data and running the simulations for price and carbon objectives:
 
-Once a wind turbine or solar panel is built, operating that asset is straightforward - you generate as much as you can based on the amount of wind or sun available at that moment.  There is no decision to make or opportunity cost to trade off - when the resource is available, you use as much as possible.
+```shell
+$ git clone https://github.com/ADGEfficiency/space-between
+$ cd space-between
+$ make results
+```
 
-**Batteries pose a more challenging control problem**.  A battery makes decisions to charge or discharge based on an imperfect view of the world, with competing objectives and value streams.
+## Signals and worlds
 
-In the price arbitrage scenario, a battery wants to purchase cheap electricity and sell it at a higher price.  A battery that does the opposite, that charges when electricity prices are high and discharges when they are low, will lose money. 
-
-**A battery that charges with dirty electricity and displaces clean electricity increases carbon emissions**.  Charging increases the load on the dirtier generator, and discharging decreases the load on the cleaner generator.
-
-
-## Price and carbon signals, price and carbon worlds
+The key idea in the methodology is to take the difference between two worlds - a world where we optimize for money, and a world where we optimize for price.
 
 **In an ideal world, we would be able to operate a battery to both make money and save carbon at the same time.**  If clean electricity is cheap and dirty electricity is expensive, we can operate our battery to make money, and know that we will also be saving carbon.
 
-**In the opposite world, where dirty electricity is cheap and clean electricity is expensive, there would be an opportunity cost for saving carbon**. There would be situations where you would need to reduce the environmental benefit of operating your battery in order to make more money.
+**In the opposite world, where dirty electricity is cheap and clean electricity is expensive, there is an opportunity cost to saving carbon**. There would be situations where you would need to reduce the environmental benefit of operating your battery in order to make more money.
 
 Below is a scenario where there is an opportunity cost to saving carbon. We can measure the delta between these two worlds in terms of the two things we care about - money and carbon.
 
@@ -84,214 +112,243 @@ Choosing to prioritize money over carbon means we make `$150` more than if we op
 
 Looking at the delta between our two worlds allows us to calculate a carbon price of `15 $/tC`.  This carbon price is the ratio of money gained by optimizing for money to the carbon saving gained by optimizing for carbon. 
 
-This price gives some indication about the level of support (via a revenue neutral carbon tax on electricity market participants - of course!) required to counteract the misalignment between our price and carbon signals.  
-
 **We would be giving the market `$150` to balance out what we lose when optimizing for carbon, and receive `10 tC` of carbon savings in for our lost money.**
 
-# Methods
+This carbon price would be applied in proportion to the carbon intensity of the electricity produced by each market participant.
 
-## Reproducing these results
-
-I've done a bunch of technical work for this project - if you aren't interested in the technical stuff, feel free to skip to Results.
-
-### Re-running the experiment
-
-You can re-run the experiment code that generated these results by either:
-
-1.  cloning the [space-between Github repo]() running the [notebooks/experiment.ipynb notebook]() locally,
-2.  running the [notebook on Binder]().
-
-### View the Results
-
-Can I do this in binder as well?
+This price estimates the level of support (via a revenue neutral carbon tax on electricity market participants - of course!) required to counteract the misalignment between the price and carbon signals and worlds.
 
 
-### Download the results
+## Data
 
-If you want to view the results generated by this work, you can grab the results from the [adgefficiency-public](https://s3.console.aws.amazon.com/s3/buckets/adgefficiency-public) S3 bucket.
+This study uses data from the Australian National Electricity Market (NEM) from 2014 to end of 2022.
 
-Install the `awscli` Python package (you'll need Python installed) and use `$ aws s3 sync` to sync the `results` folder to `notebooks/results` (this is where the notebooks in the `notebooks` folder expect the data to be):
+This experiment uses two signals as input interval data - a price signal and a carbon signal.
 
-```bash
-$ pip install awscli
-$ git clone https://github.com/ADGEfficiency/energy-py-linear
-$ cd energy-py-linear
-$ aws s3 sync s3://adgefficiency-public/space-between/results ./notebooks/results --no-sign-request
-```
+The price signal is the 5 minute dispatch prices in South Australia.  This is a slightly different dataset than the trading price.  Dispatch prices were chosen so that the prices (before and after the transition from 30 to 5 minute trading price settlement) is on the same frequency (5 minutes per interval) as the carbon intensity data.
 
-After downloading these results you can use the [space-between-viewer](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/space-between-viewer.ipynb) notebook to inspect them.
-
-If you can't get any of this working feel free to email me at [adam.green@adgefficiency.com](mailto:adam.green@adgefficiency.com).
+The carbon signal is the 5 minute NEMDE data and NEM generator carbon intensity in South Australia.  The NEMDE dataset has data on the marginal carbon generators, which allows calculation of a marginal carbon intensity.  
 
 ## Dependencies
 
-This work uses two tools - [nem-data](https://github.com/ADGEfficiency/nem-data) and [energypy-linear](https://github.com/ADGEfficiency/energy-py-linear).
+The main third-party Python dependencies of this work are `pandas` for data processing, `matplotlib` for plotting and `pulp` for linear program solving.
 
-`nem-data` is a Python CLI for downloading Australian electricity market data:
+This work depends on [nem-data]() - a Python CLI for downloading Australian electricity market data:
 
-```bash
-$ nem -s 2014-01 -e 2020-12 -r trading-price
+```python
+import nemdata
+
+data = nemdata.download(start="2020-01", end="2020-02", table="trading-price")
 ```
 
-`energypy-linear` is a Python library for optimizing the dispatch of batteries operating in price arbitrage:
+This work depends on [energy-py-linear]() - a Python library for optimizing the dispatch of energy assets for profit maximization and carbon emissions reduction:
 
 ```python
 import energypylinear as epl
-mdl = epl.Battery(power=2, capacity=4, efficiency=1.0)
-mdl.optimize(prices=[10, 20, 50, -10], freq="60T")
+
+#  2.0 MW, 4.0 MWh battery
+asset = epl.battery.Battery(power_mw=2, capacity_mwh=4, efficiency=1.0)
+
+results = asset.optimize(
+  electricity_prices=[100.0, 50, 200, -100, 0, 200, 100, -100], freq_mins=5
+)
 ```
 
-The battery model is a mixed-integer linear program built in PuLP, that optimizes the dispatch of a battery with perfect foresight of future prices and marginal carbon intensities.
+## Battery model
+
+The battery model is a mixed-integer linear program built in PuLP. It optimizes the charge and discharge of a battery with perfect foresight of future prices and marginal carbon intensities. The roundtrip efficiency of the battery is set at 100%.
 
 The only value stream available to the battery is the arbitrage of electricity or carbon from one interval to another. The battery is optimized in monthly blocks with interval data on a 5 minute frequency.
 
 
-### Optimize for price or carbon
+# Results
 
-The battery model can be optimized on one of two objectives - either price or carbon. Optimizing for price means the battery will import electricity from the grid at low prices and export it during high prices, leading to an economic saving.
+Download previously generated results with Python 3 using `make pulls3`:
 
-**Optimizing for carbon means the battery will import electricity from the grid at low marginal carbon intensity and export it during high marginal carbon intensity, leading to a carbon saving.**
+```shell
+$ git clone https://github.com/ADGEfficiency/space-between
+$ cd space-between 
+$ make pulls3
+```
 
-Below is an example of optimizing a battery for these two objectives - the left optimizing a battery for money, on the right optimizing a battery for carbon:
+This pull previously generated results from S3 using the AWS CLI into `./data`:
 
-![](/assets/space-between/panel.png)
+```shell
+$ tree -L 3 ./data
+├── database.sqlite
+├── dataset.parquet
+└── results
+    ├── 08cdcee2-a315-49d8-9207-820a5ad4a0de
+    │   ├── input-interval-data.parquet
+    │   ├── interval-data.parquet
+    │   ├── meta.json
+    │   └── simulation.parquet
+    ├── 0bd87681-d422-491c-9ad2-3afc1503ab6f
+    │   ├── input-interval-data.parquet
+    │   ├── interval-data.parquet
+    │   ├── meta.json
+    │   └── simulation.parquet
+    ...
+    └── fab33244-fc60-456a-8377-f5f73c2700d7
+        ├── input-interval-data.parquet
+        ├── interval-data.parquet
+        ├── meta.json
+        └── simulation.parquet
+```
+
+## Optimize for price or carbon
+
+The battery model was optimized on one of two objectives - either price or carbon. 
+
+Optimizing for price means the battery will import electricity from the grid at low prices and export it during high prices, leading to an economic saving.
+
+Optimizing for carbon means the battery will import electricity from the grid at low marginal carbon intensity and export it during high marginal carbon intensity, leading to a carbon saving.
+
+Below we compare the optimization of battery for these two objectives - the left optimizes a battery for money, on the right optimizing a battery for carbon:
+
+![](/assets/space-between-2023/panel.png)
 
 <center><figcaption>Comparing the optimization for price (left) and carbon (right).</figcaption></center>
 <br />
 
-An important sense check when looking at optimized battery profiles is that the battery ends the period on zero charge, which happens for both the scenarios above.
+We can observe the full use of the battery charge in both the price and carbon arbitrage simulations.
 
 
-### Datasets
+## Monthly profit and emissions benefits
 
-This experiment requires data - a price signal and a carbon signal.
+We can look at how our simulations are performing across the entire experiment by grouping our simulations by month.
 
-This study uses data from the Australian National Electricity Market (NEM) from 2014 to end of 2020:
+A negative benefit is a loss.  Negative profit means losing money, negative carbon benefit means increasing carbon emissions.
 
-- **a price signal** = 30 minute trading price in South Australia,
-- **a carbon signal** = 5 minute NEMDE data + NEM generator carbon intensity in South Australia.
+The chart below shows the price & carbon benefit from optimizing our battery for price and carbon for each month:
 
-The NEMDE dataset offers a marginal carbon generator, which allows calculation of a marginal carbon intensity - different from the [more commonly reported average carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).
-
-The 30 minute price data is upsampled to 5 minutes to align with the carbon data. 
-
-
-
-# Results
-
-The chart below shows the price & carbon benefit from optimizing our battery for price and carbon:
-
-![](/assets/space-between/monthly-benefit.png)
+![](/assets/space-between-2023/monthly-benefit.png)
 
 <center><figcaption>Monthly price & carbon benefits when optimizing for price (left) and carbon (right) from 2014 to end of 2020.</figcaption></center>
 
-When we optimize for money, we will have a negative effect on the environment for `53.5 %`of our `84` months.  When we optimize for carbon, we will lose money for `84.5` % of our `84` months.
+The table below summarize the data across the entire experiment:
 
-The chart below again shows the data grouped by month - showing only the delta between our two worlds:
+| objective   |   negative_profit |   negative_emissions_benefit |   months |
+|:------------|------------------:|-----------------------------:|---------:|
+| carbon      |           73.1481 |                        0     |      108 |
+| price       |            0      |                       87.037 |      108 |
 
-- **the price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
-- **the carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
-- **the monthly carbon price** - the ratio of our price to carbon deltas.
+When we optimize for money, we have a negative effect on the environment `87%` of the time.  When we optimize for carbon, we will lose money `84.5%` of the time.
 
-![](/assets/space-between/monthly.png)
+These results are dramatic - changing our objective can often completely remove the benefit we see for the alternate objective.
+
+## Monthly carbon price
+
+What we are interested in is how these two simulations change together - by taking the difference between the two simulations (one for money, the other for carbon), we can measure how far the space is between them.
+
+The chart below shows the data grouped by month, but this time only shows the delta between our two worlds:
+
+TODO y axis labels
+
+![](/assets/space-between-2023/monthly.png)
 
 <center><figcaption>Monthly deltas from 2014 to end of 2020.</figcaption></center>
 
-The chart below shows the results grouped by year:
+The three deltas shown above are:
 
-![]({{ '/assets/space-between/annual.png' }})
+- **price delta** - the difference between the optimize for money and optimize for carbon worlds in thousands of Australian dollars per month,
+- **carbon delta** - the difference between the optimize for money and optimize for carbon worlds in term of tons of carbon savings per month,
+- **monthly carbon price** - the ratio of our price to carbon deltas.
+
+
+## Annual carbon price
+
+The final chart shows the delta between worlds results grouped by year:
+
+![](/assets/space-between-2023/annual.png)
 
 <center><figcaption>Annual deltas from 2014 to end of 2020.</figcaption></center>
 
-**One takeaway from the plot above is that a carbon price of below `80 $/tC` would be enough to fully incentivize batteries to maximize both their economic and carbon savings.**
+We can observe a few things from the chart above:
 
-This carbon price would be applied in proportion to the carbon intensity of the electricity produced by each market participant.
-
+- a carbon price of below `80 $/tC` would fully correct for the misalignment between price and carbon signals in all years except 2022,
+- 2022 is an outlier due to both an increased price delta (meaning the electricity market was more valuable for batteries) and a lower carbon delta (due to cleaner electricity).
 
 # Discussion
 
-## Exploring this carbon price metric
+## Exploring carbon prices 
 
-Imagine we have a system where our deltas are `$500` and `50 tC`, giving a carbon price of `$/tC 10`.
+A key result of this work is the estimation of the breakeven carbon intensity between our two simulated worlds.
 
+A system where our deltas are `$500` and `50 tC` results in a carbon price of `$/tC 10`.
 
-What this means is that if we could receive `$500` of income by dispatching in a carbon friendly way, this would be enough to cancel out the `$500` we could have made ignoring carbon and optimizing for price.
+This carbon prices implies that if we adjust our market by collecting this `$500` through a carbon price applied to all generation, we could incentivize lower carbon generation to be more competitive at the margin.
 
-|                   | Scenario One | Scenario 2 |
-| --------------    | -----        | ---------- |
-| Money saved $     | 500          | 400        |
-| Carbon saved tC   | 50           | 50         |
-| Carbon Price $/tC | 10           | 8          |
+This carbon price is a break-even carbon price for the battery - it is what we would have to pay the market to offset the lost revenue of `$500`. 
 
+## More Output Metrics
 
-**This carbon price is a break-even carbon price for the battery - it is what we would have to pay the market to offset the lost revenue of `$500`.**
+This study stops with the calculation of a carbon delta, which is reducing over time.  This means that even if the carbon price was increasing, the total cost may be decreasing.  The total cost is the carbon delta multiplied by the breakeven carbon price.
 
+## Effect of efficiency & forecast error on carbon price
 
-### Effect of efficiency & forecast error on carbon price
+The optimization done in this work is with perfect foresight.
 
-If we make mistakes on the dispatch of our battery, we may end up with a delta of `$400` and `50 tC`, giving a carbon price of `$/tC 8`.
+Optimizing with perfect foresight allows us to put an upper limit on both money and carbon savings.  In reality, a battery will be operated with imperfect foresight of future prices.
 
-Assuming that we still have a delta of `50 tC` may be a stretch (roundtrip efficiency would affect price & carbon performance equally).
+Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful.  The assumption is that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
 
-I initially found this counter-intuitive.  I'm so used to the idea that high electricity prices are a good thing - a high electricity price makes the business case for renewable generation and battery storage stronger.  Here we see that the more expensive the electricity, the higher of carbon price to counter the value of the that electricity.
+If we make mistakes on the dispatch of our battery due to forcast errors, we may end up with a delta of `$400` and `50 tC`, giving a carbon price of `$/tC 8`.
+
+Assuming that we still have a carbon delta of `50 tC` may be a stretch. Roundtrip efficiency would affect price & carbon performance equally, but the signals are different.
+
+Initially this was counter-intuitive.  It makes sense that high electricity prices are a good thing for low carbon electricity - a high electricity price makes the business case for renewable generation and battery storage stronger.  
+
+Here we see that the more expensive the electricity, the higher of carbon price to counter the value of the that electricity.
 
 The dirtier the electricity, the lower carbon price we need to incentive to save the same amount of money.  This reminds me of a similar situation in energy efficiency - highest value when replacing dirty or inefficient plant.
 
+## Data
 
-## Criticism
-
-### Choice of data
-
-For this study I used the 30 minute South Australia trading price and the 5 minute NEMDE data for a carbon signal.
-
-The intensity from the NEMDE data is a marginal intensity, supplied by the NEMDE solver as the slack variable for increasing demand.
-
-By using this signal we are assuming that any actions we took would not change how the market is dispatched - this will be true up to a point (the size of the marginal bid).
+This study uses the 5 minute South Australia dispatch price and the 5 minute NEMDE data for a carbon signal.
 
 Using different price and carbon signals will change the results of this study - this isn't a fatal criticism but it should reinforce that this study is heavily dependent on the choice of data.
 
 We can add to this the generic but always relevant criticism of anything empirical - you can't use the past to predict the future.
 
+## Marginal versus average carbon intensity
 
-### Perfect foresight
+The intensity from the NEMDE data is a marginal intensity, supplied by the NEMDE solver as the slack variable for increasing demand.
+By using this signal we are assuming that any actions we took would not change how the market is dispatched - this will be true up to a point (the size of the marginal bid).
 
-Optimizing with perfect foresight allows us to put an upper limit on both money and carbon savings.  In reality, a battery will be operated with imperfect foresight of future prices.
+The marginal carbon intensity is different from the [more commonly reported average carbon intensity](https://adgefficiency.com/energy-basics-average-vs-marginal-carbon-emissions/).  It would be interesting to compare these results with different carbon signals.
 
-Because we are interested in the ratio between carbon & economic savings, taking the ratio of maximum carbon to maximum economic savings is hopefully useful.  Doing this is making the assumption that the relative dispatch error (in % lost carbon or money) is the same for both objectives.
+It does introduce the question of which intensity is relevant for the accounting.
 
+## Battery model  
 
-### Simplistic battery model  
+The battery model applies a constant roundtrip efficiency onto battery export - in reality efficiency is a non-linear function of state of charge, battery age and temperature.
 
-The battery model applies a constant roundtrip efficiency onto battery export - in reality efficiency is a non-linear function of state of charge, battery age, temperature (and probably much more).
+This study uses a battery configuration of 2 MW power rating with 4 MWh of capacity - other batteries have different ratios of power to energy.
 
+## Only one value stream
 
-### Incorrect battery configuration
+Batteries often have access to many value streams, such as network charge savings or grid frequency services.  This experiment only considers the arbitrage of wholesale electricity.
 
-This study uses a battery configuration of 1 MW power rating with 2 MWh of capacity - other batteries have different ratios of power to energy.
-
-
-### Only one value stream
-
-Batteries often have access to many value streams - arbitrage of wholesale electricity is only one of them.
-
-Including other value streams (such as reducing network charges or offering fast response grid services) will change the size of the delta between our two worlds.
-
-# Summary
+Including other value streams will change the size of the delta between our two worlds.
 
 ---
 
-Thanks for reading!
+**Thanks for reading!**
 
-If you enjoyed this post, check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/), where I show how to use this same battery model to measure the quality of a forecast.
+If you enjoyed the content of post, check out [Measuring Forecast Quality using Linear Programming](https://adgefficiency.com/energy-py-linear-forecast-quality/), which uses a linear programming battery model to measure the quality of a forecast.
 
+If you enjoyed the style of this post, check out [Typical Year Forecasting of Electricity Prices ](https://adgefficiency.com/typical-year-forecasting-electricity-prices/), which shows how to create a low variance forecasts and estimates of energy project performance.
+
+You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 Cited as:
 ```
-@article{green2021spacebetween,
+@article{green2023spacebetween,
   title   = "The Space Between Money and the Planet",
   author  = "Green, Adam Derek",
   journal = "adgefficiency.github.io",
-  year    = "2021",
+  year    = "2023",
   url     = "https://adgefficiency.com/space-between-money-and-the-planet/"
 }
 ```
