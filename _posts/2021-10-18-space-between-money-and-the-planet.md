@@ -4,7 +4,7 @@ date: 2021-10-31
 date_updated: 2023-02-08
 categories:
   - Energy
-excerpt: Is there an opportunity cost for using batteries to save carbon?
+excerpt: The opportunity cost for using batteries to reduce carbon emissions.
 classes: wide2
 toc: true
 toc_sticky: true
@@ -242,8 +242,6 @@ These results are dramatic - changing our objective can often completely remove 
 What we are interested in is how these two simulations change together - by taking the difference between the two simulations (one for money, the other for carbon), we can measure how far the space is between them.
 
 The chart below shows the data grouped by month, but this time only shows the delta between our two worlds:
-
-TODO y axis labels
 
 ![](/assets/space-between-2023/monthly.png)
 
