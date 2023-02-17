@@ -9,14 +9,11 @@ author_profile: true
 
 ---
 
-Energy engineer turned data professional.  My work is focused on using data to combat climate change.   I am passionate & enjoy modelling energy systems, especially for optimization & control.
+Energy engineer turned data professional.  My work is focused on using data to combat climate change.   I enjoy modelling energy systems.
 
-I am interested in the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize systems for money or for the environment.
+I am interested in the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize energy systems for money or for the environment.
 
-I'm currently working as a data scientist at [Orkestra Energy](https://www.orkestra.energy), working on building software to navigate the transition to a decentralised and decarbonised future.
-
-I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/) or look at my [CV here](https://adgefficiency.com/cv.pdf).
-
+I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/). See my [CV here](https://adgefficiency.com/cv.pdf).
 
 # Projects
 
@@ -26,10 +23,27 @@ I love mentoring data professionals - you can sign up for [mentoring with me her
 
 ![]({{"/assets/my-work/dss.png"}})
 
+## Space Between Money and the Planet
+
+Demonstrating the existence of a tradeoff between monetary gain and carbon emissions reduction in the dispatch of electric batteries:
+
+![](/assets/space-between-2023/annual.png)
+
+[Blog post](https://adgefficiency.com/space-between-money-and-the-planet/) - [source code](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
+
+## Linear Programming for Energy Systems 
+
+[energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - A Python library for optimizing the dispatch of energy assets with mixed-integer linear programming, including batteries, electric vehicles and CHP generators:
+
+```bash
+$ pip install energypylinear
+```
+
+[Introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/) - [source code](https://github.com/ADGEfficiency/energy-py-linear).
 
 ## climate-news-db
 
-A tool for downloading climate change newspaper articles - [app](https://www.climate-news-db.com/) - [source code](https://github.com/ADGEfficiency/climate-news-db).
+A dataset of climate change newspaper articles - [app](https://www.climate-news-db.com/) - [source code](https://github.com/ADGEfficiency/climate-news-db).
 
 ![]({{"/assets/my-work/db.png"}})
 
@@ -39,7 +53,6 @@ Fine-tune a base GPT2 model for your favourite authors - [source code](https://g
 
 ![]({{"/assets/my-work/creative.png"}})
 
-
 ## Australian Electricity Grid Data
 
 [nem-data](https://github.com/ADGEfficiency/nem-data) - a CLI for downloading data for Australia's National Energy Market (NEM):
@@ -48,8 +61,7 @@ Fine-tune a base GPT2 model for your favourite authors - [source code](https://g
 $ pip install nemdata
 ```
 
-[A hackers guide to AEMO data](https://www.adgefficiency.com/hackers-aemo/) for a developer focused guide to the data provide by AEMO for the NEM.
-
+[A Hackers Guide to AEMO Data](https://www.adgefficiency.com/hackers-aemo/) is a developer focused guide to the electricity market data provide by AEMO for the NEM - [source code](https://github.com/ADGEfficiency/nem-data).
 
 ## UK Electricity Grid Data
 
@@ -75,11 +87,6 @@ Implementing the 2017 classic paper - using a variational auto-encoder, mixed de
 [Data science teaching materials](https://github.com/ADGEfficiency/teaching-monolith).
 
 ![]({{"/assets/my-work/monolith.png"}})
-
-
-## Mixed-Integer Linear Programming for Energy Systems 
-
-[Introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/).
 
 
 ## Reinforcement Learning for Energy Systems

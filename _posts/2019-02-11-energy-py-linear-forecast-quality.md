@@ -7,6 +7,8 @@ excerpt: Using energy-py-linear to measure the economic value of using a forecas
 
 ---
 
+## Predictive Accuracy vs. Business Value
+
 The ideal forecast quality measurement directly aligns with a key business metric.  Models are not often able to be trained in this way - often models are trained using error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.
 
 This post uses [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) to measure forecast quality in terms of a key business metric - cost.  energy-py-linear is a Python library for optimizing energy systems using mixed integer linear programming - [read the introductory post here](https://adgefficiency.com/intro-energy-py-linear/).

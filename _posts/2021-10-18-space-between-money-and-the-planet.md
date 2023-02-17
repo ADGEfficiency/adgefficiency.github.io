@@ -13,18 +13,19 @@ toc_sticky: true
 
 This study proposes the existence of a **tradeoff between monetary gain and carbon emissions reduction** in the dispatch of electric batteries for arbitrage. 
 
-A focus on economic profit is demonstrated to not result in maximum carbon savings.  **A focus only on wholesale prices often removes the entire carbon benefit** and leads to a carbon emissions increase.
-
-A calculation of the breakeven carbon price necessary to remove the tradeoff between prices and carbon is performed. **This carbon price represents the price needed to align the world where we optimize for monetary gain with the world where we prioritize carbon reduction**. 
-
-The calculation of the breakeven carbon price provides an estimate of the market correction required to reconcile the conflicting objectives of financial and environmental performance in the dispatch of electric batteries for arbitrage.
+Supporting materials for this work are in [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 <center>
 <img src="/assets/space-between/hero.png">
 </center>
 <br />
 
-You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
+A focus on economic profit is demonstrated to not result in maximum carbon savings.  **A focus only on wholesale prices often removes the entire carbon benefit** and leads to a carbon emissions increase.
+
+A calculation of the breakeven carbon price necessary to remove the tradeoff between prices and carbon is performed. **This carbon price represents the price needed to align the world where we optimize for monetary gain with the world where we prioritize carbon reduction**. 
+
+The calculation of the breakeven carbon price provides an estimate of the market correction required to reconcile the conflicting objectives of financial and environmental performance in the dispatch of electric batteries for arbitrage.
+
 
 # Motivation
 
@@ -310,7 +311,7 @@ The battery model applies a constant roundtrip efficiency onto battery export - 
 
 This study uses a battery configuration of 2 MW power rating with 4 MWh of capacity - other batteries have different ratios of power to energy.
 
-## Only one value stream
+## Single value stream
 
 Batteries often have access to many value streams, such as network charge savings or grid frequency services.  This experiment only considers the arbitrage of wholesale electricity.
 
@@ -324,7 +325,7 @@ If you enjoyed the content of post, check out [Measuring Forecast Quality using 
 
 If you enjoyed the style of this post, check out [Typical Year Forecasting of Electricity Prices ](https://adgefficiency.com/typical-year-forecasting-electricity-prices/), which shows how to create a low variance forecasts and estimates of energy project performance.
 
-You can find supporting materials for this work at [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
+Supporting materials for this work are in [adgefficiency/space-between-money-and-the-planet](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 ```
 @article{green2023spacebetween,
