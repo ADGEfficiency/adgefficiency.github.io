@@ -1,15 +1,12 @@
 ---
 title: Elexon API UK Electricity Grid Data using Python
-date: 2022-03-18
+date: 2016-12-08
+date_updated: 2022-03-18
 categories:
   - Data Science
 excerpt: Downloading, cleaning & joining UK electricity grid data with pandas, requests and pydantic.
 
 ---
-
-```
-created: 2016-12-08, updated: 2022-03-18
-```
 
 This post demonstrates how to use Python to download UK electricity data using the Elexon API - specifically data for the [imbalance price](http://adgefficiency.com/what-is-the-uk-imbalance-price/) - both the *imbalance prices* and *imbalance volumes*.
 

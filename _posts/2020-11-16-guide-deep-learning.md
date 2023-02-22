@@ -11,10 +11,6 @@ excerpt: Explaning the fully connected, convolution, the LSTM and attention deep
 
 ---
 
-```
-created: 2020-11-16, updated: 2023-01-23
-```
-
 # Summary
 
 | Layer           | Intuition                      | Inductive Bias          | When To Use                                             |

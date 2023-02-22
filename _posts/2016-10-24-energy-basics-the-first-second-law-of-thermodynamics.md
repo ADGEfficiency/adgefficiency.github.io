@@ -1,16 +1,13 @@
 ---
 title: 'Thermodynamics for Energy Engineers'
-date: 2022-08-07
+date_updated: 2022-08-07
+date: 2016-01-24
 author: Adam Green
 categories:
   - Energy Basics
 excerpt: These two laws are the foundation of energy engineering.
 
 ---
-
-```
-created: 2016-10-24, updated: 2022-08-07
-```
 
 
 Let's start at the end - here are two simple definitions of the First & Second Law of Thermodynamics:

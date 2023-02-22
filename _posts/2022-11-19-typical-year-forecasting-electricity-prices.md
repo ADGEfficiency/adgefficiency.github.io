@@ -1,6 +1,7 @@
 ---
 title: Typical Year Forecasting of Electricity Prices
 date: 2022-11-19
+date_updated: 2022-12-04
 categories:
   - Energy
 excerpt: Improve your energy project modelling with this simple & flexible forecasting technique.
@@ -8,10 +9,6 @@ toc: true
 toc_sticky: true
 
 ---
-
-```
-created: 2022-11-19, updated: 2022-12-04
-```
 
 **Energy prices are volatile** - the price of gas, oil and electricity can all change significantly year on year.  Yet the energy industry **ignores this year on year volatility** when modelling investment decisions in energy projects.
 

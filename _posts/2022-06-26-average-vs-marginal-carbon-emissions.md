@@ -1,6 +1,7 @@
 ---
 title: 'Average vs. Marginal Carbon Intensities in Electricity Grids'
-date: 2022-06-26
+date: 2017-02-02
+date_updated: 2022-06-26
 categories:
   - Energy Basics
 excerpt: Many energy professionals are (still!) getting this wrong. 
@@ -9,10 +10,6 @@ toc: true
 toc_sticky: true
 
 ---
-
-```json
-{"created": "2017-02-02", "updated": "2022-06-26"} 
-```
 
 Electricity carbon intensities are an essential part of the clean energy transition.  Estimations & predictions of carbon intensities can drive decisions that clean up electricity grids.
 

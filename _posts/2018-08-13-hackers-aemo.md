@@ -1,16 +1,13 @@
 ---
 title: 'A Hackers Guide to AEMO & NEM Data'
-date: 2022-12-10
+date: 2018-08-13
+date_updated: 2022-12-10
 categories:
   - Energy
   - Machine Learning
 excerpt:  A simple guide to data provided by AEMO for the Australia's National Electricity Market (NEM).
 
 ---
-
-```
-created: 2018-08-13, updated: 2022-12-10
-```
 
 This is a short guide to the electricity grid & market data supplied by the Australian Energy Market Operator (AEMO) for the Australian National Electricity Market (NEM).  
 

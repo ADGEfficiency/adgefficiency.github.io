@@ -1,16 +1,13 @@
 ---
 title: 'What is the UK Imbalance Price?'
-date: 2022-03-24
+date: 2016-12-01
+date_updated: 2022-03-24
 categories:
   - Electricity Price Forecasting
 classes: wide
 excerpt: An introduction to how the UK recovers electricity grid balancing costs.
 
 ---
-
-```
-created: 2016-12-01, updated: 2022-03-24
-```
 
 ## What is the Imbalance Price?
 
