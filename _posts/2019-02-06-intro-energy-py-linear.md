@@ -1,16 +1,13 @@
 ---
-title: Introducing `energy-py-linear`
-date: 2019-02-06
+title: Introducing energy-py-linear
+date_created: 2019-02-06
+date: 2023-01-30
 date_updated: 2023-01-30
 categories: 
 - Energy
 excerpt: A Python library for optimizing energy systems using mixed integer linear programming.
 
 ---
-
-```
-created: 2019-02-06, updated: 2023-01-30
-```
 
 This post introduces [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) - a Python library for optimizing energy assets using mixed integer linear programming (MILP).
 

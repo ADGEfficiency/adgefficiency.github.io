@@ -1,7 +1,8 @@
 ---
 title: 'Space Between Money and the Planet'
-date: 2021-10-31
+date_created: 2021-10-31
 date_updated: 2023-02-08
+date: 2023-02-08
 categories:
   - Energy
 excerpt: The opportunity cost for using batteries to reduce carbon emissions.

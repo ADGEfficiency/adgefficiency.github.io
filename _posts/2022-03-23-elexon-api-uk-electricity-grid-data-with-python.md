@@ -1,7 +1,8 @@
 ---
 title: Elexon API UK Electricity Grid Data using Python
-date: 2016-12-08
+date_created: 2016-12-08
 date_updated: 2022-03-18
+date: 2022-03-18
 categories:
   - Data Science
 excerpt: Downloading, cleaning & joining UK electricity grid data with pandas, requests and pydantic.

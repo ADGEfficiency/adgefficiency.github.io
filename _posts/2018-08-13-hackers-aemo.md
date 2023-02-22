@@ -1,7 +1,8 @@
 ---
 title: 'A Hackers Guide to AEMO & NEM Data'
-date: 2018-08-13
+date_created: 2018-08-13
 date_updated: 2022-12-10
+date: 2022-12-10
 categories:
   - Energy
   - Machine Learning

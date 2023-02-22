@@ -1,7 +1,8 @@
 ---
 title: Typical Year Forecasting of Electricity Prices
-date: 2022-11-19
+date_created: 2022-11-19
 date_updated: 2022-12-04
+date: 2022-12-04
 categories:
   - Energy
 excerpt: Improve your energy project modelling with this simple & flexible forecasting technique.

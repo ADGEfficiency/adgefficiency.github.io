@@ -19,8 +19,8 @@ layout: default
   <article class="page" itemscope itemtype="http://schema.org/CreativeWork">
     {% if page.title %}<meta itemprop="headline" content="{{ page.title | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
     {% if page.excerpt %}<meta itemprop="description" content="{{ page.excerpt | markdownify | strip_html | strip_newlines | escape_once }}">{% endif %}
-    {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date: "%B %d, %Y" }}">{% endif %}
-    {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date_created %}<meta itemprop="datePublished" content="{{ page.date_created | date: "%B %d, %Y" }}">{% endif %}
+    {% if page.date_updated %}<meta itemprop="dateModified" content="{{ page.date_updated | date: "%B %d, %Y" }}">{% endif %}
 
     <div class="page__inner-wrap">
       {% unless page.header.overlay_color or page.header.overlay_image %}
@@ -54,17 +54,17 @@ layout: default
         {% include page__taxonomy.html %}
 
         <p class="page__date">
-        {% if page.date %}
+        {% if page.date_created %}
           <strong>
             {{
             site.data.ui-text[site.locale].date_label | default: "Created:" }}</strong> <time
-            datetime="{{ page.last_modified_at | date: " %Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y"
+            datetime="{{ page.date_created | date: " %Y-%m-%d" }}">{{ page.date_created | date: "%B %d, %Y"
             }}</time>
         {% endif %}
         {% if page.date_updated %}
             <strong> {{
             site.data.ui-text[site.locale].date_label_updated | default: "Updated:" }}</strong> <time
-            datetime="{{ page.date | date_to_xmlschema }}">{{ page.date_updated | date: "%B %d, %Y" }}</time>
+            datetime="{{ page.date_updated | date_to_xmlschema }}">{{ page.date_updated | date: "%B %d, %Y" }}</time>
         {% endif %}
         </p>
 

@@ -1,7 +1,8 @@
 ---
 title: 'Thermodynamics for Energy Engineers'
 date_updated: 2022-08-07
-date: 2016-01-24
+date: 2022-08-07
+date_created: 2016-01-24
 author: Adam Green
 categories:
   - Energy Basics

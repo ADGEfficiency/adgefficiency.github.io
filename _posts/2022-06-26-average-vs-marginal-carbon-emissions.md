@@ -1,7 +1,8 @@
 ---
 title: 'Average vs. Marginal Carbon Intensities in Electricity Grids'
-date: 2017-02-02
+date_created: 2017-02-02
 date_updated: 2022-06-26
+date: 2022-06-26
 categories:
   - Energy Basics
 excerpt: Many energy professionals are (still!) getting this wrong. 

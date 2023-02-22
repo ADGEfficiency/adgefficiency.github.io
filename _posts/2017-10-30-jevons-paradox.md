@@ -1,7 +1,8 @@
 ---
 title: Jevon's Paradox
 date_updated: 2022-09-04
-date: 2017-10-30
+date: 2022-09-04
+date_created: 2017-10-30
 categories:
   - Energy Basics
   - Energy

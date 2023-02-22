@@ -8,9 +8,9 @@
   {% endif %}
 {% elsif include.sort_by == 'date' %}
   {% if include.sort_order == 'reverse' %}
-    {% assign entries = entries | sort: 'date' | reverse %}
+    {% assign entries = entries | sort: 'date_updated' | reverse %}
   {% else %}
-    {% assign entries = entries | sort: 'date' %}
+    {% assign entries = entries | sort: 'date_updated' %}
   {% endif %}
 {% endif %}
 

@@ -13,15 +13,15 @@ main:
 top:
   - title: "Read"
     children:
-      - title: "- Deep Learning Layers Guide"
+      - title: "- Deep Learning Guide"
         url: https://adgefficiency.com/guide-deep-learning/
-      - title: "- Space Between Money & the Planet"
+      - title: "- Money & the Planet"
         url: /space-between-money-and-the-planet/
       - title: "- Typical Year Forecasting"
         url: https://adgefficiency.com/typical-year-forecasting-electricity-prices/
-      - title: "- Hackers Guide to AEMO Data"
+      - title: "- Hackers Guide to AEMO"
         url: https://adgefficiency.com/hackers-aemo/
-      - title: "- World Models Reimplementation"
+      - title: "- World Models"
         url: https://adgefficiency.com/world-models/
 
   - title: "Project Spotlight"
