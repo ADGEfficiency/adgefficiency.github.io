@@ -1,8 +1,13 @@
 ---
 title: 'Mistakes Data Scientists Make'
 date: 2019-09-14
+date_created: 2019-09-14
+date_updated: 2023-02-23
+date: 2023-02-23
 categories:
-  - Data Science, Python, Machine Learning
+- Data Science
+- Python 
+- Machine Learning
 excerpt: Badges of honour for the accomplished data scientist.
 classes: wide2
 toc: true
@@ -10,39 +15,24 @@ toc_sticky: true
 
 ---
 
-<center><img src="/assets/mistakes-data-sci/f1.jpeg" width="900"></center>
-<br>
-
-> An expert is a person who has made all the mistakes that can be made in a very narrow field
->
-> Niels Bohr - Nobel Prize in Physics 1922
-
 # Introduction
 
-Patterns exist in the mistakes data scientists make - this article is a list of some of the most common.
+Patterns exist in the mistakes data scientists make - this article lists some of the most common mistakes data scientists make when learning their craft.
 
-As Niels Bohr suggests, making mistakes is part of development.
-
-<center>
-<img src="/assets/mistakes-data-sci/reddit.png" width="700">
-</center>
-
-<center>
-<i>
-<a href="https://www.reddit.com/r/datascience/comments/d5nfjc/mistakes_data_scientists_make/">Reddit thread on this post</a>
-</i>
-</center>
-<br>
+> An expert is a person who has made all the mistakes that can be made in a very narrow field.
+>
+> Niels Bohr
 
 I've learnt from all these mistakes - I hope you can learn from them too.
 
 
-<br>
-# Not plotting the target
+# Plot the Target
 
-Prediction separates the data scientist from the data analyst.  The data analyst analyzes the past - the data scientist predicts the future.  Using features to predict a target is supervised learning.
+Prediction separates the data scientist from the data analyst.  The data analyst analyzes the past - the data scientist predicts the future.  
 
-This target can be either a number (regression) or a category (classification).  **Understanding the distribution of the target is a must-do for any supervised learning project**.
+Using features to predict a target is supervised learning.  The target can be either a number (regression) or a category (classification).  
+
+**Understanding the distribution of the target is a must-do for any supervised learning project**.
 
 The distribution of the target will inform many decisions a data scientist makes, including:
 
@@ -101,35 +91,31 @@ ax = pd.Series(data).value_counts().plot(kind='bar')
 
 The bar chart shows us we have three classes, and shows our `dreaming` class is under-represented.
 
-<br>
-# Not thinking in terms of dimensionality
+# Dimensionality
 
 **Dimensionality provides structure for understanding the world**. An experienced data scientist learns to see the dimensions of data.
 
-
-## The value of low dimensional data
+## The Value of Low Dimensional Data
 
 In business, lower dimensional representations are more valuable than high dimensional representations. **Business decisions are made in low dimensional spaces**.
 
 Notice that much of the work of a data scientist is using machine learning to reduce dimensionality:
 
-- using pixels in an satellite image to predict solar power output
-- using wind turbine performance data to estimate the probability of future breakdown
-- using customer data to predict customer lifetime value
+- using pixels in an satellite image to predict solar power output,
+- using wind turbine performance data to estimate the probability of future breakdown,
+- using customer data to predict customer lifetime value.
 
 **Each of the outputs can be used by a business ways the raw data can't**.  Unlike their high dimensional raw data inputs, the lower dimensional outputs can be used to make decisions:
 
-- solar power output can be used to guide energy trader actions
-- a high wind turbine breakdown probability can lead to a maintenance team being sent out
-- a low customer lifetime estimation can lead to less money budgeting for marketing
-
+- solar power output can be used to guide energy trader actions,
+- a high wind turbine breakdown probability can lead to a maintenance team being sent out,
+- a low customer lifetime estimation can lead to less money budgeting for marketing.
 
 The above are examples of the interaction between prediction and control. The better you are able to predict the world, the better you can control it.
 
 This is also a working definition of a data scientist - **making predictions that lead to action - actions that change how a business is run**.
 
-
-## The challenges of high dimensional data
+## The Challenges of High Dimensional Data
 
 The difficulty of working in high dimensional spaces is known as the **curse of dimensionality**.
 
@@ -172,15 +158,15 @@ print([(length, calc_num_combinations(range(length))) for length in range(11)])
 """
 ```
 
-The larger the size of the space, the more work a machine learning model needs to do to understand it. **This is why adding features with no signal is painful**.  Not only does the model need to learn it's noise - it needs to do this by considering how this noise interacts with each combination of every other column.
+The larger the size of the space, the more work a machine learning model needs to do to understand it. 
 
+**This is why adding features with no signal is painful**.  Not only does the model need to learn it's noise - it needs to do this by considering how this noise interacts with each combination of every other column.
 
-## Applying the curse of dimensionality
+## Applying the Curse of Dimensionality
 
 Getting a theoretical understanding of dimensionality is step one. **Next is applying it in the daily practice of data science**.  Below we will go through a few practical cases where data scientists can not apply the curse of dimensionality to their own workflow.
 
-
-### Too many hyperparameters
+### Too Many Hyperparameters
 
 **Data scientists can waste time doing excessive grid searching** - expensive in both time and compute. The motivation of complex grid searches come from a good place - the desire for good (or even *perfect*) hyperparameters.
 
@@ -210,7 +196,7 @@ I'll start by comparing models in the first pipeline, then doing further tuning 
 The fine tuning on a single model is often searches over a single parameter at a time (two maximum).  This keeps the runtime short, and also helps to develop intuition about what effect changing hyperparameters will have on model performance.
 
 
-### Too many features
+### Too Many Features
 
 A misconception I had as a junior data scientist was that adding features had no cost.  Put them all in and let the model figure it out!  We can now easily see the naivety of this - more features has as exponential cost.
 
@@ -224,7 +210,7 @@ Seeing the results in computer vision, where deep neural networks do all the wor
 We know now there is an exponential cost to adding more features.  This also should change how you look at one-hot encoding, which dramatically increases the space that a model needs to understand, with low density data.
 
 
-### Too many metrics
+### Too Many Metrics
 
 In data science projects, performance is judged using metrics such as training or test performance.
 
@@ -241,7 +227,7 @@ Combine this with reporting a test & train error (or test & train per cross vali
 **Pick one metric that best aligns with your business goal and stick with it**. Reduce the dimensionality of your metrics so you can take actions with them.
 
 
-## Too many models
+## Too Many Models
 
 Data scientists are lucky to have access to many high quality implementations of models in open source packages such as `scikit-learn`.
 
@@ -251,51 +237,40 @@ Quite often I see a new data scientist train a linear model, an SVM and a random
 
 **Why is are tree based ensembles a good first model?**  A few reasons:
 
-- they can be used for either regression or classification
-- no scaling of target or features required
-- training can be parallelized across CPU cores
-- they perform well on tabular data
-- feature importances are interpretable
+- they can be used for either regression or classification,
+- no scaling of target or features required,
+- training can be parallelized across CPU cores,
+- they perform well on tabular data,
+- feature importances are interpretable.
 
-
-<br>
-# Learning rate too high
+# Learning Rate
 
 If there is one hyperparameter worthy of searching over when training neural networks it is learning rate (second is batch size).  **Setting the learning rate too high will make training of neural networks unstable** - LSTM's especially.  What the learning rate does is quite intuitive - higher learning rate means faster training.
 
 **Batch size is less intuitive** - a smaller batch size will mean high variance gradients, but some of the value of batches is using that variance to break out of local minima.  In general, batch size should be as large as possible to improve gradient quality - often it is limited by GPU memory.
 
-
-<br>
-# Not thinking about where error comes from
+# Where Error Comes From
 
 Three sources of error are:
 
-- sampling error - using statistics estimated on a subset of a larger population
-- sampling bias - samples having different probabilities than others
-- measurement error - difference between measurement & true value
+- sampling error - using statistics estimated on a subset of a larger population,
+- sampling bias - samples having different probabilities than others,
+- measurement error - difference between measurement & true value.
 
 Actually quantifying these is challenging, often impossible.  **However there is still value in thinking qualitatively about the sampling error, sampling bias or measurement error in your data**.
 
 Another useful concept is independent & identically distributed (IID).  IID is the assumption that data is:
 
-- independently sampled (no sampling bias)
-- identically distributed (no sampling or measurement error)
+- independently sampled (no sampling bias),
+- identically distributed (no sampling or measurement error).
 
 It's an assumption made in statistical learning about the quality of the distribution and sampling of data - and it's almost always broken.
 
 Thinking about the difference between the sampling & distribution of your training and test can help improve the generalization of a machine learning model, before it's failing to generalize in production.
 
+# Bias & Variance
 
-
-<br>
-# Not understanding bias & variance
-
-Prediction error of a supervised learning model has three components:
-
-- bias
-- variance
-- noise
+Prediction error of a supervised learning model has three components - bias, variance and noise.
 
 **Bias is a lack of signal** - the model misses seeing relationships that can be use to predict the target.  This is underfitting.  Bias can be reduced by increasing model capacity (either through more layers / trees, a different architecture or more features).
 
@@ -305,21 +280,19 @@ Prediction error of a supervised learning model has three components:
 
 The error of a machine learning model is usually due to a combination of all three.  Often data scientists will be able to make changes that lead to a trade off between bias & variance.  Three common levers a data scientist can pull are:
 
-- adding model capacity
-- reducing model capacity
-- adding training data
+- adding model capacity,
+- reducing model capacity,
+- adding training data.
 
-## Adding model capacity
+## Adding Model Capacity
 
 Increasing model capacity will reduce bias, but can increase variance (that additional capacity can be used to fit to noise).
 
-
-## Reducing model capacity
+## Reducing Model Capacity
 
 Decreasing model capacity (through regularization, dropout or a smaller model) will reduce variance but can increase bias.
 
-
-## Adding data
+## Adding Data
 
 More data will reduce variance, because the model has more examples to learn how to separate noise from signal.
 
@@ -327,9 +300,7 @@ More data will have no effect on bias.  **More data can even make bias worse**, 
 
 Additional data sampled with bias will only give your model the chance to be more precise about being wrong - see Chris Fonnesbeck's talk on [Statistical Thinking for Data Science](https:/www.youtube.com/watch?v=TGGGDpb04Yc) for more on the relationship between bias, sampling bias and data quantity.
 
-
-<br>
-# An obsession with the width & depth of fully connected neural nets
+# Width & Depth of Neural Nets
 
 The reason why junior data scientists obsess over the architecture of fully connected neural networks comes from the process of building them.  Constructing a neural network requires defining the architecture - surely it's important?
 
@@ -342,7 +313,6 @@ Case in point is *Trust Region Policy Optimization*, which uses a simple feedfor
 <center><img width="80%" src="/assets/mistakes-data-sci/trpo.png"></center>
 
 <center><a href="https://arxiv.org/abs/1502.05477">Schulman et al. (2015) Trust Region Policy Optimization</a></center>
-<br>
 
 The correct mindset with a fully connected neural network is a depth of two or three, with the width set between 50 to 100 (or 64 to 128, if you want to fit in with the cool computer science folk). If your model is low bias, consider adding capacity through another layer or additional width.
 
@@ -352,8 +322,7 @@ One interesting improvement on the simple fully connected architecture is the wi
 
 <center><a href="https://arxiv.org/abs/1606.07792">Cheng et al. (2016) Wide & Deep Learning for Recommender Systems</a></center>
 
-<br>
-# Not paying attention to PEP 8
+# PEP 8
 
 > Programs must be written for people to read, and only incidentally for machines to execute.
 >
@@ -381,8 +350,7 @@ def adder(x=10, y=5):
 
 All good text editors will have a way to integrate in-line linting - highlighting mistakes as you write them.  **Automatic, in-line linting is the best way to learn code style** - take advantage of it.
 
-<br>
-# Not dropping the target
+# Drop the Target
 
 If you ever get a model with an impossibly perfect performance, it is likely that your target is a feature.
 
@@ -396,10 +364,7 @@ data = data.drop('target', axis=1)
 
 We all do it once.
 
-<br>
-
-
-# Not scaling the target or features
+# Scale the Target or Features
 
 This is the advice I've given most when debugging machine learning projects.  Whenever I see a high loss (higher that say 2 or 3), it's a clear sign that the target has not been scaled to a reasonable range.
 
@@ -429,9 +394,7 @@ Our second pipeline takes the time to properly scale features & target, leading 
 
 A similar logic holds for features - unscaled features can dominate and distort how information flows through a neural network.
 
-
-<br>
-# Not working with a sample of the data during development
+# Work with a Sample
 
 This is a small workflow improvement that leads to massive productivity gains.
 
@@ -439,7 +402,7 @@ Development is a continual cycle of fixing errors, running code and fixing error
 
 **During development, work on a small subset of the data**. There are a few ways to handle this.
 
-## Creating a subset of the data
+## Creating a Subset of the Data
 
 You can work on a sample of your data already in memory, using an integer index:
 
@@ -453,7 +416,7 @@ data = data[:1000]
 data = pd.read_csv('data.csv', nrows=1000)
 ```
 
-## Controlling the debugging
+## Controlling the Debugging
 
 A simple way to control this is a variable - this is what you would do in a Jupyter Notebook:
 
@@ -478,26 +441,24 @@ Which can be controlled when running the script `data.py`:
 $ python data.py --nrows 1000
 ```
 
-<br>
-# Writing over raw data
+# Don't Write over Raw Data
 
 Raw data is holy - it should never be overwritten.  The results of any data cleaning should be saved separately to the raw data.
 
-<br>
-# Bonus - not using $HOME to store data
+# Use $HOME 
 
-This one isn't a mistake - but it's a pattern that has dramatically simplified my life.
+This one is a pattern that has dramatically simplified my life.
 
 **Managing paths in Python can be tricky**.  There are few things that can change how path finding Python can work:
 
-- where the user clones source code
-- where a virtual environment installs that source code
-- which directory a user runs a script from
+- where the user clones source code,
+- where a virtual environment installs that source code,
+- which directory a user runs a script from.
 
 Some of the problems that occur are from these changes:
 
-- `os.path.realpath` will change based on where the virtual environment installs your package
-- `os.getcwd` will change based on where the user runs Python the interpreter
+- `os.path.realpath` will change based on where the virtual environment installs your package,
+- `os.getcwd` will change based on where the user runs Python the interpreter.
 
 **Putting data in a fixed, consistent place can avoid these issues** - you don't ever need to get the directory relative to anything except the users `$HOME` directory.
 

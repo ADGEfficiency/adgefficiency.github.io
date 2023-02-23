@@ -6,7 +6,7 @@ date_created: 2016-01-24
 author: Adam Green
 categories:
   - Energy Basics
-excerpt: These two laws are the foundation of energy engineering.
+excerpt: The two laws at the foundation of energy engineering.
 
 ---
 

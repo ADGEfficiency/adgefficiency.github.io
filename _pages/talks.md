@@ -11,7 +11,9 @@ author_profile: true
 
 ## 2022
 
-August - Kiwi PyCon 2022 - *An Introduction to Distributed Computation in Python* [materials](https://github.com/ADGEfficiency/intro-to-distributed-computation-in-python) - [youtube](https://www.youtube.com/watch?v=x_NBHIi-Yf0)
+August - Kiwi PyCon 2022 - *An Introduction to Distributed Computation in Python* 
+
+[materials](https://github.com/ADGEfficiency/intro-to-distributed-computation-in-python) - [youtube](https://www.youtube.com/watch?v=x_NBHIi-Yf0)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x_NBHIi-Yf0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
