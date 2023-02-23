@@ -5,7 +5,7 @@ date_updated: 2023-02-23
 date: 2023-02-23
 categories:
  - Energy
-excerpt: Using energy-py-linear to measure the economic value of using a forecast.
+excerpt: Using energy-py-linear to measure the accuracy of a forecast.
 classes: wide2
 toc: true
 toc_sticky: true

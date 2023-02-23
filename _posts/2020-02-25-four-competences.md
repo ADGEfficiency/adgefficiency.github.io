@@ -3,7 +3,7 @@ title: "Daniel C. Dennett's Four Competences"
 date: 2020-02-26
 date_created: 2020-02-26
 date_updated: 2023-02-21
-date: 2023-02-23
+date: 2023-02-21
 categories:
 - Machine Learning 
 - Reinforcement Learning

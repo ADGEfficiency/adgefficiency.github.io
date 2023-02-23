@@ -3,7 +3,7 @@ title: 'Mistakes Data Scientists Make'
 date: 2019-09-14
 date_created: 2019-09-14
 date_updated: 2023-02-22
-date: 2023-02-23
+date: 2023-02-22
 categories:
 - Data Science
 - Python 
