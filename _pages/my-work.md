@@ -9,9 +9,9 @@ author_profile: true
 
 ---
 
-Energy engineer turned data professional.  My work is focused on using data to combat climate change - [CV here](https://adgefficiency.com/cv.pdf).
+Energy engineer turned data professional.  My work is focused on using data to combat climate change.
 
-I am interested in the different outcomes we get when we design and optimize energy systems for money or for the environment - the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/).
+I am interested in the different outcomes we get when we design and optimize energy systems for money or for the environment - the space that exists between economic and carbon optimization.
 
 I'm also passionate about teaching & mentoring data professionals - [I offer mentoring here](https://mentorcruise.com/mentor/AdamGreen/). 
 
