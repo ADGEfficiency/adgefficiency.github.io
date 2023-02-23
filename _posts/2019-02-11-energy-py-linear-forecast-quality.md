@@ -1,105 +1,117 @@
 ---
-title: 'Measuring Forecast Quality using Linear Programming'
-date: 2019-02-11
+title: 'Measuring Forecast Accuracy with Linear Programming'
+date_created: 2019-02-11
+date_updated: 2023-02-23
+date: 2023-02-23
 categories:
  - Energy
 excerpt: Using energy-py-linear to measure the economic value of using a forecast.
+classes: wide2
+toc: true
+toc_sticky: true
 
 ---
+
+This post introduces a methodology to measure the accuracy of an electricity price forecast using linear programming.
 
 ## Predictive Accuracy vs. Business Value
 
 The ideal forecast quality measurement directly aligns with a key business metric.  Models are not often able to be trained in this way - often models are trained using error measures that will look familiar to anyone who does gradient based optimization, such as mean squared error.
 
-This post uses [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) to measure forecast quality in terms of a key business metric - cost.  energy-py-linear is a Python library for optimizing energy systems using mixed integer linear programming - [read the introductory post here](https://adgefficiency.com/intro-energy-py-linear/).
+This post uses a linear programming to measure forecast quality in terms of a key business metric - cost.
 
-A battery operating in price arbitrage is optimized using actual prices and forecast prices.  The forecast error can then be quantified by how much money dispatching the battery using the forecast leaves on the table versus dispatching with perfect foresight of prices.
+A battery operating in price arbitrage is optimized using actual prices and forecast prices.  
 
-[A Jupyter notebook with the code used in this blog post is available in the energy-py-linear GitHub repository](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/forecast_quality.ipynb).
+The forecast error can then be quantified by how much money dispatching the battery using the forecast leaves on the table versus dispatching with perfect foresight of prices.
 
-# NEM electricity prices & forecast data
+# Data
 
-The dataset used is a single sample of prices and forecasts supplied by AEMO for the National Electricity Market (NEM) in Australia.  The price is the South Australian trading price and the forecast is the AEMO supplied predispatch price.
+This work uses [energy-py-linear](https://github.com/ADGEfficiency/energy-py-linear) for the battery linear program - you can find the code & data in [examples/forecast-accuracy.py](https://github.com/ADGEfficiency/energy-py-linear/blob/main/examples/forecast-accuracy.py) - the full source code is also available at the bottom of this post.
 
 ```python
-import pandas as pd
-
-dataset = pd.read_csv('.notebooks/data/forecast_sample.csv', index_col=0, parse_dates=True)
-
-Timestamp           Trading Price [$/MWh]    Predispatch Forecast [$/MWh]
-2018-07-01 17:00:00                177.11                        97.58039
-2018-07-01 17:30:00                135.31                       133.10307
-2018-07-01 18:00:00                143.21                       138.59979
-2018-07-01 18:30:00                116.25                       128.09559
-2018-07-01 19:00:00                 99.97                       113.29413
+$ pip install energypylinear
 ```
 
-A copy of the data is available in [energy-py-linear/notebooks/data/forecast_sample.csv](https://github.com/ADGEfficiency/energy-py-linear/blob/master/notebooks/data/forecast_sample.csv).  A simple plot of the price and forecast is show below in Figure 1.
+The dataset used is a single sample of the South Australian trading price and the AEMO predispatch price forecast.
+
+Both the price and forecast are supplied by AEMO for the National Electricity Market (NEM) in Australia.  
+
+A simple plot of the price and forecast is show below in Figure 1:
 
 ![]({{ "/assets/linear-forecast/forecast.png" }})
 
-**Figure 1 - a sample of the South Australian trading price and predispatch forecast from July 2018**
+<center>
+  <em>Figure 1 - South Australian trading price and predispatch forecast from July 2018.</em>
+</center>
 
-## Using battery storage to measure electricity price forecast quality
+# Method
 
 First we create an instance of the `Battery` class.  We use a large capacity battery so that the battery will chase after all possible arbitrage opportunities with a roundtrip efficiency of 100%.
 
 ```python
-import energypylinear
+import energypylinear as epl
 
-model = energypylinear.Battery(capacity=1000, power=2, efficiency=1.0)
+asset = epl.battery.Battery(
+    power_mw=2,
+    capacity_mwh=4,
+    efficiency=0.9
+)
 ```
 
 We then dispatch the battery using perfect foresight of prices:
 
 ```python
-perfect_foresight = model.optimize(
-    prices=dataset.loc[:, 'Trading Price [$/MWh]'],
-    timestep='30min'
+actuals = asset.optimize(
+    electricity_prices=data['Trading Price [$/MWh]'],
+    freq_mins=30,
 )
 ```
 
 Next we dispatch using the forecast:
 
 ```python
-forecast = model.optimize(
-    prices=dataset.loc[:, 'Trading Price [$/MWh]'],
-    forecasts=dataset.loc[:, 'Predispatch Forecast [$/MWh]'],
-    timestep='30min'
+forecasts = asset.optimize(
+    electricity_prices=data['Predispatch Forecast [$/MWh]'],
+    freq_mins=30,
 )
 ```
 
-Finally after some massaging of the `perfect_foresight` and `forecast` objects (which are lists of dictionaries) into dataframes, we end up with:
+We can then create `epl.Account` objects to represent the financials for these two simulations.
+
+The trick is using the actuals interval data with the forecast simulation in `forecast_account` - this evaluates the economics with actual prices but dispatch optimized for forecasts:
 
 ```python
-#  we multiply by -1 to convert net costs into net benefits
-perfect_total = -1 * perfect_foresight.loc[:, 'Actual [$/30min]'].sum()
-forecast_total = -1 * forecast.loc[:, 'Actual [$/30min]'].sum()
-forecast_error = perfect_total - forecast_total
+#  calculate the variance between accounts
+actual_account = epl.get_accounts(actuals.interval_data, actuals.simulation)
+forecast_account = epl.get_accounts(actuals.interval_data, forecasts.simulation)
+variance = actual_account - forecast_account
 
-"""
-Optimal dispatch is a benefit of $ 429.48
-Dispatching under the forecast gave a benefit of $ 302.59
-
-Forecast error is $ 126.89
-Forecast error is 29.55 %
-"""
+print(f"actuals: {actual_account}")
+print(f"forecasts: {forecast_account}")
+print(f"variance: {variance}")
+print(f"\nforecast error: $ {-1 * variance.cost:2.2f} pct: {100 * variance.cost / actual_account.cost:2.1f} %")
 ```
 
-## Thoughts on using linear programming to measure forecast quality
+# Discussion
 
-Any optimization algorithm can be used in place of linear programming.  If there is any error in the optimization (say to a local minima) then the final quality measurement combines the error from both forecasting and from the optimization that used the forecast.
+## Extend to Different Domains
 
-Linear programming is great if your system can be modelled as linear - you end up with the global optimum every time.  As we are interested in energy, battery storage is an application where we can build this linear program.
+The method above is specific to using batteries for wholesale price arbitrage.
 
-This can can be specific to a certain battery configuration - for example a battery developer could measure how much using a certain forecast costs them.  This can also be extended to other energy systems such as combined heat and power which can be modelled as linear programs.  The ability to get measurements of forecast quality as a function of specific asset configurations is attractive for energy engineers.
+The idea of using variance between two optimization runs with different inputs can be extended to many business problems.
+
+If there is any error in the optimization (say to a local minima) then the final quality measurement combines the error from both forecasting and from the optimization that used the forecast.
+
+A large capacity battery operating in price arbitrage does somewhat resemble arbitrage of stocks, so the error measurement might be useful for comparing forecasts.  It's less clear how useful this model would be for a temperature prediction.
+
+## Negative Value
 
 A challenge with using this measurement of forecast error is what happens when the net benefit of dispatching the battery to a forecast - i.e. when the forecast quality is so bad that using it ends up losing money.  Unlike other error measures such as mean squared error it's not appropriate to simply take the absolute.
 
-A final consideration is how this method can be used for other time series, such as stock prices or weather prediction.  A large capacity battery operating in price arbitrage does somewhat resemble arbitrage of stocks, so the error measurement might be useful for comparing forecasts.  It's less clear how useful this model would be for a temperature prediction.
+# Summary
+
+This post introduces a method for measuring forecast accuracy using linear optimization of electric battery storage, by looking at the difference between two optimization runs given actual and forecast prices as input.
 
 ---
-
-In summary - this post introduced a method for measuring forecast quality using linear optimization of electric battery storage.  It's suitable for measuring the economic impact of using a forecast for specific energy assets - it's applicability to other time series is an open question.
 
 Thanks for reading!

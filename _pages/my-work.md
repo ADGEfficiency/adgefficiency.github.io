@@ -9,11 +9,11 @@ author_profile: true
 
 ---
 
-Energy engineer turned data professional.  My work is focused on using data to combat climate change.   I enjoy modelling energy systems.
+Energy engineer turned data professional.  My work is focused on using data to combat climate change - [CV here](https://adgefficiency.com/cv.pdf).
 
-I am interested in the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/) - the different outcomes we get when we design and optimize energy systems for money or for the environment.
+I am interested in the different outcomes we get when we design and optimize energy systems for money or for the environment - the space that exists between [economic and carbon optimization](https://adgefficiency.com/space-between-money-and-the-planet/).
 
-I love mentoring data professionals - you can sign up for [mentoring with me here](https://mentorcruise.com/mentor/AdamGreen/). See my [CV here](https://adgefficiency.com/cv.pdf).
+I'm also passionate about teaching & mentoring data professionals - [I offer mentoring here](https://mentorcruise.com/mentor/AdamGreen/). 
 
 # Projects
 
@@ -25,11 +25,9 @@ I love mentoring data professionals - you can sign up for [mentoring with me her
 
 ## Space Between Money and the Planet
 
-Demonstrating the existence of a tradeoff between monetary gain and carbon emissions reduction in the dispatch of electric batteries:
+Demonstrating the existence of a tradeoff between monetary gain and carbon emissions reduction in the dispatch of electric batteries - [blog post](https://adgefficiency.com/space-between-money-and-the-planet/) - [source code](https://github.com/ADGEfficiency/space-between-money-and-the-planet):
 
 ![](/assets/space-between-2023/annual.png)
-
-[Blog post](https://adgefficiency.com/space-between-money-and-the-planet/) - [source code](https://github.com/ADGEfficiency/space-between-money-and-the-planet).
 
 ## Linear Programming for Energy Systems 
 
@@ -40,6 +38,16 @@ $ pip install energypylinear
 ```
 
 [Introductory blog post](https://adgefficiency.com/intro-energy-py-linear/) - [github](https://github.com/ADGEfficiency/energy-py-linear) - [measuring forecast quality](https://adgefficiency.com/energy-py-linear-forecast-quality/) - [source code](https://github.com/ADGEfficiency/energy-py-linear).
+
+## Australian Electricity Grid Data
+
+[nem-data](https://github.com/ADGEfficiency/nem-data) - a CLI for downloading data for Australia's National Energy Market (NEM):
+
+```bash
+$ pip install nemdata
+```
+
+[A Hackers Guide to AEMO Data](https://www.adgefficiency.com/hackers-aemo/) is a developer focused guide to the electricity market data provide by AEMO for the NEM - [source code](https://github.com/ADGEfficiency/nem-data).
 
 ## climate-news-db
 
@@ -52,16 +60,6 @@ A dataset of climate change newspaper articles - [app](https://www.climate-news-
 Fine-tune a base GPT2 model for your favourite authors - [source code](https://github.com/ADGEfficiency/creative-writing-with-gpt2).
 
 ![]({{"/assets/my-work/creative.png"}})
-
-## Australian Electricity Grid Data
-
-[nem-data](https://github.com/ADGEfficiency/nem-data) - a CLI for downloading data for Australia's National Energy Market (NEM):
-
-```bash
-$ pip install nemdata
-```
-
-[A Hackers Guide to AEMO Data](https://www.adgefficiency.com/hackers-aemo/) is a developer focused guide to the electricity market data provide by AEMO for the NEM - [source code](https://github.com/ADGEfficiency/nem-data).
 
 ## UK Electricity Grid Data
 
@@ -91,7 +89,7 @@ Implementing the 2017 classic paper - using a variational auto-encoder, mixed de
 
 ## Reinforcement Learning for Energy Systems
 
-[Blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
+[Blog post](https://www.adgefficiency.com/energy_py-reinforcement-learning-for-energy-systems/) - [Github](https://github.com/ADGEfficiency/energy-py) - [DQN debugging](https://www.adgefficiency.com/dqn-debugging/), [hyperparameter tuning](https://www.adgefficiency.com/dqn-tuning/) and [solving](https://www.adgefficiency.com/dqn-solving/).
 
 ![]({{"/assets/dqn_solving/fig1.png"}})
 
