@@ -1,7 +1,7 @@
 ---
 title: 'From Vim & QWERTY to Neovim & DVORAK'
-date_created: '2023-07-25'
-date: '2023-07-25'
+date_created: '2023-11-19'
+date: '2023-11-19'
 categories:
   - Programming
 excerpt: And never back again.
@@ -10,119 +10,167 @@ toc_sticky: true
 
 ---
 
-I'm a Neovim, DVORAK & split keyboard user.
+> There are no veils, curtains, doors, walls or anything between what pours out of Bob's hand onto the page and what is somehow available to the core of people who are believers in him. 
 
-This post details my transitions to using these tools:
+![]({{"/assets/dvorak/dylan.png"}})
 
-- from Atom to Vim to Neovim,
-- from a QWERTY to DVORAK keyboard layout,
-- from a traditional to a split keyboard.
+> There's some people who'd say 'You know, not interested'. 
+>
+> But if you're interested, he goes way, way deep.
+> 
+> Joan Baez on Bob Dylan - No Direction Home
 
-# My Journey
+**I'm a Neovim, DVORAK & split keyboard user**.
 
-I started my programming journey in early 2017 - on Windows laptop using the now deceased Atom editor.  
+This post details my transitions between these tools:
 
-I didn't know any better!
+- Atom to Vim to Neovim,
+- QWERTY to DVORAK keyboard layout,
+- a traditional to split keyboard.
 
-Programming is both my hobby and profession - I enjoy working on improving my tools.  I like the idea of optimizing my workflows, especially if it improves the health of my aging, tired body.
+The bottom of this post contains a tabular summary of each transition - how long it took, the productivity increase, health improvements and whether I would recommend it.
 
-## Vim
+# The Journey
 
-I started to learn Vim in the Christmas holidays of 2018 - I cannot remember why.
+I started my programming journey in early 2017 - on Windows laptop using the now deceased Atom editor.  I didn't know any better!
+
+Programming is both my profession and hobby. **I enjoy working on improving my tools and workflows**, which have additional benefits of making me a more effective programmer and improving the health of my aging, tired body.
+
+Not all developers are like this - some of the best programmers I've worked with have no interest in changing shortcuts, let alone learning Lua to use their text editor!  To each their own. But to quote Joan Baez - if you are interested, this goes way deep.
+
+
+# Vim
+
+I started to learn Vim in the Christmas holidays of 2017 - I cannot remember exactly why.
+
+![]({{"/assets/dvorak/vim.png"}})
 
 The first few days were tough - it took around a week to feel comfortable with the basics of Vim such as `hjkl`, moving between splits or moving to different places a file.
 
-After two weeks I felt as productive as I was in Atom - beyond that my productivity has become more powerful than you could possibly imagine.  Over the years I added colorschemes, plugins, keybinds, macros & abbreviations - [you can find my final `.vimrc` here]().
+**After two weeks I felt as productive as I was in Atom** - beyond that my productivity has become more powerful than you could possibly imagine.  
 
-The initial configuration for Vim can be challenging - I would budget 1-2 days to get a basic setup working.
+Over the years I added colorschemes, plugins, keybinds, macros & abbreviations - [you can find my final `.vimrc` here](https://github.com/ADGEfficiency/dotfiles/blob/master/dotfiles/.vimrc).  I do still use Vim when I'm working on remote servers - sometimes I'll clone my [dotfiles](https://github.com/ADGEfficiency/dotfiles) if I'll be working there for a while.
 
-Alongside Vim I use Tmux and fzf.  Both of these tools are crucial for making Vim as your main text editor a productive experience - without any of the three, my setup would not work.
+**Alongside Vim I use Tmux and fzf - both of these tools are as crucial for making Vim as your main text editor a productive experience as Vim itself - without any of the three, my terminal based development style would not work**.  This is one of the places where people can stuck with Vim - you need more than Vim to make a productive Vim setup.
 
-Tmux is used for terminal multiplexing - allowing the ability to open terminal windows alongside each other.
+Tmux is used for terminal multiplexing - allowing the ability to open terminal windows alongside each other or in different windows.
 
 I use fzf for finding and opening files, both from the shell with `$ vim **<TAB>` and within Vim using `<Space>` to run fzf in the current directory via a keybinding.
 
-## DVORAK
+I use a script `s` to quickly use fzf to search for files to open in the current directory ([script is here](https://github.com/ADGEfficiency/dotfiles/blob/master/scripts/s)):
+
+![]({{"/assets/dvorak/s.png"}})
+
+```
+#!/usr/bin/env zsh
+
+TERM_HEIGHT=$(tput lines)
+MIN_HEIGHT=20
+
+# prompt for files using fzf
+files=$(if [ "$TERM_HEIGHT" -ge "$MIN_HEIGHT" ]; then
+    fzf --preview 'bat -p --color=always {}' --height 60% -m
+else
+    fzf --no-preview --height 40% -m
+fi)
+
+# check if fzf was interrupted by Ctrl-C
+if [ $? -eq 0 ]; then
+  $EDITOR ${(f)files}
+fi
+```
+
+## Do I Recommend Vim?
+
+Vim is amazing, but outdated - use Neovim instead. 
+
+Vim itself however still has a lot of awesomeness. The plugins and customization are fantastic.
+
+The initial configuration for Vim can be challenging - I would budget 1-2 days to get a basic setup working.
+
+Even if you love VS Code, learning to use Vim is useful.  It's almost always available on remote servers, and it's a better editor than other commonly available editors like nano.
+
+Vim keybindings are also everywhere - you can enable in the shell with `$ set -o vi` (instead of the default Emacs bindings), and many programs like IDEs or browsers will have Vim plugins.
+
+
+# Neovim
+
+I started my transition to Neovim in July 2022 - motivated by the Vimscript 9 schism that divided the Vim community.
+
+![]({{"/assets/dvorak/nvim.png"}})
+
+Transitioning from Vim to Neovim after 3 years of Vim was quick - the in-editor experience is very similar.
+
+It took around half a day to convert my `.vimrc` to a functional Lua based setup, followed by a week or two of tweaking my config and adding plugins. 
+
+I was able to bring along all of my Vimscript plugins, which is a huge selling point of Neovim. I do prefer Lua written plugins where possible, but still use many of the same plugins as with Vim.
+
+[You can find all my Neovim plugins here](https://github.com/ADGEfficiency/dotfiles/blob/master/nvim/lua/adam/plugins.lua).
+
+## Do I Recommend Neovim?
+
+I would strongly recommend Neovim to anyone who is starting out with Vim or to experienced Vim users - it's great.
+
+Neovim is an improvement over Vim, and has a bubbling, exciting ecosystem.  If you are a Vim user it's not a big transition - all of your plugins will work as expected.
+
+It's nice to use Lua for configuration - it's more flexible and feels like a more useful, transferable skill that Vimscript.
+
+I have found the language servers, linting, formatting and completion experience an improvement over Vim.
+
+If you want to get started with Neovim, look at [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
+
+
+# DVORAK
 
 I started my transition to DVORAK in May 2019 - motivated by a desire to improve the health of my hands.
 
-After two and a half years of furious programming, I was suffering with muscular soreness & tiredness in my hands.  My hands felt fatigued - like they were doing too much work.
+![]({{"/assets/dvorak/layout.png"}})
 
-I was aware that there were alternative keyboard layouts, designed to be kinder to our hands - a day or two of sporadic, random & repetitive searching on Google about the different options (such as Colemak), I decided to give Dvorak a shot.
+After two and a half years of programming, I was suffering with muscular soreness & tiredness in my hands.  My hands felt fatigued - like they were doing too much work.
+
+I was aware that there were alternative keyboard layouts, designed to be kinder to our hands - a day or two of sporadic, random & repetitive searching on Google about the different options I decided to give Dvorak a shot.
 
 It took me around 2 weeks to get back to a somewhat reasonable level of productivity, but I was not back to the my previous level of QWERTY.
 
-My typing remained inaccurate for a long time - I only felt like I was back to where I was in August 2021 - making the transition over a year long.
+**My typing remained inaccurate for a long time** - I only felt like I was back to where I was in August 2021 - making the transition over a year long.
 
-Sometimes my typing is less accurate than it was (particularly as I use a keyboard with blank keycaps) - but it's manageable. 
+Sometimes my typing is still less accurate than it was (particularly as I use a keyboard with blank keycaps) - but it's manageable. I don't feel like DVORAK led to a significant productivity improvement.
 
-I don't feel like DVORAK led to a significant productivity improvement. It did help the health of my hands - that benefit was instant.
+## Do I Recommend DVORAK?
 
-## Split Keyboard
+I would not recommend the DVORAK layout - while I'm glad I have done it and wouldn't switch back, it takes a long, long time to get used to.
+
+I can still type QWERTY if needed - it's keyboard & context dependent. I can still type QWERTY on my phone without even realizing it's a different layout.
+
+
+# Split Keyboard
 
 I started using a split keyboard in July 2021 - motivated by a desire to improve the health of my back.
 
+![]({{"/assets/dvorak/ergo.png"}})
+
 Previously I had used the Apple Keyboard, then moving to a [Vortex Race 3](https://vortexgear.store/products/race-3-micro-usb), which I still have today.  The split keyboard I use today is the [Ergodox EZ](https://ergodox-ez.com), which I love.
 
-The major benefit of a split keyboard is that your hands rest further apart.  This allows your chest to expand, and reduces the strain on your upper and middle back - in particular reducing pain between the shoulder blades.
+**The main benefit of a split keyboard is that your hands rest further apart**.  This allows your chest to expand, and reduces the strain on your upper and middle back - in particular reducing pain between the shoulder blades.
 
 It took around 1 week to get back to the same level of productivity as a QWERTY keyboard.  Beyond that I have found some level of productivity increase through the ability to customize the keyboard layout, but it's not a huge increase.
 
 The Ergodox EZ allows customization the keyboard layout using ORYX - [you can find my layout here](https://configure.zsa.io/ergodox-ez/layouts/vJLGQ/latest/0).  Configuration is straight forward.
 
-## Neovim
+## Do I Recommend a Split Keyboard?
 
-I started my transition to Neovim in July 2022 - motivated by the Vimscript 9 schism that has divided the Vim community.
-
-Transitioning from Vim to Neovim after 3 years of Vim was essentially instantaneous - the in-editor experience is very similar.
-
-It took around half a day to convert my `.vimrc` to a functional Lua based setup, followed by a week or two of tweaking my config and adding plugins. I was able to bring along all of my Vimscript plugins, which is a huge selling point of Neovim.
-
-My initial Neovim setup used the colorscheme Dracula, bufferline and lualine, Treesitter for syntax highlighting, Null-Ls for linting & formatting & Telescope for searching and the built-in LSP for running language servers.
-
-I did a small amount of format on save in Vim with Black, so Null-Ls was a big improvement.  I also added a snippet engine Luasnip, which has been great.  The Neovim `cmp` completion engine is also a big improvement over what I had in Vim.
-
-In current Neovim setup I use Cokeline, Mason for LSP configuration & efm for linting and formatting - [you can find my Neovim plugins here](https://github.com/ADGEfficiency/dotfiles/blob/master/nvim/lua/adam/plugins.lua).
-
-# Which Would You Recommend?
-
-## Vim
-
-Vim is amazing - I highly recommend it.  
-
-The plugins and customization are fantastic. Vim reduces the amount of typing I do, and reduces mouse movement.  It allows me to never leave the terminal.
-
-I'm a big believer in old tools being good tools (known as the [Lindy effect](https://en.wikipedia.org/wiki/Lindy_effect)) - with Vim I love knowing I'll never use another editor.
-
-Even if you love VS Code, learning a bit of Vim is useful.  It's almost always available on servers, and it's a better editor than other commonly available editors like nano.
-
-Vim keybindings are also everywhere - you can enable in the shell with `$ set -o vi` (instead of the default Emacs bindings), and many programs like IDEs or browsers will have Vim plugins.
-
-## Neovim
-
-Neovim is an improvement over Vim, and has a bubbling, existing ecosystem - it's highly recommended.  If you are a Vim user it's not a big transition - all of your plugins will work as expected.
-
-It's nice to use Lua for configuration - it's more flexible and feels like a more useful, transferrable skill that Vimscript.
-
-I have found the language servers, linting, formatting and completion experience an improvement over Vim.
-
-## DVORAK
-
-I would not recommend the DVORAK switch - while I'm glad I have done it and wouldn't switch back, it takes a long, long time to get used to.
-
-I can still type QWERTY if needed - it's keyboard & context dependent. I can still type QWERTY on my phone without even realizing it's a different layout.
-
-## Split Keyboard
-
-I would recommend a split keyboard - while there is a cost to transitioning, the pain relief I have felt in my back is well worth it.
+I would recommend a split keyboard, especially if you have back pain in between your shoulder blades - it's a small amount of time investment for a real health benefit.
 
 I have no problem going back to a normal keyboard - unlike DVORAK, using a split keyboard will not impact your ability to use a normal keyboard.
 
+
 # Thoughts on DVORAK and Vim
 
-I was already a proficient Vim user when I decided to switch to Dvorak.
+The combination of DVORAK and Vim is an interesting one - both are very opinionated about how you should use your keyboard.
 
-Foundational to using either layout is remapping `<CAPSLOCK>` to `<ESCAPE>`. In Vim you use the `<ESCAPE>` key to move from insert to normal mode - easy access to the escape key is essential.
+I was already a proficient Vim user when I decided to switch to DVORAK.
+
+Foundational to any keyboard layout and Vim is remapping `<CAPSLOCK>` to `<ESCAPE>`. In Vim you use the `<ESCAPE>` key to move from insert to normal mode - easy access to the escape key is essential.
 
 ## Why DVORAK?
 
@@ -140,37 +188,38 @@ An interesting thing about learning DVORAK was that the time to learn keys is lo
 
 In Vim hjkl are used for cursor movement - they are the keys you use to move your cursor around a file in normal mode.
 
-In DVORAK you lose the position and order of hjkl.  Initially I considered remapping hjkl to the same position as QWERTY, but decided against it.
+In DVORAK you lose the position and order of hjkl.  Initially I considered remapping hjkl to the same position as QWERTY, but decided against it. It's been fine.
 
 ## Combinations That Work Great
 
-There are some common Vim key combinations that feel great in Dvorak:
+There are some common Vim key combinations that feel great in Dvorak.
 
-- `:` (Vim command mode) is easy access - making `:w`, `:wq` great - you don't need to move either hand
-- `.` is easy access,
-- `.py` are all next to each other,
-- `ls` are right next to each other,
-- `gcc`,
-- `<C-r>` - no hand movement
+`:` (Vim command mode) is easy access. `:w` and `:wq` feel great - you don't need to move either hand.
 
-`dft`, `dit`
-dtv, dfv, di(
+`"`, `,` and `.` are easy access.  `.py` are all next to each other. `ls` is right next to each other. 
+
+`gcc` is easy access and `<C-r>` requires no hand movement.
 
 ## Challenges
 
-The main challenge is anything `g` or `f` related.  In Vim `gf` opens a file under the cursor - as these two keys are next to each other, it's not a smooth as something like `:w`.
+One challenge is anything `g` or `f` related.  In Vim `gf` opens a file under the cursor - as these two keys are next to each other, it requires moving both hands from their natural position.
+
+Another challenge are the `{}` and `[]` keys - on a DVORAK layout, these are hard to get at.  A split keyboard helps this a lot, as you can put these on the thumb keys.
+
 
 # Summary
 
-Here is a summary of the transitions - years of human experience reduced to a Markdown table:
+Here is a summary of each of the tool and workflow transitions - years of human experience reduced to a Markdown table:
 
-| Transition     | Time to Transition | Config Required | Productivity Increase | Health Improvement | Recommended |
-|----------------|-------------------|-----------------|-----------------------|-------------------|-------------|
-| Atom to Vim            | 2 weeks           | 1 day           | High                  | None | Yes         |
-| Vim to Neovim         | 1/2 day            | 1/2 day         | Moderate | None | Yes         |
-| QWERTY to DVORAK         | >1 year           | None       | None                  | Hand fatigue      | No          |
-| Split Keyboard | 3 weeks           | 1/2 day         | Moderate                  | Back pain relief  | Yes         |
+| Transition       | Time to Transition | Initial Setup Required | Productivity Increase | Health Improvement   | Recommended |
+|------------------|--------------------|------------------------|-----------------------|----------------------|-------------|
+| Atom to Vim      | 2 weeks            | 1 day                  | High                  | None                 | ✅          |
+| Vim to Neovim    | 1/2 day            | 1/2 day                | Moderate              | None                 | ✅          |
+| QWERTY to DVORAK | >1 year            | None                   | None                  | Less hand fatigue    | ❌          |
+| Split Keyboard   | 3 weeks            | 1/2 day                | Moderate              | Back pain relief     | ✅          |
 
 ---
 
 Thanks for reading!
+
+Take a look at my [dotfiles](https://github.com/ADGEfficiency/dotfiles) if you're interested in my setup - [my Lua Neovim config is here](https://github.com/ADGEfficiency/dotfiles/tree/master/nvim).
