@@ -34,7 +34,7 @@ The bottom of this post contains a tabular summary of each transition - how long
 
 I started my programming journey in early 2017 - on Windows laptop using the now deceased Atom editor.  I didn't know any better!
 
-Programming is both my profession and hobby. **I enjoy working on improving my tools and workflows**, which have additional benefits of making me a more effective programmer and improving the health of my aging, tired body.
+Programming is both my profession and a hobby. **I enjoy working on improving my tools and workflows**, which have additional benefits of making me a more effective programmer and improving the health of my aging, tired body.
 
 Not all developers are like this - some of the best programmers I've worked with have no interest in changing shortcuts, let alone learning Lua to use their text editor!  To each their own. But to quote Joan Baez - if you are interested, this goes way deep.
 
@@ -51,11 +51,11 @@ The first few days were tough - it took around a week to feel comfortable with t
 
 Over the years I added colorschemes, plugins, keybinds, macros & abbreviations - [you can find my final `.vimrc` here](https://github.com/ADGEfficiency/dotfiles/blob/master/dotfiles/.vimrc).  I do still use Vim when I'm working on remote servers - sometimes I'll clone my [dotfiles](https://github.com/ADGEfficiency/dotfiles) if I'll be working there for a while.
 
-**Alongside Vim I use Tmux and fzf - both of these tools are as crucial for making Vim as your main text editor a productive experience as Vim itself - without any of the three, my terminal based development style would not work**.  This is one of the places where people can stuck with Vim - you need more than Vim to make a productive Vim setup.
+Alongside Vim I use Tmux and fzf. **All three of these tools are as crucial for making Vim as your main text editor a productive experience as Vim itself**. Without any of the three, my terminal-based development style would not work.  This is one of the places where people can get stuck with Vim - you need more than Vim to make a productive Vim setup.
 
 Tmux is used for terminal multiplexing - allowing the ability to open terminal windows alongside each other or in different windows.
 
-I use fzf for finding and opening files, both from the shell with `$ vim **<TAB>` and within Vim using `<Space>` to run fzf in the current directory via a keybinding.
+I use fzf for finding and opening files, both from the terminal with `**<TAB>` and within Vim using `<Space>` to run fzf in the current directory via a keybinding.
 
 I use a script `s` to quickly use fzf to search for files to open in the current directory ([script is here](https://github.com/ADGEfficiency/dotfiles/blob/master/scripts/s)):
 
@@ -99,23 +99,21 @@ I started my transition to Neovim in July 2022 - motivated by the Vimscript 9 sc
 
 ![]({{"/assets/dvorak/nvim.png"}})
 
-Transitioning from Vim to Neovim after 3 years of Vim was quick - the in-editor experience is very similar.
+Transitioning to Neovim after 3 years of Vim was quick - the in-editor experience is very similar.
 
 It took around half a day to convert my `.vimrc` to a functional Lua based setup, followed by a week or two of tweaking my config and adding plugins. 
 
-I was able to bring along all of my Vimscript plugins, which is a huge selling point of Neovim. I do prefer Lua written plugins where possible, but still use many of the same plugins as with Vim.
-
-[You can find all my Neovim plugins here](https://github.com/ADGEfficiency/dotfiles/blob/master/nvim/lua/adam/plugins.lua).
+I was able to bring along all of my Vimscript plugins, which is a huge selling point of Neovim. I do prefer Lua written plugins where possible, but still use many of the same plugins as with Vim - [you can find all my Neovim plugins here](https://github.com/ADGEfficiency/dotfiles/blob/master/nvim/lua/adam/plugins.lua).
 
 ## Do I Recommend Neovim?
 
-I would strongly recommend Neovim to anyone who is starting out with Vim or to experienced Vim users - it's great.
+**I would strongly recommend Neovim to anyone who is starting out with Vim or to experienced Vim users - it's great**.
 
-Neovim is an improvement over Vim, and has a bubbling, exciting ecosystem.  If you are a Vim user it's not a big transition - all of your plugins will work as expected.
+Neovim is an improvement over Vim, and has a bubbling, exciting ecosystem of plugins and users. I have found the language servers, linting, formatting and completion experience an improvement over Vim.
 
-It's nice to use Lua for configuration - it's more flexible and feels like a more useful, transferable skill that Vimscript.
+If you are a Vim user it's not a big transition - all of your Vimscript plugins will work as expected.
 
-I have found the language servers, linting, formatting and completion experience an improvement over Vim.
+It's nice to use Lua for configuration - it's more flexible and is a more useful, transferable skill that Vimscript.
 
 If you want to get started with Neovim, look at [kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim).
 
