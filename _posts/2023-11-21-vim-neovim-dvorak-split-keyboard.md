@@ -1,7 +1,7 @@
 ---
 title: 'From Vim & QWERTY to Neovim & DVORAK'
-date_created: '2023-11-19'
-date: '2023-11-19'
+date_created: '2023-11-21'
+date: '2023-11-21'
 categories:
   - Programming
 excerpt: And never back again.
@@ -184,9 +184,9 @@ An interesting thing about learning DVORAK was that the time to learn keys is lo
 
 ## Losing hjkl
 
-In Vim hjkl are used for cursor movement - they are the keys you use to move your cursor around a file in normal mode.
+In Vim `hjkl` are used for cursor movement - they are the keys you use to move your cursor around a file in normal mode.
 
-In DVORAK you lose the position and order of hjkl.  Initially I considered remapping hjkl to the same position as QWERTY, but decided against it. It's been fine.
+In DVORAK you lose the position and order of `hjkl`.  Initially I considered remapping `hjkl` to the same position as QWERTY, but decided against it. It's been fine.
 
 ## Combinations That Work Great
 
