@@ -13,6 +13,8 @@ Energy engineer turned data professional.  My work is focused on using data to p
 
 I am interested in the different outcomes we get when we design and optimize energy systems for money or for the environment - the space that exists between economic and carbon optimization.
 
+Currently I'm working as a Lead Data Scientist at Meridian Energy.
+
 I'm also passionate about teaching & mentoring data professionals -- [I offer mentoring here](https://mentorcruise.com/mentor/AdamGreen/). 
 
 ## Energy Data Science
