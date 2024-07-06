@@ -4,7 +4,7 @@ date_created: 2024-06-28
 date: 2024-06-28
 categories:
   - Statistics
-excerpt: Insights from some of my favourite statistics books.
+excerpt: Insights from some of my favourite popular statistics books.
 toc: true
 toc_sticky: true
 
@@ -12,14 +12,14 @@ toc_sticky: true
 
 This post is a collection of insights from popular statistics books I've enjoyed over the years. 
 
-Much of my understanding of statistics has come from textbooks - along side textbooks I've also learnt a lot from popular statistics books aimed at a more general audience.
+Much of my understanding of statistics has come from textbooks - I've also learnt a lot from popular statistics books aimed at a more general audience.
 
 A few common themes in the excepts below:
 
 - more data is not always better,
 - data and statistical models are limited,
 - probability and statistics are about making decisions,
-- statistic is hard and easy to get wrong.
+- statistics is hard and easy to get wrong.
 
 # Weapons of Math Destruction
 
@@ -85,13 +85,13 @@ The inverse is a low capacity model that is too simple to capture the signal - c
 
 Bias can also be reduced through data diversity. Unlike with variance, where more data helps to separate the noise and the signal, **more biased data only leads to more biased data and models**.
 
-## Probability is about Decision Making
+## Probability is about Decision-Making
 
-The value of probabilistic thinking is to improve your own decision making:
+The value of probabilistic thinking is to improve your own decision-making:
 
 > The virtue in thinking probabilistically is that you will force yourself to stop and smell the data—slow down, and consider the imperfections in your thinking. 
 >
-> Over time, you should find that this makes your decision making better.
+> Over time, you should find that this makes your decision-making better.
 
 # Naked Statistics
 
@@ -308,4 +308,4 @@ To summarize a few of the common themes we saw above:
 - more data is not always better,
 - data and statistical models are limited,
 - probability and statistics are about making decisions,
-- statistic is hard and easy to get wrong.
+- statistics is hard and easy to get wrong.
