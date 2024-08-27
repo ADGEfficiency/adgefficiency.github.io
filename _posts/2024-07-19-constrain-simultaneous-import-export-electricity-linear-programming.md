@@ -1,15 +1,17 @@
 ---
-title: Avoiding Simultaneous Import and Export in Linear Programs of Energy Systems
+title: Avoiding Simultaneous Import and Export Electricity in Linear Programs 
 date_created: '2024-07-21'
 date: '2023-07-21'
 categories:
   - Energy
-excerpt: TODO
+excerpt: "How to avoid simultaneous import and export electricity in linear programs of energy systems."
 toc: true
 toc_sticky: true
 ---
 
-This post explains how to constrain simultaneous import and export in linear programs. It's a particular problem that affects most linear program models of energy systems. To solve it, we will introduce two linear programming tricks:
+Simultaneous import and export in linear programs is a problem that affects most linear program models of energy systems. 
+
+**To solve it, we will introduce two linear programming tricks**:
 
 1. Constraining the upper and lower bounds of continuous variables to both a non-zero lower bound and zero,
 2. Linking two continuous variables together through binary variables.
@@ -24,14 +26,11 @@ $ pip install pulp pandas
 
 # Context
 
-When modelling energy systems, we are often modelling assets where electricity can flow in opposite directions. Examples include:
+When modelling energy systems, we are often modelling assets where electricity can flow in opposite directions. Examples include a site that can import or export electricity, or a battery that can charge or discharge electricity.
 
-- a site that can import or export electricity,
-- a battery that can charge or discharge electricity.
+While electricity can flow in opposite directions, it cannot flow in opposite directions simultaneously.
 
-Electricity cannot flow in opposite directions at the same time. 
-
-Most linear program models of energy systems discretize time - the time between the start and end of an interval is split into intervals, often 30 minutes long.
+Most linear program models of energy systems discretize time - the time between the start and end of a simulation is split into intervals, often 30 minutes long.
 
 Energy balances are created for each interval. For a single interval of time, there can only be one of import of export electricity.
 
@@ -41,11 +40,7 @@ Making a linear program modelling an energy system deal with this simultaneous i
 
 # A Simple Site with Import, Export, Demand and Generation
 
-To demonstrate the problem, we will start with a site that has:
-
-- a electric load,
-- a generator,
-- a grid connection that can import and export.
+To demonstrate the problem, we will setup a site that has an electric load, a generator, and a grid connection that can import and export electricity.
 
 The code below sets this scenario as a linear program using the PuLP Python library:
 
@@ -79,18 +74,20 @@ run_linear_program()
 ```
 
 ```output
-{'input--generation': 25,
- 'input--demand': 50,
- 'status': 'Optimal',
- 'variable--__dummy': None,
- 'variable--site_export': 0.0,
- 'variable--site_import': 25.0}
+{
+    'input--generation': 25,
+    'input--demand': 50,
+    'status': 'Optimal',
+    'variable--__dummy': None,
+    'variable--site_export': 0.0,
+    'variable--site_import': 25.0
+}
 ```
 
 There are a few things to note:
 
 - The program has a single constraint (an energy balance around the site) - it doesn't have an objective function,
-- the upper bounds on `site_import` and `site_export` are both set to 100 - if the upper bound is not set, the program can become infeasible.
+- the upper bounds on `site_import` and `site_export` are both set to 100 - if these are not set, the program can become infeasible.
 
 We can check this works correctly by changing the on-site generation and seeing how the import and export change:
 
@@ -159,7 +156,7 @@ We now see that our program imports power and then exports it within the same in
 
 While this is optimal for how we have setup the program (well done solver!), it's not physically possible.
 
-## Stopping Simultaneous Import and Export
+# Stopping Simultaneous Import and Export
 
 To prevent simultaneous import and export, we can introduce binary variables. This will also turn our linear program into a mixed integer linear program. 
 
@@ -211,14 +208,14 @@ site_import_binary = 1.0
 
 Now we see that our site only imports electricity.
 
-## Explaining the Tricks
+# Explaining the Tricks
 
 There are two tricks we play to get this to work:
 
 1. Constrain the upper bound on `site_import` and `site_export`,
 2. Link two continuous variables together through two binary variables.
 
-### Constraining Upper and Lower Bounds
+## Constraining Upper and Lower Bounds
 
 When defining a linear program variable in PuLP, we can easily set the upper and lower bounds:
 
@@ -263,7 +260,7 @@ Table below does the same for when the binary variable is 0:
 | 50  | 0      | 50 - 100 * 0 = 50      | 50 * 0 - 50 = -50      | No       |
 | 25  | 0      | 25 - 100 * 0 = 25      | 50 * 0 - 25 = -25      | No       |
 
-### Linking Two Continuous Variables Together
+## Linking Two Continuous Variables Together
 
 Linking the two continuous variables can be done with a simple sum constraint, that limits the sum of both binary variables to be 1:
 
@@ -329,7 +326,7 @@ def run_linear_program(
 run_linear_program(25)
 ```
 
-## Summary
+# Summary
 
 This post introduced two linear programming tricks that allows us to avoid common problems when modelling energy systems as linear programs.  The tricks are:
 1. Constrain the upper and lower bounds of continuous variables to both a non-zero lower bound and zero,
@@ -341,4 +338,26 @@ These tricks allow us to avoid simultaneous import and export power in linear pr
 
 Thanks for reading!
 
-If you are interested in linear programming for energy systems, check out [energy-py-linear](https://energypylinear.adgefficiency.com/latest/).
+If you are interested in linear programming for energy systems, check out [energy-py-linear](https://energypylinear.adgefficiency.com/latest/):
+
+```shell-session
+$ pip install energypylinear
+```
+
+```python
+import energypylinear as epl
+
+#  2.0 MW, 4.0 MWh battery
+asset = epl.Battery(
+    power_mw=2,
+    capacity_mwh=4,
+    efficiency_pct=0.9,
+    # different electricity prices for each interval
+    # length of electricity_prices is the length of the simulation
+    electricity_prices=[100.0, 50, 200, -100, 0, 200, 100, -100],
+    # a constant value for each interval
+    export_electricity_prices=40,
+)
+
+simulation = asset.optimize()
+```
