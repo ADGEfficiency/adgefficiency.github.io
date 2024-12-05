@@ -11,7 +11,7 @@ toc_sticky: true
 
 > There are no veils, curtains, doors, walls or anything between what pours out of Bob's hand onto the page and what is somehow available to the core of people who are believers in him.
 
-![](%7B%7B%22/assets/dvorak/dylan.png%22%7D%7D)
+![]({{"/assets/dvorak/dylan.png"}})
 
 > There's some people who'd say 'You know, not interested'.
 >
@@ -48,7 +48,7 @@ To each their own - **but if you are interested, this goes way, way deep**.
 
 I started to learn Vim in the Christmas holidays of 2017 - I cannot remember exactly why.
 
-![](%7B%7B%22/assets/dvorak/vim.png%22%7D%7D)
+![]({{"/assets/dvorak/vim.png"}})
 
 The first few days were tough - it took around a week to feel comfortable with the basics of Vim such as `hjkl`, the different modes (Normal, Insert etc), moving between splits and moving to different places a file.
 
@@ -68,7 +68,7 @@ A healthy use of shell aliases and custom functions are also important to workin
 
 I use a script `s` to quickly use fzf to search for files to open in my `$EDITOR` from the current directory ([script is here](https://github.com/ADGEfficiency/dotfiles/blob/master/scripts/s)):
 
-![](%7B%7B%22/assets/dvorak/s.png%22%7D%7D)
+![]({{"/assets/dvorak/s.png"}})
 
 ```
 #!/usr/bin/env zsh
@@ -105,7 +105,7 @@ Vim keybindings are also everywhere - you can enable them in the shell with `$ s
 
 I started my transition to Neovim in July 2022 - motivated by the Vimscript 9 schism that divided the Vim community.
 
-![](%7B%7B%22/assets/dvorak/nvim.png%22%7D%7D)
+![]({{"/assets/dvorak/nvim.png"}})
 
 Transitioning to Neovim after 3 years of Vim was quick - the in-editor experience is very similar.
 
@@ -129,7 +129,7 @@ If you want to get started with Neovim, look at [kickstart.nvim](https://github.
 
 I started my transition to DVORAK in May 2019 - motivated by a desire to improve the health of my hands.
 
-![](%7B%7B%22/assets/dvorak/layout.png%22%7D%7D)
+![]({{"/assets/dvorak/layout.png"}})
 
 After two and a half years of programming, I was suffering with muscular soreness & tiredness in my hands.  My hands felt fatigued - like they were doing too much work.
 
@@ -151,7 +151,7 @@ I can still type QWERTY if needed - it's keyboard & context dependent. I can sti
 
 I started using a split keyboard in July 2021 - motivated by a desire to improve the health of my back.
 
-![](%7B%7B%22/assets/dvorak/ergo.png%22%7D%7D)
+![]({{"assets/dvorak/ergo.png"}})
 
 Previously I had used the Apple Keyboard, then moved to a [Vortex Race 3](https://vortexgear.store/products/race-3-micro-usb), which I still use today.  The split keyboard I use today is the [Ergodox EZ](https://ergodox-ez.com).
 
