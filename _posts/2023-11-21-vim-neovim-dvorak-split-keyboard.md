@@ -151,7 +151,7 @@ I can still type QWERTY if needed - it's keyboard & context dependent. I can sti
 
 I started using a split keyboard in July 2021 - motivated by a desire to improve the health of my back.
 
-![]({{"assets/dvorak/ergo.png"}})
+![]({{"/assets/dvorak/ergo.png"}})
 
 Previously I had used the Apple Keyboard, then moved to a [Vortex Race 3](https://vortexgear.store/products/race-3-micro-usb), which I still use today.  The split keyboard I use today is the [Ergodox EZ](https://ergodox-ez.com).
 
